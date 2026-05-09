@@ -53,6 +53,9 @@ dependencies = [
     "python-dotenv==1.0.1",
     "joblib==1.5.1",
     "psutil==7.0.0",
+
+    # Phase 1A production corpus download (§3.1; required by scripts/corpus/01_download_pmc_oa.sh)
+    "awscli==1.45.6",
 ]
 
 [project.urls]
