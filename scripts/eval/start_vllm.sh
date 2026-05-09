@@ -96,4 +96,5 @@ exec python -m vllm.entrypoints.openai.api_server \
     --dtype float16 \
     --max-model-len 8192 \
     --gpu-memory-utilization 0.85 \
+    --reasoning-parser qwen3 \
     2>&1 | tee "${LOG}"
