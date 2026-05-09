@@ -1,0 +1,60 @@
+[project]
+name = "geno_agent"
+version = "0.1.0"
+description = "Agentic Multi-Agent RAG for Gene Prioritization in Rare Mendelian Disease (TFM, Universidad UAX)"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Johanna Angulo", email = "johanna.angulo@gmail.com" }]
+requires-python = ">=3.12,<3.13"
+
+# All versions pinned to what is installed in /home/hana77/pytorch-env (Python 3.12.3),
+# the env shared with the user's other ML work that is known to function on the
+# host's RTX 5090 (Blackwell, sm_120, requires CUDA 12.8+). The project does NOT
+# create its own .venv — see master plan §10 for the deviation rationale.
+#
+# Reproducibility contract per master plan §4.1.3 / fix #6: any environment that
+# reproduces these exact versions on the same hardware should yield byte-identical
+# pipeline outputs. To freeze a snapshot, run:
+#   source /home/hana77/pytorch-env/bin/activate && pip freeze > requirements.lock.txt
+dependencies = [
+    # Corpus processing (§2 line 183)
+    "lxml==5.4.0",
+    "requests==2.32.5",
+    "tqdm==4.67.1",
+
+    # Ontology handling (§2 line 186)
+    "pronto==2.7.3",
+    "obonet==1.1.1",
+    "networkx==3.5",
+
+    # Embedding and ML — torch is a CUDA 12.8 nightly required by the RTX 5090
+    # (Blackwell sm_120). Master plan §2 line 189 specifies cu124 wheels; those
+    # do not work on this hardware. Recorded in master plan §10.
+    "torch==2.9.0.dev20250820+cu128",
+    "torchvision==0.24.0.dev20250820+cu128",
+    "torchaudio==2.8.0.dev20250820+cu128",
+    "sentence-transformers==4.1.0",
+    "transformers==4.55.3",
+    "tokenizers==0.21.4",
+
+    # Vector database + sparse embeddings (§2 line 193) — fastembed provides the
+    # native Qdrant BM25 implementation per CLAUDE.md hard rule.
+    "qdrant-client==1.14.3",
+    "fastembed==0.8.0",
+
+    # Phase 1B — phenopacket ingest (§2 line 196)
+    "phenopackets==2.0.2.post5",
+
+    # Data handling (§2 line 199)
+    "pandas==2.2.3",
+    "pyarrow==19.0.1",
+
+    # Utilities (§2 line 202)
+    "python-dotenv==1.0.1",
+    "joblib==1.5.1",
+    "psutil==7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Jangulo7/geno_agent"
+Issues = "https://github.com/Jangulo7/geno_agent/issues"

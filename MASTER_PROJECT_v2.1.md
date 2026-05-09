@@ -2595,6 +2595,13 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 | §4.2.1 — "approved by HGNC" | We snapshot HGNC (`HGNC_SNAPSHOT=2026-04-07`) instead of using the rolling current set | Required for byte-reproducibility per §4.1.3; falls back to current set with a warning if the snapshot is unavailable. |
 | §3 / §4.2.3 — pinned 2024 ontology releases | Updated pins to 2026 releases: HPO `v2026-02-16`, MONDO `v2026-03-03`, GO `2026-03-25`, HGNC `2026-04-07` | Project executed in 2026; the 2024 versions referenced in v2.1 are out of date. SHA-256 of all files recorded in `data/MANIFEST.tsv`. |
 | HGNC download URL (EBI FTP) | Switched to Google Cloud Storage bucket `public-download-files` with flat archive layout | HGNC migrated all archive files from EBI FTP to GCS; the original FTP archive paths now return 404. New URL pattern: `https://storage.googleapis.com/public-download-files/hgnc/archive/archive/quarterly/tsv/hgnc_complete_set_${HGNC_SNAPSHOT}.txt`. |
+| §2 line 176 — `python3.11 -m venv .venv` | Use system `python3.12.3`; no project-local `.venv` | Python 3.11 is not installed on the host; 3.12 is the only available interpreter and is fully compatible with every pinned dep. `requires-python = ">=3.12,<3.13"` recorded in `pyproject.toml`. |
+| §2 line 189 — `pip install torch ... --index-url https://download.pytorch.org/whl/cu124` | Pinned to `torch==2.9.0.dev20250820+cu128` (and matching torchvision/torchaudio nightlies) | The host's RTX 5090 is Blackwell (sm_120) and requires CUDA 12.8+. cu124 wheels fail at first kernel launch on this hardware. The cu128 nightly is the working configuration validated by the user prior to this project. |
+| §2 — fresh project-local `.venv` | Reuse existing `/home/hana77/pytorch-env/` (Python 3.12.3) | Avoids re-downloading ~5 GB of cu128 torch wheels into a duplicate venv. `pyproject.toml` is the source of truth: it pins every project-relevant dep to the exact version actually installed in `pytorch-env`, and `pip freeze > requirements.lock.txt` snapshots the full env when needed. The project is NOT installed via `pip install -e .` to keep the shared env clean. |
+
+### Known reconciliation pending (not yet resolved)
+
+- **Qdrant client/server minor mismatch.** `pyproject.toml` pins `qdrant-client==1.14.3` (the version installed in `pytorch-env`), while `docker-compose.yml` pins the server to `qdrant/qdrant:v1.12.4` per master plan §0. The client emits a UserWarning at connect time but the API contract is forward-compatible for everything Phase 1A needs. Resolve before Phase 1A Step 5 indexing by either downgrading the client to 1.12.x or upgrading the container to 1.14.x.
 
 ---
 
