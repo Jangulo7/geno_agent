@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Project-specific large/derived data (NEVER commit)
+data/pmc_oa/
+data/intermediate/
+data/phenopackets/*.tar.gz
+qdrant_storage/
+models/
+logs/
+*.parquet
+*.tsv.gz
+*.jsonl
+!data/MANIFEST.tsv
+!.env.example
+
+# Backup / temp files
+*.bak
+*.tmp
+*.swp
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# Downloaded ontology files (reproducible from URLs in MASTER_PROJECT_v2.1.md
+# and SHA-256s in data/MANIFEST.tsv — never commit the bytes themselves)
+data/Gene_Ontology/
+data/HGNC/
+data/Human_Phenotype_Ontology/
+data/MONDO_Disease_Ontology/
