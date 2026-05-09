@@ -40,6 +40,14 @@ This release fixes the three blocking defects in v2 and adds the Phase 1B test-c
 14. Candidate gene list builder (1 causal + 49 HGNC protein-coding distractors per case, seed = 42).
 15. Test-case manifest persisted as a single canonical JSONL the experiment runner consumes.
 
+**Additions (Phase 2 — added 2026-05-09):**
+
+16. **LangGraph 4-agent state graph** (Query Planner → Retriever → Critic → Synthesizer) with conditional self-correction edges back to the Retriever. See §11.1.
+17. **FastAPI + `copilotkit-sdk-python`** endpoint exposing the graph over the AG-UI protocol with SSE streaming of agent state. See §11.2.
+18. **CopilotKit React UI** at `frontend/`, sourced from the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) (upstream `CopilotKit/CopilotKit`). Custom geno_agent components: `<HPOPicker>`, `<CandidateGeneList>`, `<AgentTracePanel>`, `<GeneCandidateCard>`, `<CitationHover>`. See §11.3.
+19. **Qwen3-8B Instruct via vLLM** as the local reasoning model for all agent calls. RTX 5090 32 GB VRAM hosts the LLM, PubMedBERT, and Qdrant queries together. See §11.4.
+20. **2×2+1 factorial evaluation** harness (single-agent vs multi-agent × dense-only vs hybrid + Exomiser baseline) over the Phase 1B test cases. Output: LaTeX-ready results table per metric. See §11.5.
+
 A formal "Deviations from methodology" log is included in §10.
 
 ---
@@ -107,13 +115,15 @@ PMC_WORKSPACE="/mnt/c/pmc_workspace"   # CHANGE to /mnt/d/ if C: lacks space
 
 # Linux side: persistent project structure
 mkdir -p "$PROJECT_ROOT"/{
-  scripts/{corpus,ontology,embedding,indexing,cases,utils},
+  scripts/{corpus,ontology,embedding,indexing,cases,utils,demo,eval},
+  src/{agents,api,tools},                    # Phase 2 Python (LangGraph + FastAPI)
+  frontend,                                  # Phase 2c Node.js / CopilotKit (separate npm project)
   config,
   logs,
-  tests,
+  tests/{agents,corpus,indexing},
   results,
   data/{ontologies,hgnc,phenopackets,test_cases},
-  models,
+  models,                                    # Local LLM weights (Qwen3-8B); see §11.4
   qdrant_storage
 }
 
@@ -200,6 +210,20 @@ pip install pandas pyarrow
 
 # Utilities
 pip install python-dotenv joblib psutil
+
+# Phase 2a — agent orchestration
+pip install langgraph langchain-core
+pip install vllm                                      # GPU inference; ollama acceptable for dev
+
+# Phase 2b — API
+pip install fastapi 'uvicorn[standard]' sse-starlette
+pip install copilotkit                                # Python SDK; AG-UI protocol
+
+# Phase 2c — frontend (Node.js, NOT pip; runs in frontend/ subdirectory)
+# Requires Node.js >= 20 + npm. Install via nvm or distro package manager.
+# Once Node.js is available:
+#   cd frontend && npx copilotkit@latest create -f next
+# The frontend is a standalone npm project; see §11.3.
 
 # Freeze requirements
 pip freeze > requirements.txt
@@ -2483,6 +2507,55 @@ CHECKPOINT 1B: Phase 1B complete.
     data/test_cases/test_cases.jsonl
     data/test_cases/test_cases_manifest.json
     data/MANIFEST.tsv
+
+────────────────────────────────────────────────────────────────────
+PHASE 2: AGENTIC UI LAYER (depends on Phase 1A + 1B)
+
+[17] Scaffold src/agents/ — state schema (AgentState dataclass) +
+     four agent node stubs (Query Planner, Retriever, Critic, Synthesizer)
+     └── src/agents/{state.py, query_planner.py, retriever.py,
+                     critic.py, synthesizer.py, graph.py}
+
+[18] Implement Query Planner — HPO expansion via pronto, MeSH lookup
+     └── src/tools/hpo.py · scripts/eval/probe_query_planner.py
+
+[19] Implement Retriever — Qdrant hybrid search wrapper with RRF +
+     payload filters (section_type / pmcid / pub_year)
+     └── src/tools/qdrant_search.py · scripts/eval/probe_retriever.py
+
+[20] Implement Critic — relevance grader, HGNC alias validator,
+     evidence-type classifier
+     └── src/tools/hgnc.py · src/tools/critic_grader.py
+
+[21] Implement Synthesizer — per-gene aggregation + re-ranking with
+     citation extraction
+     └── src/agents/synthesizer.py
+
+[22] Wire LangGraph state graph + conditional self-correction edges
+     └── src/agents/graph.py + tests/agents/test_graph_smoke.py
+
+[23] Stand up Qwen3-8B in vLLM, smoke test 4-agent flow on demo Qdrant
+     collection (1,625 chunks). Validate ≥5 tok/s under multi-agent load.
+     └── docker-compose.vllm.yml · scripts/eval/smoke_demo.py
+
+[24] FastAPI + copilotkit-sdk-python wrapper
+     └── src/api/main.py · curl smoke test against /api/agent/run
+
+[25] CopilotKit React frontend (Phase 2c)
+     ├── cd frontend && npx copilotkit@latest create -f next
+     ├── Add geno_agent/ component package: HPOPicker, CandidateGeneList,
+     │   AgentTracePanel, GeneCandidateCard, CitationHover
+     └── End-to-end demo: HPO selection in browser → ranked output
+
+[26] 2x2+1 evaluation harness on Phase 1B test cases
+     └── scripts/eval/run_factorial.py
+         (cells A-D: single/multi-agent x dense-only/hybrid; cell E: Exomiser)
+
+[27] Generate LaTeX results tables + thesis figures from eval output
+     └── scripts/eval/render_results.py → results/{tables,figures}/
+
+CHECKPOINT 2: Phase 2 complete. Defense-grade UI + evaluation results
+              ready for thesis manuscript.
 ```
 
 ### Disk Usage Estimates (WSL2 Dual-Drive)
@@ -2602,6 +2675,332 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 ### Resolved reconciliations
 
 - **Qdrant client/server version match (resolved in §7 step [4]).** `docker-compose.yml` was bumped from `qdrant/qdrant:v1.12.4` → `qdrant/qdrant:v1.14.1` to align with `qdrant-client==1.14.3` in pytorch-env. v1.14.1 is the highest server tag in the v1.14.x line (no v1.14.3 server release exists). Bump performed before any collection had data, so no migration was required.
+
+### Phase 2 design choices (added 2026-05-09)
+
+| Methodology spec | Implementation | Rationale |
+|---|---|---|
+| §0 — local LLM unspecified | Pinned to **Qwen3-8B Instruct** via **vLLM** | 8B params fit RTX 5090 32 GB VRAM with headroom for KV cache and PubMedBERT. Strong biomedical reasoning vs comparable open-weights models. vLLM gives ≥5 tok/s under agent load; Ollama acceptable as dev fallback. |
+| §0 — UI unspecified | **CopilotKit** React framework, sourced from the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) (upstream `CopilotKit/CopilotKit`) | Co-author of the **AG-UI protocol** with LangChain. First-class LangGraph integration via `copilotkit-sdk-python`. Ships chat UI, generative UI, shared-state, and human-in-the-loop primitives that map 1-to-1 to the Critic/Synthesizer agent outputs. MIT-licensed, fully self-hostable. |
+| §2 — Python only | Adds **Node.js + npm** under `frontend/` | CopilotKit is React-based. The frontend is a standalone npm project that communicates with the FastAPI backend over loopback HTTP+SSE. Python remains the only required language for Phase 1A and Phase 1B. |
+| §0 — agent orchestration unspecified | **LangGraph** state graph with conditional self-correction edges | Native to CopilotKit's AG-UI streaming. Native dataclass state schema. The conditional re-entry to the Retriever is the "agentic" capability that single-pass RAG cannot reproduce. |
+
+---
+
+## 11. PHASE 2 — AGENTIC UI LAYER (added 2026-05-09)
+
+Phase 2 wraps the Phase 1A retrieval substrate and the Phase 1B test cases in a **four-agent LangGraph orchestration**, exposes it via FastAPI using `copilotkit-sdk-python`, and ships a **CopilotKit-based React UI** (forked from `CopilotKit/CopilotKit` at [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI)) that surfaces agent reasoning to a clinician-style end user. Phase 2 is the visible product of the thesis and the basis for the defense demo.
+
+**Hard precondition:** Phase 1A and Phase 1B must complete first (per `CLAUDE.md`). Phase 2c can be developed against the Phase 1A *demo* Qdrant collection (1,625 chunks) for iteration; the production index plus the Phase 1B benchmark are required for the formal evaluation in §11.5.
+
+### 11.0 Phase 2 architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│  CopilotKit React UI  (frontend/, sourced from Jangulo7/agent_UI)  │
+│  geno_agent components: HPOPicker · CandidateGeneList ·             │
+│                         AgentTracePanel · GeneCandidateCard ·       │
+│                         CitationHover                                │
+└────────────────────────┬────────────────────────────────────────────┘
+                         │ HTTP + SSE (CopilotKit AG-UI protocol)
+┌────────────────────────▼────────────────────────────────────────────┐
+│  FastAPI app  (src/api/main.py) + copilotkit-sdk-python             │
+│  /api/agent/run · /api/agent/stream · /api/health                   │
+└────────────────────────┬────────────────────────────────────────────┘
+                         │ LangGraph state-graph invocation
+┌────────────────────────▼────────────────────────────────────────────┐
+│  LangGraph state graph  (src/agents/graph.py)                       │
+│   ┌──────────────┐  ┌────────────┐  ┌────────┐  ┌────────────┐      │
+│   │QueryPlanner  │→ │  Retriever │→ │ Critic │→ │ Synthesizer│      │
+│   │HPO expansion │  │Qdrant      │  │relevance│ │rerank +    │      │
+│   │MeSH queries  │  │hybrid+RRF  │  │grading  │ │cite        │      │
+│   └──────────────┘  └────────────┘  └────┬───┘  └─────┬──────┘      │
+│                                          │             │             │
+│                          ┌───────────────┘             │             │
+│                          ▼ (low-confidence loop)       ▼             │
+│                  back to Retriever (max 3 iter)      END             │
+└────────────────────────┬────────────────────────────────────────────┘
+                         │
+┌────────────────────────▼────────────────────────────────────────────┐
+│  Qdrant 1A · HPO/MONDO/HGNC ontologies · PubMedBERT · Qwen3-8B/vLLM │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### 11.1 Phase 2a — LangGraph state graph (~1 week)
+
+#### Reasoning model
+
+**Qwen3-8B Instruct** served via **vLLM** on the same RTX 5090 the
+retrieval pipeline uses. VRAM budget at peak load:
+
+| Component | VRAM |
+|---|---|
+| Qwen3-8B (FP16) | ~16 GB |
+| vLLM KV cache + paged-attention scratch | ~8–12 GB |
+| PubMedBERT (FP32, kept resident for query encoding) | ~440 MB |
+| Qdrant query overhead (CPU-side) | 0 GB |
+| **Total / 32 GB available** | **~25–28 GB (fits 5090 with headroom)** |
+
+Fallback if Qwen3-8B is unavailable: any open-weights ~8B instruction
+model (Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3). Must be
+local — no cloud LLM dependency per master plan §0.
+
+vLLM is mandatory for the §11.5 evaluation runs (latency budget); Ollama
+is acceptable for development iteration.
+
+#### Agent roster and tools
+
+| Agent | Role | Tool catalog |
+|---|---|---|
+| **Query Planner** | Receives patient HPO terms + candidate genes; expands HPO via parent-term traversal; generates MeSH-style query strings. | `hpo_expand(hpo_id, distance=2)`, `mesh_lookup(symbol)` |
+| **Retriever** | For each `(HPO subset, candidate gene)` pair, runs Qdrant hybrid search (dense + BM25 + RRF) with payload filters on `section_type` / `pmcid` / `pub_year`. | `qdrant_hybrid_search(query, gene_filter, top_k)` |
+| **Critic** | Grades each retrieved chunk for: (a) gene-mention validity (HGNC alias check), (b) phenotype-gene association strength (1–5 ordinal), (c) evidence type (case report / functional / association / review). | `hgnc_validate(symbol)`, `relevance_grade(chunk, hpo_terms, gene)` |
+| **Synthesizer** | Aggregates Critic grades into per-gene confidence; produces a re-ranked candidate list with cited supporting passages. Returns structured output for UI rendering. | (none — pure aggregation) |
+
+#### State schema
+
+```python
+# src/agents/state.py — schematic
+from dataclasses import dataclass, field
+from typing import Literal
+
+@dataclass
+class RetrievedChunk:
+    chunk_id: str
+    pmcid: str
+    text: str
+    section_type: str
+    score_dense: float
+    score_bm25: float
+    score_rrf: float
+
+@dataclass
+class CriticGrade:
+    chunk_id: str
+    gene_mention_valid: bool
+    relevance: int  # 1..5
+    evidence_type: Literal["case_report", "functional", "association", "review", "unknown"]
+    rationale: str
+
+@dataclass
+class GeneCandidate:
+    symbol: str
+    is_causal: bool                  # ground truth, Phase 1B only
+    aggregate_confidence: float
+    supporting_chunks: list[str]     # chunk_ids
+    final_rank: int
+
+@dataclass
+class AgentState:
+    case_id: str
+    hpo_terms: list[str]
+    candidate_genes: list[str]       # 50 from Phase 1B (1 causal + 49 distractors)
+    expanded_hpo: list[str] = field(default_factory=list)
+    mesh_queries: list[str] = field(default_factory=list)
+    retrieved: dict[str, list[RetrievedChunk]] = field(default_factory=dict)
+    grades: dict[str, list[CriticGrade]] = field(default_factory=dict)
+    ranked: list[GeneCandidate] = field(default_factory=list)
+    iteration: int = 0
+    max_iterations: int = 3
+```
+
+#### Graph construction (LangGraph)
+
+```python
+# src/agents/graph.py — schematic
+from langgraph.graph import StateGraph, END
+
+def build_graph():
+    graph = StateGraph(AgentState)
+    graph.add_node("query_planner", query_planner_node)
+    graph.add_node("retriever",     retriever_node)
+    graph.add_node("critic",        critic_node)
+    graph.add_node("synthesizer",   synthesizer_node)
+
+    graph.set_entry_point("query_planner")
+    graph.add_edge("query_planner", "retriever")
+    graph.add_edge("retriever",     "critic")
+    graph.add_conditional_edges(
+        "critic",
+        # Re-enter retriever if many low-confidence grades remain and budget allows
+        lambda s: ("retriever"
+                   if s.iteration < s.max_iterations
+                      and count_low_confidence(s) > 5
+                   else "synthesizer"),
+    )
+    graph.add_edge("synthesizer", END)
+    return graph.compile()
+```
+
+The conditional re-entry into the Retriever is the **self-correction
+loop** that single-pass RAG architectures cannot reproduce. It is the
+empirical contribution of the multi-agent design (cell C vs cell A in
+the §11.5 factorial).
+
+### 11.2 Phase 2b — FastAPI + copilotkit-sdk-python (~2 days)
+
+`src/api/main.py` wraps the compiled LangGraph in a FastAPI app that
+speaks the **AG-UI protocol** via `copilotkit-sdk-python`. The React UI
+talks to it over Server-Sent Events so agent traces stream in real time.
+
+```python
+# src/api/main.py — schematic
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from copilotkit import CopilotKitSDK, LangGraphAgent
+from src.agents.graph import build_graph
+
+app = FastAPI(title="geno_agent")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_methods=["*"], allow_headers=["*"],
+)
+
+sdk = CopilotKitSDK(agents=[
+    LangGraphAgent(name="prioritizer", graph=build_graph()),
+])
+sdk.attach(app, path="/api/agent")
+```
+
+Endpoints (auto-mounted by `sdk.attach`):
+
+| Method | Path | Purpose |
+|---|---|---|
+| `POST` | `/api/agent/run` | One-shot run, returns final `GeneCandidate[]` |
+| `GET` | `/api/agent/stream` | SSE stream of `AgentState` updates per node |
+| `GET` | `/api/health` | Liveness probe (returns Qdrant + vLLM health) |
+
+Run with `uvicorn src.api.main:app --reload --port 8000`.
+
+### 11.3 Phase 2c — CopilotKit React UI (~3–5 days)
+
+#### Source and adoption
+
+The CopilotKit framework lives at the user's fork
+[`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) (upstream
+`CopilotKit/CopilotKit`). **Adoption decision: standalone clone**, *not* git submodule:
+
+| Option | Tradeoff |
+|---|---|
+| **A.** Git submodule of `agent_UI` | One command to update; adds submodule complexity to `git clone`. |
+| **B. (chosen)** Standalone clone; `frontend/` in geno_agent contains only geno_agent-specific React components | Cleanest separation. Two repos to manage but each stays small. CopilotKit framework is consumed via `npm install @copilotkit/react-core` like any other npm dep. |
+| **C.** Vendored copy (drop `.git`) | Self-contained but loses upstream updates. |
+
+**`frontend/`** in this repo is initialized from the CopilotKit project template (`npx copilotkit@latest create -f next`) and adds the geno_agent-specific components below. The `agent_UI` fork is kept around as a reference and source of upstream patches if framework hacking ever becomes necessary.
+
+#### geno_agent custom components (`frontend/src/geno_agent/`)
+
+| Component | Purpose |
+|---|---|
+| `<HPOPicker>` | Multi-select with autocomplete fed by the local `hp.obo`; supports synonym matching and parent-term hover. |
+| `<CandidateGeneList>` | Editable list of HGNC symbols (paste-friendly; validates against `data/hgnc/hgnc_complete_set.txt`). |
+| `<AgentTracePanel>` | Live timeline of LangGraph state transitions (Query Planner → Retriever → Critic [→ Retriever]* → Synthesizer). |
+| `<GeneCandidateCard>` | Per-gene tile in the ranked output: symbol, aggregate confidence, supporting-passage carousel, citation links to PMC. |
+| `<CitationHover>` | Hover-card showing the exact retrieved chunk with section type and PMC ID; click opens PMC article. |
+
+#### Wiring (Next.js page)
+
+```tsx
+// frontend/app/page.tsx — schematic
+"use client";
+import { CopilotKit, useCoAgent } from "@copilotkit/react-core";
+import { HPOPicker, CandidateGeneList,
+         AgentTracePanel, GeneCandidateCard } from "@/geno_agent";
+
+export default function PrioritizerPage() {
+  const { state, run } = useCoAgent({
+    name: "prioritizer",
+    initialState: { hpo_terms: [], candidate_genes: [] },
+  });
+  return (
+    <CopilotKit runtimeUrl="http://localhost:8000/api/agent">
+      <HPOPicker onChange={(hpo) => state.setHPO(hpo)} />
+      <CandidateGeneList onChange={(g) => state.setGenes(g)} />
+      <button onClick={() => run({ hpo_terms: state.hpo, candidate_genes: state.genes })}>
+        Prioritize
+      </button>
+      <AgentTracePanel events={state.events} />
+      <div className="grid grid-cols-2 gap-4">
+        {state.ranked.map((c) => (
+          <GeneCandidateCard key={c.symbol} candidate={c} />
+        ))}
+      </div>
+    </CopilotKit>
+  );
+}
+```
+
+### 11.4 Hardware co-location
+
+Single RTX 5090 hosts everything:
+
+- **Qwen3-8B + vLLM** (~16 GB FP16 weights + ~8–12 GB KV cache)
+- **PubMedBERT** (~440 MB, kept resident for query encoding)
+- **Qdrant** (CPU-side, `on_disk_payload=True`, bind-mounted to `~/rare-disease-rag/qdrant_storage/`)
+- **FastAPI** (CPU-side, ~50 MB)
+- **CopilotKit dev server** (Node.js, CPU-side, ~200 MB)
+
+Network is loopback only (no public exposure). The only TCP ports
+opened are :3000 (Next.js dev), :8000 (FastAPI), :6533 (Qdrant REST),
+:6534 (Qdrant gRPC), and whatever vLLM picks (default :8001).
+
+### 11.5 Evaluation harness — 2×2+1 factorial
+
+Hypothesis: the multi-agent architecture *and* hybrid retrieval each
+contribute meaningfully to gene-prioritization performance. The
+evaluation isolates each contribution.
+
+| | Dense-only retrieval | Dense + BM25 (hybrid) |
+|---|---|---|
+| **Single-agent** (one-shot Synthesizer over retrieved chunks) | **Cell A** — control | **Cell B** — retrieval contribution |
+| **Multi-agent** (Planner + Retriever + Critic + Synthesizer) | **Cell C** — architecture contribution | **Cell D** — full system |
+
+**Cell E:** [Exomiser](https://exomiser.readthedocs.io) baseline —
+HPO-driven prioritization without literature evidence; the established
+gold standard for phenotype-driven gene ranking.
+
+For each Phase 1B case (50–100 cases per master plan §6), all five
+cells produce a ranked list of the 50 candidate genes (1 causal + 49
+HGNC distractors, seed = 42). Metrics:
+
+- **Top-1 accuracy** — fraction of cases with causal gene at rank 1
+- **Top-5 / Top-10 accuracy**
+- **Mean reciprocal rank (MRR)**
+- **NDCG@10**
+
+Statistical significance: paired bootstrap over cases (1000 resamples,
+95 % CI). Output: a single LaTeX-ready results table per metric +
+per-cell confidence intervals + per-cell error analysis grouped by
+MONDO category.
+
+### 11.6 Acceptance criteria — Phase 2 done = ALL of
+
+- [ ] `src/agents/graph.py` builds a 4-node LangGraph that produces
+  `GeneCandidate[]` from `(hpo_terms, candidate_genes)` input.
+- [ ] `tests/agents/` has unit tests for each agent node with mocked
+  retrieval, asserting expected state transitions.
+- [ ] Qwen3-8B (or fallback) loads in vLLM and serves the agents at
+  ≥ 5 tokens/s under multi-agent load on the RTX 5090.
+- [ ] `src/api/main.py` exposes the graph via `/api/agent/*` and
+  passes a `curl`-driven smoke test with one Phase 1B case.
+- [ ] CopilotKit React frontend runs at `http://localhost:3000`
+  and successfully prioritizes a Phase 1B test case end-to-end (HPO
+  selection → ranked output with cited passages).
+- [ ] Evaluation harness (`scripts/eval/`) produces the 2×2+1 results
+  table with all Phase 1B cases and statistical CIs.
+- [ ] `data/MANIFEST.tsv` updated with a `models/` section listing
+  SHA-256 of the Qwen3-8B weights and the evaluation seed.
+
+### 11.7 Time estimate
+
+| Sub-phase | Engineering | Calendar w/ debugging |
+|---|---|---|
+| 2a — LangGraph + 4 agents + Qwen3 / vLLM | 5 days | ~7 days |
+| 2b — FastAPI + copilotkit-sdk-python wrapper | 2 days | ~3 days |
+| 2c — CopilotKit React UI + custom geno_agent components | 3–5 days | ~5–7 days |
+| Eval harness + LaTeX results | 2 days | ~3 days |
+| **Total Phase 2** | **12–14 days** | **~3 weeks** |
 
 ---
 

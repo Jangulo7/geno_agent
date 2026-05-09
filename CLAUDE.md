@@ -14,6 +14,9 @@ Qdrant under any pretext.
 ## Hard rules
 
 - Phase 1A must complete end-to-end before Phase 1B starts (master plan §0).
+- Phase 2 (agentic UI layer, master plan §11) requires Phase 1A + 1B complete
+  for the formal evaluation. Phase 2c UI development against the demo Qdrant
+  collection is OK in parallel, but the §11.5 factorial cannot run until 1B.
 - Qdrant storage stays on the Linux fs at `~/rare-disease-rag/qdrant_storage/`.
   Bulk PMC processing goes on `/mnt/c/pmc_workspace/`. Never invert this.
 - Determinism: `PYTHONHASHSEED=42`, UUID5 chunk IDs, pinned ontology versions.
@@ -21,14 +24,30 @@ Qdrant under any pretext.
   fallback under any circumstances.
 - Heavy persistent artifacts (qdrant_storage, models, logs) live OUTSIDE
   the git repo, under `~/rare-disease-rag/`.
+- Phase 2 LLM is local: Qwen3-8B (or open-weights ~8B fallback) via vLLM.
+  No cloud LLM API in any code path. CopilotKit Cloud is NOT used; the
+  React UI talks to the local FastAPI backend on loopback only.
 
 ## Code style
 
+### Python (scripts/, src/agents/, src/api/)
 - PEP 8, with type hints on every public function and method.
 - Google-style docstrings on every module, class, and public function.
 - No bare `except:` — catch specific exceptions, log with context.
 - Prefer `pathlib.Path` over `os.path`. Prefer f-strings over `.format()`/`%`.
 - Keep functions under ~50 lines; split when they grow past that.
+
+### TypeScript / React (frontend/)
+- Phase 2c only. The frontend is a separate npm project; npm and Node.js
+  commands are allowed there. Do NOT add Node.js dependencies to the Python
+  side or vice versa.
+- Use the project's prevailing CopilotKit + Next.js conventions.
+- geno_agent-specific React components live under `frontend/src/geno_agent/`
+  and consume `@copilotkit/react-core` from npm. CopilotKit framework code
+  is NOT vendored — it is a normal npm dependency.
+- Source for the React framework is the user's fork:
+  https://github.com/Jangulo7/agent_UI (upstream `CopilotKit/CopilotKit`).
+  Kept around as a reference; not pinned as a git submodule.
 
 ## Git workflow (private repo: github.com/Jangulo7/geno_agent)
 
@@ -40,7 +59,9 @@ Qdrant under any pretext.
 - Open a PR per step; do not merge until the step's acceptance criteria
   in the master plan are met and recorded in `data/MANIFEST.tsv`.
 - Never commit: `.env`, `qdrant_storage/`, `models/`, `data/pmc_oa/`,
-  anything under `/mnt/c/pmc_workspace/`, `*.parquet`, `*.jsonl` over 10 MB.
+  anything under `/mnt/c/pmc_workspace/`, `*.parquet`, `*.jsonl` over 10 MB,
+  `frontend/node_modules/`, `frontend/.next/`, `frontend/.turbo/`,
+  Qwen3-8B model weights (`~/rare-disease-rag/models/Qwen3-8B/`).
 - Never commit secrets. Reference via `os.environ[...]` and document them
   in `.env.example` (which IS committed).
 
