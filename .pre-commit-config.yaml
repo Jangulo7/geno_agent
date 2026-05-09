@@ -1,0 +1,41 @@
+# Pre-commit hooks — run automatically on `git commit`.
+# Install once after cloning:
+#   source /home/hana77/pytorch-env/bin/activate && pre-commit install
+# Run manually against the whole repo:
+#   pre-commit run --all-files
+#
+# Tool versions are pinned for reproducibility. Update via `pre-commit autoupdate`.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^reports/run_logs/
+      - id: end-of-file-fixer
+        exclude: ^reports/run_logs/
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
+    hooks:
+      - id: ruff-check
+        args: ["--fix"]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        files: ^(scripts/utils/seed\.py|src/)
+        # Avoid pulling the entire project's heavy ML deps into pre-commit's
+        # isolated venv; declare only the few stub packages we need here.
+        additional_dependencies:
+          - types-requests
+          - pandas-stubs

@@ -39,17 +39,13 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("validate_index")
 
 QDRANT_HOST: Final[str] = os.environ.get("QDRANT_HOST", "localhost")
 QDRANT_PORT: Final[int] = int(os.environ.get("QDRANT_PORT", "6533"))
 COLLECTION: Final[str] = os.environ.get("QDRANT_COLLECTION", "geno_agent_pmc_oa_v1")
-DENSE_MODEL: Final[str] = os.environ.get(
-    "EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings"
-)
+DENSE_MODEL: Final[str] = os.environ.get("EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings")
 BM25_MODEL: Final[str] = "Qdrant/bm25"
 TOP_K: Final[int] = 5
 
@@ -91,19 +87,23 @@ def _format_hit(hit: models.ScoredPoint, max_chars: int = 140) -> str:
     )
 
 
-def probe_dense(client: QdrantClient, model: SentenceTransformer,
-                collection: str, query: str, k: int) -> list[models.ScoredPoint]:
+def probe_dense(
+    client: QdrantClient, model: SentenceTransformer, collection: str, query: str, k: int
+) -> list[models.ScoredPoint]:
     """Run a dense-vector query."""
     vec = model.encode(query, normalize_embeddings=True).tolist()
     return client.query_points(
         collection_name=collection,
-        query=vec, using="dense",
-        with_payload=True, limit=k,
+        query=vec,
+        using="dense",
+        with_payload=True,
+        limit=k,
     ).points
 
 
-def probe_bm25(client: QdrantClient, bm25: SparseTextEmbedding,
-               collection: str, query: str, k: int) -> list[models.ScoredPoint]:
+def probe_bm25(
+    client: QdrantClient, bm25: SparseTextEmbedding, collection: str, query: str, k: int
+) -> list[models.ScoredPoint]:
     """Run a BM25 sparse query — uses .query_embed (TF only)."""
     sparse = next(iter(bm25.query_embed([query])))
     return client.query_points(
@@ -113,13 +113,19 @@ def probe_bm25(client: QdrantClient, bm25: SparseTextEmbedding,
             values=sparse.values.tolist(),
         ),
         using="bm25",
-        with_payload=True, limit=k,
+        with_payload=True,
+        limit=k,
     ).points
 
 
-def probe_hybrid(client: QdrantClient, model: SentenceTransformer,
-                 bm25: SparseTextEmbedding, collection: str,
-                 query: str, k: int) -> list[models.ScoredPoint]:
+def probe_hybrid(
+    client: QdrantClient,
+    model: SentenceTransformer,
+    bm25: SparseTextEmbedding,
+    collection: str,
+    query: str,
+    k: int,
+) -> list[models.ScoredPoint]:
     """Run hybrid retrieval with reciprocal rank fusion."""
     dense_vec = model.encode(query, normalize_embeddings=True).tolist()
     sparse = next(iter(bm25.query_embed([query])))
@@ -132,11 +138,13 @@ def probe_hybrid(client: QdrantClient, model: SentenceTransformer,
                     indices=sparse.indices.tolist(),
                     values=sparse.values.tolist(),
                 ),
-                using="bm25", limit=k * 4,
+                using="bm25",
+                limit=k * 4,
             ),
         ],
         query=models.FusionQuery(fusion=models.Fusion.RRF),
-        with_payload=True, limit=k,
+        with_payload=True,
+        limit=k,
     )
     return res.points
 
@@ -159,10 +167,14 @@ def main() -> int:
 
     for query in PROBES:
         logger.info(f"\n==== Probe: {query!r} ====")
+        # Default-arg trick (q=query) prevents lambda late-binding to the loop var.
         for label, fn in (
-            ("dense ", lambda: probe_dense(client, dense, args.collection, query, args.top_k)),
-            ("bm25  ", lambda: probe_bm25(client, bm25, args.collection, query, args.top_k)),
-            ("hybrid", lambda: probe_hybrid(client, dense, bm25, args.collection, query, args.top_k)),
+            ("dense ", lambda q=query: probe_dense(client, dense, args.collection, q, args.top_k)),
+            ("bm25  ", lambda q=query: probe_bm25(client, bm25, args.collection, q, args.top_k)),
+            (
+                "hybrid",
+                lambda q=query: probe_hybrid(client, dense, bm25, args.collection, q, args.top_k),
+            ),
         ):
             hits = fn()
             logger.info(f"-- {label} (top {args.top_k}) --")

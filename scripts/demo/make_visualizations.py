@@ -29,7 +29,7 @@ from typing import Any, Final
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.pyplot as plt
 
 PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -39,22 +39,20 @@ logger = logging.getLogger("make_viz")
 
 CATEGORY_COLORS: Final[dict[str, str]] = {
     "introduction": "#4f81bd",
-    "methods":      "#9bbb59",
-    "results":      "#f79646",
-    "case":         "#c0504d",
-    "discussion":   "#8064a2",
-    "conclusion":   "#1f497d",
-    "other":        "#a6a6a6",
+    "methods": "#9bbb59",
+    "results": "#f79646",
+    "case": "#c0504d",
+    "discussion": "#8064a2",
+    "conclusion": "#1f497d",
+    "other": "#a6a6a6",
 }
 
 
 def parse_args() -> argparse.Namespace:
     """CLI args."""
     p = argparse.ArgumentParser(description="Render report visualizations.")
-    p.add_argument("--stats", type=Path,
-                   default=PROJECT_ROOT / "reports" / "pipeline_stats.json")
-    p.add_argument("--out", type=Path,
-                   default=PROJECT_ROOT / "reports" / "images")
+    p.add_argument("--stats", type=Path, default=PROJECT_ROOT / "reports" / "pipeline_stats.json")
+    p.add_argument("--out", type=Path, default=PROJECT_ROOT / "reports" / "images")
     return p.parse_args()
 
 
@@ -65,12 +63,19 @@ def chart_pipeline_throughput(stats: dict, out: Path) -> Path:
     elapsed = [s.get("elapsed_s") or 0 for s in steps]
     fig, ax = plt.subplots(figsize=(10, 4.2))
     bars = ax.bar(labels, elapsed, color="#5b9bd5", edgecolor="#1f3a5f", linewidth=0.8)
-    for b, v in zip(bars, elapsed):
-        ax.text(b.get_x() + b.get_width() / 2, v + max(elapsed) * 0.02,
-                f"{v:.1f}s", ha="center", va="bottom", fontsize=9)
+    for b, v in zip(bars, elapsed, strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + max(elapsed) * 0.02,
+            f"{v:.1f}s",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+        )
     ax.set_ylabel("Elapsed (s)", fontsize=10)
-    ax.set_title("End-to-end pipeline timing — 100 articles, single host",
-                 fontsize=12, weight="bold")
+    ax.set_title(
+        "End-to-end pipeline timing — 100 articles, single host", fontsize=12, weight="bold"
+    )
     ax.spines[["top", "right"]].set_visible(False)
     ax.set_axisbelow(True)
     ax.grid(axis="y", linestyle=":", alpha=0.6)
@@ -94,12 +99,17 @@ def chart_section_distribution(stats: dict, out: Path) -> Path:
     colors = [CATEGORY_COLORS.get(k, "#888") for k in labels]
     fig, ax = plt.subplots(figsize=(8, 4.2))
     bars = ax.bar(labels, counts, color=colors, edgecolor="#222", linewidth=0.6)
-    for b, v in zip(bars, counts):
-        ax.text(b.get_x() + b.get_width() / 2, v + max(counts) * 0.02,
-                f"{v}", ha="center", va="bottom", fontsize=9)
+    for b, v in zip(bars, counts, strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + max(counts) * 0.02,
+            f"{v}",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+        )
     ax.set_ylabel("Number of chunks", fontsize=10)
-    ax.set_title("Chunk distribution by JATS section type",
-                 fontsize=12, weight="bold")
+    ax.set_title("Chunk distribution by JATS section type", fontsize=12, weight="bold")
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="y", linestyle=":", alpha=0.6)
     fig.tight_layout()
@@ -120,14 +130,21 @@ def chart_embedding_throughput(stats: dict, out: Path) -> Path:
     labels = ["RTX 5090\n(measured)", "CPU baseline\n(approx)"]
     values = [measured, cpu_baseline]
     fig, ax = plt.subplots(figsize=(6, 4.2))
-    bars = ax.bar(labels, values,
-                  color=["#1f8a4f", "#a6a6a6"], edgecolor="#222", linewidth=0.6)
-    for b, v in zip(bars, values):
-        ax.text(b.get_x() + b.get_width() / 2, v + max(values) * 0.02,
-                f"{v} chunks/s", ha="center", va="bottom", fontsize=10, weight="bold")
+    bars = ax.bar(labels, values, color=["#1f8a4f", "#a6a6a6"], edgecolor="#222", linewidth=0.6)
+    for b, v in zip(bars, values, strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + max(values) * 0.02,
+            f"{v} chunks/s",
+            ha="center",
+            va="bottom",
+            fontsize=10,
+            weight="bold",
+        )
     ax.set_ylabel("Throughput (chunks / s)", fontsize=10)
-    ax.set_title("PubMedBERT embedding throughput — measured vs CPU baseline",
-                 fontsize=12, weight="bold")
+    ax.set_title(
+        "PubMedBERT embedding throughput — measured vs CPU baseline", fontsize=12, weight="bold"
+    )
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="y", linestyle=":", alpha=0.6)
     fig.tight_layout()
@@ -166,7 +183,8 @@ def chart_retrieval_modes(stats: dict, out: Path) -> Path:
     table = ax.table(
         cellText=rows,
         colLabels=["Probe query", "Dense (top-1)", "BM25 (top-1)", "Hybrid RRF (top-1)"],
-        loc="center", cellLoc="left",
+        loc="center",
+        cellLoc="left",
         colWidths=[0.34, 0.22, 0.22, 0.22],
     )
     table.auto_set_font_size(False)
@@ -180,8 +198,7 @@ def chart_retrieval_modes(stats: dict, out: Path) -> Path:
         for c in range(4):
             if r % 2 == 0:
                 table[r, c].set_facecolor("#f4f6fa")
-    ax.set_title("Probe queries vs top-1 retrieved chunks",
-                 fontsize=12, weight="bold", pad=10)
+    ax.set_title("Probe queries vs top-1 retrieved chunks", fontsize=12, weight="bold", pad=10)
     fig.tight_layout()
     p = out / "retrieval_modes.png"
     fig.savefig(p, dpi=150, bbox_inches="tight")
@@ -212,21 +229,28 @@ def chart_terminal_screenshot(stats: dict, out: Path) -> Path:
                 continue
             tag = f"-- {mode:6s} (top-1) --"
             lines.append((tag, "cyan"))
-            line = (f"  [{top['score']:.3f}] {top['pmcid']:14s} "
-                    f"{top['section_type']:11s} | {top['snippet'][:90]}…")
+            line = (
+                f"  [{top['score']:.3f}] {top['pmcid']:14s} "
+                f"{top['section_type']:11s} | {top['snippet'][:90]}…"
+            )
             lines.append((line, "white"))
 
     fig_h = 0.32 * len(lines) + 0.6
     fig, ax = plt.subplots(figsize=(13, fig_h), facecolor="#0a0a0a")
     ax.set_facecolor("#0a0a0a")
     ax.axis("off")
-    color_map = {"white": "#dddddd", "lime": "#4ce14c",
-                 "yellow": "#f5d76e", "cyan": "#62d4e0"}
+    color_map = {"white": "#dddddd", "lime": "#4ce14c", "yellow": "#f5d76e", "cyan": "#62d4e0"}
     for i, (text, color) in enumerate(lines):
-        ax.text(0.01, 1 - (i + 1) / (len(lines) + 1),
-                text, color=color_map.get(color, "white"),
-                family="monospace", fontsize=8.5,
-                transform=ax.transAxes, va="top")
+        ax.text(
+            0.01,
+            1 - (i + 1) / (len(lines) + 1),
+            text,
+            color=color_map.get(color, "white"),
+            family="monospace",
+            fontsize=8.5,
+            transform=ax.transAxes,
+            va="top",
+        )
     fig.tight_layout(pad=0.4)
     p = out / "terminal_screenshot.png"
     fig.savefig(p, dpi=150, facecolor=fig.get_facecolor())
