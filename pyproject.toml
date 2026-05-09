@@ -56,6 +56,14 @@ dependencies = [
 
     # Phase 1A production corpus download (§3.1; required by scripts/corpus/01_download_pmc_oa.sh)
     "awscli==1.45.6",
+
+    # Phase 2a — LangGraph state graph orchestration (§11.1, C7)
+    # Note: bumped from 0.0.56 to 0.4.10 to enable dataclass state schemas;
+    # langchain-core was bumped to 1.3.3 transitively (incompatible with the
+    # pre-existing langchain==0.3.27, but langchain itself is not used by this project).
+    "langgraph==0.4.10",
+    "langgraph-checkpoint==4.0.3",
+    "langchain-core==1.3.3",
 ]
 
 [project.optional-dependencies]
