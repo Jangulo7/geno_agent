@@ -1,0 +1,7 @@
+parsing:   0%|          | 0/100 [00:00<?, ?it/s]parsing:  13%|█▎        | 13/100 [00:00<00:00, 127.44it/s]parsing:  26%|██▌       | 26/100 [00:00<00:00, 127.82it/s]parsing:  40%|████      | 40/100 [00:00<00:00, 133.14it/s]parsing:  55%|█████▌    | 55/100 [00:00<00:00, 136.95it/s]parsing:  70%|███████   | 70/100 [00:00<00:00, 140.48it/s]parsing:  86%|████████▌ | 86/100 [00:00<00:00, 144.21it/s]parsing: 100%|██████████| 100/100 [00:00<00:00, 141.83it/s]
+2026-05-09 18:08:20,964 [INFO] === Parse summary ===
+2026-05-09 18:08:20,964 [INFO]   parsed:        100/100  (skipped 0)
+2026-05-09 18:08:20,964 [INFO]   total sections:559
+2026-05-09 18:08:20,964 [INFO]   total chars:   3,411,874
+2026-05-09 18:08:20,964 [INFO]   output:        /mnt/c/pmc_workspace/parsed/demo.jsonl
+[W509 18:08:21.417385444 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

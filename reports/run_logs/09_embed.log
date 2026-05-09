@@ -1,0 +1,24 @@
+2026-05-09 18:08:30.514126: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-09 18:08:30.692481: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1778342910.757269   17086 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1778342910.778850   17086 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1778342910.921720   17086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778342910.921771   17086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778342910.921774   17086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778342910.921775   17086 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-05-09 18:08:30.937235: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI AVX_VNNI_INT8 AVX_NE_CONVERT FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-05-09 18:08:33,711 [INFO] Loading chunks from /mnt/c/pmc_workspace/chunks/demo.jsonl
+2026-05-09 18:08:33,756 [INFO]   1,625 chunks loaded
+2026-05-09 18:08:33,756 [INFO] Loading model: NeuML/pubmedbert-base-embeddings on cuda
+2026-05-09 18:08:33,757 [INFO] Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+/home/hana77/pytorch-env/lib/python3.12/site-packages/torch/cuda/__init__.py:410: UserWarning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (Triggered internally at /pytorch/c10/core/AllocatorConfig.cpp:28.)
+  torch._C._cuda_init()
+2026-05-09 18:08:36,083 [INFO]   embedding dim: 768
+Batches:   0%|          | 0/51 [00:00<?, ?it/s]Batches:   2%|▏         | 1/51 [00:00<00:21,  2.36it/s]Batches:   6%|▌         | 3/51 [00:00<00:08,  5.56it/s]Batches:  10%|▉         | 5/51 [00:00<00:06,  7.31it/s]Batches:  14%|█▎        | 7/51 [00:00<00:05,  8.41it/s]Batches:  18%|█▊        | 9/51 [00:01<00:04,  9.16it/s]Batches:  22%|██▏       | 11/51 [00:01<00:04,  9.60it/s]Batches:  25%|██▌       | 13/51 [00:01<00:03,  9.92it/s]Batches:  29%|██▉       | 15/51 [00:01<00:03, 10.15it/s]Batches:  33%|███▎      | 17/51 [00:01<00:03, 10.38it/s]Batches:  37%|███▋      | 19/51 [00:02<00:03, 10.46it/s]Batches:  41%|████      | 21/51 [00:02<00:02, 10.50it/s]Batches:  45%|████▌     | 23/51 [00:02<00:02, 10.60it/s]Batches:  49%|████▉     | 25/51 [00:02<00:02, 10.65it/s]Batches:  53%|█████▎    | 27/51 [00:02<00:02, 10.70it/s]Batches:  57%|█████▋    | 29/51 [00:03<00:02, 10.73it/s]Batches:  61%|██████    | 31/51 [00:03<00:01, 10.79it/s]Batches:  65%|██████▍   | 33/51 [00:03<00:01, 10.82it/s]Batches:  69%|██████▊   | 35/51 [00:03<00:01, 10.85it/s]Batches:  73%|███████▎  | 37/51 [00:03<00:01, 10.93it/s]Batches:  76%|███████▋  | 39/51 [00:03<00:01, 11.01it/s]Batches:  80%|████████  | 41/51 [00:04<00:00, 11.13it/s]Batches:  84%|████████▍ | 43/51 [00:04<00:00, 11.29it/s]Batches:  88%|████████▊ | 45/51 [00:04<00:00, 12.21it/s]Batches:  96%|█████████▌| 49/51 [00:04<00:00, 17.24it/s]Batches: 100%|██████████| 51/51 [00:04<00:00, 11.13it/s]
+2026-05-09 18:08:40,708 [INFO] Encoded 1,625 chunks in 4.6s (351 chunks/s); shape (1625, 768)
+2026-05-09 18:08:40,778 [INFO] === Embedding summary ===
+2026-05-09 18:08:40,778 [INFO]   records:    1,625
+2026-05-09 18:08:40,778 [INFO]   embedding:  (1625, 768), dtype=float32
+2026-05-09 18:08:40,778 [INFO]   output:     /mnt/c/pmc_workspace/embeddings/demo.parquet  (5.5 MB, zstd)
