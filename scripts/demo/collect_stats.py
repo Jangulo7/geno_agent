@@ -13,12 +13,13 @@ Run::
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import logging
 import re
 import subprocess
 import sys
-from dataclasses import dataclass, field, asdict
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Final
 
@@ -97,10 +98,8 @@ def parse_chunk(log: Path) -> dict[str, Any]:
     out["short_skipped"] = int(_grep_n(log, r"short sections skipped:\s+(\d+)") or 0)
     by = _grep_n(log, r"by section_type:\s+(\{[^}]+\})")
     if by:
-        try:
+        with contextlib.suppress(SyntaxError, NameError, ValueError):
             out["by_section_type"] = eval(by, {"__builtins__": {}})
-        except (SyntaxError, NameError, ValueError):
-            pass
     return out
 
 
@@ -119,7 +118,9 @@ def parse_embed(log: Path) -> dict[str, Any]:
 def parse_upload(log: Path) -> dict[str, Any]:
     """Extract counts from 10_upload.log."""
     out: dict[str, Any] = {}
-    out["points"] = int((_grep_n(log, r"Upload complete:\s+([\d,]+)\s+points") or "0").replace(",", ""))
+    out["points"] = int(
+        (_grep_n(log, r"Upload complete:\s+([\d,]+)\s+points") or "0").replace(",", "")
+    )
     return out
 
 
@@ -144,12 +145,14 @@ def parse_validate(log: Path) -> dict[str, Any]:
             continue
         m = re.search(r"\[\s*([\d.]+)\]\s+(PMC\d+)\s+(\w+)\s+\|\s+(.+)$", line)
         if m and current_probe is not None and current_mode is not None:
-            current_probe["modes"][current_mode].append({
-                "score": float(m.group(1)),
-                "pmcid": m.group(2),
-                "section_type": m.group(3),
-                "snippet": m.group(4)[:240].rstrip("…").strip(),
-            })
+            current_probe["modes"][current_mode].append(
+                {
+                    "score": float(m.group(1)),
+                    "pmcid": m.group(2),
+                    "section_type": m.group(3),
+                    "snippet": m.group(4)[:240].rstrip("…").strip(),
+                }
+            )
     if current_probe:
         probes.append(current_probe)
     return {"probes": probes, "n_probes": len(probes)}
@@ -175,18 +178,21 @@ def step_elapsed_seconds(log: Path) -> float | None:
     if not stamps or not last_stamps:
         return None
     from datetime import datetime
+
     fmt = "%Y-%m-%d %H:%M:%S"
-    return (datetime.strptime(last_stamps[0], fmt) - datetime.strptime(stamps[0], fmt)).total_seconds()
+    return (
+        datetime.strptime(last_stamps[0], fmt) - datetime.strptime(stamps[0], fmt)
+    ).total_seconds()
 
 
 PARSERS: Final[dict[str, tuple[str, callable]]] = {
-    "01_fetch":    ("Fetch demo corpus (NCBI esearch + efetch)",  parse_fetch),
-    "06_parse":    ("Parse JATS XML",                              parse_parse),
-    "07_filter":   ("Filter genetics / rare disease",              parse_filter),
-    "08_chunk":    ("UUID5 section-aware chunking",                parse_chunk),
-    "09_embed":    ("PubMedBERT embedding (RTX 5090)",             parse_embed),
-    "10_upload":   ("Qdrant upload (dense + BM25)",                parse_upload),
-    "11_validate": ("Hybrid retrieval probes",                     parse_validate),
+    "01_fetch": ("Fetch demo corpus (NCBI esearch + efetch)", parse_fetch),
+    "06_parse": ("Parse JATS XML", parse_parse),
+    "07_filter": ("Filter genetics / rare disease", parse_filter),
+    "08_chunk": ("UUID5 section-aware chunking", parse_chunk),
+    "09_embed": ("PubMedBERT embedding (RTX 5090)", parse_embed),
+    "10_upload": ("Qdrant upload (dense + BM25)", parse_upload),
+    "11_validate": ("Hybrid retrieval probes", parse_validate),
 }
 
 
@@ -201,18 +207,15 @@ def parse_args() -> argparse.Namespace:
 def collect_env_metadata() -> dict[str, Any]:
     """Collect host environment fingerprints (Python, GPU, Qdrant, git rev)."""
     out: dict[str, Any] = {}
-    try:
+    with contextlib.suppress(subprocess.CalledProcessError):
         out["python"] = subprocess.check_output(["python", "--version"], text=True).strip()
-    except subprocess.CalledProcessError:
-        pass
-    try:
+    with contextlib.suppress(subprocess.CalledProcessError):
         out["git_rev"] = subprocess.check_output(
             ["git", "-C", str(PROJECT_ROOT), "rev-parse", "--short", "HEAD"], text=True
         ).strip()
-    except subprocess.CalledProcessError:
-        pass
     try:
         import torch
+
         out["torch"] = torch.__version__
         out["cuda_available"] = torch.cuda.is_available()
         if torch.cuda.is_available():

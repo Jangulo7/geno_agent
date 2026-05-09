@@ -58,6 +58,114 @@ dependencies = [
     "awscli==1.45.6",
 ]
 
+[project.optional-dependencies]
+# Developer tooling — install with `pip install -e ".[dev]"`
+# (or just `pip install ruff==0.15.12 mypy==2.0.0 pytest==8.3.5 pre-commit==4.6.0`).
+dev = [
+    "ruff==0.15.12",
+    "mypy==2.0.0",
+    "pytest==8.3.5",
+    "pre-commit==4.6.0",
+]
+
 [project.urls]
 Homepage = "https://github.com/Jangulo7/geno_agent"
 Issues = "https://github.com/Jangulo7/geno_agent/issues"
+
+# ============================================================================
+# Tooling configuration — see README and CLAUDE.md for project style rules.
+# ============================================================================
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+    "data",
+    "reports",
+    "frontend",
+    "logs",
+    ".venv",
+    "*.egg-info",
+    "MASTER_PROJECT_v2.1.md",  # Markdown, not Python
+]
+
+[tool.ruff.lint]
+# Selected rule families — extend cautiously; PRs should run clean.
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes (unused imports, undefined names)
+    "I",      # isort (import sorting)
+    "B",      # flake8-bugbear (likely bugs)
+    "C4",     # flake8-comprehensions
+    "SIM",    # flake8-simplify (refactor suggestions)
+    "UP",     # pyupgrade (modern Python idioms)
+    "N",      # pep8-naming
+    "RUF",    # ruff-specific rules
+]
+ignore = [
+    "E501",   # line too long — `ruff format` handles wrapping
+    "N803",   # argument names — scientific code uses HpId/HPO etc.
+    "N806",   # local var names — same
+    "SIM117", # nested with statements — sometimes clearer
+    "UP007",  # Optional[X] vs X | None — both readable
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Numbered scripts (01_..., 06_..., ...) are intentionally not valid Python
+# module names — the master plan §7 numbering convention requires them.
+"scripts/**/[0-9]*.py" = ["N999"]
+# Tests can use long lines and assert without check.
+"tests/*.py" = ["E501", "S101"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts", "src"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+# ============================================================================
+
+[tool.mypy]
+python_version = "3.12"
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+# Explicit-only — we don't require type-checking the entire pipeline,
+# only the Phase 2 application code (src/) and the seed util (foundational).
+files = ["scripts/utils/seed.py", "src"]
+
+[[tool.mypy.overrides]]
+# These libraries don't ship public type stubs.
+module = [
+    "pronto",
+    "pronto.*",
+    "fastembed",
+    "fastembed.*",
+    "qdrant_client",
+    "qdrant_client.*",
+    "sentence_transformers",
+    "sentence_transformers.*",
+    "phenopackets",
+    "phenopackets.*",
+    "obonet",
+    "tqdm",
+    "tqdm.*",
+    "dotenv",
+]
+ignore_missing_imports = true
+
+# ============================================================================
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "slow: marks tests requiring large data or GPU",
+    "integration: marks tests requiring Qdrant/external services",
+]

@@ -40,9 +40,7 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("demo_fetch_pmc")
 
 EUTILS_BASE: Final[str] = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
@@ -78,7 +76,7 @@ DEMO_QUERIES: Final[OrderedDict[str, str]] = OrderedDict(
         ),
     }
 )
-PER_CATEGORY: Final[int] = 25  # 4 categories × 25 = 100 article target
+PER_CATEGORY: Final[int] = 25  # 4 categories x 25 = 100 article target
 
 
 def demo_dir() -> Path:
@@ -104,7 +102,7 @@ def _http_get(url: str, params: dict[str, str]) -> requests.Response:
         except (requests.HTTPError, requests.ConnectionError, requests.Timeout) as exc:
             if attempt == MAX_RETRIES:
                 raise
-            wait = 2 ** attempt
+            wait = 2**attempt
             logger.warning(f"  retry {attempt}/{MAX_RETRIES} in {wait}s ({exc})")
             time.sleep(wait)
     raise RuntimeError("unreachable")
@@ -114,8 +112,7 @@ def esearch_pmc(query: str, retmax: int) -> list[str]:
     """Run an esearch query against PMC, return PMC IDs (numeric, no prefix)."""
     r = _http_get(
         f"{EUTILS_BASE}/esearch.fcgi",
-        {"db": "pmc", "term": query, "retmax": str(retmax),
-         "retmode": "json", "sort": "relevance"},
+        {"db": "pmc", "term": query, "retmax": str(retmax), "retmode": "json", "sort": "relevance"},
     )
     return r.json()["esearchresult"].get("idlist", [])
 
