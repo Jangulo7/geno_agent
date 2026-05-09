@@ -61,7 +61,7 @@ Qdrant under any pretext.
   - REST: localhost:6533
   - gRPC: localhost:6534
   - Container name: `qdrant_geno_agent`
-  - Image: `qdrant/qdrant:v1.12.4` (pinned)
+  - Image: `qdrant/qdrant:v1.14.1` (pinned to align with `qdrant-client==1.14.3` in pytorch-env — v1.14.1 is the highest server tag in the v1.14.x line, no v1.14.3 server release exists; bumped from v1.12.4 in §7 step [4] before any data was written)
   - Storage: bind-mounted to `~/rare-disease-rag/qdrant_storage/`
 - Connection settings live in `.env` as `QDRANT_HOST`, `QDRANT_PORT`,
   `QDRANT_GRPC_PORT`. All Python code reads from these env vars — no
