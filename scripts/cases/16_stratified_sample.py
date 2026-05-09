@@ -42,9 +42,7 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("stratified_sample")
 
 CATEGORIES: Final[tuple[str, ...]] = (
@@ -114,18 +112,19 @@ def sample_stratified(
 
 def parse_args() -> argparse.Namespace:
     """CLI args."""
-    tc_dir = os.environ.get(
-        "TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases")
-    )
+    tc_dir = os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
     p = argparse.ArgumentParser(description="Stratified random sampling.")
-    p.add_argument("--input", type=Path,
-                   default=Path(tc_dir) / "03_categorized.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(tc_dir) / "04_sampled.jsonl")
-    p.add_argument("--target-size", type=int, default=SAMPLE_TARGET_SIZE,
-                   help=f"Total sample size (default: {SAMPLE_TARGET_SIZE})")
-    p.add_argument("--seed", type=int, default=RANDOM_SEED,
-                   help=f"RNG seed (default: {RANDOM_SEED})")
+    p.add_argument("--input", type=Path, default=Path(tc_dir) / "03_categorized.jsonl")
+    p.add_argument("--output", type=Path, default=Path(tc_dir) / "04_sampled.jsonl")
+    p.add_argument(
+        "--target-size",
+        type=int,
+        default=SAMPLE_TARGET_SIZE,
+        help=f"Total sample size (default: {SAMPLE_TARGET_SIZE})",
+    )
+    p.add_argument(
+        "--seed", type=int, default=RANDOM_SEED, help=f"RNG seed (default: {RANDOM_SEED})"
+    )
     return p.parse_args()
 
 

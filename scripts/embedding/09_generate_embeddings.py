@@ -42,14 +42,10 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("embedder")
 
-MODEL_NAME: Final[str] = os.environ.get(
-    "EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings"
-)
+MODEL_NAME: Final[str] = os.environ.get("EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings")
 EMBEDDING_DIM: Final[int] = int(os.environ.get("EMBEDDING_DIM", "768"))
 BATCH_SIZE: Final[int] = int(os.environ.get("EMBED_BATCH_SIZE", "32"))
 
@@ -58,12 +54,13 @@ def parse_args() -> argparse.Namespace:
     """CLI argument parsing."""
     workspace = os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")
     p = argparse.ArgumentParser(description="PubMedBERT embedding generator.")
-    p.add_argument("--input", type=Path,
-                   default=Path(workspace) / "chunks" / "demo.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(workspace) / "embeddings" / "demo.parquet")
-    p.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu",
-                   help="Inference device (default: cuda if available).")
+    p.add_argument("--input", type=Path, default=Path(workspace) / "chunks" / "demo.jsonl")
+    p.add_argument("--output", type=Path, default=Path(workspace) / "embeddings" / "demo.parquet")
+    p.add_argument(
+        "--device",
+        default="cuda" if torch.cuda.is_available() else "cpu",
+        help="Inference device (default: cuda if available).",
+    )
     return p.parse_args()
 
 
@@ -73,9 +70,7 @@ def load_chunks(path: Path) -> list[dict]:
         return [json.loads(line) for line in f]
 
 
-def embed_texts(
-    model: SentenceTransformer, texts: list[str], batch_size: int
-) -> np.ndarray:
+def embed_texts(model: SentenceTransformer, texts: list[str], batch_size: int) -> np.ndarray:
     """Run mean-pooled, L2-normalized embeddings for ``texts``.
 
     Returns:
@@ -95,16 +90,16 @@ def write_parquet(records: list[dict], embs: np.ndarray, out_path: Path) -> None
     """Persist chunk metadata + binary embedding column as a parquet file."""
     out_path.parent.mkdir(parents=True, exist_ok=True)
     columns = {
-        "chunk_id":         [r["chunk_id"]                       for r in records],
-        "pmcid":            [r["pmcid"]                          for r in records],
-        "title":            [r.get("title", "")                  for r in records],
-        "section_type":     [r["section_type"]                   for r in records],
-        "section_heading":  [r.get("section_heading", "")        for r in records],
-        "pub_year":         [r.get("pub_year")                   for r in records],
-        "mesh_terms":       [json.dumps(r.get("mesh_terms", [])) for r in records],
-        "chunk_index":      [r["chunk_index"]                    for r in records],
-        "text":             [r["text"]                           for r in records],
-        "embedding":        [embs[i].tobytes()                   for i in range(len(records))],
+        "chunk_id": [r["chunk_id"] for r in records],
+        "pmcid": [r["pmcid"] for r in records],
+        "title": [r.get("title", "") for r in records],
+        "section_type": [r["section_type"] for r in records],
+        "section_heading": [r.get("section_heading", "") for r in records],
+        "pub_year": [r.get("pub_year") for r in records],
+        "mesh_terms": [json.dumps(r.get("mesh_terms", [])) for r in records],
+        "chunk_index": [r["chunk_index"] for r in records],
+        "text": [r["text"] for r in records],
+        "embedding": [embs[i].tobytes() for i in range(len(records))],
     }
     table = pa.Table.from_pydict(columns)
     pq.write_table(table, out_path, compression="zstd")

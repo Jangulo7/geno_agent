@@ -36,9 +36,7 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("verify_ontologies")
 
 
@@ -141,13 +139,31 @@ def verify_go() -> int:
     n_terms = sum(1 for _ in go.terms())
     gaf_path = d / "goa_human.gaf.gz"
     cols = [
-        "DB", "DB_Object_ID", "DB_Object_Symbol", "Qualifier", "GO_ID",
-        "DB_Reference", "Evidence_Code", "With_From", "Aspect",
-        "DB_Object_Name", "DB_Object_Synonym", "DB_Object_Type", "Taxon",
-        "Date", "Assigned_By", "Annotation_Extension", "Gene_Product_Form_ID",
+        "DB",
+        "DB_Object_ID",
+        "DB_Object_Symbol",
+        "Qualifier",
+        "GO_ID",
+        "DB_Reference",
+        "Evidence_Code",
+        "With_From",
+        "Aspect",
+        "DB_Object_Name",
+        "DB_Object_Synonym",
+        "DB_Object_Type",
+        "Taxon",
+        "Date",
+        "Assigned_By",
+        "Annotation_Extension",
+        "Gene_Product_Form_ID",
     ]
     gaf = pd.read_csv(
-        gaf_path, sep="\t", comment="!", header=None, names=cols, low_memory=False,
+        gaf_path,
+        sep="\t",
+        comment="!",
+        header=None,
+        names=cols,
+        low_memory=False,
     )
     logger.info(f"  data_version: {actual} (matches pin)")
     logger.info(f"  GO terms: {n_terms:,}")

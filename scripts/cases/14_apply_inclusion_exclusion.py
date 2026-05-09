@@ -46,9 +46,7 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("inclusion_exclusion")
 
 MIN_HPO_TERMS: Final[int] = int(os.environ.get("MIN_HPO_TERMS", "3"))
@@ -72,9 +70,7 @@ def build_exclude_descendant_set(mondo: pronto.Ontology) -> set[str]:
     for root_id in EXCLUDE_MONDO_ROOTS:
         root = mondo.get(root_id)
         if root is None:
-            logger.warning(
-                f"MONDO root {root_id} not found in ontology; check MONDO_VERSION."
-            )
+            logger.warning(f"MONDO root {root_id} not found in ontology; check MONDO_VERSION.")
             continue
         for term in root.subclasses(with_self=True):
             excluded.add(term.id)
@@ -122,7 +118,9 @@ def resolve_mondo_ids(diseases: list[dict], xref_map: dict[str, str]) -> list[st
 
 
 def passes_filters(
-    rec: dict, excluded_ids: set[str], xref_map: dict[str, str],
+    rec: dict,
+    excluded_ids: set[str],
+    xref_map: dict[str, str],
 ) -> tuple[bool, str | None, str | None, list[str]]:
     """Apply inclusion/exclusion to one record.
 
@@ -139,8 +137,7 @@ def passes_filters(
         return False, "few_hpo", None, []
 
     asc = [
-        g for g in rec.get("interpretations", [])
-        if g.get("ascertained") and g.get("gene_symbol")
+        g for g in rec.get("interpretations", []) if g.get("ascertained") and g.get("gene_symbol")
     ]
     unique_genes = {g["gene_symbol"] for g in asc}
     if len(unique_genes) == 0:
@@ -165,12 +162,9 @@ def parse_args() -> argparse.Namespace:
     tc_dir = os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
     onto_dir = os.environ.get("ONTOLOGY_DIR", str(PROJECT_ROOT / "data" / "ontologies"))
     p = argparse.ArgumentParser(description="Phase 1B inclusion/exclusion filter.")
-    p.add_argument("--input", type=Path,
-                   default=Path(tc_dir) / "01_all_phenopackets.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(tc_dir) / "02_eligible.jsonl")
-    p.add_argument("--mondo-obo", type=Path,
-                   default=Path(onto_dir) / "mondo" / "mondo.obo")
+    p.add_argument("--input", type=Path, default=Path(tc_dir) / "01_all_phenopackets.jsonl")
+    p.add_argument("--output", type=Path, default=Path(tc_dir) / "02_eligible.jsonl")
+    p.add_argument("--mondo-obo", type=Path, default=Path(onto_dir) / "mondo" / "mondo.obo")
     return p.parse_args()
 
 
@@ -201,18 +195,25 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     n_in = n_kept = 0
     drop_reasons = {
-        "few_hpo": 0, "no_single_gene": 0, "multi_gene": 0,
-        "no_disease": 0, "excluded_disease": 0,
+        "few_hpo": 0,
+        "no_single_gene": 0,
+        "multi_gene": 0,
+        "no_disease": 0,
+        "excluded_disease": 0,
     }
 
     n_total = sum(1 for _ in args.input.open("r", encoding="utf-8"))
-    with args.input.open("r", encoding="utf-8") as fin, \
-         args.output.open("w", encoding="utf-8") as fout:
+    with (
+        args.input.open("r", encoding="utf-8") as fin,
+        args.output.open("w", encoding="utf-8") as fout,
+    ):
         for line in tqdm(fin, total=n_total, desc="filtering"):
             n_in += 1
             rec = json.loads(line)
             ok, reason, causal_gene, mondo_ids = passes_filters(
-                rec, excluded_ids, xref_map,
+                rec,
+                excluded_ids,
+                xref_map,
             )
             if not ok:
                 drop_reasons[reason] += 1
@@ -224,7 +225,7 @@ def main() -> int:
 
     logger.info("=== Filter summary ===")
     logger.info(f"  input cases:    {n_in:,}")
-    logger.info(f"  eligible cases: {n_kept:,} ({100*n_kept/max(n_in,1):.1f}%)")
+    logger.info(f"  eligible cases: {n_kept:,} ({100 * n_kept / max(n_in, 1):.1f}%)")
     logger.info(f"  dropped:        {n_in - n_kept:,}")
     for reason, count in drop_reasons.items():
         logger.info(f"    {reason:18s} {count:,}")

@@ -13,6 +13,7 @@ calling :func:`apply_seeds` before any work is done.
 Typical use::
 
     from scripts.utils.seed import apply_seeds
+
     apply_seeds()  # picks up RANDOM_SEED from env, defaults to 42
 """
 
@@ -74,6 +75,4 @@ def stable_hash(s: str) -> int:
         UTF-8 encoding of ``s``. Stable across processes, machines, and
         Python versions.
     """
-    return int.from_bytes(
-        hashlib.blake2b(s.encode("utf-8"), digest_size=8).digest(), "big"
-    )
+    return int.from_bytes(hashlib.blake2b(s.encode("utf-8"), digest_size=8).digest(), "big")

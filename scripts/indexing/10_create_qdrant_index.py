@@ -46,20 +46,16 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("create_qdrant_index")
 
 QDRANT_HOST: Final[str] = os.environ.get("QDRANT_HOST", "localhost")
 QDRANT_PORT: Final[int] = int(os.environ.get("QDRANT_PORT", "6533"))
-COLLECTION_NAME: Final[str] = os.environ.get(
-    "QDRANT_COLLECTION", "geno_agent_pmc_oa_v1"
-)
+COLLECTION_NAME: Final[str] = os.environ.get("QDRANT_COLLECTION", "geno_agent_pmc_oa_v1")
 EMBEDDING_DIM: Final[int] = int(os.environ.get("EMBEDDING_DIM", "768"))
-DEFAULT_EMBEDDING_DIR: Final[Path] = Path(
-    os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")
-) / "embeddings"
+DEFAULT_EMBEDDING_DIR: Final[Path] = (
+    Path(os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")) / "embeddings"
+)
 UPLOAD_BATCH_SIZE: Final[int] = int(os.environ.get("UPLOAD_BATCH_SIZE", "128"))
 BM25_MODEL_NAME: Final[str] = "Qdrant/bm25"
 
@@ -129,7 +125,9 @@ def create_collection(client: QdrantClient, recreate: bool = False) -> None:
                 distance=models.Distance.COSINE,
                 on_disk=True,
                 hnsw_config=models.HnswConfigDiff(
-                    m=16, ef_construct=200, full_scan_threshold=10000,
+                    m=16,
+                    ef_construct=200,
+                    full_scan_threshold=10000,
                 ),
             ),
         },
@@ -174,22 +172,18 @@ def verify_collection(client: QdrantClient) -> None:
     dense = cfg.vectors["dense"]
     bm25 = cfg.sparse_vectors["bm25"]
 
-    assert dense.size == EMBEDDING_DIM, (
-        f"dense vector size {dense.size} != {EMBEDDING_DIM}"
-    )
-    assert dense.distance == models.Distance.COSINE, (
-        f"dense distance {dense.distance} != COSINE"
-    )
-    assert bm25.modifier == models.Modifier.IDF, (
-        f"BM25 modifier {bm25.modifier} != IDF"
-    )
+    assert dense.size == EMBEDDING_DIM, f"dense vector size {dense.size} != {EMBEDDING_DIM}"
+    assert dense.distance == models.Distance.COSINE, f"dense distance {dense.distance} != COSINE"
+    assert bm25.modifier == models.Modifier.IDF, f"BM25 modifier {bm25.modifier} != IDF"
 
     points = client.count(collection_name=COLLECTION_NAME, exact=True).count
     logger.info("=== Collection summary ===")
     logger.info(f"  name:         {COLLECTION_NAME}")
     logger.info(f"  status:       {info.status}")
-    logger.info(f"  dense:        size={dense.size}, distance={dense.distance.name}, "
-                f"on_disk={dense.on_disk}")
+    logger.info(
+        f"  dense:        size={dense.size}, distance={dense.distance.name}, "
+        f"on_disk={dense.on_disk}"
+    )
     logger.info(f"  sparse(bm25): modifier={bm25.modifier.name}")
     logger.info(f"  on_disk_payload: {cfg.on_disk_payload}")
     logger.info(f"  points:       {points}")
@@ -211,7 +205,7 @@ def upload_parquet_files(client: QdrantClient, embedding_dir: Path) -> int:
     Returns:
         Total number of points uploaded.
     """
-    from fastembed import SparseTextEmbedding  # noqa: PLC0415 — heavy import gated on --upload
+    from fastembed import SparseTextEmbedding
 
     parquet_files = sorted(embedding_dir.glob("*.parquet"))
     if not parquet_files:
@@ -226,8 +220,7 @@ def upload_parquet_files(client: QdrantClient, embedding_dir: Path) -> int:
         logger.info(f"Reading {pq_file.name}")
         table = pq.read_table(pq_file)
         n = table.num_rows
-        for start in tqdm(range(0, n, UPLOAD_BATCH_SIZE),
-                          desc=f"upsert {pq_file.stem}"):
+        for start in tqdm(range(0, n, UPLOAD_BATCH_SIZE), desc=f"upsert {pq_file.stem}"):
             end = min(start + UPLOAD_BATCH_SIZE, n)
             batch = table.slice(start, end - start).to_pydict()
             sparse = list(bm25.embed(batch["text"]))
@@ -235,24 +228,22 @@ def upload_parquet_files(client: QdrantClient, embedding_dir: Path) -> int:
                 models.PointStruct(
                     id=batch["chunk_id"][i],
                     vector={
-                        "dense": np.frombuffer(
-                            batch["embedding"][i], dtype=np.float32
-                        ).tolist(),
+                        "dense": np.frombuffer(batch["embedding"][i], dtype=np.float32).tolist(),
                         "bm25": models.SparseVector(
                             indices=sparse[i].indices.tolist(),
                             values=sparse[i].values.tolist(),
                         ),
                     },
                     payload={
-                        "chunk_id":        batch["chunk_id"][i],
-                        "pmcid":           batch["pmcid"][i],
-                        "title":           batch["title"][i],
-                        "section_type":    batch["section_type"][i],
+                        "chunk_id": batch["chunk_id"][i],
+                        "pmcid": batch["pmcid"][i],
+                        "title": batch["title"][i],
+                        "section_type": batch["section_type"][i],
                         "section_heading": batch["section_heading"][i],
-                        "pub_year":        batch["pub_year"][i],
-                        "mesh_terms":      json.loads(batch["mesh_terms"][i] or "[]"),
-                        "chunk_index":     batch["chunk_index"][i],
-                        "text":            batch["text"][i],
+                        "pub_year": batch["pub_year"][i],
+                        "mesh_terms": json.loads(batch["mesh_terms"][i] or "[]"),
+                        "chunk_index": batch["chunk_index"][i],
+                        "text": batch["text"][i],
                     },
                 )
                 for i in range(end - start)
