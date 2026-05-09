@@ -57,14 +57,15 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("parse_jats")
 
 SECTION_PATTERNS: Final[tuple[tuple[str, re.Pattern[str]], ...]] = (
     ("introduction", re.compile(r"\b(introduction|background)\b", re.I)),
-    ("methods", re.compile(r"\b(methods?|materials\s+and\s+methods|patients\s+and\s+methods)\b", re.I)),
+    (
+        "methods",
+        re.compile(r"\b(methods?|materials\s+and\s+methods|patients\s+and\s+methods)\b", re.I),
+    ),
     ("results", re.compile(r"\b(results?|findings|outcomes?)\b", re.I)),
     ("case", re.compile(r"\b(case\s+(report|description|presentation|series))\b", re.I)),
     ("discussion", re.compile(r"\b(discussion)\b", re.I)),
@@ -214,12 +215,14 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Parse PMC JATS XML to JSONL.")
     workspace = os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")
     p.add_argument(
-        "--input-dir", type=Path,
+        "--input-dir",
+        type=Path,
         default=Path(workspace) / "xml_raw" / "demo",
         help="Directory containing PMC<id>.xml files (default: demo dir).",
     )
     p.add_argument(
-        "--output", type=Path,
+        "--output",
+        type=Path,
         default=Path(workspace) / "parsed" / "demo.jsonl",
         help="Output JSONL path (default: parsed/demo.jsonl).",
     )

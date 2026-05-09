@@ -48,15 +48,13 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("categorize_mondo")
 
 # Order matters: priority resolution per master plan §10.
 CATEGORY_ROOTS: Final[tuple[tuple[str, tuple[str, ...]], ...]] = (
-    ("neurological",  ("MONDO:0005071",)),
-    ("metabolic",     ("MONDO:0005066",)),
+    ("neurological", ("MONDO:0005071",)),
+    ("metabolic", ("MONDO:0005066",)),
     ("immunological", ("MONDO:0005046",)),
     ("developmental", ("MONDO:0021147", "MONDO:0019118")),
 )
@@ -113,12 +111,9 @@ def parse_args() -> argparse.Namespace:
     tc_dir = os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
     onto_dir = os.environ.get("ONTOLOGY_DIR", str(PROJECT_ROOT / "data" / "ontologies"))
     p = argparse.ArgumentParser(description="MONDO-based disease categorization (Phase 1B step 3).")
-    p.add_argument("--input", type=Path,
-                   default=Path(tc_dir) / "02_eligible.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(tc_dir) / "03_categorized.jsonl")
-    p.add_argument("--mondo-obo", type=Path,
-                   default=Path(onto_dir) / "mondo" / "mondo.obo")
+    p.add_argument("--input", type=Path, default=Path(tc_dir) / "02_eligible.jsonl")
+    p.add_argument("--output", type=Path, default=Path(tc_dir) / "03_categorized.jsonl")
+    p.add_argument("--mondo-obo", type=Path, default=Path(onto_dir) / "mondo" / "mondo.obo")
     return p.parse_args()
 
 
@@ -150,31 +145,30 @@ def main() -> int:
     n_in = n_out = 0
 
     n_total = sum(1 for _ in args.input.open("r", encoding="utf-8"))
-    with args.input.open("r", encoding="utf-8") as fin, \
-         args.output.open("w", encoding="utf-8") as fout:
+    with (
+        args.input.open("r", encoding="utf-8") as fin,
+        args.output.open("w", encoding="utf-8") as fout,
+    ):
         for line in tqdm(fin, total=n_total, desc="categorizing"):
             n_in += 1
             rec = json.loads(line)
             assigned, matched = assign_category(
-                rec.get("mondo_ids", []), category_sets,
+                rec.get("mondo_ids", []),
+                category_sets,
             )
             if assigned is None:
                 counts["unmatched"] += 1
                 continue
             rec["category"] = assigned
-            rec["category_resolution"] = (
-                f"priority-first; matched=[{','.join(matched)}]"
-            )
+            rec["category_resolution"] = f"priority-first; matched=[{','.join(matched)}]"
             fout.write(json.dumps(rec, ensure_ascii=False) + "\n")
             counts[assigned] += 1
-            overlap_counts[",".join(matched)] = (
-                overlap_counts.get(",".join(matched), 0) + 1
-            )
+            overlap_counts[",".join(matched)] = overlap_counts.get(",".join(matched), 0) + 1
             n_out += 1
 
     logger.info("=== Categorization summary ===")
     logger.info(f"  input cases:      {n_in:,}")
-    logger.info(f"  categorized:      {n_out:,} ({100*n_out/max(n_in,1):.1f}%)")
+    logger.info(f"  categorized:      {n_out:,} ({100 * n_out / max(n_in, 1):.1f}%)")
     logger.info(f"  unmatched dropped:{counts['unmatched']:,}")
     logger.info("  by category (after priority resolution):")
     for name, _ in CATEGORY_ROOTS:

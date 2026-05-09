@@ -40,9 +40,7 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("load_phenopackets")
 
 EXPECTED_COUNT_LO: Final[int] = 6000
@@ -116,12 +114,14 @@ def extract_interpretations(pp: dict) -> list[dict]:
             symbol = gc.get("symbol")
             value_id = gc.get("valueId") or ""
             if symbol:
-                out.append({
-                    "gene_symbol": symbol,
-                    "hgnc_id":     value_id if value_id.startswith("HGNC:") else None,
-                    "variant":     vd.get("label") or vd.get("id", ""),
-                    "ascertained": status in ("CAUSATIVE", "CONTRIBUTORY", ""),
-                })
+                out.append(
+                    {
+                        "gene_symbol": symbol,
+                        "hgnc_id": value_id if value_id.startswith("HGNC:") else None,
+                        "variant": vd.get("label") or vd.get("id", ""),
+                        "ascertained": status in ("CAUSATIVE", "CONTRIBUTORY", ""),
+                    }
+                )
     return out
 
 
@@ -132,12 +132,14 @@ def parse_args() -> argparse.Namespace:
     tc_dir = os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
     p = argparse.ArgumentParser(description="Ingest Phenopacket-Store JSONs to JSONL.")
     p.add_argument(
-        "--input-dir", type=Path,
+        "--input-dir",
+        type=Path,
         default=Path(pp_dir) / f"v{version}",
         help="Directory holding the extracted phenopackets (default: $PHENOPACKET_DIR/v$PHENOPACKET_STORE_VERSION)",
     )
     p.add_argument(
-        "--output", type=Path,
+        "--output",
+        type=Path,
         default=Path(tc_dir) / "01_all_phenopackets.jsonl",
         help="Output JSONL path (default: $TEST_CASES_DIR/01_all_phenopackets.jsonl)",
     )
@@ -180,30 +182,36 @@ def main() -> int:
             interps = extract_interpretations(pp)
 
             record = {
-                "case_id":         case_id,
-                "source_path":     str(jf.relative_to(PROJECT_ROOT)),
-                "subject_id":      (pp.get("subject") or {}).get("id"),
-                "hpo_terms":       hpo,
-                "diseases":        diseases,
+                "case_id": case_id,
+                "source_path": str(jf.relative_to(PROJECT_ROOT)),
+                "subject_id": (pp.get("subject") or {}).get("id"),
+                "hpo_terms": hpo,
+                "diseases": diseases,
                 "interpretations": interps,
             }
             fout.write(json.dumps(record, ensure_ascii=False) + "\n")
             n_written += 1
-            n_with_hpo     += int(bool(hpo))
+            n_with_hpo += int(bool(hpo))
             n_with_disease += int(bool(diseases))
-            n_with_interp  += int(bool(interps))
-            hpo_count_total    += len(hpo)
+            n_with_interp += int(bool(interps))
+            hpo_count_total += len(hpo)
             interp_count_total += len(interps)
 
     logger.info("=== Ingest summary ===")
     logger.info(f"  files seen:           {n_seen:,}")
     logger.info(f"  records written:      {n_written:,}")
     logger.info(f"  parse errors skipped: {n_skipped:,}")
-    logger.info(f"  with >= 1 HPO term:   {n_with_hpo:,} ({100*n_with_hpo/max(n_written,1):.1f}%)")
-    logger.info(f"  with >= 1 disease:    {n_with_disease:,} ({100*n_with_disease/max(n_written,1):.1f}%)")
-    logger.info(f"  with >= 1 interp:     {n_with_interp:,} ({100*n_with_interp/max(n_written,1):.1f}%)")
-    logger.info(f"  avg HPO terms/case:   {hpo_count_total/max(n_written,1):.1f}")
-    logger.info(f"  avg interps/case:     {interp_count_total/max(n_written,1):.2f}")
+    logger.info(
+        f"  with >= 1 HPO term:   {n_with_hpo:,} ({100 * n_with_hpo / max(n_written, 1):.1f}%)"
+    )
+    logger.info(
+        f"  with >= 1 disease:    {n_with_disease:,} ({100 * n_with_disease / max(n_written, 1):.1f}%)"
+    )
+    logger.info(
+        f"  with >= 1 interp:     {n_with_interp:,} ({100 * n_with_interp / max(n_written, 1):.1f}%)"
+    )
+    logger.info(f"  avg HPO terms/case:   {hpo_count_total / max(n_written, 1):.1f}")
+    logger.info(f"  avg interps/case:     {interp_count_total / max(n_written, 1):.2f}")
     logger.info(f"  output:               {args.output}")
 
     if not (EXPECTED_COUNT_LO <= n_written <= EXPECTED_COUNT_HI):

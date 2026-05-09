@@ -41,30 +41,57 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("filter_corpus")
 
 # MeSH/keyword whitelist (case-insensitive substring match).
 GENETICS_VOCAB: Final[frozenset[str]] = frozenset(
-    s.lower() for s in (
-        "genetics", "genetic", "genomics", "genomic", "genome",
-        "mutation", "mutations", "variant", "variants",
-        "rare disease", "rare diseases", "orphan disease",
-        "mendelian", "monogenic", "hereditary",
-        "phenotype", "genotype", "exome", "next-generation sequencing",
-        "whole genome", "whole-genome", "whole exome", "whole-exome",
-        "cystic fibrosis", "huntington", "marfan", "noonan", "digeorge",
-        "rett syndrome", "phenylketonuria", "fabry", "niemann-pick",
-        "agammaglobulinemia", "immunodeficiency", "duchenne",
-        "charcot-marie-tooth", "muscular dystrophy",
+    s.lower()
+    for s in (
+        "genetics",
+        "genetic",
+        "genomics",
+        "genomic",
+        "genome",
+        "mutation",
+        "mutations",
+        "variant",
+        "variants",
+        "rare disease",
+        "rare diseases",
+        "orphan disease",
+        "mendelian",
+        "monogenic",
+        "hereditary",
+        "phenotype",
+        "genotype",
+        "exome",
+        "next-generation sequencing",
+        "whole genome",
+        "whole-genome",
+        "whole exome",
+        "whole-exome",
+        "cystic fibrosis",
+        "huntington",
+        "marfan",
+        "noonan",
+        "digeorge",
+        "rett syndrome",
+        "phenylketonuria",
+        "fabry",
+        "niemann-pick",
+        "agammaglobulinemia",
+        "immunodeficiency",
+        "duchenne",
+        "charcot-marie-tooth",
+        "muscular dystrophy",
     )
 )
 
 # Title/abstract genetics regex (MeSH-fallback for un-indexed recent articles).
 TITLE_ABSTRACT_PATTERNS: Final[tuple[re.Pattern[str], ...]] = tuple(
-    re.compile(p, re.I) for p in (
+    re.compile(p, re.I)
+    for p in (
         r"\b(genetic|genomic|hereditary|mendelian|monogenic|inborn)\b",
         r"\b(mutation|variant|deletion|duplication|insertion|polymorphism)s?\b",
         r"\b(HPO|OMIM|Orphanet|GeneReviews|MONDO|HGNC|ClinVar)\b",
@@ -123,15 +150,17 @@ def parse_args() -> argparse.Namespace:
     """CLI argument parsing."""
     workspace = os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")
     p = argparse.ArgumentParser(description="Filter parsed JSONL for genetics relevance.")
-    p.add_argument("--input", type=Path,
-                   default=Path(workspace) / "parsed" / "demo.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(workspace) / "filtered" / "demo.jsonl")
-    p.add_argument("--rejects", type=Path,
-                   default=Path(workspace) / "filtered" / "demo_rejects.jsonl")
-    p.add_argument("--strict", action="store_true",
-                   help=f"Abort if retained count not in "
-                        f"[{DEFAULT_MIN_RETAINED:,}, {DEFAULT_MAX_RETAINED:,}].")
+    p.add_argument("--input", type=Path, default=Path(workspace) / "parsed" / "demo.jsonl")
+    p.add_argument("--output", type=Path, default=Path(workspace) / "filtered" / "demo.jsonl")
+    p.add_argument(
+        "--rejects", type=Path, default=Path(workspace) / "filtered" / "demo_rejects.jsonl"
+    )
+    p.add_argument(
+        "--strict",
+        action="store_true",
+        help=f"Abort if retained count not in "
+        f"[{DEFAULT_MIN_RETAINED:,}, {DEFAULT_MAX_RETAINED:,}].",
+    )
     return p.parse_args()
 
 
@@ -148,17 +177,20 @@ def main() -> int:
     n_kept = n_drop = 0
     reasons_counter: dict[str, int] = {"mesh": 0, "keyword": 0, "title_abstract_regex": 0}
 
-    with args.input.open("r", encoding="utf-8") as fin, \
-         args.output.open("w", encoding="utf-8") as fout, \
-         args.rejects.open("w", encoding="utf-8") as frej:
+    with (
+        args.input.open("r", encoding="utf-8") as fin,
+        args.output.open("w", encoding="utf-8") as fout,
+        args.rejects.open("w", encoding="utf-8") as frej,
+    ):
         for line in tqdm(fin, total=n_total, desc="filtering"):
             record = json.loads(line)
             ok, reasons = is_relevant(record)
             if ok:
                 for r in reasons:
                     reasons_counter[r] += 1
-                fout.write(json.dumps({**record, "_filter_reasons": reasons},
-                                       ensure_ascii=False) + "\n")
+                fout.write(
+                    json.dumps({**record, "_filter_reasons": reasons}, ensure_ascii=False) + "\n"
+                )
                 n_kept += 1
             else:
                 frej.write(line)

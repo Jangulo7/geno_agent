@@ -44,14 +44,10 @@ from scripts.utils.seed import apply_seeds  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 apply_seeds()
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("chunker")
 
-TOKENIZER_NAME: Final[str] = os.environ.get(
-    "EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings"
-)
+TOKENIZER_NAME: Final[str] = os.environ.get("EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings")
 MAX_TOKENS: Final[int] = int(os.environ.get("CHUNK_MAX_TOKENS", "512"))
 OVERLAP_TOKENS: Final[int] = int(os.environ.get("CHUNK_OVERLAP_TOKENS", "50"))
 MIN_SECTION_CHARS: Final[int] = 50
@@ -60,9 +56,7 @@ MIN_SECTION_CHARS: Final[int] = 50
 CHUNK_NAMESPACE: Final[uuid.UUID] = uuid.UUID("6f9619ff-8b86-d011-b42d-00cf4fc964ff")
 
 
-def deterministic_chunk_id(
-    pmcid: str, section_type: str, chunk_index: int, chunk_text: str
-) -> str:
+def deterministic_chunk_id(pmcid: str, section_type: str, chunk_index: int, chunk_text: str) -> str:
     """Generate a deterministic UUID5 for a chunk.
 
     Args:
@@ -76,16 +70,16 @@ def deterministic_chunk_id(
         across processes, machines, and Python versions — required for
         Qdrant idempotent upserts and replay-stable manifest hashing.
     """
-    text_digest = hashlib.blake2b(
-        chunk_text.encode("utf-8"), digest_size=16
-    ).hexdigest()
+    text_digest = hashlib.blake2b(chunk_text.encode("utf-8"), digest_size=16).hexdigest()
     key = f"{pmcid}|{section_type}|{chunk_index}|{text_digest}"
     return str(uuid.uuid5(CHUNK_NAMESPACE, key))
 
 
 def chunk_section_text(
-    text: str, tokenizer: PreTrainedTokenizerBase,
-    max_tokens: int = MAX_TOKENS, overlap_tokens: int = OVERLAP_TOKENS,
+    text: str,
+    tokenizer: PreTrainedTokenizerBase,
+    max_tokens: int = MAX_TOKENS,
+    overlap_tokens: int = OVERLAP_TOKENS,
 ) -> list[str]:
     """Split ``text`` into overlapping token-bounded chunks.
 
@@ -107,9 +101,7 @@ def chunk_section_text(
     stride = max_tokens - overlap_tokens
     for start in range(0, len(token_ids), stride):
         end = min(start + max_tokens, len(token_ids))
-        chunk_text = tokenizer.decode(
-            token_ids[start:end], skip_special_tokens=True
-        ).strip()
+        chunk_text = tokenizer.decode(token_ids[start:end], skip_special_tokens=True).strip()
         if chunk_text:
             chunks.append(chunk_text)
         if end >= len(token_ids):
@@ -117,9 +109,7 @@ def chunk_section_text(
     return chunks
 
 
-def process_article(
-    article: dict, tokenizer: PreTrainedTokenizerBase
-) -> list[dict]:
+def process_article(article: dict, tokenizer: PreTrainedTokenizerBase) -> list[dict]:
     """Chunk every section of one article and return chunk records."""
     out: list[dict] = []
     pmcid = article["pmcid"]
@@ -131,18 +121,20 @@ def process_article(
             continue
         text_chunks = chunk_section_text(text, tokenizer)
         for i, chunk_text in enumerate(text_chunks):
-            out.append({
-                "chunk_id": deterministic_chunk_id(pmcid, section_type, i, chunk_text),
-                "pmcid": pmcid,
-                "title": article.get("title", ""),
-                "section_type": section_type,
-                "section_heading": heading,
-                "pub_year": article.get("pub_year"),
-                "mesh_terms": article.get("mesh_terms", []),
-                "chunk_index": i,
-                "total_chunks_in_section": len(text_chunks),
-                "text": chunk_text,
-            })
+            out.append(
+                {
+                    "chunk_id": deterministic_chunk_id(pmcid, section_type, i, chunk_text),
+                    "pmcid": pmcid,
+                    "title": article.get("title", ""),
+                    "section_type": section_type,
+                    "section_heading": heading,
+                    "pub_year": article.get("pub_year"),
+                    "mesh_terms": article.get("mesh_terms", []),
+                    "chunk_index": i,
+                    "total_chunks_in_section": len(text_chunks),
+                    "text": chunk_text,
+                }
+            )
     return out
 
 
@@ -150,10 +142,8 @@ def parse_args() -> argparse.Namespace:
     """CLI argument parsing."""
     workspace = os.environ.get("PMC_WORKSPACE", "/mnt/c/pmc_workspace")
     p = argparse.ArgumentParser(description="Section-aware deterministic chunker.")
-    p.add_argument("--input", type=Path,
-                   default=Path(workspace) / "filtered" / "demo.jsonl")
-    p.add_argument("--output", type=Path,
-                   default=Path(workspace) / "chunks" / "demo.jsonl")
+    p.add_argument("--input", type=Path, default=Path(workspace) / "filtered" / "demo.jsonl")
+    p.add_argument("--output", type=Path, default=Path(workspace) / "chunks" / "demo.jsonl")
     return p.parse_args()
 
 
@@ -176,13 +166,16 @@ def main() -> int:
     n_chunks = n_skipped_secs = 0
     section_type_counts: dict[str, int] = {}
 
-    with args.input.open("r", encoding="utf-8") as fin, \
-         args.output.open("w", encoding="utf-8") as fout:
+    with (
+        args.input.open("r", encoding="utf-8") as fin,
+        args.output.open("w", encoding="utf-8") as fout,
+    ):
         for line in tqdm(fin, total=n_articles, desc="chunking"):
             article = json.loads(line)
             chunks = process_article(article, tokenizer)
             n_skipped_secs += sum(
-                1 for s in article.get("sections", [])
+                1
+                for s in article.get("sections", [])
                 if not s.get("text") or len(s["text"].strip()) < MIN_SECTION_CHARS
             )
             for c in chunks:
