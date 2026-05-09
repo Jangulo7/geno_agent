@@ -40,3 +40,20 @@ data/Human_Phenotype_Ontology/
 data/MONDO_Disease_Ontology/
 data/ontologies/
 data/hgnc
+
+# Phase 2 frontend (CopilotKit / Next.js) — node_modules and build artifacts
+# never go to git. The geno_agent-specific React components under
+# frontend/src/geno_agent/ ARE committed; CopilotKit framework + node_modules
+# are not.
+frontend/node_modules/
+frontend/.next/
+frontend/.turbo/
+frontend/.cache/
+frontend/dist/
+frontend/build/
+frontend/*.tsbuildinfo
+frontend/.env
+frontend/.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

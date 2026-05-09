@@ -114,11 +114,28 @@ Statistical tests follow the Reform guidelines for ML evaluations ([Kapoor & Nar
 
 | Phase | Description | Status |
 |-------|-------------|--------|
-| 1A | Build PMC OA Qdrant index with hybrid retrieval | 🚧 In progress |
-| 1B | Phenopacket-based test-case curation pipeline | 🚧 In progress |
-| 2  | Implement four agents and LangGraph orchestration | ⏳ Planned |
-| 3  | Run 2×2+1 factorial experiment and statistical analysis | ⏳ Planned |
-| 4  | Manuscript preparation and reproducibility package | ⏳ Planned |
+| 1A (scripts) | PMC OA pipeline scripts validated on demo corpus | ✅ Complete |
+| 1A (production) | Full 150 GB / 5–9 day production corpus build | ⏳ Not started |
+| 1B  | Phenopacket-based test-case curation (master plan §6) | ⏳ Blocked on full Phase 1A |
+| 2a  | LangGraph 4-agent state graph + Qwen3-8B/vLLM (master plan §11.1) | ⏳ Planned (~1 week) |
+| 2b  | FastAPI + `copilotkit-sdk-python` endpoint (master plan §11.2) | ⏳ Planned (~2 days) |
+| 2c  | CopilotKit React UI + custom geno_agent components (master plan §11.3) | ⏳ Planned (~3-5 days) |
+| Eval | 2×2+1 factorial experiment vs Exomiser baseline (master plan §11.5) | ⏳ Planned (~3 days) |
+| Manuscript | Thesis writeup + reproducibility package | ⏳ Planned |
+
+Latest demo evidence: [`reports/visual_report.html`](reports/visual_report.html) ·
+Status snapshot: [`reports/progress_report_09052026.html`](reports/progress_report_09052026.html)
+
+### Phase 2 UI — CopilotKit
+
+The thesis defense demo will be served through a [CopilotKit](https://copilotkit.ai)-based React UI sourced from the user's fork at [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) (upstream `CopilotKit/CopilotKit`). CopilotKit ships first-class LangGraph integration via the AG-UI protocol; geno_agent's four agents stream their state into a chat + generative-UI surface so a clinician-style user can:
+
+- Pick HPO phenotype terms with autocomplete sourced from the local `hp.obo`
+- Paste / edit a candidate gene list (validated against HGNC)
+- Watch the Query Planner expand HPO terms, the Retriever pull chunks from Qdrant, the Critic grade them, and the Synthesizer re-rank — live, with citations
+- Click into individual `<GeneCandidateCard>` tiles to see the supporting passages with PMC links
+
+Full design in master plan §11.
 
 ## Reproducibility
 
@@ -135,7 +152,7 @@ This project is built reproducibility-first. Every external dataset is pinned to
 In addition:
 - All chunk identifiers are deterministic UUIDv5 hashes of content, not random UUIDs
 - Random seeding is fixed and documented (`PYTHONHASHSEED=42`, explicit `torch` / `numpy` / `random` seeds in embedding generation)
-- Qdrant runs in Docker at a pinned image version (`qdrant/qdrant:v1.12.4`)
+- Qdrant runs in Docker at a pinned image version (`qdrant/qdrant:v1.14.1`)
 - Dependencies are pinned in `pyproject.toml` with exact versions
 - Distractor gene sampling uses a per-case derived seed (`blake2b(global_seed, case_id)`), so individual cases can be regenerated without disturbing others
 
@@ -145,24 +162,32 @@ The full reproducibility specification is documented in `MASTER_PROJECT_v2.1.md`
 
 ```
 geno_agent/
-├── docker-compose.yml        # Qdrant local deployment
-├── .env.example              # Template; copy to .env and fill in
-├── src/
-│   ├── acquisition/          # PMC OA + ontology + phenopacket downloads
-│   ├── parsing/              # JATS XML parsing
-│   ├── chunking/             # Section-aware 512-token chunking
-│   ├── embedding/            # PubMedBERT inference
-│   ├── indexing/             # Qdrant collection management
-│   ├── retrieval/            # Hybrid dense + BM25 retrieval
-│   ├── agents/               # Query Planner, Retriever, Critic, Synthesizer
-│   └── utils/
-├── scripts/                  # End-to-end pipelines and experiments
-├── tests/                    # Unit and integration tests
-├── config/                   # Prompt templates, agent configs
-└── data/                     # Datasets and manifests (large files .gitignored)
+├── MASTER_PROJECT_v2.1.md            # Authoritative project spec (Phases 1A, 1B, 2)
+├── CLAUDE.md                          # Project rules + memory pointers
+├── pyproject.toml                     # Pinned Python dependencies
+├── docker-compose.yml                 # Qdrant v1.14.1 on :6533/:6534
+├── .env.example                       # Template; copy to .env and fill in
+├── scripts/
+│   ├── corpus/                        # PMC OA fetch / parse / filter / chunk (Phase 1A §4)
+│   ├── ontology/                      # Ontology download + verify (§3, §5)
+│   ├── embedding/                     # PubMedBERT embedding (§4 step 4)
+│   ├── indexing/                      # Qdrant create + validate (§4 steps 5-6)
+│   ├── cases/                         # Phenopacket pipeline (Phase 1B §6) — planned
+│   ├── eval/                          # 2x2+1 factorial harness (Phase 2 §11.5) — planned
+│   ├── demo/                          # End-to-end orchestrator + viz (run_pipeline.sh)
+│   └── utils/                         # seed.py + manifest helpers
+├── src/                               # Phase 2 application code (planned)
+│   ├── agents/                        # LangGraph state graph + 4 agent nodes (§11.1)
+│   ├── api/                           # FastAPI + copilotkit-sdk-python (§11.2)
+│   └── tools/                         # Shared tool functions (HPO/MeSH/HGNC/Qdrant)
+├── frontend/                          # Phase 2c CopilotKit React UI (planned, separate npm project)
+├── tests/                             # Unit + integration
+├── config/                            # Prompt templates, agent configs
+├── reports/                           # Demo + status reports (HTML + MD)
+└── data/                              # Manifests + ontologies (large files .gitignored)
 ```
 
-Persistent heavy artifacts (Qdrant index, model weights, raw corpus) live outside the repository under `~/rare-disease-rag/` to keep the git history clean.
+Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean. The `frontend/` directory will hold a standalone Next.js + CopilotKit project; the upstream CopilotKit framework lives at the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) and is consumed via npm rather than vendored.
 
 ## Quick start
 
