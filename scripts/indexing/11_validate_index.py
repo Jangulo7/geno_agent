@@ -54,12 +54,22 @@ BM25_MODEL: Final[str] = "Qdrant/bm25"
 TOP_K: Final[int] = 5
 
 PROBES: Final[tuple[str, ...]] = (
+    # Neurological
     "Huntington disease CAG repeat expansion",
-    "cystic fibrosis CFTR mutation lung",
-    "Marfan syndrome FBN1 fibrillin aortic",
-    "Duchenne muscular dystrophy DMD gene",
+    "Rett syndrome MECP2 X-linked",
+    "Charcot-Marie-Tooth peripheral neuropathy PMP22",
+    # Metabolic
     "phenylketonuria PAH enzyme deficiency",
+    "Fabry disease alpha-galactosidase A GLA",
+    "Niemann-Pick lysosomal storage NPC1",
+    # Immunological
     "common variable immunodeficiency B cell",
+    "severe combined immunodeficiency SCID T cell",
+    "agammaglobulinemia BTK X-linked",
+    # Developmental / connective-tissue
+    "Marfan syndrome FBN1 fibrillin aortic",
+    "Noonan syndrome RAS-MAPK PTPN11",
+    "DiGeorge syndrome 22q11 deletion thymus",
 )
 
 

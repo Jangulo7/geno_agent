@@ -1,0 +1,1315 @@
+{
+  "env": {
+    "python": "Python 3.12.3",
+    "git_rev": "c553d14",
+    "torch": "2.9.0.dev20250820+cu128",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "steps": [
+    {
+      "id": "01_fetch",
+      "desc": "Fetch demo corpus (NCBI esearch + efetch)",
+      "log_path": "reports/run_logs/01_fetch.log",
+      "elapsed_s": 2.0,
+      "metrics": {
+        "total_files": 100,
+        "total_size_mb": 12.8,
+        "per_category": {
+          "neurological": 25,
+          "metabolic": 25,
+          "immunological": 25,
+          "developmental": 25
+        }
+      }
+    },
+    {
+      "id": "06_parse",
+      "desc": "Parse JATS XML",
+      "log_path": "reports/run_logs/06_parse.log",
+      "elapsed_s": 0.0,
+      "metrics": {
+        "parsed": 100,
+        "input_total": 100,
+        "sections": 559,
+        "chars": 3411874
+      }
+    },
+    {
+      "id": "07_filter",
+      "desc": "Filter genetics / rare disease",
+      "log_path": "reports/run_logs/07_filter.log",
+      "elapsed_s": 0.0,
+      "metrics": {
+        "input": 100,
+        "retained": 89,
+        "retained_pct": 89.0,
+        "rejected": 11
+      }
+    },
+    {
+      "id": "08_chunk",
+      "desc": "UUID5 section-aware chunking",
+      "log_path": "reports/run_logs/08_chunk.log",
+      "elapsed_s": 2.0,
+      "metrics": {
+        "articles_in": 89,
+        "chunks_out": 1625,
+        "short_skipped": 21,
+        "by_section_type": {
+          "case": 20,
+          "conclusion": 57,
+          "discussion": 255,
+          "introduction": 170,
+          "methods": 315,
+          "other": 346,
+          "results": 462
+        }
+      }
+    },
+    {
+      "id": "09_embed",
+      "desc": "PubMedBERT embedding (RTX 5090)",
+      "log_path": "reports/run_logs/09_embed.log",
+      "elapsed_s": 7.0,
+      "metrics": {
+        "records": 1625,
+        "encode_seconds": 4.6,
+        "encode_chunks_per_s": 351,
+        "parquet_size_mb": 5.5
+      }
+    },
+    {
+      "id": "10_upload",
+      "desc": "Qdrant upload (dense + BM25)",
+      "log_path": "reports/run_logs/10_upload.log",
+      "elapsed_s": 1.0,
+      "metrics": {
+        "points": 1625
+      }
+    },
+    {
+      "id": "11_validate",
+      "desc": "Hybrid retrieval probes",
+      "log_path": "reports/run_logs/11_validate.log",
+      "elapsed_s": 5.0,
+      "metrics": {
+        "probes": [
+          {
+            "query": "Huntington disease CAG repeat expansion",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.559,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "common repeat expansions code for stretches of glutamine and are therefore referred to as polyq. the best known example of a non - coding re"
+                },
+                {
+                  "score": 0.548,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "directly binding and modulating the aggregation process, hspb1 was also shown to counter polyq - induced cell death by responding to the ros"
+                },
+                {
+                  "score": 0.521,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "common genetic cause of familial als is a massive expansion of the ggggcc hexanucleotide repeat region in the first intron of c9orf72 ( deje"
+                },
+                {
+                  "score": 0.509,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": ". 2012 ). this suggests, in contrast to the in vitro data, that hspb5 is actually capable of providing protection against huntington ’ s pol"
+                },
+                {
+                  "score": 0.393,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "α - synuclein may transition from soluble monomers to oligomers which further develop into insoluble fibrils. multiple shsps have been repor"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 26.551,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "common repeat expansions code for stretches of glutamine and are therefore referred to as polyq. the best known example of a non - coding re"
+                },
+                {
+                  "score": 26.329,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "directly binding and modulating the aggregation process, hspb1 was also shown to counter polyq - induced cell death by responding to the ros"
+                },
+                {
+                  "score": 20.367,
+                  "pmcid": "PMC7016893",
+                  "section_type": "other",
+                  "snippet": "the findings discussed above attest to the notion that enhancing kcc2 levels and activities could bring about therapeutic benefits to a rang"
+                },
+                {
+                  "score": 15.108,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "α - synuclein may transition from soluble monomers to oligomers which further develop into insoluble fibrils. multiple shsps have been repor"
+                },
+                {
+                  "score": 14.589,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": ". 2012 ). this suggests, in contrast to the in vitro data, that hspb5 is actually capable of providing protection against huntington ’ s pol"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 1.0,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "common repeat expansions code for stretches of glutamine and are therefore referred to as polyq. the best known example of a non - coding re"
+                },
+                {
+                  "score": 0.667,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "directly binding and modulating the aggregation process, hspb1 was also shown to counter polyq - induced cell death by responding to the ros"
+                },
+                {
+                  "score": 0.393,
+                  "pmcid": "PMC7016893",
+                  "section_type": "other",
+                  "snippet": "the findings discussed above attest to the notion that enhancing kcc2 levels and activities could bring about therapeutic benefits to a rang"
+                },
+                {
+                  "score": 0.393,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "common genetic cause of familial als is a massive expansion of the ggggcc hexanucleotide repeat region in the first intron of c9orf72 ( deje"
+                },
+                {
+                  "score": 0.367,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": ". 2012 ). this suggests, in contrast to the in vitro data, that hspb5 is actually capable of providing protection against huntington ’ s pol"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Rett syndrome MECP2 X-linked",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.702,
+                  "pmcid": "PMC13025527",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt ) ( omim # 312750 ) is an x - linked neurodevelopmental disorder that, in most cases ( ~ 90 % ), is due to a pathogenic"
+                },
+                {
+                  "score": 0.701,
+                  "pmcid": "PMC12831476",
+                  "section_type": "introduction",
+                  "snippet": "methyl - cpg - binding protein 2 ( mecp2 ) is a broadly expressed epigenetic regulator known for its high - affinity binding to methylated d"
+                },
+                {
+                  "score": 0.698,
+                  "pmcid": "PMC12652325",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt ) is a devastating neurodevelopmental disorder resulting from de novo loss - of - function mutations in the x - linked g"
+                },
+                {
+                  "score": 0.697,
+                  "pmcid": "PMC12528506",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt, omim # 312750 ) is an x - linked neurodevelopmental disorder originally described by andreas rett in 1966 1. it is the"
+                },
+                {
+                  "score": 0.689,
+                  "pmcid": "PMC13061089",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt, omim : # 312750 ) is a severe neurological disorder caused by loss - of - function mutations in the x - linked gene met"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 17.698,
+                  "pmcid": "PMC13133546",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome is an x ‐ linked neurodevelopmental disorder characterized by profound regression following 6 – 18 months of apparently typica"
+                },
+                {
+                  "score": 16.433,
+                  "pmcid": "PMC12674224",
+                  "section_type": "introduction",
+                  "snippet": "Mutations in the X-linked gene MECP2 , encoding the protein methyl CpG binding protein 2 (MeCP2), are found in up to 95% of patients with cl"
+                },
+                {
+                  "score": 14.777,
+                  "pmcid": "PMC13025527",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt ) ( omim # 312750 ) is an x - linked neurodevelopmental disorder that, in most cases ( ~ 90 % ), is due to a pathogenic"
+                },
+                {
+                  "score": 14.59,
+                  "pmcid": "PMC13031948",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome is a severe x - linked neurodevelopmental disorder caused by loss - of - function mutations in mecp2, which encodes methyl - c"
+                },
+                {
+                  "score": 13.37,
+                  "pmcid": "PMC13061089",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt, omim : # 312750 ) is a severe neurological disorder caused by loss - of - function mutations in the x - linked gene met"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.75,
+                  "pmcid": "PMC13025527",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt ) ( omim # 312750 ) is an x - linked neurodevelopmental disorder that, in most cases ( ~ 90 % ), is due to a pathogenic"
+                },
+                {
+                  "score": 0.577,
+                  "pmcid": "PMC13133546",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome is an x ‐ linked neurodevelopmental disorder characterized by profound regression following 6 – 18 months of apparently typica"
+                },
+                {
+                  "score": 0.396,
+                  "pmcid": "PMC12831476",
+                  "section_type": "introduction",
+                  "snippet": "methyl - cpg - binding protein 2 ( mecp2 ) is a broadly expressed epigenetic regulator known for its high - affinity binding to methylated d"
+                },
+                {
+                  "score": 0.381,
+                  "pmcid": "PMC12674224",
+                  "section_type": "introduction",
+                  "snippet": "Mutations in the X-linked gene MECP2 , encoding the protein methyl CpG binding protein 2 (MeCP2), are found in up to 95% of patients with cl"
+                },
+                {
+                  "score": 0.333,
+                  "pmcid": "PMC13061089",
+                  "section_type": "introduction",
+                  "snippet": "rett syndrome ( rtt, omim : # 312750 ) is a severe neurological disorder caused by loss - of - function mutations in the x - linked gene met"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Charcot-Marie-Tooth peripheral neuropathy PMP22",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.548,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "patients with hspb1 mutations usually present with progressive weakness of the legs, with bilateral foot drop often arising as the first sym"
+                },
+                {
+                  "score": 0.468,
+                  "pmcid": "PMC7332613",
+                  "section_type": "introduction",
+                  "snippet": "and reperfusion aβ, tau, α - synuclein, ataxin - 3, huntingtin, sod1 hspb6 ( hsp20 ) ubiquitous cardiomyopathy, ischemia and reperfusion aβ,"
+                },
+                {
+                  "score": 0.463,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "##rick et al. ( 2008 ), echaniz - laguna et al. ( 2017a ) k141m missense alpha - crystallin 2 echaniz - laguna et al. ( 2017a ) k141e missen"
+                },
+                {
+                  "score": 0.444,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "and hspb3, which is important for dimerization. whether the y118h mutation alters the hspb2 - hspb3 interaction remains to be determined. ho"
+                },
+                {
+                  "score": 0.363,
+                  "pmcid": "PMC13110917",
+                  "section_type": "other",
+                  "snippet": "matter involvement is described in infantile forms of npc, often widespread and appearing as diffusion imaging changes [ 92 ] or corpus call"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 29.348,
+                  "pmcid": "PMC7332613",
+                  "section_type": "introduction",
+                  "snippet": "and reperfusion aβ, tau, α - synuclein, ataxin - 3, huntingtin, sod1 hspb6 ( hsp20 ) ubiquitous cardiomyopathy, ischemia and reperfusion aβ,"
+                },
+                {
+                  "score": 18.093,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "6 ( hdac6 ) inhibitors resulted in an increase of α - tubulin acetylation and restored the axonal transport defects in vivo. the restoration"
+                },
+                {
+                  "score": 11.515,
+                  "pmcid": "PMC7332613",
+                  "section_type": "introduction",
+                  "snippet": "##b ). to date, no effective treatment is available to delay or cure patients with shsp mutations. understanding the molecular mechanisms of"
+                },
+                {
+                  "score": 9.978,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "patients with hspb1 mutations usually present with progressive weakness of the legs, with bilateral foot drop often arising as the first sym"
+                },
+                {
+                  "score": 9.458,
+                  "pmcid": "PMC12908107",
+                  "section_type": "discussion",
+                  "snippet": "the aim of this study was to elucidate the mechanisms inducing the osteoporotic phenotype caused by mecp2 insufficiency in individuals with"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.833,
+                  "pmcid": "PMC7332613",
+                  "section_type": "introduction",
+                  "snippet": "and reperfusion aβ, tau, α - synuclein, ataxin - 3, huntingtin, sod1 hspb6 ( hsp20 ) ubiquitous cardiomyopathy, ischemia and reperfusion aβ,"
+                },
+                {
+                  "score": 0.7,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "patients with hspb1 mutations usually present with progressive weakness of the legs, with bilateral foot drop often arising as the first sym"
+                },
+                {
+                  "score": 0.333,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "6 ( hdac6 ) inhibitors resulted in an increase of α - tubulin acetylation and restored the axonal transport defects in vivo. the restoration"
+                },
+                {
+                  "score": 0.291,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "and hspb3, which is important for dimerization. whether the y118h mutation alters the hspb2 - hspb3 interaction remains to be determined. ho"
+                },
+                {
+                  "score": 0.25,
+                  "pmcid": "PMC7332613",
+                  "section_type": "other",
+                  "snippet": "##rick et al. ( 2008 ), echaniz - laguna et al. ( 2017a ) k141m missense alpha - crystallin 2 echaniz - laguna et al. ( 2017a ) k141e missen"
+                }
+              ]
+            }
+          },
+          {
+            "query": "phenylketonuria PAH enzyme deficiency",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.531,
+                  "pmcid": "PMC2885380",
+                  "section_type": "case",
+                  "snippet": "a 3 - year - old boy was first seen in our department at the age of 20 days for a positive neonatal screening for pku. he was born at 41 wee"
+                },
+                {
+                  "score": 0.513,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.402,
+                  "pmcid": "PMC5318163",
+                  "section_type": "results",
+                  "snippet": "end of exon 4 and disrupts the splice site. the third, p. r356q, is predicted to be pathogenic based on a prior confirmed clinical case. ⋯th"
+                },
+                {
+                  "score": 0.396,
+                  "pmcid": "PMC5318163",
+                  "section_type": "results",
+                  "snippet": "mean and absolute value ) of each screen positive sample. for each screen positive, we retrieved the duplicate dbs from the same specimen an"
+                },
+                {
+                  "score": 0.381,
+                  "pmcid": "PMC2885380",
+                  "section_type": "case",
+                  "snippet": "the reduced plasma a - galactosidase a ( 0, 32 nmol / h / ml ), decreased activity assayed in leucocytes [ 0, 65 nmol / mg. prot / h ( norma"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 23.717,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 8.356,
+                  "pmcid": "PMC13026801",
+                  "section_type": "other",
+                  "snippet": "glycogen storage diseases ( gsds ) are a group of inherited metabolic disorders that affect multiple organ systems. they are characterized b"
+                },
+                {
+                  "score": 8.086,
+                  "pmcid": "PMC12906976",
+                  "section_type": "introduction",
+                  "snippet": "Acid sphingomyelinase deficiency (ASMD), also known as Niemann–Pick disease types A and B, is an uncommon lysosomal storage disorder (LSD) c"
+                },
+                {
+                  "score": 7.454,
+                  "pmcid": "PMC13026801",
+                  "section_type": "other",
+                  "snippet": "the mutant enzyme and improve its folding and trafficking to lysosomes, thus enhancing residual enzymatic activity. early studies showed tha"
+                },
+                {
+                  "score": 6.643,
+                  "pmcid": "PMC12192928",
+                  "section_type": "results",
+                  "snippet": "npc1 and lamp2 ( figure 3 c ). we tested next whether jq1 affects the expansion of the acidic ( lysosomal ) compartment, a cellular hallmark"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.833,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.5,
+                  "pmcid": "PMC2885380",
+                  "section_type": "case",
+                  "snippet": "a 3 - year - old boy was first seen in our department at the age of 20 days for a positive neonatal screening for pku. he was born at 41 wee"
+                },
+                {
+                  "score": 0.458,
+                  "pmcid": "PMC13026801",
+                  "section_type": "other",
+                  "snippet": "glycogen storage diseases ( gsds ) are a group of inherited metabolic disorders that affect multiple organ systems. they are characterized b"
+                },
+                {
+                  "score": 0.3,
+                  "pmcid": "PMC12906976",
+                  "section_type": "introduction",
+                  "snippet": "Acid sphingomyelinase deficiency (ASMD), also known as Niemann–Pick disease types A and B, is an uncommon lysosomal storage disorder (LSD) c"
+                },
+                {
+                  "score": 0.25,
+                  "pmcid": "PMC5318163",
+                  "section_type": "results",
+                  "snippet": "end of exon 4 and disrupts the splice site. the third, p. r356q, is predicted to be pathogenic based on a prior confirmed clinical case. ⋯th"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Fabry disease alpha-galactosidase A GLA",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.629,
+                  "pmcid": "PMC2885380",
+                  "section_type": "case",
+                  "snippet": "the reduced plasma a - galactosidase a ( 0, 32 nmol / h / ml ), decreased activity assayed in leucocytes [ 0, 65 nmol / mg. prot / h ( norma"
+                },
+                {
+                  "score": 0.628,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.586,
+                  "pmcid": "PMC5531455",
+                  "section_type": "conclusion",
+                  "snippet": "##ogm2 was also attempted with the same limitations. in fd, our results are in good accordance with previous studies [ 31 ]. lysogb 3 is ele"
+                },
+                {
+                  "score": 0.581,
+                  "pmcid": "PMC5531455",
+                  "section_type": "results",
+                  "snippet": "##ld : lysosomal acid lipase deficiency ; lsds : lysosomal storage diseases. in the control population, lysogb 3, lysohexcer, lysosm and lys"
+                },
+                {
+                  "score": 0.529,
+                  "pmcid": "PMC13026801",
+                  "section_type": "other",
+                  "snippet": "glycogen storage diseases ( gsds ) are a group of inherited metabolic disorders that affect multiple organ systems. they are characterized b"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 24.149,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 18.058,
+                  "pmcid": "PMC5531455",
+                  "section_type": "methods",
+                  "snippet": "edta plasma samples were obtained from patients referred for the diagnosis of npc ( n = 8, all npc1 ) and sphingolipidoses [ n = 90 patients"
+                },
+                {
+                  "score": 15.926,
+                  "pmcid": "PMC12272866",
+                  "section_type": "discussion",
+                  "snippet": "small molecules like lumacaftor and tezacaftor have been successfully developed to stabilize this mutant protein, enabling its trafficking a"
+                },
+                {
+                  "score": 14.804,
+                  "pmcid": "PMC5318163",
+                  "section_type": "results",
+                  "snippet": "mean and absolute value ) of each screen positive sample. for each screen positive, we retrieved the duplicate dbs from the same specimen an"
+                },
+                {
+                  "score": 14.798,
+                  "pmcid": "PMC5531455",
+                  "section_type": "other",
+                  "snippet": "(PDF) Click here for additional data file. (PDF) Click here for additional data file. S3-1 Control, S3-2 Gaucher disease, S3-3 Infantile Kra"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.833,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.643,
+                  "pmcid": "PMC2885380",
+                  "section_type": "case",
+                  "snippet": "the reduced plasma a - galactosidase a ( 0, 32 nmol / h / ml ), decreased activity assayed in leucocytes [ 0, 65 nmol / mg. prot / h ( norma"
+                },
+                {
+                  "score": 0.458,
+                  "pmcid": "PMC5531455",
+                  "section_type": "methods",
+                  "snippet": "edta plasma samples were obtained from patients referred for the diagnosis of npc ( n = 8, all npc1 ) and sphingolipidoses [ n = 90 patients"
+                },
+                {
+                  "score": 0.327,
+                  "pmcid": "PMC5531455",
+                  "section_type": "conclusion",
+                  "snippet": "##ogm2 was also attempted with the same limitations. in fd, our results are in good accordance with previous studies [ 31 ]. lysogb 3 is ele"
+                },
+                {
+                  "score": 0.291,
+                  "pmcid": "PMC5318163",
+                  "section_type": "results",
+                  "snippet": "mean and absolute value ) of each screen positive sample. for each screen positive, we retrieved the duplicate dbs from the same specimen an"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Niemann-Pick lysosomal storage NPC1",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.725,
+                  "pmcid": "PMC12308988",
+                  "section_type": "introduction",
+                  "snippet": "Niemann-Pick type C (NPC) is a rare, fatal neurodegenerative disease with an estimated incidence in Western Europeans of 1 in 100,000 [ 1 ]."
+                },
+                {
+                  "score": 0.722,
+                  "pmcid": "PMC12395760",
+                  "section_type": "introduction",
+                  "snippet": "niemann - pick type c ( npc ) disease is a rare genetic disease caused by changes in the npc1 or npc2 genes. the npc1 protein encoded by the"
+                },
+                {
+                  "score": 0.703,
+                  "pmcid": "PMC12308988",
+                  "section_type": "other",
+                  "snippet": "cholesterol is the most abundant lipid in the plasma membrane, typically accounting for 20 – 25 % of the lipid content [ 18 ]. in some extre"
+                },
+                {
+                  "score": 0.698,
+                  "pmcid": "PMC13110917",
+                  "section_type": "other",
+                  "snippet": "statement # 1 : npc is a progressive and life ‐ limiting autosomal recessive, neurovisceral lysosomal disorder caused by pathological varian"
+                },
+                {
+                  "score": 0.674,
+                  "pmcid": "PMC12834037",
+                  "section_type": "introduction",
+                  "snippet": "acid sphingomyelinase ( asmase ) catalyzes the hydrolysis of sphingomyelin ( sm ) to ceramide and phosphocholine. deficiency of asmase resul"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 21.387,
+                  "pmcid": "PMC12308988",
+                  "section_type": "introduction",
+                  "snippet": "Niemann-Pick type C (NPC) is a rare, fatal neurodegenerative disease with an estimated incidence in Western Europeans of 1 in 100,000 [ 1 ]."
+                },
+                {
+                  "score": 21.251,
+                  "pmcid": "PMC12286284",
+                  "section_type": "introduction",
+                  "snippet": "Niemann-Pick disease type C (NPC, OMIM#257220, OMIM#607625) is an autosomal recessive lysosomal storage disorder caused by mutations in the"
+                },
+                {
+                  "score": 21.028,
+                  "pmcid": "PMC12906976",
+                  "section_type": "introduction",
+                  "snippet": "Acid sphingomyelinase deficiency (ASMD), also known as Niemann–Pick disease types A and B, is an uncommon lysosomal storage disorder (LSD) c"
+                },
+                {
+                  "score": 20.456,
+                  "pmcid": "PMC12373931",
+                  "section_type": "introduction",
+                  "snippet": "niemann - pick disease type c ( npc ) is a lysosomal storage disorder caused by mutations in the npc1 or npc2 genes, which encode lysosome -"
+                },
+                {
+                  "score": 20.426,
+                  "pmcid": "PMC13110917",
+                  "section_type": "other",
+                  "snippet": "statement # 1 : npc is a progressive and life ‐ limiting autosomal recessive, neurovisceral lysosomal disorder caused by pathological varian"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 1.0,
+                  "pmcid": "PMC12308988",
+                  "section_type": "introduction",
+                  "snippet": "Niemann-Pick type C (NPC) is a rare, fatal neurodegenerative disease with an estimated incidence in Western Europeans of 1 in 100,000 [ 1 ]."
+                },
+                {
+                  "score": 0.458,
+                  "pmcid": "PMC12395760",
+                  "section_type": "introduction",
+                  "snippet": "niemann - pick type c ( npc ) disease is a rare genetic disease caused by changes in the npc1 or npc2 genes. the npc1 protein encoded by the"
+                },
+                {
+                  "score": 0.424,
+                  "pmcid": "PMC12286284",
+                  "section_type": "introduction",
+                  "snippet": "Niemann-Pick disease type C (NPC, OMIM#257220, OMIM#607625) is an autosomal recessive lysosomal storage disorder caused by mutations in the"
+                },
+                {
+                  "score": 0.367,
+                  "pmcid": "PMC13110917",
+                  "section_type": "other",
+                  "snippet": "statement # 1 : npc is a progressive and life ‐ limiting autosomal recessive, neurovisceral lysosomal disorder caused by pathological varian"
+                },
+                {
+                  "score": 0.25,
+                  "pmcid": "PMC12308988",
+                  "section_type": "other",
+                  "snippet": "cholesterol is the most abundant lipid in the plasma membrane, typically accounting for 20 – 25 % of the lipid content [ 18 ]. in some extre"
+                }
+              ]
+            }
+          },
+          {
+            "query": "common variable immunodeficiency B cell",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.741,
+                  "pmcid": "PMC11949678",
+                  "section_type": "introduction",
+                  "snippet": "Common variable immunodeficiency (CVID) is a primary B-cell immunodeficiency disorder characterized by marked hypogammaglobulinemia that is"
+                },
+                {
+                  "score": 0.608,
+                  "pmcid": "PMC13038513",
+                  "section_type": "introduction",
+                  "snippet": "immunoglobulins ( ig ) are the key proteins involved in humoral adaptive immunity, produced by b lymphocytes in response to a wide variety o"
+                },
+                {
+                  "score": 0.606,
+                  "pmcid": "PMC8525635",
+                  "section_type": "introduction",
+                  "snippet": "common variable immunodeficiency ( cvid ), the most prevalent symptomatic primary immunodeficiency, is characterized by low levels of serum"
+                },
+                {
+                  "score": 0.598,
+                  "pmcid": "PMC11123397",
+                  "section_type": "introduction",
+                  "snippet": "inborn errors of immunity ( iei ) are a diverse group of rare genetic disorders, affecting almost every aspect of the immune response. curre"
+                },
+                {
+                  "score": 0.595,
+                  "pmcid": "PMC11740714",
+                  "section_type": "introduction",
+                  "snippet": "common variable immunodeficiency disorder ( cvid ) is a primary immunodeficiency hallmarked by low serum immunoglobulins and impaired produc"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 15.349,
+                  "pmcid": "PMC11913215",
+                  "section_type": "discussion",
+                  "snippet": "we presented the clinical case of the first colombian patient with xmen disease, previously diagnosed with common variable immunodeficiency."
+                },
+                {
+                  "score": 13.211,
+                  "pmcid": "PMC11913215",
+                  "section_type": "results",
+                  "snippet": "we report a male patient, a full - term product of the fourth pregnancy of unrelated healthy parents from san pedro de los milagros ( antioq"
+                },
+                {
+                  "score": 13.176,
+                  "pmcid": "PMC11949678",
+                  "section_type": "introduction",
+                  "snippet": "Common variable immunodeficiency (CVID) is a primary B-cell immunodeficiency disorder characterized by marked hypogammaglobulinemia that is"
+                },
+                {
+                  "score": 12.542,
+                  "pmcid": "PMC8435594",
+                  "section_type": "introduction",
+                  "snippet": "humoral immunity has been regarded as the pillar of immune defenses against bacterial infections, but was thought to be less essential for v"
+                },
+                {
+                  "score": 12.479,
+                  "pmcid": "PMC10684950",
+                  "section_type": "results",
+                  "snippet": "healthy donors ), orange dots ( cvid ) and red dots ( gs ). cvid, common variable immunodeficiency ; gs, good syndrome ; n, number of cases"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.75,
+                  "pmcid": "PMC11949678",
+                  "section_type": "introduction",
+                  "snippet": "Common variable immunodeficiency (CVID) is a primary B-cell immunodeficiency disorder characterized by marked hypogammaglobulinemia that is"
+                },
+                {
+                  "score": 0.5,
+                  "pmcid": "PMC11913215",
+                  "section_type": "discussion",
+                  "snippet": "we presented the clinical case of the first colombian patient with xmen disease, previously diagnosed with common variable immunodeficiency."
+                },
+                {
+                  "score": 0.476,
+                  "pmcid": "PMC13038513",
+                  "section_type": "introduction",
+                  "snippet": "immunoglobulins ( ig ) are the key proteins involved in humoral adaptive immunity, produced by b lymphocytes in response to a wide variety o"
+                },
+                {
+                  "score": 0.333,
+                  "pmcid": "PMC11913215",
+                  "section_type": "results",
+                  "snippet": "we report a male patient, a full - term product of the fourth pregnancy of unrelated healthy parents from san pedro de los milagros ( antioq"
+                },
+                {
+                  "score": 0.3,
+                  "pmcid": "PMC11123397",
+                  "section_type": "introduction",
+                  "snippet": "inborn errors of immunity ( iei ) are a diverse group of rare genetic disorders, affecting almost every aspect of the immune response. curre"
+                }
+              ]
+            }
+          },
+          {
+            "query": "severe combined immunodeficiency SCID T cell",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.538,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "##ous disorder with different phenotypes depending on the nature and effect of the genetic mutation. ( table 2 ) genes associated with adult"
+                },
+                {
+                  "score": 0.532,
+                  "pmcid": "PMC9247144",
+                  "section_type": "introduction",
+                  "snippet": "inborn errors of immunity ( iei ) are a large heterogeneous group of disorders affecting various components of the immune system. to date, m"
+                },
+                {
+                  "score": 0.528,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "them suffered from mild immunodeficiency characterized by recurrent respiratory tract infections starting in childhood, while the oldest sis"
+                },
+                {
+                  "score": 0.508,
+                  "pmcid": "PMC2877226",
+                  "section_type": "results",
+                  "snippet": "the mean patient age was 42. 5±16. 12 yr ( ranged from 16 to 76 ), and most patients were diagnosed as pid during their first visit to the h"
+                },
+                {
+                  "score": 0.5,
+                  "pmcid": "PMC11949678",
+                  "section_type": "introduction",
+                  "snippet": "Common variable immunodeficiency (CVID) is a primary B-cell immunodeficiency disorder characterized by marked hypogammaglobulinemia that is"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 18.088,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "##ous disorder with different phenotypes depending on the nature and effect of the genetic mutation. ( table 2 ) genes associated with adult"
+                },
+                {
+                  "score": 16.344,
+                  "pmcid": "PMC3390729",
+                  "section_type": "discussion",
+                  "snippet": "this is the first epidemiological study of pid in korea. a total of 152 patients representing 15 different diagnoses are registered. the per"
+                },
+                {
+                  "score": 16.177,
+                  "pmcid": "PMC3390729",
+                  "section_type": "results",
+                  "snippet": "a total of 152 patients, diagnosed with pid, was registered during the period from january 2001 to december 2005. of the 152 patients, 119 w"
+                },
+                {
+                  "score": 15.449,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "of onset in adult iei. adult - onset iei genes with oldest age - of - onset patient reported for every gene ( from all reviewed manuscripts"
+                },
+                {
+                  "score": 14.589,
+                  "pmcid": "PMC8435594",
+                  "section_type": "introduction",
+                  "snippet": "humoral immunity has been regarded as the pillar of immune defenses against bacterial infections, but was thought to be less essential for v"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 1.0,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "##ous disorder with different phenotypes depending on the nature and effect of the genetic mutation. ( table 2 ) genes associated with adult"
+                },
+                {
+                  "score": 0.417,
+                  "pmcid": "PMC9247144",
+                  "section_type": "introduction",
+                  "snippet": "inborn errors of immunity ( iei ) are a large heterogeneous group of disorders affecting various components of the immune system. to date, m"
+                },
+                {
+                  "score": 0.361,
+                  "pmcid": "PMC3390729",
+                  "section_type": "results",
+                  "snippet": "a total of 152 patients, diagnosed with pid, was registered during the period from january 2001 to december 2005. of the 152 patients, 119 w"
+                },
+                {
+                  "score": 0.333,
+                  "pmcid": "PMC3390729",
+                  "section_type": "discussion",
+                  "snippet": "this is the first epidemiological study of pid in korea. a total of 152 patients representing 15 different diagnoses are registered. the per"
+                },
+                {
+                  "score": 0.277,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "of onset in adult iei. adult - onset iei genes with oldest age - of - onset patient reported for every gene ( from all reviewed manuscripts"
+                }
+              ]
+            }
+          },
+          {
+            "query": "agammaglobulinemia BTK X-linked",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.707,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": ", thereby inhibiting the maturation of hla class i molecules. the index patient had 10 - 15 times lower expression of hla class i molecules,"
+                },
+                {
+                  "score": 0.593,
+                  "pmcid": "PMC8435594",
+                  "section_type": "other",
+                  "snippet": "x - linked agammaglobulinemia ( xla ) manifests with markedly reduced peripheral b cells, severe hypogammaglobulinaemia and recurrent sinopu"
+                },
+                {
+                  "score": 0.583,
+                  "pmcid": "PMC7905085",
+                  "section_type": "introduction",
+                  "snippet": "##ton tyrosine kinase gene ( btk ) ( 87 ), and 5 % of patients have immunoglobulin μ heavy chain deficiency. classically, affected boys begi"
+                },
+                {
+                  "score": 0.573,
+                  "pmcid": "PMC8435594",
+                  "section_type": "other",
+                  "snippet": "in 40 % of cases ( 150 ). interestingly, ebv and herpes - viral infections are only rarely reported in these patients ( 112, 117, 151 ). ar"
+                },
+                {
+                  "score": 0.543,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "the penetrance observed in the affected family, with low penetrance mutations yielding higher chances for adult - onset presentation. for ex"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 16.858,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": ", thereby inhibiting the maturation of hla class i molecules. the index patient had 10 - 15 times lower expression of hla class i molecules,"
+                },
+                {
+                  "score": 15.88,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "the penetrance observed in the affected family, with low penetrance mutations yielding higher chances for adult - onset presentation. for ex"
+                },
+                {
+                  "score": 14.791,
+                  "pmcid": "PMC7905085",
+                  "section_type": "introduction",
+                  "snippet": "primary immunodeficiencies ( pids ), also known as inborn errors of immunity ( iei ), are genetic disorders classically characterized by inc"
+                },
+                {
+                  "score": 12.944,
+                  "pmcid": "PMC11740714",
+                  "section_type": "results",
+                  "snippet": ". 00 % ) 5 ( 11. 90 % ) 0 ( 0. 00 % ) pathogenic mutations found 0 ( 0. 00 % ) 1 ( 1. 96 % ) a 4 ( 9. 52 % ) b 4 ( 36. 36 % ) hc healthy con"
+                },
+                {
+                  "score": 12.643,
+                  "pmcid": "PMC10602693",
+                  "section_type": "discussion",
+                  "snippet": "the pool of protective antibodies already supplemented with immunoglobulin preparations during igrt. the positive correlation between the ti"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 1.0,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": ", thereby inhibiting the maturation of hla class i molecules. the index patient had 10 - 15 times lower expression of hla class i molecules,"
+                },
+                {
+                  "score": 0.5,
+                  "pmcid": "PMC8635491",
+                  "section_type": "other",
+                  "snippet": "the penetrance observed in the affected family, with low penetrance mutations yielding higher chances for adult - onset presentation. for ex"
+                },
+                {
+                  "score": 0.405,
+                  "pmcid": "PMC8435594",
+                  "section_type": "other",
+                  "snippet": "x - linked agammaglobulinemia ( xla ) manifests with markedly reduced peripheral b cells, severe hypogammaglobulinaemia and recurrent sinopu"
+                },
+                {
+                  "score": 0.25,
+                  "pmcid": "PMC7905085",
+                  "section_type": "introduction",
+                  "snippet": "primary immunodeficiencies ( pids ), also known as inborn errors of immunity ( iei ), are genetic disorders classically characterized by inc"
+                },
+                {
+                  "score": 0.25,
+                  "pmcid": "PMC7905085",
+                  "section_type": "introduction",
+                  "snippet": "##ton tyrosine kinase gene ( btk ) ( 87 ), and 5 % of patients have immunoglobulin μ heavy chain deficiency. classically, affected boys begi"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Marfan syndrome FBN1 fibrillin aortic",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.517,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "( defined variants significantly associated with the same phenotype in our study or in high ld ( r2 > 0. 8 ) with the associated variant ) a"
+                },
+                {
+                  "score": 0.402,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "0. 02, se = 0. 002, p = 8x10 - 09 ), and a lower percent of body fat ( beta = - 0. 08, se = 0, 02, p = 5x10 - 05, table 1 ). the association"
+                },
+                {
+                  "score": 0.392,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "here, we systematically describe the association of variation in 26 mendelian genes linked to four syndromic diseases with the component phe"
+                },
+                {
+                  "score": 0.34,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.34,
+                  "pmcid": "PMC13099202",
+                  "section_type": "results",
+                  "snippet": "both patients 1 and 2 had classical facial features of ns ( hypertelorism with down - slanting palpebral fissures, ptosis, low - set posteri"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 22.185,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "here, we systematically describe the association of variation in 26 mendelian genes linked to four syndromic diseases with the component phe"
+                },
+                {
+                  "score": 21.795,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "( defined variants significantly associated with the same phenotype in our study or in high ld ( r2 > 0. 8 ) with the associated variant ) a"
+                },
+                {
+                  "score": 21.774,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "0. 02, se = 0. 002, p = 8x10 - 09 ), and a lower percent of body fat ( beta = - 0. 08, se = 0, 02, p = 5x10 - 05, table 1 ). the association"
+                },
+                {
+                  "score": 11.286,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "##lle, marfan, noonan, and digeorge syndromes, are also independently associated with component phenotypes of these syndromes in the general"
+                },
+                {
+                  "score": 8.473,
+                  "pmcid": "PMC7735621",
+                  "section_type": "introduction",
+                  "snippet": "Genetic syndromes are rare diseases defined by a specific and clinically recognizable set of phenotypes across multiple organ systems. The e"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.833,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "( defined variants significantly associated with the same phenotype in our study or in high ld ( r2 > 0. 8 ) with the associated variant ) a"
+                },
+                {
+                  "score": 0.75,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "here, we systematically describe the association of variation in 26 mendelian genes linked to four syndromic diseases with the component phe"
+                },
+                {
+                  "score": 0.583,
+                  "pmcid": "PMC7735621",
+                  "section_type": "results",
+                  "snippet": "0. 02, se = 0. 002, p = 8x10 - 09 ), and a lower percent of body fat ( beta = - 0. 08, se = 0, 02, p = 5x10 - 05, table 1 ). the association"
+                },
+                {
+                  "score": 0.2,
+                  "pmcid": "PMC2885380",
+                  "section_type": "introduction",
+                  "snippet": "The presence of two genetically distinct metabolic diseases in the same patient has rarely reported. Phenylketonuria (PKU) (OMIM 221600) is"
+                },
+                {
+                  "score": 0.2,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "##lle, marfan, noonan, and digeorge syndromes, are also independently associated with component phenotypes of these syndromes in the general"
+                }
+              ]
+            }
+          },
+          {
+            "query": "Noonan syndrome RAS-MAPK PTPN11",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.769,
+                  "pmcid": "PMC12701617",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; omim 163950 ) is an autosomal dominant or rarely autosomal recessive congenital anomaly. ns is characterized by sever"
+                },
+                {
+                  "score": 0.76,
+                  "pmcid": "PMC12830400",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; [ mim 163950 ] ) was first recognised by paediatric cardiologist jacqueline noonan, who noted a recurring constellati"
+                },
+                {
+                  "score": 0.732,
+                  "pmcid": "PMC12699086",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ) is the most common type of rasopathy. related main overlapping disorders are ns and multiple lentigines, cardiofacioc"
+                },
+                {
+                  "score": 0.703,
+                  "pmcid": "PMC12794993",
+                  "section_type": "introduction",
+                  "snippet": "Noonan syndrome (NS) is an autosomal dominant genetic disorder with an incidence rate of approximately 1 in 1000 to 2500 live births. [ 1 ]"
+                },
+                {
+                  "score": 0.692,
+                  "pmcid": "PMC13070222",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome is a rare and multisystemic disorder with highly variable and often subtle manifestations, as reflected by a median age at d"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 23.004,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "benign variants in clinvar suggesting that they do not cause primary syndromic disease, but our data suggest they may be modifiers of penetr"
+                },
+                {
+                  "score": 21.492,
+                  "pmcid": "PMC12701617",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; omim 163950 ) is an autosomal dominant or rarely autosomal recessive congenital anomaly. ns is characterized by sever"
+                },
+                {
+                  "score": 20.822,
+                  "pmcid": "PMC13070222",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome is a rare and multisystemic disorder with highly variable and often subtle manifestations, as reflected by a median age at d"
+                },
+                {
+                  "score": 20.7,
+                  "pmcid": "PMC12514806",
+                  "section_type": "introduction",
+                  "snippet": "rasopathies are a group of clinically related disorders caused by germline variants in the ras - mitogen - activated protein kinase ( ras -"
+                },
+                {
+                  "score": 20.478,
+                  "pmcid": "PMC12830400",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; [ mim 163950 ] ) was first recognised by paediatric cardiologist jacqueline noonan, who noted a recurring constellati"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 0.833,
+                  "pmcid": "PMC12701617",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; omim 163950 ) is an autosomal dominant or rarely autosomal recessive congenital anomaly. ns is characterized by sever"
+                },
+                {
+                  "score": 0.625,
+                  "pmcid": "PMC7735621",
+                  "section_type": "conclusion",
+                  "snippet": "benign variants in clinvar suggesting that they do not cause primary syndromic disease, but our data suggest they may be modifiers of penetr"
+                },
+                {
+                  "score": 0.5,
+                  "pmcid": "PMC12830400",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ; [ mim 163950 ] ) was first recognised by paediatric cardiologist jacqueline noonan, who noted a recurring constellati"
+                },
+                {
+                  "score": 0.417,
+                  "pmcid": "PMC13070222",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome is a rare and multisystemic disorder with highly variable and often subtle manifestations, as reflected by a median age at d"
+                },
+                {
+                  "score": 0.393,
+                  "pmcid": "PMC12699086",
+                  "section_type": "introduction",
+                  "snippet": "noonan syndrome ( ns ) is the most common type of rasopathy. related main overlapping disorders are ns and multiple lentigines, cardiofacioc"
+                }
+              ]
+            }
+          },
+          {
+            "query": "DiGeorge syndrome 22q11 deletion thymus",
+            "modes": {
+              "dense": [
+                {
+                  "score": 0.719,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "pathophysiology of digeorge syndrome consists of microdeletions of 1. 5 – 3 million base pairs on the long arm of chromosome 22 [ 2 ], which"
+                },
+                {
+                  "score": 0.69,
+                  "pmcid": "PMC6687652",
+                  "section_type": "introduction",
+                  "snippet": "22q11. 2 deletion syndrome ( 22q11. 2ds ) refers to a syndrome that results from deletion of the 22q11. 2 region, affecting approximately on"
+                },
+                {
+                  "score": 0.689,
+                  "pmcid": "PMC6687652",
+                  "section_type": "discussion",
+                  "snippet": "offspring inherited the deletion heterozygotes from the mosaicism. moreover, the mother had almost none of the clinical characteristics that"
+                },
+                {
+                  "score": 0.676,
+                  "pmcid": "PMC6687652",
+                  "section_type": "discussion",
+                  "snippet": "2 locus have been reported to be highly associated with the syndrome ( koczkowska et al., 2017 ). a recent study identified a recurrent 370"
+                },
+                {
+                  "score": 0.649,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "the 22q11 deletion syndrome ( ds ), also known as digeorge or velocardiofacial syndrome, is one of the most common microdeletion syndromes i"
+                }
+              ],
+              "bm25": [
+                {
+                  "score": 19.901,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "pathophysiology of digeorge syndrome consists of microdeletions of 1. 5 – 3 million base pairs on the long arm of chromosome 22 [ 2 ], which"
+                },
+                {
+                  "score": 18.757,
+                  "pmcid": "PMC6905036",
+                  "section_type": "introduction",
+                  "snippet": "the human head is considered a complex morphological structure because it results from the interaction of genetic and environmental factors,"
+                },
+                {
+                  "score": 18.59,
+                  "pmcid": "PMC5916974",
+                  "section_type": "discussion",
+                  "snippet": "this case history highlights a late diagnosis of 22q11 deletion syndrome ( ds ). although early signs such as polydactyly and congenital hea"
+                },
+                {
+                  "score": 17.014,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "the 22q11 deletion syndrome ( ds ), also known as digeorge or velocardiofacial syndrome, is one of the most common microdeletion syndromes i"
+                },
+                {
+                  "score": 16.546,
+                  "pmcid": "PMC7390764",
+                  "section_type": "introduction",
+                  "snippet": "22q11. 2 deletion syndrome ( 22q11. 2ds ), otherwise known as digeorge or velo - cardio - facial syndrome ( vcfs ), is often characterized b"
+                }
+              ],
+              "hybrid": [
+                {
+                  "score": 1.0,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "pathophysiology of digeorge syndrome consists of microdeletions of 1. 5 – 3 million base pairs on the long arm of chromosome 22 [ 2 ], which"
+                },
+                {
+                  "score": 0.417,
+                  "pmcid": "PMC6687652",
+                  "section_type": "introduction",
+                  "snippet": "22q11. 2 deletion syndrome ( 22q11. 2ds ) refers to a syndrome that results from deletion of the 22q11. 2 region, affecting approximately on"
+                },
+                {
+                  "score": 0.41,
+                  "pmcid": "PMC6905036",
+                  "section_type": "introduction",
+                  "snippet": "the human head is considered a complex morphological structure because it results from the interaction of genetic and environmental factors,"
+                },
+                {
+                  "score": 0.367,
+                  "pmcid": "PMC5916974",
+                  "section_type": "introduction",
+                  "snippet": "the 22q11 deletion syndrome ( ds ), also known as digeorge or velocardiofacial syndrome, is one of the most common microdeletion syndromes i"
+                },
+                {
+                  "score": 0.321,
+                  "pmcid": "PMC5916974",
+                  "section_type": "discussion",
+                  "snippet": "this case history highlights a late diagnosis of 22q11 deletion syndrome ( ds ). although early signs such as polydactyly and congenital hea"
+                }
+              ]
+            }
+          }
+        ],
+        "n_probes": 12
+      }
+    }
+  ]
+}

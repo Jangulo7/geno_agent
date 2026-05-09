@@ -1,0 +1,8 @@
+filtering:   0%|          | 0/100 [00:00<?, ?it/s]filtering: 100%|██████████| 100/100 [00:00<00:00, 1096.04it/s]
+2026-05-09 18:08:21,956 [INFO] === Filter summary ===
+2026-05-09 18:08:21,956 [INFO]   total in:  100
+2026-05-09 18:08:21,956 [INFO]   retained:  89 (89.0%)
+2026-05-09 18:08:21,956 [INFO]   rejected:  11
+2026-05-09 18:08:21,956 [INFO]   rule hits: {'mesh': 0, 'keyword': 55, 'title_abstract_regex': 79}
+2026-05-09 18:08:21,957 [INFO]   output:    /mnt/c/pmc_workspace/filtered/demo.jsonl
+[W509 18:08:22.413669499 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
