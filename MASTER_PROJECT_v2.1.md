@@ -2599,9 +2599,9 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 | §2 line 189 — `pip install torch ... --index-url https://download.pytorch.org/whl/cu124` | Pinned to `torch==2.9.0.dev20250820+cu128` (and matching torchvision/torchaudio nightlies) | The host's RTX 5090 is Blackwell (sm_120) and requires CUDA 12.8+. cu124 wheels fail at first kernel launch on this hardware. The cu128 nightly is the working configuration validated by the user prior to this project. |
 | §2 — fresh project-local `.venv` | Reuse existing `/home/hana77/pytorch-env/` (Python 3.12.3) | Avoids re-downloading ~5 GB of cu128 torch wheels into a duplicate venv. `pyproject.toml` is the source of truth: it pins every project-relevant dep to the exact version actually installed in `pytorch-env`, and `pip freeze > requirements.lock.txt` snapshots the full env when needed. The project is NOT installed via `pip install -e .` to keep the shared env clean. |
 
-### Known reconciliation pending (not yet resolved)
+### Resolved reconciliations
 
-- **Qdrant client/server minor mismatch.** `pyproject.toml` pins `qdrant-client==1.14.3` (the version installed in `pytorch-env`), while `docker-compose.yml` pins the server to `qdrant/qdrant:v1.12.4` per master plan §0. The client emits a UserWarning at connect time but the API contract is forward-compatible for everything Phase 1A needs. Resolve before Phase 1A Step 5 indexing by either downgrading the client to 1.12.x or upgrading the container to 1.14.x.
+- **Qdrant client/server version match (resolved in §7 step [4]).** `docker-compose.yml` was bumped from `qdrant/qdrant:v1.12.4` → `qdrant/qdrant:v1.14.1` to align with `qdrant-client==1.14.3` in pytorch-env. v1.14.1 is the highest server tag in the v1.14.x line (no v1.14.3 server release exists). Bump performed before any collection had data, so no migration was required.
 
 ---
 

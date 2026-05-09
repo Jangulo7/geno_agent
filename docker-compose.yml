@@ -1,6 +1,6 @@
 services:
   qdrant_geno_agent:
-    image: qdrant/qdrant:v1.12.4
+    image: qdrant/qdrant:v1.14.1
     container_name: qdrant_geno_agent
     restart: unless-stopped
     ports:
