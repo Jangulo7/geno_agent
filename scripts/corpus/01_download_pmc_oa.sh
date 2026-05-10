@@ -25,7 +25,7 @@
 #   bash scripts/corpus/01_download_pmc_oa.sh --dry-run        # preview only
 #
 # Resumable: re-running the script picks up where a partial sync left off
-# (s5cmd sync compares size + mod time and skips unchanged files).
+# (s5cmd cp --if-size-differ skips files already on disk with matching size).
 
 set -euo pipefail
 
@@ -123,7 +123,7 @@ NOTE: the S3 client must list every object in the bucket before the
 
       Run inside tmux/screen so a disconnect cannot kill the sync.
       The sync is resumable — rerunning skips files already on disk
-      (s5cmd compares size + mod time).
+      (s5cmd cp --if-size-differ).
 
 ----- IF KILLED (BIOS reboot, WSL crash, host shutdown) RESUME WITH -----
    tmux new -d -s pmc_dl 'bash $(realpath "$0" 2>/dev/null || echo "scripts/corpus/01_download_pmc_oa.sh")'
@@ -152,7 +152,10 @@ status_loop() {
     while true; do
         sleep "$INTERVAL"
         NOW_TS=$(date +%s)
-        NOW_COUNT=$(grep -c '^cp ' "$LOG" 2>/dev/null || echo 0)
+        # grep -c prints "0" AND exits 1 when no matches found; the `||` must
+        # be outside the $() so we don't end up with NOW_COUNT="0\n0" tripping
+        # arithmetic on the next line.
+        NOW_COUNT=$(grep -c '^cp ' "$LOG" 2>/dev/null) || NOW_COUNT=0
         DELTA=$((NOW_COUNT - LAST_COUNT))
         local INTV=$((NOW_TS - LAST_TS))
         if (( INTV > 0 )); then
@@ -197,13 +200,27 @@ if [[ -n "$LIMIT" ]]; then
             --only-show-errors 2>&1 | tee -a "$LOG"
     done
 else
-    # Full sync via s5cmd: parallel list + download with 256 workers.
-    # Glob source 's3://bucket/*/*.xml' selects PMC<id>.<v>/<id>.<v>.xml only,
+    # Full sync via s5cmd cp --if-size-differ.
+    #
+    # Why cp instead of `s5cmd sync`: `sync` does both source AND destination
+    # listing upfront, then computes a diff, then starts downloads. With ~5M
+    # source objects + ~700k existing files on the slow /mnt/c (Windows mount,
+    # ~1ms per stat), that pre-flight takes 30-90 minutes during which zero
+    # downloads happen. Empirically this OOM'd toward 1+ GB and gave no
+    # progress for 39 minutes in run 2026-05-10T10:42:58Z.
+    #
+    # `cp --if-size-differ` walks the S3 source in parallel and dispatches
+    # each match to a worker, which checks destination and either skips
+    # (size matches) or downloads. Listing/skip/download all overlap, so
+    # downloads start within minutes. Idempotency is preserved: existing
+    # files are skipped silently when their on-disk size matches S3.
+    #
+    # Glob 's3://bucket/*/*.xml' selects PMC<id>.<v>/<id>.<v>.xml only,
     # excluding JSON/PDF/TXT/figures at the same depth.
     S5CMD_ARGS=(--no-sign-request)
-    SYNC_ARGS=()
-    [[ -n "$DRY_RUN" ]] && SYNC_ARGS+=(--dry-run)
-    "$S5CMD" "${S5CMD_ARGS[@]}" sync "${SYNC_ARGS[@]}" \
+    CP_ARGS=(--if-size-differ)
+    [[ -n "$DRY_RUN" ]] && CP_ARGS+=(--dry-run)
+    "$S5CMD" "${S5CMD_ARGS[@]}" cp "${CP_ARGS[@]}" \
         "s3://${BUCKET}/*/*.xml" \
         "${DEST}/" 2>&1 | tee -a "$LOG"
 fi
