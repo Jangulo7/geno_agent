@@ -45,7 +45,9 @@ from transformers import AutoTokenizer, PreTrainedTokenizerBase
 
 # ---------------------------------------------------------------- defaults
 INPUT_PATH: Final[Path] = Path("/mnt/c/pmc_workspace/parsed/all_articles.normalized.jsonl.gz")
-OUTPUT_PATH: Final[Path] = Path("/mnt/c/pmc_workspace/chunks/all_chunks.jsonl.gz")
+# Output on Linux ext4 (not /mnt/c via 9P) — writer ~10x faster, keeps result
+# queue from accumulating and tripping OOM (62 GB main process killed in run #1).
+OUTPUT_PATH: Final[Path] = Path("/home/hana77/chunks/all_chunks.jsonl.gz")
 TOKENIZER_NAME: Final[str] = os.environ.get(
     "EMBED_MODEL_NAME",
     "/home/hana77/rare-disease-rag/models/pubmedbert-base-embeddings",
@@ -259,10 +261,11 @@ def main() -> int:
         help="Status print interval in seconds (default 60)",
     )
     parser.add_argument(
-        "--chunksize",
+        "--batch-size",
         type=int,
-        default=64,
-        help="Pool.imap_unordered chunksize (default 64)",
+        default=2000,
+        help="Articles per pool.map batch (default 2000). Bounds peak memory; "
+        "lower if you have less RAM.",
     )
     parser.add_argument(
         "--limit",
@@ -322,24 +325,47 @@ def main() -> int:
             else:
                 source = line_iter
 
-            for chunks, skipped in pool.imap_unordered(
-                _process_article, source, chunksize=args.chunksize
-            ):
+            # Batched pool.map — bounded peak memory.
+            # Each pool.map call submits batch_size articles and returns when
+            # ALL workers have finished. The result list lives only as long
+            # as the inner for-loop. Versus imap_unordered, this gives up
+            # the "workers stay busy while writer flushes" overlap, but the
+            # write to /home is fast enough that the gap is negligible
+            # (and it avoids the 62 GB OOM kill we hit with imap_unordered).
+            batch: list[str] = []
+
+            def _flush(batch_lines: list[str]) -> None:
+                if not batch_lines:
+                    return
+                results = pool.map(_process_article, batch_lines)
+                # Stream results to disk + update stats
+                local_chunks = 0
+                local_skipped = 0
+                for chunks, skipped in results:
+                    local_skipped += skipped
+                    if not chunks:
+                        continue
+                    local_chunks += len(chunks)
+                    out_lines = [
+                        json.dumps(c, ensure_ascii=False, separators=(",", ":")) for c in chunks
+                    ]
+                    out_f.write("\n".join(out_lines))
+                    out_f.write("\n")
                 with stats.lock:
-                    stats.articles_in += 1
-                    stats.short_sections_skipped += skipped
-                if not chunks:
-                    continue
-                lines = []
-                with stats.lock:
-                    for c in chunks:
-                        st = c["section_type"]
-                        stats.section_type_counts[st] = stats.section_type_counts.get(st, 0) + 1
-                    stats.chunks_out += len(chunks)
-                for c in chunks:
-                    lines.append(json.dumps(c, ensure_ascii=False, separators=(",", ":")))
-                out_f.write("\n".join(lines))
-                out_f.write("\n")
+                    stats.articles_in += len(batch_lines)
+                    stats.chunks_out += local_chunks
+                    stats.short_sections_skipped += local_skipped
+                    for chunks, _ in results:
+                        for c in chunks:
+                            st = c["section_type"]
+                            stats.section_type_counts[st] = stats.section_type_counts.get(st, 0) + 1
+
+            for line in source:
+                batch.append(line)
+                if len(batch) >= args.batch_size:
+                    _flush(batch)
+                    batch = []
+            _flush(batch)
 
         # Atomic publish
         partial_path.replace(args.output)
