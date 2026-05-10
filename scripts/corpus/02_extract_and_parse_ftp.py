@@ -54,6 +54,7 @@ import json
 import os
 import sys
 import tarfile
+import tempfile
 import threading
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -64,7 +65,8 @@ from lxml import etree
 
 # ---------------------------------------------------------------- defaults
 ARCHIVES_DIR = Path("/mnt/c/pmc_workspace/xml_raw/_archives")
-EXTRACT_DIR = Path("/mnt/c/pmc_workspace/xml_raw/all")
+EXTRACT_DIR = Path("/mnt/c/pmc_workspace/xml_raw/all")  # legacy, unused with per-worker temp dirs
+TEMP_DIR = Path("/home/hana77/tmp_pmc_extract")  # Linux ext4, fast, fits 12 x 30 GB
 PARSED_DIR = Path("/mnt/c/pmc_workspace/parsed")
 TIERS = ("oa_comm", "oa_noncomm", "oa_other")
 STATUS_INTERVAL_SEC = 180
@@ -279,11 +281,16 @@ def process_tarball(
     tarball_path: Path,
     filelist_path: Path,
     tier: str,
-    extract_dir: Path,
+    temp_dir: Path,
     parsed_dir: Path,
-    delete_extracted: bool,
 ) -> dict:
-    """Verify, extract, parse, write JSONL, optionally delete extracted XMLs.
+    """Extract one tarball into a per-worker temp dir, parse, write JSONL.
+
+    The temp dir is on a Linux native filesystem (avoids slow /mnt/c 9P) and
+    is unique per (tarball, worker), so concurrent workers can never delete
+    each other's XMLs even when two tarballs contain the same PMC ID. The
+    TemporaryDirectory context manager auto-cleans on exit (success OR
+    exception), so disk usage is bounded by `workers x max_tarball_size`.
 
     Returns a stats dict for this tarball.
     """
@@ -303,80 +310,83 @@ def process_tarball(
             "parse_errors": 0,
         }
 
-    # Load filelist (defines which PMC IDs are retracted, plus expected count)
     try:
         retracted_ids, expected_count = load_filelist(filelist_path)
     except FileNotFoundError:
         retracted_ids, expected_count = set(), 0
 
-    # Verify + extract
-    try:
-        with tarfile.open(tarball_path, mode="r:gz") as tf:
-            members = [m for m in tf.getmembers() if m.isfile() and m.name.endswith(".xml")]
-            tf.extractall(extract_dir, members=members, filter="data")
-            xml_paths = [extract_dir / m.name for m in members]
-    except (tarfile.TarError, EOFError, OSError) as e:
-        return {
-            "tarball": tarball_path.name,
-            "tier": tier,
-            "status": "tar-error",
-            "error": str(e),
-            "parsed": 0,
-            "retracted_skipped": 0,
-            "parse_errors": 0,
-        }
-
-    # File-count cross-check
-    if expected_count and abs(len(xml_paths) - expected_count) > 0:
-        # Mismatch is logged but does not abort — NCBI sometimes ships
-        # supplementary entries that the filelist omits.
-        pass
-
     parsed = 0
     retracted_skipped = 0
     parse_errors = 0
-    skipped_records = []
+    skipped_records: list[dict] = []
 
-    with gzip.open(out_path, mode="wt", encoding="utf-8") as out_f:
-        for xml_path in xml_paths:
-            pmc_id = xml_path.stem  # e.g. "PMC3089640"
+    # tempfile.TemporaryDirectory: per-worker isolated extract dir on Linux fs.
+    # Auto-deletes on exit, so a crash mid-parse leaves no orphan files.
+    with tempfile.TemporaryDirectory(prefix=f"{stem}_", dir=str(temp_dir)) as tmp_str:
+        tmp_path = Path(tmp_str)
 
-            if pmc_id in retracted_ids:
-                retracted_skipped += 1
-                skipped_records.append(
-                    {
-                        "pmc_id": pmc_id,
-                        "tier": tier,
-                        "tarball": tarball_path.name,
-                        "reason": "filelist_retracted",
-                    }
-                )
-                continue
+        # Verify + extract
+        try:
+            with tarfile.open(tarball_path, mode="r:gz") as tf:
+                members = [m for m in tf.getmembers() if m.isfile() and m.name.endswith(".xml")]
+                tf.extractall(tmp_path, members=members, filter="data")
+                xml_paths = [tmp_path / m.name for m in members]
+        except (tarfile.TarError, EOFError, OSError) as e:
+            return {
+                "tarball": tarball_path.name,
+                "tier": tier,
+                "status": "tar-error",
+                "error": str(e),
+                "parsed": 0,
+                "retracted_skipped": 0,
+                "parse_errors": 0,
+            }
 
-            record = parse_jats(xml_path)
-            if record is None:
-                parse_errors += 1
-                continue
+        # File-count cross-check (advisory — NCBI sometimes ships extras)
+        _ = expected_count, len(xml_paths)
 
-            record["_tier"] = tier
-            record["_tarball"] = tarball_path.name
-            out_f.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")))
-            out_f.write("\n")
-            parsed += 1
+        # Stream JSONL to a .partial file first; rename atomically on success
+        # so a crash mid-write never leaves a half-written .jsonl.gz on disk
+        # that the next run would mistake for "already done".
+        partial_path = out_path.with_suffix(out_path.suffix + ".partial")
+        try:
+            with gzip.open(partial_path, mode="wt", encoding="utf-8") as out_f:
+                for xml_path in xml_paths:
+                    pmc_id = xml_path.stem
+
+                    if pmc_id in retracted_ids:
+                        retracted_skipped += 1
+                        skipped_records.append(
+                            {
+                                "pmc_id": pmc_id,
+                                "tier": tier,
+                                "tarball": tarball_path.name,
+                                "reason": "filelist_retracted",
+                            }
+                        )
+                        continue
+
+                    record = parse_jats(xml_path)
+                    if record is None:
+                        parse_errors += 1
+                        continue
+
+                    record["_tier"] = tier
+                    record["_tarball"] = tarball_path.name
+                    out_f.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")))
+                    out_f.write("\n")
+                    parsed += 1
+            # Atomic publish — only swap into place if the whole write succeeded.
+            partial_path.replace(out_path)
+        except Exception:
+            with contextlib.suppress(OSError):
+                partial_path.unlink()
+            raise
 
     if skipped_records:
         with skipped_log.open("a", encoding="utf-8") as fh:
             for r in skipped_records:
                 fh.write(json.dumps(r) + "\n")
-
-    if delete_extracted:
-        for xml_path in xml_paths:
-            with contextlib.suppress(OSError):
-                xml_path.unlink()
-        # Try to remove now-empty parent prefix dir
-        if xml_paths:
-            with contextlib.suppress(OSError):
-                xml_paths[0].parent.rmdir()
 
     return {
         "tarball": tarball_path.name,
@@ -457,7 +467,13 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--archives-dir", type=Path, default=ARCHIVES_DIR)
-    parser.add_argument("--extract-dir", type=Path, default=EXTRACT_DIR)
+    parser.add_argument(
+        "--temp-dir",
+        type=Path,
+        default=TEMP_DIR,
+        help="Per-worker temp extract base (Linux ext4 recommended; "
+        "needs ~workers x max_tarball_size GB).",
+    )
     parser.add_argument("--parsed-dir", type=Path, default=PARSED_DIR)
     parser.add_argument(
         "--workers",
@@ -471,14 +487,12 @@ def main() -> int:
         default=STATUS_INTERVAL_SEC,
         help="Status print interval in seconds (default 180)",
     )
-    parser.add_argument(
-        "--delete-extracted",
-        action="store_true",
-        help="Delete extracted XMLs after parsing each tarball (saves disk).",
-    )
+    # Backward-compat no-op flags from earlier script versions; ignored.
+    parser.add_argument("--extract-dir", type=Path, default=None, help=argparse.SUPPRESS)
+    parser.add_argument("--delete-extracted", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
-    args.extract_dir.mkdir(parents=True, exist_ok=True)
+    args.temp_dir.mkdir(parents=True, exist_ok=True)
     args.parsed_dir.mkdir(parents=True, exist_ok=True)
 
     pairs = discover_tarballs(args.archives_dir)
@@ -494,10 +508,9 @@ def main() -> int:
         flush=True,
     )
     print(f"  archives_dir : {args.archives_dir}", flush=True)
-    print(f"  extract_dir  : {args.extract_dir}", flush=True)
+    print(f"  temp_dir     : {args.temp_dir}", flush=True)
     print(f"  parsed_dir   : {args.parsed_dir}", flush=True)
     print(f"  status every : {args.status_interval}s", flush=True)
-    print(f"  delete xmls  : {args.delete_extracted}", flush=True)
     print(flush=True)
 
     status_path = args.parsed_dir / "_status.json"
@@ -515,9 +528,8 @@ def main() -> int:
                 t,
                 fl,
                 tier,
-                args.extract_dir,
+                args.temp_dir,
                 args.parsed_dir,
-                args.delete_extracted,
             ): (t, tier)
             for t, fl, tier in pairs
         }
