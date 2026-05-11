@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>geno_agent — Progress Report 2026-05-11</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --bg-card: #1a2028;
+    --bg-card-hover: #232b36;
+    --fg: #e6edf3;
+    --fg-dim: #8b949e;
+    --fg-muted: #6e7681;
+    --accent: #58a6ff;
+    --accent-warm: #f0883e;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --red: #f85149;
+    --blue: #79c0ff;
+    --purple: #d2a8ff;
+    --border: #30363d;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.55;
+    padding: 0;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 32px 24px; }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  header .crumb { color: var(--fg-muted); font-size: 13px; font-family: var(--mono); }
+  header h1 { font-size: 32px; margin: 6px 0; }
+  header h1 .accent { color: var(--accent); }
+  header .subtitle { color: var(--fg-dim); font-size: 15px; }
+  header .meta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 13px;
+    color: var(--fg-muted);
+  }
+  header .meta span strong { color: var(--fg); font-weight: 500; }
+
+  /* Section heading */
+  h2 {
+    font-size: 22px;
+    margin: 38px 0 16px;
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    font-weight: 500;
+  }
+  h3 { font-size: 17px; margin: 22px 0 10px; color: var(--fg); font-weight: 500; }
+
+  /* Status pills */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .pill::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .pill-done    { background: rgba(63, 185, 80, 0.12);  color: var(--green);  border: 1px solid rgba(63, 185, 80, 0.3); }
+  .pill-done::before    { background: var(--green); }
+  .pill-next    { background: rgba(210, 153, 34, 0.12); color: var(--yellow); border: 1px solid rgba(210, 153, 34, 0.3); }
+  .pill-next::before    { background: var(--yellow); }
+  .pill-pending { background: rgba(110, 118, 129, 0.12); color: var(--fg-muted); border: 1px solid rgba(110, 118, 129, 0.3); }
+  .pill-pending::before { background: var(--fg-muted); }
+  .pill-paused  { background: rgba(121, 192, 255, 0.12); color: var(--blue);   border: 1px solid rgba(121, 192, 255, 0.3); }
+  .pill-paused::before  { background: var(--blue); }
+  .pill-issue   { background: rgba(248, 81, 73, 0.12);  color: var(--red);    border: 1px solid rgba(248, 81, 73, 0.3); }
+  .pill-issue::before   { background: var(--red); }
+
+  /* Phase status grid */
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .phase-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    transition: background 0.15s;
+  }
+  .phase-card:hover { background: var(--bg-card-hover); }
+  .phase-card .id { font-family: var(--mono); font-size: 11px; color: var(--fg-muted); }
+  .phase-card .title { font-weight: 500; margin: 4px 0 8px; }
+  .phase-card .desc { color: var(--fg-dim); font-size: 13px; }
+
+  /* Headline stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .stat .label { font-size: 12px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat .value { font-size: 26px; font-weight: 600; margin: 8px 0 0; color: var(--fg); }
+  .stat .value.green { color: var(--green); }
+  .stat .value.warm  { color: var(--accent-warm); }
+  .stat .value.blue  { color: var(--blue); }
+  .stat .sub { font-size: 12px; color: var(--fg-muted); margin-top: 4px; }
+
+  /* Funnel */
+  .funnel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .funnel-row {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    gap: 14px;
+  }
+  .funnel-row .bar-wrap {
+    flex: 1;
+    height: 26px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .funnel-row .bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .funnel-row .label {
+    width: 200px;
+    font-size: 13px;
+    color: var(--fg-dim);
+  }
+  .funnel-row .count {
+    width: 110px;
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--fg);
+  }
+  .funnel-row.raw      .bar { background: linear-gradient(90deg, #1f6feb, #58a6ff); }
+  .funnel-row.unique   .bar { background: linear-gradient(90deg, #1f6feb, #79c0ff); }
+  .funnel-row.filtered .bar { background: linear-gradient(90deg, #6639ba, #d2a8ff); }
+  .funnel-row.chunks   .bar { background: linear-gradient(90deg, #1f883d, #3fb950); }
+
+  /* Section type bars */
+  .section-bars { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+  .section-bars .row { display: flex; align-items: center; gap: 12px; margin: 6px 0; }
+  .section-bars .name { width: 150px; font-size: 13px; color: var(--fg-dim); }
+  .section-bars .bar-track { flex: 1; height: 18px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; }
+  .section-bars .bar-fill { height: 100%; background: var(--accent); }
+  .section-bars .num { width: 130px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--fg); }
+  .section-bars .pct { width: 50px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--fg-muted); }
+
+  /* Difficulty cards */
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .diff-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 16px 20px;
+  }
+  .diff-card.solved { border-left-color: var(--green); }
+  .diff-card .id { font-family: var(--mono); font-size: 11px; color: var(--fg-muted); }
+  .diff-card .title { font-weight: 500; margin: 4px 0 10px; font-size: 15px; }
+  .diff-card .body { font-size: 14px; color: var(--fg-dim); }
+  .diff-card .body strong { color: var(--fg); font-weight: 500; }
+  .diff-card .meta { margin-top: 10px; font-size: 12px; color: var(--fg-muted); font-family: var(--mono); }
+  .diff-card .meta a { color: var(--accent); text-decoration: none; }
+
+  /* Deviation table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  th { background: rgba(255,255,255,0.03); color: var(--fg-dim); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+  tr:last-child td { border-bottom: none; }
+  td { color: var(--fg-dim); }
+  td:first-child { font-family: var(--mono); color: var(--fg); }
+  td code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+
+  /* Next steps */
+  .steps {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 22px;
+  }
+  .steps ol { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps ol li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 36px;
+    margin: 12px 0;
+    color: var(--fg-dim);
+    font-size: 14px;
+  }
+  .steps ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 24px; height: 24px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: var(--mono);
+  }
+  .steps strong { color: var(--fg); font-weight: 500; }
+  .steps code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 3px; font-size: 13px; color: var(--accent); }
+
+  /* PR list */
+  .pr-list { display: flex; flex-direction: column; gap: 8px; }
+  .pr {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+  }
+  .pr-num { font-family: var(--mono); color: var(--accent); font-weight: 500; }
+  .pr-title { flex: 1; color: var(--fg); }
+  .pr-state { font-size: 11px; padding: 2px 10px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 500; }
+  .pr-state.open   { background: rgba(63, 185, 80, 0.12); color: var(--green); border: 1px solid rgba(63, 185, 80, 0.3); }
+  .pr-state.merged { background: rgba(210, 168, 255, 0.12); color: var(--purple); border: 1px solid rgba(210, 168, 255, 0.3); }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--fg-muted);
+    font-size: 12px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* Hero status banner */
+  .hero {
+    background: linear-gradient(135deg, rgba(63, 185, 80, 0.08), rgba(88, 166, 255, 0.08));
+    border: 1px solid rgba(63, 185, 80, 0.3);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 12px 0 0;
+  }
+  .hero h3 { color: var(--green); margin: 0 0 6px; font-size: 16px; }
+  .hero p { color: var(--fg-dim); margin: 0; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<header>
+  <div class="crumb">reports/progress_report_11052026.html</div>
+  <h1><span class="accent">geno_agent</span> — Progress Report</h1>
+  <div class="subtitle">Agentic Multi-Agent RAG for Rare-Disease Gene Prioritization (thesis)</div>
+  <div class="meta">
+    <span><strong>Date</strong>&nbsp; 2026-05-11</span>
+    <span><strong>Branch</strong>&nbsp; phase1a/step-5b-ftp-extract-parse</span>
+    <span><strong>Phase</strong>&nbsp; 1A.5 → 1A.6 transition</span>
+    <span><strong>Previous</strong>&nbsp; progress_report_09052026_v3</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h3>Phase 1A corpus pipeline complete through chunking</h3>
+  <p>309 PMC OA tarballs (147 GB) → 7.8 M unique articles → 2.25 M genetics-filtered → <strong>52.8 M chunks (27.7 GB)</strong> ready for embedding. Next: PubMedBERT + BM25 embeddings (~10–15 h on RTX 5090), then Qdrant hybrid index.</p>
+</div>
+
+<!-- PHASE STATUS GRID -->
+<h2>Phase Status</h2>
+<div class="phase-grid">
+
+  <div class="phase-card">
+    <div class="id">1A.1</div>
+    <div class="title">Ontologies + HGNC + Phenopackets</div>
+    <div class="desc">2026 pinned versions in <code>data/MANIFEST.tsv</code></div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.2</div>
+    <div class="title">PMC OA acquisition (FTP bulk)</div>
+    <div class="desc">309 tarballs, 147 GB. Deviation D4: FTP path after S3 failed.</div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.3</div>
+    <div class="title">Parse JATS XML</div>
+    <div class="desc"><code>02_extract_and_parse_ftp.py</code> → 309 JSONL files (~40 GB)</div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.4</div>
+    <div class="title">Normalize + dedupe + filter</div>
+    <div class="desc"><code>03_normalize_dedupe_filter.py</code> → 2.25 M articles (25 GB)</div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.5</div>
+    <div class="title">Section-aware chunking</div>
+    <div class="desc"><code>04_chunk_normalized.py</code> → 52.8 M chunks (27.7 GB)</div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.6</div>
+    <div class="title">Embedding (dense + sparse BM25)</div>
+    <div class="desc">PubMedBERT FP16 on RTX 5090, ~10–15 h</div>
+    <span class="pill pill-next">Next</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.7</div>
+    <div class="title">Qdrant collection + index</div>
+    <div class="desc">Container <code>qdrant_geno_agent</code> on :6533/:6534 already up</div>
+    <span class="pill pill-pending">Pending</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1A.8</div>
+    <div class="title">Validate (12 sample queries)</div>
+    <div class="desc"><code>11_validate_index.py</code></div>
+    <span class="pill pill-pending">Pending</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">1B</div>
+    <div class="title">Test cases (Phenopackets → 50–100 cases)</div>
+    <div class="desc">Steps 1-4 + acceptance gate merged; blocked on 1A.7</div>
+    <span class="pill pill-paused">Paused</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">2a</div>
+    <div class="title">Agent stack (LangGraph + Qwen3-8B + vLLM)</div>
+    <div class="desc">PRs #19–#30 merged in prior window</div>
+    <span class="pill pill-done">Done</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">2b/2c</div>
+    <div class="title">FastAPI + CopilotKit UI</div>
+    <div class="desc">Independent of 1A; not started</div>
+    <span class="pill pill-pending">Pending</span>
+  </div>
+
+  <div class="phase-card">
+    <div class="id">2d</div>
+    <div class="title">§11.5 factorial evaluation</div>
+    <div class="desc">Needs both 1A and 1B complete</div>
+    <span class="pill pill-pending">Pending</span>
+  </div>
+
+</div>
+
+<!-- HEADLINE STATS -->
+<h2>Headline Numbers</h2>
+<div class="stats">
+  <div class="stat">
+    <div class="label">Raw articles</div>
+    <div class="value">7.87 M</div>
+    <div class="sub">across 309 FTP tarballs</div>
+  </div>
+  <div class="stat">
+    <div class="label">Unique PMC IDs</div>
+    <div class="value">7.81 M</div>
+    <div class="sub">after dedupe (0.8% dups)</div>
+  </div>
+  <div class="stat">
+    <div class="label">Genetics-filtered</div>
+    <div class="value warm">2.25 M</div>
+    <div class="sub">28.9% retention</div>
+  </div>
+  <div class="stat">
+    <div class="label">Chunks produced</div>
+    <div class="value green">52.8 M</div>
+    <div class="sub">avg 23.4 / article</div>
+  </div>
+  <div class="stat">
+    <div class="label">Retractions filtered</div>
+    <div class="value blue">11,898</div>
+    <div class="sub">from filelist.csv flag</div>
+  </div>
+  <div class="stat">
+    <div class="label">Parse errors</div>
+    <div class="value green">5</div>
+    <div class="sub">of 4.75 M attempts (0.0001%)</div>
+  </div>
+</div>
+
+<!-- FUNNEL -->
+<h2>Pipeline Funnel</h2>
+<div class="funnel">
+  <div class="funnel-row raw">
+    <div class="label">Raw article rows (309 JSONLs)</div>
+    <div class="bar-wrap"><div class="bar" style="width: 100%;">7,870,943</div></div>
+    <div class="count">100.0%</div>
+  </div>
+  <div class="funnel-row unique">
+    <div class="label">Unique after dedupe</div>
+    <div class="bar-wrap"><div class="bar" style="width: 99.2%;">7,809,296</div></div>
+    <div class="count">99.2%</div>
+  </div>
+  <div class="funnel-row filtered">
+    <div class="label">After genetics filter</div>
+    <div class="bar-wrap"><div class="bar" style="width: 28.6%;">2,254,388</div></div>
+    <div class="count">28.6%</div>
+  </div>
+  <div class="funnel-row chunks">
+    <div class="label">Chunks (1-to-many)</div>
+    <div class="bar-wrap"><div class="bar" style="width: 100%;">52,782,789 chunks → embedding</div></div>
+    <div class="count">×23.4</div>
+  </div>
+</div>
+
+<!-- CHUNK DISTRIBUTION -->
+<h2>Chunks by section_type</h2>
+<div class="section-bars">
+  <div class="row"><div class="name">other (sub-sections)</div><div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div><div class="num">37,919,764</div><div class="pct">71.8%</div></div>
+  <div class="row"><div class="name">discussion</div><div class="bar-track"><div class="bar-fill" style="width: 16.8%;"></div></div><div class="num">6,372,375</div><div class="pct">12.1%</div></div>
+  <div class="row"><div class="name">introduction</div><div class="bar-track"><div class="bar-fill" style="width: 11.3%;"></div></div><div class="num">4,287,952</div><div class="pct">8.1%</div></div>
+  <div class="row"><div class="name">abstract</div><div class="bar-track"><div class="bar-fill" style="width: 6.0%;"></div></div><div class="num">2,295,509</div><div class="pct">4.3%</div></div>
+  <div class="row"><div class="name">results</div><div class="bar-track"><div class="bar-fill" style="width: 2.7%;"></div></div><div class="num">1,040,214</div><div class="pct">2.0%</div></div>
+  <div class="row"><div class="name">methods</div><div class="bar-track"><div class="bar-fill" style="width: 1.8%;"></div></div><div class="num">674,039</div><div class="pct">1.3%</div></div>
+  <div class="row"><div class="name">case_report</div><div class="bar-track"><div class="bar-fill" style="width: 0.3%;"></div></div><div class="num">121,043</div><div class="pct">0.2%</div></div>
+  <div class="row"><div class="name">references</div><div class="bar-track"><div class="bar-fill" style="width: 0.13%;"></div></div><div class="num">47,699</div><div class="pct">0.1%</div></div>
+  <div class="row"><div class="name">acknowledgements</div><div class="bar-track"><div class="bar-fill" style="width: 0.07%;"></div></div><div class="num">24,194</div><div class="pct">0.05%</div></div>
+</div>
+
+<!-- DIFFICULTIES -->
+<h2>Difficulties & Solutions</h2>
+<div class="diff-grid">
+
+  <div class="diff-card solved">
+    <div class="id">D §6.1</div>
+    <div class="title">Worker race condition in tarball extraction</div>
+    <div class="body">
+      <strong>Symptom:</strong> 40 worker crashes — "No such file or directory" on XMLs the worker had just extracted.<br>
+      <strong>Root cause:</strong> All 12 workers extracted to the same /mnt/c/.../PMC&lt;prefix&gt;/ directory. Daily-incremental tarballs sharing a PMC ID raced, and <code>--delete-extracted</code> caused one worker's deletion to break another's parse.<br>
+      <strong>Fix:</strong> <code>tempfile.TemporaryDirectory()</code> per-worker on Linux ext4. No two workers can ever share a path; auto-cleanup; ~10× faster than /mnt/c.
+    </div>
+    <div class="meta">commit 8f0bc2a · PR #32</div>
+  </div>
+
+  <div class="diff-card solved">
+    <div class="id">D §6.2</div>
+    <div class="title">Atomic-write missing → 12 broken JSONLs survived as "already done"</div>
+    <div class="body">
+      <strong>Symptom:</strong> Normalize crashed with <code>BadGzipFile</code> after 50 files in.<br>
+      <strong>Root cause:</strong> Parser used to write directly to the final <code>.jsonl.gz</code> path. SIGKILL'd workers left truncated gzips that passed the idempotency check (<code>size > 0</code>) and were skipped on rerun.<br>
+      <strong>Fix:</strong> Write to <code>.partial</code>, atomic rename only on success. Normalize also wraps each input in a per-file <code>try/except</code> so a single bad file doesn't tank a 102-min pass.
+    </div>
+    <div class="meta">commit 8f0bc2a · PR #32</div>
+  </div>
+
+  <div class="diff-card solved">
+    <div class="id">D §6.3</div>
+    <div class="title">Chunker OOM-killed at 62 GB RSS</div>
+    <div class="body">
+      <strong>Symptom:</strong> After 57 min and 16 M chunks produced, every worker hit <code>BrokenPipeError</code>; <code>dmesg</code> showed the kernel had OOM-killed the main Python process.<br>
+      <strong>Root cause:</strong> <code>pool.imap_unordered</code> has an unbounded result queue. CPU-fast workers outran the slow /mnt/c gzip writer; the queue grew until 62 GB of un-consumed chunk lists tripped OOM.<br>
+      <strong>Fix:</strong> Batched <code>pool.map</code> (default 2000 articles/batch — each batch fully drains before the next dispatches) + output moved to /home Linux ext4 (~10× faster than /mnt/c). Peak RSS in run #2: <strong>9.6 GB</strong>.
+    </div>
+    <div class="meta">commit d3b6d86 · PR #32</div>
+  </div>
+
+  <div class="diff-card">
+    <div class="id">D §6.4</div>
+    <div class="title">3 involuntary WSL/BIOS reboots in 24 h</div>
+    <div class="body">
+      <strong>Symptom:</strong> Saw BIOS screen 3 times on 2026-05-10. Each kill destroyed any in-flight tmux session.<br>
+      <strong>Root cause:</strong> Host hardware — likely PSU marginality or thermal protection (RTX 5090 600 W TDP). Outside project scope.<br>
+      <strong>Mitigation:</strong> Pivoted to NCBI FTP path on Windows side (immune to WSL reboots). Kept all subsequent WSL jobs ≤ 2 h. Recommend user check Windows Event Viewer for <code>Kernel-Power 41</code> / <code>WHEA-Logger</code>.
+    </div>
+    <div class="meta">External — no commit</div>
+  </div>
+
+  <div class="diff-card solved">
+    <div class="id">D §6.5</div>
+    <div class="title">Schema mismatch: FTP parser vs existing chunker</div>
+    <div class="body">
+      <strong>Symptom:</strong> Master-plan <code>08_section_aware_chunking.py</code> expects <code>pmcid</code>, <code>pub_year</code>, <code>mesh_terms</code>, <code>sections[].section_type</code>. FTP parser emits <code>pmc_id</code>, <code>pub_dates.epub</code>, <code>categories</code>, raw section headings.<br>
+      <strong>Fix:</strong> <code>03_normalize_dedupe_filter.py</code> bridges the schemas in one pass that also does dedupe and genetics filter — three jobs, one pass.
+    </div>
+    <div class="meta">commit 1121a60 · PR #32</div>
+  </div>
+
+  <div class="diff-card solved">
+    <div class="id">D §6.6</div>
+    <div class="title">Disk pressure on /mnt/c</div>
+    <div class="body">
+      <strong>Symptom:</strong> 5.76 M extracted XMLs filled /mnt/c from 848 GB free to 276 GB in 3 h; trajectory predicted disk-full within 80 min.<br>
+      <strong>Fix:</strong> Killed in-flight chunker, renamed 14 PMC-prefix subdirs to <code>_trash_subdirs/</code>, background <code>rm -rf</code>, restarted chunker with output on /home (no /mnt/c writes for chunks at all).
+    </div>
+    <div class="meta">Operational fix · no commit</div>
+  </div>
+
+  <div class="diff-card solved">
+    <div class="id">D §6.7</div>
+    <div class="title">WSL clock skew → cosmetic "negative elapsed" status lines</div>
+    <div class="body">
+      <strong>Symptom:</strong> Some mid-pipeline status messages showed elapsed time going backwards.<br>
+      <strong>Root cause:</strong> Status thread uses <code>time.time()</code>; WSL2 re-syncs against Windows clock on certain events.<br>
+      <strong>Impact:</strong> Cosmetic only — counters are in articles processed, not wall time. Future rewrites should use <code>time.monotonic()</code>.
+    </div>
+    <div class="meta">Known issue — low priority</div>
+  </div>
+
+</div>
+
+<!-- DEVIATIONS -->
+<h2>Master Plan Deviations (documented)</h2>
+<table>
+  <thead><tr><th>ID</th><th>Deviation</th><th>Reason</th></tr></thead>
+  <tbody>
+    <tr><td>D1</td><td>2026 ontology versions instead of 2024</td><td>2024 versions deprecated by issuers</td></tr>
+    <tr><td>D2</td><td>HGNC moved from EBI FTP to GCS bucket (doubled <code>archive/archive/</code>)</td><td>HGNC infrastructure migration</td></tr>
+    <tr><td>D3</td><td>Qdrant on alt ports 6533/6534</td><td>Two unrelated Qdrant instances on standard ports</td></tr>
+    <tr><td>D4</td><td>PMC OA via NCBI FTP bulk, not S3 by-tier</td><td>S3 bucket flat, sync too slow, 3 host reboots in 1 day</td></tr>
+    <tr><td>D5</td><td>Retraction filter uses FTP <code>Retracted</code> column</td><td>More reliable than JATS title-prefix parsing</td></tr>
+    <tr><td>D6</td><td>Production chunker is new <code>04_chunk_normalized.py</code></td><td>Need parallel + memory-bounded; <code>08</code> retained for demo</td></tr>
+    <tr><td>D7</td><td>Per-worker temp dirs on Linux ext4</td><td>Race condition + /mnt/c slowness</td></tr>
+    <tr><td>D8</td><td>Chunk output on /home, not /mnt/c</td><td>Writer throughput; OOM in run #1</td></tr>
+  </tbody>
+</table>
+
+<!-- PR LIST -->
+<h2>Pull Requests Touched</h2>
+<div class="pr-list">
+  <div class="pr">
+    <div class="pr-num">#31</div>
+    <div class="pr-title">perf(phase1a): switch PMC OA sync to s5cmd + 5-min status logging</div>
+    <div class="pr-state open">Open (parked)</div>
+  </div>
+  <div class="pr">
+    <div class="pr-num">#32</div>
+    <div class="pr-title">feat(phase1a): FTP archive extractor + JATS parser + retraction filter</div>
+    <div class="pr-state open">Open</div>
+  </div>
+  <div class="pr">
+    <div class="pr-num">#30</div>
+    <div class="pr-title">fix(phase2a): pass --reasoning-parser qwen3 to vLLM startup</div>
+    <div class="pr-state merged">Merged (prior window)</div>
+  </div>
+  <div class="pr">
+    <div class="pr-num">#29</div>
+    <div class="pr-title">Phase 2a [C7b]: LLM client wrapper + Qwen3-8B weights + vLLM scripts</div>
+    <div class="pr-state merged">Merged (prior window)</div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<h2>Next Steps</h2>
+<div class="steps">
+<ol>
+  <li><strong>Embedding (1A.6).</strong> Adapt <code>09_generate_embeddings.py</code> for the gzipped 52.8 M-chunk input. Dense via PubMedBERT FP16 on RTX 5090 (already downloaded). Sparse via <code>fastembed.SparseTextEmbedding("Qdrant/bm25")</code> per CLAUDE.md hard rule. Estimated 10–15 h.</li>
+  <li><strong>Qdrant index (1A.7).</strong> Create hybrid collection (dense 768 + sparse BM25), on-disk payload, ingest the embeddings.</li>
+  <li><strong>Validation (1A.8).</strong> Run <code>11_validate_index.py</code> with the 12 sample queries.</li>
+  <li><strong>Manifest update.</strong> Append SHA-256s of <code>all_articles.normalized.jsonl.gz</code>, <code>all_chunks.jsonl.gz</code>, and the Qdrant snapshot to <code>data/MANIFEST.tsv</code>.</li>
+  <li><strong>Unblock Phase 1B.</strong> Step 5 (causal-gene PMC coverage validation, ≥5 articles per gene) needs a live Qdrant index. The rest of 1B (steps 1-4 + acceptance gate) is already merged.</li>
+  <li><strong>Merge PR #32.</strong> Add unit tests for <code>normalize_record()</code>, <code>is_genetics_article()</code>, <code>classify_section_type()</code> before merge.</li>
+</ol>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  Deep technical version → <a href="progress_report_11052026.md">progress_report_11052026.md</a><br>
+  Prior reports: <a href="progress_report_09052026_v3.md">v3 (2026-05-09)</a> · <a href="agent_architecture.md">Phase 2a architecture</a><br>
+  geno_agent · johanna.angulo@gmail.com · 2026-05-11
+</footer>
+
+</div>
+</body>
+</html>
