@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>geno_agent — Project Status 2026-05-13</title>
+<style>
+  :root {
+    --bg: #0f1419; --bg-card: #1a2028; --bg-card-hover: #232b36;
+    --fg: #e6edf3; --fg-dim: #8b949e; --fg-muted: #6e7681;
+    --accent: #58a6ff; --accent-warm: #f0883e;
+    --green: #3fb950; --yellow: #d29922; --red: #f85149;
+    --blue: #79c0ff; --purple: #d2a8ff;
+    --border: #30363d;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         background: var(--bg); color: var(--fg); line-height: 1.55; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 32px 24px; }
+
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 28px; }
+  header .crumb { color: var(--fg-muted); font-size: 13px; font-family: var(--mono); }
+  header h1 { font-size: 32px; margin: 6px 0; }
+  header h1 .accent { color: var(--accent); }
+  header .subtitle { color: var(--fg-dim); font-size: 15px; }
+  header .meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: var(--fg-muted); }
+  header .meta strong { color: var(--fg); font-weight: 500; }
+
+  h2 { font-size: 22px; margin: 36px 0 14px; border-left: 3px solid var(--accent); padding-left: 12px; font-weight: 500; }
+
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 12px;
+          font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; }
+  .pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .pill-done    { background: rgba(63,185,80,0.12);  color: var(--green);  border: 1px solid rgba(63,185,80,0.3); }
+  .pill-done::before    { background: var(--green); }
+  .pill-next    { background: rgba(210,153,34,0.12); color: var(--yellow); border: 1px solid rgba(210,153,34,0.3); }
+  .pill-next::before    { background: var(--yellow); }
+  .pill-pending { background: rgba(110,118,129,0.12); color: var(--fg-muted); border: 1px solid rgba(110,118,129,0.3); }
+  .pill-pending::before { background: var(--fg-muted); }
+  .pill-blocked { background: rgba(248,81,73,0.12); color: var(--red); border: 1px solid rgba(248,81,73,0.3); }
+  .pill-blocked::before { background: var(--red); }
+
+  .hero { background: linear-gradient(135deg, rgba(63,185,80,0.10), rgba(88,166,255,0.10));
+          border: 1px solid rgba(63,185,80,0.3); border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; }
+  .hero h3 { color: var(--green); font-size: 17px; margin: 0 0 8px; }
+  .hero p { color: var(--fg-dim); margin: 0; font-size: 14px; }
+  .hero p code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 3px; font-size: 13px; color: var(--accent); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 18px 0; }
+  .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .stat .label { font-size: 11px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat .value { font-size: 24px; font-weight: 600; margin: 6px 0 0; color: var(--fg); }
+  .stat .value.green { color: var(--green); }
+  .stat .value.warm  { color: var(--accent-warm); }
+  .stat .value.blue  { color: var(--blue); }
+  .stat .sub { font-size: 12px; color: var(--fg-muted); margin-top: 3px; }
+
+  .phase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; }
+  .phase-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 13px 16px; }
+  .phase-card.next { border-left: 3px solid var(--yellow); }
+  .phase-card.pending { border-left: 3px solid var(--fg-muted); }
+  .phase-card .id { font-family: var(--mono); font-size: 11px; color: var(--fg-muted); }
+  .phase-card .title { font-weight: 500; margin: 3px 0 6px; font-size: 14px; }
+  .phase-card .desc { color: var(--fg-dim); font-size: 12px; }
+  .phase-card code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 4px; border-radius: 3px; font-size: 11px; color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; background: var(--bg-card);
+          border: 1px solid var(--border); border-radius: 6px; overflow: hidden; font-size: 13px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); }
+  th { background: rgba(255,255,255,0.03); color: var(--fg-dim); font-weight: 500;
+       font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; }
+  tr:last-child td { border-bottom: none; }
+  td { color: var(--fg-dim); }
+  td.right { text-align: right; }
+  td code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+
+  .pipeline { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+  .pipe-row { display: flex; align-items: center; gap: 12px; margin: 9px 0; }
+  .pipe-row .step-name { width: 220px; font-size: 13px; color: var(--fg-dim); }
+  .pipe-row .bar-wrap { flex: 1; height: 18px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; }
+  .pipe-row .bar { height: 100%; background: linear-gradient(90deg, #1f883d, #3fb950); }
+  .pipe-row .time { width: 100px; text-align: right; font-family: var(--mono); font-size: 12px; color: var(--fg); }
+
+  .corpus-info { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+                 font-family: var(--mono); font-size: 13px; color: var(--fg-dim); }
+  .corpus-info .key { color: var(--fg-muted); }
+  .corpus-info .val { color: var(--fg); }
+  .corpus-info .accent { color: var(--accent); }
+  .corpus-info .green { color: var(--green); }
+
+  .pr-list { display: flex; flex-direction: column; gap: 6px; }
+  .pr { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+        padding: 9px 14px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
+  .pr-num { font-family: var(--mono); color: var(--accent); font-weight: 500; min-width: 38px; }
+  .pr-title { flex: 1; color: var(--fg); }
+  .pr-state { font-size: 10px; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 500; }
+  .pr-state.merged { background: rgba(210,168,255,0.12); color: var(--purple); border: 1px solid rgba(210,168,255,0.3); }
+  .pr-state.parked { background: rgba(110,118,129,0.12); color: var(--fg-muted); border: 1px solid rgba(110,118,129,0.3); }
+  .pr-state.this    { background: rgba(63,185,80,0.12); color: var(--green); border: 1px solid rgba(63,185,80,0.3); }
+
+  .steps { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 22px; }
+  .steps ol { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps ol li { counter-increment: step; position: relative; padding-left: 36px; margin: 10px 0; color: var(--fg-dim); font-size: 14px; }
+  .steps ol li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 24px; height: 24px; background: var(--accent); color: white; border-radius: 50%;
+    text-align: center; line-height: 24px; font-weight: 600; font-size: 12px; font-family: var(--mono);
+  }
+  .steps strong { color: var(--fg); font-weight: 500; }
+  .steps code { font-family: var(--mono); background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 3px; font-size: 13px; color: var(--accent); }
+
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--border);
+           text-align: center; color: var(--fg-muted); font-size: 12px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="crumb">reports/progress_report_13052026_phase1a_complete.html</div>
+  <h1><span class="accent">geno_agent</span> — Project Status</h1>
+  <div class="subtitle">Agentic Multi-Agent RAG for Rare-Disease Gene Prioritization</div>
+  <div class="meta">
+    <span><strong>Date</strong> 2026-05-13</span>
+    <span><strong>Branch</strong> main</span>
+    <span><strong>Merged this window</strong> PR #32 (13b093d)</span>
+    <span><strong>Next</strong> Phase 1B step 5 — PMC causal-gene coverage</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h3>🎉 Phase 1A complete end-to-end</h3>
+  <p>309 PMC OA tarballs (147 GB) → 7.8 M unique articles → 2.25 M genetics-filtered → <strong>52.8 M chunks</strong> embedded + indexed in Qdrant. Container <code>qdrant_geno_agent</code> on <code>:6533/:6534</code> serves <strong>52,777,395 hybrid points</strong> (dense 768-d COSINE + BM25 IDF) over the full PMC OA corpus. Validation 12/12 PASS. Master plan §11.5 factorial evaluation is unblocked once Phase 1B step 5 lands.</p>
+</div>
+
+<h2>Headline numbers</h2>
+<div class="stats">
+  <div class="stat"><div class="label">Unique articles</div><div class="value blue">7.81 M</div><div class="sub">from FTP corpus</div></div>
+  <div class="stat"><div class="label">After genetics filter</div><div class="value warm">2.25 M</div><div class="sub">29 % retention</div></div>
+  <div class="stat"><div class="label">Chunks</div><div class="value green">52.78 M</div><div class="sub">avg 23.4/article</div></div>
+  <div class="stat"><div class="label">Points in Qdrant</div><div class="value green">52,777,395</div><div class="sub">109 segments, green</div></div>
+  <div class="stat"><div class="label">Retractions filtered</div><div class="value">11,898</div><div class="sub">FTP filelist flag</div></div>
+  <div class="stat"><div class="label">Parse errors</div><div class="value green">5</div><div class="sub">of 4.75 M (0.0001 %)</div></div>
+</div>
+
+<h2>Phase 1A pipeline timing</h2>
+<div class="pipeline">
+  <div class="pipe-row"><div class="step-name">Parse + filter retractions</div><div class="bar-wrap"><div class="bar" style="width: 4.5%;"></div></div><div class="time">85 min</div></div>
+  <div class="pipe-row"><div class="step-name">Normalize + dedupe + filter</div><div class="bar-wrap"><div class="bar" style="width: 5.5%;"></div></div><div class="time">103 min</div></div>
+  <div class="pipe-row"><div class="step-name">Section-aware chunking</div><div class="bar-wrap"><div class="bar" style="width: 5.6%;"></div></div><div class="time">104 min</div></div>
+  <div class="pipe-row"><div class="step-name">Embedding (dense + BM25)</div><div class="bar-wrap"><div class="bar" style="width: 68.0%;"></div></div><div class="time">21 h 19 min</div></div>
+  <div class="pipe-row"><div class="step-name">Qdrant upload (hybrid)</div><div class="bar-wrap"><div class="bar" style="width: 35.2%;"></div></div><div class="time">11 h 1 min</div></div>
+  <div class="pipe-row"><div class="step-name">Validation (12 probes × 3 modes)</div><div class="bar-wrap"><div class="bar" style="width: 0.1%;"></div></div><div class="time">~2 min</div></div>
+</div>
+
+<h2>Phase status</h2>
+<div class="phase-grid">
+
+  <div class="phase-card"><div class="id">1A.1–1A.8</div><div class="title">Phase 1A — corpus</div><div class="desc">acquisition → parse → normalize → chunk → embed → upload → validate</div><span class="pill pill-done">Done</span></div>
+
+  <div class="phase-card"><div class="id">1B.1–1B.4</div><div class="title">Phenopackets → sampled cases</div><div class="desc">ingest → IE filter → MONDO categorize → stratified sample 50–100 cases (seed=42)</div><span class="pill pill-done">Done</span></div>
+
+  <div class="phase-card next"><div class="id">1B.5</div><div class="title">PMC causal-gene coverage</div><div class="desc">Each case's causal gene must have ≥5 articles. Reject + replace from same MONDO category if fewer. <code>scripts/cases/17_validate_pmc_coverage.py</code></div><span class="pill pill-next">Next</span></div>
+
+  <div class="phase-card"><div class="id">1B.6–1B.8</div><div class="title">Candidates + canonical + gate</div><div class="desc">1 causal + 49 distractor genes per case → canonical <code>test_cases.jsonl</code> → 5-check acceptance gate</div><span class="pill pill-done">Done</span></div>
+
+  <div class="phase-card"><div class="id">2a</div><div class="title">Agent stack</div><div class="desc">LangGraph + Query Planner / Retriever / Critic / Synthesizer agents + Qwen3-8B + vLLM</div><span class="pill pill-done">Done</span></div>
+
+  <div class="phase-card pending"><div class="id">2b</div><div class="title">FastAPI on loopback</div><div class="desc">Expose the agent stack as an HTTP API for the React UI</div><span class="pill pill-pending">Pending</span></div>
+
+  <div class="phase-card pending"><div class="id">2c</div><div class="title">CopilotKit + Next.js UI</div><div class="desc"><code>frontend/src/geno_agent/</code> components, talks to FastAPI loopback</div><span class="pill pill-pending">Pending</span></div>
+
+  <div class="phase-card pending"><div class="id">2d</div><div class="title">§11.5 factorial evaluation</div><div class="desc">2×2+1 conditions (deterministic vs LLM Query Planner × Critic, with/without self-correction)</div><span class="pill pill-pending">Pending (1B.5)</span></div>
+
+</div>
+
+<h2>Live Qdrant index</h2>
+<div class="corpus-info">
+<span class="key">collection</span>      = <span class="val">geno_agent_pmc_oa_v1</span>      <span class="green">status: green</span><br>
+<span class="key">container</span>       = <span class="val">qdrant_geno_agent</span> (<span class="accent">qdrant/qdrant:v1.14.1</span>)<br>
+<span class="key">host</span>            = localhost:6533 (REST) / localhost:6534 (gRPC)<br>
+<span class="key">points</span>          = <span class="green">52,777,395</span>    <span class="key">segments</span> = 109<br>
+<span class="key">dense vector</span>    = 768-d, COSINE, on_disk=True, HNSW(m=16, ef_c=200)<br>
+<span class="key">sparse vector</span>   = bm25 with IDF modifier (server IDF, query TF)<br>
+<span class="key">on_disk_payload</span> = True<br>
+<span class="key">payload indices</span> = section_type, pmcid, pub_year<br>
+<span class="key">fingerprint</span>     = c6e53665e0e32e39…
+</div>
+
+<h2>Validation (Phase 1A.8 — 12/12 probes PASS)</h2>
+<table>
+<thead><tr><th>Probe</th><th>Dense top-1 PMC</th><th>BM25 top-1 PMC</th><th>Hybrid top-1 PMC</th></tr></thead>
+<tbody>
+<tr><td>Huntington CAG expansion</td><td>PMC4826775</td><td>PMC11068328</td><td>PMC4826775</td></tr>
+<tr><td>Rett MECP2 X-linked</td><td>PMC3377189</td><td>PMC5356410</td><td>PMC4785515</td></tr>
+<tr><td>Charcot-Marie-Tooth PMP22</td><td>PMC10855578</td><td>PMC4220619</td><td>PMC4220619</td></tr>
+<tr><td>Phenylketonuria PAH</td><td>PMC12998520</td><td>PMC7519570</td><td>PMC7519570</td></tr>
+<tr><td>Fabry GLA</td><td>PMC2869001</td><td>PMC9366415</td><td>PMC9366415</td></tr>
+<tr><td>Niemann-Pick NPC1</td><td>(see md)</td><td>PMC6379092</td><td>PMC7514041</td></tr>
+<tr><td>Common variable immunodeficiency</td><td>PMC3019034</td><td>PMC5433300</td><td>PMC5433300</td></tr>
+<tr><td>(+ 5 more: SCID, agammaglobulinemia, Marfan, Noonan, DiGeorge)</td><td colspan="3" style="text-align: center;">all 5 also PASS — see validation_results_2026-05-13.md</td></tr>
+</tbody>
+</table>
+
+<h2>PRs merged (cumulative)</h2>
+<div class="pr-list">
+  <div class="pr"><div class="pr-num">#32</div><div class="pr-title">feat(phase1a): full FTP-bulk corpus pipeline (parse → upload → validate)</div><div class="pr-state this">This window</div></div>
+  <div class="pr"><div class="pr-num">#30</div><div class="pr-title">fix(phase2a): pass --reasoning-parser qwen3 to vLLM startup</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#29</div><div class="pr-title">Phase 2a [C7b]: LLM client + Qwen3-8B + vLLM scripts</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#28</div><div class="pr-title">feat(phase2a): LangGraph state graph wiring (C7a)</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#27</div><div class="pr-title">docs(report): agentic architecture report</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#26</div><div class="pr-title">feat(phase1b): test-case scripts B1–B9 + acceptance gate</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#21-#25</div><div class="pr-title">feat(phase2a): agent state + 4 agents (C1–C6)</div><div class="pr-state merged">Merged</div></div>
+  <div class="pr"><div class="pr-num">#31</div><div class="pr-title">perf(phase1a): s5cmd S3 sync (fallback path)</div><div class="pr-state parked">Parked</div></div>
+</div>
+
+<h2>Difficulties resolved this window (capsule)</h2>
+<ol style="padding-left: 22px; color: var(--fg-dim); font-size: 14px;">
+  <li>PMC OA S3 bucket flattened — switched to NCBI FTP bulk.</li>
+  <li><code>aws s3 sync</code> too slow (~12 days). Tried <code>s5cmd</code> for 5–10× speedup.</li>
+  <li>3 BIOS-screen reboots in 24 h forced abandonment of multi-day WSL syncs.</li>
+  <li>Worker race condition in extraction (40 crashes) — fixed with per-worker <code>tempfile.TemporaryDirectory()</code>.</li>
+  <li>12 truncated JSONLs survived idempotency check — fixed with atomic <code>.partial → rename</code>.</li>
+  <li>Chunker OOM at 62 GB — fixed with batched <code>pool.map</code> + <code>/home</code> ext4 output.</li>
+  <li>Schema mismatch — added <code>03_normalize_dedupe_filter.py</code> as the bridge step.</li>
+  <li>Disk pressure on <code>/mnt/c</code> — moved tooling to <code>/home</code>.</li>
+</ol>
+
+<h2>Next session — Phase 1B step 5 plan</h2>
+<div class="steps">
+<ol>
+  <li><strong>Write <code>scripts/cases/17_validate_pmc_coverage.py</code></strong> per master plan §6 step 5 spec. Adapted for port 6533 + collection <code>geno_agent_pmc_oa_v1</code>.</li>
+  <li><strong>Run it</strong> against the live index. Per case: hybrid query for the causal gene symbol, count distinct PMCIDs in top-100, reject + replace from same MONDO category if <5. Seed=42.</li>
+  <li><strong>Re-run the acceptance gate</strong> (<code>20_validate_test_cases.py</code>) on the post-replacement set.</li>
+  <li><strong>Update <code>data/MANIFEST.tsv</code></strong> with SHA-256 of <code>05_validated.jsonl</code>.</li>
+  <li><strong>Open PR</strong> for 1B.5 on branch <code>phase1b/step-5-pmc-coverage</code>.</li>
+</ol>
+</div>
+
+<footer>
+  Deep technical version → <a href="progress_report_13052026_phase1a_complete.md">progress_report_13052026_phase1a_complete.md</a><br>
+  Prior reports:
+  <a href="progress_report_11052026.md">11052026 (Phase 1A through chunking)</a> ·
+  <a href="progress_report_12052026_embed_done.md">12052026 embed</a> ·
+  <a href="progress_report_13052026_qdrant_done.md">13052026 qdrant</a> ·
+  <a href="validation_results_2026-05-13.md">validation 12/12</a><br>
+  geno_agent · johanna.angulo@gmail.com · 2026-05-13
+</footer>
+
+</div>
+</body>
+</html>
