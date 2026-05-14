@@ -88,6 +88,12 @@ echo "Probe with:  python scripts/eval/probe_vllm.py"
 echo "Stop with:   Ctrl+C  (or kill the python process)"
 echo
 
+# --enable-prefix-caching: vLLM reuses the KV cache for any prompt
+# whose first K tokens match an already-cached prefix. The Critic
+# batches all share an identical long system prompt (~80 tokens),
+# so caching reduces per-batch prefill cost dramatically. Empirically
+# Cell H smoke without caching took ~13 min/case; expected ~2-4 min
+# with caching, making the full LLM-Critic ablation overnight-feasible.
 exec python -m vllm.entrypoints.openai.api_server \
     --model "${MODEL_DIR}" \
     --served-model-name "Qwen/Qwen3-8B" \
@@ -97,4 +103,5 @@ exec python -m vllm.entrypoints.openai.api_server \
     --max-model-len 8192 \
     --gpu-memory-utilization 0.85 \
     --reasoning-parser qwen3 \
+    --enable-prefix-caching \
     2>&1 | tee "${LOG}"
