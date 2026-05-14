@@ -256,6 +256,80 @@ def _build_batch_prompt(chunks: list[RetrievedChunk], gene: str, hpo_labels: lis
     return "\n".join(lines)
 
 
+def _grade_one_batch(
+    sub: list[RetrievedChunk],
+    gene: str,
+    hpo_labels: list[str],
+    hgnc: HgncIndex,
+    *,
+    llm_cfg: LlmConfig | None = None,
+) -> list[CriticGrade]:
+    """Grade ONE batch of chunks via a single LLM call. Returns one CriticGrade per input chunk.
+
+    Falls back per-chunk to the deterministic grader on malformed batch
+    output. This is the unit-of-parallelism for ``critic_node_llm`` — the
+    function is intentionally side-effect-free and thread-safe so it can
+    run concurrently across genes via ``ThreadPoolExecutor``.
+    """
+    # Thinking budget grows with batch size. Empirically batch=10 with
+    # /no_think uses ~1200 output tokens (120/chunk JSON); we set a fat
+    # budget so JSON output fits even with occasional verbose rationales.
+    budget = 1500 + 250 * len(sub)
+    prompt = _build_batch_prompt(sub, gene, hpo_labels)
+    try:
+        parsed, _resp = generate_json(
+            prompt,
+            cfg=llm_cfg,
+            system_prompt=BATCH_SYSTEM_PROMPT,
+            temperature=0.0,
+            max_tokens=budget,
+        )
+    except Exception as e:
+        logger.warning(
+            "LLM Critic batch failed for gene %s (n=%d, error %s); "
+            "falling back to deterministic for this batch",
+            gene,
+            len(sub),
+            e.__class__.__name__,
+        )
+        return [_deterministic_grade_chunk(ch, gene, hpo_labels, hgnc) for ch in sub]
+
+    if not isinstance(parsed, list):
+        logger.warning(
+            "LLM Critic batch returned non-list for gene %s (got %s); falling back deterministic",
+            gene,
+            type(parsed).__name__,
+        )
+        return [_deterministic_grade_chunk(ch, gene, hpo_labels, hgnc) for ch in sub]
+
+    # Index responses by chunk_idx for robustness to model reordering.
+    by_idx: dict[int, dict] = {}
+    for entry in parsed:
+        if not isinstance(entry, dict):
+            continue
+        try:
+            idx = int(entry.get("chunk_idx", -1))
+        except (TypeError, ValueError):
+            continue
+        if 0 <= idx < len(sub):
+            by_idx[idx] = entry
+
+    out: list[CriticGrade] = []
+    for i, ch in enumerate(sub):
+        entry = by_idx.get(i)
+        grade = _validate_and_coerce(entry, ch.chunk_id) if entry is not None else None
+        if grade is None:
+            out.append(_deterministic_grade_chunk(ch, gene, hpo_labels, hgnc))
+        else:
+            # Sanity check on gene_mention_valid (same as single-chunk path).
+            if grade.gene_mention_valid and not grade_gene_mention(ch, gene, hgnc):
+                grade.gene_mention_valid = False
+                note = " [override: no literal symbol/alias in text]"
+                grade.rationale = (grade.rationale + note)[:200]
+            out.append(grade)
+    return out
+
+
 def grade_chunks_llm_batched(
     chunks: list[RetrievedChunk],
     gene: str,
@@ -265,83 +339,31 @@ def grade_chunks_llm_batched(
     llm_cfg: LlmConfig | None = None,
     batch_size: int = _DEFAULT_BATCH_SIZE,
 ) -> list[CriticGrade]:
-    """Grade ``chunks`` in batches via the LLM; preserve input order.
+    """Grade ``chunks`` sequentially in batches. Kept for single-gene callers.
 
-    Falls back per-chunk to the deterministic grader on malformed batch
-    output (logged). Returns ``[CriticGrade]`` aligned 1:1 with input.
+    The Critic node uses concurrent dispatch in ``critic_node_llm``;
+    this function is for direct callers (tests, scripts) that don't
+    benefit from concurrency.
     """
-    out: list[CriticGrade | None] = [None] * len(chunks)
-    # Slice into batches of size ``batch_size``.
+    out: list[CriticGrade] = []
     for start in range(0, len(chunks), batch_size):
-        sub = chunks[start : start + batch_size]
-        # Thinking budget grows with batch size (Qwen3 reasons over more
-        # chunks). Empirically at batch=10 thinking can hit 2000+ tokens.
-        # Set a fat budget so JSON output fits AFTER thinking. vLLM's
-        # max_model_len=8192 caps the total; we leave ~1000 for the prompt.
-        budget = 1500 + 250 * len(sub)
-        prompt = _build_batch_prompt(sub, gene, hpo_labels)
-        try:
-            parsed, _resp = generate_json(
-                prompt,
-                cfg=llm_cfg,
-                system_prompt=BATCH_SYSTEM_PROMPT,
-                temperature=0.0,
-                max_tokens=budget,
-            )
-        except Exception as e:
-            logger.warning(
-                "LLM Critic batch failed for gene %s (start=%d, n=%d, error %s); "
-                "falling back to deterministic for this batch",
+        out.extend(
+            _grade_one_batch(
+                chunks[start : start + batch_size],
                 gene,
-                start,
-                len(sub),
-                e.__class__.__name__,
+                hpo_labels,
+                hgnc,
+                llm_cfg=llm_cfg,
             )
-            for i, ch in enumerate(sub):
-                out[start + i] = _deterministic_grade_chunk(ch, gene, hpo_labels, hgnc)
-            continue
+        )
+    return out
 
-        if not isinstance(parsed, list):
-            logger.warning(
-                "LLM Critic batch returned non-list for gene %s start=%d "
-                "(got %s); falling back deterministic",
-                gene,
-                start,
-                type(parsed).__name__,
-            )
-            for i, ch in enumerate(sub):
-                out[start + i] = _deterministic_grade_chunk(ch, gene, hpo_labels, hgnc)
-            continue
 
-        # Index responses by chunk_idx for robustness to model reordering.
-        by_idx: dict[int, dict] = {}
-        for entry in parsed:
-            if not isinstance(entry, dict):
-                continue
-            try:
-                idx = int(entry.get("chunk_idx", -1))
-            except (TypeError, ValueError):
-                continue
-            if 0 <= idx < len(sub):
-                by_idx[idx] = entry
-
-        for i, ch in enumerate(sub):
-            entry = by_idx.get(i)
-            grade = _validate_and_coerce(entry, ch.chunk_id) if entry is not None else None
-            if grade is None:
-                # This chunk's slot was missing or malformed; deterministic fallback.
-                out[start + i] = _deterministic_grade_chunk(ch, gene, hpo_labels, hgnc)
-            else:
-                # Sanity check on gene_mention_valid, same as single-chunk path.
-                if grade.gene_mention_valid and not grade_gene_mention(ch, gene, hgnc):
-                    grade.gene_mention_valid = False
-                    note = " [override: no literal symbol/alias in text]"
-                    grade.rationale = (grade.rationale + note)[:200]
-                out[start + i] = grade
-
-    # By construction every slot is filled (real or fallback) — assert + cast.
-    assert all(g is not None for g in out), "LLM Critic produced an unfilled slot"
-    return [g for g in out if g is not None]
+# Default thread-pool size for concurrent batch dispatch in critic_node_llm.
+# vLLM dynamic-batches incoming requests, so sending 8 concurrent calls
+# lets it process them in 1-2 internal batches at near-full GPU utilisation.
+# Higher than 8 hits diminishing returns; lower than 4 leaves GPU idle.
+_DEFAULT_MAX_WORKERS: Final[int] = 8
 
 
 def critic_node_llm(
@@ -351,30 +373,57 @@ def critic_node_llm(
     *,
     llm_cfg: LlmConfig | None = None,
     batch_size: int = _DEFAULT_BATCH_SIZE,
+    max_workers: int = _DEFAULT_MAX_WORKERS,
 ):
-    """LangGraph node: LLM-prompted Critic, BATCHED for throughput.
+    """LangGraph node: LLM-prompted Critic, BATCHED + CONCURRENT.
 
-    Identical control flow to ``critic.critic_node`` but uses
-    :func:`grade_chunks_llm_batched` so we make ~1 LLM call per
-    ``batch_size`` chunks instead of one call per chunk. Thinking
-    happens once per batch and then the model emits N JSON entries.
+    Per case: builds the full list of (gene, chunk-slice) work items
+    across all genes, then dispatches them concurrently to vLLM via
+    a ``ThreadPoolExecutor``. vLLM dynamic-batches the concurrent
+    requests internally so its GPU stays busy, instead of serializing
+    one batched request at a time as a naive sequential loop would.
+
+    Empirical impact (measured Cell H smoke):
+      sequential batched=10:                  13 min/case
+      concurrent batched=10 workers=8 (this): target ~2-3 min/case
     """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     hpo_labels = _hpo_labels_for_state(state, hpo_ontology)
+
+    # Enumerate every (gene, slice_index, sub_chunks) work item.
+    work_items: list[tuple[str, int, list[RetrievedChunk]]] = []
+    for gene, chunks in state.retrieved.items():
+        for start in range(0, len(chunks), batch_size):
+            work_items.append((gene, start, chunks[start : start + batch_size]))
+
+    results: dict[tuple[str, int], list[CriticGrade]] = {}
+
+    def _task(gene: str, start: int, sub: list[RetrievedChunk]):
+        return (gene, start), _grade_one_batch(sub, gene, hpo_labels, hgnc, llm_cfg=llm_cfg)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = [pool.submit(_task, gene, start, sub) for gene, start, sub in work_items]
+        for fut in as_completed(futures):
+            key, grades = fut.result()
+            results[key] = grades
+
+    # Reassemble per-gene grade lists in original chunk order.
     n_chunks_total = 0
     n_low_confidence = 0
-
     for gene, chunks in state.retrieved.items():
-        grades = grade_chunks_llm_batched(
-            chunks, gene, hpo_labels, hgnc, llm_cfg=llm_cfg, batch_size=batch_size
-        )
-        state.grades[gene] = grades
-        n_chunks_total += len(grades)
-        n_low_confidence += sum(1 for g in grades if g.relevance <= 2)
+        gene_grades: list[CriticGrade] = []
+        for start in range(0, len(chunks), batch_size):
+            gene_grades.extend(results.get((gene, start), []))
+        state.grades[gene] = gene_grades
+        n_chunks_total += len(gene_grades)
+        n_low_confidence += sum(1 for g in gene_grades if g.relevance <= 2)
 
     logger.info(
-        "Critic (LLM, batched=%d): %d genes / %d chunks graded; "
+        "Critic (LLM, batched=%d, workers=%d): %d genes / %d chunks graded; "
         "%d low-confidence (<=2). iteration=%d/%d",
         batch_size,
+        max_workers,
         len(state.retrieved),
         n_chunks_total,
         n_low_confidence,
