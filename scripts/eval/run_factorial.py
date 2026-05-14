@@ -102,12 +102,18 @@ MULTI_AGENT_TOP_K: Final[int] = 10
 
 
 # ---------------------------------------------------------------- cell map
-CellId = Literal["A", "B", "C", "D"]
+CellId = Literal["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 CELL_NAMES: dict[CellId, str] = {
     "A": "cell_A_single_dense",
     "B": "cell_B_single_hybrid",
     "C": "cell_C_multi_dense",
     "D": "cell_D_multi_hybrid",
+    "E": "cell_E_multi_llmplanner_dense",
+    "F": "cell_F_multi_llmplanner_hybrid",
+    "G": "cell_G_multi_llmcritic_dense",
+    "H": "cell_H_multi_llmcritic_hybrid",
+    "I": "cell_I_multi_llmboth_dense",
+    "J": "cell_J_multi_llmboth_hybrid",
 }
 
 
@@ -188,14 +194,23 @@ def run_multi_agent_cell(
     search_cfg: SearchConfig,
     hpo_ontology: pronto.Ontology,
     hgnc_index,
+    use_llm_planner: bool = False,
+    use_llm_critic: bool = False,
 ) -> list[GeneCandidate]:
-    """Cell C/D: full Planner→Retriever→Critic→Synthesizer graph."""
+    """Cells C/D (and E-J): full Planner→Retriever→Critic→Synthesizer graph.
+
+    ``use_llm_planner`` / ``use_llm_critic`` toggle the LLM-prompted variants
+    of those two agents per master plan §11.1 C7c. Both default to False
+    (deterministic), preserving the C/D cell semantics.
+    """
     graph = build_graph(
         hpo_ontology=hpo_ontology,
         search_cfg=search_cfg,
         hgnc_index=hgnc_index,
         retriever_top_k=MULTI_AGENT_TOP_K,
         retriever_mode=retrieval_mode,
+        use_llm_planner=use_llm_planner,
+        use_llm_critic=use_llm_critic,
     )
     initial = AgentState(
         case_id=case["case_id"],
@@ -256,9 +271,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    cells = sorted({c.upper() for c in args.cells if c.upper() in "ABCD"})
+    cells = sorted({c.upper() for c in args.cells if c.upper() in "ABCDEFGHIJ"})
     if not cells:
-        log.error("No valid cells in --cells %s; pick from A B C D", args.cells)
+        log.error("No valid cells in --cells %s; pick from A-J", args.cells)
         return 1
 
     # Load all the dependencies once.
@@ -311,6 +326,57 @@ def main() -> int:
             search_cfg=search_cfg,
             hpo_ontology=hpo,
             hgnc_index=hgnc,
+        ),
+        # LLM-augmented cells (Phase 2a C7c)
+        "E": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="dense",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_planner=True,
+        ),
+        "F": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="hybrid",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_planner=True,
+        ),
+        "G": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="dense",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_critic=True,
+        ),
+        "H": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="hybrid",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_critic=True,
+        ),
+        "I": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="dense",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_planner=True,
+            use_llm_critic=True,
+        ),
+        "J": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="hybrid",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_llm_planner=True,
+            use_llm_critic=True,
         ),
     }
 

@@ -57,6 +57,12 @@ CELLS: Final[dict[str, dict]] = {
     "B": {"dir": "cell_B_single_hybrid", "label": "single-agent - hybrid"},
     "C": {"dir": "cell_C_multi_dense", "label": "multi-agent - dense"},
     "D": {"dir": "cell_D_multi_hybrid", "label": "multi-agent - hybrid"},
+    "E": {"dir": "cell_E_multi_llmplanner_dense", "label": "multi-agent LLM-Planner - dense"},
+    "F": {"dir": "cell_F_multi_llmplanner_hybrid", "label": "multi-agent LLM-Planner - hybrid"},
+    "G": {"dir": "cell_G_multi_llmcritic_dense", "label": "multi-agent LLM-Critic - dense"},
+    "H": {"dir": "cell_H_multi_llmcritic_hybrid", "label": "multi-agent LLM-Critic - hybrid"},
+    "I": {"dir": "cell_I_multi_llmboth_dense", "label": "multi-agent LLM-both - dense"},
+    "J": {"dir": "cell_J_multi_llmboth_hybrid", "label": "multi-agent LLM-both - hybrid"},
 }
 
 
@@ -155,7 +161,7 @@ def main() -> int:
     for cell_id, meta in CELLS.items():
         cell_dir = args.eval_root / meta["dir"]
         if not cell_dir.is_dir():
-            log.warning("Cell %s dir missing: %s", cell_id, cell_dir)
+            log.debug("Cell %s dir missing: %s (skipping)", cell_id, cell_dir)
             continue
         # metrics["top1"][category] = list of 0/1
         by_metric: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
@@ -251,12 +257,15 @@ def main() -> int:
     # LaTeX-ready markdown summary
     summary_md = args.eval_root / "_results_summary.md"
     cases_per_cell = overall_rows[0]["n_cases"] if overall_rows else 0
+    n_cells = len(overall_rows)
     lines: list[str] = []
     lines.append("# §11.5 Factorial Evaluation — Results")
     lines.append("")
     lines.append(
-        f"Cases per cell: {cases_per_cell}. Bootstrap N = {args.bootstrap_n}, "
-        "95 % CI. All cells deterministic (no LLM)."
+        f"{n_cells} cells x {cases_per_cell} cases per cell. "
+        f"Bootstrap N = {args.bootstrap_n}, 95 % CI. Cells A-D deterministic; "
+        "cells E-J use Qwen3-8B via local vLLM (thinking-off, batched, "
+        "deterministic temperature=0)."
     )
     lines.append("")
     lines.append("## Overall (point estimate - 95 % CI)")

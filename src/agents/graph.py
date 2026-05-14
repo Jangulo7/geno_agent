@@ -76,6 +76,8 @@ def build_graph(
     retriever_mode: RetrievalMode = "hybrid",
     use_gene_filter: bool = False,
     low_conf_threshold: int = DEFAULT_LOW_CONF_THRESHOLD,
+    use_llm_planner: bool = False,
+    use_llm_critic: bool = False,
 ) -> CompiledStateGraph:
     """Build and compile the four-agent LangGraph state graph.
 
@@ -98,8 +100,16 @@ def build_graph(
     graph: StateGraph = StateGraph(AgentState)
 
     # Node wrappers (closures capture deps; nodes only see state).
-    def _planner(state: AgentState) -> AgentState:
-        return query_planner_node(state, hpo_ontology)
+    # LLM variants are imported lazily so we don't pay the cost when not used.
+    if use_llm_planner:
+        from src.agents.query_planner_llm import query_planner_node_llm
+
+        def _planner(state: AgentState) -> AgentState:
+            return query_planner_node_llm(state, hpo_ontology)
+    else:
+
+        def _planner(state: AgentState) -> AgentState:
+            return query_planner_node(state, hpo_ontology)
 
     def _retriever(state: AgentState) -> AgentState:
         return retriever_node(
@@ -110,8 +120,15 @@ def build_graph(
             use_gene_filter=use_gene_filter,
         )
 
-    def _critic(state: AgentState) -> AgentState:
-        return critic_node(state, hpo_ontology, hgnc_index)
+    if use_llm_critic:
+        from src.agents.critic_llm import critic_node_llm
+
+        def _critic(state: AgentState) -> AgentState:
+            return critic_node_llm(state, hpo_ontology, hgnc_index)
+    else:
+
+        def _critic(state: AgentState) -> AgentState:
+            return critic_node(state, hpo_ontology, hgnc_index)
 
     def _synthesizer(state: AgentState) -> AgentState:
         return synthesizer_node(state)
