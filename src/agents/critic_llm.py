@@ -218,11 +218,12 @@ def grade_chunk_llm(
     return grade
 
 
-# Default chunks-per-LLM-call for the batched grader. With thinking ON,
-# Qwen3-8B does its reasoning once over the whole batch and then emits N
-# JSON entries, which is much faster than N independent calls. Empirically
-# 10 chunks/call lands around 5-8 sec/call -> ~6 min per 75-gene case.
-_DEFAULT_BATCH_SIZE: Final[int] = 10
+# Default chunks-per-LLM-call for the batched grader. batch=10 exceeded
+# vLLM's max_model_len=8192 budget on chunks near _CHUNK_TEXT_CAP_CHARS,
+# causing ~72% of batches to 400 out (Cell G overnight run, 2026-05-14).
+# batch=5 gives ~3500-token prompts + ~2750 max_tokens = 6250 tokens total,
+# well inside the 8192 budget with headroom for outlier-long chunks.
+_DEFAULT_BATCH_SIZE: Final[int] = 5
 
 BATCH_SYSTEM_PROMPT: Final[str] = (
     "/no_think\n"
