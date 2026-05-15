@@ -100,7 +100,7 @@ exec python -m vllm.entrypoints.openai.api_server \
     --host "${HOST}" \
     --port "${PORT}" \
     --dtype float16 \
-    --max-model-len 8192 \
+    --max-model-len 32768 \
     --gpu-memory-utilization 0.85 \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
