@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>geno_agent — Test Case Selection Methodology</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fafbfc;
+    --bg-card: #ffffff;
+    --bg-card-alt: #f5f7fa;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text: #0f172a;
+    --text-dim: #475569;
+    --text-muted: #64748b;
+    --primary: #1565c0;
+    --primary-dark: #0d47a1;
+    --primary-soft: #e3f2fd;
+    --accent: #00838f;
+    --accent-soft: #e0f7fa;
+    --green: #2e7d32;
+    --green-soft: #e8f5e9;
+    --warm: #ed6c02;
+    --warm-soft: #fff3e0;
+    --red: #c62828;
+    --red-soft: #ffebee;
+    --purple: #6a1b9a;
+    --purple-soft: #f3e5f5;
+    --mono: 'SF Mono', 'JetBrains Mono', 'Roboto Mono', Consolas, monospace;
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 4px 6px rgba(15, 23, 42, 0.04), 0 10px 15px rgba(15, 23, 42, 0.05);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-font-smoothing: antialiased; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+         background: var(--bg-soft); color: var(--text); line-height: 1.55; padding: 0; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 36px 28px 60px; }
+
+  header { padding-bottom: 24px; margin-bottom: 32px; border-bottom: 2px solid var(--border); }
+  header .crumb { color: var(--text-muted); font-size: 13px; font-family: var(--mono); letter-spacing: 0.02em; text-transform: uppercase; }
+  header h1 { font-size: 34px; font-weight: 700; color: var(--text); margin: 8px 0; letter-spacing: -0.02em; }
+  header h1 .accent { color: var(--primary); }
+  header .subtitle { color: var(--text-dim); font-size: 16px; max-width: 800px; }
+  header .meta { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 22px; font-size: 13px; color: var(--text-muted); }
+  header .meta strong { color: var(--text); font-weight: 600; }
+  header .meta code { font-family: var(--mono); background: var(--bg-card-alt); padding: 2px 6px; border-radius: 4px; }
+
+  h2 { font-size: 24px; font-weight: 700; margin: 44px 0 18px; color: var(--text); letter-spacing: -0.01em; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h2 .num { color: var(--primary); font-weight: 600; margin-right: 12px; }
+  h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; color: var(--text); }
+
+  p { color: var(--text-dim); margin-bottom: 12px; font-size: 14.5px; }
+  p code, li code, td code { font-family: var(--mono); background: var(--bg-card-alt); padding: 2px 6px; border-radius: 4px; font-size: 12.5px; color: var(--primary-dark); border: 1px solid var(--border); }
+  ul, ol { margin: 8px 0 14px 24px; color: var(--text-dim); font-size: 14.5px; }
+  ul li, ol li { margin-bottom: 5px; }
+  strong { color: var(--text); font-weight: 600; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, var(--primary-soft), var(--accent-soft));
+          border: 1px solid var(--primary); border-radius: 12px; padding: 28px 32px; margin: 24px 0;
+          box-shadow: var(--shadow-lg); }
+  .hero h3 { color: var(--primary-dark); font-size: 18px; margin: 0 0 14px; font-weight: 700; }
+  .hero p { color: var(--text); font-size: 15px; margin-bottom: 10px; }
+  .hero p:last-child { margin-bottom: 0; }
+  .hero strong { color: var(--text); font-weight: 700; }
+  .hero code { font-family: var(--mono); background: var(--bg); padding: 2px 7px; border-radius: 4px; font-size: 13.5px; }
+
+  /* Stats cards */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 22px 0; }
+  .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; box-shadow: var(--shadow); }
+  .stat .label { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+  .stat .value { font-size: 30px; font-weight: 700; margin: 8px 0 0; color: var(--text); font-family: var(--mono); letter-spacing: -0.02em; }
+  .stat .value.green { color: var(--green); }
+  .stat .value.warm  { color: var(--warm); }
+  .stat .value.blue  { color: var(--primary); }
+  .stat .value.purple { color: var(--purple); }
+  .stat .sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; font-family: var(--mono); }
+
+  /* Funnel — visual stages */
+  .funnel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 28px; margin: 18px 0; box-shadow: var(--shadow); }
+  .funnel .funnel-title { color: var(--text); font-weight: 600; font-size: 14px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .funnel-stage { display: grid; grid-template-columns: 60px 1fr 110px; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+  .funnel-stage:last-child { border-bottom: none; }
+  .funnel-stage .stage-num { font-family: var(--mono); font-weight: 700; color: var(--primary); font-size: 14px; padding: 4px 8px; background: var(--primary-soft); border-radius: 6px; text-align: center; }
+  .funnel-stage .stage-label { color: var(--text); font-weight: 500; }
+  .funnel-stage .stage-label .sub { display: block; color: var(--text-muted); font-size: 12px; font-weight: 400; margin-top: 4px; }
+  .funnel-stage .stage-count { font-family: var(--mono); font-weight: 700; color: var(--text); font-size: 15px; text-align: right; }
+  .funnel-stage .stage-count .pct { display: block; color: var(--text-muted); font-size: 11px; font-weight: 400; margin-top: 2px; }
+  .funnel-stage.canonical { background: var(--green-soft); border-radius: 6px; padding-left: 12px; padding-right: 12px; }
+  .funnel-stage.canonical .stage-num { background: var(--green); color: #fff; }
+  .funnel-stage.canonical .stage-label { color: var(--green); }
+  .funnel-stage.canonical .stage-count { color: var(--green); }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 13.5px; box-shadow: var(--shadow); margin: 6px 0; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--bg-card-alt); color: var(--text); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg-soft); }
+  td { color: var(--text-dim); }
+  td.right { text-align: right; }
+  td.metric { font-family: var(--mono); }
+  td.metric.win { color: var(--green); font-weight: 700; }
+  td.metric.tie { color: var(--text-muted); }
+  td.center { text-align: center; }
+  td.stage-num { font-family: var(--mono); color: var(--primary); font-weight: 700; }
+
+  /* Bar chart */
+  .chart { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 28px; margin: 18px 0; box-shadow: var(--shadow); }
+  .chart .chart-title { color: var(--text); font-size: 14px; font-weight: 600; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .chart .chart-title .small { color: var(--text-muted); font-weight: 400; font-size: 12px; margin-left: 6px; }
+  .bar-row { display: grid; grid-template-columns: 80px 240px 1fr 100px; align-items: center; gap: 14px; margin: 8px 0; font-size: 13px; }
+  .bar-row .cell { font-family: var(--mono); font-weight: 700; color: var(--primary); font-size: 13.5px; }
+  .bar-row .label-cell { color: var(--text-dim); font-size: 13px; }
+  .bar-row .bar-track { background: var(--bg-card-alt); height: 26px; border-radius: 6px; position: relative; overflow: hidden; border: 1px solid var(--border); }
+  .bar-row .bar-fill { height: 100%; border-radius: 5px; transition: width 0.4s ease; }
+  .bar-row .bar-fill.dev { background: linear-gradient(90deg, #64b5f6, #1565c0); }
+  .bar-row .bar-fill.imm { background: linear-gradient(90deg, #81c784, #2e7d32); }
+  .bar-row .bar-fill.met { background: linear-gradient(90deg, #ffb74d, #ed6c02); }
+  .bar-row .bar-fill.neu { background: linear-gradient(90deg, #ba68c8, #6a1b9a); }
+  .bar-row .bar-value { font-family: var(--mono); text-align: right; color: var(--text); font-size: 14px; font-weight: 600; }
+  .chart .chart-note { color: var(--text-muted); font-size: 12px; margin-top: 18px; font-style: italic; padding-top: 14px; border-top: 1px solid var(--border); }
+
+  /* Gates checklist */
+  .gates { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 28px; margin: 16px 0; box-shadow: var(--shadow); }
+  .gate-row { display: grid; grid-template-columns: 32px 1fr 110px; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .gate-row:last-child { border-bottom: none; }
+  .gate-row .gate-num { font-family: var(--mono); font-weight: 700; color: var(--primary); }
+  .gate-row .gate-text { color: var(--text); }
+  .gate-row .gate-status { text-align: right; }
+  .gate-row .gate-pass { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 14px; background: var(--green-soft); color: var(--green); font-size: 11.5px; font-weight: 700; text-transform: uppercase; }
+  .gate-row .gate-pass::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+
+  /* Cards */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 14px 0; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 14px 0; }
+  @media (max-width: 800px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+  .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; box-shadow: var(--shadow); }
+  .info-card.accent { border-left: 4px solid var(--primary); }
+  .info-card.green { border-left: 4px solid var(--green); }
+  .info-card.warm { border-left: 4px solid var(--warm); }
+  .info-card .head { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; font-weight: 600; }
+  .info-card .head.green { color: var(--green); }
+  .info-card .head.warm { color: var(--warm); }
+  .info-card .head.accent { color: var(--primary); }
+  .info-card .delta { font-family: var(--mono); font-size: 32px; font-weight: 700; margin: 8px 0; color: var(--text); }
+  .info-card .delta.green { color: var(--green); }
+  .info-card p { font-size: 13px; margin: 6px 0 0; color: var(--text-dim); }
+
+  blockquote { border-left: 4px solid var(--primary); padding: 14px 22px; margin: 16px 0; color: var(--text-dim); font-size: 14px;
+               background: var(--primary-soft); border-radius: 0 6px 6px 0; }
+  blockquote strong { color: var(--text); }
+  blockquote.warn { border-left-color: var(--warm); background: var(--warm-soft); }
+  blockquote.success { border-left-color: var(--green); background: var(--green-soft); }
+
+  pre.code-block { background: var(--bg-card-alt); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--text-dim); overflow-x: auto; line-height: 1.6; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 2px solid var(--border); color: var(--text-muted); font-size: 12.5px; }
+  footer code { font-family: var(--mono); color: var(--text-dim); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="crumb">methodology · test case selection · phase 1B</div>
+  <h1>geno_agent — <span class="accent">Test Case Selection Methodology</span></h1>
+  <div class="subtitle">
+    How the 75 test cases used across every evaluation cell (A–K + P + L + Q/R/S to come) were
+    selected from the GA4GH Phenopacket Store. Designed for reproducibility, representativeness,
+    and cross-cell comparability.
+  </div>
+  <div class="meta">
+    <span><strong>Canonical file</strong> <code>data/test_cases/test_cases.jsonl</code></span>
+    <span><strong>sha256</strong> <code>4872afb6…</code></span>
+    <span><strong>Master plan ref</strong> §6 + §11.5</span>
+    <span><strong>n</strong> 75 (stratified)</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h3>The three properties this pipeline must guarantee</h3>
+  <p><strong>1. Reproducibility.</strong> Anyone re-running the pipeline must obtain the same 75 cases in the same order with the same 50 candidate genes each.</p>
+  <p><strong>2. Representativeness.</strong> The sample must cover the four target MONDO categories defined by the master plan with roughly equal weight (within 20 %).</p>
+  <p><strong>3. Comparability.</strong> Every experimental cell must process <em>exactly the same</em> 75 cases so that pairwise comparisons (e.g. Cell D vs Cell K) are well-defined and statistically meaningful via paired-bootstrap CIs.</p>
+</div>
+
+<!-- KEY STATS -->
+<h2><span class="num">1.</span>The numbers at a glance</h2>
+
+<div class="stats">
+  <div class="stat">
+    <div class="label">Source corpus</div>
+    <div class="value blue">6 668</div>
+    <div class="sub">Phenopackets in Store v0.1.19</div>
+  </div>
+  <div class="stat">
+    <div class="label">After eligibility</div>
+    <div class="value">3 878</div>
+    <div class="sub">≥1 HPO, has gene, HGNC-resolvable</div>
+  </div>
+  <div class="stat">
+    <div class="label">After MONDO filter</div>
+    <div class="value">2 971</div>
+    <div class="sub">in target 4 categories</div>
+  </div>
+  <div class="stat" style="border: 2px solid var(--green); background: var(--green-soft);">
+    <div class="label">Final test set</div>
+    <div class="value green">75</div>
+    <div class="sub">stratified, validated, seed=42</div>
+  </div>
+</div>
+
+<!-- 2. FUNNEL -->
+<h2><span class="num">2.</span>The selection pipeline (6 stages)</h2>
+
+<div class="funnel">
+  <div class="funnel-title">From the Phenopacket Store to the canonical 75-case file</div>
+
+  <div class="funnel-stage">
+    <div class="stage-num">1</div>
+    <div class="stage-label">Ingest every Phenopacket into normalised JSONL<div class="sub"><code>scripts/cases/13_load_phenopackets.py</code> → <code>01_all_phenopackets.jsonl</code></div></div>
+    <div class="stage-count">6 668<div class="pct">(source)</div></div>
+  </div>
+
+  <div class="funnel-stage">
+    <div class="stage-num">2</div>
+    <div class="stage-label">Eligibility filter<div class="sub">≥1 observed HPO term · has causal interpretation · HGNC-resolvable gene</div></div>
+    <div class="stage-count">3 878<div class="pct">58.1 %</div></div>
+  </div>
+
+  <div class="funnel-stage">
+    <div class="stage-num">3</div>
+    <div class="stage-label">MONDO categorisation<div class="sub">restrict to developmental / immunological / metabolic / neurological</div></div>
+    <div class="stage-count">2 971<div class="pct">76.6 %</div></div>
+  </div>
+
+  <div class="funnel-stage">
+    <div class="stage-num">4</div>
+    <div class="stage-label">Stratified random sample<div class="sub"><code>numpy.random.default_rng(seed=42).choice(...)</code>, equal allocation per category</div></div>
+    <div class="stage-count">75<div class="pct">2.5 %</div></div>
+  </div>
+
+  <div class="funnel-stage">
+    <div class="stage-num">5</div>
+    <div class="stage-label">PMC coverage validation<div class="sub">causal gene must have ≥5 PMC OA articles in Phase 1A index · <strong>this run: 75/75 passed first try, 0 replacements</strong></div></div>
+    <div class="stage-count">75<div class="pct">100 %</div></div>
+  </div>
+
+  <div class="funnel-stage canonical">
+    <div class="stage-num">6</div>
+    <div class="stage-label">Distractors + canonical schema<div class="sub">49 HGNC distractors per case · sort by <code>case_id</code> · sha256 recorded in manifest</div></div>
+    <div class="stage-count">75<div class="pct">canonical</div></div>
+  </div>
+</div>
+
+<blockquote class="success">
+  Net retention: <strong>75 from 6 668 = 1.12 %.</strong> The selectivity is driven primarily by the
+  MONDO category filter (we restrict to four out of ~20 possible MONDO branches) and the equal-allocation
+  cap of 75 cases total.
+</blockquote>
+
+<!-- 3. STRATIFICATION -->
+<h2><span class="num">3.</span>Stratification across MONDO categories</h2>
+
+<div class="chart">
+  <div class="chart-title">Final 75-case distribution <span class="small">(target: equal allocation, tolerance ± 20 %)</span></div>
+
+  <div class="bar-row">
+    <div class="cell">DEV</div>
+    <div class="label-cell">developmental disorders</div>
+    <div class="bar-track"><div class="bar-fill dev" style="width:25.3%"></div></div>
+    <div class="bar-value">19 (25.3 %)</div>
+  </div>
+  <div class="bar-row">
+    <div class="cell">IMM</div>
+    <div class="label-cell">immunological / inborn errors of immunity</div>
+    <div class="bar-track"><div class="bar-fill imm" style="width:25.3%"></div></div>
+    <div class="bar-value">19 (25.3 %)</div>
+  </div>
+  <div class="bar-row">
+    <div class="cell">MET</div>
+    <div class="label-cell">metabolic disorders</div>
+    <div class="bar-track"><div class="bar-fill met" style="width:25.3%"></div></div>
+    <div class="bar-value">19 (25.3 %)</div>
+  </div>
+  <div class="bar-row">
+    <div class="cell">NEU</div>
+    <div class="label-cell">neurological disorders</div>
+    <div class="bar-track"><div class="bar-fill neu" style="width:24.0%"></div></div>
+    <div class="bar-value">18 (24.0 %)</div>
+  </div>
+
+  <div class="chart-note">75 / 4 = 18.75. The rounding error of 0.75 goes to the first three categories alphabetically, giving 19+19+19+18. Within ± 5 % of equal allocation — well inside the 20 % acceptance tolerance.</div>
+</div>
+
+<!-- MONDO category mappings table -->
+<h3>MONDO root terms used per category</h3>
+
+<table>
+  <thead>
+    <tr><th>Category</th><th>MONDO root term</th><th class="right">Eligible pool</th><th class="right">Sampled</th><th class="right">Sample %</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>developmental</td><td><code>MONDO:0019052</code> developmental delay / intellectual disability</td><td class="right metric">~ 880</td><td class="right metric win">19</td><td class="right metric">2.2 %</td></tr>
+    <tr><td>immunological</td><td><code>MONDO:0021166</code> inborn errors of immunity / PID</td><td class="right metric">~ 520</td><td class="right metric win">19</td><td class="right metric">3.7 %</td></tr>
+    <tr><td>metabolic</td><td><code>MONDO:0019255</code> inherited metabolic disorders</td><td class="right metric">~ 640</td><td class="right metric win">19</td><td class="right metric">3.0 %</td></tr>
+    <tr><td>neurological</td><td><code>MONDO:0005071</code> neurological disorders</td><td class="right metric">~ 931</td><td class="right metric win">18</td><td class="right metric">1.9 %</td></tr>
+  </tbody>
+</table>
+
+<!-- 4. SCHEMA -->
+<h2><span class="num">4.</span>Final test case schema</h2>
+
+<p>Each line of <code>test_cases.jsonl</code> has exactly these fields:</p>
+
+<table>
+  <thead>
+    <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>case_id</code></td><td>string</td><td><code>"{causal_gene}:{phenopacket_filename}"</code> — unique, used as filename for all per-case outputs</td></tr>
+    <tr><td><code>category</code></td><td>string</td><td>one of <code>developmental</code>, <code>immunological</code>, <code>metabolic</code>, <code>neurological</code></td></tr>
+    <tr><td><code>hpo_terms</code></td><td>list[str]</td><td>observed HPO term IDs only</td></tr>
+    <tr><td><code>diseases</code></td><td>list[obj]</td><td>OMIM / Orphanet disease objects with <code>id</code> and <code>label</code></td></tr>
+    <tr><td><code>causal_gene</code></td><td>string</td><td>canonical HGNC symbol</td></tr>
+    <tr><td><code>candidate_genes</code></td><td>list[str]</td><td>50 entries: 1 causal + 49 distractors, deterministic order</td></tr>
+    <tr><td><code>causal_gene_index_in_candidates</code></td><td>int</td><td>position of causal gene in the list (0–49)</td></tr>
+    <tr><td><code>pmc_article_count</code></td><td>int / null</td><td>optional PMC count (null in this run)</td></tr>
+    <tr><td><code>source_phenopacket</code></td><td>string</td><td>repo-relative path to the source Phenopacket JSON</td></tr>
+  </tbody>
+</table>
+
+<h3>Example record (ADRA2A : familial partial lipodystrophy)</h3>
+
+<pre class="code-block">{
+  "case_id": "ADRA2A:PMID_27376152_FPLD1223",
+  "category": "metabolic",
+  "hpo_terms": ["HP:0025383", "HP:0002155", "HP:0000819", "HP:0000822",
+                "HP:0009125", "HP:0000956", "HP:0003236", "HP:0002240",
+                "HP:0003074", "HP:0002149", "HP:0001997", "HP:0002870"],
+  "diseases": [{"id": "OMIM:620679",
+                "label": "Lipodystrophy, familial partial, type 8"}],
+  "causal_gene": "ADRA2A",
+  "candidate_genes": ["DCTN6", "TYW3", "CHST6", "CCR10", "CPNE9", ..., "ADRA2A"],
+  "causal_gene_index_in_candidates": 49,
+  "pmc_article_count": null,
+  "source_phenopacket": "data/phenopackets/v0.1.19/0.1.19/ADRA2A/PMID_27376152_FPLD1223.json"
+}</pre>
+
+<!-- 5. ACCEPTANCE -->
+<h2><span class="num">5.</span>Acceptance validation (5 gates)</h2>
+
+<p>The final file must pass five independent gates implemented in <code>scripts/cases/20_validate_test_cases.py</code>. Each gate surfaces <em>all</em> failing cases — not just the first.</p>
+
+<div class="gates">
+  <div class="gate-row">
+    <div class="gate-num">1</div>
+    <div class="gate-text">Every case has ≥ 3 observed HPO terms</div>
+    <div class="gate-status"><span class="gate-pass">Pass</span></div>
+  </div>
+  <div class="gate-row">
+    <div class="gate-num">2</div>
+    <div class="gate-text">Every case has exactly 50 unique candidate gene symbols</div>
+    <div class="gate-status"><span class="gate-pass">Pass</span></div>
+  </div>
+  <div class="gate-row">
+    <div class="gate-num">3</div>
+    <div class="gate-text">Every case's <code>causal_gene</code> appears in its <code>candidate_genes</code></div>
+    <div class="gate-status"><span class="gate-pass">Pass</span></div>
+  </div>
+  <div class="gate-row">
+    <div class="gate-num">4</div>
+    <div class="gate-text">Every case's causal gene has ≥ 5 PMC OA articles in the Phase 1A index</div>
+    <div class="gate-status"><span class="gate-pass">Pass</span></div>
+  </div>
+  <div class="gate-row">
+    <div class="gate-num">5</div>
+    <div class="gate-text">The four MONDO categories are within ± 20 % of equal allocation</div>
+    <div class="gate-status"><span class="gate-pass">Pass</span></div>
+  </div>
+</div>
+
+<blockquote class="success">
+  <strong>All gates passed. Exit code 0. File is publish-ready.</strong>
+  Stage 5 (PMC coverage): 75 / 75 cases passed on first try; 0 replacements were needed.
+</blockquote>
+
+<!-- 6. REPRODUCIBILITY -->
+<h2><span class="num">6.</span>Reproducibility — version pins</h2>
+
+<div class="grid-2">
+  <div class="info-card accent">
+    <div class="head accent">Data version pins</div>
+    <table style="box-shadow: none; border: none; margin: 4px 0;">
+      <tbody>
+        <tr><td>Phenopacket Store</td><td><code>v0.1.19</code></td></tr>
+        <tr><td>HPO ontology</td><td><code>hp.obo v2026-02-16</code></td></tr>
+        <tr><td>MONDO ontology</td><td><code>v2026-03-03</code></td></tr>
+        <tr><td>HGNC snapshot</td><td><code>2026-04-07</code></td></tr>
+        <tr><td>Phase 1A index</td><td><code>geno_agent_pmc_oa_v1</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="info-card accent">
+    <div class="head accent">Determinism guarantees</div>
+    <table style="box-shadow: none; border: none; margin: 4px 0;">
+      <tbody>
+        <tr><td>RNG seed</td><td><code>42</code> across every stage</td></tr>
+        <tr><td>Hash seed</td><td><code>PYTHONHASHSEED=42</code></td></tr>
+        <tr><td>Chunk IDs</td><td>UUID5 (deterministic)</td></tr>
+        <tr><td>Bootstrap CIs</td><td>1 000 resamples, seed=42</td></tr>
+        <tr><td>Output sha256</td><td><code>4872afb6…</code> (in manifest)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<blockquote>
+  Re-running the entire pipeline end-to-end produces a <code>test_cases.jsonl</code> with the exact
+  same sha256 as the committed version. This is verified by <code>scripts/utils/seed.py:apply_seeds()</code>
+  called by every downstream evaluation driver.
+</blockquote>
+
+<!-- 7. WHY COMPARABLE -->
+<h2><span class="num">7.</span>Why all 11+ evaluation cells are mutually comparable</h2>
+
+<p>
+  Every evaluation cell reads from the same canonical file and writes per-case outputs under the same
+  schema. This makes paired comparisons (D vs K, D vs rerank, etc.) mathematically well-defined.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Cell</th><th>Architecture</th><th>Test case loader</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="stage-num">A–J</td><td>deterministic + LLM-augmented (10 cells)</td><td><code>scripts/eval/run_factorial.py</code> → reads <code>test_cases.jsonl</code></td></tr>
+    <tr><td class="stage-num">K</td><td>Exomiser HPO-only baseline</td><td><code>scripts/eval/run_cell_k.py</code> → reads <code>test_cases.jsonl</code></td></tr>
+    <tr><td class="stage-num">P</td><td>D + K Reciprocal-Rank-Fusion ensemble</td><td><code>scripts/eval/run_cell_p.py</code> → reads <code>cell_D/&lt;case_id&gt;.json</code> + <code>cell_K/&lt;case_id&gt;.json</code></td></tr>
+    <tr><td class="stage-num">CE diag</td><td>cross-encoder rerank diagnostic</td><td><code>scripts/eval/rerank_diagnostic.py</code> → reads <code>test_cases.jsonl</code></td></tr>
+    <tr><td class="stage-num">L</td><td>full rerank-inside-D (75 cases)</td><td><code>scripts/eval/rerank_inside_d.py</code> → reads <code>test_cases.jsonl</code></td></tr>
+    <tr><td class="stage-num">Q, R, S</td><td>LEA cells (planned)</td><td><code>scripts/eval/run_factorial.py</code> with <code>use_lea_synthesiser=True</code></td></tr>
+  </tbody>
+</table>
+
+<h3>What this enables</h3>
+
+<div class="grid-3">
+  <div class="info-card green">
+    <div class="head green">Paired statistics</div>
+    <p>For any two cells, top-1 can be compared on the <em>same case</em> under both pipelines. Paired-bootstrap CIs (1 000 resamples, seed=42) are correctly computed.</p>
+  </div>
+  <div class="info-card green">
+    <div class="head green">Per-MONDO consistency</div>
+    <p>Cell K's "immunological top-1 = 0.421" is on the <em>same 19 cases</em> as Cell D's "immunological top-1 = 0.474" — so D > K on that subset by exactly 1 case.</p>
+  </div>
+  <div class="info-card green">
+    <div class="head green">Per-case insight</div>
+    <p>"ADRA2A moved from D rank 50 → rerank rank 1" means <em>the same Phenopacket</em> got rank 50 in Cell D and rank 1 under rerank-inside-D — not a different ADRA2A patient.</p>
+  </div>
+</div>
+
+<!-- 8. DETERMINISM TABLE -->
+<h2><span class="num">8.</span>What is deterministic vs random</h2>
+
+<table>
+  <thead>
+    <tr><th>Component</th><th>Class</th><th>Reproducibility</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Which 75 cases are in the test set</td><td><em>random</em> (statistical)</td><td>Bit-stable given seed=42 + version pins</td></tr>
+    <tr><td>Gene order in <code>candidate_genes</code></td><td><em>random</em></td><td>Bit-stable given same seed</td></tr>
+    <tr><td>Which chunks are retrieved</td><td>deterministic</td><td>Same Qdrant index, same query, same top-K → same chunks</td></tr>
+    <tr><td>Deterministic Critic grades</td><td>deterministic</td><td>regex + section weights</td></tr>
+    <tr><td>LLM Planner / Critic outputs</td><td>near-deterministic</td><td><code>temperature=0.0</code>; vLLM float non-determinism ~ 1 in 1 000 tokens</td></tr>
+    <tr><td>Bootstrap CIs (1 000 resamples)</td><td><em>random</em></td><td>Bit-stable, seed=42</td></tr>
+    <tr><td>Cross-encoder rerank</td><td>deterministic</td><td>Inference-time only</td></tr>
+  </tbody>
+</table>
+
+<!-- 9. LIMITATIONS -->
+<h2><span class="num">9.</span>Limitations worth flagging</h2>
+
+<div class="grid-2">
+  <div class="info-card warm">
+    <div class="head warm">Limit 1 — N=75 is modest</div>
+    <p>Bootstrap CIs are wide (± ~0.10 on top-1 around 0.5–0.7). A larger sample (~200) would tighten inferences but was outside compute budget.</p>
+  </div>
+  <div class="info-card warm">
+    <div class="head warm">Limit 2 — only 4 MONDO categories</div>
+    <p>The thesis claim covers developmental / immunological / metabolic / neurological. Oncology, infectious disease, cardiac, dermatological etc. are not represented.</p>
+  </div>
+  <div class="info-card warm">
+    <div class="head warm">Limit 3 — multi-category cases resolved deterministically</div>
+    <p>A case mapping to both developmental and metabolic is assigned to the higher-priority category per the script's tie-break. Recorded as deviation in master plan §10.</p>
+  </div>
+  <div class="info-card warm">
+    <div class="head warm">Limit 4 — PMC coverage is a fair-test requirement, not generalisation</div>
+    <p>Cases where the causal gene has < 5 PMC articles are excluded. Literature-RAG cannot be tested on undocumented genes by design.</p>
+  </div>
+  <div class="info-card warm">
+    <div class="head warm">Limit 5 — single causal gene per case</div>
+    <p>Real clinical cases sometimes have multiple plausible candidates. The binary top-1 target does not capture that complexity.</p>
+  </div>
+  <div class="info-card warm">
+    <div class="head warm">Limit 6 — no held-out validation split</div>
+    <p>With only 75 cases, we use the full set for every cell. There is no separate held-out subset for hyperparameter tuning. Hyperparameters were set from literature, not tuned on these cases.</p>
+  </div>
+</div>
+
+<!-- 10. FILES -->
+<h2><span class="num">10.</span>Files and provenance</h2>
+
+<h3>Pipeline scripts</h3>
+<pre class="code-block">scripts/cases/04_download_phenopacket_store.sh           # ingestion entry
+scripts/cases/13_load_phenopackets.py                    # stage 1
+scripts/cases/15_filter_eligible.py                      # stage 2 (eligibility)
+scripts/cases/16_categorize_mondo.py                     # stage 3 (categorisation)
+scripts/cases/17_sample_stratified.py                    # stage 4 (sampling, seed=42)
+scripts/cases/18_validate_pmc_coverage.py                # stage 5 (PMC ≥ 5)
+scripts/cases/19_finalize_test_cases.py                  # stage 6 (distractors + manifest)
+scripts/cases/20_validate_test_cases.py                  # 5-gate acceptance</pre>
+
+<h3>Intermediate + final artefacts</h3>
+<pre class="code-block">data/test_cases/01_all_phenopackets.jsonl                # 6 668 lines
+data/test_cases/02_eligible.jsonl                        # 3 878 lines
+data/test_cases/03_categorized.jsonl                     # 2 971 lines
+data/test_cases/04_sampled.jsonl                         #    75 lines
+data/test_cases/05_validated.jsonl                       #    75 lines
+data/test_cases/05_validated_stats.json                  # validation telemetry
+data/test_cases/06_with_candidates.jsonl                 #    75 lines
+data/test_cases/test_cases.jsonl                         #    75 lines  ← canonical
+data/test_cases/test_cases_manifest.json                 # provenance contract</pre>
+
+<footer>
+  <div>Methods reference for the 75-case evaluation set. Cite when describing the test population in the thesis or in a manuscript.</div>
+  <div style="margin-top:6px">Companion technical document: <code>reports/methodology_test_case_selection.md</code></div>
+  <div style="margin-top:6px">Related reports: <code>research_summary_15052026_executive.html</code> · <code>research_summary_15052026_technical.md</code></div>
+</footer>
+
+</div>
+</body>
+</html>
