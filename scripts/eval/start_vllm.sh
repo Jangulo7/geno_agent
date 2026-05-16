@@ -72,18 +72,23 @@ EOF
     exit 1
 fi
 
-if ! command -v python &> /dev/null; then
-    echo "ERROR: python not on PATH. Activate pytorch-env first." >&2
+# vLLM lives in its own venv (separate from pytorch-env which holds torch+cu128
+# for the eval scripts). The vllm-env pins torch 2.11+cu130 per the master
+# plan §10 driver note. Use VLLM_PYTHON to override.
+VLLM_PYTHON="${VLLM_PYTHON:-${HOME}/vllm-env/bin/python}"
+
+if [[ ! -x "$VLLM_PYTHON" ]]; then
+    echo "ERROR: VLLM_PYTHON ($VLLM_PYTHON) not found or not executable." >&2
+    echo "       Expected the vllm-env at $HOME/vllm-env/." >&2
     exit 1
 fi
 
-# Verify vllm is importable
-if ! python -c "import vllm" 2>/dev/null; then
+# Verify vllm is importable in that env
+if ! "$VLLM_PYTHON" -c "import vllm" 2>/dev/null; then
     cat >&2 <<EOF
-ERROR: vllm not installed in current Python env.
+ERROR: vllm not installed in ${VLLM_PYTHON}.
 Install with:
-    source /home/hana77/pytorch-env/bin/activate
-    pip install vllm
+    ${VLLM_PYTHON} -m pip install vllm
 EOF
     exit 1
 fi
@@ -107,7 +112,7 @@ echo
 # so caching reduces per-batch prefill cost dramatically. Empirically
 # Cell H smoke without caching took ~13 min/case; expected ~2-4 min
 # with caching, making the full LLM-Critic ablation overnight-feasible.
-exec python -m vllm.entrypoints.openai.api_server \
+exec "$VLLM_PYTHON" -m vllm.entrypoints.openai.api_server \
     --model "${MODEL_DIR}" \
     --served-model-name "Qwen/Qwen3-8B" \
     --host "${HOST}" \
