@@ -269,8 +269,8 @@ each metric reported as a point estimate + 95% paired-bootstrap CI (1 000 resamp
 | **K** | **Exomiser HPO-only (baseline)** | **75** | **0.773** | **[0.680, 0.853]** | **0.907** | **0.947** | **0.835** | **0.860** |
 | **L** | **multi + CE-rerank-inside · hybrid** | **75** | **0.733** | **[0.640, 0.827]** | **0.813** | **0.840** | **0.775** | **0.787** |
 | P | D + K RRF ensemble | 75 | 0.653 | [0.547, 0.760] | 0.747 | 0.840 | 0.720 | 0.739 |
-| Q | multi + LEA · dense (partial) | 15 | 0.133 | partial | 0.200 | 0.200 | 0.203 | 0.175 |
-| R | multi + LEA · hybrid (partial) | 15 | 0.571 | partial | 0.571 | 0.571 | 0.586 | 0.571 |
+| **Q** | **multi + LEA · dense (FINAL)** | **75** | **0.213** | [0.133, 0.307] | 0.267 | 0.347 | 0.272 | 0.270 |
+| **R** | **multi + LEA · hybrid (FINAL)** | **75** | **0.640** | [0.533, 0.747] | 0.693 | 0.733 | 0.677 | 0.684 |
 | **S** | **multi + CE-rerank + LEA · hybrid** ✨ | **75** | **0.787** ✨ | **[0.693, 0.880]** | **0.827** | **0.853** | **0.812** | **0.818** |
 
 ### 🏆 The thesis result
@@ -668,23 +668,51 @@ If LEA can:
 
 Combined with rerank-inside-D (cell S), the upper bound is ~0.80-0.85 top-1 — past Exomiser.
 
-### 9.1 Cell R — LEA · hybrid (LEA alone on Cell D's substrate)
+### 9.1 Cell R — LEA · hybrid (LEA alone on Cell D's substrate, FINAL n=75)
 
 Cell R replaces only the deterministic Synth with LEA — keeps everything else from Cell D
-(retrieval + Critic). Partial result at time of writing (15/75 cases, full result pending,
-overnight run continues):
+(hybrid retrieval + deterministic Critic).
 
-| Metric | D (full 75) | **R (n=15 partial)** | Δ vs D |
+| Metric | D (n=75) | **R (n=75 FINAL)** | Δ vs D |
 |---|---|---|---|
-| top-1 | 0.627 | **0.571** | −5.6 pp |
+| top-1 | 0.627 | **0.640** | **+1.3 pp** |
+| top-5 | 0.693 | 0.693 | 0.0 pp |
+| top-10 | 0.733 | 0.733 | 0.0 pp |
+| MRR | 0.670 | 0.677 | +0.007 |
+| NDCG@10 | 0.678 | 0.684 | +0.006 |
 
-**LEA alone (without rerank) does NOT improve top-1 over Cell D.** This is a critical result:
-LEA without better chunks (i.e. without the cross-encoder rerank to surface the right
-evidence first) cannot recover Cell D's failures. The full 75-case run will confirm — but the
-direction is clear from 15 cases.
+**LEA alone on hybrid retrieval adds only +1.3 pp top-1 over Cell D.** Marginal — the
+deterministic Synth is already extracting most of the signal from the Critic-graded chunks;
+LEA's cross-gene reasoning over the same evidence rarely promotes a new gene to rank-1.
+Critically, when paired with the cross-encoder rerank (Cell S below), LEA's contribution
+balloons to +5.4 pp over Cell L (rerank only). This isolates LEA's role: **LEA needs the
+rerank to surface better chunks before its cross-gene reasoning has anything new to chew on.**
 
-This isolates LEA's contribution: **LEA needs the cross-encoder rerank to feed it good
-evidence; only together do they exceed Exomiser**.
+### 9.1b Cell Q — LEA · dense (FINAL n=75)
+
+Cell Q is LEA on dense-only retrieval (no BM25 anchor). Result:
+
+| Metric | D (n=75) | **Q (n=75 FINAL)** | Δ vs D |
+|---|---|---|---|
+| top-1 | 0.627 | **0.213** | **−41.4 pp** |
+| top-5 | 0.693 | 0.267 | −42.6 pp |
+| top-10 | 0.733 | 0.347 | −38.6 pp |
+
+**LEA on dense retrieval actively hurts.** This is the strongest evidence in the factorial
+that **LEA depends on retrieval substrate quality**. Dense-only retrieval (Cell C-style)
+without BM25's lexical gene anchor returns chunks that don't strongly mention the candidate
+gene. The Critic correctly grades them as low-confidence (~all 500 chunks at relevance ≤ 2).
+LEA then has effectively no positive evidence to reason over, so it falls back near-random,
+or worse — overconfidently picks a wrong gene because the LLM tries to be decisive even when
+the evidence is weak.
+
+**Composition pattern across the LEA cells:**
+
+| LEA cell | Substrate | top-1 | Reading |
+|---|---|---|---|
+| Q | dense retrieval only | 0.213 | LEA on weak substrate hurts |
+| R | hybrid retrieval | 0.640 | marginal +1.3 pp over D |
+| **S** | **hybrid + CE rerank** | **0.787** | **+16.0 pp over D, beats K** |
 
 ### 9.2 🏆 Cell S — Rerank + LEA · hybrid (THE THESIS RESULT)
 
