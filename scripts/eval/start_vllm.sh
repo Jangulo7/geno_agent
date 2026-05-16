@@ -28,6 +28,19 @@
 # Hardware: Qwen3-8B in FP16 needs ~16 GB VRAM + KV cache (~8 GB).
 # Fits in the host's RTX 5090 (32 GB) with headroom for PubMedBERT
 # embedding + Qdrant queries (master plan §11.4 budget).
+#
+# VRAM budget (2026-05-16 paper extension): the n=75 thesis run used
+# --gpu-memory-utilization 0.85 (vLLM reserved ~27.7 GB) and the KV
+# cache never exceeded 17.7 % usage — LEA sends 1 request at a time
+# so most of the KV reservation was wasted, leaving only ~5 GB for
+# CE + dense + activations. At n=460 scale we tighten the budget so
+# Cell S has comfortable headroom and does not risk the OOM ->
+# driver hang -> BIOS crash observed earlier:
+#   --gpu-memory-utilization 0.55  → vLLM ~18 GB (16 weights + 2 KV)
+#   --max-model-len         16384  → halves per-slot KV (LEA prompts ≤12k)
+#   --max-num-seqs          4      → cap concurrent KV slots
+#   --swap-space            4      → pageout to RAM under pressure
+# Leaves ~14 GB for MedCPT-CE + PubMedBERT-dense + activations.
 
 set -euo pipefail
 
@@ -100,8 +113,10 @@ exec python -m vllm.entrypoints.openai.api_server \
     --host "${HOST}" \
     --port "${PORT}" \
     --dtype float16 \
-    --max-model-len 32768 \
-    --gpu-memory-utilization 0.85 \
+    --max-model-len "${VLLM_MAX_MODEL_LEN:-16384}" \
+    --max-num-seqs "${VLLM_MAX_NUM_SEQS:-4}" \
+    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.55}" \
+    --swap-space "${VLLM_SWAP_SPACE:-4}" \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
     2>&1 | tee "${LOG}"
