@@ -100,6 +100,12 @@ def main() -> int:
         help="Override the output directory. Default = cell_L_rerank_inside_d "
         "(without --use-lea) or cell_S_rerank_inside_plus_lea (with --use-lea).",
     )
+    parser.add_argument(
+        "--test-cases",
+        type=Path,
+        default=CASES_JSONL,
+        help="Path to test cases JSONL (default: data/test_cases/test_cases.jsonl)",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -117,7 +123,7 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     log.info("Output dir: %s  (use_lea=%s)", out_dir, args.use_lea)
     cases: list[dict] = []
-    with CASES_JSONL.open() as f:
+    with args.test_cases.open() as f:
         for line in f:
             cases.append(json.loads(line))
     if args.limit:

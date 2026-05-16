@@ -25,14 +25,14 @@ from src.baselines.exomiser_runner import ExomiserRunner
 log = logging.getLogger("cell_K")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CASES_JSONL = PROJECT_ROOT / "data" / "test_cases" / "test_cases.jsonl"
-OUTPUT_DIR = PROJECT_ROOT / "data" / "eval" / "cell_K_exomiser_hpo_only"
+DEFAULT_CASES_JSONL = PROJECT_ROOT / "data" / "test_cases" / "test_cases.jsonl"
+DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "eval" / "cell_K_exomiser_hpo_only"
 
 
-def _load_cases() -> list[dict]:
-    """Read the 75 Phase 1B test cases from the JSONL."""
+def _load_cases(cases_path: Path) -> list[dict]:
+    """Read the Phase 1B test cases from a JSONL file."""
     cases: list[dict] = []
-    with CASES_JSONL.open() as f:
+    with cases_path.open() as f:
         for line in f:
             cases.append(json.loads(line))
     return cases
@@ -41,6 +41,18 @@ def _load_cases() -> list[dict]:
 def main() -> int:
     """Driver entry point."""
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--test-cases",
+        type=Path,
+        default=DEFAULT_CASES_JSONL,
+        help="Path to test cases JSONL (default: data/test_cases/test_cases.jsonl)",
+    )
+    parser.add_argument(
+        "--out-dir",
+        type=Path,
+        default=DEFAULT_OUTPUT_DIR,
+        help="Output dir for cell_K case JSONs (default: data/eval/cell_K_exomiser_hpo_only/)",
+    )
     parser.add_argument(
         "--limit",
         type=int,
@@ -59,13 +71,15 @@ def main() -> int:
         format="%(asctime)s [%(levelname)s] %(message)s",
     )
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    cases = _load_cases()
+    out_dir = args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    cases = _load_cases(args.test_cases)
     if args.limit:
         cases = cases[: args.limit]
 
     log.info("=== Cell K: Exomiser HPO-only over %d cases ===", len(cases))
-    log.info("Output dir: %s", OUTPUT_DIR)
+    log.info("Test cases: %s", args.test_cases)
+    log.info("Output dir: %s", out_dir)
 
     runner = ExomiserRunner.from_default()
     log.info("Exomiser jar: %s", runner.paths.jar)
@@ -77,7 +91,7 @@ def main() -> int:
     cell_t0 = time.time()
 
     for i, case in enumerate(cases, start=1):
-        out_path = OUTPUT_DIR / f"{case['case_id']}.json"
+        out_path = out_dir / f"{case['case_id']}.json"
         if out_path.is_file() and not args.overwrite:
             log.info("  [%d/%d] %s SKIP (exists)", i, len(cases), case["case_id"])
             skipped += 1
