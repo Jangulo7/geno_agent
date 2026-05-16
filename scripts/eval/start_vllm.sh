@@ -39,8 +39,9 @@
 #   --gpu-memory-utilization 0.55  → vLLM ~18 GB (16 weights + 2 KV)
 #   --max-model-len         16384  → halves per-slot KV (LEA prompts ≤12k)
 #   --max-num-seqs          4      → cap concurrent KV slots
-#   --swap-space            4      → pageout to RAM under pressure
 # Leaves ~14 GB for MedCPT-CE + PubMedBERT-dense + activations.
+# (--swap-space removed: vLLM 0.20.1 no longer accepts it as a top-level
+# CLI flag; the V1 engine handles this through scheduler-config.)
 
 set -euo pipefail
 
@@ -121,7 +122,6 @@ exec "$VLLM_PYTHON" -m vllm.entrypoints.openai.api_server \
     --max-model-len "${VLLM_MAX_MODEL_LEN:-16384}" \
     --max-num-seqs "${VLLM_MAX_NUM_SEQS:-4}" \
     --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.55}" \
-    --swap-space "${VLLM_SWAP_SPACE:-4}" \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
     2>&1 | tee "${LOG}"
