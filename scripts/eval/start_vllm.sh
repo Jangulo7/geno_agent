@@ -29,17 +29,19 @@
 # Fits in the host's RTX 5090 (32 GB) with headroom for PubMedBERT
 # embedding + Qdrant queries (master plan §11.4 budget).
 #
-# VRAM budget (2026-05-16 paper extension). The n=75 thesis run used
-# --gpu-memory-utilization 0.85 (vLLM reserved ~27.7 GB, 10 GB KV
-# cache) — empirically safe but only ~4.3 GB free for CE+dense, which
-# is uncomfortably tight if anything spikes. A first attempt to halve
-# the cap to 0.55 failed engine init ("Available KV cache memory:
-# 0.88 GiB") because weights + CUDA-graph overhead ate 17 GB of the
-# 17.9 GB total budget. Splitting the difference at 0.70:
-#   --gpu-memory-utilization 0.70  → vLLM ~22.8 GB (14.3 weights + 3 overhead + 5.5 KV)
-#   --max-model-len         16384  → caps per-slot KV (LEA peak ≈13k toks)
-#   --max-num-seqs          4      → cap concurrent KV slots (LEA is seq.)
-# Leaves ~9 GB for MedCPT-CE + PubMedBERT-dense + activations
+# VRAM budget (2026-05-16 paper extension, third iteration). Thesis ran
+# at --gpu-memory-utilization 0.85 + --max-model-len 32768, which left
+# only ~4.3 GB free for CE+dense — tight. First paper attempt at 0.55
+# failed engine init (KV cache 0.88 GiB). 0.70 + max-len 16384 booted
+# fine but vLLM returned HTTP 400 on ~78 % of LEA requests because
+# real LEA prompts (15 genes × ~12 chunks × ~1.6k chars) exceed 16k
+# tokens; the rerank_inside_d driver silently fell back to deterministic
+# synth so those cases were Cell L in disguise. Restoring max-len to
+# the thesis value and dropping concurrency to 1 (LEA is serial):
+#   --gpu-memory-utilization 0.75  → vLLM ~24.4 GB (14.3 weights + 3 overhead + 7 KV)
+#   --max-model-len        32768  → matches thesis; full LEA prompts fit
+#   --max-num-seqs            1   → LEA only ever sends 1 request at a time
+# Leaves ~8 GB free for MedCPT-CE + PubMedBERT-dense + activations
 # (~2x the headroom of the thesis run).
 # (--swap-space removed: vLLM 0.20.1 no longer accepts it as a top-level
 # CLI flag; the V1 engine handles this through scheduler-config.)
@@ -120,9 +122,9 @@ exec "$VLLM_PYTHON" -m vllm.entrypoints.openai.api_server \
     --host "${HOST}" \
     --port "${PORT}" \
     --dtype float16 \
-    --max-model-len "${VLLM_MAX_MODEL_LEN:-16384}" \
-    --max-num-seqs "${VLLM_MAX_NUM_SEQS:-4}" \
-    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.70}" \
+    --max-model-len "${VLLM_MAX_MODEL_LEN:-32768}" \
+    --max-num-seqs "${VLLM_MAX_NUM_SEQS:-1}" \
+    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.75}" \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
     2>&1 | tee "${LOG}"
