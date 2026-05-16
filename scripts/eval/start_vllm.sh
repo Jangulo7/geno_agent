@@ -29,17 +29,18 @@
 # Fits in the host's RTX 5090 (32 GB) with headroom for PubMedBERT
 # embedding + Qdrant queries (master plan §11.4 budget).
 #
-# VRAM budget (2026-05-16 paper extension): the n=75 thesis run used
-# --gpu-memory-utilization 0.85 (vLLM reserved ~27.7 GB) and the KV
-# cache never exceeded 17.7 % usage — LEA sends 1 request at a time
-# so most of the KV reservation was wasted, leaving only ~5 GB for
-# CE + dense + activations. At n=460 scale we tighten the budget so
-# Cell S has comfortable headroom and does not risk the OOM ->
-# driver hang -> BIOS crash observed earlier:
-#   --gpu-memory-utilization 0.55  → vLLM ~18 GB (16 weights + 2 KV)
-#   --max-model-len         16384  → halves per-slot KV (LEA prompts ≤12k)
-#   --max-num-seqs          4      → cap concurrent KV slots
-# Leaves ~14 GB for MedCPT-CE + PubMedBERT-dense + activations.
+# VRAM budget (2026-05-16 paper extension). The n=75 thesis run used
+# --gpu-memory-utilization 0.85 (vLLM reserved ~27.7 GB, 10 GB KV
+# cache) — empirically safe but only ~4.3 GB free for CE+dense, which
+# is uncomfortably tight if anything spikes. A first attempt to halve
+# the cap to 0.55 failed engine init ("Available KV cache memory:
+# 0.88 GiB") because weights + CUDA-graph overhead ate 17 GB of the
+# 17.9 GB total budget. Splitting the difference at 0.70:
+#   --gpu-memory-utilization 0.70  → vLLM ~22.8 GB (14.3 weights + 3 overhead + 5.5 KV)
+#   --max-model-len         16384  → caps per-slot KV (LEA peak ≈13k toks)
+#   --max-num-seqs          4      → cap concurrent KV slots (LEA is seq.)
+# Leaves ~9 GB for MedCPT-CE + PubMedBERT-dense + activations
+# (~2x the headroom of the thesis run).
 # (--swap-space removed: vLLM 0.20.1 no longer accepts it as a top-level
 # CLI flag; the V1 engine handles this through scheduler-config.)
 
@@ -121,7 +122,7 @@ exec "$VLLM_PYTHON" -m vllm.entrypoints.openai.api_server \
     --dtype float16 \
     --max-model-len "${VLLM_MAX_MODEL_LEN:-16384}" \
     --max-num-seqs "${VLLM_MAX_NUM_SEQS:-4}" \
-    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.55}" \
+    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.70}" \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
     2>&1 | tee "${LOG}"
