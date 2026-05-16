@@ -83,7 +83,9 @@ MIN_PMC: Final[int] = int(os.environ.get("MIN_PMC_ARTICLES_PER_GENE", "5"))
 TOP_K: Final[int] = int(os.environ.get("PMC_COVERAGE_TOP_K", "100"))
 RANDOM_SEED: Final[int] = int(os.environ.get("RANDOM_SEED", "42"))
 
-TC_DIR: Final[Path] = PROJECT_ROOT / "data" / "test_cases"
+TC_DIR: Final[Path] = Path(
+    os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
+)
 SAMPLE_PATH: Final[Path] = TC_DIR / "04_sampled.jsonl"
 POOL_PATH: Final[Path] = TC_DIR / "03_categorized.jsonl"
 OUT_PATH: Final[Path] = TC_DIR / "05_validated.jsonl"

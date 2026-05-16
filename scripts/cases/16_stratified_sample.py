@@ -79,34 +79,65 @@ def sample_stratified(
     by_cat: dict[str, list[dict]],
     target: int,
     rng: random.Random,
+    per_category_target: dict[str, int] | None = None,
 ) -> list[dict]:
     """Draw ``target`` cases stratified across CATEGORIES.
 
     Args:
         by_cat: Sorted by-category pool from :func:`load_by_category`.
-        target: Total target sample size (e.g., 75).
+        target: Total target sample size (used when ``per_category_target``
+            is None — splits equally across the 4 categories).
         rng: Seeded ``random.Random`` instance for reproducibility.
+        per_category_target: Optional disproportionate stratification map
+            (e.g., ``{"immunological": 300, "developmental": 250, ...}``).
+            When given, overrides ``target`` and the balanced split. Used
+            by the n=1050 paper-extension run to oversample immunological
+            for adequate subgroup statistical power; see
+            ``reports/paper_extension_results.md`` for the methodology
+            justification.
 
     Returns:
         List of sampled case records (one record per element). Sorted
         deterministically by (category, case_id) for reviewability.
     """
-    per_cat = math.ceil(target / len(CATEGORIES))
     out: list[dict] = []
     for cat in CATEGORIES:
         pool = by_cat.get(cat, [])
-        n = min(per_cat, len(pool))
+        if per_category_target is not None:
+            wanted = per_category_target.get(cat, 0)
+        else:
+            wanted = math.ceil(target / len(CATEGORIES))
+        n = min(wanted, len(pool))
         chosen = rng.sample(pool, n)
         out.extend(chosen)
-        logger.info(f"  sampled {n}/{len(pool)} from '{cat}'")
+        logger.info(f"  sampled {n}/{len(pool)} from '{cat}' (target {wanted})")
 
-    # Trim to exact target if ceil() overshot
-    if len(out) > target:
+    # Trim to exact balanced target if ceil() overshot (no-op for per_cat mode).
+    if per_category_target is None and len(out) > target:
         rng.shuffle(out)
         out = out[:target]
-        logger.info(f"  trimmed to target size {target} (was {len(out) + 1})")
+        logger.info(f"  trimmed to target size {target}")
 
     out.sort(key=lambda r: (r["category"], r["case_id"]))
+    return out
+
+
+def parse_per_category_target(s: str | None) -> dict[str, int] | None:
+    """Parse ``cat=N,cat=N,...`` CLI string into a dict.
+
+    Example: ``"immunological=300,developmental=250,metabolic=250,neurological=250"``
+    """
+    if not s:
+        return None
+    out: dict[str, int] = {}
+    for pair in s.split(","):
+        if "=" not in pair:
+            raise ValueError(f"Invalid pair in --per-category-target: {pair!r}")
+        k, v = pair.split("=", 1)
+        k = k.strip()
+        if k not in CATEGORIES:
+            raise ValueError(f"Unknown category {k!r}; valid: {CATEGORIES}")
+        out[k] = int(v.strip())
     return out
 
 
@@ -125,6 +156,16 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--seed", type=int, default=RANDOM_SEED, help=f"RNG seed (default: {RANDOM_SEED})"
     )
+    p.add_argument(
+        "--per-category-target",
+        type=str,
+        default=None,
+        help=(
+            "Disproportionate stratification, comma-separated cat=N pairs. "
+            "Example: 'immunological=300,developmental=250,metabolic=250,neurological=250'. "
+            "Overrides --target-size and the balanced split."
+        ),
+    )
     return p.parse_args()
 
 
@@ -142,7 +183,8 @@ def main() -> int:
         logger.info(f"  '{cat}': {len(by_cat.get(cat, []))} available")
 
     rng = random.Random(args.seed)
-    sample = sample_stratified(by_cat, args.target_size, rng)
+    per_cat = parse_per_category_target(args.per_category_target)
+    sample = sample_stratified(by_cat, args.target_size, rng, per_category_target=per_cat)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8") as f:

@@ -1,0 +1,19 @@
+{
+  "initial_sample_size": 1050,
+  "initial_pass": 1050,
+  "initial_fail": 0,
+  "replacements_made": 0,
+  "unreplaced": 0,
+  "unreplaced_case_ids": [],
+  "final_validated_size": 1050,
+  "by_category_validated": {
+    "developmental": 250,
+    "immunological": 300,
+    "metabolic": 250,
+    "neurological": 250
+  },
+  "min_pmc_threshold": 5,
+  "top_k": 100,
+  "qdrant_collection": "geno_agent_pmc_oa_v1",
+  "random_seed": 42
+}
