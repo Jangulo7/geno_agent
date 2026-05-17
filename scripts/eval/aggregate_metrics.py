@@ -65,6 +65,7 @@ CELLS: Final[dict[str, dict]] = {
     "J": {"dir": "cell_J_multi_llmboth_hybrid", "label": "multi-agent LLM-both - hybrid"},
     "K": {"dir": "cell_K_exomiser_hpo_only", "label": "Exomiser HPO-only (baseline)"},
     "L": {"dir": "cell_L_rerank_inside_d", "label": "multi-agent + CE-rerank-inside · hybrid"},
+    "M": {"dir": "cell_M_lirical_hpo_only", "label": "LIRICAL HPO-only (baseline)"},
     "Q": {"dir": "cell_Q_multi_lea_dense", "label": "multi-agent + LEA - dense"},
     "R": {"dir": "cell_R_multi_lea_hybrid", "label": "multi-agent + LEA - hybrid"},
     "S": {
