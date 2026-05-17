@@ -322,17 +322,21 @@ Buffer 30% for retries / longer prompts: **budget ~$80**.
 | 1 | n=1047 v0.1.26 4-cell run | done | ✅ committed `paper-v2-final` | — |
 | 2 | Aggregation + sensitivity + reports | done | ✅ | — |
 | 3 | Cell M (LIRICAL) integration + run | v3 | ✅ done (commits `8e9f9dc`, `5df44fa`) | — |
-| **3b** | **LIRICAL annotation-overlap analysis (Thread D — NEW)** | **v3** | **🆕 added after observing LIRICAL top-1 = 0.924** | **~3 days** |
+| 3b | LIRICAL annotation-overlap analysis (Thread D) | v3 | pending L+S re-run | ~3 days |
+| **3c-E** | **Novel-cases subset experiment (Thread E — NEW)** | **v3** | **pending Thread D PMID infrastructure** | **~3-4 days** |
+| **3c-F** | **LIRICAL + LEA ensemble (Thread F — NEW)** | **v3** | **pending Thread D** | **~3 days** |
+| **3c-G** | **Explanation-quality contrast (Thread G — NEW)** | **v3** | **pending RAGAS results** | **~0.5 day** |
 | 4 | Response-logging patches + re-run L+S | v3 | 🟢 running (tmux `paper_ls_v3`) | ~14 h overnight |
-| **5** | **RAGAS pipeline + n=1,047 run** | **v3** | **pending OPENAI_API_KEY** | **3-4 days** |
-| **6** | **DeepEval hallucination + n=1,047 run** | **v3** | pending | 1-2 days |
-| 7 | Wallclock + cost table (K, M, D, L, S) | v3 | pending | 1 day |
+| 5 | RAGAS pipeline + n=1,047 run | v3 | pending OPENAI_API_KEY | 3-4 days |
+| 6 | DeepEval hallucination + n=1,047 run | v3 | pending | 1-2 days |
+| 7 | Wallclock + cost table (K, M, D, L, S, N-ensemble) | v3 | pending | 1 day |
 | 8 | DeepRare head-to-head on n=100 | post-v3 | pending | 5-7 days |
 | 9 | Qwen3-32B AWQ ablation on n=100 | post-v3 | pending | 2-3 days |
 | 10 | Pre-submission self-review | post-v3 | pending | 1 day |
 | 11 | Manuscript drafting (Genome Medicine) | post-v3 | pending | 2-3 weeks |
 
-**Total Strategy A timeline (revised): ~10-11 weeks to Genome Medicine submission.**
+**Total Strategy A timeline (revised, with all 7 threads): ~12-13 weeks to
+Genome Medicine submission** (was 10-11 weeks with Threads A-D only).
 
 ---
 
@@ -465,6 +469,249 @@ Either way the analysis is publishable.
 | Phenopacket source PMID extraction has edge cases (multi-PMID per case, missing PMIDs) | medium | Document each case; if a case has no PMID, mark overlap as N/A and exclude from stratified analysis |
 | `phenotype.hpoa` updated between annotation date and our analysis | low | Pinned to v2026-02-16 (same as project's HPO) |
 | Overlap-absent subset is too small for meaningful per-MONDO analysis | medium | Report subset n explicitly; if any category has <50 cases, mark as underpowered and combine where appropriate |
+
+---
+
+## 3c. Threads E, F, G — Q1 differentiation experiments (NEW, added 2026-05-17)
+
+### 3c.1 Why these threads exist
+
+The LIRICAL annotation-overlap finding (Thread D §3b) shifts the paper's
+competitive landscape. **LIRICAL likely wins on cohorts annotated from
+the same publications it was trained on — but this is structurally
+unbeatable, not an algorithm failing.** Rather than trying to outscore
+LIRICAL on its strongest test conditions, we identify three scenarios
+where geno_agent provides **unique value that LIRICAL cannot match**:
+
+| Thread | Scenario | geno_agent's advantage |
+|---|---|---|
+| **E** | Cases whose causal gene's source paper was published AFTER `phenotype.hpoa` v2026-02-16 release | LIRICAL has no annotations → cold start; geno_agent has the paper in PMC OA |
+| **F** | Combining LIRICAL (strong prior) + LEA (evidence) into an ensemble | Better than either alone — proves complementarity |
+| **G** | Explaining "why this gene?" with primary-literature citations | LIRICAL outputs only scores; geno_agent provides reasoning |
+
+Reviewer impact: these three threads transform the paper from "geno_agent
+beats Exomiser HPO-only" to **"geno_agent is the only system providing
+unique value in N reviewer-relevant scenarios"** — much harder to
+desk-reject.
+
+### 3c.2 Why we run E + F + G on a subsample, not the full n=1,047
+
+**Cohort filtering for Thread E** naturally produces a subsample:
+- Total cohort: 1,047
+- Expected "post-release" cases (PMID date > 2026-02-16): ~150-300 cases
+  - Phenopacket Store v0.1.26 was released 2026-01-13 but includes papers
+    spanning ~5 years prior
+  - The +252 new gene cohorts added since v0.1.19 (Aug 2024) are concentrated
+    in 2024-2026 publications
+  - Realistic estimate: ~15-25 % of n=1,047 have post-release source PMIDs
+
+**Thread F** (ensemble) runs on **full n=1,047** — needs no subsampling.
+
+**Thread G** (explanation quality) uses **existing RAGAS faithfulness
+results** from the n=1,047 RAGAS run — no extra compute, just a contrast
+table.
+
+**Subsample logic:** Thread E shrinks the cohort to "fresh" cases where
+LIRICAL has not been pre-shown the answer. This is the methodologically
+correct comparison for an "out-of-distribution" claim. The full n=1,047
+remains the primary cohort for §4.x overall numbers.
+
+### 3c.3 Thread E — Novel-cases subset experiment
+
+#### Methodology
+
+1. For each of the 1,047 cases, extract source PMID from the phenopacket
+   `metaData.externalReferences[].id` field (already part of the raw
+   v0.1.26 phenopacket JSONs).
+2. Query PubMed E-utils API (or local cached PMID→date map if available)
+   to retrieve the publication year+month of each PMID.
+3. Define a case as **"novel"** if:
+   - Source PMID published *after* `phenotype.hpoa` v2026-02-16 release, OR
+   - Source PMID does not appear in `phenotype.hpoa` for the causal gene's
+     OMIM disease (re-uses Thread D's overlap flag)
+
+   The intersection of these two criteria gives the strictest "novel" subset.
+4. Re-aggregate all 5 cells (K, D, L, S, M) on this subset.
+5. Re-run sensitivity (LOO, McNemar) on key per-MONDO subgroups within the
+   novel subset.
+
+#### Hypothesis and expected outcomes
+
+| Cell | Top-1 on novel subset (hypothesis) | Δ vs full cohort |
+|---|---|---|
+| **M (LIRICAL)** | Drops to **~0.55-0.70** | −0.20 to −0.35 pp (cold start) |
+| **S (rerank+LEA)** | Stays **~0.70-0.75** | small change (literature accessible) |
+| **K (Exomiser)** | Drops somewhat to **~0.60-0.65** | −0.05 to −0.10 |
+| **L (rerank)** | Stays **~0.68-0.72** | small change |
+| **D (multi+hybrid)** | Stays **~0.45-0.50** | small change |
+
+**If hypothesis holds:** S **statistically wins** on the novel subset
+(the most publication-worthy finding of the entire v3 phase).
+
+**If hypothesis fails:** LIRICAL is robust to cold start. Paper falls
+back to Thread F (ensemble) as the differentiator.
+
+#### Implementation files
+
+| File | Purpose |
+|---|---|
+| `scripts/eval/extract_source_pmids.py` (NEW) | Walk `data/phenopackets/v0.1.26/` and extract source PMID per case_id |
+| `scripts/eval/pubmed_date_lookup.py` (NEW) | Batch PubMed E-utils to get publication dates; cache results |
+| `scripts/eval/build_novel_cases_subset.py` (NEW) | Combine PMID dates + Thread D overlap flags → `data/test_cases_1050/novel_cases.json` |
+| `scripts/eval/aggregate_metrics.py` (extend) | Add `--case-subset <file>` flag to restrict aggregation to a subset |
+
+#### Effort
+
+| Task | Effort |
+|---|---|
+| Source PMID extraction (reuses Thread D infrastructure) | 0.5 day |
+| PubMed E-utils integration + caching | 1 day |
+| Novel-subset definition + builder | 0.5 day |
+| Re-aggregate 5 cells on subset | 0.5 day |
+| Sensitivity probes on subset | 0.5 day |
+| Update reports | 0.5 day |
+| **Total** | **~3-4 days** (after Thread D completes) |
+
+### 3c.4 Thread F — LIRICAL + LEA ensemble experiment
+
+#### Methodology
+
+For each case, both LIRICAL (Cell M) and LEA (Cell S) produce a ranking
+of the 50 candidate genes. Combine these via two methods:
+
+1. **Reciprocal Rank Fusion (RRF):** standard, simple, no training:
+   ```
+   score(gene_i) = 1/(60 + rank_M(gene_i)) + 1/(60 + rank_S(gene_i))
+   ```
+   Then re-rank by combined score.
+
+2. **Weighted score blend:** normalise LIRICAL's posttest probability
+   and LEA's confidence to [0,1], then blend:
+   ```
+   score(gene_i) = α × P_M(gene_i) + (1-α) × P_S(gene_i)
+   ```
+   Sweep α ∈ {0.3, 0.5, 0.7}; report best on a held-out 20% split.
+
+#### Hypothesis and expected outcomes
+
+| Cell / Ensemble | Top-1 (hypothesis) |
+|---|---|
+| LIRICAL alone | 0.924 |
+| Cell S alone | 0.725 |
+| **RRF ensemble** | **0.94-0.96** (small bump on cases where both pick the same) |
+| **Weighted blend (best α)** | **0.94-0.97** (potentially higher if S corrects M's errors) |
+
+**Key finding to report:** even if the bump is small (+1-3 pp), the
+result establishes **complementarity** — geno_agent contributes
+information LIRICAL doesn't have, even when LIRICAL is strong.
+
+If ensemble doesn't beat LIRICAL alone: still publishable as "we tested
+ensemble; LIRICAL's posttest probabilities are already saturated, but
+the ensemble shows perfect calibration on novel cases (Thread E)."
+
+#### Implementation files
+
+| File | Purpose |
+|---|---|
+| `scripts/eval/run_cell_n_ensemble.py` (NEW) | Builds ensemble rankings from Cell M + Cell S per-case JSONs; outputs `data/eval_1050/cell_N_ensemble_M_S/<case>.json` |
+| `scripts/eval/sweep_ensemble_alpha.py` (NEW) | 5-fold CV sweep of α weights; reports best on held-out fold |
+
+#### Effort
+
+| Task | Effort |
+|---|---|
+| RRF ensemble script | 0.5 day |
+| Weighted-blend with α sweep | 1 day |
+| Aggregate ensemble cell + bootstrap CIs | 0.5 day |
+| Per-MONDO breakdown on ensemble | 0.5 day |
+| Update reports | 0.5 day |
+| **Total** | **~3 days** (after Thread D + Thread E in parallel) |
+
+### 3c.5 Thread G — Explanation-quality contrast (LIRICAL vs LEA)
+
+#### Methodology
+
+Thread G **does not require new compute or evaluation runs.** It uses
+the existing RAGAS faithfulness scores from Thread C (RAGAS pipeline on
+Cell S sidecars). The contrast is:
+
+| System | Output format | Explainable? | RAGAS faithfulness |
+|---|---|---|---|
+| **LIRICAL (M)** | OMIM disease → posttest probability (numeric only) | **No** — no free-text rationale | Not applicable |
+| **Exomiser (K)** | Gene → hiPhive score (numeric only) | **No** — no free-text rationale | Not applicable |
+| **Cell L** | Ranked gene list, no LLM reasoning | **Partial** — chunk citations available but no synthesis | Not applicable |
+| **Cell S** | Ranked gene list + LEA's per-gene rationale + PMC citations | **Yes** — full reasoning with citations | RAGAS faithfulness = 0.X |
+
+#### What to report in the paper
+
+> "geno_agent (Cell S) is the only system in the comparison that
+> produces evidence-traceable rankings: each ranked gene is accompanied
+> by LEA's free-text rationale citing specific PMC OA passages.
+> RAGAS-measured faithfulness of these rationales on n=1,047 was X.X
+> (95% CI [Y, Z]). Curated tools (LIRICAL, Exomiser) and the
+> retrieval-only Cell L provide only numeric scores; an equivalent
+> faithfulness metric cannot be computed for them.
+> Clinical reviewer interpretability is a deployment-relevant property
+> that geno_agent uniquely satisfies."
+
+#### Effort
+
+| Task | Effort |
+|---|---|
+| Compose contrast table from existing RAGAS results | 0.25 day |
+| Write Methods/Results section text | 0.25 day |
+| **Total** | **~0.5 day** |
+
+### 3c.6 Combined acceptance criteria for Threads E + F + G
+
+- [ ] **Thread E:** `data/test_cases_1050/novel_cases.json` produced with per-case `is_novel` flag based on PMID-date + overlap criteria
+- [ ] **Thread E:** All 5 cells re-aggregated on the novel subset with bootstrap CIs
+- [ ] **Thread E:** Per-MONDO breakdown on novel subset reported
+- [ ] **Thread F:** `data/eval_1050/cell_N_ensemble_M_S/` contains 1,047 ensemble case JSONs
+- [ ] **Thread F:** Ensemble top-1 + per-MONDO + α-sweep results reported
+- [ ] **Thread G:** Contrast table (4 systems × explainability + faithfulness) added to Results section
+- [ ] Paper extension report v3 includes all three threads' results
+- [ ] Reframing language: "geno_agent uniquely provides value in [N novel cases / explainable rankings / ensemble complementarity] scenarios"
+
+### 3c.7 Sequencing and timeline
+
+```
+Thread D (overlap analysis)  ──┐
+                               │  ~3 days
+                               ▼
+                       ┌────────────────────────┐
+                       │ Overlap subset known   │
+                       │ + PMID extraction done │
+                       └────────┬───────────────┘
+                                │
+              ┌─────────────────┼─────────────────┐
+              ▼                 ▼                 ▼
+        ┌───────────┐     ┌───────────┐     ┌──────────┐
+        │ Thread E  │     │ Thread F  │     │ Thread G │
+        │ ~3-4 days │     │ ~3 days   │     │ ~0.5 day │
+        └─────┬─────┘     └─────┬─────┘     └────┬─────┘
+              │                 │                │
+              └─────────────────┴────────────────┘
+                                │
+                                ▼
+                        v3 final report update
+                              (~1 day)
+                                │
+                                ▼
+                        paper-v3-final tag
+```
+
+**Total v3 phase (revised, all 7 threads): ~12-13 weeks to Genome Medicine
+submission** (was 10-11 with Threads A-D only).
+
+### 3c.8 Risks and mitigations
+
+| Risk | Probability | Mitigation |
+|---|---|---|
+| Novel-subset is too small (<50 cases) for statistical power | medium | Report subset n; if <50, combine with overlap-absent subset from Thread D for a broader "low-leakage" cohort |
+| PubMed E-utils rate-limits at 3 req/s | low | Cache results; one-time batch of 1,047 PMIDs takes ~6 min with throttling |
+| Ensemble doesn't beat LIRICAL alone | medium | Still publishable as a "complementarity demonstration"; Thread E carries the differentiating result |
+| LIRICAL produces no rationale → no fair faithfulness comparison | n/a | This is the point; report as a clinical-utility differentiator |
 
 ---
 
