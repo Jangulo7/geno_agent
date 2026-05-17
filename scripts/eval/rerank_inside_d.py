@@ -236,8 +236,11 @@ def main() -> int:
                         {
                             "chunk_id": getattr(ch, "chunk_id", None),
                             "text": (ch.text or "")[:2000],
-                            "source_pmid": getattr(ch, "pmid", None),
-                            "score": getattr(ch, "score", None),
+                            "source_pmcid": getattr(ch, "pmcid", None),
+                            "section_type": getattr(ch, "section_type", None),
+                            "score_dense": getattr(ch, "score_dense", None),
+                            "score_bm25": getattr(ch, "score_bm25", None),
+                            "score_rrf": getattr(ch, "score_rrf", None),
                         }
                         for ch in chunks
                     ]

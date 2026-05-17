@@ -70,10 +70,10 @@ def _build_contexts(sidecar: dict) -> list[str]:
             if not text:
                 continue
             text = text[:MAX_CHARS_PER_CONTEXT]
-            pmid = ch.get("source_pmid")
+            pmid = ch.get("source_pmcid")
             prefix = f"[gene={gene}"
             if pmid:
-                prefix += f" PMID={pmid}"
+                prefix += f" PMCID={pmid}"
             prefix += "] "
             contexts.append(prefix + text)
             if len(contexts) >= MAX_CONTEXTS_PER_CASE:
