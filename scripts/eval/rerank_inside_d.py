@@ -106,6 +106,14 @@ def main() -> int:
         default=CASES_JSONL,
         help="Path to test cases JSONL (default: data/test_cases/test_cases.jsonl)",
     )
+    parser.add_argument(
+        "--responses-dir",
+        type=str,
+        default=None,
+        help="If set, persist per-case sidecar JSON to this directory: "
+        "retrieved chunks (Cell L), plus LEA prompt + raw response + parsed "
+        "JSON (Cell S). Needed for RAGAS / DeepEval evaluation downstream.",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -122,6 +130,13 @@ def main() -> int:
         out_dir = OUTPUT_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
     log.info("Output dir: %s  (use_lea=%s)", out_dir, args.use_lea)
+
+    # Optional response-logging sidecar dir for RAGAS / DeepEval.
+    responses_dir: Path | None = None
+    if args.responses_dir:
+        responses_dir = Path(args.responses_dir)
+        responses_dir.mkdir(parents=True, exist_ok=True)
+        log.info("Responses sidecar dir: %s", responses_dir)
     cases: list[dict] = []
     with args.test_cases.open() as f:
         for line in f:
@@ -204,6 +219,36 @@ def main() -> int:
         with out_path.open("w") as f:
             json.dump(payload, f, indent=2)
         done += 1
+
+        # Optional sidecar for RAGAS / DeepEval. Contains retrieved
+        # chunks per gene (Cell L + S) plus LEA prompt + raw response
+        # + parsed JSON when --use-lea (Cell S only).
+        if responses_dir is not None:
+            sidecar = {
+                "case_id": case["case_id"],
+                "hpo_terms": list(case["hpo_terms"]),
+                "candidate_genes": list(case["candidate_genes"]),
+                "causal_gene": case["causal_gene"],
+                "category": case.get("category"),
+                "use_lea": bool(args.use_lea),
+                "retrieved_per_gene": {
+                    g: [
+                        {
+                            "chunk_id": getattr(ch, "chunk_id", None),
+                            "text": (ch.text or "")[:2000],
+                            "source_pmid": getattr(ch, "pmid", None),
+                            "score": getattr(ch, "score", None),
+                        }
+                        for ch in chunks
+                    ]
+                    for g, chunks in state.retrieved.items()
+                },
+                "lea_log": getattr(state, "lea_log", None),
+                "ranked": payload,
+            }
+            sidecar_path = responses_dir / f"{case['case_id']}.json"
+            with sidecar_path.open("w") as f:
+                json.dump(sidecar, f, indent=2)
 
         causal_rank = next(
             (p["final_rank"] for p in payload if p["is_causal"]),

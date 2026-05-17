@@ -243,25 +243,58 @@ def lea_synthesizer_node(
     top_gene_symbols = [c.symbol for c in head]
     user_prompt = _build_lea_prompt(hpo_labels, top_gene_symbols, evidence)
 
+    # Persist a per-case sidecar log for RAGAS/DeepEval evaluation. Attached
+    # via setattr because AgentState is a frozen dataclass; consumed by
+    # scripts/eval/rerank_inside_d.py to write data/eval_*/cell_S_responses/.
+    # When the LEA call fails or returns invalid JSON, the log records the
+    # failure mode so faithfulness/hallucination metrics can mark these cases
+    # as deterministic-synth fallbacks (their LEA response is N/A).
+    log_payload: dict = {
+        "lea_system_prompt": SYSTEM_PROMPT,
+        "lea_user_prompt": user_prompt,
+        "lea_top_gene_symbols": list(top_gene_symbols),
+        "hpo_labels": list(hpo_labels),
+        "lea_evidence_per_gene": {
+            g: [
+                {
+                    "chunk_id": getattr(ch, "chunk_id", None),
+                    "text": (ch.text or "")[:2000],
+                    "source_pmid": getattr(ch, "pmid", None),
+                    "score": getattr(ch, "score", None),
+                }
+                for (ch, _grade) in pairs
+            ]
+            for g, pairs in evidence.items()
+        },
+        "lea_response_raw": None,
+        "lea_response_parsed": None,
+        "lea_fallback_reason": None,
+    }
+    object.__setattr__(state, "lea_log", log_payload)
+
     try:
-        parsed, _response = generate_json(
+        parsed, response_text = generate_json(
             user_prompt,
             cfg=llm_cfg,
             system_prompt=SYSTEM_PROMPT,
             temperature=0.0,
             max_tokens=_MAX_OUTPUT_TOKENS,
         )
+        log_payload["lea_response_raw"] = response_text
+        log_payload["lea_response_parsed"] = parsed
     except Exception as e:
         logger.warning(
             "LEA LLM call failed (%s); falling back to deterministic synth",
             type(e).__name__,
         )
+        log_payload["lea_fallback_reason"] = f"llm_call_failed:{type(e).__name__}"
         state.ranked = preliminary
         return state
 
     lea_scores = _parse_lea_response(parsed, set(top_gene_symbols))
     if lea_scores is None:
         logger.warning("LEA JSON response invalid; falling back to deterministic synth")
+        log_payload["lea_fallback_reason"] = "json_response_invalid"
         state.ranked = preliminary
         return state
 
