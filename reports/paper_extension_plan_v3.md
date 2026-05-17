@@ -321,8 +321,9 @@ Buffer 30% for retries / longer prompts: **budget ~$80**.
 |---|---|---|---|---|
 | 1 | n=1047 v0.1.26 4-cell run | done | ✅ committed `paper-v2-final` | — |
 | 2 | Aggregation + sensitivity + reports | done | ✅ | — |
-| **3** | **Cell M (LIRICAL) integration + run** | **v3** | **🟢 starting tonight** | **2-3 days** |
-| **4** | **Response-logging patches + re-run L+S** | **v3** | **🟢 starting tonight** | **1-2 days + 14 h** |
+| 3 | Cell M (LIRICAL) integration + run | v3 | ✅ done (commits `8e9f9dc`, `5df44fa`) | — |
+| **3b** | **LIRICAL annotation-overlap analysis (Thread D — NEW)** | **v3** | **🆕 added after observing LIRICAL top-1 = 0.924** | **~3 days** |
+| 4 | Response-logging patches + re-run L+S | v3 | 🟢 running (tmux `paper_ls_v3`) | ~14 h overnight |
 | **5** | **RAGAS pipeline + n=1,047 run** | **v3** | **pending OPENAI_API_KEY** | **3-4 days** |
 | **6** | **DeepEval hallucination + n=1,047 run** | **v3** | pending | 1-2 days |
 | 7 | Wallclock + cost table (K, M, D, L, S) | v3 | pending | 1 day |
@@ -331,7 +332,139 @@ Buffer 30% for retries / longer prompts: **budget ~$80**.
 | 10 | Pre-submission self-review | post-v3 | pending | 1 day |
 | 11 | Manuscript drafting (Genome Medicine) | post-v3 | pending | 2-3 weeks |
 
-**Total Strategy A timeline (revised): ~9-10 weeks to Genome Medicine submission.**
+**Total Strategy A timeline (revised): ~10-11 weeks to Genome Medicine submission.**
+
+---
+
+## 3b. Thread D — LIRICAL annotation-overlap analysis (NEW, added 2026-05-17)
+
+### 3b.1 Why this thread exists
+
+The v3 LIRICAL run produced an unexpected result: **Cell M top-1 = 0.924**
+vs Cell S 0.725 and Cell K 0.691. LIRICAL appears to vastly outperform all
+other cells, including geno_agent. Initial analysis suggests this is almost
+certainly an **annotation overlap artifact**:
+
+- LIRICAL's core knowledge base is `phenotype.hpoa` (HPO-disease annotations)
+- `phenotype.hpoa` is curated from rare-disease publications (PMIDs)
+- **Phenopacket Store cases are derived from the same publications**: each
+  phenopacket has a `metaData.externalReferences.id` PMID, and that paper's
+  HPO terms become the patient's phenotype
+- Therefore: LIRICAL is being scored against annotations directly derived
+  from the case's source paper → information leakage
+
+Concrete example. Case `AIRE:PMID_16965330_Sibling_of_patient_11`:
+- Patient's HPO terms came from PMID 16965330
+- `phenotype.hpoa` contains: `OMIM:240300 (APS-1) HP:0002841 PMID:16965330 PCS …`
+- LIRICAL uses these annotations to compute likelihood ratios
+- → LIRICAL knows the answer because the answer was annotated *from this exact paper*
+
+This is a well-documented issue in the rare-disease genomics literature
+(Smedley et al. 2015; EJHG 2026 benchmark also notes the limitation).
+
+### 3b.2 Why we do NOT drop LIRICAL from the paper
+
+| If we drop LIRICAL | If we include LIRICAL + overlap analysis |
+|---|---|
+| Looks like cherry-picking | Demonstrates methodological rigour |
+| Reviewers will ask "why no LIRICAL?" | Reviewer question already answered in §X |
+| EJHG 2026 included LIRICAL → omission stands out | Aligns with the standard benchmark practice |
+| "Why exclude a tool you actually ran?" academic-integrity risk | Honest reporting of what was measured |
+
+**Decision: include LIRICAL, do the overlap analysis, reframe geno_agent
+as "the strongest LITERATURE-ONLY system" (no curated phenotype-gene
+tables) — Exomiser and LIRICAL both use curated knowledge bases of
+different kinds. This is a fundamentally different category and the
+paper's contribution stands.**
+
+### 3b.3 Methodology
+
+For each of the n=1,047 cases, compute a per-case binary flag
+`annotation_overlap = {0, 1}`:
+
+1. Parse the case's source PMID from the test-case manifest (or
+   re-extract from the phenopacket store metaData).
+2. Look up the causal gene's OMIM disease IDs via `mim2gene_medgen`.
+3. For each OMIM disease, scan `phenotype.hpoa` for rows where
+   `database_id == OMIM:<id>` AND `reference == PMID:<src_pmid>`.
+4. If any such row exists → `annotation_overlap = 1`; else 0.
+
+This gives us a 1,047-element vector that splits the cohort into:
+- **Overlap-present subset** (expected: ~50-70% of cases)
+- **Overlap-absent subset** (the "fair" comparison cohort)
+
+Then stratify all 5 cells' top-1/5/10 + MRR + per-MONDO results into
+the two subsets and report side-by-side.
+
+### 3b.4 Expected outcomes (hypotheses to test)
+
+| Hypothesis | Expected on overlap-present | Expected on overlap-absent |
+|---|---|---|
+| LIRICAL top-1 | very high (≈0.95+) | drops materially (perhaps to 0.65-0.75) |
+| Exomiser top-1 | high (Exomiser uses similar but distinct curated tables) | moderate drop |
+| Cell S top-1 | moderate (literature retrieval is partly insulated from overlap) | small or no change |
+
+If hypothesis holds: LIRICAL's advantage is shown to be artefactual,
+geno_agent's relative position improves, and the paper has a strong
+methodological contribution.
+
+If hypothesis fails (LIRICAL stays high on overlap-absent too): we
+honestly report it as "LIRICAL is genuinely better on this benchmark
+regardless of annotation overlap" — paper still has the overlap
+analysis as a contribution, just with a less favourable conclusion.
+Either way the analysis is publishable.
+
+### 3b.5 Implementation files
+
+| File | Purpose |
+|---|---|
+| `scripts/eval/compute_annotation_overlap.py` (NEW) | Builds per-case `annotation_overlap` flag, writes `data/test_cases_1050/annotation_overlap.json` |
+| `scripts/eval/aggregate_stratified.py` (NEW) | Re-aggregates all 5 cells stratified by overlap; output `data/eval_1050/_results_stratified.{md,json,csv}` |
+| `reports/paper_extension_results.md` update | Add §4.X "Annotation overlap analysis" with stratified tables |
+| `reports/paper_extension_results.html` update | Add stratified bar charts |
+
+### 3b.6 Required data sources
+
+- `data/test_cases_1050/test_cases.jsonl` — already exists
+- Phenopacket source PMIDs — re-extract from raw v0.1.26 phenopackets in
+  `data/phenopackets/v0.1.26/`
+- `phenotype.hpoa` v2026-02-16 — already pinned in
+  `data/Human_Phenotype_Ontology/` and in LIRICAL data dir
+- `mim2gene_medgen` (NCBI) — already in LIRICAL data dir
+
+### 3b.7 Estimated effort
+
+| Task | Effort |
+|---|---|
+| Source PMID extraction from phenopackets | 0.5 day |
+| `compute_annotation_overlap.py` | 1 day |
+| `aggregate_stratified.py` (mostly reuses `aggregate_metrics.py`) | 0.5 day |
+| Sensitivity probes (LOO on overlap-absent subset) | 0.5 day |
+| Update reports (md + html) | 0.5 day |
+| **Total** | **~3 days** |
+
+### 3b.8 Acceptance criteria for Thread D
+
+- [ ] `annotation_overlap.json` produced with per-case binary flag
+- [ ] `_results_stratified.{md,json}` produced with all 5 cells × 2 subsets
+- [ ] Overlap-absent S vs K, S vs M, K vs M deltas reported with paired-bootstrap CIs
+- [ ] Per-MONDO breakdown on overlap-absent subset reported
+- [ ] Paper extension results document includes:
+  - Raw LIRICAL number (0.924) reported honestly
+  - Overlap analysis section explaining the confound
+  - Deconfounded numbers with CIs
+  - Reframing of geno_agent as "strongest literature-only system"
+- [ ] Methods section text explaining the overlap analysis
+- [ ] Sequence: runs *after* L+S v3 re-run completes (independent of RAGAS/DeepEval)
+
+### 3b.9 Risks and mitigations
+
+| Risk | Probability | Mitigation |
+|---|---|---|
+| Overlap analysis doesn't materially reduce LIRICAL's advantage | medium | Report honestly as "LIRICAL is genuinely better on this benchmark"; paper still benefits from the rigour of the analysis |
+| Phenopacket source PMID extraction has edge cases (multi-PMID per case, missing PMIDs) | medium | Document each case; if a case has no PMID, mark overlap as N/A and exclude from stratified analysis |
+| `phenotype.hpoa` updated between annotation date and our analysis | low | Pinned to v2026-02-16 (same as project's HPO) |
+| Overlap-absent subset is too small for meaningful per-MONDO analysis | medium | Report subset n explicitly; if any category has <50 cases, mark as underpowered and combine where appropriate |
 
 ---
 
@@ -367,10 +500,14 @@ Thread B's re-run of Cell L → Cell S overnight.
 
 The v3 phase is successful when:
 
-- [ ] `data/eval_1050/cell_M_lirical_hpo_only/` contains 1,047 case JSONs (LIRICAL)
-- [ ] LIRICAL is added to `aggregate_metrics.py` CELLS dict
-- [ ] `_results_summary.{md,json,csv}` is regenerated with K, D, L, S, M
-- [ ] LIRICAL results are documented in `paper_extension_results.md` + .html
+- [x] `data/eval_1050/cell_M_lirical_hpo_only/` contains 1,047 case JSONs (LIRICAL) ✅
+- [x] LIRICAL is added to `aggregate_metrics.py` CELLS dict ✅
+- [x] `_results_summary.{md,json,csv}` is regenerated with K, D, L, S, M ✅
+- [ ] LIRICAL results are documented in `paper_extension_results.md` + .html (including the +annotation-overlap-caveat framing)
+- [ ] **NEW: `annotation_overlap.json` produced for all 1,047 cases**
+- [ ] **NEW: `_results_stratified.{md,json}` reports cells × overlap-subsets**
+- [ ] **NEW: paper extension results includes Annotation Overlap Analysis section with deconfounded numbers**
+- [ ] **NEW: framing reframed to "strongest literature-only system" (Exomiser + LIRICAL = curated; geno_agent = literature-only)**
 - [ ] `data/eval_1050/cell_S_responses/` contains 1,047 sidecar JSONs with full LEA prompt/response/contexts
 - [ ] `data/eval_1050/cell_L_responses/` similarly for Cell L
 - [ ] `scripts/eval/run_ragas.py` produces per-case + aggregate RAGAS metrics
@@ -392,6 +529,8 @@ The v3 phase is successful when:
 | GPT-4o judge is non-deterministic across runs | medium | Document `temperature=0`, fix `seed=42` in API calls; report aggregate over multiple judge calls per metric |
 | OPENAI_API_KEY not yet available | high | Threads A and B don't depend on it; we can start tonight and add Thread C as soon as the key is provided |
 | Cost overrun | low | $80 budget is conservative; throttle if approaching limit |
+| LIRICAL annotation overlap not reducible | medium | Honest reporting; paper still benefits from showing the analysis (Thread D §3b.9) |
+| Reviewers reject the "literature-only" reframing | low | The category distinction is well-established (curated vs unsupervised); EJHG 2026 paper uses similar framing |
 
 ---
 
@@ -402,13 +541,20 @@ The v3 phase is successful when:
 | `6366b8f` | v2 final results (n=1,047, S beats K) |
 | `ee44a25` | v2 plan |
 | `fcbd426` | v2 cohort + Stage 16/17 patches |
-| TBD | **v3 plan (this document)** |
-| TBD | LIRICAL runner + Cell M launcher |
-| TBD | Response-logging patches |
-| TBD | RAGAS + DeepEval scripts |
-| TBD | v3 final results + reports |
+| `7d99104` | v3 plan (this document, v1) |
+| `8e9f9dc` | LIRICAL runner + Cell M launcher + response-logging patches |
+| `a42ad9d` | RAGAS + DeepEval scripts (GPT-4o judge) |
+| `5df44fa` | Cell M aggregation; LIRICAL top-1 = 0.924 finding |
+| TBD | **v3 plan v2 — add Thread D (overlap analysis) (this update)** |
+| TBD | L+S v3 re-run (sidecars + possibly updated S top-1) |
+| TBD | Thread D: annotation-overlap analysis + stratified aggregation |
+| TBD | RAGAS + DeepEval n=1,047 runs |
+| TBD | v3 final results + reports + `paper-v3-final` tag |
 
 ---
 
-*Plan v3 finalised 2026-05-17. Threads A and B start immediately. Thread C
-awaits OPENAI_API_KEY.*
+*Plan v3 finalised 2026-05-17. Threads A, B, C as originally planned;
+Thread D (LIRICAL overlap analysis) added 2026-05-17 after observing
+LIRICAL top-1 = 0.924 in the Cell M run. Thread D begins after L+S
+v3 re-run completes (~14 h compute) and runs in parallel with the
+RAGAS/DeepEval evaluation phase.*
