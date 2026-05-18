@@ -276,14 +276,19 @@ def lea_synthesizer_node(
     object.__setattr__(state, "lea_log", log_payload)
 
     try:
-        parsed, response_text = generate_json(
+        parsed, response_obj = generate_json(
             user_prompt,
             cfg=llm_cfg,
             system_prompt=SYSTEM_PROMPT,
             temperature=0.0,
             max_tokens=_MAX_OUTPUT_TOKENS,
         )
-        log_payload["lea_response_raw"] = response_text
+        # response_obj is an LlmResponse dataclass — pull serialisable fields
+        log_payload["lea_response_raw"] = getattr(response_obj, "text", None)
+        log_payload["lea_response_tokens_in"] = getattr(response_obj, "tokens_in", None)
+        log_payload["lea_response_tokens_out"] = getattr(response_obj, "tokens_out", None)
+        log_payload["lea_response_finish_reason"] = getattr(response_obj, "finish_reason", None)
+        log_payload["lea_response_latency_s"] = getattr(response_obj, "latency_s", None)
         log_payload["lea_response_parsed"] = parsed
     except Exception as e:
         logger.warning(
