@@ -1,6 +1,6 @@
 # geno_agent — Agentic Multi-Agent RAG for Gene Prioritization
 
-Authoritative spec: `./MASTER_PROJECT_v2.1.md` (read in full before any task).
+Authoritative spec: `./MASTER_PROJECT_v2.2.md` (read in full before any task).
 Private GitHub repo: github.com/Jangulo7/geno_agent
 
 ## Architecture clarifications (master plan §0)
@@ -92,7 +92,7 @@ Qdrant under any pretext.
 
 ## Ontology versions (2026 releases — deliberate update from plan)
 
-The master plan v2.1 originally pinned 2024 versions. We have updated
+The master plan v2.2 originally pinned 2024 versions. We have updated
 the pins to 2026 releases (the current files in `./data/`). This
 deviation is recorded in master plan §10. The pinned versions are:
 

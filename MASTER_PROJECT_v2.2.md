@@ -1,14 +1,76 @@
-# MASTER PROJECT FILE v2.1 — Agentic Multi-Agent RAG for Gene Prioritization
+# MASTER PROJECT FILE v2.2 — Agentic Multi-Agent RAG for Gene Prioritization
 
-Private GitHub repository for creating the project: https://github.com/Jangulo7/geno_agent
-Project Local folder: \\wsl.localhost\Ubuntu-24.04\home\hana77\ia_jo\uax_tfm\geno_agent
+Private GitHub repository: https://github.com/Jangulo7/geno_agent
+Project Local folder: `/home/hana77/ia_jo/uax_tfm/geno_agent`
 Tool: VS Code Server for Linux x64
+Authoritative methodology reference (consolidated 2026-05-18): [`reports/methodology.md`](reports/methodology.md)
 
-## Phase 1A + Phase 1B: Database Creation & Test-Case Preparation
+## Phase 1A + Phase 1B (Database & Cohort) + Phase 3 (Paper Extension)
 
-> **Target executor:** Claude Code on WSL2 Ubuntu 24 (Windows host, NVIDIA RTX 5090 32GB VRAM, 64GB RAM)
-> **Methodology source:** Chapter 4 — Methodology v3 (Comprehensive Specification)
+> **Target executor:** Claude Code on WSL2 Ubuntu 24 (Windows host, NVIDIA RTX 5090 32 GB VRAM, 64 GB RAM)
+> **Methodology source:** Chapter 4 — Methodology v3 + [`reports/methodology.md`](reports/methodology.md) (2026-05-18 consolidated)
 > **Storage strategy:** Linux (~700 GB) for Qdrant + models + code; Windows (`/mnt/c/`) for temporary bulk processing
+
+---
+
+## CHANGELOG — v2.1 → v2.2 (Paper Extension, 2026-05-15 → 2026-05-18)
+
+v2.2 reflects the post-thesis paper-extension phase: evaluation scaled from
+n=75 to n=1,047, two new baselines added (LIRICAL Cell M alongside Exomiser
+Cell K), two new evaluation axes (RAGAS + DeepEval), and four new analyses
+(Threads D-G in the v3 plan). The v2.1 phase-1 core (Phase 1A corpus, Phase 1B
+cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
+(paper extension) and refines the runtime configuration accordingly.
+
+**Cohort upgrades:**
+
+1. **Phenopacket Store v0.1.19 → v0.1.26** (released 2026-01-13). +252 new gene cohorts, +1,699 new eligible cases. Immunological-disease eligible pool grew 85 → 390 (+359 %), eliminating the structural cap on the paper's lead categorical analysis.
+2. **Disproportionate stratified sampling** added to Stage 16 via new `--per-category-target "cat=N,..."` flag. Allows oversampling the limiting category (immunological at 300 / pool 390 = 77 %) for subgroup statistical power while keeping the others at 250 each.
+3. **n=1,047 (250 dev + 300 imm + 250 met + 247 neuro)** is the canonical paper-extension cohort.
+
+**New baselines (Phase 3):**
+
+4. **Cell M — LIRICAL HPO-only** (Robinson et al. AJHG 2020) as a second curated baseline alongside Exomiser. Wrapped by `src/baselines/lirical_runner.py` with disease→gene mapping via NCBI mim2gene_medgen + Orphanet en_product6.xml + HGNC. 8-worker parallel pool in `scripts/eval/run_cell_m.py`. Initial result: LIRICAL top-1 = 0.924 on n=1,047 — likely reflects annotation overlap with `phenotype.hpoa` source PMIDs; see Thread D in plan v3.
+
+**New evaluation axes (Phase 3):**
+
+5. **RAGAS** evaluation pipeline (`scripts/eval/run_ragas.py`) computing faithfulness, context_precision, context_recall, answer_relevance over Cell L and Cell S sidecars. GPT-4o (`gpt-4o-2024-08-06`) as the LLM judge via OpenAI API — a documented project-rule deviation for evaluation only (production stays all-local).
+6. **DeepEval** hallucination metric (`scripts/eval/run_deepeval.py`) on Cell S, same GPT-4o judge.
+7. **Per-case response sidecars** persisted at `data/eval_1050/cell_{L,S}_responses/<case>.json` with full LEA prompt, raw response text, parsed JSON ranking, token counts, finish reason, and per-gene retrieved chunks (PMCIDs, section types, RRF scores). Required for RAGAS/DeepEval.
+
+**New analyses (Phase 3 — Threads D-G in plan v3):**
+
+8. **Thread D — LIRICAL annotation-overlap analysis.** Per-case binary flag for whether the case source PMID is referenced in `phenotype.hpoa` for the causal gene's OMIM disease. Stratifies all 5 cells' results into overlap-present vs overlap-absent subsets to deconfound LIRICAL's apparent dominance.
+9. **Thread E — Novel-cases subset.** Filter the n=1,047 to cases whose source PMID was published after `phenotype.hpoa` v2026-02-16 release. LIRICAL has no annotations for these → fair comparison. Expected ~150-300 case subset.
+10. **Thread F — LIRICAL + LEA ensemble.** Combine M and S rankings via Reciprocal Rank Fusion + weighted blend. Demonstrates complementarity.
+11. **Thread G — Explanation quality contrast.** Only Cell S produces evidence-traceable rationales with PMC citations. RAGAS faithfulness on Cell S has no equivalent on curated tools.
+
+**Runtime infrastructure refinements (Phase 3):**
+
+12. **VRAM caps for vLLM Cell S** finalized after 4 iterations: `--gpu-memory-utilization 0.75`, `--max-model-len 32768`, `--max-num-seqs 1`, `--dtype float16`, `--enable-prefix-caching`. Documented in `scripts/eval/start_vllm.sh`. Leaves ~8 GB free for CE + dense + activations.
+13. **Sequenced GPU resource scheduling** (`scripts/eval/run_paper_extension.sh`): Cells D → L → [start vLLM] → S → [kill vLLM]. vLLM is alive only during Cell S, explicitly torn down via `trap` to release VRAM for next stage.
+14. **vLLM in dedicated venv** (`~/vllm-env/`, separate from `pytorch-env`). `start_vllm.sh` uses `${VLLM_PYTHON:-${HOME}/vllm-env/bin/python}`.
+15. **Stage 16 patched** with `--per-category-target` flag (disproportionate sampling). **Stage 17 patched** to honour `TEST_CASES_DIR` env var (previously hardcoded path).
+
+**Documentation additions (Phase 3):**
+
+16. [`reports/paper_extension_plan.md`](reports/paper_extension_plan.md) — v1 plan (n=460, v0.1.19, seed 4242)
+17. [`reports/paper_extension_plan_v2.md`](reports/paper_extension_plan_v2.md) — v2 plan (n=1,047, v0.1.26, seed 42)
+18. [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — v3 plan (LIRICAL, RAGAS, DeepEval, Threads D-G)
+19. [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + `.html` — v2 final results (Cell S beats Exomiser, Δ=+3.4 pp ★)
+20. [`reports/methodology.md`](reports/methodology.md) — consolidated authoritative methodology reference
+
+**Headline result (v2 final, tagged `paper-v2-final`):**
+
+> Cell S (rerank + LEA) statistically outperforms Exomiser HPO-only on overall top-1 at n=1,047 (Δ = +0.034, paired-bootstrap 95 % CI [+0.006, +0.064]). Statistically wins on metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO subgroups. LEA contributes a significant +2.7 pp over rerank alone. Immunological lead claim survives 100 % leave-one-out at n=300 (McNemar exact p = 0.008).
+
+v3 paper-extension status (as of 2026-05-18): Cell L re-run with response sidecars done (97.99 % rank-identical to v2; top-1 IDENTICAL at 0.6982). Cell S re-run with response sidecars at ~58 % (605/1047). RAGAS / DeepEval / Threads D-G pending; full Strategy A timeline ~12-13 weeks to Genome Medicine submission.
+
+**Project-rule deviations (recorded in §10):**
+
+21. Ontology versions pinned to 2026 releases instead of 2024.
+22. Phenopacket Store upgraded v0.1.19 → v0.1.26 between v1 and v2 paper extension.
+23. GPT-4o cloud API used for RAGAS/DeepEval judging only — production pipeline (Cells D, L, S) remains 100 % local. Required because using a Qwen-family judge would introduce self-evaluation bias; GPT-4o is the de-facto standard RAG-eval judge in 2025-2026.
 
 ---
 
