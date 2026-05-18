@@ -128,6 +128,11 @@ class AgentState:
     ranked: list[GeneCandidate] = field(default_factory=list)
     iteration: int = 0
     max_iterations: int = 3
+    # Optional debug/eval payload populated by lea_synthesizer_node when
+    # response logging is enabled (paper extension v3, Thread C). Consumed by
+    # scripts/eval/rerank_inside_d.py --responses-dir to emit per-case
+    # sidecars for RAGAS / DeepEval. Stays None for non-LEA cells.
+    lea_log: dict | None = None
 
     def remaining_iterations(self) -> int:
         """Return how many more Retriever→Critic loops are budgeted."""

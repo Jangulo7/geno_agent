@@ -135,11 +135,13 @@ start_vllm_capped
 sleep 2
 assert_gpu_free "after-vllm-loaded"
 
-log INFO ">>> Cell S — rerank + LEA"
+log INFO ">>> Cell S - rerank + LEA"
 PYTHONPATH=. python scripts/eval/rerank_inside_d.py \
     --test-cases "$TEST_CASES" \
     --out-dir "$OUT_ROOT/cell_S_rerank_inside_plus_lea" \
+    --responses-dir "$OUT_ROOT/cell_S_responses" \
     --use-lea \
+    --overwrite \
     --limit 0 \
     2>&1 | sed -u 's/^/    [S] /'
 log INFO "<<< Cell S done"
