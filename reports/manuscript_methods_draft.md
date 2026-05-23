@@ -333,10 +333,7 @@ before submission, but are out of scope for the present draft:
 4. **Data and code availability statement** — GitHub URL, Zenodo DOI
    for the frozen v3 release tag, Phenopacket Store version pin,
    ontology version pins.
-5. **Detailed wall-time and cost table** — per-cell wallclock + dollar
-   cost (LIRICAL and Exomiser local; geno_agent local; RAGAS judging
-   $95 cloud spend) for a Methods-end "operational profile" table.
-   This will become a one-day work item before submission.
+5. **Detailed wall-time and cost table** — see `reports/wallclock_cost_table.md` for the locked v3 numbers. Headline: total reproducible runtime ~24 h local compute on a single RTX 5090 workstation + ~3 h OpenAI API spend ($98.20 of $100 budget). Per-case throughput on Cell S = 26.1 s end-to-end. Production geno_agent requires no cloud API; cloud spend is RAGAS + DeepEval evaluation-only. The full table belongs as Methods Table 1 in the final manuscript.
 6. **DeepRare head-to-head comparison on a n = 100 subset** — the
    2025 EJHG benchmark uses DeepRare; reviewers will expect a direct
    comparison. Estimated 5-7 days of work post-RAGAS.

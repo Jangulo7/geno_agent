@@ -1728,3 +1728,57 @@ triage flag.
 measurement-artifact diagnosis. 0.480 is the recommended primary
 faithfulness number for the paper; 0.286 retained as documented
 methodological caveat.*
+
+---
+
+## 19. Wallclock + cost table — operational profile (2026-05-23)
+
+Single source of truth for the paper's Methods Table 1. Full breakdown
+in [`reports/wallclock_cost_table.md`](wallclock_cost_table.md).
+
+### 19.1 Per-cell evaluation on n = 1,047
+
+| Cell | Approach | Compute | Wall (h:m) | s/case | $ |
+|---|---|---|---:|---:|---:|
+| K | Exomiser HPO-only baseline | CPU | 3:38 | 12.5 | 0 |
+| M | LIRICAL HPO-only baseline | CPU 8-worker | 0:22 | 10.1\* | 0 |
+| D | Multi-agent hybrid (dense + BM25 RRF) | GPU | 6:53 | 23.7 | 0 |
+| L | Cell D + CE-rerank (MedCPT) | GPU | 5:28 | 18.8 | 0 |
+| **S** | **Cell L + LEA (Qwen3-8B via local vLLM)** | **GPU** | **7:36** | **26.1** | **0** |
+| N | RRF(M, S) ensemble (post-hoc) | none | <0:01 | 0.005 | 0 |
+| **Subtotal local** | | | **~24 h** | — | **0** |
+
+\* LIRICAL ran 8-worker parallel; 10.1 s is the effective per-case
+serial-equivalent.
+
+### 19.2 LLM-judge evaluation (cloud, evaluation-only)
+
+| Pipeline | Subset | Wall | $ |
+|---|---|---:|---:|
+| RAGAS multi-claim (original) | n=600 stratified | 2 h 48 m | $95.00 |
+| RAGAS top-1-only sensitivity (recommended primary) | n=100 stratified | 0 h 04 m | $2.00 |
+| DeepEval HallucinationMetric | n=100 stratified | 0 h 03 m | $1.20 |
+| **TOTAL OpenAI** | | **~3 h** | **$98.20** |
+
+### 19.3 Headline operational profile for the paper
+
+> *Total reproducible end-to-end runtime: ~24 hours of local compute
+> on a single RTX 5090 workstation plus ~3 hours of OpenAI API spend
+> for the RAGAS + DeepEval LLM-judge evaluation (~$100 budget).
+> Each case completes in **~26 seconds end-to-end on Cell S**
+> (geno_agent), well within the time a clinician spends on a single
+> rare-disease case during consultation. The production pipeline
+> (Cells D, L, S) requires **no cloud API at inference time** —
+> the $98 cloud spend is evaluation-only.*
+
+### 19.4 v3 conclusions (additions 42-43 on top of §18.7)
+
+42. **Total session compute footprint**: ~24 h local GPU + CPU (electricity only) + ~3 h OpenAI API ($98.20). Cloud-equivalent rerun cost on AWS g6e.4xlarge: ~$5 + $98 = ~$103 total.
+43. **Per-case throughput on Cell S = 26.1 s on a single RTX 5090** — within clinical-consultation timeframes. Production geno_agent requires no cloud API; cloud spend is evaluation-only.
+
+---
+
+*Wallclock + cost section — 2026-05-23. v3 OpenAI spend final: $98.20
+/ $100 budget. All v3-internal evaluation and analysis is now complete;
+remaining items (DeepRare comparison, Qwen3-32B ablation, manuscript
+drafting) are post-v3 differentiator work.*
