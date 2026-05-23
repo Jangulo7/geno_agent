@@ -4,7 +4,70 @@ Lightweight demo applications that load **pre-computed** per-case JSONs
 from the project's evaluation directories. No live LLM / Qdrant calls —
 safe to run on a laptop without GPU or network during a presentation.
 
-## Streamlit thesis-defense demo
+Two apps, designed for different audiences:
+
+| App | Audience | Tone |
+|---|---|---|
+| `streamlit_thesis_presentation.py` ⭐ **Recommended for the defence** | Thesis committee + general audience | Narrative, design-led, 4-page story (Challenge → How It Works → Try It Live → The Numbers) with an animated multi-agent architecture diagram + progressive-reveal demo mode |
+| `streamlit_thesis_demo.py` | Technical reviewers / Q&A backup | Utilitarian data browser — full cohort access, multi-cell side-by-side rankings, raw LEA rationale dumps |
+
+## ⭐ Defence-grade presentation app
+
+**File**: `streamlit_thesis_presentation.py`
+
+A 4-page narrative Streamlit app optimised for a ~10-15 min thesis
+defence:
+
+1. **🧬 The Challenge** — opens with the problem (300M patients,
+   5-7 yr odyssey, 50 % undiagnosed) and the geno_agent value
+   proposition in 3 bullets. Gradient hero typography + colour-coded
+   stat cards.
+2. **🧠 How It Works** — interactive SVG diagram of the 7-stage
+   pipeline (HPO → Planner → Retriever → Critic → Synthesiser → LEA
+   → Output) with per-agent role cards. Includes the §11.5 factorial
+   highlight: single-agent · dense = 5.3 % top-1 → multi-agent ·
+   hybrid = 62.7 % (+57.4 pp from the architectural decomposition).
+3. **🎯 Try It Live** — curated demo-scenario picker with 3
+   hand-selected cases:
+   - 🏆 *The wow case* — `ADRA2A` lipodystrophy where geno_agent
+     ranks the causal gene at #1 and Exomiser at #16
+   - ✅ *Clean win* — `STXBP1` where both systems agree
+   - 🔍 *The hard case* — `KDM6B` where Exomiser wins; honest
+     reporting
+   - Plus a "browse all 75" fallback for Q&A
+   Progressive reveal mode: clicks reveal each agent stage in
+   sequence, with the SVG diagram showing live ✓ / ⟳ status badges,
+   then a final geno_agent vs Exomiser side-by-side ranking with
+   green/red hero boxes for the top-1 prediction.
+4. **📊 The Numbers** — headline metrics in three stat cards:
+   Cell S = 0.787 top-1, Exomiser = 0.773, Δ = +1.4 pp. Architectural-
+   ablation bar chart showing the contribution of each layer
+   (A → D = +57.4 pp, D → L = +10.6 pp, L → S = +5.4 pp). Per-MONDO
+   breakdown chart.
+5. **👩‍🎓 About** — thesis info, code/data pointers, methodology
+   references.
+
+Run:
+
+```bash
+cd /path/to/geno_agent
+source ~/pytorch-env/bin/activate
+streamlit run demos/streamlit_thesis_presentation.py
+```
+
+Opens at http://localhost:8501.
+
+**Suggested defence flow** (10 min):
+
+| Min | Page | Talking point |
+|---|---|---|
+| 0:00–1:30 | 🧬 The Challenge | Hook the audience with the diagnostic-odyssey stats; introduce the literature-only thesis. |
+| 1:30–4:00 | 🧠 How It Works | Walk through the SVG diagram; emphasise that the architecture (not the LLM) is the contribution. Read the +57.4 pp lift aloud. |
+| 4:00–7:30 | 🎯 Try It Live | Open the wow case (`ADRA2A`); click "Reveal: …" 7 times to walk through each agent. End on the green hero box (geno_agent rank 1 vs Exomiser rank 16). |
+| 7:30–9:00 | 📊 The Numbers | Show the ablation bar chart, then the +1.4 pp result vs Exomiser. |
+| 9:00–10:00 | 👩‍🎓 About | Wrap with thesis info + Q&A invitation. |
+
+## Data-browser app (reference / Q&A backup)
 
 **File**: `streamlit_thesis_demo.py`
 
