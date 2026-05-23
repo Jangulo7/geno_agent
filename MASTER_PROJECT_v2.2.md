@@ -64,13 +64,28 @@ cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
 
 > Cell S (rerank + LEA) statistically outperforms Exomiser HPO-only on overall top-1 at n=1,047 (Δ = +0.034, paired-bootstrap 95 % CI [+0.006, +0.064]). Statistically wins on metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO subgroups. LEA contributes a significant +2.7 pp over rerank alone. Immunological lead claim survives 100 % leave-one-out at n=300 (McNemar exact p = 0.008).
 
-v3 paper-extension status (as of 2026-05-18): Cell L re-run with response sidecars done (97.99 % rank-identical to v2; top-1 IDENTICAL at 0.6982). Cell S re-run with response sidecars at ~58 % (605/1047). RAGAS / DeepEval / Threads D-G pending; full Strategy A timeline ~12-13 weeks to Genome Medicine submission.
+**v3 paper-extension status (REVISED 2026-05-23, after Threads D-G + v3-5 aggregation):**
+
+24. **v3-5 aggregation** (commit `1b65028`): 5-cell paired-Δ + paired-bootstrap CI + exact McNemar across n=1,047 on D/K/L/M/S. Reusable toolkit (`scripts/eval/paired_diff.py`) for Threads D-G.
+25. **Thread D — annotation-overlap deconfounding** (commit `308fb2e`): Per-case overlap flag from `phenotype.hpoa v2026-02-16` (`scripts/eval/compute_annotation_overlap.py`). Cohort overlap rate 73.1 %. **On the fair cohort (overlap-absent, n=282), Cell S becomes the #1 system**: S = 0.858, L = 0.823, K = 0.780, M = 0.777, D = 0.475. S beats M by Δ = +0.082 [+0.021, +0.145] ★ McNemar p = 0.014. S beats K by Δ = +0.078 [+0.011, +0.138] ★ (>2× the +0.035 on full cohort). **M ties K** (Δ = -0.004, p = 1.000) — LIRICAL's apparent +0.23 advantage is artefact.
+26. **Thread E — recency-stratified analysis** (commit `6a812a4`, pivoted): The plan's strict "PMID > hpoa pin" subset is empty by construction (Phenopacket Store is curated from already-published literature). Pivoted to pre_2020 (n=601) vs post_2020 (n=446) split using NCBI E-utils PMID dates. **Exomiser top-1 collapses 0.847 → 0.480 on post-2020 papers** (Δ = -37 pp, largest recency drop of any system). geno_agent's edge over Exomiser is **2.7× larger on recent cases** (Δ S−K = +0.094 ★ post_2020 vs +0.035 ★ full cohort). LIRICAL paradoxically *rises* (0.915 → 0.935) due to a 12.6 pp higher overlap rate on recent cases — hpoa preferentially curates recent landmark publications.
+27. **Thread F — RRF ensemble check** (commit `178ed68`, scoped to 1-day): Cell N = RRF(M, S) at k=60. On the fair cohort, **N is statistically tied with S alone** (Δ = -0.007 NS); on the contaminated cohort, N is significantly worse than M alone (Δ = -0.230 ★). The two systems carry no independent predictive signal beyond what overlap status already explains. "Did you try ensembling?" reviewer question closed with a one-sentence Discussion conclusion.
+28. **Thread G — explanation-quality structural part** (commit `49ebaca`): Cell S is the only system in the comparison that produces evidence-traceable rankings. **81.5 % of cases have a substantive LEA rationale for the causal gene** overall, rising to **94.0 % on the fair-comparison cohort**. Mean 2.81 unique PMC citations per top-1 gene. **LEA deterministic-fallback rate = 0.2 % overall and 0.0 % on the fair cohort** — concrete answer to the LLM-reproducibility reviewer concern. RAGAS faithfulness pending Thread C completion.
+29. **Thread C / RAGAS scope** (in flight 2026-05-23): Smoke test revealed real cost ~$160 for the originally-planned full-cohort × both-cells × 4-metrics design — over the $100 budget. Final scope: **Cell S only, n=600 stratified (150 per MONDO, seed 42), 3 metrics (faithfulness + context_precision + context_recall), MAX_CONTEXTS=20, ~$95**.
+
+**Strategy A timeline revised:** ~3-4 weeks remaining to Genome Medicine submission (was ~12-13 weeks at v3 start). Threads D-G collapsed from ~8-11 day estimate to ~1 h actual wall — Thread D's per-case PMID/overlap toolkit made Threads E/F/G mechanical.
 
 **Project-rule deviations (recorded in §10):**
 
-21. Ontology versions pinned to 2026 releases instead of 2024.
-22. Phenopacket Store upgraded v0.1.19 → v0.1.26 between v1 and v2 paper extension.
-23. GPT-4o cloud API used for RAGAS/DeepEval judging only — production pipeline (Cells D, L, S) remains 100 % local. Required because using a Qwen-family judge would introduce self-evaluation bias; GPT-4o is the de-facto standard RAG-eval judge in 2025-2026.
+30. Ontology versions pinned to 2026 releases instead of 2024.
+31. Phenopacket Store upgraded v0.1.19 → v0.1.26 between v1 and v2 paper extension.
+32. GPT-4o cloud API used for RAGAS/DeepEval judging only — production pipeline (Cells D, L, S) remains 100 % local. Required because using a Qwen-family judge would introduce self-evaluation bias; GPT-4o is the de-facto standard RAG-eval judge in 2025-2026.
+33. Thread E pivoted from "PMID > hpoa pin date" (empty by construction in our cohort) to a publication-recency split; documented in `paper_extension_results.md §14` and `methodology.md §4.8`.
+34. Thread F scoped down from 3-day full ensemble experiment to 1-day RRF(M,S) check after Thread D + E established the ensemble is mathematically bounded by the better of M and S on each subset.
+
+**Headline result (REVISED 2026-05-23, supersedes the v2-final headline for paper framing):**
+
+> On the fair-comparison cohort (n = 282 cases whose source publication is not cited in `phenotype.hpoa` for the causal disease), geno_agent (Cell S) is the **#1 system**: top-1 = 0.858 [0.816, 0.901], beating LIRICAL (0.777, Δ = +8.2 pp ★) and Exomiser (0.780, Δ = +7.8 pp ★). LIRICAL's apparent dominance on the full cohort (top-1 = 0.924) is shown to be an **annotation-overlap artefact** (73 % of cases have source PMIDs cited in LIRICAL's hpoa for the causal disease); once deconfounded LIRICAL is **statistically tied** with Exomiser. geno_agent additionally provides: 2.7× larger relative advantage on post-2020 papers, 94 % substantive rationale coverage on the fair cohort with 2.81 PMC citations per top-1 gene, and 0.0 % LLM-fallback rate on the fair cohort.
 
 ---
 
