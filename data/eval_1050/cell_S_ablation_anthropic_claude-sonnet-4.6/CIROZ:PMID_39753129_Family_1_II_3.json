@@ -1,0 +1,26 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_1_II_3",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "PCBD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PCBD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18842,
+  "tokens_out": 856,
+  "finish_reason": "stop",
+  "latency_s": 15.005640268325806,
+  "cost_usd": 0.069366,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"PCBD1\", \"confidence\": 0.12, \"rationale\": \"Has highest critic_relevance chunk (3/5) covering heterotaxy/situs ambiguus/hypoplastic LV criteria, but no direct gene-disease link to this phenotype.\"},\n  {\"gene\": \"PPIB\", \"confidence\": 0.09, \"rationale\": \"Same heterotaxy/situs ambiguus evidence chunk as PCBD1 (3/5), but no established mechanistic link to laterality defects or hypoplastic left heart.\"},\n  {\"gene\": \"TESC\", \"confidence\": 0.08, \"rationale\": \"Evidence includes ambiguous thoraco-abdominal situs with bilobed lungs case, slightly more phenotype-relevant than most others.\"},\n  {\"gene\": \"PIGL\", \"confidence\": 0.08, \"rationale\": \"Evidence includes ambiguous thoraco-abdominal situs with bilobed lungs, matching patient phenotype, though no direct causal link established.\"},\n  {\"gene\": \"CNOT11\", \"confidence\": 0.07, \"rationale\": \"Evidence includes heterotaxy case with situs ambiguus, mildly hypoplastic LV, and bilateral right-sided bronchial branching, partially matching phenotype.\"},\n  {\"gene\": \"DMRTB1\", \"confidence\": 0.07, \"rationale\": \"Same heterotaxy case evidence as CNOT11 with situs ambiguus and mildly hypoplastic LV, no direct gene-disease mechanistic link.\"},\n  {\"gene\": \"DEDD\", \"confidence\": 0.07, \"rationale\": \"Same heterotaxy case evidence as CNOT11/DMRTB1; no established role in laterality or hypoplastic left heart syndrome.\"},\n  {\"gene\": \"CA3\", \"confidence\": 0.06, \"rationale\": \"Evidence includes hypoplastic left heart syndrome case but in situs solitus context; CA3 has no known role in laterality defects.\"},\n  {\"gene\": \"CEP162\", \"confidence\": 0.06, \"rationale\": \"Centriolar protein with potential ciliary function relevant to laterality, but evidence chunks show no direct link to this phenotype.\"},\n  {\"gene\": \"ABO\", \"confidence\": 0.05, \"rationale\": \"No biological plausibility for causing heterotaxy/situs ambiguus; evidence chunks are generic cardiac malformation cases.\"},\n  {\"gene\": \"DCAF15\", \"confidence\": 0.05, \"rationale\": \"No known role in laterality or cardiac development; evidence chunks are non-specific heterotaxy/cardiac malformation cases.\"},\n  {\"gene\": \"UPK3BL1\", \"confidence\": 0.05, \"rationale\": \"Uroplakin-related gene with no established connection to heterotaxy or hypoplastic left heart; evidence is non-specific.\"},\n  {\"gene\": \"ZNF697\", \"confidence\": 0.05, \"rationale\": \"Zinc finger protein with no known role in laterality determination or cardiac morphogenesis; evidence is non-specific.\"},\n  {\"gene\": \"METTL22\", \"confidence\": 0.05, \"rationale\": \"Methyltransferase with no established link to heterotaxy or congenital heart defects; evidence chunks are non-specific.\"},\n  {\"gene\": \"RHEBL1\", \"confidence\": 0.05, \"rationale\": \"RAS homolog enriched in brain-like protein with no known role in laterality or cardiac development; evidence is non-specific.\"}\n]",
+  "parsed_top5": [
+    "PCBD1",
+    "PPIB",
+    "TESC",
+    "PIGL",
+    "CNOT11"
+  ]
+}

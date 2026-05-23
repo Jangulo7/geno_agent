@@ -1,0 +1,26 @@
+{
+  "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PTCRA",
+  "orig_qwen3_8b_top1": "PYROXD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PYROXD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17402,
+  "tokens_out": 180,
+  "finish_reason": "stop",
+  "latency_s": 4.101564168930054,
+  "cost_usd": 0.00144256,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"PYROXD1\": 0.85, \"ZNF883\": 0.6, \"SLC39A8\": 0.55, \"SRRM3\": 0.5, \"PSPN\": 0.45, \"LPA\": 0.4, \"SORCS1\": 0.35, \"PAFAH1B1\": 0.3, \"VCY1B\": 0.25, \"NPIPB3\": 0.2, \"PRPF40B\": 0.15, \"CYP2A7\": 0.1, \"BTNL3\": 0.05, \"NKAP\": 0.01, \"ZBTB47\": 0.001}",
+  "parsed_top5": [
+    "PYROXD1",
+    "ZNF883",
+    "SLC39A8",
+    "SRRM3",
+    "PSPN"
+  ]
+}

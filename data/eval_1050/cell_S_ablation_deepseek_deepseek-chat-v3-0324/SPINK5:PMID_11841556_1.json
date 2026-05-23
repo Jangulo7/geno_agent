@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16056,
+  "tokens_out": 651,
+  "finish_reason": "stop",
+  "latency_s": 53.50497102737427,
+  "cost_usd": 0.0037124700000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching all patient phenotypes including ichthyosis, trichorrhexis invaginata, and hypernatremic dehydration.\"\n  },\n  {\n    \"gene\": \"TACC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TACC1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"EN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EN2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TLR7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TLR7 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GALK2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GALK2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"VTCN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VTCN1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TUSC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TUSC2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TRIM59\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRIM59 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"OR52J3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR52J3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"URB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking URB2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TMCC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TMCC1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"UBIAD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UBIAD1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ADAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADAP1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC35F4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC35F4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ADAMTS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADAMTS3 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "TACC1",
+    "EN2",
+    "TLR7",
+    "GALK2"
+  ]
+}

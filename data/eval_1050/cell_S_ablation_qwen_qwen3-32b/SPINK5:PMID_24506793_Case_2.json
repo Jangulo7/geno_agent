@@ -1,0 +1,22 @@
+{
+  "case_id": "SPINK5:PMID_24506793_Case_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18849,
+  "tokens_out": 60,
+  "finish_reason": "stop",
+  "latency_s": 8.625659704208374,
+  "cost_usd": 0.00152472,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations directly cause Netherton syndrome, which matches the patient's phenotype of congenital exfoliative erythroderma, sparse hair, and recurrent infections.\"}",
+  "parsed_top5": [
+    "SPINK5"
+  ]
+}

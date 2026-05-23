@@ -1,0 +1,22 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "DDX59",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DDX59",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 8809,
+  "tokens_out": 60,
+  "finish_reason": "stop",
+  "latency_s": 5.9135637283325195,
+  "cost_usd": 0.0018080000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"DDX59\",\n  \"confidence\": 0.9,\n  \"rationale\": \"DDX59 mutations are directly linked to OFD syndromes with polydactyly, clinodactyly, and cleft palate, matching key patient phenotypes.\"\n}",
+  "parsed_top5": [
+    "DDX59"
+  ]
+}

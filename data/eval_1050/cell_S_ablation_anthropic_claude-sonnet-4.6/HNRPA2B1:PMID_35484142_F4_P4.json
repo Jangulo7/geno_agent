@@ -1,0 +1,26 @@
+{
+  "case_id": "HNRPA2B1:PMID_35484142_F4_P4",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "HNRNPA2B1",
+  "orig_qwen3_8b_top1": "HNRNPA2B1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HNRNPA2B1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17713,
+  "tokens_out": 802,
+  "finish_reason": "stop",
+  "latency_s": 15.9035804271698,
+  "cost_usd": 0.065169,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"HNRNPA2B1\",\"confidence\":0.82,\"rationale\":\"HNRNPA2B1 chunk_1 directly describes patients with ophthalmoplegia, ptosis, proximal+distal weakness, respiratory insufficiency, dysphagia, and elevated CK\u2014matching all patient HPO terms exactly.\"},{\"gene\":\"CD44\",\"confidence\":0.05,\"rationale\":\"CD44 evidence mentions proximal/distal weakness and respiratory insufficiency but explicitly states NO ptosis, ophthalmoplegia, or dysphagia, contradicting key patient features.\"},{\"gene\":\"PHRF1\",\"confidence\":0.03,\"rationale\":\"PHRF1 chunk_1 references HNRNPA2B1 patient data (not PHRF1-specific), providing no direct gene-phenotype link for this candidate.\"},{\"gene\":\"ARHGAP8\",\"confidence\":0.02,\"rationale\":\"ARHGAP8 chunk_3 references HNRNPA2B1 patient data but is not attributed to ARHGAP8 itself; no direct evidence linking this gene to the phenotype.\"},{\"gene\":\"TSPYL6\",\"confidence\":0.02,\"rationale\":\"TSPYL6 chunk_3 references HNRNPA2B1 patient data but is not attributed to TSPYL6; no direct gene-specific evidence.\"},{\"gene\":\"KLHL25\",\"confidence\":0.01,\"rationale\":\"KLHL25 chunk_3 references HNRNPA2B1 patient data without any KLHL25-specific association to the phenotype.\"},{\"gene\":\"OR52J3\",\"confidence\":0.01,\"rationale\":\"OR52J3 evidence only contains generic myopathy descriptions with no mention of ptosis, ophthalmoplegia, or dysphagia and no gene-specific link.\"},{\"gene\":\"CD5L\",\"confidence\":0.01,\"rationale\":\"CD5L evidence contains only generic myopathy/Pompe disease descriptions with no specific link to this gene or the full HPO profile.\"},{\"gene\":\"HEG1\",\"confidence\":0.01,\"rationale\":\"HEG1 evidence describes proximal/distal weakness without ptosis or ophthalmoplegia and has no HEG1-specific disease association.\"},{\"gene\":\"UBE2L6\",\"confidence\":0.005,\"rationale\":\"UBE2L6 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"},{\"gene\":\"PHETA2\",\"confidence\":0.005,\"rationale\":\"PHETA2 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"},{\"gene\":\"ZIK1\",\"confidence\":0.005,\"rationale\":\"ZIK1 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"},{\"gene\":\"UPP2\",\"confidence\":0.005,\"rationale\":\"UPP2 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"},{\"gene\":\"EFCAB3\",\"confidence\":0.005,\"rationale\":\"EFCAB3 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"},{\"gene\":\"RPS9\",\"confidence\":0.005,\"rationale\":\"RPS9 evidence contains only generic myopathy descriptions with no gene-specific link to the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "HNRNPA2B1",
+    "CD44",
+    "PHRF1",
+    "ARHGAP8",
+    "TSPYL6"
+  ]
+}

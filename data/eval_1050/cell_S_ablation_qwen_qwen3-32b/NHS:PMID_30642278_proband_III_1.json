@@ -1,0 +1,26 @@
+{
+  "case_id": "NHS:PMID_30642278_proband_III_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15787,
+  "tokens_out": 179,
+  "finish_reason": "stop",
+  "latency_s": 3.796065330505371,
+  "cost_usd": 0.0013130799999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"NHS\": 0.95, \"KCND2\": 0.05, \"PEDS1\": 0.05, \"WDR6\": 0.05, \"MOSPD3\": 0.05, \"CD80\": 0.05, \"PPP1R21\": 0.05, \"KRT14\": 0.05, \"CYP3A43\": 0.05, \"PM20D1\": 0.05, \"HP1BP3\": 0.05, \"CCL22\": 0.05, \"RAB37\": 0.05, \"DALRD3\": 0.05, \"CFB\": 0.05}",
+  "parsed_top5": [
+    "NHS",
+    "KCND2",
+    "PEDS1",
+    "WDR6",
+    "MOSPD3"
+  ]
+}

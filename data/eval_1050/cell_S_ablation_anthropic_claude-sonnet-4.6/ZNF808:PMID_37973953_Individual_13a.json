@@ -1,0 +1,26 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_13a",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13008,
+  "tokens_out": 751,
+  "finish_reason": "stop",
+  "latency_s": 13.57706332206726,
+  "cost_usd": 0.050289,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ZNF808\",\"confidence\":0.92,\"rationale\":\"Multiple direct evidence chunks explicitly link biallelic ZNF808 loss-of-function to pancreatic agenesis, PNDM, exocrine pancreatic insufficiency, and small for gestational age/IUGR, matching all four HPO phenotypes.\"},{\"gene\":\"GIMAP8\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe ZNF808-related pancreatic agenesis cohort data; GIMAP8 itself is not mentioned as causal for this phenotype profile.\"},{\"gene\":\"MSMB\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MSMB to pancreatic aplasia, neonatal diabetes, or SGA; evidence chunks are generic pancreatic agenesis background.\"},{\"gene\":\"PRSS8\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PRSS8 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background not specific to PRSS8.\"},{\"gene\":\"SND1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SND1 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background not specific to SND1.\"},{\"gene\":\"KIAA0930\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KIAA0930 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"IGF2BP3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking IGF2BP3 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"NOS1AP\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NOS1AP to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ATP5MC1 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"SHANK1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SHANK1 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"TSGA10IP\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TSGA10IP to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"CDHR5\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CDHR5 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"ADAM2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ADAM2 to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"},{\"gene\":\"TNF\",\"confidence\":0.01,\"rationale\":\"TNF evidence discusses exocrine insufficiency in T1D generally but not pancreatic aplasia causation; no direct causal link to this phenotype profile.\"},{\"gene\":\"TENT5A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TENT5A to pancreatic aplasia or neonatal diabetes; evidence chunks are generic background.\"}]",
+  "parsed_top5": [
+    "ZNF808",
+    "GIMAP8",
+    "MSMB",
+    "PRSS8",
+    "SND1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "UGGT1:PMID_40267907_Family_3_2",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UGGT1",
+  "orig_qwen3_8b_top1": "TBXT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TBXT",
+  "top1_correct": false,
+  "causal_rank": 4,
+  "tokens_in": 18984,
+  "tokens_out": 740,
+  "finish_reason": "stop",
+  "latency_s": 13.986778736114502,
+  "cost_usd": 0.0017259200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"TBXT\": {\"gene\": \"TBXT\", \"confidence\": 0.95, \"rationale\": \"TBXT mutations are linked to complex cardiac defects and nuchal translucency, aligning with the patient's phenotype.\"}, \"CHD2\": {\"gene\": \"CHD2\", \"confidence\": 0.85, \"rationale\": \"CHD2 is associated with cardiac malformations and developmental anomalies consistent with the patient's features.\"}, \"KIF13B\": {\"gene\": \"KIF13B\", \"confidence\": 0.75, \"rationale\": \"KIF13B is linked to laterality defects and cardiac anomalies, matching the patient's complex heart defects.\"}, \"UGGT1\": {\"gene\": \"UGGT1\", \"confidence\": 0.7, \"rationale\": \"UGGT1 mutations can cause cardiac defects and growth issues, partially overlapping with the patient's phenotype.\"}, \"SDHAF4\": {\"gene\": \"SDHAF4\", \"confidence\": 0.65, \"rationale\": \"SDHAF4 is associated with cardiac malformations, though less specific to the patient's full phenotype.\"}, \"GADL1\": {\"gene\": \"GADL1\", \"confidence\": 0.6, \"rationale\": \"GADL1 is linked to cardiac defects but lacks strong evidence for the patient's specific features.\"}, \"AKR1C2\": {\"gene\": \"AKR1C2\", \"confidence\": 0.55, \"rationale\": \"AKR1C2 has limited evidence connecting it to the patient's complex cardiac and growth anomalies.\"}, \"TXNDC5\": {\"gene\": \"TXNDC5\", \"confidence\": 0.5, \"rationale\": \"TXNDC5 is associated with cardiac defects but not strongly linked to the patient's full phenotype.\"}, \"SERPINB12\": {\"gene\": \"SERPINB12\", \"confidence\": 0.45, \"rationale\": \"SERPINB12 has minimal evidence connecting it to the patient's cardiac and growth issues.\"}, \"FAM43B\": {\"gene\": \"FAM43B\", \"confidence\": 0.4, \"rationale\": \"FAM43B is linked to cardiac defects but lacks specificity for the patient's features.\"}, \"KCNAB3\": {\"gene\": \"KCNAB3\", \"confidence\": 0.35, \"rationale\": \"KCNAB3 is associated with cardiac anomalies but not strongly with the patient's full phenotype.\"}, \"NUDT3\": {\"gene\": \"NUDT3\", \"confidence\": 0.3, \"rationale\": \"NUDT3 has limited evidence connecting it to the patient's cardiac and growth anomalies.\"}, \"ESYT2\": {\"gene\": \"ESYT2\", \"confidence\": 0.25, \"rationale\": \"ESYT2 is linked to cardiac defects but lacks strong evidence for the patient's features.\"}, \"CPD\": {\"gene\": \"CPD\", \"confidence\": 0.2, \"rationale\": \"CPD has minimal evidence connecting it to the patient's complex phenotype.\"}, \"TPD52L1\": {\"gene\": \"TPD52L1\", \"confidence\": 0.15, \"rationale\": \"TPD52L1 is associated with cardiac defects but lacks specificity for the patient's features.\"}}",
+  "parsed_top5": [
+    "TBXT",
+    "CHD2",
+    "KIF13B",
+    "UGGT1",
+    "SDHAF4"
+  ]
+}

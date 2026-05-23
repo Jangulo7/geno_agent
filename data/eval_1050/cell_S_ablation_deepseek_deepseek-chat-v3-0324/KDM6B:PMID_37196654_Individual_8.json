@@ -1,0 +1,26 @@
+{
+  "case_id": "KDM6B:PMID_37196654_Individual_8",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "KDM6B",
+  "orig_qwen3_8b_top1": "BMPR1B",
+  "orig_qwen3_8b_correct": false,
+  "top1": "BMPR1B",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15177,
+  "tokens_out": 636,
+  "finish_reason": "stop",
+  "latency_s": 21.43855595588684,
+  "cost_usd": 0.00352512,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"BMPR1B\",\n    \"confidence\": 0.8,\n    \"rationale\": \"Direct evidence of brachydactyly and joint anomalies aligning with patient's clinodactyly and short palm.\"\n  },\n  {\n    \"gene\": \"SNED1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Cryptorchidism and hip dislocation noted, but limited gene-specific evidence.\"\n  },\n  {\n    \"gene\": \"THAP2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Mentions cryptorchidism and skeletal abnormalities, but no strong gene-phenotype link.\"\n  },\n  {\n    \"gene\": \"PSD\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General skeletal and joint abnormalities, but lacks specificity.\"\n  },\n  {\n    \"gene\": \"PRR15L\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Brief mention of skeletal dysplasia, but no direct phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"MMP15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"General mentions of hip dysplasia and clinodactyly, but not specific.\"\n  },\n  {\n    \"gene\": \"ZNF430\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Clinodactyly and skeletal issues mentioned, but no direct gene link.\"\n  },\n  {\n    \"gene\": \"C5orf34\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Cryptorchidism and hip dysplasia noted, but no definitive evidence.\"\n  },\n  {\n    \"gene\": \"DNM1L\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Non-specific mentions of skeletal and joint issues.\"\n  },\n  {\n    \"gene\": \"TMEM260\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Cryptorchidism noted, but no other matching phenotypes.\"\n  },\n  {\n    \"gene\": \"TDP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Cryptorchidism mentioned, but unrelated to other phenotypes.\"\n  },\n  {\n    \"gene\": \"KLF18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"BRAT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No strong evidence supporting a match with the phenotypes.\"\n  },\n  {\n    \"gene\": \"CYP3A43\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Mentions clinodactyly, but no clear gene relevance.\"\n  },\n  {\n    \"gene\": \"PNO1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking to the patient's clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "BMPR1B",
+    "SNED1",
+    "THAP2",
+    "PSD",
+    "PRR15L"
+  ]
+}

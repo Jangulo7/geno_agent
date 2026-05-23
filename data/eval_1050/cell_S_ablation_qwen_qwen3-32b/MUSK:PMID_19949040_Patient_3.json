@@ -1,0 +1,26 @@
+{
+  "case_id": "MUSK:PMID_19949040_Patient_3",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "MUSK",
+  "orig_qwen3_8b_top1": "MUSK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "MUSK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16544,
+  "tokens_out": 156,
+  "finish_reason": "stop",
+  "latency_s": 2.8636481761932373,
+  "cost_usd": 0.0013672,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"MUSK\": 0.95, \"GPR32\": 0.1, \"HPS6\": 0.1, \"CARD8\": 0.1, \"GEMIN7\": 0.1, \"ALX4\": 0.1, \"VPS4B\": 0.1, \"RPAP2\": 0.1, \"TOP6BL\": 0.1, \"IPCEF1\": 0.1, \"PTBP2\": 0.1, \"NPNT\": 0.1, \"EPC2\": 0.1, \"MICU1\": 0.1, \"MSH5\": 0.1}",
+  "parsed_top5": [
+    "MUSK",
+    "GPR32",
+    "HPS6",
+    "CARD8",
+    "GEMIN7"
+  ]
+}

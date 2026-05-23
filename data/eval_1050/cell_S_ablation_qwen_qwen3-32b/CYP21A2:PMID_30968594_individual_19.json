@@ -1,0 +1,22 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_19",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16612,
+  "tokens_out": 64,
+  "finish_reason": "stop",
+  "latency_s": 10.638058423995972,
+  "cost_usd": 0.0013468800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CYP21A2\", \"confidence\": 0.95, \"rationale\": \"CYP21A2 mutations cause adrenal insufficiency with hyperpigmentation, low cortisol, and low estradiol, directly matching the patient's HPO phenotypes.\"}",
+  "parsed_top5": [
+    "CYP21A2"
+  ]
+}

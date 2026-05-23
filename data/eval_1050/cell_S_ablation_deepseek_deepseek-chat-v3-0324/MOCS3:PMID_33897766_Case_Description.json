@@ -1,0 +1,26 @@
+{
+  "case_id": "MOCS3:PMID_33897766_Case_Description",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "MOCS3",
+  "orig_qwen3_8b_top1": "SLC27A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "KLK6",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 13388,
+  "tokens_out": 578,
+  "finish_reason": "stop",
+  "latency_s": 22.027936220169067,
+  "cost_usd": 0.00312266,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"KLK6\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Strongest phenotype match with microcephaly and seizures, despite generic evidence.\"\n  },\n  {\n    \"gene\": \"MOCS3\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Overlaps with seizure phenotypes but less specificity than KLK6 evidence.\"\n  },\n  {\n    \"gene\": \"LRP8\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some seizure and developmental delay overlap, but weaker phenotype alignment.\"\n  },\n  {\n    \"gene\": \"MPV17L2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Non-specific evidence matching only partial phenotypes.\"\n  },\n  {\n    \"gene\": \"CTSF\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minimal direct phenotypic correlations in evidence chunks.\"\n  },\n  {\n    \"gene\": \"SLC7A6OS\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Brief mention of microcephaly and seizures but no strong gene-specific link.\"\n  },\n  {\n    \"gene\": \"CBLB\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Generic neurodevelopmental evidence without unique phenotype matches.\"\n  },\n  {\n    \"gene\": \"LY96\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No distinctive evidence beyond generic developmental delay.\"\n  },\n  {\n    \"gene\": \"ANP32A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Non-specific evidence chunks lacking phenotype specificity.\"\n  },\n  {\n    \"gene\": \"SLC27A1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Weak phenotypic overlap despite epilepsy mention.\"\n  },\n  {\n    \"gene\": \"LRRC46\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No compelling gene-specific evidence found.\"\n  },\n  {\n    \"gene\": \"RNF146\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Generic neurodevelopmental evidence without distinguishing features.\"\n  },\n  {\n    \"gene\": \"FZD9\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Minimal relevant phenotype overlap in evidence.\"\n  },\n  {\n    \"gene\": \"PNMA6F\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No convincing evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SBNO2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No meaningful phenotypic correlations identified.\"\n  }\n]",
+  "parsed_top5": [
+    "KLK6",
+    "MOCS3",
+    "LRP8",
+    "MPV17L2",
+    "CTSF"
+  ]
+}

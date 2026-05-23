@@ -1,0 +1,20 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16972,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 4.105693817138672,
+  "cost_usd": 0.0013642,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

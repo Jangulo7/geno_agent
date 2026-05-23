@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R1928_individual_RS",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19597,
+  "tokens_out": 759,
+  "finish_reason": "stop",
+  "latency_s": 11.620927095413208,
+  "cost_usd": 0.070176,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NF1\",\"confidence\":0.97,\"rationale\":\"NF1 evidence directly and explicitly links neurofibromas, cafe-au-lait spots, axillary/inguinal freckling, Lisch nodules, and optic glioma as the defining diagnostic criteria for NF1 disease.\"},{\"gene\":\"MICAL3\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe NF1 disease context only; MICAL3 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"CHRNB2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; CHRNB2 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"TIAL1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; TIAL1 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"TPRN\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; TPRN has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"SMYD2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; SMYD2 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"KAZALD1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; KAZALD1 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"PMEL\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; PMEL has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"PYHIN1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; PYHIN1 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"ZNF713\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; ZNF713 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"KAT2B\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; KAT2B has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"ZNF138\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; ZNF138 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"GALNT15\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; GALNT15 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"PHB2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; PHB2 has no direct mention or biological link to the patient's phenotype profile.\"},{\"gene\":\"ACTMAP\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe NF1 disease context only; ACTMAP has no direct mention or biological link to the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "MICAL3",
+    "CHRNB2",
+    "TIAL1",
+    "TPRN"
+  ]
+}

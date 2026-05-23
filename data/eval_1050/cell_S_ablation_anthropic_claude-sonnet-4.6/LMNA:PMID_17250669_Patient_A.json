@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_17250669_Patient_A",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20835,
+  "tokens_out": 721,
+  "finish_reason": "stop",
+  "latency_s": 9.233954429626465,
+  "cost_usd": 0.07332,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA (lamin A/C) mutations directly cause FPLD2 (Dunnigan syndrome), matching all HPO features: limb fat loss, increased facial fat, insulin-resistant diabetes, hypertriglyceridemia, and elevated HbA1c.\"},{\"gene\":\"FRYL\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking FRYL to this phenotype; evidence chunks describe lipodystrophy generally without mentioning FRYL.\"},{\"gene\":\"VPREB3\",\"confidence\":0.01,\"rationale\":\"No evidence linking VPREB3 to lipodystrophy or metabolic syndrome; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"VEGFB\",\"confidence\":0.01,\"rationale\":\"No evidence linking VEGFB to this lipodystrophy/metabolic phenotype; evidence chunks are generic background only.\"},{\"gene\":\"PPP4R2\",\"confidence\":0.01,\"rationale\":\"No evidence linking PPP4R2 to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background.\"},{\"gene\":\"LILRB1\",\"confidence\":0.01,\"rationale\":\"No evidence linking LILRB1 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"DNAJC14\",\"confidence\":0.01,\"rationale\":\"No evidence linking DNAJC14 to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background.\"},{\"gene\":\"XRN1\",\"confidence\":0.01,\"rationale\":\"No evidence linking XRN1 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"RNF145\",\"confidence\":0.01,\"rationale\":\"No evidence linking RNF145 to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background.\"},{\"gene\":\"HPCAL4\",\"confidence\":0.01,\"rationale\":\"No evidence linking HPCAL4 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"ARHGAP4\",\"confidence\":0.01,\"rationale\":\"No evidence linking ARHGAP4 to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background.\"},{\"gene\":\"SH3BGRL2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SH3BGRL2 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"ARMCX5\",\"confidence\":0.01,\"rationale\":\"No evidence linking ARMCX5 to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background.\"},{\"gene\":\"BEND6\",\"confidence\":0.01,\"rationale\":\"No evidence linking BEND6 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"EBP\",\"confidence\":0.01,\"rationale\":\"No evidence linking EBP to lipodystrophy or insulin-resistant diabetes; evidence chunks are generic background only.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "FRYL",
+    "VPREB3",
+    "VEGFB",
+    "PPP4R2"
+  ]
+}

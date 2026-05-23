@@ -1,0 +1,22 @@
+{
+  "case_id": "SUOX:PMID_36303223_Proband_15_from_PMID_12001203",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SUOX",
+  "orig_qwen3_8b_top1": "SUOX",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SUOX",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16154,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 4.051586627960205,
+  "cost_usd": 0.0032731500000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"SUOX\",\n  \"confidence\": 0.95,\n  \"rationale\": \"SUOX is directly linked to sulfite oxidase deficiency, matching all patient phenotypes including seizures, microcephaly, and sulfocysteinuria.\"\n}",
+  "parsed_top5": [
+    "SUOX"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "NBAS:PMID_31761904_Individual_NBAS_9",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13193,
+  "tokens_out": 51,
+  "finish_reason": "stop",
+  "latency_s": 1.7365880012512207,
+  "cost_usd": 0.0010697200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"NBAS mutations are directly linked to acute liver failure, short stature, skeletal dysplasia, and immune defects matching the patient's HPO features.\"}",
+  "parsed_top5": [
+    "NBAS"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "OFD1:PMID_22353940_cousin_V_9",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OFD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14707,
+  "tokens_out": 676,
+  "finish_reason": "stop",
+  "latency_s": 22.608893156051636,
+  "cost_usd": 0.0034619200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"OFD1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"OFD1 mutations are directly linked to Joubert syndrome (molar tooth sign, enlarged cisterna magna) and intellectual disability, matching all key phenotypes.\"\n  },\n  {\n    \"gene\": \"H4C1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minor phenotypic overlap (macrocephaly, intellectual disability), but no direct evidence linking it to the patient's CNS malformations.\"\n  },\n  {\n    \"gene\": \"LSS\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking LSS to the patient's specific neurodevelopmental and structural brain abnormalities.\"\n  },\n  {\n    \"gene\": \"PLPP2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant literature linking PLPP2 to the patient's combination of CNS and dysmorphic features.\"\n  },\n  {\n    \"gene\": \"AADAC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No clear association with intellectual disability or CNS malformations like molar tooth sign.\"\n  },\n  {\n    \"gene\": \"CHMP4B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting CHMP4B to neurodevelopmental disorders with molar tooth sign or polymicrogyria.\"\n  },\n  {\n    \"gene\": \"BPIFB6\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No known role in neurodevelopmental phenotypes or structural brain malformations.\"\n  },\n  {\n    \"gene\": \"RNF126\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No published evidence linking RNF126 to the patient's clinical or radiological findings.\"\n  },\n  {\n    \"gene\": \"SIRAL2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No established role in neurodevelopment or CNS malformations.\"\n  },\n  {\n    \"gene\": \"KRTAP5-3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Unrelated to neurological or structural brain phenotypes.\"\n  },\n  {\n    \"gene\": \"CTAG1A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known association with neurodevelopmental disorders or CNS malformations.\"\n  },\n  {\n    \"gene\": \"RIPOR3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking RIPOR3 to the patient's syndromic presentation.\"\n  },\n  {\n    \"gene\": \"PPIAL4H\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No relevant literature supporting a role in neurodevelopmental phenotypes.\"\n  },\n  {\n    \"gene\": \"INKA2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No known involvement in neurological or structural brain disorders.\"\n  },\n  {\n    \"gene\": \"KRABD5\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No published evidence connecting KRABD5 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "OFD1",
+    "H4C1",
+    "LSS",
+    "PLPP2",
+    "AADAC"
+  ]
+}

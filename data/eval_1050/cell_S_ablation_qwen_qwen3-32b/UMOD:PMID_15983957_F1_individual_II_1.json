@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15983957_F1_individual_II_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18921,
+  "tokens_out": 173,
+  "finish_reason": "stop",
+  "latency_s": 3.044367551803589,
+  "cost_usd": 0.0015621200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"UMOD\": 0.95, \"AKR1B10\": 0.75, \"DCAKD\": 0.65, \"FGF7\": 0.6, \"DNAAF3\": 0.55, \"STRBP\": 0.5, \"OR51A4\": 0.45, \"SPRR2F\": 0.4, \"ERLIN1\": 0.35, \"TMEM275\": 0.3, \"GBP5\": 0.25, \"INTS2\": 0.2, \"C1orf115\": 0.15, \"OR6C2\": 0.1, \"LCE3C\": 0.05}",
+  "parsed_top5": [
+    "UMOD",
+    "AKR1B10",
+    "DCAKD",
+    "FGF7",
+    "DNAAF3"
+  ]
+}

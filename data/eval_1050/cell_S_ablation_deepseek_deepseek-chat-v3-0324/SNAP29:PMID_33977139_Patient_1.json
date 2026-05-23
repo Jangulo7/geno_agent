@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "NDUFV3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "COG1",
+  "top1_correct": false,
+  "causal_rank": 4,
+  "tokens_in": 16432,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 44.00668287277222,
+  "cost_usd": 0.0038261700000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"COG1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"COG1 mutations are linked to hypotonia, scoliosis, seizures, and dysmorphism, closely matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NDUFV3\",\n    \"confidence\": 0.7,\n    \"rationale\": \"NDUFV3 variants are associated with seizures, hypotonia, and hypertonia, but evidence is less specific than COG1.\"\n  },\n  {\n    \"gene\": \"LARS1\",\n    \"confidence\": 0.5,\n    \"rationale\": \"LARS1 mutations can cause hypotonia and seizures, but dermatologic features are less well-documented.\"\n  },\n  {\n    \"gene\": \"SNAP29\",\n    \"confidence\": 0.4,\n    \"rationale\": \"SNAP29 is linked to ichthyosis and neurological issues, but lacks strong evidence for other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"FKBP10\",\n    \"confidence\": 0.3,\n    \"rationale\": \"FKBP10 is associated with scoliosis but lacks evidence for neurological or dermatologic features.\"\n  },\n  {\n    \"gene\": \"PLA2G4A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PLA2G4A has limited evidence linking it to neurological or dermatologic phenotypes in this context.\"\n  },\n  {\n    \"gene\": \"ADGRG2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"ADGRG2 mutations are not strongly associated with the patient's multisystem presentation.\"\n  },\n  {\n    \"gene\": \"KCNQ3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"KCNQ3 is primarily linked to seizures, with no strong evidence for other features.\"\n  },\n  {\n    \"gene\": \"ESPN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ESPN is not strongly linked to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"HOXA10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"HOXA10 is not well-supported by evidence for this patient's features.\"\n  },\n  {\n    \"gene\": \"TBC1D3L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"TBC1D3L lacks evidence linking it to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"OR14A16\",\n    \"confidence\": 0.0,\n    \"rationale\": \"OR14A16 is unrelated to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SYAP1\",\n    \"confidence\": 0.0,\n    \"rationale\": \"SYAP1 has no relevant evidence for the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"RPL34\",\n    \"confidence\": 0.0,\n    \"rationale\": \"RPL34 is not associated with the patient's multisystem features.\"\n  },\n  {\n    \"gene\": \"TYW3\",\n    \"confidence\": 0.0,\n    \"rationale\": \"TYW3 lacks evidence linking it to the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "COG1",
+    "NDUFV3",
+    "LARS1",
+    "SNAP29",
+    "FKBP10"
+  ]
+}

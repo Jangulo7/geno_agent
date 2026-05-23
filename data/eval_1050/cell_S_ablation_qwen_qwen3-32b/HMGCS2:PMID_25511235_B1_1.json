@@ -1,0 +1,22 @@
+{
+  "case_id": "HMGCS2:PMID_25511235_B1_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "HMGCS2",
+  "orig_qwen3_8b_top1": "HMGCS2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HMGCS2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12687,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.745093822479248,
+  "cost_usd": 0.0010306400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"HMGCS2\", \"confidence\": 0.95, \"rationale\": \"HMGCS2 deficiency directly causes hypoglycemia, metabolic acidosis, coma, and seizures in infants, as shown in multiple case series.\"}",
+  "parsed_top5": [
+    "HMGCS2"
+  ]
+}

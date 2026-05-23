@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_19",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15438,
+  "tokens_out": 602,
+  "finish_reason": "stop",
+  "latency_s": 57.8179874420166,
+  "cost_usd": 0.0035511400000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to adrenal insufficiency with hyperpigmentation, low cortisol, and hormonal imbalances.\"\n  },\n  {\n    \"gene\": \"GPHB5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Involved in hormone regulation but lacks direct evidence for adrenal or skin phenotypes.\"\n  },\n  {\n    \"gene\": \"PSMB2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking it to adrenal insufficiency or hyperpigmentation.\"\n  },\n  {\n    \"gene\": \"ADAT2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for adrenal or skin phenotypes.\"\n  },\n  {\n    \"gene\": \"H3C1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence supporting adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"SVEP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence linking it to adrenal insufficiency or hyperpigmentation.\"\n  },\n  {\n    \"gene\": \"CIROZ\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for adrenal or skin phenotypes.\"\n  },\n  {\n    \"gene\": \"ALKAL1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence supporting adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"PLEKHA8\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence linking it to adrenal insufficiency or hyperpigmentation.\"\n  },\n  {\n    \"gene\": \"PLEKHG2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for adrenal or skin phenotypes.\"\n  },\n  {\n    \"gene\": \"UAP1L1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence supporting adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"C14orf132\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking it to adrenal insufficiency or hyperpigmentation.\"\n  },\n  {\n    \"gene\": \"PCYT1B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for adrenal or skin phenotypes.\"\n  },\n  {\n    \"gene\": \"C1QTNF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"NTF3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking it to adrenal insufficiency or hyperpigmentation.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "GPHB5",
+    "PSMB2",
+    "ADAT2",
+    "H3C1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "HMBS:PMID_15534187_proband",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "HMBS",
+  "orig_qwen3_8b_top1": "HMBS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HMBS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17726,
+  "tokens_out": 652,
+  "finish_reason": "stop",
+  "latency_s": 24.31819200515747,
+  "cost_usd": 0.00160064,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"HMBS\", \"confidence\": 0.95, \"rationale\": \"HMBS mutations cause acute intermittent porphyria, aligning with reduced erythrocyte PBGD activity, elevated urinary coproporphyrin, and neurological symptoms.\"}, {\"gene\": \"BECN1\", \"confidence\": 0.1, \"rationale\": \"BECN1 is not associated with porphyria or the described biochemical and neurological features.\"}, {\"gene\": \"NEK1\", \"confidence\": 0.1, \"rationale\": \"NEK1 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"LCE2C\", \"confidence\": 0.1, \"rationale\": \"LCE2C is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"SCYL1\", \"confidence\": 0.1, \"rationale\": \"SCYL1 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"GTF2E1\", \"confidence\": 0.1, \"rationale\": \"GTF2E1 is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"OR10A4\", \"confidence\": 0.1, \"rationale\": \"OR10A4 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"GOLGA8Q\", \"confidence\": 0.1, \"rationale\": \"GOLGA8Q is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"NIBAN3\", \"confidence\": 0.1, \"rationale\": \"NIBAN3 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"TCAF2\", \"confidence\": 0.1, \"rationale\": \"TCAF2 is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"SUSD6\", \"confidence\": 0.1, \"rationale\": \"SUSD6 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"CT47A11\", \"confidence\": 0.1, \"rationale\": \"CT47A11 is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"ATP1A2\", \"confidence\": 0.1, \"rationale\": \"ATP1A2 is not linked to porphyria or the observed clinical and biochemical profile.\"}, {\"gene\": \"MRPL54\", \"confidence\": 0.1, \"rationale\": \"MRPL54 is not associated with porphyria or the described symptoms and biochemical findings.\"}, {\"gene\": \"OR51G2\", \"confidence\": 0.1, \"rationale\": \"OR51G2 is not linked to porphyria or the observed clinical and biochemical profile.\"}]",
+  "parsed_top5": [
+    "HMBS",
+    "BECN1",
+    "NEK1",
+    "LCE2C",
+    "SCYL1"
+  ]
+}

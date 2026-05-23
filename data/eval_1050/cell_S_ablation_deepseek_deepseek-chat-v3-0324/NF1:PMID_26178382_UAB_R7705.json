@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_26178382_UAB_R7705",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13118,
+  "tokens_out": 527,
+  "finish_reason": "stop",
+  "latency_s": 17.286601543426514,
+  "cost_usd": 0.0030293900000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"NF1\", \"confidence\": 0.99, \"rationale\": \"NF1's evidence explicitly matches HPO phenotypes via NIH diagnostic criteria, including freckling, cafe-au-lait spots, and Lisch nodules.\"},\n  {\"gene\": \"PKIB\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking PKIB to the phenotypes; mentioned only in NF1 context.\"},\n  {\"gene\": \"KRT38\", \"confidence\": 0.05, \"rationale\": \"No relevant evidence; only mentioned in NF1-discussing chunks.\"},\n  {\"gene\": \"TMEM119\", \"confidence\": 0.05, \"rationale\": \"No direct phenotypic association; evidence overlaps with NF1 context.\"},\n  {\"gene\": \"MX2\", \"confidence\": 0.05, \"rationale\": \"Lacks specific evidence; chunks discuss NF1 instead.\"},\n  {\"gene\": \"REG3A\", \"confidence\": 0.05, \"rationale\": \"No direct support; evidence chunks reference NF1 phenotypes.\"},\n  {\"gene\": \"NFX1\", \"confidence\": 0.05, \"rationale\": \"Evidence irrelevant; focuses on NF1 diagnostic criteria.\"},\n  {\"gene\": \"PPIA\", \"confidence\": 0.05, \"rationale\": \"No phenotype link; evidence overlaps with NF1 descriptions.\"},\n  {\"gene\": \"DDAH1\", \"confidence\": 0.05, \"rationale\": \"No connection; evidence refers to NF1 cases.\"},\n  {\"gene\": \"COPS5\", \"confidence\": 0.05, \"rationale\": \"Unrelated; chunks discuss NF1 diagnostics.\"},\n  {\"gene\": \"ERLN\", \"confidence\": 0.05, \"rationale\": \"No supporting evidence; NF1-related chunks used.\"},\n  {\"gene\": \"TRAFD1\", \"confidence\": 0.05, \"rationale\": \"No phenotypic relevance; NF1 evidence dominates.\"},\n  {\"gene\": \"DACT3\", \"confidence\": 0.05, \"rationale\": \"No association; evidence describes NF1 features.\"},\n  {\"gene\": \"MLH3\", \"confidence\": 0.05, \"rationale\": \"Irrelevant; chunks discuss NF1 criteria.\"},\n  {\"gene\": \"ACKR2\", \"confidence\": 0.05, \"rationale\": \"No link; NF1 evidence reused without relevance.\"}\n]",
+  "parsed_top5": [
+    "NF1",
+    "PKIB",
+    "KRT38",
+    "TMEM119",
+    "MX2"
+  ]
+}

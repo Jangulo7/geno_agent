@@ -1,0 +1,22 @@
+{
+  "case_id": "CBS:PMID_8755636_patient",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CBS",
+  "orig_qwen3_8b_top1": "CBS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CHD8",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17755,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.187251091003418,
+  "cost_usd": 0.0014360800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"CHD8\",\"confidence\":0.95,\"rationale\":\"CHD8 is strongly associated with tall stature, intellectual disability, and musculoskeletal abnormalities like arachnodactyly, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "CHD8"
+  ]
+}

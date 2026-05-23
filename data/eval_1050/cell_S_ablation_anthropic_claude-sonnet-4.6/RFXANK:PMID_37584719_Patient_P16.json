@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P16",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15520,
+  "tokens_out": 761,
+  "finish_reason": "stop",
+  "latency_s": 11.881267786026001,
+  "cost_usd": 0.057975,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RFXANK\",\"confidence\":0.91,\"rationale\":\"RFXANK evidence directly and specifically links MHC class II deficiency caused by RFXANK mutations to recurrent sinopulmonary infections/pneumonia, chronic diarrhea with malabsorption, and failure to thrive\u2014matching all three HPO phenotypes.\"},{\"gene\":\"SET\",\"confidence\":0.03,\"rationale\":\"SET evidence mentions pneumonia and chronic diarrhea in a case but lacks direct gene-phenotype linkage; evidence is non-specific and not attributed to SET function.\"},{\"gene\":\"DAGLA\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DAGLA to the patient's phenotype triad; evidence chunks are generic immunodeficiency cases not attributed to DAGLA.\"},{\"gene\":\"PIGT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PIGT to failure to thrive, chronic diarrhea, and recurrent pneumonia; evidence chunks are non-specific.\"},{\"gene\":\"CACNB3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CACNB3 to the patient's phenotype triad; evidence chunks are generic and unrelated to CACNB3 function.\"},{\"gene\":\"TF\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TF to the patient's phenotype triad; evidence chunks are generic immunodeficiency descriptions.\"},{\"gene\":\"EDARADD\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking EDARADD to failure to thrive, chronic diarrhea, and recurrent pneumonia; evidence is non-specific.\"},{\"gene\":\"VARS1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking VARS1 to the patient's phenotype triad; evidence chunks are generic and unrelated to VARS1.\"},{\"gene\":\"IFITM3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking IFITM3 to the patient's phenotype triad; evidence chunks are generic immunodeficiency descriptions.\"},{\"gene\":\"RPP25L\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RPP25L to the patient's phenotype triad; evidence chunks are generic SCID descriptions.\"},{\"gene\":\"CLRN3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CLRN3 to the patient's phenotype triad; evidence chunks are generic and unrelated to CLRN3.\"},{\"gene\":\"STAG3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking STAG3 to the patient's phenotype triad; evidence chunks are generic immunodeficiency descriptions.\"},{\"gene\":\"SEMA5B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SEMA5B to the patient's phenotype triad; evidence chunks are generic and unrelated to SEMA5B.\"},{\"gene\":\"SLC35A4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC35A4 to the patient's phenotype triad; evidence chunks are generic immunodeficiency descriptions.\"},{\"gene\":\"ADAM29\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ADAM29 to the patient's phenotype triad; evidence chunks are generic and unrelated to ADAM29.\"}]",
+  "parsed_top5": [
+    "RFXANK",
+    "SET",
+    "DAGLA",
+    "PIGT",
+    "CACNB3"
+  ]
+}

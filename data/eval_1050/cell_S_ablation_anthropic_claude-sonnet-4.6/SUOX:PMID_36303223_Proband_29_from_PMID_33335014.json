@@ -1,0 +1,26 @@
+{
+  "case_id": "SUOX:PMID_36303223_Proband_29_from_PMID_33335014",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SUOX",
+  "orig_qwen3_8b_top1": "MACF1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SUOX",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18284,
+  "tokens_out": 730,
+  "finish_reason": "stop",
+  "latency_s": 11.9550461769104,
+  "cost_usd": 0.065802,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SUOX\",\"confidence\":0.92,\"rationale\":\"SUOX causes isolated sulfite oxidase deficiency, directly explaining all key HPO terms: seizures, hypotonia, global developmental delay, hypocystinemia, hypouricemia, and sulfocysteinuria.\"},{\"gene\":\"MACF1\",\"confidence\":0.03,\"rationale\":\"MACF1 variants cause seizures, hypotonia, and global developmental delay but lack the metabolic features (hypocystinemia, hypouricemia, sulfocysteinuria) defining this patient.\"},{\"gene\":\"MDGA2\",\"confidence\":0.02,\"rationale\":\"MDGA2 loss-of-function causes DEE with hypotonia and seizures but no metabolic phenotype matching hypocystinemia, hypouricemia, or sulfocysteinuria.\"},{\"gene\":\"SKI\",\"confidence\":0.01,\"rationale\":\"SKI haploinsufficiency in 1p36 deletion causes seizures and developmental delay but not the specific metabolic abnormalities present in this patient.\"},{\"gene\":\"CA5A\",\"confidence\":0.005,\"rationale\":\"CA5A deficiency causes developmental delay and metabolic crises but not hypocystinemia, hypouricemia, or sulfocysteinuria.\"},{\"gene\":\"BMAL1\",\"confidence\":0.004,\"rationale\":\"BMAL1 variants cause developmental delay and seizures but no metabolic phenotype matching this patient's profile.\"},{\"gene\":\"RAP1B\",\"confidence\":0.003,\"rationale\":\"RAP1B variants cause Kabuki-like syndrome with developmental delay and seizures but not the specific metabolic features here.\"},{\"gene\":\"SEC23B\",\"confidence\":0.002,\"rationale\":\"SEC23B evidence is indirect; no metabolic phenotype matching hypocystinemia, hypouricemia, or sulfocysteinuria is described.\"},{\"gene\":\"POLE\",\"confidence\":0.002,\"rationale\":\"POLE evidence shows epilepsy and developmental delay but no metabolic features matching this patient.\"},{\"gene\":\"OFD1\",\"confidence\":0.001,\"rationale\":\"OFD1 mutations cause ciliopathy/brain malformations without the metabolic phenotype seen here.\"},{\"gene\":\"ANXA11\",\"confidence\":0.001,\"rationale\":\"No relevant evidence linking ANXA11 to this patient's metabolic or neurological phenotype profile.\"},{\"gene\":\"YIPF1\",\"confidence\":0.001,\"rationale\":\"No direct evidence linking YIPF1 to hypocystinemia, hypouricemia, or sulfocysteinuria.\"},{\"gene\":\"RIBC2\",\"confidence\":0.001,\"rationale\":\"No evidence linking RIBC2 to the specific metabolic or neurological phenotype of this patient.\"},{\"gene\":\"RBMY1D\",\"confidence\":0.001,\"rationale\":\"No relevant evidence linking RBMY1D to this patient's phenotype profile.\"},{\"gene\":\"CIMIP6\",\"confidence\":0.001,\"rationale\":\"No relevant evidence linking CIMIP6 to hypocystinemia, hypouricemia, sulfocysteinuria, or this patient's phenotype.\"}]",
+  "parsed_top5": [
+    "SUOX",
+    "MACF1",
+    "MDGA2",
+    "SKI",
+    "CA5A"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_27108797_F3_II1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15292,
+  "tokens_out": 784,
+  "finish_reason": "stop",
+  "latency_s": 25.289843797683716,
+  "cost_usd": 0.0014428800000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"Strong evidence links ITPR1 mutations to cerebellar atrophy, ataxia, postural tremor, and developmental delay, matching the patient's HPO features.\"}, {\"gene\": \"POLR3K\", \"confidence\": 0.65, \"rationale\": \"POLR3K is associated with ataxia, hypotonia, and developmental delay, but less specific to cerebellar atrophy and nystagmus.\"}, {\"gene\": \"PMP22\", \"confidence\": 0.55, \"rationale\": \"PMP22 is linked to gait ataxia and hand tremor, but not typically to cerebellar atrophy or nystagmus.\"}, {\"gene\": \"PCYOX1L\", \"confidence\": 0.45, \"rationale\": \"PCYOX1L is associated with motor delay and ataxia, but lacks strong evidence for cerebellar atrophy or nystagmus.\"}, {\"gene\": \"HNRNPDL\", \"confidence\": 0.4, \"rationale\": \"HNRNPDL is linked to ataxia and developmental delay, but not strongly to cerebellar atrophy or nystagmus.\"}, {\"gene\": \"CDX1\", \"confidence\": 0.35, \"rationale\": \"CDX1 is not well-established in ataxia or cerebellar disorders, with limited evidence for the patient's features.\"}, {\"gene\": \"STRA8\", \"confidence\": 0.3, \"rationale\": \"STRA8 is not well-characterized in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"NCOA6\", \"confidence\": 0.25, \"rationale\": \"NCOA6 is associated with ataxia and hypotonia, but not strongly with cerebellar atrophy or nystagmus.\"}, {\"gene\": \"ERC1\", \"confidence\": 0.2, \"rationale\": \"ERC1 is linked to ataxia and hypotonia, but lacks strong evidence for cerebellar atrophy or nystagmus.\"}, {\"gene\": \"IKZF4\", \"confidence\": 0.15, \"rationale\": \"IKZF4 is not well-established in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"FAM149A\", \"confidence\": 0.1, \"rationale\": \"FAM149A is not well-characterized in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"KCNH8\", \"confidence\": 0.08, \"rationale\": \"KCNH8 is not well-established in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"C15orf62\", \"confidence\": 0.07, \"rationale\": \"C15orf62 is not well-characterized in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"DCUN1D1\", \"confidence\": 0.06, \"rationale\": \"DCUN1D1 is not well-established in ataxia or developmental delay, with minimal evidence for the patient's features.\"}, {\"gene\": \"UBTD2\", \"confidence\": 0.05, \"rationale\": \"UBTD2 is not well-characterized in ataxia or developmental delay, with minimal evidence for the patient's features.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "POLR3K",
+    "PMP22",
+    "PCYOX1L",
+    "HNRNPDL"
+  ]
+}

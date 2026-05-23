@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_17250669_Patient_A",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18767,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 4.329171419143677,
+  "cost_usd": 0.00151592,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"LMNA mutations directly cause Dunnigan-type lipodystrophy with limb fat loss, insulin resistance, and diabetes, matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

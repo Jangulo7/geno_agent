@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_27108797_F3_II1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16607,
+  "tokens_out": 693,
+  "finish_reason": "stop",
+  "latency_s": 14.911145687103271,
+  "cost_usd": 0.060216,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.82,\"rationale\":\"ITPR1 evidence directly describes early-onset cerebellar ataxia, delayed motor milestones, postural tremor, nystagmus, dysarthria, cerebellar atrophy, and cognitive impairment matching the patient's full phenotype profile (SCA15/SCA29).\"},{\"gene\":\"POLR3K\",\"confidence\":0.04,\"rationale\":\"POLR3-related disorders include cerebellar ataxia and hypomyelination but evidence chunks are not specific to POLR3K and lack iris/aniridia features.\"},{\"gene\":\"PMP22\",\"confidence\":0.03,\"rationale\":\"PMP22 evidence covers CMT/Roussy-L\u00e9vy with postural tremor and gait ataxia but not cerebellar atrophy, intellectual disability, or aniridia.\"},{\"gene\":\"NCOA6\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for NCOA6 describe ataxia and hypotonia but are generic and not gene-specific; no iris/aniridia association.\"},{\"gene\":\"ERC1\",\"confidence\":0.02,\"rationale\":\"ERC1 evidence is non-specific ataxia case reports with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"IKZF4\",\"confidence\":0.01,\"rationale\":\"No specific IKZF4-disease evidence; shared generic ataxia chunks only.\"},{\"gene\":\"C15orf62\",\"confidence\":0.01,\"rationale\":\"No specific C15orf62-disease evidence; shared generic ataxia chunks only.\"},{\"gene\":\"KCNH8\",\"confidence\":0.01,\"rationale\":\"No specific KCNH8-disease evidence linking to cerebellar atrophy or aniridia.\"},{\"gene\":\"DCUN1D1\",\"confidence\":0.01,\"rationale\":\"No specific DCUN1D1-disease evidence; generic ataxia chunks shared with other candidates.\"},{\"gene\":\"PCYOX1L\",\"confidence\":0.01,\"rationale\":\"No specific PCYOX1L-disease evidence; generic shared chunks only.\"},{\"gene\":\"HNRNPDL\",\"confidence\":0.01,\"rationale\":\"No specific HNRNPDL-disease evidence relevant to this phenotype profile.\"},{\"gene\":\"CDX1\",\"confidence\":0.01,\"rationale\":\"CDX1 is a homeobox gene with no established link to cerebellar ataxia or aniridia.\"},{\"gene\":\"STRA8\",\"confidence\":0.005,\"rationale\":\"STRA8 is involved in meiosis with no established neurological or iris phenotype association.\"},{\"gene\":\"FAM149A\",\"confidence\":0.005,\"rationale\":\"FAM149A has no established disease association matching this phenotype profile.\"},{\"gene\":\"UBTD2\",\"confidence\":0.005,\"rationale\":\"UBTD2 has no established disease association matching this phenotype profile.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "POLR3K",
+    "PMP22",
+    "NCOA6",
+    "ERC1"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "DNA2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DNA2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18340,
+  "tokens_out": 76,
+  "finish_reason": "stop",
+  "latency_s": 4.156157970428467,
+  "cost_usd": 0.00148848,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"DNA2\", \"confidence\": 0.95, \"rationale\": \"DNA2 variants are associated with a phenotype including cutaneous photosensitivity, nail dystrophy, corpus callosum hypoplasia, flared metaphysis, short metacarpal, and cataracts, aligning with the patient's HPO terms.\"}",
+  "parsed_top5": [
+    "DNA2"
+  ]
+}

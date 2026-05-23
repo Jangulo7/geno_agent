@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXAP:PMID_37584719_P16",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFXAP",
+  "orig_qwen3_8b_top1": "RFXAP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXAP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 24772,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 47.61822819709778,
+  "cost_usd": 0.005479540000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXAP\",\n    \"confidence\": 0.95,\n    \"rationale\": \"RFXAP is directly linked to MHC class II deficiency, matching the patient's immunodeficiency phenotype including inverted CD4:CD8 ratio and recurrent infections.\"\n  },\n  {\n    \"gene\": \"KCND2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KCND2 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"IARS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IARS1 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"NTM\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NTM to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"SLURP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLURP2 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"E2F2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking E2F2 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"CXADR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CXADR to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ZDHHC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZDHHC2 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"METTL18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking METTL18 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"RENBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RENBP to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"LACTB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LACTB to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"CCDC71L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CCDC71L to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PXDN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PXDN to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"CTXN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CTXN1 to immunodeficiency or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ACTL6A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ACTL6A to immunodeficiency or the patient's specific phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXAP",
+    "KCND2",
+    "IARS1",
+    "NTM",
+    "SLURP2"
+  ]
+}

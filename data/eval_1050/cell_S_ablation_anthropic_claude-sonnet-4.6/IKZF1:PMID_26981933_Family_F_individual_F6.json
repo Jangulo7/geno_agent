@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F6",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16622,
+  "tokens_out": 690,
+  "finish_reason": "stop",
+  "latency_s": 9.833158493041992,
+  "cost_usd": 0.060216,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.82,\"rationale\":\"IKZF1 haploinsufficiency directly causes low/normal total B cells, decreased memory B cells, and marked reduction in IgG/IgM/IgA, matching all patient HPO phenotypes including recurrent sinusitis.\"},{\"gene\":\"RFX7\",\"confidence\":0.04,\"rationale\":\"No direct gene-specific evidence linking RFX7 to this phenotype profile; only generic CVID background literature provided.\"},{\"gene\":\"EXOSC10\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking EXOSC10 to B cell deficiency or hypogammaglobulinemia; only generic background literature provided.\"},{\"gene\":\"RGS13\",\"confidence\":0.02,\"rationale\":\"RGS13 is a germinal center B cell marker but no evidence it causes the described immunodeficiency phenotype when mutated.\"},{\"gene\":\"ENTPD8\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence connecting ENTPD8 to B cell deficiency or hypogammaglobulinemia in the provided literature.\"},{\"gene\":\"THSD7A\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking THSD7A to the described immunodeficiency phenotype.\"},{\"gene\":\"ANP32E\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking ANP32E to B cell deficiency or hypogammaglobulinemia.\"},{\"gene\":\"PSG1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking PSG1 to the described immunodeficiency phenotype.\"},{\"gene\":\"OLFML2A\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking OLFML2A to B cell deficiency or hypogammaglobulinemia.\"},{\"gene\":\"TRAPPC5\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking TRAPPC5 to the described immunodeficiency phenotype.\"},{\"gene\":\"SPRY1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking SPRY1 to B cell deficiency or hypogammaglobulinemia.\"},{\"gene\":\"TAPT1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking TAPT1 to the described immunodeficiency phenotype.\"},{\"gene\":\"ARV1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking ARV1 to B cell deficiency or hypogammaglobulinemia.\"},{\"gene\":\"ACOX3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking ACOX3 to the described immunodeficiency phenotype.\"},{\"gene\":\"LPAR1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking LPAR1 to B cell deficiency or hypogammaglobulinemia in the provided literature.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "RFX7",
+    "EXOSC10",
+    "RGS13",
+    "ENTPD8"
+  ]
+}

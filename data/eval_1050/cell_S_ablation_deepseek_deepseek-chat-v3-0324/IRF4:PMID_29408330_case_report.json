@@ -1,0 +1,22 @@
+{
+  "case_id": "IRF4:PMID_29408330_case_report",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 7433,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 3.7828118801116943,
+  "cost_usd": 0.00152895,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"IRF4\",\n  \"confidence\": 0.9,\n  \"rationale\": \"IRF4 is directly linked to B cell differentiation and immunoglobulin production, matching the patient's decreased IgA, IgE, and IgG levels.\"\n  }",
+  "parsed_top5": [
+    "IRF4"
+  ]
+}

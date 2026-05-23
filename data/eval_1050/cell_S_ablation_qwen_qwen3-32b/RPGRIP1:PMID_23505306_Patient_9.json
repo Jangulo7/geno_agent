@@ -1,0 +1,22 @@
+{
+  "case_id": "RPGRIP1:PMID_23505306_Patient_9",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RPGRIP1",
+  "orig_qwen3_8b_top1": "RPGR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RPGR",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17965,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 3.705704927444458,
+  "cost_usd": 0.00145176,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"RPGR\",\"confidence\":0.95,\"rationale\":\"RPGR mutations are directly linked to retinal pigment epithelial mottling, retinal vessel attenuation, and abnormal electroretinogram in RP cases.\"}",
+  "parsed_top5": [
+    "RPGR"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "NKX6-2:PMID_29388673_Fam_3_III_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NKX6-2",
+  "orig_qwen3_8b_top1": "POLR3D",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NKX6-2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12925,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 11.790008783340454,
+  "cost_usd": 0.0026327399999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"NKX6-2\",\n  \"confidence\": 0.9,\n  \"rationale\": \"NKX6-2 mutations are directly linked to early-onset spastic ataxia with brain hypomyelination, matching the patient's CNS hypomyelination and motor delay.\"\n}",
+  "parsed_top5": [
+    "NKX6-2"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "SNAPC4:PMID_36965478_Individual_8",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNAPC4",
+  "orig_qwen3_8b_top1": "WDR91",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16958,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 3.263545036315918,
+  "cost_usd": 0.0013625200000000003,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'evidence' field for each gene.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'evidence' field for each gene.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_22089833_4_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16290,
+  "tokens_out": 717,
+  "finish_reason": "stop",
+  "latency_s": 33.40532183647156,
+  "cost_usd": 0.0038100900000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple literature chunks directly link SPINK5 mutations to Netherton syndrome, matching all patient HPO phenotypes including trichorrhexis nodosa and ichthyosis linearis circumflexa.\"\n  },\n  {\n    \"gene\": \"HSF1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking HSF1 to the patient's phenotype profile; mentions are generic about atopic dermatitis.\"\n  },\n  {\n    \"gene\": \"NCF2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting NCF2 to the described dermatological or immunological phenotypes.\"\n  },\n  {\n    \"gene\": \"RHOB\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found connecting RHOB to the patient's specific skin barrier or atopic symptoms.\"\n  },\n  {\n    \"gene\": \"ZNF658\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence supporting a role in dermatological or atopic conditions matching the HPO terms.\"\n  },\n  {\n    \"gene\": \"POF1B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found linking POF1B to any of the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NLRP2B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting NLRP2B to ichthyosis or atopic manifestations.\"\n  },\n  {\n    \"gene\": \"ADRA2B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found for ADRA2B's involvement in skin barrier disorders or atopy.\"\n  },\n  {\n    \"gene\": \"ALKBH5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence connecting ALKBH5 to the described dermatological phenotypes.\"\n  },\n  {\n    \"gene\": \"SERPINA6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found linking SERPINA6 to skin barrier defects or elevated IgE.\"\n  },\n  {\n    \"gene\": \"GTPBP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence supporting GTPBP2's role in the patient's phenotype constellation.\"\n  },\n  {\n    \"gene\": \"AKR7A3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence associating AKR7A3 with ichthyosis, atopy, or hair shaft abnormalities.\"\n  },\n  {\n    \"gene\": \"EIF1AY\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found for EIF1AY's involvement in dermatological or immunological disorders.\"\n  },\n  {\n    \"gene\": \"CTTN\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting CTTN to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"SIPA1L2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence supporting SIPA1L2's role in skin barrier dysfunction or atopy.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "HSF1",
+    "NCF2",
+    "RHOB",
+    "ZNF658"
+  ]
+}

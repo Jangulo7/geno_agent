@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_31069201_Mother",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16391,
+  "tokens_out": 670,
+  "finish_reason": "stop",
+  "latency_s": 24.846412897109985,
+  "cost_usd": 0.0037941000000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking IKZF1 mutations to immune deficits, thrombocytopenia, and B-cell dysfunction matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DNASE1L3\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Limited direct evidence, but DNASE1L3 is associated with immune deficiencies and autoimmunity vaguely similar to patient's symptoms.\"\n  },\n  {\n    \"gene\": \"STYX\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some indirect associations with immune regulation, but less direct evidence for causing the observed phenotype.\"\n  },\n  {\n    \"gene\": \"GPR158\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Minimal evidence linking GPR158 to immune or platelet disorders seen in the patient.\"\n  },\n  {\n    \"gene\": \"SEMA4B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No strong evidence tying SEMA4B to thrombocytopenia or immunodeficiency matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"CENPC\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct relevance found; weak hypothetical link to cellular dysfunction.\"\n  },\n  {\n    \"gene\": \"TMEM41B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks compelling evidence for involvement in immune or platelet pathologies.\"\n  },\n  {\n    \"gene\": \"SPINK9\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No documented role in immune deficiencies or related hematologic conditions.\"\n  },\n  {\n    \"gene\": \"NOCT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting NOCT to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SLC25A19\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known association with immune or platelet disorders akin to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"INA\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting INA's role in immunodeficiency or thrombocytopenia.\"\n  },\n  {\n    \"gene\": \"USP17L23\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking USP17L23 to B-cell dysfunction or thrombocytopenia.\"\n  },\n  {\n    \"gene\": \"STARD10\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Absence of evidence tying STARD10 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DTYMK\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known involvement in immune deficiencies or related platelet disorders.\"\n  },\n  {\n    \"gene\": \"OR9A4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Olfactory receptor gene; no plausible link to observed immunological or hematological symptoms.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "IKZF1",
+    "DNASE1L3",
+    "STYX",
+    "GPR158",
+    "SEMA4B"
+  ]
+}

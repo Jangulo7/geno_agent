@@ -1,0 +1,22 @@
+{
+  "case_id": "RGS9BP:PMID_19818506_Patient_1A",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RGS9BP",
+  "orig_qwen3_8b_top1": "RGS9BP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RGS9BP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15820,
+  "tokens_out": 43,
+  "finish_reason": "stop",
+  "latency_s": 4.030501127243042,
+  "cost_usd": 0.00319711,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"RGS9BP\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Directly linked to bradyopsia with matching patient phenotypes and molecular evidence.\"\n}",
+  "parsed_top5": [
+    "RGS9BP"
+  ]
+}

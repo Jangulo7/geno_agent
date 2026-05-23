@@ -1,0 +1,22 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "ZNF595",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ZNF595",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17537,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 3.746434211730957,
+  "cost_usd": 0.00141836,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ZNF595\", \"confidence\": 0.95, \"rationale\": \"Strong association with conotruncal defects including transposition of the great arteries, double outlet right ventricle, and aortic arch anomalies.\"}",
+  "parsed_top5": [
+    "ZNF595"
+  ]
+}

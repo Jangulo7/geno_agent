@@ -1,0 +1,26 @@
+{
+  "case_id": "KDM6B:PMID_37196654_Individual_8",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "KDM6B",
+  "orig_qwen3_8b_top1": "BMPR1B",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SNED1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17421,
+  "tokens_out": 1222,
+  "finish_reason": "stop",
+  "latency_s": 24.481509685516357,
+  "cost_usd": 0.070593,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "Looking at the evidence, I need to identify which gene's evidence most directly supports the patient's phenotype profile: cryptorchidism, brachycephaly, congenital hip dislocation, clinodactyly, short palm, thoracic kyphosis, joint hypermobility, hypotelorism, breech presentation, delayed walking, delayed speech, mild intellectual disability.\n\nThe SNED1 chunk_3 describes a 5-year-old boy with bilateral hip dislocation, cryptorchidism, brachycephaly, increased joint mobility, brachydactyly, motor delay - this matches very well. However, this same chunk appears for multiple genes (C5orf34, DNM1L, TDP1, THAP2, BRAT1, PNO1, PRR15L).\n\nThe MMP15/ZNF430/C5orf34/DNM1L/TMEM260/KLF18 chunk_2 (WDSTS discussion) mentions hip dysplasia, short palm, fifth-finger clinodactyly, intellectual disability - matching several HPO terms.\n\nSNED1 is actually associated with a connective tissue disorder with hip dislocation, joint hypermobility, brachycephaly, cryptorchidism - matching the most HPO terms directly. The chunk_3 case (Indian boy with bilateral hip dislocation, cryptorchidism, brachycephaly, joint hypermobility, motor delay) appears to be a SNED1 case based on the connective tissue/cardiovascular disease family history mention.\n\nSince most genes share the same evidence chunks and none has a uniquely high-relevance chunk except SNED1 having the most phenotypically matching case description, I'll rank based on phenotype overlap.\n\n[{\"gene\":\"SNED1\",\"confidence\":0.35,\"rationale\":\"Evidence chunk describes a boy with bilateral hip dislocation, cryptorchidism, brachycephaly, joint hypermobility, brachydactyly, and motor delay matching most patient HPO terms.\"},{\"gene\":\"MMP15\",\"confidence\":0.12,\"rationale\":\"WDSTS discussion mentions hip dysplasia, short palm, clinodactyly, intellectual disability, and cryptorchidism overlapping several patient HPO terms.\"},{\"gene\":\"ZNF430\",\"confidence\":0.07,\"rationale\":\"Shares WDSTS evidence chunk with hip dysplasia, short palm, clinodactyly, and intellectual disability partially matching patient phenotype.\"},{\"gene\":\"C5orf34\",\"confidence\":0.07,\"rationale\":\"Evidence includes hip dislocation, cryptorchidism, brachycephaly, joint hypermobility, and motor delay case overlapping patient HPO terms.\"},{\"gene\":\"DNM1L\",\"confidence\":0.06,\"rationale\":\"Shares evidence of hip dislocation, cryptorchidism, brachycephaly, joint hypermobility, and motor delay but no direct gene-specific link.\"},{\"gene\":\"THAP2\",\"confidence\":0.05,\"rationale\":\"Evidence mentions cryptorchidism, hip dislocation, brachycephaly, and motor delay in shared case but no direct THAP2-specific association.\"},{\"gene\":\"BRAT1\",\"confidence\":0.05,\"rationale\":\"Shares case evidence of hip dislocation, cryptorchidism, brachycephaly, joint hypermobility, and motor delay without direct gene linkage.\"},{\"gene\":\"PNO1\",\"confidence\":0.04,\"rationale\":\"Shares hip dislocation, cryptorchidism, brachycephaly, joint hypermobility case evidence without specific PNO1 disease association.\"},{\"gene\":\"PRR15L\",\"confidence\":0.04,\"rationale\":\"Shares hip dislocation, cryptorchidism, brachycephaly case evidence; campomelic dysplasia chunk mentions hip dislocation and clinodactyly.\"},{\"gene\":\"TDP1\",\"confidence\":0.03,\"rationale\":\"Shares hip dislocation case evidence but TDP1 is known for spinocerebellar ataxia, not matching this phenotype profile well.\"},{\"gene\":\"TMEM260\",\"confidence\":0.03,\"rationale\":\"Shares NS-related evidence with brachycephaly, cryptorchidism, clinodactyly but TMEM260 is associated with structural heart/renal defects.\"},{\"gene\":\"KLF18\",\"confidence\":0.02,\"rationale\":\"Shares WDSTS and NS evidence chunks but KLF18 has no established disease association matching this phenotype.\"},{\"gene\":\"PSD\",\"confidence\":0.02,\"rationale\":\"Evidence mentions joint hypermobility and hip dislocation in cutis laxa context but PSD gene function does not align with this phenotype.\"},{\"gene\":\"BMPR1B\",\"confidence\":0.02,\"rationale\":\"BMPR1B evidence focuses on brachydactyly type C/symphalangism, not matching the broader syndromic phenotype of this patient.\"},{\"gene\":\"CYP3A43\",\"confidence\":0.02,\"rationale\":\"CYP3A43 is a cytochrome P450 enzyme with no known association with the skeletal/neurodevelopmental phenotype profile presented.\"}]",
+  "parsed_top5": [
+    "SNED1",
+    "MMP15",
+    "ZNF430",
+    "C5orf34",
+    "DNM1L"
+  ]
+}

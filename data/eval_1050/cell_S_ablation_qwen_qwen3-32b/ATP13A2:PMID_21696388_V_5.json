@@ -1,0 +1,20 @@
+{
+  "case_id": "ATP13A2:PMID_21696388_V_5",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17402,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 4.040797233581543,
+  "cost_usd": 0.0013986,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

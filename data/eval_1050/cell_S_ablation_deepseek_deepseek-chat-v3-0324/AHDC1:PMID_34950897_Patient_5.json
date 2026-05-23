@@ -1,0 +1,26 @@
+{
+  "case_id": "AHDC1:PMID_34950897_Patient_5",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AHDC1",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AHDC1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16960,
+  "tokens_out": 767,
+  "finish_reason": "stop",
+  "latency_s": 39.74263596534729,
+  "cost_usd": 0.00398259,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AHDC1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking AHDC1 mutations to Xia-Gibbs syndrome, matching all patient phenotypes including delayed speech, thin upper lip, and broad forehead.\"\n  },\n  {\n    \"gene\": \"MESP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence connecting MESP2 to the patient's phenotypes; mentions dysmorphic features but no strong gene-phenotype association.\"\n  },\n  {\n    \"gene\": \"CHORDC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking CHORDC1 to the patient's specific phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"OR10P1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting OR10P1 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"ANHX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ANHX to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"PTPRCAP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PTPRCAP to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"ZNF114\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF114 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"PTPN11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PTPN11 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"PCCB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PCCB to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"ATP13A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ATP13A1 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"SERPINB10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SERPINB10 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"CASZ1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CASZ1 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"NFKB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NFKB1 to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"POLR2G\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POLR2G to the patient's phenotypes; general mentions of dysmorphic features.\"\n  },\n  {\n    \"gene\": \"SPIB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPIB to the patient's phenotypes; general mentions of dysmorphic features.\"\n  }\n]",
+  "parsed_top5": [
+    "AHDC1",
+    "MESP2",
+    "CHORDC1",
+    "OR10P1",
+    "ANHX"
+  ]
+}

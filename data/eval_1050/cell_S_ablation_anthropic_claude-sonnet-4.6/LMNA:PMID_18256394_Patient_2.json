@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17241,
+  "tokens_out": 755,
+  "finish_reason": "stop",
+  "latency_s": 10.859518051147461,
+  "cost_usd": 0.063048,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"LMNA evidence directly describes HGPS/progeroid syndrome with lipodystrophy, alopecia, micrognathia, circumoral cyanosis, short stature, failure to thrive, mottled pigmentation, prominent vasculature, and reduced subcutaneous fat\u2014matching nearly all patient HPO terms.\"}, {\"gene\": \"SLC17A9\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking SLC17A9 to this phenotype profile; only incidentally listed in a CNV region study.\"}, {\"gene\": \"FOXI1\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence connecting FOXI1 to progeroid/lipodystrophy phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"GNAQ\", \"confidence\": 0.01, \"rationale\": \"No evidence linking GNAQ to this phenotype cluster; evidence chunks are generic and non-specific.\"}, {\"gene\": \"SCOC\", \"confidence\": 0.01, \"rationale\": \"No evidence connecting SCOC to progeroid or lipodystrophy phenotypes; evidence is non-specific.\"}, {\"gene\": \"SPANXC\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence for SPANXC in this phenotype context; evidence chunks are non-specific.\"}, {\"gene\": \"ZNF274\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ZNF274 to this phenotype profile; evidence is non-specific.\"}, {\"gene\": \"H1-4\", \"confidence\": 0.01, \"rationale\": \"No direct evidence connecting H1-4 to progeroid/lipodystrophy phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"ITK\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ITK to this phenotype cluster; evidence chunks are non-specific.\"}, {\"gene\": \"ZCCHC18\", \"confidence\": 0.01, \"rationale\": \"No evidence connecting ZCCHC18 to progeroid or lipodystrophy phenotypes; evidence is non-specific.\"}, {\"gene\": \"DUSP22\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence for DUSP22 in this phenotype context; evidence chunks are non-specific.\"}, {\"gene\": \"TRA2A\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TRA2A to this phenotype profile; evidence is non-specific.\"}, {\"gene\": \"AGPAT3\", \"confidence\": 0.01, \"rationale\": \"No evidence connecting AGPAT3 to progeroid or lipodystrophy phenotypes; evidence is non-specific.\"}, {\"gene\": \"IDNK\", \"confidence\": 0.01, \"rationale\": \"No evidence linking IDNK to this phenotype cluster; evidence chunks are non-specific.\"}, {\"gene\": \"COL6A6\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence for COL6A6 in this phenotype context; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "SLC17A9",
+    "FOXI1",
+    "GNAQ",
+    "SCOC"
+  ]
+}

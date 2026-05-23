@@ -1,0 +1,26 @@
+{
+  "case_id": "AHDC1:PMID_34950897_Patient_5",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AHDC1",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AHDC1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19387,
+  "tokens_out": 694,
+  "finish_reason": "stop",
+  "latency_s": 10.704922914505005,
+  "cost_usd": 0.068571,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AHDC1\",\"confidence\":0.92,\"rationale\":\"AHDC1 evidence directly and explicitly describes Xia-Gibbs syndrome with delayed speech, broad forehead, and thin upper lip as cardinal features in 80% of patients, matching all three HPO terms.\"},{\"gene\":\"MESP2\",\"confidence\":0.02,\"rationale\":\"No direct gene-phenotype link in evidence; shared case report describes overlapping features but MESP2 is not mentioned as causative for this phenotype.\"},{\"gene\":\"CHORDC1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks do not directly implicate CHORDC1 in delayed speech, broad forehead, or thin upper lip; only generic CNV/phenotype matching context.\"},{\"gene\":\"OR10P1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking OR10P1 to the patient's phenotype; evidence is generic CNV context not specific to this gene.\"},{\"gene\":\"ANHX\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ANHX to delayed speech, broad forehead, or thin upper lip vermilion in a specific syndrome.\"},{\"gene\":\"PTPRCAP\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PTPRCAP to the patient's phenotype; evidence is non-specific case report context.\"},{\"gene\":\"ZNF114\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF114 to the patient's phenotype; evidence is generic and non-specific.\"},{\"gene\":\"PTPN11\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PTPN11 to this specific phenotype combination; evidence is non-specific case report context.\"},{\"gene\":\"PCCB\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PCCB to delayed speech, broad forehead, or thin upper lip; evidence is non-specific.\"},{\"gene\":\"ATP13A1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ATP13A1 to this phenotype; evidence is non-specific case report context.\"},{\"gene\":\"SERPINB10\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SERPINB10 to the patient's phenotype; evidence is non-specific.\"},{\"gene\":\"CASZ1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CASZ1 to delayed speech, broad forehead, or thin upper lip vermilion.\"},{\"gene\":\"NFKB1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NFKB1 to this phenotype combination; evidence is non-specific.\"},{\"gene\":\"POLR2G\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking POLR2G to the patient's phenotype; evidence is non-specific case report context.\"},{\"gene\":\"SPIB\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SPIB to delayed speech, broad forehead, or thin upper lip vermilion.\"}]",
+  "parsed_top5": [
+    "AHDC1",
+    "MESP2",
+    "CHORDC1",
+    "OR10P1",
+    "ANHX"
+  ]
+}

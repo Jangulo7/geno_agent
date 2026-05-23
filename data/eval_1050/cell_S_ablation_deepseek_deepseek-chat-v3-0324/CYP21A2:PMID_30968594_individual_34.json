@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_34",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13520,
+  "tokens_out": 662,
+  "finish_reason": "stop",
+  "latency_s": 25.60817289352417,
+  "cost_usd": 0.0032137399999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking CYP21A2 mutations to adrenal hyperplasia, clitoral hypertrophy, increased testosterone, and decreased ACTH, matching patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Weak association with similar phenotypes but lacks direct evidence linking to the patient's hormonal profile.\"\n  },\n  {\n    \"gene\": \"BSCL2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking BSCL2 to the hormonal abnormalities observed in the patient.\"\n  },\n  {\n    \"gene\": \"TBCC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting TBCC to adrenal or gonadal dysfunction phenotypes.\"\n  },\n  {\n    \"gene\": \"BMP3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented association with hyperandrogenism or adrenal steroidogenesis disorders.\"\n  },\n  {\n    \"gene\": \"PGAP2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting involvement in steroid hormone biosynthesis or adrenal function.\"\n  },\n  {\n    \"gene\": \"CSPG5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known role in hormonal imbalance or adrenal pathology relevant to the patient's condition.\"\n  },\n  {\n    \"gene\": \"MUC22\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking MUC22 to endocrine disorders or the patient's specific phenotypic presentation.\"\n  },\n  {\n    \"gene\": \"TMEM35A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented involvement in adrenal steroidogenesis or hyperandrogenic conditions.\"\n  },\n  {\n    \"gene\": \"MAGED4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known relevance to adrenal disorders or hyperandrogenism observed in the patient.\"\n  },\n  {\n    \"gene\": \"SSU72L1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting SSU72L1 to adrenal dysfunction or hormonal imbalances.\"\n  },\n  {\n    \"gene\": \"FAM131A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented relationship to hyperandrogenism or adrenal steroid pathways.\"\n  },\n  {\n    \"gene\": \"PRELID2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known association with adrenal or gonadal dysfunction phenotypes.\"\n  },\n  {\n    \"gene\": \"GNLY\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking GNLY to hormonal synthesis or adrenal disorders.\"\n  },\n  {\n    \"gene\": \"ZNF286A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known role in steroidogenesis or hyperandrogenic conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "ZP1",
+    "BSCL2",
+    "TBCC",
+    "BMP3"
+  ]
+}

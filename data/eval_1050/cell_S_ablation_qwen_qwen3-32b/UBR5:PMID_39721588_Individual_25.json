@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_25",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HINT1",
+  "top1_correct": false,
+  "causal_rank": 4,
+  "tokens_in": 15293,
+  "tokens_out": 164,
+  "finish_reason": "stop",
+  "latency_s": 16.646414041519165,
+  "cost_usd": 0.0012693600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"HINT1\": 0.9, \"SRCAP\": 0.8, \"SULT2A1\": 0.7, \"UBR5\": 0.6, \"LENG8\": 0.5, \"NHERF4\": 0.4, \"RIPK1\": 0.3, \"MMP21\": 0.2, \"CTNND2\": 0.1, \"INSL5\": 0.09, \"PCNT\": 0.08, \"IQCH\": 0.07, \"TRIP11\": 0.06, \"DNAJC17\": 0.05, \"USP42\": 0.04}",
+  "parsed_top5": [
+    "HINT1",
+    "SRCAP",
+    "SULT2A1",
+    "UBR5",
+    "LENG8"
+  ]
+}

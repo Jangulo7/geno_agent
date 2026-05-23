@@ -1,0 +1,26 @@
+{
+  "case_id": "GSN:PMID_33499149_II_8",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GSN",
+  "orig_qwen3_8b_top1": "GSN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GSN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14440,
+  "tokens_out": 661,
+  "finish_reason": "stop",
+  "latency_s": 26.845269441604614,
+  "cost_usd": 0.0033969700000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n    {\n        \"gene\": \"GSN\",\n        \"confidence\": 0.95,\n        \"rationale\": \"GSN mutations consistently linked to lattice corneal dystrophy, cutis laxa, arrhythmia, cataract, and glaucoma in multiple high-relevance studies.\"\n    },\n    {\n        \"gene\": \"YWHAQ\",\n        \"confidence\": 0.25,\n        \"rationale\": \"Minimal direct evidence linking YWHAQ to the patient's phenotype; relevance largely inferred from general disease context.\"\n    },\n    {\n        \"gene\": \"RAD51D\",\n        \"confidence\": 0.15,\n        \"rationale\": \"No direct evidence connecting RAD51D to the observed phenotypes; low relevance chunks.\"\n    },\n    {\n        \"gene\": \"PRPS1L1\",\n        \"confidence\": 0.15,\n        \"rationale\": \"No direct phenotypic association in provided evidence; low relevance chunks.\"\n    },\n    {\n        \"gene\": \"SDHC\",\n        \"confidence\": 0.15,\n        \"rationale\": \"No direct evidence for SDHC's role in these phenotypes; chunks discuss unrelated genes.\"\n    },\n    {\n        \"gene\": \"TTBK2\",\n        \"confidence\": 0.10,\n        \"rationale\": \"No relevant phenotypic associations in evidence; low confidence.\"\n    },\n    {\n        \"gene\": \"CRYGA\",\n        \"confidence\": 0.10,\n        \"rationale\": \"No direct link to phenotypes; evidence mentions unrelated genes.\"\n    },\n    {\n        \"gene\": \"OR10A6\",\n        \"confidence\": 0.10,\n        \"rationale\": \"No relevant evidence linking olfactory receptor gene to systemic/corneal phenotypes.\"\n    },\n    {\n        \"gene\": \"PLIN4\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No phenotypic relevance in chunks; likely unrelated to disease mechanisms.\"\n    },\n    {\n        \"gene\": \"PSMA6\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No evidence connecting proteasome subunit to amyloidosis or corneal dystrophy.\"\n    },\n    {\n        \"gene\": \"TEX13A\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No relevant phenotypic associations; gene function unrelated to observed traits.\"\n    },\n    {\n        \"gene\": \"GDPD3\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No supporting evidence for GDPD3 in this clinical context.\"\n    },\n    {\n        \"gene\": \"PIP5KL1\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No evidence linking PIP5KL1 to amyloidosis or corneal pathology.\"\n    },\n    {\n        \"gene\": \"CISD3\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No evidence associating CISD3 with the patient's phenotype profile.\"\n    },\n    {\n        \"gene\": \"NDUFAF3\",\n        \"confidence\": 0.05,\n        \"rationale\": \"Mitochondrial complex gene unrelated to amyloidosis or corneal dystrophy per evidence.\"\n    }\n]\n```",
+  "parsed_top5": [
+    "GSN",
+    "YWHAQ",
+    "RAD51D",
+    "PRPS1L1",
+    "SDHC"
+  ]
+}

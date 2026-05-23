@@ -1,0 +1,26 @@
+{
+  "case_id": "GSN:PMID_33499149_II_8",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GSN",
+  "orig_qwen3_8b_top1": "GSN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GSN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15604,
+  "tokens_out": 163,
+  "finish_reason": "stop",
+  "latency_s": 7.055075407028198,
+  "cost_usd": 0.00129396,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GSN\": 0.95, \"OR10A6\": 0.1, \"PRPS1L1\": 0.1, \"YWHAQ\": 0.1, \"PLIN4\": 0.1, \"PSMA6\": 0.1, \"TEX13A\": 0.1, \"SDHC\": 0.1, \"GDPD3\": 0.1, \"TTBK2\": 0.1, \"RAD51D\": 0.1, \"PIP5KL1\": 0.1, \"CRYGA\": 0.1, \"CISD3\": 0.1, \"NDUFAF3\": 0.1}",
+  "parsed_top5": [
+    "GSN",
+    "OR10A6",
+    "PRPS1L1",
+    "YWHAQ",
+    "PLIN4"
+  ]
+}

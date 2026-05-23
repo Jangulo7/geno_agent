@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_II_3",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20425,
+  "tokens_out": 888,
+  "finish_reason": "stop",
+  "latency_s": 12.712786197662354,
+  "cost_usd": 0.074595,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CCN2\",\"confidence\":0.82,\"rationale\":\"CCN2 chunk_1 is rated critic_relevance 5/5 and directly lists waddling gait, joint swelling and pain, short stature (\u22124.16 SD) in CCN2-variant subjects, matching all four patient HPO terms.\"},{\"gene\":\"PODN\",\"confidence\":0.04,\"rationale\":\"PODN evidence chunks are all rated 2/5 relevance and describe non-specific skeletal dysplasia cases with no direct gene-phenotype link to the patient's HPO profile.\"},{\"gene\":\"GPX1\",\"confidence\":0.03,\"rationale\":\"GPX1 evidence is entirely non-specific (2/5 relevance) with no direct association to joint swelling, short stature, arthralgia, or waddling gait via GPX1 variants.\"},{\"gene\":\"SYNPR\",\"confidence\":0.02,\"rationale\":\"SYNPR evidence chunks are all 2/5 relevance and describe unrelated skeletal dysplasia cases with no direct SYNPR-phenotype connection.\"},{\"gene\":\"CTNNBIP1\",\"confidence\":0.02,\"rationale\":\"CTNNBIP1 evidence is non-specific (2/5 relevance) with no direct link between CTNNBIP1 and the patient's musculoskeletal phenotype.\"},{\"gene\":\"ELAVL4\",\"confidence\":0.02,\"rationale\":\"ELAVL4 evidence is entirely non-specific (2/5 relevance) with no established role in joint swelling, short stature, or waddling gait.\"},{\"gene\":\"SNX10\",\"confidence\":0.02,\"rationale\":\"SNX10 evidence chunks are all 2/5 relevance and describe unrelated skeletal dysplasia cases without direct SNX10 gene-phenotype evidence.\"},{\"gene\":\"XXYLT1\",\"confidence\":0.02,\"rationale\":\"XXYLT1 evidence is non-specific (2/5 relevance) with no direct association to the patient's HPO phenotypes.\"},{\"gene\":\"PACRGL\",\"confidence\":0.01,\"rationale\":\"PACRGL evidence is entirely non-specific (2/5 relevance) with no known link to joint swelling, arthralgia, short stature, or waddling gait.\"},{\"gene\":\"LMF1\",\"confidence\":0.01,\"rationale\":\"LMF1 evidence is non-specific (2/5 relevance) with no established musculoskeletal disease association matching the patient's phenotype.\"},{\"gene\":\"C11orf58\",\"confidence\":0.01,\"rationale\":\"C11orf58 evidence is non-specific (2/5 relevance) with no direct gene-phenotype link to the patient's HPO terms.\"},{\"gene\":\"RGS11\",\"confidence\":0.01,\"rationale\":\"RGS11 evidence is non-specific (2/5 relevance) with no known role in joint swelling, short stature, arthralgia, or waddling gait.\"},{\"gene\":\"HMGN1\",\"confidence\":0.01,\"rationale\":\"HMGN1 evidence is non-specific (2/5 relevance) with no direct association to the patient's musculoskeletal phenotype profile.\"},{\"gene\":\"ZNF730\",\"confidence\":0.01,\"rationale\":\"ZNF730 evidence is non-specific (2/5 relevance) with no established connection to joint swelling, short stature, arthralgia, or waddling gait.\"},{\"gene\":\"SLC6A3\",\"confidence\":0.01,\"rationale\":\"SLC6A3 evidence is non-specific (2/5 relevance) and describes dopamine transporter biology unrelated to the patient's musculoskeletal phenotype.\"}]",
+  "parsed_top5": [
+    "CCN2",
+    "PODN",
+    "GPX1",
+    "SYNPR",
+    "CTNNBIP1"
+  ]
+}

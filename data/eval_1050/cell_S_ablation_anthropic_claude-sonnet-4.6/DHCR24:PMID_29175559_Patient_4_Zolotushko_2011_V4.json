@@ -1,0 +1,26 @@
+{
+  "case_id": "DHCR24:PMID_29175559_Patient_4_Zolotushko_2011_V4",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DHCR24",
+  "orig_qwen3_8b_top1": "DHCR24",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DHCR24",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21195,
+  "tokens_out": 803,
+  "finish_reason": "stop",
+  "latency_s": 13.644021272659302,
+  "cost_usd": 0.07563,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DHCR24\",\"confidence\":0.97,\"rationale\":\"DHCR24 encodes 3\u03b2-hydroxysterol-\u039424-reductase; biallelic mutations cause desmosterolosis with elevated desmosterol, corpus callosum dysgenesis, white matter atrophy, ventriculomegaly, microcephaly, micrognathia, seizures, spasticity, failure to thrive, and developmental delay\u2014matching all patient HPO terms exactly.\"},{\"gene\":\"MAP6\",\"confidence\":0.01,\"rationale\":\"MAP6 evidence only mentions it as a schizophrenia mouse model comparator; no direct link to desmosterol or the patient's specific phenotype constellation.\"},{\"gene\":\"SIGLEC12\",\"confidence\":0.005,\"rationale\":\"No disease-relevant evidence for SIGLEC12; chunks are generic and unrelated to cholesterol metabolism or the patient's phenotype.\"},{\"gene\":\"EXOC3\",\"confidence\":0.005,\"rationale\":\"Evidence chunks for EXOC3 are generic brain MRI descriptions with no specific link to desmosterolosis or the patient's biochemical/clinical profile.\"},{\"gene\":\"PIP4K2B\",\"confidence\":0.005,\"rationale\":\"PIP4K2B evidence describes non-specific white matter and corpus callosum findings unrelated to elevated desmosterol or the full phenotype.\"},{\"gene\":\"ENTPD3\",\"confidence\":0.005,\"rationale\":\"ENTPD3 evidence is generic and non-specific; no connection to cholesterol biosynthesis or desmosterolosis phenotype.\"},{\"gene\":\"TXNDC17\",\"confidence\":0.005,\"rationale\":\"TXNDC17 evidence is generic brain MRI data with no relevance to desmosterol metabolism or the patient's specific syndrome.\"},{\"gene\":\"APRT\",\"confidence\":0.005,\"rationale\":\"APRT is a purine metabolism gene; evidence chunks are non-specific and unrelated to the patient's desmosterolosis phenotype.\"},{\"gene\":\"GORASP2\",\"confidence\":0.005,\"rationale\":\"GORASP2 evidence is generic and non-specific; no link to cholesterol biosynthesis or the patient's clinical features.\"},{\"gene\":\"TBC1D3G\",\"confidence\":0.005,\"rationale\":\"TBC1D3G evidence is generic and non-specific; no connection to desmosterol elevation or the patient's phenotype.\"},{\"gene\":\"BFSP2\",\"confidence\":0.005,\"rationale\":\"BFSP2 is a lens fiber protein gene; evidence is generic and unrelated to the patient's neurological and metabolic phenotype.\"},{\"gene\":\"CCDC152\",\"confidence\":0.005,\"rationale\":\"CCDC152 evidence is generic brain MRI data with no specific link to desmosterolosis or the patient's full phenotype.\"},{\"gene\":\"CT47A7\",\"confidence\":0.005,\"rationale\":\"CT47A7 evidence is generic and non-specific; no connection to cholesterol metabolism or the patient's syndrome.\"},{\"gene\":\"LILRA2\",\"confidence\":0.005,\"rationale\":\"LILRA2 is an immune receptor gene; evidence is generic and unrelated to the patient's neurological and metabolic phenotype.\"},{\"gene\":\"STK16\",\"confidence\":0.005,\"rationale\":\"STK16 evidence is generic and non-specific; no link to desmosterol elevation or the patient's clinical features.\"}]",
+  "parsed_top5": [
+    "DHCR24",
+    "MAP6",
+    "SIGLEC12",
+    "EXOC3",
+    "PIP4K2B"
+  ]
+}

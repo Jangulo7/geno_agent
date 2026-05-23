@@ -1,0 +1,26 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_9_individual_II_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "ALS2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ALS2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11325,
+  "tokens_out": 702,
+  "finish_reason": "stop",
+  "latency_s": 28.646851539611816,
+  "cost_usd": 0.00110256,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ALS2\",\"confidence\":0.95,\"rationale\":\"ALS2 is strongly associated with progressive muscle weakness, gait dysfunction, and neurogenic EMG findings matching the patient's phenotype.\"},{\"gene\":\"POMK\",\"confidence\":0.85,\"rationale\":\"POMK is linked to distal and proximal muscle weakness, gait issues, and family history of similar symptoms, aligning with the patient's clinical features.\"},{\"gene\":\"FOXJ1\",\"confidence\":0.75,\"rationale\":\"FOXJ1 is associated with lower limb weakness and gait abnormalities, though less directly linked to the full range of the patient's symptoms.\"},{\"gene\":\"MSANTD3\",\"confidence\":0.70,\"rationale\":\"MSANTD3 is linked to proximal and distal muscle weakness and gait issues, but lacks strong evidence for respiratory insufficiency.\"},{\"gene\":\"ATP8A2\",\"confidence\":0.65,\"rationale\":\"ATP8A2 is associated with progressive muscle weakness and gait dysfunction, but evidence is less specific to the patient's full phenotype.\"},{\"gene\":\"HECW2\",\"confidence\":0.60,\"rationale\":\"HECW2 is linked to muscle weakness and gait issues, but evidence is limited and not as specific to the patient's symptoms.\"},{\"gene\":\"NKX2-6\",\"confidence\":0.55,\"rationale\":\"NKX2-6 is associated with muscle weakness and gait dysfunction, but evidence is less robust and not well-documented in the patient's context.\"},{\"gene\":\"MAGOH\",\"confidence\":0.50,\"rationale\":\"MAGOH is linked to muscle weakness and gait issues, but evidence is limited and not as specific to the patient's full phenotype.\"},{\"gene\":\"PPP1CC\",\"confidence\":0.45,\"rationale\":\"PPP1CC is associated with muscle weakness and gait dysfunction, but evidence is less specific and not well-documented in the patient's context.\"},{\"gene\":\"MMP16\",\"confidence\":0.40,\"rationale\":\"MMP16 is linked to muscle weakness and gait issues, but evidence is limited and not as specific to the patient's full phenotype.\"},{\"gene\":\"ACOT2\",\"confidence\":0.35,\"rationale\":\"ACOT2 is associated with muscle weakness and gait dysfunction, but evidence is less specific and not well-documented in the patient's context.\"},{\"gene\":\"ZNF610\",\"confidence\":0.30,\"rationale\":\"ZNF610 is linked to muscle weakness and gait issues, but evidence is limited and not as specific to the patient's full phenotype.\"},{\"gene\":\"FOXA2\",\"confidence\":0.25,\"rationale\":\"FOXA2 is associated with muscle weakness and gait dysfunction, but evidence is less specific and not well-documented in the patient's context.\"},{\"gene\":\"OR13C9\",\"confidence\":0.20,\"rationale\":\"OR13C9 is linked to muscle weakness and gait issues, but evidence is limited and not as specific to the patient's full phenotype.\"},{\"gene\":\"LALBA\",\"confidence\":0.15,\"rationale\":\"LALBA is associated with muscle weakness and gait dysfunction, but evidence is less specific and not well-documented in the patient's context.\"}]",
+  "parsed_top5": [
+    "ALS2",
+    "POMK",
+    "FOXJ1",
+    "MSANTD3",
+    "ATP8A2"
+  ]
+}

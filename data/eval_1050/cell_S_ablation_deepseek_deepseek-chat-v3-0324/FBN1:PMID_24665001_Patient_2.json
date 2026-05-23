@@ -1,0 +1,26 @@
+{
+  "case_id": "FBN1:PMID_24665001_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FBN1",
+  "orig_qwen3_8b_top1": "FBN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15886,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 23.24374222755432,
+  "cost_usd": 0.00369541,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FBN1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple high-relevance evidence chunks directly link FBN1 to Marfan syndrome, matching the patient's phenotypes including pectus excavatum, arachnodactyly, and aortic root aneurysm.\"\n  },\n  {\n    \"gene\": \"PLOD1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Evidence suggests PLOD1 is associated with connective tissue disorders, but relevance to this patient's specific phenotype profile is limited.\"\n  },\n  {\n    \"gene\": \"PLP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking PLP1 to some skeletal features, but no strong association with the overall phenotype profile.\"\n  },\n  {\n    \"gene\": \"DEFB119\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DEFB119 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PIWIL4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PIWIL4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"HSD11B1L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HSD11B1L to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SPDYE10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPDYE10 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SPZ1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPZ1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PRSS41\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PRSS41 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"JMY\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking JMY to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"EMILIN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EMILIN1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ADAP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADAP2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"DDIT4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DDIT4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KLHL30\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KLHL30 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TPK1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TPK1 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "FBN1",
+    "PLOD1",
+    "PLP1",
+    "DEFB119",
+    "PIWIL4"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "CCN2:PMID_39414788_I_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16018,
+  "tokens_out": 30,
+  "finish_reason": "stop",
+  "latency_s": 2.4637057781219482,
+  "cost_usd": 0.0012898400000000002,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the 'gene' field for some entries. Please provide the 'gene' field for all entries.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the 'gene' field for some entries. Please provide the 'gene' field for all entries.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAPC4:PMID_36965478_Individual_8",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNAPC4",
+  "orig_qwen3_8b_top1": "WDR91",
+  "orig_qwen3_8b_correct": false,
+  "top1": "WDR91",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17583,
+  "tokens_out": 676,
+  "finish_reason": "stop",
+  "latency_s": 11.83270263671875,
+  "cost_usd": 0.062889,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"WDR91\",\"confidence\":0.82,\"rationale\":\"WDR91 evidence directly describes microcephaly, spastic tetraparesis, cognitive/motor regression, cerebellar atrophy, and progressive neurodegeneration matching all patient HPO terms, with high critic relevance scores.\"},{\"gene\":\"TREX1\",\"confidence\":0.07,\"rationale\":\"TREX1/AGS evidence covers cognitive-motor regression, microcephaly, and spastic tetraparesis but evidence chunks are not gene-specific and AGS lacks cerebellar atrophy as a primary feature.\"},{\"gene\":\"C1orf167\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic/low relevance with no direct C1orf167-specific association to this phenotype profile.\"},{\"gene\":\"MRPS34\",\"confidence\":0.02,\"rationale\":\"No direct MRPS34-specific evidence linking it to this phenotype; shared generic chunks only.\"},{\"gene\":\"NOL4L\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; only generic shared chunks with no direct NOL4L-phenotype association.\"},{\"gene\":\"DDIT4L\",\"confidence\":0.01,\"rationale\":\"No direct DDIT4L-specific evidence; only generic shared chunks unrelated to this gene.\"},{\"gene\":\"POTEA\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking POTEA to this neurodegenerative phenotype profile.\"},{\"gene\":\"CISH\",\"confidence\":0.01,\"rationale\":\"No direct CISH-specific evidence; generic chunks only with no mechanistic link to this phenotype.\"},{\"gene\":\"PRR20G\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; only generic shared chunks with no PRR20G-phenotype association.\"},{\"gene\":\"PAFAH1B3\",\"confidence\":0.01,\"rationale\":\"No direct PAFAH1B3-specific evidence linking it to this phenotype; only generic shared chunks.\"},{\"gene\":\"NKAIN3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; only generic shared chunks with no direct NKAIN3-phenotype association.\"},{\"gene\":\"PRRC2B\",\"confidence\":0.01,\"rationale\":\"No direct PRRC2B-specific evidence; only generic shared chunks unrelated to this gene.\"},{\"gene\":\"NF2\",\"confidence\":0.01,\"rationale\":\"NF2 is associated with schwannomatosis/meningioma, not this neurodegenerative phenotype; no specific supporting evidence.\"},{\"gene\":\"RBM28\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking RBM28 to this phenotype profile; only generic shared chunks.\"},{\"gene\":\"TTF1\",\"confidence\":0.01,\"rationale\":\"No direct TTF1-specific evidence for this neurodegenerative phenotype; only generic shared chunks.\"}]",
+  "parsed_top5": [
+    "WDR91",
+    "TREX1",
+    "C1orf167",
+    "MRPS34",
+    "NOL4L"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P6",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16012,
+  "tokens_out": 716,
+  "finish_reason": "stop",
+  "latency_s": 24.9800705909729,
+  "cost_usd": 0.0037537200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"RFXANK\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links RFXANK to recurrent respiratory infections, failure to thrive, and hepatomegaly with MHC II deficiency confirmed by mutation.\"\n  },\n  {\n    \"gene\": \"GALK2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Limited relevance; evidence mentions recurrent infections but lacks direct genetic or mechanistic support for hepatomegaly.\"\n  },\n  {\n    \"gene\": \"XXYLT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking XXYLT1 to the patient's phenotype profile of respiratory infections and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"LARS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LARS2 to the patient's specific symptoms of recurrent pneumonia and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"BBS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence associating BBS1 with the patient's recurrent respiratory infections and failure to thrive.\"\n  },\n  {\n    \"gene\": \"MGAT5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting MGAT5 to the patient's phenotype of recurrent infections and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"TET1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting TET1 as causal for the patient's respiratory infections and failure to thrive.\"\n  },\n  {\n    \"gene\": \"CD70\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CD70 to the patient's symptoms of recurrent pneumonia and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"MTFR1L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence associating MTFR1L with the patient's respiratory infections and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"CMBL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting CMBL to the patient's phenotype of recurrent infections and failure to thrive.\"\n  },\n  {\n    \"gene\": \"NPAS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting NPAS1 as causal for the patient's respiratory infections and hepatomegaly.\"\n  },\n  {\n    \"gene\": \"OR10J5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking OR10J5 to any of the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TDRD10\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence associating TDRD10 with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"HIRIP3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting HIRIP3 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ASCL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence supporting ASCL1 as causal for the patient's phenotype.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "RFXANK",
+    "GALK2",
+    "XXYLT1",
+    "LARS2",
+    "BBS1"
+  ]
+}

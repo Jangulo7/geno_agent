@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_4_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17183,
+  "tokens_out": 63,
+  "finish_reason": "stop",
+  "latency_s": 5.036935567855835,
+  "cost_usd": 0.0034851100000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"LMNA\",\n  \"confidence\": 0.95,\n  \"rationale\": \"LMNA is strongly associated with familial partial lipodystrophy (FPLD) and matches the patient's phenotype including limb fat loss, diabetes, and hypertriglyceridemia.\"\n}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

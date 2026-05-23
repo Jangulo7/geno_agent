@@ -1,0 +1,26 @@
+{
+  "case_id": "RPGRIP1:PMID_12920066_small_family_10CRD",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RPGRIP1",
+  "orig_qwen3_8b_top1": "RPGRIP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RPGRIP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19288,
+  "tokens_out": 769,
+  "finish_reason": "stop",
+  "latency_s": 15.706650018692017,
+  "cost_usd": 0.069399,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RPGRIP1\",\"confidence\":0.82,\"rationale\":\"RPGRIP1 is directly named as a known LCA/retinal dystrophy gene with photophobia, absent ERG, fundus abnormalities, and progressive visual loss matching all patient HPO terms; evidence chunks explicitly mention it.\"},{\"gene\":\"JOSD2\",\"confidence\":0.05,\"rationale\":\"Evidence chunks describe cone dystrophy phenotype matching patient HPO but JOSD2 is not a known retinal disease gene; no direct gene-disease link in evidence.\"},{\"gene\":\"SLX4IP\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SLX4IP to retinal dystrophy; evidence chunks describe CRX-associated CORD phenotype without mentioning SLX4IP.\"},{\"gene\":\"SP110\",\"confidence\":0.02,\"rationale\":\"SP110 is associated with hepatic veno-occlusive disease/immunodeficiency, not retinal dystrophy; evidence chunks are generic retinal disease descriptions.\"},{\"gene\":\"PUS10\",\"confidence\":0.01,\"rationale\":\"No established link between PUS10 and inherited retinal dystrophy; evidence chunks are generic retinal disease case reports.\"},{\"gene\":\"HBM\",\"confidence\":0.01,\"rationale\":\"HBM encodes a hemoglobin subunit with no known retinal disease association; evidence chunks are generic retinal dystrophy descriptions.\"},{\"gene\":\"MAP1LC3B2\",\"confidence\":0.01,\"rationale\":\"MAP1LC3B2 has no established retinal dystrophy association; evidence chunks describe generic cone/cone-rod dystrophy phenotypes.\"},{\"gene\":\"ATAD3C\",\"confidence\":0.01,\"rationale\":\"ATAD3C has no known direct retinal dystrophy link; evidence chunks are generic retinal disease descriptions not mentioning this gene.\"},{\"gene\":\"MED12L\",\"confidence\":0.01,\"rationale\":\"MED12L is associated with intellectual disability syndromes, not retinal dystrophy; evidence chunks are generic retinal disease descriptions.\"},{\"gene\":\"CEACAM6\",\"confidence\":0.01,\"rationale\":\"CEACAM6 is an immune/adhesion molecule with no known retinal dystrophy association; evidence is generic retinal disease background.\"},{\"gene\":\"PLD4\",\"confidence\":0.01,\"rationale\":\"PLD4 has no established retinal dystrophy gene association; evidence chunks are generic retinal disease case reports.\"},{\"gene\":\"ZNF830\",\"confidence\":0.01,\"rationale\":\"ZNF830 has no known retinal dystrophy association; evidence chunks describe generic retinal ciliopathy/dystrophy background.\"},{\"gene\":\"OR1M1\",\"confidence\":0.01,\"rationale\":\"OR1M1 is an olfactory receptor gene with no retinal disease association; evidence chunks are generic retinal dystrophy descriptions.\"},{\"gene\":\"SLC34A3\",\"confidence\":0.01,\"rationale\":\"SLC34A3 causes hereditary hypophosphatemic rickets, not retinal dystrophy; evidence chunks are generic retinal disease descriptions.\"},{\"gene\":\"ITGAX\",\"confidence\":0.01,\"rationale\":\"ITGAX encodes an integrin subunit with no established retinal dystrophy link; evidence chunks are generic retinal disease case reports.\"}]",
+  "parsed_top5": [
+    "RPGRIP1",
+    "JOSD2",
+    "SLX4IP",
+    "SP110",
+    "PUS10"
+  ]
+}

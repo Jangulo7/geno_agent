@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXAP:PMID_37584719_P14",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFXAP",
+  "orig_qwen3_8b_top1": "RFXAP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXAP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 24301,
+  "tokens_out": 181,
+  "finish_reason": "stop",
+  "latency_s": 5.1567912101745605,
+  "cost_usd": 0.00199476,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"RFXAP\": 0.95, \"CINP\": 0.85, \"OSGEP\": 0.8, \"CWC15\": 0.75, \"IVNS1ABP\": 0.7, \"CXXC5\": 0.65, \"SLC25A43\": 0.6, \"FABP6\": 0.55, \"RNASEH2C\": 0.5, \"PRAMEF20\": 0.45, \"SSNA1\": 0.4, \"FHIP1B\": 0.35, \"MDFIC2\": 0.3, \"AKR1C3\": 0.25, \"RPP25L\": 0.2}",
+  "parsed_top5": [
+    "RFXAP",
+    "CINP",
+    "OSGEP",
+    "CWC15",
+    "IVNS1ABP"
+  ]
+}

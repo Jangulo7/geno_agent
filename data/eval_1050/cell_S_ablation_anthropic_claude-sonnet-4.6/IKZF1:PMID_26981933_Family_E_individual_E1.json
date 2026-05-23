@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_E_individual_E1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20512,
+  "tokens_out": 798,
+  "finish_reason": "stop",
+  "latency_s": 14.647040367126465,
+  "cost_usd": 0.073506,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"IKZF1\", \"confidence\": 0.82, \"rationale\": \"IKZF1 evidence directly mentions recurrent pneumonia, chronic diarrhea, inverted CD4/CD8 ratio, reduced B cells, low IgA, and CVID-like immunophenotype matching all patient HPO terms.\"}, {\"gene\": \"ANO10\", \"confidence\": 0.03, \"rationale\": \"No direct ANO10-specific immune deficiency evidence; shared chunks describe unrelated IEI patients with only partial phenotype overlap.\"}, {\"gene\": \"EPS8L2\", \"confidence\": 0.03, \"rationale\": \"No EPS8L2-specific immunodeficiency evidence; all chunks are generic IEI case descriptions not linked to this gene.\"}, {\"gene\": \"IER5\", \"confidence\": 0.02, \"rationale\": \"No IER5-specific immune phenotype evidence; chunks are generic IEI cases unrelated to this gene.\"}, {\"gene\": \"IGFBP6\", \"confidence\": 0.02, \"rationale\": \"No IGFBP6-specific immunodeficiency evidence; shared chunks describe LRBA and CTLA4 patients unrelated to this gene.\"}, {\"gene\": \"MAIP1\", \"confidence\": 0.02, \"rationale\": \"No MAIP1-specific immune deficiency evidence; chunks describe LRBA deficiency and other IEIs unrelated to this gene.\"}, {\"gene\": \"FLYWCH2\", \"confidence\": 0.01, \"rationale\": \"No FLYWCH2-specific immunodeficiency evidence; all evidence chunks are generic IEI cases.\"}, {\"gene\": \"SMIM10L2B\", \"confidence\": 0.01, \"rationale\": \"No SMIM10L2B-specific immune phenotype evidence; chunks are generic IEI descriptions.\"}, {\"gene\": \"MRPL51\", \"confidence\": 0.01, \"rationale\": \"No MRPL51-specific immunodeficiency evidence; mitochondrial ribosomal protein with no known immune deficiency link.\"}, {\"gene\": \"TMEFF2\", \"confidence\": 0.01, \"rationale\": \"No TMEFF2-specific immunodeficiency evidence; chunks are generic IEI cases unrelated to this gene.\"}, {\"gene\": \"GPR37\", \"confidence\": 0.01, \"rationale\": \"No GPR37-specific immunodeficiency evidence; chunks describe LRBA and other IEIs unrelated to this gene.\"}, {\"gene\": \"CLCN6\", \"confidence\": 0.01, \"rationale\": \"No CLCN6-specific immunodeficiency evidence; chloride channel gene with no known primary immunodeficiency association.\"}, {\"gene\": \"RPP21\", \"confidence\": 0.01, \"rationale\": \"No RPP21-specific immunodeficiency evidence; chunks are generic IEI cases unrelated to this gene.\"}, {\"gene\": \"SYNE2\", \"confidence\": 0.01, \"rationale\": \"No SYNE2-specific immunodeficiency evidence; nuclear envelope gene with no known primary immunodeficiency link.\"}, {\"gene\": \"SEMA3D\", \"confidence\": 0.01, \"rationale\": \"No SEMA3D-specific immunodeficiency evidence; semaphorin gene with no known primary immunodeficiency association.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "ANO10",
+    "EPS8L2",
+    "IER5",
+    "IGFBP6"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "DOCK8:PMID_19776401_Patient_4_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15235,
+  "tokens_out": 72,
+  "finish_reason": "stop",
+  "latency_s": 7.9485907554626465,
+  "cost_usd": 0.00123896,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"DOCK8\", \"confidence\": 0.95, \"rationale\": \"DOCK8 deficiency is strongly associated with AR-HIES, presenting with asthma, recurrent upper/lower respiratory infections, otitis media, eczema, and molluscum contagiosum, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "DOCK8"
+  ]
+}

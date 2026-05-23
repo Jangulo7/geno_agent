@@ -1,0 +1,22 @@
+{
+  "case_id": "CBLB:PMID_36006710_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CBLB",
+  "orig_qwen3_8b_top1": "CLSTN3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "LGALS9",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 10401,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 4.56288480758667,
+  "cost_usd": 0.0021210100000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"LGALS9\",\n  \"confidence\": 0.85,\n  \"rationale\": \"LGALS9 is strongly linked to type 1 diabetes and hypothyroidism, with evidence of inter-tissue communication affecting these conditions.\"\n}",
+  "parsed_top5": [
+    "LGALS9"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "KCTD14",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FBXO3",
+  "top1_correct": false,
+  "causal_rank": 12,
+  "tokens_in": 17472,
+  "tokens_out": 634,
+  "finish_reason": "stop",
+  "latency_s": 19.040571928024292,
+  "cost_usd": 0.00398258,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"FBXO3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence of global developmental delay, autistic traits, and refractory seizures matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC66A1\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Evidence includes developmental delay, autistic traits, and EEG abnormalities consistent with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"KCTD14\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Reports of developmental delay, autism spectrum disorder, and seizures align with the patient's presentation.\"\n  },\n  {\n    \"gene\": \"RPAP1\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Mentions developmental delay and seizures, but less specific to the patient's full phenotype.\"\n  },\n  {\n    \"gene\": \"COX14\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Some overlap with developmental delay and seizures, but evidence is less comprehensive.\"\n  },\n  {\n    \"gene\": \"ANAPC1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Similar developmental delay and seizure profiles, but lacks specific phenotypic details.\"\n  },\n  {\n    \"gene\": \"HAS3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Limited evidence directly linking to the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"SLC31A2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Mild developmental delay noted, but no strong seizure or autism correlations.\"\n  },\n  {\n    \"gene\": \"CCL4L1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Weak evidence; mentions developmental delay but lacks specificity.\"\n  },\n  {\n    \"gene\": \"FHIP2A\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal evidence; no strong phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"POLR2L\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's primary symptoms.\"\n  },\n  {\n    \"gene\": \"CAPRIN1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Limited and indirect evidence of developmental delay.\"\n  },\n  {\n    \"gene\": \"HGF\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No significant evidence supporting a causal role for the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SIGLEC6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence found for the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CTSV\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking to the patient's clinical presentation.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "FBXO3",
+    "SLC66A1",
+    "KCTD14",
+    "RPAP1",
+    "COX14"
+  ]
+}

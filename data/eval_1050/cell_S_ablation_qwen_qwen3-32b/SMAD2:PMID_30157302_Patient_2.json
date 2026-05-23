@@ -1,0 +1,26 @@
+{
+  "case_id": "SMAD2:PMID_30157302_Patient_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SMAD2",
+  "orig_qwen3_8b_top1": "H3-3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "H3-3A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19169,
+  "tokens_out": 176,
+  "finish_reason": "stop",
+  "latency_s": 3.839559316635132,
+  "cost_usd": 0.0015827999999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"H3-3A\": 0.95, \"CNOT1\": 0.85, \"ACTA1\": 0.8, \"C19orf81\": 0.75, \"SEM1\": 0.7, \"LRP11\": 0.65, \"CYP2D6\": 0.6, \"ATP1A1\": 0.55, \"AKAP3\": 0.5, \"UMAD1\": 0.45, \"LRRTM3\": 0.4, \"C1orf115\": 0.35, \"PBRM1\": 0.3, \"DDX46\": 0.25, \"CKB\": 0.2}",
+  "parsed_top5": [
+    "H3-3A",
+    "CNOT1",
+    "ACTA1",
+    "C19orf81",
+    "SEM1"
+  ]
+}

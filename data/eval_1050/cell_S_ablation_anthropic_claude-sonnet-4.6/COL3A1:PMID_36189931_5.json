@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_5",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21960,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 11.306623935699463,
+  "cost_usd": 0.076395,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"COL3A1\",\"confidence\":0.92,\"rationale\":\"COL3A1 mutations cause vascular EDS with thin vermilion, narrow nasal ridge, bruising susceptibility, dermal translucency, and small joint hypermobility\u2014matching all patient HPO terms directly.\"},{\"gene\":\"ZNF142\",\"confidence\":0.02,\"rationale\":\"ZNF142 evidence mentions some overlapping dysmorphic features but is primarily associated with neurodevelopmental disorders, not connective tissue phenotypes.\"},{\"gene\":\"NDST3\",\"confidence\":0.01,\"rationale\":\"NDST3 evidence chunks reference vEDS features but only as background context; no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"NR4A2\",\"confidence\":0.01,\"rationale\":\"NR4A2 evidence is irrelevant (frog morphology); no support for the patient's connective tissue phenotype.\"},{\"gene\":\"KIAA1586\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking KIAA1586 to the patient's connective tissue or facial phenotype profile.\"},{\"gene\":\"GPR15\",\"confidence\":0.005,\"rationale\":\"GPR15 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"EPS15L1\",\"confidence\":0.005,\"rationale\":\"EPS15L1 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"C2orf74\",\"confidence\":0.005,\"rationale\":\"C2orf74 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"SLC24A5\",\"confidence\":0.005,\"rationale\":\"SLC24A5 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"PRR20A\",\"confidence\":0.005,\"rationale\":\"PRR20A evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"RPAP2\",\"confidence\":0.005,\"rationale\":\"RPAP2 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"CDC23\",\"confidence\":0.005,\"rationale\":\"CDC23 evidence references a CDK13-related case with some facial overlap but no connective tissue features matching this patient.\"},{\"gene\":\"PPP2R5A\",\"confidence\":0.005,\"rationale\":\"PPP2R5A evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"PPP6R2\",\"confidence\":0.005,\"rationale\":\"PPP6R2 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"},{\"gene\":\"GJB5\",\"confidence\":0.005,\"rationale\":\"GJB5 evidence only references vEDS background context with no direct gene-specific association to the phenotype.\"}]",
+  "parsed_top5": [
+    "COL3A1",
+    "ZNF142",
+    "NDST3",
+    "NR4A2",
+    "KIAA1586"
+  ]
+}

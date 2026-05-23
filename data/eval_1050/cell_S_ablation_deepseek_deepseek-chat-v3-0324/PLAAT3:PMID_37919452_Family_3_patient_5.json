@@ -1,0 +1,26 @@
+{
+  "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PLAAT3",
+  "orig_qwen3_8b_top1": "AKR1B10",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AKR1B10",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13574,
+  "tokens_out": 663,
+  "finish_reason": "stop",
+  "latency_s": 45.386651277542114,
+  "cost_usd": 0.0032253100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AKR1B10\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking AKR1B10 to demyelinating neuropathy, intellectual disability, and skeletal abnormalities matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SPATA24\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SPATA24 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ZFP69B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ZFP69B to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PHC2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking PHC2 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GVQW3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking GVQW3 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PTCHD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking PTCHD1 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ARID3B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ARID3B to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"STRN3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking STRN3 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"FSIP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking FSIP1 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"UBL4A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking UBL4A to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"VRK3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking VRK3 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"UBE2L5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking UBE2L5 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"KRTDAP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking KRTDAP to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ASAP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ASAP2 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"MAGEB17\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking MAGEB17 to the patient's specific phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "AKR1B10",
+    "SPATA24",
+    "ZFP69B",
+    "PHC2",
+    "GVQW3"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZRSR2",
+  "orig_qwen3_8b_top1": "ZRSR2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZRSR2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14140,
+  "tokens_out": 48,
+  "finish_reason": "stop",
+  "latency_s": 3.5493292808532715,
+  "cost_usd": 0.00286496,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"ZRSR2\",\n  \"confidence\": 0.85,\n  \"rationale\": \"Direct evidence linking ZRSR2 mutation to PSIS with polydactyly and pituitary abnormalities.\"\n}",
+  "parsed_top5": [
+    "ZRSR2"
+  ]
+}

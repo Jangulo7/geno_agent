@@ -1,0 +1,22 @@
+{
+  "case_id": "RFX5:PMID_37584719_P17",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFX5",
+  "orig_qwen3_8b_top1": "CD72",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CD72",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19444,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 11.167228698730469,
+  "cost_usd": 0.00157148,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CD72\", \"confidence\": 0.9, \"rationale\": \"CD72 haploinsufficiency in mice leads to B-ALL with splenomegaly and recurrent infections, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "CD72"
+  ]
+}

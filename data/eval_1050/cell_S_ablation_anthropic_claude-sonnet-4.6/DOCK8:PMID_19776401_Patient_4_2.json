@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_19776401_Patient_4_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16425,
+  "tokens_out": 640,
+  "finish_reason": "stop",
+  "latency_s": 408.54781222343445,
+  "cost_usd": 0.058875,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DOCK8\",\"confidence\":0.92,\"rationale\":\"DOCK8 deficiency (AR-HIES) directly explains eczema, recurrent respiratory infections, otitis media, pneumonia, bronchitis, asthma, molluscum contagiosum, herpes, verrucae, and elevated IgE as documented in multiple cited patients.\"},{\"gene\":\"NEK8\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for NEK8 are generic respiratory infection background literature with no specific link to this phenotype profile.\"},{\"gene\":\"NUP210\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking NUP210 to this immunodeficiency/atopic phenotype; chunks are generic background.\"},{\"gene\":\"ZC3H18\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ZC3H18 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"EIF3CL\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking EIF3CL to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"CASK\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CASK to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"EML1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking EML1 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"HCAR1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking HCAR1 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"OR4X2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking OR4X2 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"FAM9B\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking FAM9B to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"ATP8B1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ATP8B1 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"CPLX1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CPLX1 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"NABP1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking NABP1 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"SCAMP3\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SCAMP3 to this phenotype; evidence chunks are generic background literature.\"},{\"gene\":\"OR5M3\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking OR5M3 to this phenotype; evidence chunks are generic background literature.\"}]",
+  "parsed_top5": [
+    "DOCK8",
+    "NEK8",
+    "NUP210",
+    "ZC3H18",
+    "EIF3CL"
+  ]
+}

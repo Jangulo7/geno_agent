@@ -1,0 +1,26 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "CDKL5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CDKL5",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 12714,
+  "tokens_out": 683,
+  "finish_reason": "stop",
+  "latency_s": 10.799216985702515,
+  "cost_usd": 0.048387,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CDKL5\",\"confidence\":0.62,\"rationale\":\"CDKL5 evidence directly describes the gene's role in epilepsy, microcephaly, developmental delay, intellectual disability, and tonic-clonic seizures, matching most patient HPO terms.\"},{\"gene\":\"DDX59\",\"confidence\":0.07,\"rationale\":\"DDX59 is associated with orofaciodigital syndrome including postaxial polydactyly and intellectual disability, but evidence chunks are non-specific and not directly linked to DDX59.\"},{\"gene\":\"RPS26\",\"confidence\":0.05,\"rationale\":\"Evidence chunks mention postaxial polydactyly and microcephaly but are not specifically attributed to RPS26 as a causal gene.\"},{\"gene\":\"PDHA1\",\"confidence\":0.04,\"rationale\":\"PDHA1 deficiency can cause microcephaly and seizures but evidence chunks are generic and not directly linked to PDHA1.\"},{\"gene\":\"FPGS\",\"confidence\":0.04,\"rationale\":\"One evidence chunk describes a patient with postaxial polydactyly, tonic-clonic seizures, and developmental delay, but not specifically attributed to FPGS.\"},{\"gene\":\"TSPAN32\",\"confidence\":0.03,\"rationale\":\"Evidence chunks are non-specific and not directly linking TSPAN32 to the patient's phenotype profile.\"},{\"gene\":\"FOXP4\",\"confidence\":0.03,\"rationale\":\"FOXP4 is associated with intellectual disability and palate anomalies but evidence chunks are generic and non-specific.\"},{\"gene\":\"HERC3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking HERC3 to the patient's specific combination of phenotypes.\"},{\"gene\":\"NABP1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking NABP1 to the patient's phenotype profile in the provided chunks.\"},{\"gene\":\"RGS3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking RGS3 to the patient's phenotype profile in the provided chunks.\"},{\"gene\":\"ARAP1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ARAP1 to the patient's phenotype profile in the provided chunks.\"},{\"gene\":\"C1orf198\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking C1orf198 to the patient's phenotype profile in the provided chunks.\"},{\"gene\":\"ZG16\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZG16 to the patient's phenotype profile in the provided chunks.\"},{\"gene\":\"OR1L6\",\"confidence\":0.01,\"rationale\":\"OR1L6 is an olfactory receptor gene with no plausible link to the patient's neurodevelopmental phenotype.\"},{\"gene\":\"TTC23L\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TTC23L to the patient's phenotype profile in the provided chunks.\"}]",
+  "parsed_top5": [
+    "CDKL5",
+    "DDX59",
+    "RPS26",
+    "PDHA1",
+    "FPGS"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_9",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20287,
+  "tokens_out": 723,
+  "finish_reason": "stop",
+  "latency_s": 14.836135625839233,
+  "cost_usd": 0.071706,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.93,\"rationale\":\"LMNA/HGPS evidence explicitly lists lipodystrophy, alopecia, failure to thrive, short stature, high arched palate, micrognathia, circumoral cyanosis, and proptosis\u2014matching nearly all patient HPO terms.\"},{\"gene\":\"PROSER1\",\"confidence\":0.03,\"rationale\":\"PROSER1 evidence shows failure to thrive and eye anomalies but lacks the specific progeroid/lipodystrophy/dental phenotype cluster seen in this patient.\"},{\"gene\":\"WNT9A\",\"confidence\":0.01,\"rationale\":\"WNT9A evidence relates only to palatogenesis in zebrafish with no direct match to the patient's multi-system progeroid phenotype.\"},{\"gene\":\"FGR\",\"confidence\":0.01,\"rationale\":\"FGR evidence is incidental (fetal growth restriction abbreviation) with no direct gene-disease link to this phenotype profile.\"},{\"gene\":\"VTI1B\",\"confidence\":0.005,\"rationale\":\"VTI1B evidence involves skeletal/bone defects in mouse knockouts with no match to the progeroid/lipodystrophy/dental phenotype cluster.\"},{\"gene\":\"MYL9\",\"confidence\":0.004,\"rationale\":\"MYL9 evidence shows no relevant connection to the patient's progeroid, lipodystrophy, or dental phenotypes.\"},{\"gene\":\"FCAR\",\"confidence\":0.004,\"rationale\":\"FCAR evidence is entirely non-specific with no link to the patient's phenotype profile.\"},{\"gene\":\"E2F4\",\"confidence\":0.004,\"rationale\":\"E2F4 evidence is non-specific and does not support a causal role in this progeroid/lipodystrophy syndrome.\"},{\"gene\":\"CAMTA2\",\"confidence\":0.004,\"rationale\":\"CAMTA2 evidence is non-specific with no connection to the patient's phenotype cluster.\"},{\"gene\":\"CHD6\",\"confidence\":0.004,\"rationale\":\"CHD6 evidence is non-specific and does not support causality for this phenotype profile.\"},{\"gene\":\"CACNG2\",\"confidence\":0.004,\"rationale\":\"CACNG2 evidence is non-specific with no link to progeroid features, lipodystrophy, or dental anomalies.\"},{\"gene\":\"CBX8\",\"confidence\":0.004,\"rationale\":\"CBX8 evidence is non-specific and does not connect to the patient's phenotype cluster.\"},{\"gene\":\"SCYL1\",\"confidence\":0.004,\"rationale\":\"SCYL1 evidence mentions craniosynostosis features but lacks the progeroid/lipodystrophy/dental phenotype match.\"},{\"gene\":\"KCNC2\",\"confidence\":0.004,\"rationale\":\"KCNC2 evidence is non-specific with no relevant connection to this phenotype profile.\"},{\"gene\":\"VAMP3\",\"confidence\":0.004,\"rationale\":\"VAMP3 evidence is non-specific and does not support causality for this progeroid syndrome.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "PROSER1",
+    "WNT9A",
+    "FGR",
+    "VTI1B"
+  ]
+}

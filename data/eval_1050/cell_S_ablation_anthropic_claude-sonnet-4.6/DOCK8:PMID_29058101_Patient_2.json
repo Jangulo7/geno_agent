@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_29058101_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21520,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 16.332589864730835,
+  "cost_usd": 0.07548,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DOCK8\",\"confidence\":0.82,\"rationale\":\"DOCK8 deficiency directly causes eczema, recurrent otitis media, elevated IgE, and diarrhea as documented in multiple patient cohorts with confirmed DOCK8 mutations.\"},{\"gene\":\"JAK1\",\"confidence\":0.08,\"rationale\":\"JAK1 GOF variants cause severe atopic disease with eczema, diarrhea, and recurrent infections, partially matching the phenotype but less specifically than DOCK8.\"},{\"gene\":\"STPG1\",\"confidence\":0.015,\"rationale\":\"No direct evidence linking STPG1 to this phenotype; evidence chunks reference DOCK8 and other immunodeficiency genes only.\"},{\"gene\":\"YIPF2\",\"confidence\":0.015,\"rationale\":\"No direct evidence linking YIPF2 to elevated IgE, eczema, otitis media, or protracted diarrhea in the provided literature.\"},{\"gene\":\"SLC25A35\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SLC25A35 to this immunodeficiency phenotype profile.\"},{\"gene\":\"GATAD2B\",\"confidence\":0.01,\"rationale\":\"No evidence connecting GATAD2B to elevated IgE, eczematoid dermatitis, otitis media, or protracted diarrhea.\"},{\"gene\":\"CA10\",\"confidence\":0.01,\"rationale\":\"No evidence linking CA10 to this combined immunodeficiency/atopy phenotype.\"},{\"gene\":\"LRRC41\",\"confidence\":0.01,\"rationale\":\"No evidence linking LRRC41 to elevated IgE, eczema, recurrent otitis media, or protracted diarrhea.\"},{\"gene\":\"OR4S1\",\"confidence\":0.01,\"rationale\":\"OR4S1 is an olfactory receptor gene with no known association to immunodeficiency or atopy phenotypes.\"},{\"gene\":\"ZBTB7A\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZBTB7A to this immunodeficiency/atopy phenotype profile.\"},{\"gene\":\"KIF2A\",\"confidence\":0.01,\"rationale\":\"KIF2A is a kinesin motor protein with no known association to elevated IgE, eczema, or recurrent infections.\"},{\"gene\":\"CRYGS\",\"confidence\":0.01,\"rationale\":\"CRYGS encodes a lens crystallin with no known association to immunodeficiency or atopy.\"},{\"gene\":\"IFT38\",\"confidence\":0.01,\"rationale\":\"IFT38 is involved in intraflagellar transport with no known link to this immunodeficiency/atopy phenotype.\"},{\"gene\":\"SPAG6\",\"confidence\":0.01,\"rationale\":\"SPAG6 is a sperm-associated gene with no known association to elevated IgE, eczema, or recurrent infections.\"},{\"gene\":\"RPL7L1\",\"confidence\":0.01,\"rationale\":\"RPL7L1 encodes a ribosomal protein with no known association to this immunodeficiency/atopy phenotype profile.\"}]",
+  "parsed_top5": [
+    "DOCK8",
+    "JAK1",
+    "STPG1",
+    "YIPF2",
+    "SLC25A35"
+  ]
+}

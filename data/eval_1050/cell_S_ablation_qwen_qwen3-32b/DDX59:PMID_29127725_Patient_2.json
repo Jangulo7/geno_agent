@@ -1,0 +1,22 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "CDKL5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CDKL5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11369,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 1.28462553024292,
+  "cost_usd": 0.00092688,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"CDKL5\",\"confidence\":0.95,\"rationale\":\"CDKL5-related disorders present with infantile-onset refractory epilepsy, generalized tonic-clonic seizures, developmental delay, intellectual disability, and microcephaly, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "CDKL5"
+  ]
+}

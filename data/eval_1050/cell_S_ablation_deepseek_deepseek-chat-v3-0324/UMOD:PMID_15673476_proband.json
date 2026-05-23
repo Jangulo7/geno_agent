@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15673476_proband",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15886,
+  "tokens_out": 688,
+  "finish_reason": "stop",
+  "latency_s": 24.96119999885559,
+  "cost_usd": 0.00370696,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"UMOD is strongly associated with hyperuricemia, gout, and renal corticomedullary cysts as seen in ADTKD-UMOD, matching the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TSC1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"TSC1 can cause renal cysts and CKD, but lacks specific association with hyperuricemia or gout, making it a less likely match.\"\n  },\n  {\n    \"gene\": \"KLK6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"KLK6 is mentioned in renal impairment contexts but lacks direct evidence linking it to the specific phenotypes of this patient.\"\n  },\n  {\n    \"gene\": \"CALR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CALR to renal cysts, hyperuricemia, or gout, making it an unlikely candidate.\"\n  },\n  {\n    \"gene\": \"BRINP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connects BRINP2 to renal or hyperuricemia phenotypes.\"\n  },\n  {\n    \"gene\": \"SSR3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence suggests SSR3 is involved in renal disease or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"SEC14L6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature links SEC14L6 to the patient's renal or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"TUSC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence ties TUSC2 to kidney dysfunction or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"FCRLB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented association with renal cysts, CKD, or gout.\"\n  },\n  {\n    \"gene\": \"SPMIP7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supports a role in renal or metabolic disease.\"\n  },\n  {\n    \"gene\": \"RABL2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking RABL2B to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ELFN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connects ELFN2 to kidney disease or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"SRSF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence suggests involvement in renal or metabolic disorders.\"\n  },\n  {\n    \"gene\": \"SEPTIN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented role in renal cysts, CKD, or gout.\"\n  },\n  {\n    \"gene\": \"JAG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence links JAG1 to the patient's specific renal/metabolic presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "UMOD",
+    "TSC1",
+    "KLK6",
+    "CALR",
+    "BRINP2"
+  ]
+}

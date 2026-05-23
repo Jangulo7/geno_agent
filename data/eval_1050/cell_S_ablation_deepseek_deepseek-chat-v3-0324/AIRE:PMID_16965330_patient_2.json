@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_16965330_patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16338,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 4.254999876022339,
+  "cost_usd": 0.00331534,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"AIRE\",\n  \"confidence\": 0.95,\n  \"rationale\": \"AIRE is the known cause of APS-1, which matches all patient phenotypes including alopecia, keratoconjunctivitis, hypoparathyroidism, and adrenal insufficiency.\"\n}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

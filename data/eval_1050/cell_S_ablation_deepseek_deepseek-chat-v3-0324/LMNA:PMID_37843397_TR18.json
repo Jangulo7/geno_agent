@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR18",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17321,
+  "tokens_out": 724,
+  "finish_reason": "stop",
+  "latency_s": 35.97509026527405,
+  "cost_usd": 0.004021680000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA is strongly associated with familial partial lipodystrophy (FPLD2), matching the patient's phenotype of limb fat loss, diabetes, and metabolic derangements.\"\n  },\n  {\n    \"gene\": \"SHE\",\n    \"confidence\": 0.3,\n    \"rationale\": \"SHE has some relevance to lipodystrophy phenotypes but lacks direct evidence linking it to the patient's specific metabolic profile.\"\n  },\n  {\n    \"gene\": \"LETM1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking LETM1 to lipodystrophy or the patient's metabolic abnormalities.\"\n  },\n  {\n    \"gene\": \"TFPI2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting TFPI2 to lipodystrophy or the described phenotypes.\"\n  },\n  {\n    \"gene\": \"SEPTIN9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SEPTIN9's role in lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"PUS10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking PUS10 to lipodystrophy or the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LCORL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating LCORL with lipodystrophy or the metabolic features described.\"\n  },\n  {\n    \"gene\": \"CLDN18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting CLDN18 to lipodystrophy or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"BBS4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting BBS4's involvement in lipodystrophy or the metabolic abnormalities observed.\"\n  },\n  {\n    \"gene\": \"UPK3B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking UPK3B to lipodystrophy or the described clinical features.\"\n  },\n  {\n    \"gene\": \"SLC25A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating SLC25A4 with lipodystrophy or the patient's metabolic profile.\"\n  },\n  {\n    \"gene\": \"UMPS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting UMPS to lipodystrophy or the metabolic derangements described.\"\n  },\n  {\n    \"gene\": \"PLGRKT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PLGRKT's role in lipodystrophy or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SEL1L3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SEL1L3 to lipodystrophy or the metabolic abnormalities observed.\"\n  },\n  {\n    \"gene\": \"FBXO10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating FBXO10 with lipodystrophy or the described clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "SHE",
+    "LETM1",
+    "TFPI2",
+    "SEPTIN9"
+  ]
+}

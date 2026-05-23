@@ -1,0 +1,22 @@
+{
+  "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PSKH1",
+  "orig_qwen3_8b_top1": "PNLIP",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NBPF3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17079,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 2.5510077476501465,
+  "cost_usd": 0.00138088,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"NBPF3\",\"confidence\":0.85,\"rationale\":\"NBPF3 is associated with elevated alkaline phosphatase and liver dysfunction, aligning with the patient's cholestasis and hepatic features.\"}",
+  "parsed_top5": [
+    "NBPF3"
+  ]
+}

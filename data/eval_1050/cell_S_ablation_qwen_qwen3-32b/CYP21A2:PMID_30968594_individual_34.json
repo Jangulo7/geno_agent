@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_34",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14774,
+  "tokens_out": 649,
+  "finish_reason": "stop",
+  "latency_s": 20.950933694839478,
+  "cost_usd": 0.0013636400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CYP21A2\", \"confidence\": 0.95, \"rationale\": \"CYP21A2 mutations are directly linked to clitoral hypertrophy, elevated testosterone, and ACTH-related findings in nonclassic CAH.\"}, {\"gene\": \"ZP1\", \"confidence\": 0.15, \"rationale\": \"Mild clitoral hypertrophy reported, but no direct genetic or biochemical evidence linking ZP1 to the patient's phenotype.\"}, {\"gene\": \"BSCL2\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting BSCL2 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"TBCC\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking TBCC to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"BMP3\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting BMP3 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"PGAP2\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking PGAP2 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"CSPG5\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting CSPG5 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"MUC22\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking MUC22 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"TMEM35A\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting TMEM35A to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"MAGED4\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking MAGED4 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"SSU72L1\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting SSU72L1 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"FAM131A\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking FAM131A to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"PRELID2\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting PRELID2 to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"GNLY\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking GNLY to the patient's hormonal or phenotypic profile.\"}, {\"gene\": \"ZNF286A\", \"confidence\": 0.1, \"rationale\": \"No specific evidence connecting ZNF286A to the patient's hormonal or phenotypic profile.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "ZP1",
+    "BSCL2",
+    "TBCC",
+    "BMP3"
+  ]
+}

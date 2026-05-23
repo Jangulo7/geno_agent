@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_1_2",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17114,
+  "tokens_out": 741,
+  "finish_reason": "stop",
+  "latency_s": 20.459371328353882,
+  "cost_usd": 0.00399337,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA is strongly linked to familial partial lipodystrophy type 2 (FPLD2), with documented cases matching the patient's phenotypes including loss of subcutaneous fat, diabetes, and hepatic steatosis.\"\n  },\n  {\n    \"gene\": \"CAMK4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CAMK4 to lipodystrophy or metabolic abnormalities; only generic mentions of lipodystrophy subtypes.\"\n  },\n  {\n    \"gene\": \"DIAPH1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Generic mentions of lipodystrophy without any specific evidence tying DIAPH1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ATP10A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence associating ATP10A with lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"PPP1R3E\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting PPP1R3E's role in lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"SLC43A3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SLC43A3 to lipodystrophy or the patient's specific metabolic abnormalities.\"\n  },\n  {\n    \"gene\": \"TCP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence tying TCP1 to lipodystrophy or metabolic dysfunction matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"ZNF280C\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence associating ZNF280C with lipodystrophy or related metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ACOT2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ACOT2 to lipodystrophy or the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"RAPGEF2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No supporting literature for RAPGEF2's involvement in lipodystrophy or metabolic abnormalities.\"\n  },\n  {\n    \"gene\": \"OR51B4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Relevant only in olfactory receptor context; no link to lipodystrophy or metabolic disease.\"\n  },\n  {\n    \"gene\": \"DDHD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence connecting DDHD1 to lipodystrophy or metabolic phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"RNGTT\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature tying RNGTT to lipodystrophy-related disorders.\"\n  },\n  {\n    \"gene\": \"SHISA5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking SHISA5 to adipose tissue dysfunction or metabolic disturbances.\"\n  },\n  {\n    \"gene\": \"TMEM258\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence associating TMEM258 with lipodystrophy or metabolic abnormalities.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "CAMK4",
+    "DIAPH1",
+    "ATP10A",
+    "PPP1R3E"
+  ]
+}

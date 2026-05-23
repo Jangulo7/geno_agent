@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_7",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20957,
+  "tokens_out": 765,
+  "finish_reason": "stop",
+  "latency_s": 10.41541051864624,
+  "cost_usd": 0.074346,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"LMNA\", \"confidence\": 0.92, \"rationale\": \"LMNA mutations directly cause EDMD2 with Achilles/elbow contractures, spinal rigidity, elevated CK, proximal muscle weakness/amyotrophy, stiff neck, and frequent falls\u2014matching all patient HPO terms.\"}, {\"gene\": \"FBN2\", \"confidence\": 0.03, \"rationale\": \"FBN2 mouse models show elevated CK and muscle weakness but evidence is indirect and not directly linked to this specific human phenotype profile.\"}, {\"gene\": \"SYT7\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SYT7 to this muscular dystrophy phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"OR56A5\", \"confidence\": 0.01, \"rationale\": \"No evidence linking OR56A5 to muscular dystrophy or contracture phenotypes; evidence chunks are non-specific.\"}, {\"gene\": \"MELK\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MELK to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"PODN\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PODN to muscular dystrophy or contracture phenotypes; evidence chunks are non-specific.\"}, {\"gene\": \"TDRKH\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TDRKH to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"ACTL6A\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ACTL6A to this muscular dystrophy phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"TM2D1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TM2D1 to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"SLC12A5\", \"confidence\": 0.01, \"rationale\": \"No evidence linking SLC12A5 to this muscular dystrophy phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"SCT\", \"confidence\": 0.01, \"rationale\": \"No evidence linking SCT to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"ZC3H12D\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ZC3H12D to this muscular dystrophy phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"CSNK1D\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CSNK1D to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"ELP1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ELP1 to this muscular dystrophy phenotype; shared evidence chunks are non-specific.\"}, {\"gene\": \"CAPG\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CAPG to this neuromuscular phenotype; shared evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "FBN2",
+    "SYT7",
+    "OR56A5",
+    "MELK"
+  ]
+}

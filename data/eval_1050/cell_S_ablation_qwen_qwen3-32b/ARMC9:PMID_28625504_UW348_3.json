@@ -1,0 +1,26 @@
+{
+  "case_id": "ARMC9:PMID_28625504_UW348_3",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "BCAT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19447,
+  "tokens_out": 670,
+  "finish_reason": "stop",
+  "latency_s": 15.821704387664795,
+  "cost_usd": 0.0017433600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"ARMC9\": {\"gene\": \"ARMC9\", \"confidence\": 0.95, \"rationale\": \"ARMC9 mutations are rare contributors to Joubert syndrome with molar tooth sign, retinal dystrophy, and developmental delay.\"}, \"BCAT1\": {\"gene\": \"BCAT1\", \"confidence\": 0.85, \"rationale\": \"BCAT1 is linked to Leber congenital amaurosis with molar tooth sign and developmental delay.\"}, \"ARHGAP11B\": {\"gene\": \"ARHGAP11B\", \"confidence\": 0.75, \"rationale\": \"ARHGAP11B is associated with Joubert syndrome, including molar tooth sign and retinal dystrophy.\"}, \"HS3ST3A1\": {\"gene\": \"HS3ST3A1\", \"confidence\": 0.65, \"rationale\": \"HS3ST3A1 is linked to Joubert syndrome with molar tooth sign and developmental delay.\"}, \"PTBP2\": {\"gene\": \"PTBP2\", \"confidence\": 0.6, \"rationale\": \"PTBP2 is associated with Joubert syndrome and retinal dystrophy.\"}, \"GPR63\": {\"gene\": \"GPR63\", \"confidence\": 0.55, \"rationale\": \"GPR63 is linked to Joubert syndrome with molar tooth sign and developmental delay.\"}, \"PTGES\": {\"gene\": \"PTGES\", \"confidence\": 0.5, \"rationale\": \"PTGES is associated with Joubert syndrome and retinal dystrophy.\"}, \"PLA2G4D\": {\"gene\": \"PLA2G4D\", \"confidence\": 0.45, \"rationale\": \"PLA2G4D is linked to Joubert syndrome with molar tooth sign.\"}, \"ERAP2\": {\"gene\": \"ERAP2\", \"confidence\": 0.4, \"rationale\": \"ERAP2 is associated with Joubert syndrome and developmental delay.\"}, \"TRIML2\": {\"gene\": \"TRIML2\", \"confidence\": 0.35, \"rationale\": \"TRIML2 is linked to Joubert syndrome with molar tooth sign.\"}, \"KIF9\": {\"gene\": \"KIF9\", \"confidence\": 0.3, \"rationale\": \"KIF9 is associated with Joubert syndrome and retinal dystrophy.\"}, \"ADAP2\": {\"gene\": \"ADAP2\", \"confidence\": 0.25, \"rationale\": \"ADAP2 is linked to Joubert syndrome with molar tooth sign.\"}, \"GBP2\": {\"gene\": \"GBP2\", \"confidence\": 0.2, \"rationale\": \"GBP2 is associated with Joubert syndrome and developmental delay.\"}, \"GABPB2\": {\"gene\": \"GABPB2\", \"confidence\": 0.15, \"rationale\": \"GABPB2 is linked to Joubert syndrome with molar tooth sign.\"}}",
+  "parsed_top5": [
+    "ARMC9",
+    "BCAT1",
+    "ARHGAP11B",
+    "HS3ST3A1",
+    "PTBP2"
+  ]
+}

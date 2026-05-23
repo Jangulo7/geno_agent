@@ -1,0 +1,26 @@
+{
+  "case_id": "HMGCS2:PMID_25511235_B1_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "HMGCS2",
+  "orig_qwen3_8b_top1": "HMGCS2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HMGCS2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11527,
+  "tokens_out": 571,
+  "finish_reason": "stop",
+  "latency_s": 36.29854464530945,
+  "cost_usd": 0.00274507,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HMGCS2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to metabolic acidosis, hypoglycemia, and seizures via mitochondrial ketogenesis defect.\"\n  },\n  {\n    \"gene\": \"OXCT2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Indirect metabolic relevance but lacks direct phenotypic match.\"\n  },\n  {\n    \"gene\": \"PPP2R2B\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Mentioned in metabolic context but no direct evidence.\"\n  },\n  {\n    \"gene\": \"LOXHD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"NRG4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CHST11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"LHX1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"TFAP2C\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"E4F1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"HSPB7\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"MICB\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"B3GALT4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"POU2AF3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"N4BP2L1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF555\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "HMGCS2",
+    "OXCT2",
+    "PPP2R2B",
+    "LOXHD1",
+    "NRG4"
+  ]
+}

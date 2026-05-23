@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P13",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19000,
+  "tokens_out": 726,
+  "finish_reason": "stop",
+  "latency_s": 14.342184782028198,
+  "cost_usd": 0.06789,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SLC45A2\",\"confidence\":0.92,\"rationale\":\"SLC45A2 chunk_1 directly reports OCA4 patients with white eyelashes, blue irides, iris transillumination, fundus hypopigmentation, and disease-causing SLC45A2 variants, matching the patient's full phenotype.\"},{\"gene\":\"ZNF546\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ZNF546 to the albinism/ocular phenotype; shared chunks describe SLC45A2 patients only.\"},{\"gene\":\"STRADB\",\"confidence\":0.01,\"rationale\":\"No evidence connecting STRADB to hypopigmentation or ocular albinism phenotypes in the provided literature.\"},{\"gene\":\"SLC27A1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SLC27A1 to the oculocutaneous albinism phenotype profile presented.\"},{\"gene\":\"SLC12A7\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SLC12A7 to hypopigmentation, iris transillumination, or foveal hypoplasia.\"},{\"gene\":\"LURAP1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting LURAP1 to the albinism or ocular phenotype profile in the provided chunks.\"},{\"gene\":\"SLC39A13\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SLC39A13 to oculocutaneous albinism or the patient's ocular features.\"},{\"gene\":\"SLC25A39\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SLC25A39 to hypopigmentation, nystagmus, or foveal hypoplasia.\"},{\"gene\":\"ZNF383\",\"confidence\":0.01,\"rationale\":\"No evidence connecting ZNF383 to the albinism or ocular phenotype profile presented.\"},{\"gene\":\"CHRNB1\",\"confidence\":0.0,\"rationale\":\"CHRNB1 encodes a nicotinic receptor subunit with no known link to albinism or the patient's phenotype.\"},{\"gene\":\"PPP1R35\",\"confidence\":0.0,\"rationale\":\"No evidence connecting PPP1R35 to hypopigmentation, iris transillumination, or foveal hypoplasia.\"},{\"gene\":\"C3orf18\",\"confidence\":0.0,\"rationale\":\"No evidence connecting C3orf18 to oculocutaneous albinism or the patient's ocular features.\"},{\"gene\":\"MDH1B\",\"confidence\":0.0,\"rationale\":\"MDH1B encodes malate dehydrogenase with no known link to albinism or the patient's phenotype.\"},{\"gene\":\"MTM1\",\"confidence\":0.0,\"rationale\":\"MTM1 causes myotubular myopathy, not albinism; no evidence linking it to the patient's phenotype.\"},{\"gene\":\"PRKAB1\",\"confidence\":0.0,\"rationale\":\"PRKAB1 encodes an AMPK subunit with no known link to albinism or the patient's ocular/pigmentation phenotype.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ZNF546",
+    "STRADB",
+    "SLC27A1",
+    "SLC12A7"
+  ]
+}

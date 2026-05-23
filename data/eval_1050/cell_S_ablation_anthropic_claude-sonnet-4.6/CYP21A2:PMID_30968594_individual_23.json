@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_23",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19099,
+  "tokens_out": 1077,
+  "finish_reason": "stop",
+  "latency_s": 16.098029613494873,
+  "cost_usd": 0.073452,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.72,\n    \"rationale\": \"CYP21A2 evidence directly describes CAH cases with skin hyperpigmentation, elevated ACTH, and adrenal steroidogenesis defects causing the full HPO phenotype profile including hormonal abnormalities.\"\n  },\n  {\n    \"gene\": \"HSD11B2\",\n    \"confidence\": 0.12,\n    \"rationale\": \"HSD11B2 chunk describes a case with hyperpigmentation, elevated ACTH, decreased estradiol, and adrenal hyperplasia matching all four HPO terms, though gene-specific evidence is indirect.\"\n  },\n  {\n    \"gene\": \"POLR3A\",\n    \"confidence\": 0.04,\n    \"rationale\": \"POLR3A is associated with hypogonadotropic hypogonadism with decreased estradiol and some prolactin/ACTH data, but hyperpigmentation is not a feature of 4H leukodystrophy.\"\n  },\n  {\n    \"gene\": \"HAS1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"HAS1 evidence mentions hyperpigmentation and elevated ACTH in adrenal insufficiency context but lacks direct gene-disease link to the full phenotype profile.\"\n  },\n  {\n    \"gene\": \"RAB27A\",\n    \"confidence\": 0.02,\n    \"rationale\": \"RAB27A is mentioned in melanogenesis pathway downstream of ACTH/MC1R but has no direct causal evidence for the combined endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"RUNX2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"RUNX2 evidence is entirely non-specific shared chunks with no direct link to hyperpigmentation, elevated ACTH, prolactin, or decreased estradiol.\"\n  },\n  {\n    \"gene\": \"TPD52\",\n    \"confidence\": 0.01,\n    \"rationale\": \"TPD52 evidence consists only of non-specific shared chunks with no established role in adrenal or pituitary hormone regulation.\"\n  },\n  {\n    \"gene\": \"ANAPC11\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ANAPC11 evidence is entirely non-specific with no known connection to the adrenal/pituitary axis or the HPO phenotypes.\"\n  },\n  {\n    \"gene\": \"MRTFA\",\n    \"confidence\": 0.01,\n    \"rationale\": \"MRTFA evidence is non-specific with no established role in adrenal insufficiency, ACTH regulation, or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CES4A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"CES4A evidence is entirely non-specific shared chunks with no known role in adrenal steroidogenesis or the HPO phenotypes.\"\n  },\n  {\n    \"gene\": \"PLPPR1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"PLPPR1 evidence is non-specific with no established connection to hyperpigmentation, ACTH, prolactin, or estradiol regulation.\"\n  },\n  {\n    \"gene\": \"ATP6V1D\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ATP6V1D evidence is non-specific with no known role in adrenal or pituitary hormone pathways relevant to the HPO phenotypes.\"\n  },\n  {\n    \"gene\": \"BRF1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"BRF1 evidence is non-specific with no direct link to the adrenal/pituitary axis or the combined endocrine phenotype profile.\"\n  },\n  {\n    \"gene\": \"RD3L\",\n    \"confidence\": 0.01,\n    \"rationale\": \"RD3L evidence is entirely non-specific with no established role in adrenal steroidogenesis or the patient's HPO phenotypes.\"\n  },\n  {\n    \"gene\": \"DENND1B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"DENND1B evidence is non-specific with no known connection to hyperpigmentation, ACTH, prolactin, or estradiol dysregulation.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "HSD11B2",
+    "POLR3A",
+    "HAS1",
+    "RAB27A"
+  ]
+}

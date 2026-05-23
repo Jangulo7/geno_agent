@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_31761904_Individual_NBAS_9",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14391,
+  "tokens_out": 683,
+  "finish_reason": "stop",
+  "latency_s": 14.57324481010437,
+  "cost_usd": 0.053418,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NBAS\",\"confidence\":0.93,\"rationale\":\"NBAS causes SOPH syndrome/ILFS2 with acute liver failure, short stature, Pelger-Huet anomaly (hyposegmentation of neutrophil nuclei), skeletal defects, and delayed maturation\u2014matching all key HPO phenotypes.\"},{\"gene\":\"MBD5\",\"confidence\":0.03,\"rationale\":\"MBD5 deletion associated with brachycephaly and clinodactyly but lacks liver failure and Pelger-Huet anomaly; evidence is indirect.\"},{\"gene\":\"INPP5K\",\"confidence\":0.01,\"rationale\":\"INPP5K linked to muscular dystrophy with short stature but no evidence for acute hepatic failure or Pelger-Huet anomaly.\"},{\"gene\":\"GFY\",\"confidence\":0.005,\"rationale\":\"No direct disease association evidence provided; only generic short stature/brachycephaly mentions in unrelated patients.\"},{\"gene\":\"MEIOSIN\",\"confidence\":0.005,\"rationale\":\"No relevant disease association evidence; only generic phenotype mentions unrelated to this patient's profile.\"},{\"gene\":\"HOXD11\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking HOXD11 to this phenotype combination; only generic mentions in unrelated contexts.\"},{\"gene\":\"DTNBP1\",\"confidence\":0.005,\"rationale\":\"No direct evidence for acute hepatic failure or Pelger-Huet anomaly; evidence chunks are non-specific.\"},{\"gene\":\"MYMK\",\"confidence\":0.005,\"rationale\":\"No relevant evidence linking MYMK to this phenotype profile; only generic short stature mentions.\"},{\"gene\":\"KASH5\",\"confidence\":0.005,\"rationale\":\"No direct evidence for this phenotype combination; evidence chunks are non-specific.\"},{\"gene\":\"STYX\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking STYX to acute hepatic failure or Pelger-Huet anomaly.\"},{\"gene\":\"SHD\",\"confidence\":0.005,\"rationale\":\"No direct evidence for this phenotype combination; evidence chunks are non-specific.\"},{\"gene\":\"HOXA4\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking HOXA4 to this phenotype profile.\"},{\"gene\":\"MAGEB5\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking MAGEB5 to this phenotype combination.\"},{\"gene\":\"FECH\",\"confidence\":0.005,\"rationale\":\"FECH causes erythropoietic protoporphyria with liver involvement but not the full SOPH/ILFS2 phenotype with Pelger-Huet anomaly.\"},{\"gene\":\"ZUP1\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking ZUP1 to acute hepatic failure, Pelger-Huet anomaly, or this phenotype combination.\"}]",
+  "parsed_top5": [
+    "NBAS",
+    "MBD5",
+    "INPP5K",
+    "GFY",
+    "MEIOSIN"
+  ]
+}

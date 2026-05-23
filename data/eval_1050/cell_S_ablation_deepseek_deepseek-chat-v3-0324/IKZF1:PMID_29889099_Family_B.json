@@ -1,0 +1,22 @@
+{
+  "case_id": "IKZF1:PMID_29889099_Family_B",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IL7R",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17571,
+  "tokens_out": 54,
+  "finish_reason": "stop",
+  "latency_s": 4.585846424102783,
+  "cost_usd": 0.00355578,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"IL7R\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Direct evidence links IL7R to SCID phenotype with recurrent infections, PJP, and T/B cell defects matching the patient's profile.\"\n}",
+  "parsed_top5": [
+    "IL7R"
+  ]
+}

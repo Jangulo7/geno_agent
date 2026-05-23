@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_I_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17781,
+  "tokens_out": 730,
+  "finish_reason": "stop",
+  "latency_s": 12.664422512054443,
+  "cost_usd": 0.064293,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CCN2\",\"confidence\":0.82,\"rationale\":\"CCN2 chunk_1 is rated critic_relevance 5/5 and directly lists waddling gait, joint swelling and pain, short stature, and kyphosis in CCN2-variant subjects, matching all patient HPO terms.\"},{\"gene\":\"POU3F2\",\"confidence\":0.04,\"rationale\":\"Only generic shared evidence chunks with no direct CCN2-level specificity linking POU3F2 variants to this skeletal phenotype profile.\"},{\"gene\":\"MOSPD3\",\"confidence\":0.03,\"rationale\":\"Evidence chunks are generic and not specific to MOSPD3; no direct link to joint swelling, short stature, waddling gait, or kyphosis via MOSPD3 variants.\"},{\"gene\":\"CDX1\",\"confidence\":0.03,\"rationale\":\"Shared generic evidence only; no CDX1-specific association with this combination of skeletal dysplasia phenotypes.\"},{\"gene\":\"IGIP\",\"confidence\":0.02,\"rationale\":\"No IGIP-specific evidence; shared chunks describe unrelated conditions without mechanistic link to this phenotype cluster.\"},{\"gene\":\"STAC\",\"confidence\":0.02,\"rationale\":\"Generic shared evidence; STAC has no established role in skeletal dysplasia with joint swelling, short stature, waddling gait, and kyphosis.\"},{\"gene\":\"MAGEA2\",\"confidence\":0.01,\"rationale\":\"No MAGEA2-specific skeletal dysplasia evidence; shared chunks are non-specific and low relevance.\"},{\"gene\":\"RPS6KA1\",\"confidence\":0.01,\"rationale\":\"Shared generic evidence only; RPS6KA1 not known to cause this skeletal phenotype combination.\"},{\"gene\":\"SPRR2D\",\"confidence\":0.01,\"rationale\":\"No SPRR2D-specific evidence for skeletal dysplasia; shared chunks are non-specific.\"},{\"gene\":\"SLCO3A1\",\"confidence\":0.01,\"rationale\":\"Generic shared evidence; SLCO3A1 not linked to this specific combination of joint and skeletal phenotypes.\"},{\"gene\":\"SEC23A\",\"confidence\":0.01,\"rationale\":\"Generic shared evidence only; SEC23A craniosynostosis association does not match this phenotype profile.\"},{\"gene\":\"LIG1\",\"confidence\":0.01,\"rationale\":\"Shared generic evidence; LIG1 DNA repair function not linked to this skeletal dysplasia phenotype cluster.\"},{\"gene\":\"LRRC75B\",\"confidence\":0.01,\"rationale\":\"No LRRC75B-specific evidence; shared chunks are non-specific and do not support causality.\"},{\"gene\":\"VPS37B\",\"confidence\":0.01,\"rationale\":\"Generic shared evidence; VPS37B not associated with skeletal dysplasia featuring joint swelling, short stature, waddling gait, and kyphosis.\"},{\"gene\":\"C7orf25\",\"confidence\":0.01,\"rationale\":\"No C7orf25-specific evidence; shared chunks are non-specific and do not implicate this gene in the phenotype.\"}]",
+  "parsed_top5": [
+    "CCN2",
+    "POU3F2",
+    "MOSPD3",
+    "CDX1",
+    "IGIP"
+  ]
+}

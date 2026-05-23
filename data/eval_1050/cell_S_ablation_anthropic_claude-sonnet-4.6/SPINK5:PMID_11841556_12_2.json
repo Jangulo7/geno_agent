@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_12_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19070,
+  "tokens_out": 786,
+  "finish_reason": "stop",
+  "latency_s": 10.7354154586792,
+  "cost_usd": 0.069,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: congenital exfoliative erythroderma, trichorrhexis invaginata, elevated IgE, atopic dermatitis, recurrent skin infections, and pruritus. Evidence chunks explicitly mention SPINK5.\"},{\"gene\":\"TBC1D9B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TBC1D9B to this phenotype; evidence chunks only discuss Netherton syndrome/SPINK5 in context of other genes.\"},{\"gene\":\"SEL1L\",\"confidence\":0.01,\"rationale\":\"No evidence linking SEL1L to Netherton syndrome or any of the patient's HPO phenotypes; chunks reference SPINK5 disease only.\"},{\"gene\":\"HYAL2\",\"confidence\":0.01,\"rationale\":\"No evidence linking HYAL2 to this phenotype profile; literature chunks discuss Netherton syndrome caused by SPINK5 mutations.\"},{\"gene\":\"ALDH1L1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ALDH1L1 to congenital erythroderma, trichorrhexis invaginata, or elevated IgE; unrelated gene.\"},{\"gene\":\"ZSCAN9\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZSCAN9 to Netherton syndrome or any patient HPO phenotype; chunks reference SPINK5 disease only.\"},{\"gene\":\"SLC25A35\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC25A35 to this phenotype; literature chunks discuss Netherton syndrome caused by SPINK5 mutations.\"},{\"gene\":\"KCNB1\",\"confidence\":0.01,\"rationale\":\"No evidence linking KCNB1 to congenital erythroderma or Netherton syndrome features; unrelated ion channel gene.\"},{\"gene\":\"FAM180A\",\"confidence\":0.01,\"rationale\":\"No evidence linking FAM180A to this phenotype profile; chunks reference SPINK5 disease only.\"},{\"gene\":\"ILK\",\"confidence\":0.01,\"rationale\":\"No evidence linking ILK to Netherton syndrome or the patient's HPO phenotypes; unrelated gene.\"},{\"gene\":\"KCNIP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking KCNIP1 to congenital erythroderma, trichorrhexis invaginata, or elevated IgE; unrelated gene.\"},{\"gene\":\"TRMT44\",\"confidence\":0.01,\"rationale\":\"No evidence linking TRMT44 to this phenotype; literature chunks discuss Netherton syndrome caused by SPINK5 mutations.\"},{\"gene\":\"BRCA2\",\"confidence\":0.01,\"rationale\":\"No evidence linking BRCA2 to Netherton syndrome or any of the patient's skin/IgE phenotypes; unrelated gene.\"},{\"gene\":\"TENT2\",\"confidence\":0.01,\"rationale\":\"No evidence linking TENT2 to this phenotype profile; chunks reference SPINK5 disease only.\"},{\"gene\":\"MOGS\",\"confidence\":0.01,\"rationale\":\"No evidence linking MOGS to congenital erythroderma, trichorrhexis invaginata, or elevated IgE; unrelated gene.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "TBC1D9B",
+    "SEL1L",
+    "HYAL2",
+    "ALDH1L1"
+  ]
+}

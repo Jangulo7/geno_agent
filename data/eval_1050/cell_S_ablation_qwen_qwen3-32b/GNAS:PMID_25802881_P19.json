@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P19",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19622,
+  "tokens_out": 162,
+  "finish_reason": "stop",
+  "latency_s": 4.866856098175049,
+  "cost_usd": 0.0016151199999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GNAS\": 0.95, \"CGREF1\": 0.1, \"OR4K14\": 0.1, \"FTCD\": 0.1, \"APOA5\": 0.1, \"CCDC102A\": 0.1, \"MLXIP\": 0.1, \"LRRN3\": 0.1, \"HDAC9\": 0.1, \"SPPL3\": 0.1, \"BRDT\": 0.1, \"LRP8\": 0.1, \"KRTAP23-1\": 0.1, \"AGBL3\": 0.1, \"GJA8\": 0.1}",
+  "parsed_top5": [
+    "GNAS",
+    "CGREF1",
+    "OR4K14",
+    "FTCD",
+    "APOA5"
+  ]
+}

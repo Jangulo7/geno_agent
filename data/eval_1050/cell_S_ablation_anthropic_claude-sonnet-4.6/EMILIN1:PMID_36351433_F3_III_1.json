@@ -1,0 +1,26 @@
+{
+  "case_id": "EMILIN1:PMID_36351433_F3_III_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EMILIN1",
+  "orig_qwen3_8b_top1": "ROBO2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "KCTD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20178,
+  "tokens_out": 1036,
+  "finish_reason": "stop",
+  "latency_s": 23.1052188873291,
+  "cost_usd": 0.076074,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are identical across all genes (all rated critic_relevance=2/5 and mention=no), meaning none of the provided literature directly links any specific gene to this phenotype profile. The patient's phenotype \u2014 smooth/long philtrum, thin upper lip, high palate, short palpebral fissures, broad/convex/wide nasal features, blue sclerae, recurrent fractures, hypotonia, and premature sagging cheeks \u2014 is most consistent with a connective tissue disorder (blue sclerae + recurrent fractures strongly suggest osteogenesis imperfecta or similar collagen disorder). Among the candidates, none have strong direct evidence from the chunks. However, using external knowledge: KCTD1 is associated with scalp-ear-nipple syndrome with some craniofacial features; JMJD6 has been linked to connective tissue; none are classic OI genes. The facial features (smooth philtrum, narrow palpebral fissures, broad nasal tip) match the chunk_1 description best. Given equal evidence quality, I must use biological plausibility. BLTP2 (bridge-like lipid transfer protein 2) has emerging links to connective tissue. Given the complete equipoise in evidence, I'll assign marginal differences based on gene biology.\n\n[{\"gene\":\"KCTD1\",\"confidence\":0.15,\"rationale\":\"KCTD1 mutations cause scalp-ear-nipple syndrome with craniofacial dysmorphisms; facial features in evidence partially overlap patient's smooth philtrum, narrow palpebral fissures, and broad nose.\"},{\"gene\":\"JMJD6\",\"confidence\":0.09,\"rationale\":\"JMJD6 has roles in collagen biosynthesis/hydroxylation potentially linking to blue sclerae and recurrent fractures, though no direct evidence in provided chunks.\"},{\"gene\":\"BLTP2\",\"confidence\":0.08,\"rationale\":\"No specific disease association strongly matching this phenotype; evidence chunks are non-specific and equally shared across candidates.\"},{\"gene\":\"SRRM5\",\"confidence\":0.07,\"rationale\":\"No established disease link to this phenotype profile; evidence chunks are identical and non-specific across all candidates.\"},{\"gene\":\"ROBO2\",\"confidence\":0.07,\"rationale\":\"ROBO2 is associated with vesicoureteral reflux, not this craniofacial/connective tissue phenotype; evidence non-specific.\"},{\"gene\":\"CLDN7\",\"confidence\":0.06,\"rationale\":\"Claudin-7 is a tight junction protein; no established link to blue sclerae, recurrent fractures, or this facial phenotype.\"},{\"gene\":\"DDIT3\",\"confidence\":0.06,\"rationale\":\"DDIT3 is a stress-response transcription factor with no established link to this craniofacial/connective tissue phenotype.\"},{\"gene\":\"JADE1\",\"confidence\":0.06,\"rationale\":\"JADE1 is involved in chromatin remodeling; no established association with this phenotype profile in provided evidence.\"},{\"gene\":\"PRAMEF6\",\"confidence\":0.05,\"rationale\":\"PRAMEF6 is a PRAME family member with no known disease association matching this phenotype.\"},{\"gene\":\"CNTFR\",\"confidence\":0.05,\"rationale\":\"CNTFR encodes ciliary neurotrophic factor receptor; no established link to blue sclerae, fractures, or this facial phenotype.\"},{\"gene\":\"SH3GL1\",\"confidence\":0.05,\"rationale\":\"SH3GL1 is involved in endocytosis; no established association with this craniofacial/connective tissue phenotype.\"},{\"gene\":\"SPANXC\",\"confidence\":0.04,\"rationale\":\"SPANXC is a cancer-testis antigen with no known link to this phenotype profile.\"},{\"gene\":\"PRSS27\",\"confidence\":0.04,\"rationale\":\"PRSS27 encodes a serine protease; no established disease association matching this phenotype.\"},{\"gene\":\"JPH4\",\"confidence\":0.04,\"rationale\":\"JPH4 encodes junctophilin-4 involved in membrane junctions; no established link to this phenotype profile.\"},{\"gene\":\"SYN1\",\"confidence\":0.04,\"rationale\":\"SYN1 mutations cause X-linked epilepsy/autism; does not match the connective tissue/craniofacial phenotype with blue sclerae and fractures.\"}]",
+  "parsed_top5": [
+    "KCTD1",
+    "JMJD6",
+    "BLTP2",
+    "SRRM5",
+    "ROBO2"
+  ]
+}

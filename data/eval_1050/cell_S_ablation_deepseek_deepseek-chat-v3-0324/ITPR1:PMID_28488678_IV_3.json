@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_28488678_IV_3",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15838,
+  "tokens_out": 719,
+  "finish_reason": "stop",
+  "latency_s": 41.03982067108154,
+  "cost_usd": 0.0037212300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ITPR1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"ITPR1 mutations cause SCA15/16 with cerebellar ataxia, nystagmus, dysarthria, and mild cognitive impairment, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TNKS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TNKS to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"EXTL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EXTL1 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"UCP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UCP2 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPL14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MRPL14 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"MAP3K19\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MAP3K19 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"IDO1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IDO1 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"AMOT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AMOT to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"MAP1LC3B2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MAP1LC3B2 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC39A3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC39A3 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"PIGM\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PIGM to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"SCT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SCT to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPL32\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MRPL32 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"PNLIPRP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PNLIPRP1 to the patient's cerebellar ataxia or other phenotypes.\"\n  },\n  {\n    \"gene\": \"ABCD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ABCD1 to the patient's cerebellar ataxia or other phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "ITPR1",
+    "TNKS",
+    "EXTL1",
+    "UCP2",
+    "MRPL14"
+  ]
+}

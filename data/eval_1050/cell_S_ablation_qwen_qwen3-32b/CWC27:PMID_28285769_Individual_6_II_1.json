@@ -1,0 +1,26 @@
+{
+  "case_id": "CWC27:PMID_28285769_Individual_6_II_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CWC27",
+  "orig_qwen3_8b_top1": "DBNDD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CFAP100",
+  "top1_correct": false,
+  "causal_rank": 11,
+  "tokens_in": 16876,
+  "tokens_out": 176,
+  "finish_reason": "stop",
+  "latency_s": 5.205415725708008,
+  "cost_usd": 0.0013993599999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"CFAP100\": 0.85, \"DBNDD1\": 0.7, \"ALDH16A1\": 0.65, \"PDE8A\": 0.6, \"ATP9B\": 0.55, \"CTPS1\": 0.5, \"NFE2\": 0.45, \"BTC\": 0.4, \"ZNF780B\": 0.35, \"TDRD1\": 0.3, \"CWC27\": 0.25, \"DENND1B\": 0.2, \"CADM2\": 0.15, \"MRPS28\": 0.1, \"OR5L1\": 0.05}",
+  "parsed_top5": [
+    "CFAP100",
+    "DBNDD1",
+    "ALDH16A1",
+    "PDE8A",
+    "ATP9B"
+  ]
+}

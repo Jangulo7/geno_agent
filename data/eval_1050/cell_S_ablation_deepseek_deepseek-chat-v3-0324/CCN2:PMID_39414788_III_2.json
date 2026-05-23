@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_III_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17131,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 36.54203820228577,
+  "cost_usd": 0.003958270000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CCN2\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence linking CCN2 variants to skeletal dysplasia with matching phenotypes including short stature, joint swelling, and platyspondyly.\"\n  },\n  {\n    \"gene\": \"ATL1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Some skeletal abnormalities noted, but less specific to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MILR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MILR1 to skeletal dysplasia or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"EGFL7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting EGFL7 to the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"ZNF217\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZNF217's role in skeletal dysplasia or related phenotypes.\"\n  },\n  {\n    \"gene\": \"POMZP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POMZP3 to the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"PRG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PRG2's involvement in skeletal dysplasia or related phenotypes.\"\n  },\n  {\n    \"gene\": \"MCOLN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting MCOLN1 to the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"SLC29A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SLC29A4 to skeletal dysplasia or the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"UQCC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting UQCC1's role in skeletal dysplasia or related phenotypes.\"\n  },\n  {\n    \"gene\": \"TMEM196\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting TMEM196 to the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"TSPAN16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting TSPAN16's involvement in skeletal dysplasia or related phenotypes.\"\n  },\n  {\n    \"gene\": \"NDUFAF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NDUFAF4 to the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"SSBP4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SSBP4's role in skeletal dysplasia or related phenotypes.\"\n  },\n  {\n    \"gene\": \"LRRTM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting LRRTM4 to the patient's skeletal or joint abnormalities.\"\n  }\n]",
+  "parsed_top5": [
+    "CCN2",
+    "ATL1",
+    "MILR1",
+    "EGFL7",
+    "ZNF217"
+  ]
+}

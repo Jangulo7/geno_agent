@@ -1,0 +1,26 @@
+{
+  "case_id": "EXTL3:PMID_28132690_Family_E_II_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12992,
+  "tokens_out": 794,
+  "finish_reason": "stop",
+  "latency_s": 14.758090019226074,
+  "cost_usd": 0.050886,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"EXTL3\", \"confidence\": 0.93, \"rationale\": \"EXTL3 mutations directly cause immunoskeletal dysplasia with severe platyspondyly, seizures, and T-cell immunodeficiency (SCID), matching all key patient HPO phenotypes.\"}, {\"gene\": \"C17orf67\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking C17orf67 to this phenotype combination; evidence chunks describe unrelated EXTL3-like cases.\"}, {\"gene\": \"CARD9\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence; CARD9 is associated with fungal susceptibility, not platyspondyly or T-cell immunodeficiency.\"}, {\"gene\": \"GSAP\", \"confidence\": 0.01, \"rationale\": \"No evidence linking GSAP to platyspondyly, seizures, or T-cell immunodeficiency in provided chunks.\"}, {\"gene\": \"TGOLN2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TGOLN2 to the patient's phenotype profile in provided literature.\"}, {\"gene\": \"SLC17A7\", \"confidence\": 0.01, \"rationale\": \"SLC17A7 is a vesicular glutamate transporter; no evidence connecting it to this immunoskeletal phenotype.\"}, {\"gene\": \"CTHRC1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CTHRC1 to platyspondyly, T-cell immunodeficiency, or seizures in provided chunks.\"}, {\"gene\": \"LRRC8C\", \"confidence\": 0.01, \"rationale\": \"No relevant evidence connecting LRRC8C to this combined immunoskeletal phenotype.\"}, {\"gene\": \"PPME1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PPME1 to platyspondyly, seizures, or severe T-cell immunodeficiency.\"}, {\"gene\": \"ESRRG\", \"confidence\": 0.01, \"rationale\": \"No evidence connecting ESRRG to the patient's immunoskeletal dysplasia phenotype.\"}, {\"gene\": \"ASB12\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ASB12 to platyspondyly, T-cell immunodeficiency, or seizures.\"}, {\"gene\": \"L2HGDH\", \"confidence\": 0.01, \"rationale\": \"L2HGDH causes L-2-hydroxyglutaric aciduria; no evidence for this immunoskeletal phenotype combination.\"}, {\"gene\": \"SNRPN\", \"confidence\": 0.01, \"rationale\": \"SNRPN is associated with Prader-Willi/Angelman; no evidence for platyspondyly or T-cell immunodeficiency here.\"}, {\"gene\": \"ATP2C1\", \"confidence\": 0.01, \"rationale\": \"ATP2C1 causes Hailey-Hailey disease; no evidence linking it to this immunoskeletal phenotype.\"}, {\"gene\": \"SIX5\", \"confidence\": 0.01, \"rationale\": \"SIX5 is associated with myotonic dystrophy; no evidence connecting it to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "EXTL3",
+    "C17orf67",
+    "CARD9",
+    "GSAP",
+    "TGOLN2"
+  ]
+}

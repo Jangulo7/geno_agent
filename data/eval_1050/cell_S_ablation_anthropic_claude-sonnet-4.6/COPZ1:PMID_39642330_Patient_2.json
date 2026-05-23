@@ -1,0 +1,26 @@
+{
+  "case_id": "COPZ1:PMID_39642330_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COPZ1",
+  "orig_qwen3_8b_top1": "KIT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SON",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 21470,
+  "tokens_out": 1012,
+  "finish_reason": "stop",
+  "latency_s": 15.741529703140259,
+  "cost_usd": 0.07959,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SON\",\n    \"confidence\": 0.72,\n    \"rationale\": \"SON/ZTTK syndrome evidence directly matches: thrombocytopenia, anemia, leukopenia, lymphopenia, neutropenia, monocytopenia, decreased IgM/IgA, and frequent infections including pneumonia.\"\n  },\n  {\n    \"gene\": \"COPZ1\",\n    \"confidence\": 0.10,\n    \"rationale\": \"COPZ1 evidence shows severe neutropenia, lymphopenia, hemolytic anemia, and thrombocytopenia with severe infections, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"RAD50\",\n    \"confidence\": 0.06,\n    \"rationale\": \"RAD50 evidence shows bone marrow failure with thrombocytopenia, anemia, neutropenia, and absent B lymphocytes, but lacks the immunoglobulin elevation and full lymphocyte subset reduction.\"\n  },\n  {\n    \"gene\": \"KIT\",\n    \"confidence\": 0.03,\n    \"rationale\": \"KIT evidence shows anemia, thrombocytopenia, and neutropenia in myeloid malignancy context, but lacks the combined immunodeficiency and elevated immunoglobulin features.\"\n  },\n  {\n    \"gene\": \"HOXA7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"HOXA7 loss-of-function shows thrombocytopenia and MEP defects in mice but lacks evidence for the combined immunodeficiency and elevated immunoglobulins seen in this patient.\"\n  },\n  {\n    \"gene\": \"KIFC3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KIFC3 evidence relates to megakaryocyte ontogeny and thrombocytopenia but has no direct link to the combined immunodeficiency or elevated immunoglobulin phenotype.\"\n  },\n  {\n    \"gene\": \"FAM47B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking FAM47B to the patient's phenotype; only generic background chunks provided.\"\n  },\n  {\n    \"gene\": \"LINGO3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking LINGO3 to the patient's hematological or immunological phenotype.\"\n  },\n  {\n    \"gene\": \"STRC\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking STRC to the patient's phenotype; only generic background chunks provided.\"\n  },\n  {\n    \"gene\": \"LYPD5\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking LYPD5 to the patient's combined immunodeficiency and cytopenias.\"\n  },\n  {\n    \"gene\": \"ADCK2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking ADCK2 to the patient's phenotype; only generic background chunks provided.\"\n  },\n  {\n    \"gene\": \"SLC22A5\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking SLC22A5 to the patient's combined immunodeficiency and cytopenias.\"\n  },\n  {\n    \"gene\": \"AGBL1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking AGBL1 to the patient's phenotype; only generic background chunks provided.\"\n  },\n  {\n    \"gene\": \"CCDC57\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking CCDC57 to the patient's phenotype; only generic background chunks provided.\"\n  },\n  {\n    \"gene\": \"CDH20\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking CDH20 to the patient's combined immunodeficiency and cytopenias.\"\n  }\n]",
+  "parsed_top5": [
+    "SON",
+    "COPZ1",
+    "RAD50",
+    "KIT",
+    "HOXA7"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "FBLN5:PMID_12189163_Sib_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "SDS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SDS",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18920,
+  "tokens_out": 632,
+  "finish_reason": "stop",
+  "latency_s": 19.754082679748535,
+  "cost_usd": 0.0016905600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SDS\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking SDS to anteverted nares, ptosis, and other facial features in multiple case reports.\"}, {\"gene\": \"DAB1\", \"confidence\": 0.65, \"rationale\": \"Mentions of anteverted nares and craniofacial dysmorphism, but less specific to the full phenotype.\"}, {\"gene\": \"TAS2R45\", \"confidence\": 0.55, \"rationale\": \"Some craniofacial features overlap, but no direct evidence for the full set of symptoms.\"}, {\"gene\": \"PAIP1\", \"confidence\": 0.5, \"rationale\": \"Mentions of redundant skin and craniofacial features, but not strongly linked to the full phenotype.\"}, {\"gene\": \"SYCE3\", \"confidence\": 0.45, \"rationale\": \"Some craniofacial features present, but no clear evidence for the full set of symptoms.\"}, {\"gene\": \"REG3G\", \"confidence\": 0.4, \"rationale\": \"Mentions of craniofacial features, but no direct evidence for the full phenotype.\"}, {\"gene\": \"TRERF1\", \"confidence\": 0.35, \"rationale\": \"Some craniofacial features present, but no clear evidence for the full set of symptoms.\"}, {\"gene\": \"UAP1L1\", \"confidence\": 0.3, \"rationale\": \"Mentions of craniofacial features, but no direct evidence for the full phenotype.\"}, {\"gene\": \"GPR37\", \"confidence\": 0.25, \"rationale\": \"Some craniofacial features present, but no clear evidence for the full set of symptoms.\"}, {\"gene\": \"DLEC1\", \"confidence\": 0.2, \"rationale\": \"Mentions of craniofacial features, but no direct evidence for the full phenotype.\"}, {\"gene\": \"XAGE1A\", \"confidence\": 0.15, \"rationale\": \"Some craniofacial features present, but no clear evidence for the full set of symptoms.\"}, {\"gene\": \"GCNT4\", \"confidence\": 0.1, \"rationale\": \"Mentions of craniofacial features, but no direct evidence for the full phenotype.\"}, {\"gene\": \"SMYD3\", \"confidence\": 0.08, \"rationale\": \"Some craniofacial features present, but no clear evidence for the full set of symptoms.\"}, {\"gene\": \"MCUR1\", \"confidence\": 0.05, \"rationale\": \"Mentions of craniofacial features, but no direct evidence for the full phenotype.\"}, {\"gene\": \"OR4C13\", \"confidence\": 0.03, \"rationale\": \"Very limited evidence linking to the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "SDS",
+    "DAB1",
+    "TAS2R45",
+    "PAIP1",
+    "SYCE3"
+  ]
+}

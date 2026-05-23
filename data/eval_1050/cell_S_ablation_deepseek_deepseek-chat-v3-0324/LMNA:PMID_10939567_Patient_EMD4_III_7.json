@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_7",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18265,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 4.29716944694519,
+  "cost_usd": 0.00369612,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"LMNA\",\n  \"confidence\": 0.95,\n  \"rationale\": \"LMNA mutations are strongly associated with Emery-Dreifuss muscular dystrophy, matching the patient's contractures, spinal rigidity, and elevated CK.\"\n}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

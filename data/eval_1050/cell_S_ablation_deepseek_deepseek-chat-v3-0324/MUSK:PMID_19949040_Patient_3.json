@@ -1,0 +1,22 @@
+{
+  "case_id": "MUSK:PMID_19949040_Patient_3",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "MUSK",
+  "orig_qwen3_8b_top1": "MUSK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "MUSK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15962,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 4.277848482131958,
+  "cost_usd": 0.00323783,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"MUSK\",\n  \"confidence\": 0.95,\n  \"rationale\": \"MUSK mutations are strongly associated with congenital myasthenic syndrome, presenting with ptosis, ophthalmoplegia, and muscle weakness, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "MUSK"
+  ]
+}

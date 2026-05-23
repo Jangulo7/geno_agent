@@ -1,0 +1,22 @@
+{
+  "case_id": "NF1:PMID_26178382_UAB_R7705",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13867,
+  "tokens_out": 51,
+  "finish_reason": "stop",
+  "latency_s": 2.9143171310424805,
+  "cost_usd": 0.0011236400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"NF1\",\"confidence\":0.98,\"rationale\":\"NF1 directly matches all three patient phenotypes: cafe-au-lait spots, freckling, and Lisch nodules as core diagnostic criteria.\"}",
+  "parsed_top5": [
+    "NF1"
+  ]
+}

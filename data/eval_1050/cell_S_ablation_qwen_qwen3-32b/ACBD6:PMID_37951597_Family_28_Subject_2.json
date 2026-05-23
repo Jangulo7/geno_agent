@@ -1,0 +1,26 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_28_Subject_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RNF183",
+  "orig_qwen3_8b_correct": false,
+  "top1": "H1-3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14719,
+  "tokens_out": 685,
+  "finish_reason": "stop",
+  "latency_s": 1.8779261112213135,
+  "cost_usd": 0.00136932,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"H1-3\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Describes a patient with delayed speech, autistic behavior, and sleep disturbances, aligning closely with the patient's HPO profile.\"\n  },\n  {\n    \"gene\": \"DPYSL2\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Includes behavioral issues and developmental delay, but lacks specific facial or neurological features seen in the patient.\"\n  },\n  {\n    \"gene\": \"RNF183\",\n    \"confidence\": 0.70,\n    \"rationale\": \"Describes global developmental delay and behavioral issues, but lacks specific facial features or ataxia.\"\n  },\n  {\n    \"gene\": \"SMC6\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Mentions developmental delay and behavioral problems, but no specific facial features or ataxia.\"\n  },\n  {\n    \"gene\": \"CKS2\",\n    \"confidence\": 0.60,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"TDRKH\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Includes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"CBFB\",\n    \"confidence\": 0.50,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"NAA20\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Mentions developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"OTUD6A\",\n    \"confidence\": 0.40,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"PHYHD1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Includes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"IZUMO2\",\n    \"confidence\": 0.30,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"MAEA\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Mentions developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"KCNS3\",\n    \"confidence\": 0.20,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"TMX3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Includes developmental delay and behavioral issues, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"OR2AT4\",\n    \"confidence\": 0.10,\n    \"rationale\": \"Describes developmental delay and behavioral issues, but lacks specific facial features.\"\n  }\n]",
+  "parsed_top5": [
+    "H1-3",
+    "DPYSL2",
+    "RNF183",
+    "SMC6",
+    "CKS2"
+  ]
+}

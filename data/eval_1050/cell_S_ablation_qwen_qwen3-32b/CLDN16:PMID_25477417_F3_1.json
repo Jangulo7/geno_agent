@@ -1,0 +1,22 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F3_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17171,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 2.0804736614227295,
+  "cost_usd": 0.00139104,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CLDN16\", \"confidence\": 0.95, \"rationale\": \"CLDN16 mutations directly cause FHHNC, matching all key phenotypes including nephrocalcinosis, hypercalciuria, and renal insufficiency.\"}",
+  "parsed_top5": [
+    "CLDN16"
+  ]
+}

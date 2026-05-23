@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM45",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20313,
+  "tokens_out": 666,
+  "finish_reason": "stop",
+  "latency_s": 10.571573257446289,
+  "cost_usd": 0.070929,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.91,\"rationale\":\"LMNA evidence explicitly links FPLD2 (lamin A/C mutation) to loss of truncal and limb subcutaneous fat, T2DM, hepatic steatosis, and dyslipidemia matching all patient HPO terms.\"},{\"gene\":\"ZSCAN5C\",\"confidence\":0.02,\"rationale\":\"No direct mention of ZSCAN5C in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"ANO9\",\"confidence\":0.01,\"rationale\":\"No direct mention of ANO9 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"CHD3\",\"confidence\":0.01,\"rationale\":\"No direct mention of CHD3 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"IFITM10\",\"confidence\":0.01,\"rationale\":\"No direct mention of IFITM10 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"DNAAF4\",\"confidence\":0.01,\"rationale\":\"No direct mention of DNAAF4 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"HRG\",\"confidence\":0.01,\"rationale\":\"No direct mention of HRG in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"FAM91A1\",\"confidence\":0.01,\"rationale\":\"No direct mention of FAM91A1 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"STARD9\",\"confidence\":0.01,\"rationale\":\"No direct mention of STARD9 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"NFKBID\",\"confidence\":0.01,\"rationale\":\"No direct mention of NFKBID in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"FAM43A\",\"confidence\":0.01,\"rationale\":\"No direct mention of FAM43A in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"SDSL\",\"confidence\":0.01,\"rationale\":\"No direct mention of SDSL in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"PDAP1\",\"confidence\":0.01,\"rationale\":\"No direct mention of PDAP1 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"TRAT1\",\"confidence\":0.01,\"rationale\":\"No direct mention of TRAT1 in evidence; only generic lipodystrophy literature shared across candidates.\"},{\"gene\":\"DDX19A\",\"confidence\":0.01,\"rationale\":\"No direct mention of DDX19A in evidence; only generic lipodystrophy literature shared across candidates.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "ZSCAN5C",
+    "ANO9",
+    "CHD3",
+    "IFITM10"
+  ]
+}

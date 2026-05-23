@@ -1,0 +1,22 @@
+{
+  "case_id": "TAP2:PMID_10560675_P1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TAP2",
+  "orig_qwen3_8b_top1": "RFX6",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CCDC160",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17754,
+  "tokens_out": 66,
+  "finish_reason": "stop",
+  "latency_s": 1.7929000854492188,
+  "cost_usd": 0.0014388,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"CCDC160\",\"confidence\":0.95,\"rationale\":\"CCDC160 is directly linked to primary ciliary dyskinesia (PCD) with bronchiectasis, chronic rhinosinusitis, and nasal polyposis in multiple patient cases.\"}",
+  "parsed_top5": [
+    "CCDC160"
+  ]
+}

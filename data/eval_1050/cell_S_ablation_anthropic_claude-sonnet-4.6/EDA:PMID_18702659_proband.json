@@ -1,0 +1,26 @@
+{
+  "case_id": "EDA:PMID_18702659_proband",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EDA",
+  "orig_qwen3_8b_top1": "EDA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EDA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15842,
+  "tokens_out": 777,
+  "finish_reason": "stop",
+  "latency_s": 12.259888172149658,
+  "cost_usd": 0.059181,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"EDA\",\"confidence\":0.97,\"rationale\":\"EDA mutations cause X-linked hypohidrotic ectodermal dysplasia, directly matching all key HPO features: anodontia, sparse hair, hypohidrosis, depressed nasal bridge, prominent forehead, thick lips, enlarged naris, and recurrent fever from heat intolerance.\"},{\"gene\":\"SOX7\",\"confidence\":0.01,\"rationale\":\"SOX7 evidence shows chromosome 8p deletion with dysmorphic features but none matching the ectodermal dysplasia triad; no relevant phenotypic overlap.\"},{\"gene\":\"CDK3\",\"confidence\":0.005,\"rationale\":\"CDK3 evidence describes facial dysmorphia with depressed nasal bridge and pointed chin but lacks ectodermal features like anodontia, hypohidrosis, or sparse hair.\"},{\"gene\":\"SMNDC1\",\"confidence\":0.005,\"rationale\":\"SMNDC1 evidence only shows generic dysmorphic features unrelated to ectodermal dysplasia phenotype profile.\"},{\"gene\":\"CWF19L2\",\"confidence\":0.005,\"rationale\":\"CWF19L2 evidence shows no relevant connection to ectodermal dysplasia or the patient's specific phenotype cluster.\"},{\"gene\":\"C8orf48\",\"confidence\":0.005,\"rationale\":\"C8orf48 evidence is generic dysmorphology with no ectodermal dysplasia features matching the patient's profile.\"},{\"gene\":\"FBXW9\",\"confidence\":0.005,\"rationale\":\"FBXW9 evidence lacks any connection to anodontia, hypohidrosis, or sparse hair characteristic of this patient.\"},{\"gene\":\"OR5M9\",\"confidence\":0.005,\"rationale\":\"OR5M9 evidence shows no relevant phenotypic overlap with the ectodermal dysplasia triad or patient's HPO terms.\"},{\"gene\":\"CMKLR1\",\"confidence\":0.005,\"rationale\":\"CMKLR1 evidence describes connective tissue dysplasia with facial dysmorphia but no ectodermal features matching the patient.\"},{\"gene\":\"PLA2G6\",\"confidence\":0.005,\"rationale\":\"PLA2G6 evidence references MWS facial features unrelated to ectodermal dysplasia phenotype cluster.\"},{\"gene\":\"CNTNAP3B\",\"confidence\":0.005,\"rationale\":\"CNTNAP3B evidence shows no relevant connection to the ectodermal dysplasia phenotype profile.\"},{\"gene\":\"QSOX2\",\"confidence\":0.005,\"rationale\":\"QSOX2 evidence is generic dysmorphology review with no specific ectodermal dysplasia features.\"},{\"gene\":\"YWHAB\",\"confidence\":0.005,\"rationale\":\"YWHAB evidence is generic dysmorphology review with no connection to anodontia, hypohidrosis, or sparse hair.\"},{\"gene\":\"ZNF510\",\"confidence\":0.005,\"rationale\":\"ZNF510 evidence references MWS facial features without ectodermal dysplasia triad matching the patient.\"},{\"gene\":\"NR1H2\",\"confidence\":0.005,\"rationale\":\"NR1H2 evidence describes ALGS facial features with no overlap with hypohidrotic ectodermal dysplasia phenotype.\"}]",
+  "parsed_top5": [
+    "EDA",
+    "SOX7",
+    "CDK3",
+    "SMNDC1",
+    "CWF19L2"
+  ]
+}

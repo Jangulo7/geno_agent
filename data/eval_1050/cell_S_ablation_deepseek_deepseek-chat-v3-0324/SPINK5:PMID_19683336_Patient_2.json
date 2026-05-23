@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_19683336_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17478,
+  "tokens_out": 617,
+  "finish_reason": "stop",
+  "latency_s": 21.64334511756897,
+  "cost_usd": 0.003970690000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Clear match to Netherton syndrome with erythroderma, recurrent infections, and failure to thrive.\"\n  },\n  {\n    \"gene\": \"CITED2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Low relevance evidence; no direct link to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"CA8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking CA8 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"PKN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking PKN1 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"HNRNPDL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking HNRNPDL to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"INF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking INF2 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"RAB39B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RAB39B to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"NSUN5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Mentioned in context of Netherton but not as causative.\"\n  },\n  {\n    \"gene\": \"THOC7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking THOC7 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CHRNA7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking CHRNA7 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"RBPJL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RBPJL to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"AMBN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking AMBN to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"WDR11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking WDR11 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DYNC1I2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking DYNC1I2 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MLLT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking MLLT1 to the patient's symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "CITED2",
+    "CA8",
+    "PKN1",
+    "HNRNPDL"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "RPGRIP1:PMID_12920066_small_family_10CRD",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RPGRIP1",
+  "orig_qwen3_8b_top1": "RPGRIP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17501,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.8821194171905518,
+  "cost_usd": 0.00140652,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

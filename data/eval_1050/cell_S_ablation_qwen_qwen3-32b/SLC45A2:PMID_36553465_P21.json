@@ -1,0 +1,20 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P21",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15909,
+  "tokens_out": 25,
+  "finish_reason": "stop",
+  "latency_s": 2.5689754486083984,
+  "cost_usd": 0.00127972,
+  "parse_error": "model_self_error:{\"error\": \"I need more information to provide a response. Please specify the patient's HPO phenotypes.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"I need more information to provide a response. Please specify the patient's HPO phenotypes.\"}",
+  "parsed_top5": []
+}

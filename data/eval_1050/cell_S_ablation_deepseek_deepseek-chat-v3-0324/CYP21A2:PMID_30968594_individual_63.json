@@ -1,0 +1,22 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_63",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15002,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 7.277962684631348,
+  "cost_usd": 0.00304506,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CYP21A2\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Direct evidence links CYP21A2 mutations to clitoral hypertrophy, hyperpigmentation, and ACTH/cortisol imbalance in congenital adrenal hyperplasia.\"\n}",
+  "parsed_top5": [
+    "CYP21A2"
+  ]
+}

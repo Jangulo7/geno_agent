@@ -1,0 +1,26 @@
+{
+  "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PLAAT3",
+  "orig_qwen3_8b_top1": "AKR1B10",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AKR1B10",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14325,
+  "tokens_out": 175,
+  "finish_reason": "stop",
+  "latency_s": 4.485350131988525,
+  "cost_usd": 0.001195,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"AKR1B10\": 0.95, \"SPATA24\": 0.85, \"ZFP69B\": 0.8, \"PHC2\": 0.75, \"GVQW3\": 0.7, \"PTCHD1\": 0.65, \"ARID3B\": 0.6, \"STRN3\": 0.55, \"FSIP1\": 0.5, \"UBL4A\": 0.45, \"VRK3\": 0.4, \"UBE2L5\": 0.35, \"KRTDAP\": 0.3, \"ASAP2\": 0.25, \"MAGEB17\": 0.2}",
+  "parsed_top5": [
+    "AKR1B10",
+    "SPATA24",
+    "ZFP69B",
+    "PHC2",
+    "GVQW3"
+  ]
+}

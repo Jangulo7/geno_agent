@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_12",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "CAPRIN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CAPRIN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18291,
+  "tokens_out": 635,
+  "finish_reason": "stop",
+  "latency_s": 13.328407526016235,
+  "cost_usd": 0.064398,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CAPRIN1\",\"confidence\":0.82,\"rationale\":\"CAPRIN1 evidence directly lists seizures, ADHD, ASD, speech delay, and dysmorphic features as core phenotypes of CAPRIN1-related neurodevelopmental disorder, matching all patient HPO terms.\"},{\"gene\":\"PTBP1\",\"confidence\":0.05,\"rationale\":\"PTBP1 chunk mentions hypertelorism and ADHD in context of NCKAP1, not PTBP1 itself; indirect and low relevance.\"},{\"gene\":\"GPR37\",\"confidence\":0.03,\"rationale\":\"GPR37 evidence only references NCKAP1-related phenotypes including hypertelorism and ADHD indirectly; no direct GPR37-phenotype link.\"},{\"gene\":\"LY6G5C\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking LY6G5C to the patient's phenotype profile; chunks reference unrelated genes.\"},{\"gene\":\"NUDCD1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NUDCD1 to seizures, hypertelorism, ASD, ADHD, or speech delay.\"},{\"gene\":\"ZNF799\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF799 to the patient's phenotype profile.\"},{\"gene\":\"TMEM101\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TMEM101 to the patient's phenotype profile.\"},{\"gene\":\"LRRC28\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LRRC28 to the patient's phenotype profile.\"},{\"gene\":\"MTF1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MTF1 to the patient's phenotype profile.\"},{\"gene\":\"SERPINI2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SERPINI2 to the patient's phenotype profile.\"},{\"gene\":\"DAPL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DAPL1 to the patient's phenotype profile.\"},{\"gene\":\"GFRA2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GFRA2 to the patient's phenotype profile.\"},{\"gene\":\"PEX12\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PEX12 to the patient's phenotype profile.\"},{\"gene\":\"ZACN\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZACN to the patient's phenotype profile.\"},{\"gene\":\"FOXD4L6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking FOXD4L6 to the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "CAPRIN1",
+    "PTBP1",
+    "GPR37",
+    "LY6G5C",
+    "NUDCD1"
+  ]
+}

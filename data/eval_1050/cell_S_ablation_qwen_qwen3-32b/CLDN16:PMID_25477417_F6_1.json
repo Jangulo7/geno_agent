@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F6_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16213,
+  "tokens_out": 627,
+  "finish_reason": "stop",
+  "latency_s": 18.11128330230713,
+  "cost_usd": 0.0014726,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CLDN16\", \"confidence\": 0.95, \"rationale\": \"CLDN16 mutations are directly linked to familial hypomagnesemia with hypercalciuria and nephrocalcinosis, matching the patient's HPO phenotypes.\"}, {\"gene\": \"EFHC2\", \"confidence\": 0.15, \"rationale\": \"EFHC2 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"LCN9\", \"confidence\": 0.15, \"rationale\": \"LCN9 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"SYDE2\", \"confidence\": 0.15, \"rationale\": \"SYDE2 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"FAM47C\", \"confidence\": 0.15, \"rationale\": \"FAM47C is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"PRG2\", \"confidence\": 0.15, \"rationale\": \"PRG2 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"RAD17\", \"confidence\": 0.15, \"rationale\": \"RAD17 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"TECTA\", \"confidence\": 0.15, \"rationale\": \"TECTA is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"SMG1\", \"confidence\": 0.15, \"rationale\": \"SMG1 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"IWS1\", \"confidence\": 0.15, \"rationale\": \"IWS1 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"FGD5\", \"confidence\": 0.15, \"rationale\": \"FGD5 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"ZFAND2A\", \"confidence\": 0.15, \"rationale\": \"ZFAND2A is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"NXPE4\", \"confidence\": 0.15, \"rationale\": \"NXPE4 is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"HSF2BP\", \"confidence\": 0.15, \"rationale\": \"HSF2BP is not directly associated with the patient's renal and electrolyte phenotype.\"}, {\"gene\": \"SPACA5\", \"confidence\": 0.15, \"rationale\": \"SPACA5 is not directly associated with the patient's renal and electrolyte phenotype.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "EFHC2",
+    "LCN9",
+    "SYDE2",
+    "FAM47C"
+  ]
+}

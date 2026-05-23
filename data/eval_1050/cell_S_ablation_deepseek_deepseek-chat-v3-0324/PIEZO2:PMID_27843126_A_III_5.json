@@ -1,0 +1,26 @@
+{
+  "case_id": "PIEZO2:PMID_27843126_A_III_5",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PIEZO2",
+  "orig_qwen3_8b_top1": "AMH",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC25A3",
+  "top1_correct": false,
+  "causal_rank": 11,
+  "tokens_in": 16082,
+  "tokens_out": 637,
+  "finish_reason": "stop",
+  "latency_s": 21.289865493774414,
+  "cost_usd": 0.0037068900000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"SLC25A3\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Strong association with elevated creatine kinase, hypotonia, and motor delay matching patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ABCC10\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Evidence of muscle weakness, hypotonia, and elevated CK aligning with patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TLR7\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Reports of muscle weakness and dysarthria, though less specific to patient's overall profile.\"\n  },\n  {\n    \"gene\": \"SLC22A9\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Some overlap with motor delay and hypotonia, but evidence is less conclusive.\"\n  },\n  {\n    \"gene\": \"ASB9\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Mentions hypotonia and motor delay, but lacks specific evidence linking to patient's CK elevation.\"\n  },\n  {\n    \"gene\": \"SLC39A10\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Weak evidence for muscle-related symptoms; limited phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"AMH\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Minor relevance to muscle weakness but no strong evidence for other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"KRTAP9-1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Minimal evidence linking to patient's symptoms; mostly unrelated phenotypes.\"\n  },\n  {\n    \"gene\": \"SRSF3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No direct evidence supporting muscle or CK-related phenotypes.\"\n  },\n  {\n    \"gene\": \"SELL\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Lacks substantial evidence for neuromuscular or CK-related symptoms.\"\n  },\n  {\n    \"gene\": \"PIEZO2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No clear link to patient's primary phenotypes.\"\n  },\n  {\n    \"gene\": \"DYNC2LI1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Weak association with hypotonia but insufficient evidence for other symptoms.\"\n  },\n  {\n    \"gene\": \"ZHX2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"FRMD6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Unrelated to patient's neuromuscular or CK-related symptoms.\"\n  },\n  {\n    \"gene\": \"SLX1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence for any patient phenotypes.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "SLC25A3",
+    "ABCC10",
+    "TLR7",
+    "SLC22A9",
+    "ASB9"
+  ]
+}

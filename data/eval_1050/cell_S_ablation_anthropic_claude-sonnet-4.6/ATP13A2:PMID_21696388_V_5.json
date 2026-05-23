@@ -1,0 +1,26 @@
+{
+  "case_id": "ATP13A2:PMID_21696388_V_5",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ATP13A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19160,
+  "tokens_out": 743,
+  "finish_reason": "stop",
+  "latency_s": 10.304508924484253,
+  "cost_usd": 0.068625,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"ATP13A2\", \"confidence\": 0.92, \"rationale\": \"ATP13A2 evidence directly and explicitly links it to Kufor-Rakeb syndrome featuring slow saccadic eye movements, supranuclear gaze palsy, dementia, hyperreflexia, Babinski sign, and spasticity\u2014matching all patient HPO terms.\"}, {\"gene\": \"RAB30\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking RAB30 to the patient's phenotype; evidence chunks describe KRS/PSP context without mentioning RAB30 as causal.\"}, {\"gene\": \"LRIG1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking LRIG1 to slow saccades, supranuclear gaze palsy, dementia, or pyramidal signs; evidence chunks are non-specific.\"}, {\"gene\": \"DBH\", \"confidence\": 0.01, \"rationale\": \"No evidence linking DBH to the patient's phenotype profile; evidence chunks are generic and non-specific to DBH.\"}, {\"gene\": \"ACADM\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ACADM to the patient's neurological phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"PLPP4\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PLPP4 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"TIGD2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TIGD2 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"CD6\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CD6 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"C6orf136\", \"confidence\": 0.01, \"rationale\": \"No evidence linking C6orf136 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"CELA2A\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CELA2A to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"NUAK2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking NUAK2 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"SHH\", \"confidence\": 0.01, \"rationale\": \"No evidence linking SHH to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"ETFDH\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ETFDH to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"FSCN2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking FSCN2 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"MOBP\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MOBP to the patient's phenotype; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "ATP13A2",
+    "RAB30",
+    "LRIG1",
+    "DBH",
+    "ACADM"
+  ]
+}

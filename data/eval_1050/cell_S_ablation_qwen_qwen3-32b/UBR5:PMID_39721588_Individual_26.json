@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_26",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "SLC33A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC33A1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 15889,
+  "tokens_out": 732,
+  "finish_reason": "stop",
+  "latency_s": 24.159257411956787,
+  "cost_usd": 0.00147608,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SLC33A1\", \"confidence\": 0.9, \"rationale\": \"SLC33A1 mutations are directly linked to autistic-like features, developmental delay, and metabolic dysregulation, aligning with the patient's HPO phenotypes.\"}, {\"gene\": \"UBR5\", \"confidence\": 0.6, \"rationale\": \"UBR5 mutations are associated with global developmental delay and autistic features, though less directly linked to Pierre-Robin sequence.\"}, {\"gene\": \"SDHA\", \"confidence\": 0.5, \"rationale\": \"SDHA is linked to developmental delay and autism, but evidence is less specific to the Pierre-Robin sequence.\"}, {\"gene\": \"KRTAP9-4\", \"confidence\": 0.4, \"rationale\": \"KRTAP9-4 is associated with developmental delay and Pierre-Robin sequence, but evidence is limited and indirect.\"}, {\"gene\": \"IP6K1\", \"confidence\": 0.3, \"rationale\": \"IP6K1 is mentioned in the context of developmental delay and autism, but evidence is sparse and not specific to PRS.\"}, {\"gene\": \"GFRA3\", \"confidence\": 0.3, \"rationale\": \"GFRA3 is associated with developmental delay and autism, but no direct link to PRS is established in the evidence.\"}, {\"gene\": \"TEKT3\", \"confidence\": 0.3, \"rationale\": \"TEKT3 is mentioned in the context of developmental delay and autism, but evidence is limited and not specific to PRS.\"}, {\"gene\": \"FAT2\", \"confidence\": 0.3, \"rationale\": \"FAT2 is associated with developmental delay, but evidence is sparse and not specific to PRS or autism.\"}, {\"gene\": \"SLC25A15\", \"confidence\": 0.3, \"rationale\": \"SLC25A15 is mentioned in the context of developmental delay, but evidence is limited and not specific to PRS or autism.\"}, {\"gene\": \"RSPH4A\", \"confidence\": 0.3, \"rationale\": \"RSPH4A is associated with developmental delay, but evidence is sparse and not specific to PRS or autism.\"}, {\"gene\": \"FAM174B\", \"confidence\": 0.3, \"rationale\": \"FAM174B is mentioned in the context of developmental delay, but evidence is limited and not specific to PRS or autism.\"}, {\"gene\": \"POLD3\", \"confidence\": 0.3, \"rationale\": \"POLD3 is associated with developmental delay, but evidence is sparse and not specific to PRS or autism.\"}, {\"gene\": \"UGT2B11\", \"confidence\": 0.3, \"rationale\": \"UGT2B11 is mentioned in the context of developmental delay, but evidence is limited and not specific to PRS or autism.\"}, {\"gene\": \"RRM2\", \"confidence\": 0.3, \"rationale\": \"RRM2 is associated with developmental delay, but evidence is sparse and not specific to PRS or autism.\"}, {\"gene\": \"FAT3\", \"confidence\": 0.3, \"rationale\": \"FAT3 is mentioned in the context of developmental delay, but evidence is limited and not specific to PRS or autism.\"}]",
+  "parsed_top5": [
+    "SLC33A1",
+    "UBR5",
+    "SDHA",
+    "KRTAP9-4",
+    "IP6K1"
+  ]
+}

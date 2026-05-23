@@ -1,0 +1,26 @@
+{
+  "case_id": "GNB1:PMID_27108799_Individual_11",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNB1",
+  "orig_qwen3_8b_top1": "GNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13671,
+  "tokens_out": 668,
+  "finish_reason": "stop",
+  "latency_s": 30.746453523635864,
+  "cost_usd": 0.0032485600000000006,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GNB1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GNB1 mutations strongly match the patient's neurodevelopmental, seizure, hypotonia, and nystagmus phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR143\",\n    \"confidence\": 0.4,\n    \"rationale\": \"GPR143 is linked to nystagmus but lacks evidence for other patient phenotypes like seizures or developmental delay.\"\n  },\n  {\n    \"gene\": \"SPTBN1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SPTBN1 to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"ELP3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking ELP3 to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"BICDL2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking BICDL2 to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"STXBP6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking STXBP6 to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"OR10G4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking OR10G4 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"OR8D1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking OR8D1 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"SERTAD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking SERTAD2 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"NALF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking NALF1 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"PANO1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking PANO1 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"C19orf25\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking C19orf25 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"DBI\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking DBI to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"IFNA16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking IFNA16 to neurodevelopmental or seizure phenotypes.\"\n  },\n  {\n    \"gene\": \"RAX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking RAX to neurodevelopmental or seizure phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GNB1",
+    "GPR143",
+    "SPTBN1",
+    "ELP3",
+    "BICDL2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P19",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18247,
+  "tokens_out": 645,
+  "finish_reason": "stop",
+  "latency_s": 32.800923109054565,
+  "cost_usd": 0.00414605,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GNAS mutations directly cause pseudohypoparathyroidism with elevated PTH, short metacarpals, and obesity.\"\n  },\n  {\n    \"gene\": \"CGREF1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CGREF1 knockout mice show obesity resistance, but no direct link to PTH or metacarpal phenotypes.\"\n  },\n  {\n    \"gene\": \"HDAC9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HDAC9 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SPPL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPPL3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LRP8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRP8 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"AGBL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AGBL3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GJA8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GJA8 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"OR4K14\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking OR4K14 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FTCD\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking FTCD to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"APOA5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking APOA5 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CCDC102A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking CCDC102A to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"MLXIP\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking MLXIP to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LRRN3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking LRRN3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"BRDT\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking BRDT to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KRTAP23-1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking KRTAP23-1 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GNAS",
+    "CGREF1",
+    "HDAC9",
+    "SPPL3",
+    "LRP8"
+  ]
+}

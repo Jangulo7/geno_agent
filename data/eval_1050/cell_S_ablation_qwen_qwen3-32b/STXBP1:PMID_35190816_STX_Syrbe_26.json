@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_Syrbe_26",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17690,
+  "tokens_out": 735,
+  "finish_reason": "stop",
+  "latency_s": 27.34602999687195,
+  "cost_usd": 0.001621,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.95, \"rationale\": \"STXBP1 is strongly associated with infantile spasms, intellectual disability, ataxia, and developmental regression, aligning with the patient's HPO features.\"}, {\"gene\": \"KCTD8\", \"confidence\": 0.3, \"rationale\": \"KCTD8 is linked to developmental delay and epilepsy, but evidence is less specific to the patient's full phenotype.\"}, {\"gene\": \"LSG1\", \"confidence\": 0.25, \"rationale\": \"LSG1 is associated with developmental delay and epilepsy, but evidence is not specific to infantile spasms or ataxia.\"}, {\"gene\": \"KIR3DL1\", \"confidence\": 0.2, \"rationale\": \"KIR3DL1 is linked to developmental delay and seizures, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"USP35\", \"confidence\": 0.2, \"rationale\": \"USP35 is associated with developmental delay and epilepsy, but evidence is not specific to infantile spasms or ataxia.\"}, {\"gene\": \"PRY\", \"confidence\": 0.18, \"rationale\": \"PRY is linked to developmental delay and seizures, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"MYBPHL\", \"confidence\": 0.17, \"rationale\": \"MYBPHL is associated with developmental delay and seizures, but evidence is not specific to infantile spasms or ataxia.\"}, {\"gene\": \"LRRC63\", \"confidence\": 0.16, \"rationale\": \"LRRC63 is linked to seizures and developmental delay, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"PRKCQ\", \"confidence\": 0.15, \"rationale\": \"PRKCQ is associated with ataxia and seizures, but evidence is not specific to infantile spasms or developmental delay.\"}, {\"gene\": \"KRT5\", \"confidence\": 0.14, \"rationale\": \"KRT5 is linked to developmental delay and seizures, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"SMC5\", \"confidence\": 0.13, \"rationale\": \"SMC5 is associated with developmental delay and seizures, but evidence is not specific to infantile spasms or ataxia.\"}, {\"gene\": \"KDM5A\", \"confidence\": 0.12, \"rationale\": \"KDM5A is linked to developmental delay and seizures, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"FADS1\", \"confidence\": 0.11, \"rationale\": \"FADS1 is associated with developmental delay and seizures, but evidence is not specific to infantile spasms or ataxia.\"}, {\"gene\": \"WDR59\", \"confidence\": 0.1, \"rationale\": \"WDR59 is linked to seizures and developmental delay, but evidence is not specific to the patient's full phenotype.\"}, {\"gene\": \"ZNF548\", \"confidence\": 0.09, \"rationale\": \"ZNF548 is associated with seizures and developmental delay, but evidence is not specific to the patient's full phenotype.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "KCTD8",
+    "LSG1",
+    "KIR3DL1",
+    "USP35"
+  ]
+}

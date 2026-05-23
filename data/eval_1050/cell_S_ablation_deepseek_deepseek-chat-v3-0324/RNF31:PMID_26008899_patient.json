@@ -1,0 +1,26 @@
+{
+  "case_id": "RNF31:PMID_26008899_patient",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RNF31",
+  "orig_qwen3_8b_top1": "RNF31",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RNF31",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15677,
+  "tokens_out": 639,
+  "finish_reason": "stop",
+  "latency_s": 20.301759719848633,
+  "cost_usd": 0.0036274300000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RNF31\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Direct link to immunodeficiency, lymphangiectasia, and B/T cell defects aligning with patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DOCK8\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with immunodeficiency, recurrent infections, and reduced T cell counts, matching key patient symptoms.\"\n  },\n  {\n    \"gene\": \"SLC39A8\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Implicated in immunodeficiency via Mn deficiency but lacks direct evidence for T cell or antibody defects.\"\n  },\n  {\n    \"gene\": \"ADA\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Known for severe combined immunodeficiency but no direct evidence for lymphangiectasia or splenomegaly.\"\n  },\n  {\n    \"gene\": \"HBZ\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No clear link to immunodeficiency or patient's HPO phenotypes in provided evidence.\"\n  },\n  {\n    \"gene\": \"EVX1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting to patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"MYO7B\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence supporting association with immunodeficiency or lymphangiectasia.\"\n  },\n  {\n    \"gene\": \"ZNF207\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to patient's immune or gastrointestinal symptoms.\"\n  },\n  {\n    \"gene\": \"SLC34A2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TMEM278\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in immunodeficiency or lymphangiectasia.\"\n  },\n  {\n    \"gene\": \"TCOF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Associated with Treacher Collins syndrome, unrelated to patient's symptoms.\"\n  },\n  {\n    \"gene\": \"GNA12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to immunodeficiency or the patient's HPO terms.\"\n  },\n  {\n    \"gene\": \"REPS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"RNF187\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence for involvement in immune or lymphatic disorders.\"\n  },\n  {\n    \"gene\": \"CLCF1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking to the patient's immunodeficiency or lymphangiectasia.\"\n  }\n]",
+  "parsed_top5": [
+    "RNF31",
+    "DOCK8",
+    "SLC39A8",
+    "ADA",
+    "HBZ"
+  ]
+}

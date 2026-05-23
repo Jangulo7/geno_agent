@@ -1,0 +1,26 @@
+{
+  "case_id": "SNF8:PMID_38423010_individual_E1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNF8",
+  "orig_qwen3_8b_top1": "SNF8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNF8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16581,
+  "tokens_out": 664,
+  "finish_reason": "stop",
+  "latency_s": 19.315145254135132,
+  "cost_usd": 0.0038274800000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SNF8\",\n    \"confidence\": 0.9,\n    \"rationale\": \"SNF8 mutations directly cause a neurodevelopmental/neurodegenerative spectrum including intellectual disability, optic atrophy, and cerebellar abnormalities, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MAP7D1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Evidence links MAP7D1 to developmental delay and cerebellar dysfunction, but less specifically than SNF8.\"\n  },\n  {\n    \"gene\": \"MRPL34\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Mitochondrial ribosomal proteins can cause neurodevelopmental disorders, but direct evidence is sparse.\"\n  },\n  {\n    \"gene\": \"NDUFA9\",\n    \"confidence\": 0.3,\n    \"rationale\": \"NDUFA9 is part of complex I; mutations may cause Leigh-like syndromes but evidence is indirect.\"\n  },\n  {\n    \"gene\": \"ANGPT4\",\n    \"confidence\": 0.25,\n    \"rationale\": \"ANGPT4 has limited neurological associations; phenotypes are poorly matched.\"\n  },\n  {\n    \"gene\": \"CALN1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"CALN1 regulates calcium signaling but lacks strong disease associations.\"\n  },\n  {\n    \"gene\": \"CDH11\",\n    \"confidence\": 0.25,\n    \"rationale\": \"CDH11 is involved in cell adhesion but has no clear neurodevelopmental links.\"\n  },\n  {\n    \"gene\": \"ZNF124\",\n    \"confidence\": 0.2,\n    \"rationale\": \"ZNF124's role in neurodevelopment is unclear despite zinc-finger domain.\"\n  },\n  {\n    \"gene\": \"NGB\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Neuroglobin is brain-expressed but no disease-causing variants are known.\"\n  },\n  {\n    \"gene\": \"ACOT12\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ACOT12 is metabolic; no evidence links it to neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"RBM25\",\n    \"confidence\": 0.15,\n    \"rationale\": \"RBM25 splicing roles are unclear in neurodevelopment.\"\n  },\n  {\n    \"gene\": \"SP140L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SP140L lacks specific neurological disease associations.\"\n  },\n  {\n    \"gene\": \"FCN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"FCN1 is immune-related; no neurodevelopmental role is established.\"\n  },\n  {\n    \"gene\": \"ZSCAN5B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"ZSCAN5B has no known disease associations.\"\n  },\n  {\n    \"gene\": \"AKR1E2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"AKR1E2 is metabolic with no neurological links.\"\n  }\n]",
+  "parsed_top5": [
+    "SNF8",
+    "MAP7D1",
+    "MRPL34",
+    "NDUFA9",
+    "ANGPT4"
+  ]
+}

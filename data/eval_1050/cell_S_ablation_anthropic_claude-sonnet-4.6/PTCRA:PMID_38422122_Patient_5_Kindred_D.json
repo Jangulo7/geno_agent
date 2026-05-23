@@ -1,0 +1,26 @@
+{
+  "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PTCRA",
+  "orig_qwen3_8b_top1": "PYROXD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PYROXD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19173,
+  "tokens_out": 982,
+  "finish_reason": "stop",
+  "latency_s": 13.539887428283691,
+  "cost_usd": 0.072249,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PYROXD1\",\n    \"confidence\": 0.72,\n    \"rationale\": \"PYROXD1 evidence directly mentions polyneuropathy, hyporeflexia in lower limbs, muscle weakness, and autoimmune thyroiditis co-occurrence, matching the patient's full HPO profile including thyroid autoimmunity.\"\n  },\n  {\n    \"gene\": \"NKAP\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning NKAP.\"\n  },\n  {\n    \"gene\": \"ZBTB47\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning ZBTB47.\"\n  },\n  {\n    \"gene\": \"VCY1B\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning VCY1B.\"\n  },\n  {\n    \"gene\": \"NPIPB3\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning NPIPB3.\"\n  },\n  {\n    \"gene\": \"PRPF40B\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning PRPF40B.\"\n  },\n  {\n    \"gene\": \"LPA\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning LPA.\"\n  },\n  {\n    \"gene\": \"PSPN\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning PSPN.\"\n  },\n  {\n    \"gene\": \"SORCS1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning SORCS1.\"\n  },\n  {\n    \"gene\": \"ZNF883\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning ZNF883.\"\n  },\n  {\n    \"gene\": \"BTNL3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning BTNL3.\"\n  },\n  {\n    \"gene\": \"CYP2A7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning CYP2A7.\"\n  },\n  {\n    \"gene\": \"SLC39A8\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning SLC39A8.\"\n  },\n  {\n    \"gene\": \"SRRM3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning SRRM3.\"\n  },\n  {\n    \"gene\": \"PAFAH1B1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-disease link to this phenotype profile; evidence chunks are generic polyneuropathy cases not mentioning PAFAH1B1.\"\n  }\n]",
+  "parsed_top5": [
+    "PYROXD1",
+    "NKAP",
+    "ZBTB47",
+    "VCY1B",
+    "NPIPB3"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P6",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18557,
+  "tokens_out": 820,
+  "finish_reason": "stop",
+  "latency_s": 15.826205253601074,
+  "cost_usd": 0.067971,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RFXANK\",\"confidence\":0.82,\"rationale\":\"RFXANK chunks directly describe MHC-II deficiency patients with recurrent sino-pulmonary infections, pneumonia, failure to thrive, and hepatomegaly confirmed by homozygous RFXANK mutations, matching all HPO phenotypes.\"},{\"gene\":\"GALK2\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for GALK2 are generic immunodeficiency/MPS cases with no direct GALK2 gene mention or specific mechanistic link to the patient's phenotype profile.\"},{\"gene\":\"XXYLT1\",\"confidence\":0.03,\"rationale\":\"No direct XXYLT1 gene-disease evidence; shared generic case report chunks describe immunodeficiency phenotypes not specifically attributed to XXYLT1.\"},{\"gene\":\"LARS2\",\"confidence\":0.02,\"rationale\":\"LARS2 evidence chunks are generic immunodeficiency/MPS cases with no direct LARS2 mention or causal link to the presented phenotypes.\"},{\"gene\":\"BBS1\",\"confidence\":0.02,\"rationale\":\"BBS1 evidence is entirely generic MPS/immunodeficiency literature with no direct BBS1-specific association to the patient's phenotype profile.\"},{\"gene\":\"MGAT5\",\"confidence\":0.02,\"rationale\":\"MGAT5 evidence chunks are generic shared case reports with no direct MGAT5 gene mention or mechanistic relevance to the HPO phenotypes.\"},{\"gene\":\"TET1\",\"confidence\":0.01,\"rationale\":\"TET1 evidence is generic immunodeficiency case reports with no direct TET1 causal link to failure to thrive, recurrent infections, hepatomegaly, or pneumonia.\"},{\"gene\":\"CD70\",\"confidence\":0.01,\"rationale\":\"CD70 evidence chunks are generic shared immunodeficiency cases with no direct CD70-specific mechanistic link to the patient's phenotype profile.\"},{\"gene\":\"MTFR1L\",\"confidence\":0.01,\"rationale\":\"MTFR1L evidence is generic MPS/Pompe disease case reports with no direct MTFR1L gene mention or causal relevance to the HPO phenotypes.\"},{\"gene\":\"CMBL\",\"confidence\":0.01,\"rationale\":\"CMBL evidence chunks are generic shared immunodeficiency cases with no direct CMBL-specific association to the presented phenotypes.\"},{\"gene\":\"NPAS1\",\"confidence\":0.01,\"rationale\":\"NPAS1 evidence is generic MPS/immunodeficiency literature with no direct NPAS1 causal link to the patient's phenotype profile.\"},{\"gene\":\"OR10J5\",\"confidence\":0.01,\"rationale\":\"OR10J5 evidence chunks are generic shared case reports with no direct OR10J5 gene mention or mechanistic relevance to the HPO phenotypes.\"},{\"gene\":\"TDRD10\",\"confidence\":0.01,\"rationale\":\"TDRD10 evidence is generic shared immunodeficiency/MPS cases with no direct TDRD10-specific association to the presented phenotypes.\"},{\"gene\":\"HIRIP3\",\"confidence\":0.01,\"rationale\":\"HIRIP3 evidence chunks are generic shared case reports with no direct HIRIP3 gene mention or causal link to the patient's phenotype profile.\"},{\"gene\":\"ASCL1\",\"confidence\":0.01,\"rationale\":\"ASCL1 evidence is generic shared immunodeficiency/MPS literature with no direct ASCL1-specific mechanistic link to the HPO phenotypes.\"}]",
+  "parsed_top5": [
+    "RFXANK",
+    "GALK2",
+    "XXYLT1",
+    "LARS2",
+    "BBS1"
+  ]
+}

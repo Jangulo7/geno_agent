@@ -1,0 +1,26 @@
+{
+  "case_id": "AEBP1:PMID_29606302_C_IV_6",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "AEBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AEBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20120,
+  "tokens_out": 812,
+  "finish_reason": "stop",
+  "latency_s": 13.542354583740234,
+  "cost_usd": 0.07254,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AEBP1\",\"confidence\":0.88,\"rationale\":\"All three evidence chunks directly name AEBP1 as the causal gene for classical-like EDS type 2, explicitly listing hallux valgus, hammertoes, squared iliac bones, hypotonia, generalized JHM, dislocations, atrophic scars, osteopenia, and redundant skin.\"},{\"gene\":\"CD44\",\"confidence\":0.05,\"rationale\":\"CD44 evidence chunks describe AEBP1-related EDS phenotypes matching the patient but do not implicate CD44 itself; likely a co-located gene in the same publication.\"},{\"gene\":\"TNFSF14\",\"confidence\":0.02,\"rationale\":\"Evidence chunks reference AEBP1-related EDS and spondylodysplastic EDS features but do not directly implicate TNFSF14 in this phenotype.\"},{\"gene\":\"COL15A1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe AEBP1-related EDS but do not mention COL15A1 as causative for this phenotype profile.\"},{\"gene\":\"PMVK\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PMVK to this phenotype; chunks describe AEBP1-related EDS without mentioning PMVK.\"},{\"gene\":\"WHRN\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking WHRN to this phenotype; chunks describe AEBP1-related EDS without mentioning WHRN.\"},{\"gene\":\"FDXR\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking FDXR to this phenotype; chunks describe AEBP1-related EDS without mentioning FDXR.\"},{\"gene\":\"ZMYM6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZMYM6 to this phenotype; chunks describe AEBP1-related EDS without mentioning ZMYM6.\"},{\"gene\":\"CHST5\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CHST5 to this phenotype; chunks describe AEBP1-related EDS without mentioning CHST5.\"},{\"gene\":\"TRMT11\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TRMT11 to this phenotype; chunks describe AEBP1-related EDS without mentioning TRMT11.\"},{\"gene\":\"STON2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking STON2 to this phenotype; chunks describe AEBP1-related EDS without mentioning STON2.\"},{\"gene\":\"C1D\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking C1D to this phenotype; chunks describe AEBP1-related EDS without mentioning C1D.\"},{\"gene\":\"PPT1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PPT1 to this phenotype; chunks describe AEBP1-related EDS without mentioning PPT1.\"},{\"gene\":\"CEP85L\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CEP85L to this phenotype; chunks describe AEBP1-related EDS without mentioning CEP85L.\"},{\"gene\":\"CDH23\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CDH23 to this phenotype; chunks describe AEBP1-related EDS without mentioning CDH23.\"}]",
+  "parsed_top5": [
+    "AEBP1",
+    "CD44",
+    "TNFSF14",
+    "COL15A1",
+    "PMVK"
+  ]
+}

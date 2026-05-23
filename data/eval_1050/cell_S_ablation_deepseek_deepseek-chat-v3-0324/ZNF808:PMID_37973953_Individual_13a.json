@@ -1,0 +1,22 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_13a",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10976,
+  "tokens_out": 50,
+  "finish_reason": "stop",
+  "latency_s": 3.3647727966308594,
+  "cost_usd": 0.0022337000000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"ZNF808\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Direct evidence links ZNF808 to pancreatic agenesis with neonatal diabetes and exocrine insufficiency, matching all patient phenotypes.\"\n}",
+  "parsed_top5": [
+    "ZNF808"
+  ]
+}

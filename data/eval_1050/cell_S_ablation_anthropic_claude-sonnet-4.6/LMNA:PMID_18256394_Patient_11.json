@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_11",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17129,
+  "tokens_out": 741,
+  "finish_reason": "stop",
+  "latency_s": 12.467888832092285,
+  "cost_usd": 0.062502,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.93,\"rationale\":\"LMNA/HGPS evidence directly lists micrognathia, circumoral cyanosis, lipodystrophy, alopecia, failure to thrive, short stature, hypodontia, delayed dentition, and mottled pigmentation\u2014matching nearly all patient HPO terms.\"},{\"gene\":\"CHD7\",\"confidence\":0.03,\"rationale\":\"CHD7 evidence shows proptosis in CHARGE syndrome but lacks the lipodystrophy, hypodontia, shark teeth, and mottled pigmentation seen in this patient.\"},{\"gene\":\"PRIM1\",\"confidence\":0.01,\"rationale\":\"PRIM1 deficiency shows some overlap (lipodystrophy, growth restriction) but lacks the dental, pigmentation, and circumoral cyanosis features of this patient.\"},{\"gene\":\"KDELR2\",\"confidence\":0.01,\"rationale\":\"KDELR2 evidence relates to osteogenesis imperfecta and short stature but does not match the progeroid/lipodystrophy/dental phenotype cluster.\"},{\"gene\":\"DHX30\",\"confidence\":0.005,\"rationale\":\"DHX30 evidence covers neurodevelopmental features and failure to thrive but lacks lipodystrophy, dental anomalies, and mottled pigmentation.\"},{\"gene\":\"FAM237B\",\"confidence\":0.003,\"rationale\":\"FAM237B is a poorly characterized microprotein with no direct evidence linking it to this phenotype cluster.\"},{\"gene\":\"GSTM1\",\"confidence\":0.003,\"rationale\":\"GSTM1 evidence is limited to aflatoxin exposure and does not explain the progeroid/lipodystrophy/dental phenotype.\"},{\"gene\":\"RBPJ\",\"confidence\":0.002,\"rationale\":\"RBPJ evidence involves Notch signaling and failure to thrive in mice but has no direct link to the patient's phenotype cluster.\"},{\"gene\":\"ZBTB33\",\"confidence\":0.002,\"rationale\":\"ZBTB33 evidence lacks any direct connection to the progeroid, lipodystrophy, or dental features in this patient.\"},{\"gene\":\"CACNG6\",\"confidence\":0.001,\"rationale\":\"CACNG6 has no relevant evidence linking it to the patient's phenotype profile.\"},{\"gene\":\"RAB11FIP3\",\"confidence\":0.001,\"rationale\":\"RAB11FIP3 has no relevant evidence linking it to the patient's phenotype profile.\"},{\"gene\":\"IQGAP1\",\"confidence\":0.001,\"rationale\":\"IQGAP1 has no relevant evidence linking it to the patient's phenotype profile.\"},{\"gene\":\"CIMIP7\",\"confidence\":0.001,\"rationale\":\"CIMIP7 has no relevant evidence linking it to the patient's phenotype profile.\"},{\"gene\":\"CFAP90\",\"confidence\":0.001,\"rationale\":\"CFAP90 has no relevant evidence linking it to the patient's phenotype profile.\"},{\"gene\":\"ACBD3\",\"confidence\":0.001,\"rationale\":\"ACBD3 has no relevant evidence linking it to the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CHD7",
+    "PRIM1",
+    "KDELR2",
+    "DHX30"
+  ]
+}

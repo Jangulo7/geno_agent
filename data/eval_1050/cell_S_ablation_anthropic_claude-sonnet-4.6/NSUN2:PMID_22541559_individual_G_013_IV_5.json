@@ -1,0 +1,26 @@
+{
+  "case_id": "NSUN2:PMID_22541559_individual_G_013_IV_5",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NSUN2",
+  "orig_qwen3_8b_top1": "NSUN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NSUN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16115,
+  "tokens_out": 731,
+  "finish_reason": "stop",
+  "latency_s": 11.167439699172974,
+  "cost_usd": 0.05931,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NSUN2\",\"confidence\":0.82,\"rationale\":\"Multiple high-relevance chunks directly establish NSUN2 mutations cause MRT5 syndrome with core phenotypes of ID, microcephaly, and short stature matching the patient exactly.\"},{\"gene\":\"SMARCA1\",\"confidence\":0.05,\"rationale\":\"SMARCA1 evidence mentions a family with strabismus, microcephaly, ID, and short stature but the high-relevance chunks focus on SMARCA5, not SMARCA1 as a defined syndrome.\"},{\"gene\":\"MTIF2\",\"confidence\":0.03,\"rationale\":\"MTIF2 chunk references TTI2 mutations causing microcephaly, short stature, strabismus, and cognitive impairment, but this is about TTI2 not MTIF2 directly.\"},{\"gene\":\"GON4L\",\"confidence\":0.02,\"rationale\":\"GON4L has high-relevance evidence for ID, microcephaly, and growth impairment but strabismus is not a core feature and evidence is less direct.\"},{\"gene\":\"HDAC8\",\"confidence\":0.01,\"rationale\":\"HDAC8 is linked to Cornelia de Lange syndrome with microcephaly, ID, and short stature but strabismus is not a defining feature and evidence is indirect.\"},{\"gene\":\"PGPEP1L\",\"confidence\":0.01,\"rationale\":\"Only low-relevance chunks with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"BZW1\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking BZW1 to this phenotype profile.\"},{\"gene\":\"SPMIP11\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking SPMIP11 to this phenotype profile.\"},{\"gene\":\"MTHFD2L\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking MTHFD2L to this phenotype profile.\"},{\"gene\":\"GOLGA8J\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking GOLGA8J to this phenotype profile.\"},{\"gene\":\"HSD17B12\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking HSD17B12 to this phenotype profile.\"},{\"gene\":\"RBM4\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking RBM4 to this phenotype profile.\"},{\"gene\":\"PTBP2\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking PTBP2 to this phenotype profile.\"},{\"gene\":\"FAM180B\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking FAM180B to this phenotype profile.\"},{\"gene\":\"USPL1\",\"confidence\":0.01,\"rationale\":\"Only low-relevance shared chunks; no direct evidence linking USPL1 to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "NSUN2",
+    "SMARCA1",
+    "MTIF2",
+    "GON4L",
+    "HDAC8"
+  ]
+}

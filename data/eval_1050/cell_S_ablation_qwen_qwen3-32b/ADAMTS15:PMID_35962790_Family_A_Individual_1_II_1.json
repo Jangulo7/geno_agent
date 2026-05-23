@@ -1,0 +1,26 @@
+{
+  "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ADAMTS15",
+  "orig_qwen3_8b_top1": "PIERCE1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PIERCE1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15278,
+  "tokens_out": 787,
+  "finish_reason": "stop",
+  "latency_s": 28.300202131271362,
+  "cost_usd": 0.0014425999999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"PIERCE1\", \"confidence\": 0.95, \"rationale\": \"PIERCE1 is strongly associated with distal arthrogryposis, including features like finger flexion contractures, absent creases, and talipes equinovarus, aligning with the patient's HPO profile.\"}, {\"gene\": \"ZFAND2A\", \"confidence\": 0.85, \"rationale\": \"ZFAND2A is linked to distal arthrogryposis with overlapping fingers, ulnar deviation, and talipes equinovarus, which are consistent with the patient's phenotype.\"}, {\"gene\": \"HAPLN1\", \"confidence\": 0.75, \"rationale\": \"HAPLN1 is associated with joint contractures and hand/foot abnormalities, but less specific to the full range of the patient's HPO features.\"}, {\"gene\": \"NTN3\", \"confidence\": 0.70, \"rationale\": \"NTN3 is linked to distal arthrogryposis, but the evidence is less specific to the patient's full set of HPO features.\"}, {\"gene\": \"GON7\", \"confidence\": 0.65, \"rationale\": \"GON7 is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}, {\"gene\": \"PNPLA1\", \"confidence\": 0.60, \"rationale\": \"PNPLA1 is linked to musculoskeletal abnormalities, but the evidence is less specific to the patient's HPO features.\"}, {\"gene\": \"TRAPPC2\", \"confidence\": 0.55, \"rationale\": \"TRAPPC2 is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}, {\"gene\": \"H3-4\", \"confidence\": 0.50, \"rationale\": \"H3-4 is linked to skeletal abnormalities, but the evidence is less specific to the patient's HPO features.\"}, {\"gene\": \"F2RL1\", \"confidence\": 0.45, \"rationale\": \"F2RL1 is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}, {\"gene\": \"RIC3\", \"confidence\": 0.40, \"rationale\": \"RIC3 is linked to hand and foot abnormalities, but the evidence is less specific to the patient's HPO features.\"}, {\"gene\": \"TIGIT\", \"confidence\": 0.35, \"rationale\": \"TIGIT is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}, {\"gene\": \"CAVIN3\", \"confidence\": 0.30, \"rationale\": \"CAVIN3 is linked to skeletal abnormalities, but the evidence is less specific to the patient's HPO features.\"}, {\"gene\": \"SPHK1\", \"confidence\": 0.25, \"rationale\": \"SPHK1 is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}, {\"gene\": \"GPAA1\", \"confidence\": 0.20, \"rationale\": \"GPAA1 is linked to skeletal abnormalities, but the evidence is less specific to the patient's HPO features.\"}, {\"gene\": \"MTHFR\", \"confidence\": 0.15, \"rationale\": \"MTHFR is associated with hand and foot abnormalities, but the evidence is not as directly aligned with the patient's HPO profile.\"}]",
+  "parsed_top5": [
+    "PIERCE1",
+    "ZFAND2A",
+    "HAPLN1",
+    "NTN3",
+    "GON7"
+  ]
+}

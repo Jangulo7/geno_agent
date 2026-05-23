@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_17989726_Patient_B",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19178,
+  "tokens_out": 763,
+  "finish_reason": "stop",
+  "latency_s": 14.540486335754395,
+  "cost_usd": 0.068979,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.93,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining erythroderma, recurrent skin infections, eosinophilia, growth delay, urticaria, palmoplantar peeling, and lichenification via LEKTI deficiency.\"},{\"gene\":\"PTAFR\",\"confidence\":0.02,\"rationale\":\"PTAFR evidence only relates to CSU severity biomarker; no direct causal link to the full phenotype profile presented.\"},{\"gene\":\"NCL\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NCL to this phenotype; chunks only describe Netherton syndrome cases caused by SPINK5.\"},{\"gene\":\"PLGRKT\",\"confidence\":0.01,\"rationale\":\"No evidence linking PLGRKT to erythroderma, eosinophilia, or skin barrier defects; chunks reference SPINK5/Netherton syndrome only.\"},{\"gene\":\"MED25\",\"confidence\":0.01,\"rationale\":\"No evidence linking MED25 to this phenotype profile; associated literature chunks describe Netherton syndrome caused by SPINK5.\"},{\"gene\":\"LY6H\",\"confidence\":0.01,\"rationale\":\"No direct causal evidence for LY6H in this phenotype; chunks describe unrelated Netherton syndrome cases.\"},{\"gene\":\"B4GALNT2\",\"confidence\":0.01,\"rationale\":\"No evidence linking B4GALNT2 to erythroderma or the described phenotype cluster; chunks reference SPINK5-related disease.\"},{\"gene\":\"DEFB115\",\"confidence\":0.01,\"rationale\":\"No evidence linking DEFB115 to this phenotype; literature chunks describe Netherton syndrome caused by SPINK5 mutations.\"},{\"gene\":\"RRS1\",\"confidence\":0.01,\"rationale\":\"No evidence linking RRS1 to erythroderma or skin barrier defects; chunks reference SPINK5/Netherton syndrome only.\"},{\"gene\":\"ZNF658\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF658 to this phenotype profile; associated chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"LUM\",\"confidence\":0.01,\"rationale\":\"No evidence linking LUM to erythroderma or the described phenotype cluster; chunks reference SPINK5-related disease.\"},{\"gene\":\"ADAM18\",\"confidence\":0.01,\"rationale\":\"No evidence linking ADAM18 to this phenotype; literature chunks describe Netherton syndrome caused by SPINK5 mutations.\"},{\"gene\":\"CCNB1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CCNB1 to erythroderma or skin barrier defects; chunks reference SPINK5/Netherton syndrome and urticaria/eosinophilia context only.\"},{\"gene\":\"VN1R5\",\"confidence\":0.01,\"rationale\":\"No evidence linking VN1R5 to this phenotype profile; associated chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"C4BPB\",\"confidence\":0.01,\"rationale\":\"No evidence linking C4BPB to erythroderma or skin barrier defects; chunks reference Netherton syndrome caused by SPINK5 mutations.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "PTAFR",
+    "NCL",
+    "PLGRKT",
+    "MED25"
+  ]
+}

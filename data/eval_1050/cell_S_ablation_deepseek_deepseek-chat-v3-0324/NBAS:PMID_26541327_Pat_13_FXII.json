@@ -1,0 +1,22 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "FCGR3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FCGR3A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 10554,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 4.182269811630249,
+  "cost_usd": 0.0021508400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"FCGR3A\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Persistent abnormal liver function indices including ALT, AST, ALP, and GGT align with patient's hepatic phenotype.\"\n}",
+  "parsed_top5": [
+    "FCGR3A"
+  ]
+}

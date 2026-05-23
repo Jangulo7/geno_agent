@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F3_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18975,
+  "tokens_out": 867,
+  "finish_reason": "stop",
+  "latency_s": 10.549126863479614,
+  "cost_usd": 0.06993,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CLDN16\", \"confidence\": 0.95, \"rationale\": \"CLDN16 evidence directly and explicitly links mutations in this gene to FHHNC, matching all patient HPO terms: nephrocalcinosis, renal insufficiency, hypercalciuria, hypermagnesiuria, hypocitraturia, hyperuricosuria, renal Mg wasting, polyuria, polydipsia, and elevated PTH.\"}, {\"gene\": \"TGFBR3L\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention TGFBR3L as a causal gene; no direct link to this gene.\"}, {\"gene\": \"KRTAP10-7\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention KRTAP10-7 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"FAM86B2\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention FAM86B2 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"CXorf65\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention CXorf65 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"EBPL\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC/CLDN16 mutations but do not mention EBPL as a causal gene; no direct link to this gene.\"}, {\"gene\": \"CNGA2\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention CNGA2 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"CD248\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention CD248 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"TIPARP\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC/CLDN16 mutations but do not mention TIPARP as a causal gene; no direct link to this gene.\"}, {\"gene\": \"ERI3\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention ERI3 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"PLGRKT\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention PLGRKT as a causal gene; no direct link to this gene.\"}, {\"gene\": \"ZNF32\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention ZNF32 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"TSR2\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention TSR2 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"RPS20\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention RPS20 as a causal gene; no direct link to this gene.\"}, {\"gene\": \"TAS2R5\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe FHHNC but do not mention TAS2R5 as a causal gene; no direct link to this gene.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "TGFBR3L",
+    "KRTAP10-7",
+    "FAM86B2",
+    "CXorf65"
+  ]
+}

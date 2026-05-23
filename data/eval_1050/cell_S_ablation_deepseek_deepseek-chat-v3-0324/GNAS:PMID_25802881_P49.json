@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P49",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17382,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 37.05984425544739,
+  "cost_usd": 0.00400154,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GNAS is strongly associated with pseudohypoparathyroidism, matching all patient phenotypes including PTH resistance, intellectual disability, and short metacarpals.\"\n  },\n  {\n    \"gene\": \"WNT16\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking WNT16 to the patient's phenotypes, though it may play a role in bone development.\"\n  },\n  {\n    \"gene\": \"UFSP1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting UFSP1's role in the patient's endocrine or skeletal phenotypes.\"\n  },\n  {\n    \"gene\": \"ZPBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ZPBP to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CDH6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking CDH6 to the patient's endocrine or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"DNAJB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting DNAJB2's involvement in the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC44A5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SLC44A5 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"ATL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking ATL3 to the patient's endocrine or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"TNFSF13B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting TNFSF13B's role in the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SIGLEC10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SIGLEC10 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"RNF14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RNF14 to the patient's endocrine or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"SPRR2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SPRR2B's involvement in the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"DOCK5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting DOCK5 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"DENND2C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking DENND2C to the patient's endocrine or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"CDS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CDS2's role in the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GNAS",
+    "WNT16",
+    "UFSP1",
+    "ZPBP",
+    "CDH6"
+  ]
+}

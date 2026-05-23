@@ -1,0 +1,22 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F17_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15864,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 4.257889747619629,
+  "cost_usd": 0.00321669,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CLDN16\",\n  \"confidence\": 0.95,\n  \"rationale\": \"CLDN16 is strongly associated with FHHNC, matching all patient phenotypes including nephrocalcinosis, hypercalciuria, and renal magnesium wasting.\"\n}",
+  "parsed_top5": [
+    "CLDN16"
+  ]
+}

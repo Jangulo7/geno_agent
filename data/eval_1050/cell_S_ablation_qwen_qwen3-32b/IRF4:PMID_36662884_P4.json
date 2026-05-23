@@ -1,0 +1,22 @@
+{
+  "case_id": "IRF4:PMID_36662884_P4",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "Pik3r1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "VPS72",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14026,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 4.410905838012695,
+  "cost_usd": 0.00113748,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"VPS72\",\"confidence\":0.95,\"rationale\":\"Strong evidence linking VPS72 to B cell proliferation and class-switch defects, matching patient's hypogammaglobulinemia and memory B cell reduction.\"}",
+  "parsed_top5": [
+    "VPS72"
+  ]
+}

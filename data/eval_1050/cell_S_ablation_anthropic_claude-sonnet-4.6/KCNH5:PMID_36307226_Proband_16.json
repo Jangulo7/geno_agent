@@ -1,0 +1,26 @@
+{
+  "case_id": "KCNH5:PMID_36307226_Proband_16",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "KCNH5",
+  "orig_qwen3_8b_top1": "FMO5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HIVEP3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19026,
+  "tokens_out": 1050,
+  "finish_reason": "stop",
+  "latency_s": 15.449021339416504,
+  "cost_usd": 0.072828,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HIVEP3\",\n    \"confidence\": 0.35,\n    \"rationale\": \"HIVEP3 chunk_1 directly describes a cohort with bilateral tonic-clonic, focal, tonic, myoclonic seizures, status epilepticus, EEG abnormalities, and drug-resistant epileptic encephalopathy matching the patient's full phenotype.\"\n  },\n  {\n    \"gene\": \"THTPA\",\n    \"confidence\": 0.18,\n    \"rationale\": \"THTPA chunk_3 describes a patient with focal-tonic, bilateral tonic-clonic, myoclonic seizures, status epilepticus, intellectual disability, axial hypotonia, and severe EEG disruption closely matching the phenotype.\"\n  },\n  {\n    \"gene\": \"FMO5\",\n    \"confidence\": 0.08,\n    \"rationale\": \"FMO5 chunk_3 describes a similar patient with tonic, tonic-clonic, myoclonic seizures, status epilepticus, intellectual disability, and hypotonia, but gene-phenotype link is not established.\"\n  },\n  {\n    \"gene\": \"KLHL26\",\n    \"confidence\": 0.06,\n    \"rationale\": \"KLHL26 chunk_3 describes bilateral tonic-clonic, tonic, myoclonic seizures and status epilepticus with EEG abnormalities, but no direct gene-disease association for this phenotype.\"\n  },\n  {\n    \"gene\": \"SLC35B2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic epilepsy descriptions not specifically linking SLC35B2 to this epileptic encephalopathy phenotype.\"\n  },\n  {\n    \"gene\": \"GMPS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic epilepsy descriptions not specifically linking GMPS to this epileptic encephalopathy phenotype.\"\n  },\n  {\n    \"gene\": \"HPN\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks describe general epilepsy cohorts with no specific HPN gene-disease link to this epileptic encephalopathy phenotype.\"\n  },\n  {\n    \"gene\": \"SLC1A1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks describe Dravet syndrome and general epilepsy without specific SLC1A1 causation for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"TRIM69\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks are generic epilepsy descriptions with no established TRIM69 link to epileptic encephalopathy with this phenotype.\"\n  },\n  {\n    \"gene\": \"SEC61G\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks describe general epilepsy without specific SEC61G association to this epileptic encephalopathy phenotype.\"\n  },\n  {\n    \"gene\": \"ORC6\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks describe general epilepsy cohorts without specific ORC6 causation for this severe epileptic encephalopathy phenotype.\"\n  },\n  {\n    \"gene\": \"NYX\",\n    \"confidence\": 0.02,\n    \"rationale\": \"NYX is associated with congenital stationary night blindness, not epileptic encephalopathy; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"BGLAP\",\n    \"confidence\": 0.02,\n    \"rationale\": \"BGLAP encodes osteocalcin with no established link to epileptic encephalopathy; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"STK24\",\n    \"confidence\": 0.02,\n    \"rationale\": \"STK24 has no established epileptic encephalopathy association; evidence chunks are generic and non-specific to this gene.\"\n  },\n  {\n    \"gene\": \"ABCA8\",\n    \"confidence\": 0.02,\n    \"rationale\": \"ABCA8 has no established link to epileptic encephalopathy; evidence chunks are generic epilepsy descriptions unrelated to this gene.\"\n  }\n]",
+  "parsed_top5": [
+    "HIVEP3",
+    "THTPA",
+    "FMO5",
+    "KLHL26",
+    "SLC35B2"
+  ]
+}

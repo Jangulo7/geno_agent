@@ -1,0 +1,26 @@
+{
+  "case_id": "MAP3K14:PMID_25406581_P2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "MAP3K14",
+  "orig_qwen3_8b_top1": "MALT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MALT1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14471,
+  "tokens_out": 675,
+  "finish_reason": "stop",
+  "latency_s": 32.920637130737305,
+  "cost_usd": 0.0034139500000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"MALT1\",\n    \"confidence\": 0.8,\n    \"rationale\": \"MALT1 is strongly associated with B-cell defects and immunodeficiency, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TMC6\",\n    \"confidence\": 0.5,\n    \"rationale\": \"TMC6 is linked to immune dysregulation, but evidence is less specific to the patient's B-cell defects.\"\n  },\n  {\n    \"gene\": \"SPIDR\",\n    \"confidence\": 0.4,\n    \"rationale\": \"SPIDR has some immune-related evidence but lacks direct support for the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"RHBDL1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"RHBDL1 has minimal immune-related evidence, making it a weaker candidate.\"\n  },\n  {\n    \"gene\": \"BMP2K\",\n    \"confidence\": 0.3,\n    \"rationale\": \"BMP2K lacks direct evidence linking it to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"FYTTD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"FYTTD1 has no clear connection to the patient's immune deficiencies.\"\n  },\n  {\n    \"gene\": \"HIBADH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"HIBADH is not implicated in immune disorders relevant to the patient.\"\n  },\n  {\n    \"gene\": \"TANK\",\n    \"confidence\": 0.2,\n    \"rationale\": \"TANK has immune-related roles but lacks specific evidence for this phenotype.\"\n  },\n  {\n    \"gene\": \"YAE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"YAE1 has no known role in immune function or B-cell defects.\"\n  },\n  {\n    \"gene\": \"PHETA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PHETA1 lacks evidence supporting a role in the patient's immune deficiencies.\"\n  },\n  {\n    \"gene\": \"AIFM2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"AIFM2 is not associated with immune or B-cell dysfunction.\"\n  },\n  {\n    \"gene\": \"SIGLEC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SIGLEC1 has immune-related functions but no direct link to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DPF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"DPF1 has no clear evidence linking it to the patient's immune deficiencies.\"\n  },\n  {\n    \"gene\": \"IMPA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"IMPA2 is not implicated in immune disorders relevant to the patient.\"\n  },\n  {\n    \"gene\": \"MT-ATP8\",\n    \"confidence\": 0.0,\n    \"rationale\": \"MT-ATP8 is a mitochondrial gene with no known role in immune function.\"\n  }\n]",
+  "parsed_top5": [
+    "MALT1",
+    "TMC6",
+    "SPIDR",
+    "RHBDL1",
+    "BMP2K"
+  ]
+}

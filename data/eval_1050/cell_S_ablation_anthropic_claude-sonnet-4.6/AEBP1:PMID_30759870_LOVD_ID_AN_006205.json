@@ -1,0 +1,26 @@
+{
+  "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FBLN5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18850,
+  "tokens_out": 989,
+  "finish_reason": "stop",
+  "latency_s": 20.27193570137024,
+  "cost_usd": 0.071385,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The patient's phenotype profile \u2014 hyperextensible skin, redundant skin, bruising susceptibility, osteopenia, periodontitis, umbilical hernia, recurrent patellar dislocation, hallux valgus, thoracic scoliosis, hypotonia, motor delay, neonatal respiratory distress \u2014 is highly characteristic of a connective tissue disorder, specifically Ehlers-Danlos syndrome (EDS) or a related condition. FBLN5 (Fibulin-5) is known to cause autosomal recessive cutis laxa, which presents with redundant/loose skin, hyperextensible skin, hernias, skeletal anomalies, and respiratory issues. The GDNF chunk 3 describes a patient with EDS-like features including skin hyperextensibility, scoliosis, hallux valgus, hypotonia, and joint hypermobility \u2014 but this is not directly linked to GDNF. None of the evidence chunks are gene-specific (all genes share the same generic chunks). Given the phenotype, FBLN5 (cutis laxa) best matches: redundant skin, hyperextensible skin, bruising, osteopenia, hernias, patellar dislocation, scoliosis, neonatal respiratory distress, hypotonia. The other candidates have no known association with this connective tissue phenotype cluster.\n\n[{\"gene\":\"FBLN5\",\"confidence\":0.52,\"rationale\":\"FBLN5 causes autosomal recessive cutis laxa, matching redundant/hyperextensible skin, hernias, osteopenia, scoliosis, patellar dislocation, and neonatal respiratory distress in this patient.\"},{\"gene\":\"GDNF\",\"confidence\":0.07,\"rationale\":\"Evidence chunk describes EDS-like features overlapping the phenotype but GDNF is not a known connective tissue disease gene.\"},{\"gene\":\"P3H4\",\"confidence\":0.06,\"rationale\":\"P3H4 is involved in collagen hydroxylation; some overlap with connective tissue phenotypes but weak direct evidence here.\"},{\"gene\":\"PMEL\",\"confidence\":0.04,\"rationale\":\"No known association with this connective tissue/EDS-like phenotype profile; shared generic evidence chunks only.\"},{\"gene\":\"OPN1MW3\",\"confidence\":0.04,\"rationale\":\"Retinal opsin gene with no plausible link to connective tissue, hypotonia, or skeletal phenotypes in this patient.\"},{\"gene\":\"TOPBP1\",\"confidence\":0.04,\"rationale\":\"DNA replication/checkpoint gene; no established link to connective tissue or musculoskeletal phenotypes presented.\"},{\"gene\":\"FHIP2B\",\"confidence\":0.04,\"rationale\":\"No known disease association matching this connective tissue/EDS-like phenotype cluster.\"},{\"gene\":\"ZFP91\",\"confidence\":0.03,\"rationale\":\"Ubiquitin ligase with no established link to connective tissue disorders or this phenotype profile.\"},{\"gene\":\"CCDC85A\",\"confidence\":0.03,\"rationale\":\"No known association with connective tissue disease, hypotonia, or the skeletal phenotypes in this patient.\"},{\"gene\":\"TRIM60\",\"confidence\":0.03,\"rationale\":\"TRIM family ubiquitin ligase; no established link to EDS-like or cutis laxa phenotypes.\"},{\"gene\":\"KCTD19\",\"confidence\":0.03,\"rationale\":\"No known disease gene association matching this connective tissue/musculoskeletal phenotype profile.\"},{\"gene\":\"C1orf115\",\"confidence\":0.03,\"rationale\":\"Uncharacterized gene with no known link to connective tissue disorders or this phenotype cluster.\"},{\"gene\":\"KHSRP\",\"confidence\":0.02,\"rationale\":\"RNA-binding protein; no established association with connective tissue, skin, or skeletal phenotypes.\"},{\"gene\":\"MYO3B\",\"confidence\":0.02,\"rationale\":\"Myosin motor protein primarily linked to hearing; no known association with this connective tissue phenotype profile.\"},{\"gene\":\"SYT10\",\"confidence\":0.02,\"rationale\":\"Synaptotagmin involved in exocytosis; no established link to connective tissue, skin laxity, or skeletal phenotypes.\"}]",
+  "parsed_top5": [
+    "FBLN5",
+    "GDNF",
+    "P3H4",
+    "PMEL",
+    "OPN1MW3"
+  ]
+}

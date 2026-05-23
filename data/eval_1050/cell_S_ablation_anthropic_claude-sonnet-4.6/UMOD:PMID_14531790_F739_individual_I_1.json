@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_14531790_F739_individual_I_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17949,
+  "tokens_out": 851,
+  "finish_reason": "stop",
+  "latency_s": 15.190200328826904,
+  "cost_usd": 0.066612,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"UMOD\", \"confidence\": 0.88, \"rationale\": \"UMOD mutations directly cause ADTKD/FJHN characterized by hyperuricemia, progressive CKD to ESKD, and reduced renal size\u2014matching all three patient HPO phenotypes precisely.\"}, {\"gene\": \"ADAMTS18\", \"confidence\": 0.05, \"rationale\": \"ADAMTS18 is linked to renal hypoplasia via developmental kidney defects but lacks direct evidence for hyperuricemia or stage 5 CKD in this context.\"}, {\"gene\": \"NOX5\", \"confidence\": 0.02, \"rationale\": \"NOX5 is associated with oxidative stress in CKD but has no direct causal link to the specific triad of stage 5 CKD, renal hypoplasia, and hyperuricemia.\"}, {\"gene\": \"CKM\", \"confidence\": 0.01, \"rationale\": \"CKM evidence relates to cardiovascular-kidney-metabolic syndrome broadly; no direct causal gene-disease link to this specific phenotype triad.\"}, {\"gene\": \"SKOR2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SKOR2 to the patient's phenotype; evidence chunks are about unrelated genes.\"}, {\"gene\": \"TNFRSF10B\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TNFRSF10B to stage 5 CKD, renal hypoplasia, or hyperuricemia as a causal gene.\"}, {\"gene\": \"TOPORS\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TOPORS to the patient's phenotype triad; evidence chunks reference unrelated HNF1B pathology.\"}, {\"gene\": \"MCC\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MCC to stage 5 CKD, renal hypoplasia, or hyperuricemia.\"}, {\"gene\": \"HCK\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking HCK to the patient's phenotype triad of CKD, renal hypoplasia, and hyperuricemia.\"}, {\"gene\": \"SP140\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SP140 to the patient's phenotype; evidence chunks reference PAX2 and HNF1B pathology unrelated to SP140.\"}, {\"gene\": \"ERMN\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ERMN to stage 5 CKD, renal hypoplasia, or hyperuricemia as a causal gene.\"}, {\"gene\": \"PPIAL4A\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking PPIAL4A to the patient's phenotype triad; evidence chunks reference unrelated HNF1B pathology.\"}, {\"gene\": \"ARL5A\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ARL5A to stage 5 CKD, renal hypoplasia, or hyperuricemia.\"}, {\"gene\": \"OR10G3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking OR10G3 to the patient's phenotype; olfactory receptor gene with no known renal disease association.\"}, {\"gene\": \"GYG2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking GYG2 to stage 5 CKD, renal hypoplasia, or hyperuricemia as a causal gene.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "ADAMTS18",
+    "NOX5",
+    "CKM",
+    "SKOR2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_7",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10809,
+  "tokens_out": 643,
+  "finish_reason": "stop",
+  "latency_s": 13.210331678390503,
+  "cost_usd": 0.042072,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA mutations directly cause familial partial lipodystrophy (FPLD2) with hypertension, cardiomyopathy/arrhythmias, and metabolic syndrome, matching lipodystrophy, elevated BP, and cardiac features in this patient.\"},{\"gene\":\"CCNB3\",\"confidence\":0.04,\"rationale\":\"Only evidence is proptosis in a tumor case; no direct link to the multi-system phenotype described.\"},{\"gene\":\"COX4I1\",\"confidence\":0.03,\"rationale\":\"Associated with cardiac muscle contraction and heart failure but no direct evidence linking it to lipodystrophy or the full phenotype profile.\"},{\"gene\":\"TIMELESS\",\"confidence\":0.02,\"rationale\":\"Evidence chunk describes proptosis and high arched palate in a syndromic case but no direct gene-phenotype association for TIMELESS.\"},{\"gene\":\"SELENOK\",\"confidence\":0.02,\"rationale\":\"No relevant evidence linking SELENOK to lipodystrophy, short stature, alopecia, or cardiac features in this patient.\"},{\"gene\":\"PRMT1\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting PRMT1 to the patient's phenotype profile.\"},{\"gene\":\"USP4\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting USP4 to lipodystrophy or the multi-system phenotype described.\"},{\"gene\":\"NPEPL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting NPEPL1 to the patient's phenotype profile.\"},{\"gene\":\"PATL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting PATL1 to the patient's phenotype profile.\"},{\"gene\":\"USPL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting USPL1 to the patient's phenotype profile.\"},{\"gene\":\"ITGB2\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting ITGB2 to lipodystrophy or the multi-system phenotype described.\"},{\"gene\":\"FBXO28\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting FBXO28 to the patient's phenotype profile.\"},{\"gene\":\"SLC35A5\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting SLC35A5 to the patient's phenotype profile.\"},{\"gene\":\"C1QTNF2\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting C1QTNF2 to the patient's phenotype profile.\"},{\"gene\":\"RNF212\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting RNF212 to the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CCNB3",
+    "COX4I1",
+    "TIMELESS",
+    "SELENOK"
+  ]
+}

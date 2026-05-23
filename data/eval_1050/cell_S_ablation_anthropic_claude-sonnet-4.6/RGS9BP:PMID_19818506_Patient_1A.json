@@ -1,0 +1,26 @@
+{
+  "case_id": "RGS9BP:PMID_19818506_Patient_1A",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RGS9BP",
+  "orig_qwen3_8b_top1": "RGS9BP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RGS9BP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17801,
+  "tokens_out": 648,
+  "finish_reason": "stop",
+  "latency_s": 9.417551517486572,
+  "cost_usd": 0.063123,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RGS9BP\",\"confidence\":0.97,\"rationale\":\"RGS9BP mutations directly cause bradyopsia; literature explicitly links RGS9BP loss-of-function to bradyopsia, photophobia, luminance adaptation difficulty, and reduced visual acuity\u2014matching all patient HPO terms.\"},{\"gene\":\"ZNF548\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ZNF548 to the patient's phenotype; evidence chunks only mention RGS9BP in context of bradyopsia.\"},{\"gene\":\"PPP1R14A\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PPP1R14A to bradyopsia or any of the patient's visual phenotypes.\"},{\"gene\":\"PRDX4\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PRDX4 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"ACE2\",\"confidence\":0.01,\"rationale\":\"No evidence connecting ACE2 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"PLBD1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PLBD1 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"PPP4R4\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PPP4R4 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"MGAT2\",\"confidence\":0.01,\"rationale\":\"No evidence connecting MGAT2 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"PAGR1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PAGR1 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"ITM2C\",\"confidence\":0.01,\"rationale\":\"No evidence connecting ITM2C to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"CFAP43\",\"confidence\":0.01,\"rationale\":\"No evidence connecting CFAP43 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"TCF21\",\"confidence\":0.01,\"rationale\":\"No evidence connecting TCF21 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"SELENOO\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SELENOO to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"ZNF347\",\"confidence\":0.01,\"rationale\":\"No evidence connecting ZNF347 to bradyopsia or the patient's visual phenotype profile.\"},{\"gene\":\"DVL2\",\"confidence\":0.01,\"rationale\":\"No evidence connecting DVL2 to bradyopsia or the patient's visual phenotype profile.\"}]",
+  "parsed_top5": [
+    "RGS9BP",
+    "ZNF548",
+    "PPP1R14A",
+    "PRDX4",
+    "ACE2"
+  ]
+}

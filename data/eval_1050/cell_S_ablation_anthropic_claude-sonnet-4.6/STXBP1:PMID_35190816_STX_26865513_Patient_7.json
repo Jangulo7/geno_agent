@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14597,
+  "tokens_out": 700,
+  "finish_reason": "stop",
+  "latency_s": 15.09988522529602,
+  "cost_usd": 0.054291,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"STXBP1\",\"confidence\":0.92,\"rationale\":\"STXBP1 evidence directly describes infantile spasms, ataxia, tremor, movement disorders, and epileptic encephalopathy\u2014matching nearly all patient HPO phenotypes with high specificity.\"},{\"gene\":\"UPP1\",\"confidence\":0.03,\"rationale\":\"UPP1 evidence mentions intention tremor, dysmetria, and truncal ataxia in a patient description but lacks direct gene-disease link to this phenotype cluster.\"},{\"gene\":\"RINT1\",\"confidence\":0.02,\"rationale\":\"RINT1 is linked to spastic paraplegia and ataxia but evidence does not match the infantile spasms/epileptic encephalopathy profile of this patient.\"},{\"gene\":\"N4BP1\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking N4BP1 to this phenotype profile; evidence chunks are generic and non-specific.\"},{\"gene\":\"XK\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking XK to infantile spasms or epileptic encephalopathy in the provided chunks.\"},{\"gene\":\"HOXB3\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking HOXB3 to this phenotype profile in the provided evidence.\"},{\"gene\":\"CHST1\",\"confidence\":0.005,\"rationale\":\"CHST1 evidence discusses NREM parasomnias generally but no direct link to this patient's full phenotype profile.\"},{\"gene\":\"TGFB2\",\"confidence\":0.005,\"rationale\":\"TGFB2 evidence only tangentially mentions infantile spasms in an unrelated context; no direct causal link established.\"},{\"gene\":\"CA7\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CA7 to infantile spasms or epileptic encephalopathy in the provided chunks.\"},{\"gene\":\"MEGF8\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking MEGF8 to this phenotype profile in the provided evidence.\"},{\"gene\":\"GSR\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking GSR to infantile spasms or epileptic encephalopathy in the provided chunks.\"},{\"gene\":\"OR13J1\",\"confidence\":0.005,\"rationale\":\"OR13J1 is an olfactory receptor gene with no plausible link to this neurological phenotype profile.\"},{\"gene\":\"LRTM2\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking LRTM2 to this phenotype profile; evidence discusses PRRT2-related disorders instead.\"},{\"gene\":\"TIPRL\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking TIPRL to infantile spasms or epileptic encephalopathy in the provided chunks.\"},{\"gene\":\"CCNDBP1\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CCNDBP1 to this phenotype profile in the provided evidence.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "UPP1",
+    "RINT1",
+    "N4BP1",
+    "XK"
+  ]
+}

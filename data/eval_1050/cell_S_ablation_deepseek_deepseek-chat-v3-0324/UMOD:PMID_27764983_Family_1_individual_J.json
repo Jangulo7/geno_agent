@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_27764983_Family_1_individual_J",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13636,
+  "tokens_out": 687,
+  "finish_reason": "stop",
+  "latency_s": 23.767585039138794,
+  "cost_usd": 0.0032561900000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"UMOD mutations are well-established causes of ADTKD with hyperuricemia and renal fibrosis, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DBP\",\n    \"confidence\": 0.35,\n    \"rationale\": \"DBP is associated with hyperuricemia and CKD but lacks specific renal fibrosis/hypoplasia links.\"\n  },\n  {\n    \"gene\": \"KLK8\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence links KLK8 to hyperuricemia or renal phenotypes described.\"\n  },\n  {\n    \"gene\": \"OR5AC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for OR5AC1 in kidney disease or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"SLC5A12\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting SLC5A12's role in renal fibrosis or hypoplasia.\"\n  },\n  {\n    \"gene\": \"HEATR4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connects HEATR4 to renal phenotypes or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"HYOU1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence links HYOU1 to the patient's specific renal phenotypes.\"\n  },\n  {\n    \"gene\": \"PACS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PACS1 mutations are not associated with the described renal or hyperuricemia phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC25A34\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence ties SLC25A34 to renal fibrosis/hypoplasia or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"ACBD4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ACBD4 lacks any known association with the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC9A5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature links SLC9A5 to hyperuricemia or renal pathology.\"\n  },\n  {\n    \"gene\": \"DORIP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supports DORIP1's involvement in renal disease or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"CEP295\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CEP295 is not associated with renal phenotypes or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"A4GNT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"A4GNT has no known role in kidney disease or uric acid metabolism.\"\n  },\n  {\n    \"gene\": \"GCNT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence links GCNT1 to the described renal or metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "UMOD",
+    "DBP",
+    "KLK8",
+    "OR5AC1",
+    "SLC5A12"
+  ]
+}

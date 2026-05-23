@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19773,
+  "tokens_out": 690,
+  "finish_reason": "stop",
+  "latency_s": 11.583235502243042,
+  "cost_usd": 0.069669,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.92,\"rationale\":\"CLDN16 mutations directly cause FHHNC, characterized by nephrocalcinosis, hypercalciuria, recurrent UTIs, and elevated renin/aldosterone; evidence chunks explicitly name CLDN16 as causal.\"},{\"gene\":\"AMZ1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking AMZ1 to the patient's phenotype; evidence chunks describe FHHNC/Bartter syndrome without mentioning AMZ1.\"},{\"gene\":\"LRRK2\",\"confidence\":0.01,\"rationale\":\"No evidence linking LRRK2 to nephrocalcinosis, hypercalciuria, or renal tubular disease; known for Parkinson's disease.\"},{\"gene\":\"POLR1B\",\"confidence\":0.01,\"rationale\":\"No evidence linking POLR1B to the renal phenotype; associated with Treacher Collins syndrome, not tubulopathy.\"},{\"gene\":\"PSMB9\",\"confidence\":0.01,\"rationale\":\"No evidence linking PSMB9 to nephrocalcinosis or hypercalciuria; involved in immune proteasome function.\"},{\"gene\":\"TSNAX\",\"confidence\":0.01,\"rationale\":\"No evidence linking TSNAX to renal tubular disease or the patient's phenotype profile.\"},{\"gene\":\"EEF2\",\"confidence\":0.01,\"rationale\":\"No evidence linking EEF2 to nephrocalcinosis or hypercalciuria; encodes a translation elongation factor.\"},{\"gene\":\"PDE6B\",\"confidence\":0.01,\"rationale\":\"No evidence linking PDE6B to renal tubular disease; associated with retinitis pigmentosa.\"},{\"gene\":\"FRA10AC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking FRA10AC1 to nephrocalcinosis or hypercalciuria.\"},{\"gene\":\"ADSL\",\"confidence\":0.01,\"rationale\":\"No evidence linking ADSL to the renal phenotype; associated with adenylosuccinate lyase deficiency affecting purine synthesis.\"},{\"gene\":\"ATP9A\",\"confidence\":0.01,\"rationale\":\"No evidence linking ATP9A to nephrocalcinosis or renal tubular disease.\"},{\"gene\":\"SMIM35\",\"confidence\":0.01,\"rationale\":\"No evidence linking SMIM35 to the patient's renal phenotype.\"},{\"gene\":\"TMEM144\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM144 to nephrocalcinosis or hypercalciuria.\"},{\"gene\":\"CCNL2\",\"confidence\":0.01,\"rationale\":\"No evidence linking CCNL2 to renal tubular disease or the patient's phenotype.\"},{\"gene\":\"SELENOO\",\"confidence\":0.01,\"rationale\":\"No evidence linking SELENOO to nephrocalcinosis, hypercalciuria, or renal tubular disease.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "AMZ1",
+    "LRRK2",
+    "POLR1B",
+    "PSMB9"
+  ]
+}

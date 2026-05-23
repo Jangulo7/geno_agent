@@ -1,0 +1,22 @@
+{
+  "case_id": "ARMC9:PMID_28625504_SA2_3",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "ARMC9",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18785,
+  "tokens_out": 67,
+  "finish_reason": "stop",
+  "latency_s": 8.659002304077148,
+  "cost_usd": 0.00152156,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ARMC9\", \"confidence\": 0.95, \"rationale\": \"ARMC9 mutations are directly linked to Joubert syndrome, with reported cases showing molar tooth sign, retinal dystrophy, polydactyly, and developmental delay matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "ARMC9"
+  ]
+}

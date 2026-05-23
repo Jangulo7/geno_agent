@@ -1,0 +1,26 @@
+{
+  "case_id": "CRELD1:PMID_37947183_Family_F4_individual_P6",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CRELD1",
+  "orig_qwen3_8b_top1": "CASK",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CASK",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17229,
+  "tokens_out": 171,
+  "finish_reason": "stop",
+  "latency_s": 3.2682247161865234,
+  "cost_usd": 0.0014262,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"CASK\": 0.95, \"NKX6-1\": 0.85, \"CCDC63\": 0.8, \"SIGLEC7\": 0.75, \"GABRQ\": 0.7, \"ABHD17A\": 0.65, \"MMP26\": 0.6, \"ANKRD54\": 0.55, \"OR8J2\": 0.5, \"CRYM\": 0.45, \"MDK\": 0.4, \"MEF2A\": 0.35, \"ASIC3\": 0.3, \"PPP1R2C\": 0.25, \"GAPDHS\": 0.2}",
+  "parsed_top5": [
+    "CASK",
+    "NKX6-1",
+    "CCDC63",
+    "SIGLEC7",
+    "GABRQ"
+  ]
+}

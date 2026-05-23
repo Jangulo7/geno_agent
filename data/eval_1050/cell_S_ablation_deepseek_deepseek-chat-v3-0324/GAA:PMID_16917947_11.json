@@ -1,0 +1,26 @@
+{
+  "case_id": "GAA:PMID_16917947_11",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "GAA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GAA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15531,
+  "tokens_out": 656,
+  "finish_reason": "stop",
+  "latency_s": 23.62435531616211,
+  "cost_usd": 0.0036113200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GAA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GAA mutations cause Pompe disease, which matches all HPO phenotypes including elevated liver enzymes, CK, respiratory distress, and muscle weakness.\"\n  },\n  {\n    \"gene\": \"BRAF\",\n    \"confidence\": 0.3,\n    \"rationale\": \"BRAF inhibitors can elevate liver enzymes and CK, but respiratory distress and muscle weakness are not strongly linked to BRAF pathogenesis.\"\n  },\n  {\n    \"gene\": \"AK5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AK5 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TATDN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TATDN2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TCEAL7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TCEAL7 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MEIKIN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MEIKIN to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"UNC79\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UNC79 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RELCH\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RELCH to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ARX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ARX to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"QKI\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking QKI to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RAET1E\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RAET1E to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MARCKS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MARCKS to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TMEM121B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TMEM121B to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CPLANE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CPLANE1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"STARD13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking STARD13 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "GAA",
+    "BRAF",
+    "AK5",
+    "TATDN2",
+    "TCEAL7"
+  ]
+}

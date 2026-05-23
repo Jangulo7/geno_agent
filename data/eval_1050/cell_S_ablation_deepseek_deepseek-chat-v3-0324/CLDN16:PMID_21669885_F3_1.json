@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_21669885_F3_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14346,
+  "tokens_out": 654,
+  "finish_reason": "stop",
+  "latency_s": 21.009002447128296,
+  "cost_usd": 0.00337278,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLDN16\",\n    \"confidence\": 0.95,\n    \"rationale\": \"CLDN16 is directly linked to the patient's phenotypes via multiple high-relevance literature chunks describing mutations causing renal Mg/Ca wasting and nephrocalcinosis.\"\n  },\n  {\n    \"gene\": \"ACE\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ACE is only tangentially mentioned in Mg handling, with no direct phenotypic correlation to the patient.\"\n  },\n  {\n    \"gene\": \"LGSN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking LGSN to the patient's renal phenotypes.\"\n  },\n  {\n    \"gene\": \"EYA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking EYA2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"COL11A1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking COL11A1 to renal Mg/Ca wasting disorders.\"\n  },\n  {\n    \"gene\": \"ADPRHL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting ADPRHL1 to the phenotypes.\"\n  },\n  {\n    \"gene\": \"PLK1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting PLK1's role in nephrocalcinosis or electrolyte wasting.\"\n  },\n  {\n    \"gene\": \"TBL1X\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature associating TBL1X with renal tubulopathies.\"\n  },\n  {\n    \"gene\": \"SEC11C\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence tying SEC11C to the patient's condition.\"\n  },\n  {\n    \"gene\": \"REN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking REN to the specific phenotypes observed.\"\n  },\n  {\n    \"gene\": \"RANBP3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature implicating RANBP3 in renal calcium/magnesium handling.\"\n  },\n  {\n    \"gene\": \"TNFSF11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting TNFSF11 to the phenotypes.\"\n  },\n  {\n    \"gene\": \"GATD3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking GATD3 to renal electrolyte disorders.\"\n  },\n  {\n    \"gene\": \"DCAF5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature associating DCAF5 with nephrocalcinosis or hypomagnesemia.\"\n  },\n  {\n    \"gene\": \"RUNDC3A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role in the observed phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "CLDN16",
+    "ACE",
+    "LGSN",
+    "EYA2",
+    "COL11A1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_8_individual_II_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "SNUPN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNUPN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16065,
+  "tokens_out": 990,
+  "finish_reason": "stop",
+  "latency_s": 13.311351299285889,
+  "cost_usd": 0.063045,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SNUPN\",\n    \"confidence\": 0.72,\n    \"rationale\": \"SNUPN chunk_1 directly reports biallelic SNUPN variants causing childhood-onset proximal limb girdle weakness, Gowers sign, contractures, elevated CK (1500-5750 IU/L), and motor delay\u2014matching all key HPO phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF726\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to ZNF726; no direct gene-phenotype association for this profile.\"\n  },\n  {\n    \"gene\": \"SLC18B1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to SLC18B1; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"DNAJB14\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to DNAJB14; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"VCPKMT\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks describe VCP-related myopathy, not VCPKMT-specific disease; no direct causal link to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"FBXO44\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to FBXO44; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"CINP\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to CINP; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"BORCS8\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to BORCS8; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"PLEKHG4B\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to PLEKHG4B; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"FUCA1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to FUCA1; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"GSG1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to GSG1; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"HEG1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to HEG1; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"FAM236B\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to FAM236B; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"FAM90A26\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to FAM90A26; no direct gene-phenotype association established.\"\n  },\n  {\n    \"gene\": \"SLC22A13\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic neuromuscular disease descriptions not specifically linked to SLC22A13; no direct gene-phenotype association established.\"\n  }\n]",
+  "parsed_top5": [
+    "SNUPN",
+    "ZNF726",
+    "SLC18B1",
+    "DNAJB14",
+    "VCPKMT"
+  ]
+}

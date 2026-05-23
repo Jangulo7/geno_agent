@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_Syrbe_26",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16706,
+  "tokens_out": 592,
+  "finish_reason": "stop",
+  "latency_s": 20.893703937530518,
+  "cost_usd": 0.0037970400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"STXBP1\", \"confidence\": 0.95, \"rationale\": \"STXBP1's evidence directly matches the patient's phenotype profile, including infantile spasms, developmental regression, and severe intellectual disability.\"},\n  {\"gene\": \"KCTD8\", \"confidence\": 0.4, \"rationale\": \"Some evidence links KCTD8 to epilepsy and developmental delay, but not as specifically as STXBP1.\"},\n  {\"gene\": \"KDM5A\", \"confidence\": 0.35, \"rationale\": \"KDM5A has been associated with intellectual disability and seizures, but evidence is less specific.\"},\n  {\"gene\": \"PRKCQ\", \"confidence\": 0.3, \"rationale\": \"PRKCQ is linked to ataxia and dystonia, but lacks strong evidence for infantile spasms.\"},\n  {\"gene\": \"LSG1\", \"confidence\": 0.25, \"rationale\": \"LSG1's evidence is non-specific and lacks direct relevance to the patient's phenotype.\"},\n  {\"gene\": \"KIR3DL1\", \"confidence\": 0.2, \"rationale\": \"KIR3DL1 lacks evidence linking it to neurological phenotypes.\"},\n  {\"gene\": \"USP35\", \"confidence\": 0.2, \"rationale\": \"USP35's evidence is non-specific and lacks direct relevance to the patient's phenotype.\"},\n  {\"gene\": \"PRY\", \"confidence\": 0.15, \"rationale\": \"PRY has no clear evidence linking it to the patient's neurological symptoms.\"},\n  {\"gene\": \"MYBPHL\", \"confidence\": 0.15, \"rationale\": \"MYBPHL lacks evidence linking it to neurological phenotypes.\"},\n  {\"gene\": \"LRRC63\", \"confidence\": 0.15, \"rationale\": \"LRRC63 has no clear evidence linking it to the patient's neurological symptoms.\"},\n  {\"gene\": \"KRT5\", \"confidence\": 0.1, \"rationale\": \"KRT5 is unrelated to neurological disorders.\"},\n  {\"gene\": \"SMC5\", \"confidence\": 0.1, \"rationale\": \"SMC5 lacks evidence linking it to neurological phenotypes.\"},\n  {\"gene\": \"FADS1\", \"confidence\": 0.1, \"rationale\": \"FADS1 has no clear evidence linking it to neurological symptoms.\"},\n  {\"gene\": \"WDR59\", \"confidence\": 0.1, \"rationale\": \"WDR59 lacks evidence linking it to neurological phenotypes.\"},\n  {\"gene\": \"ZNF548\", \"confidence\": 0.1, \"rationale\": \"ZNF548 has no clear evidence linking it to neurological symptoms.\"}\n]",
+  "parsed_top5": [
+    "STXBP1",
+    "KCTD8",
+    "KDM5A",
+    "PRKCQ",
+    "LSG1"
+  ]
+}

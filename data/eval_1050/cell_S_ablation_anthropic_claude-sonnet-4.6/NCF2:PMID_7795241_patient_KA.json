@@ -1,0 +1,26 @@
+{
+  "case_id": "NCF2:PMID_7795241_patient_KA",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NCF2",
+  "orig_qwen3_8b_top1": "NCF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NCF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17519,
+  "tokens_out": 777,
+  "finish_reason": "stop",
+  "latency_s": 17.03115439414978,
+  "cost_usd": 0.064212,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NCF2\",\"confidence\":0.92,\"rationale\":\"NCF2 encodes p67-phox, a cytosolic NADPH oxidase subunit; its evidence chunks directly mention NCF2/p67-phox mutations causing CGD with decreased neutrophil oxidative burst, liver abscess, lung abscess, osteomyelitis, and recurrent infections matching all patient HPOs.\"},{\"gene\":\"LCT\",\"confidence\":0.02,\"rationale\":\"No direct link to CGD or the patient's phenotype; evidence chunks mentioning CGD are generic background text not specific to LCT.\"},{\"gene\":\"RBPJL\",\"confidence\":0.01,\"rationale\":\"RBPJL evidence relates to T-cell function in cancer immunotherapy; no mechanistic link to neutrophil oxidative burst or CGD phenotype.\"},{\"gene\":\"OR11G2\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no known role in neutrophil function or CGD; evidence chunks are generic CGD background unrelated to OR11G2.\"},{\"gene\":\"GJA5\",\"confidence\":0.01,\"rationale\":\"GJA5 encodes a gap junction protein with no established role in NADPH oxidase function or CGD; evidence is generic background.\"},{\"gene\":\"CCNB1IP1\",\"confidence\":0.01,\"rationale\":\"Cell cycle E3 ligase with no known role in neutrophil oxidative burst; evidence chunks are generic CGD background unrelated to CCNB1IP1.\"},{\"gene\":\"PRMT5\",\"confidence\":0.01,\"rationale\":\"Arginine methyltransferase with no established link to NADPH oxidase or CGD phenotype; evidence is generic background.\"},{\"gene\":\"PSG4\",\"confidence\":0.01,\"rationale\":\"Pregnancy-specific glycoprotein with no known role in neutrophil function or CGD; evidence is generic background.\"},{\"gene\":\"MEOX2\",\"confidence\":0.01,\"rationale\":\"Homeobox transcription factor unrelated to NADPH oxidase; evidence chunks are generic CGD background not specific to MEOX2.\"},{\"gene\":\"CHST6\",\"confidence\":0.01,\"rationale\":\"Sulfotransferase involved in corneal macular dystrophy with no link to neutrophil oxidative burst; evidence is generic background.\"},{\"gene\":\"SLC24A5\",\"confidence\":0.01,\"rationale\":\"Cation exchanger involved in pigmentation with no known role in NADPH oxidase or CGD; evidence is generic background.\"},{\"gene\":\"DDIAS\",\"confidence\":0.01,\"rationale\":\"DNA damage-induced apoptosis suppressor with no established link to neutrophil oxidative burst or CGD phenotype.\"},{\"gene\":\"AKR7L\",\"confidence\":0.01,\"rationale\":\"Aldo-keto reductase family member with no known role in NADPH oxidase function or CGD; evidence is generic background.\"},{\"gene\":\"TRMT10B\",\"confidence\":0.01,\"rationale\":\"tRNA methyltransferase with no established link to neutrophil oxidative burst or CGD; evidence is generic background.\"},{\"gene\":\"LHX3\",\"confidence\":0.01,\"rationale\":\"LIM homeobox transcription factor involved in pituitary development with no link to NADPH oxidase or CGD phenotype.\"}]",
+  "parsed_top5": [
+    "NCF2",
+    "LCT",
+    "RBPJL",
+    "OR11G2",
+    "GJA5"
+  ]
+}

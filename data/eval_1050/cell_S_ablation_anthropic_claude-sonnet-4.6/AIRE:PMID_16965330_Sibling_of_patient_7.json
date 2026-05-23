@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_16965330_Sibling_of_patient_7",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17504,
+  "tokens_out": 815,
+  "finish_reason": "stop",
+  "latency_s": 17.145005226135254,
+  "cost_usd": 0.064737,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"AIRE mutations cause APS-1/APECED, which classically presents with hypoparathyroidism, mucocutaneous candidiasis (recurrent fungal infections), and keratoconjunctivitis\u2014matching all three patient HPO phenotypes exactly.\"},{\"gene\":\"AMT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AMT to this phenotype triad; evidence chunks reference AIRE-related disease or unrelated ophthalmic procedures.\"},{\"gene\":\"FKBP3\",\"confidence\":0.01,\"rationale\":\"FKBP3 appears only incidentally in a chromosomal deletion list; no direct link to keratoconjunctivitis, fungal infections, or hypoparathyroidism.\"},{\"gene\":\"EGR2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks for EGR2 only describe AIRE-related APS-1; no direct mechanistic link to EGR2 and the patient's phenotype triad.\"},{\"gene\":\"CAPN14\",\"confidence\":0.01,\"rationale\":\"No evidence linking CAPN14 to keratoconjunctivitis, recurrent fungal infections, or hypoparathyroidism; chunks reference unrelated AIRE/GATA3 disease.\"},{\"gene\":\"RHOF\",\"confidence\":0.01,\"rationale\":\"No evidence linking RHOF to this phenotype triad; associated chunks describe AIRE-related or GATA3-related conditions only.\"},{\"gene\":\"BCAT2\",\"confidence\":0.01,\"rationale\":\"No evidence linking BCAT2 to keratoconjunctivitis, fungal infections, or hypoparathyroidism; chunks reference unrelated conditions.\"},{\"gene\":\"SLC2A6\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC2A6 to the patient's phenotype triad; associated chunks describe AIRE/GATA3-related disease only.\"},{\"gene\":\"WFDC11\",\"confidence\":0.01,\"rationale\":\"No evidence linking WFDC11 to keratoconjunctivitis, recurrent fungal infections, or hypoparathyroidism.\"},{\"gene\":\"OR52B2\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR52B2 to this phenotype triad; chunks reference AIRE-related APS-1 only.\"},{\"gene\":\"COX4I1\",\"confidence\":0.01,\"rationale\":\"No evidence linking COX4I1 to keratoconjunctivitis, fungal infections, or hypoparathyroidism.\"},{\"gene\":\"RPS17\",\"confidence\":0.01,\"rationale\":\"No evidence linking RPS17 to this phenotype triad; associated chunks describe AIRE-related disease only.\"},{\"gene\":\"ZFYVE27\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZFYVE27 to keratoconjunctivitis, recurrent fungal infections, or hypoparathyroidism.\"},{\"gene\":\"FKRP\",\"confidence\":0.01,\"rationale\":\"No evidence linking FKRP to this phenotype triad; associated chunks describe AIRE/GATA3-related conditions only.\"},{\"gene\":\"MAP3K4\",\"confidence\":0.01,\"rationale\":\"No evidence linking MAP3K4 to keratoconjunctivitis, recurrent fungal infections, or hypoparathyroidism.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "AMT",
+    "FKBP3",
+    "EGR2",
+    "CAPN14"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_4",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20538,
+  "tokens_out": 785,
+  "finish_reason": "stop",
+  "latency_s": 15.59280800819397,
+  "cost_usd": 0.073389,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"ITPR3\", \"confidence\": 0.82, \"rationale\": \"ITPR3 evidence directly describes panlymphopenia, decreased naive T cells (CD4+/CD8+), decreased B cells, splenomegaly, lymphadenopathy, pneumonia, and recurrent ear infections matching the patient's full phenotype profile.\"}, {\"gene\": \"GPR83\", \"confidence\": 0.04, \"rationale\": \"GPR83 evidence relates only to Treg biology with no direct match to the combined immunodeficiency and clinical phenotypes seen in this patient.\"}, {\"gene\": \"SMAD7\", \"confidence\": 0.03, \"rationale\": \"SMAD7 evidence shows only modest T cell activation changes in mouse models with no clinical immunodeficiency phenotype matching this patient.\"}, {\"gene\": \"PIK3C2A\", \"confidence\": 0.03, \"rationale\": \"PIK3C2A evidence is generic; the relevant immunodeficiency described is PIK3CD GOF (APDS), a different gene, with no direct ITPR3-like phenotype match.\"}, {\"gene\": \"HSBP1\", \"confidence\": 0.02, \"rationale\": \"HSBP1 evidence shows only correlative CD8+ T cell associations in NAFLD context, not a primary immunodeficiency matching this phenotype.\"}, {\"gene\": \"ZNF3\", \"confidence\": 0.01, \"rationale\": \"No direct ZNF3-specific immunological evidence; shared background chunks describe unrelated immunodeficiency cases.\"}, {\"gene\": \"FABP12\", \"confidence\": 0.01, \"rationale\": \"No FABP12-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"ZSCAN31\", \"confidence\": 0.01, \"rationale\": \"No ZSCAN31-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"MRPL27\", \"confidence\": 0.01, \"rationale\": \"No MRPL27-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"CSTL1\", \"confidence\": 0.01, \"rationale\": \"No CSTL1-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"NANOS1\", \"confidence\": 0.01, \"rationale\": \"No NANOS1-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"DACT3\", \"confidence\": 0.01, \"rationale\": \"No DACT3-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"OR14J1\", \"confidence\": 0.01, \"rationale\": \"No OR14J1-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"DTWD2\", \"confidence\": 0.01, \"rationale\": \"No DTWD2-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}, {\"gene\": \"NAF1\", \"confidence\": 0.01, \"rationale\": \"No NAF1-specific immunological evidence; all evidence chunks are generic background unrelated to this gene.\"}]",
+  "parsed_top5": [
+    "ITPR3",
+    "GPR83",
+    "SMAD7",
+    "PIK3C2A",
+    "HSBP1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_3",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "IFITM3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IFITM3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17625,
+  "tokens_out": 985,
+  "finish_reason": "stop",
+  "latency_s": 14.677882671356201,
+  "cost_usd": 0.06765,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IFITM3\",\n    \"confidence\": 0.35,\n    \"rationale\": \"IFITM3 has direct evidence for reduced antibody responses to vaccination and roles in adaptive immunity including T-cell subset balancing, most relevant to the immune phenotypes.\"\n  },\n  {\n    \"gene\": \"ATP6V0A2\",\n    \"confidence\": 0.25,\n    \"rationale\": \"ATP6V0A2 chunk3 describes decreased naive CD4/CD8 T cell proportions, reduced tetanus vaccine response, and lymphopenia matching the patient's immune profile closely.\"\n  },\n  {\n    \"gene\": \"GALNT17\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence mentions T-cell deficiency and absent tetanus/diphtheria vaccine responses in associated immunodeficiency context, but no direct gene-specific link.\"\n  },\n  {\n    \"gene\": \"RPL21\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence mentions T-cell deficiency and absent tetanus vaccine responses in immunodeficiency context, but no direct mechanistic link to RPL21.\"\n  },\n  {\n    \"gene\": \"KRTAP5-5\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence mentions decreased CD8+ T cells and absent vaccine-specific IgG in immunodeficiency context, but no direct link to KRTAP5-5 function.\"\n  },\n  {\n    \"gene\": \"SNRPB2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Associated evidence describes T-cell deficiency and vaccine non-response but no direct mechanistic connection to SNRPB2 and the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF354A\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking ZNF354A to the immune or musculoskeletal phenotypes observed in this patient.\"\n  },\n  {\n    \"gene\": \"ZNF226\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking ZNF226 to the combined immune deficiency and musculoskeletal phenotype profile.\"\n  },\n  {\n    \"gene\": \"TACO1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking TACO1 to the patient's immune deficiency or musculoskeletal features.\"\n  },\n  {\n    \"gene\": \"NANOS3\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking NANOS3 to the combined immune and musculoskeletal phenotype in this patient.\"\n  },\n  {\n    \"gene\": \"PEAK1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking PEAK1 to the patient's immune deficiency or musculoskeletal phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF432\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking ZNF432 to the patient's immune or musculoskeletal phenotype profile.\"\n  },\n  {\n    \"gene\": \"YBX2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking YBX2 to the combined immune deficiency and musculoskeletal features in this patient.\"\n  },\n  {\n    \"gene\": \"KHDRBS3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking KHDRBS3 to the patient's immune deficiency or musculoskeletal phenotypes.\"\n  },\n  {\n    \"gene\": \"CGNL1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking CGNL1 to the patient's immune deficiency or musculoskeletal phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "IFITM3",
+    "ATP6V0A2",
+    "GALNT17",
+    "RPL21",
+    "KRTAP5-5"
+  ]
+}

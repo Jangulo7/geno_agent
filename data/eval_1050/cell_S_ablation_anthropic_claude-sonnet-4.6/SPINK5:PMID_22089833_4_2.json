@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_22089833_4_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19161,
+  "tokens_out": 866,
+  "finish_reason": "stop",
+  "latency_s": 13.991518020629883,
+  "cost_usd": 0.070473,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: ichthyosis linearis circumflexa, trichorrhexis nodosa, elevated IgE, eczematoid dermatitis, food allergy, pruritus, erythematous plaques, and blepharitis.\"},{\"gene\":\"HSF1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking HSF1 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning HSF1.\"},{\"gene\":\"NCF2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NCF2 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning NCF2.\"},{\"gene\":\"RHOB\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RHOB to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning RHOB.\"},{\"gene\":\"ZNF658\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF658 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning ZNF658.\"},{\"gene\":\"POF1B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking POF1B to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning POF1B.\"},{\"gene\":\"NLRP2B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NLRP2B to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning NLRP2B.\"},{\"gene\":\"ADRA2B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ADRA2B to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning ADRA2B.\"},{\"gene\":\"ALKBH5\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ALKBH5 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning ALKBH5.\"},{\"gene\":\"SERPINA6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SERPINA6 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning SERPINA6.\"},{\"gene\":\"GTPBP2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GTPBP2 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning GTPBP2.\"},{\"gene\":\"AKR7A3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AKR7A3 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning AKR7A3.\"},{\"gene\":\"EIF1AY\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking EIF1AY to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning EIF1AY.\"},{\"gene\":\"CTTN\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CTTN to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning CTTN.\"},{\"gene\":\"SIPA1L2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SIPA1L2 to this phenotype profile; evidence chunks describe Netherton/SPINK5 syndrome without mentioning SIPA1L2.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "HSF1",
+    "NCF2",
+    "RHOB",
+    "ZNF658"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "BRPF1:PMID_27939640_individual_P9",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "BRPF1",
+  "orig_qwen3_8b_top1": "BRPF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "BRPF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14891,
+  "tokens_out": 982,
+  "finish_reason": "stop",
+  "latency_s": 16.821776390075684,
+  "cost_usd": 0.059403,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"BRPF1\",\n    \"confidence\": 0.82,\n    \"rationale\": \"BRPF1 chunk_1 explicitly describes the syndrome with developmental delay, intellectual disability, seizures, hypotonia, joint hypermobility, flat facial profile, and hypertelorism\u2014directly matching the patient's full HPO profile.\"\n  },\n  {\n    \"gene\": \"PIGC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"PIGC chunk_2 mentions hypertelorism and downslanting palpebral fissures in GPI-anchor disorders, but evidence is indirect and not specific to PIGC itself.\"\n  },\n  {\n    \"gene\": \"FGFBP1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic case descriptions with no direct mention of FGFBP1 as causal; no established neurodevelopmental syndrome linked to this gene.\"\n  },\n  {\n    \"gene\": \"UQCRFS1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are non-specific case descriptions; UQCRFS1 is a mitochondrial complex III gene with no direct evidence linking it to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"ENPEP\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic and non-specific to ENPEP; no established neurodevelopmental syndrome associated with this gene.\"\n  },\n  {\n    \"gene\": \"IGF1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are non-specific; IGF1 deficiency causes growth retardation and sensorineural deafness, not matching this phenotype profile well.\"\n  },\n  {\n    \"gene\": \"CLINT1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic case descriptions with no direct mention of CLINT1 as causal for this phenotype.\"\n  },\n  {\n    \"gene\": \"USP17L3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking USP17L3 to a neurodevelopmental syndrome; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"PAK4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic; PAK4 has limited established disease association matching this phenotype profile.\"\n  },\n  {\n    \"gene\": \"GABPB2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking GABPB2 to this phenotype; evidence chunks are non-specific case descriptions.\"\n  },\n  {\n    \"gene\": \"PNLIP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"PNLIP encodes pancreatic lipase; no established neurodevelopmental syndrome; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"SRP19\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No established neurodevelopmental syndrome linked to SRP19; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"WASHC2C\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking WASHC2C to this phenotype profile; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"KRTAP12-3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KRTAP12-3 encodes a keratin-associated protein; no plausible link to neurodevelopmental phenotype; evidence non-specific.\"\n  },\n  {\n    \"gene\": \"PICALM\",\n    \"confidence\": 0.01,\n    \"rationale\": \"PICALM is associated with Alzheimer's risk; no established pediatric neurodevelopmental syndrome; evidence chunks are non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "BRPF1",
+    "PIGC",
+    "FGFBP1",
+    "UQCRFS1",
+    "ENPEP"
+  ]
+}

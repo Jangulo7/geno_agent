@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR24",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20569,
+  "tokens_out": 710,
+  "finish_reason": "stop",
+  "latency_s": 13.88092565536499,
+  "cost_usd": 0.072357,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.92,\"rationale\":\"LMNA is directly and explicitly cited in multiple high-relevance abstracts as causing FPLD2 with loss of subcutaneous fat in limbs/trunk, hypertriglyceridemia, hepatic steatosis, and low HDL\u2014matching all patient HPO terms.\"},{\"gene\":\"OR6K2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking OR6K2 to lipodystrophy or any patient phenotype; evidence chunks reference LMNA/FPLD context only incidentally.\"},{\"gene\":\"SGIP1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SGIP1 to lipodystrophy or metabolic phenotypes; evidence chunks are generic FPLD background not specific to this gene.\"},{\"gene\":\"ADGRG6\",\"confidence\":0.01,\"rationale\":\"No evidence linking ADGRG6 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"BMX\",\"confidence\":0.01,\"rationale\":\"No evidence linking BMX to lipodystrophy or any of the patient's HPO phenotypes.\"},{\"gene\":\"FAM237A\",\"confidence\":0.01,\"rationale\":\"No evidence linking FAM237A to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"RABGAP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking RABGAP1 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"NGFR\",\"confidence\":0.01,\"rationale\":\"No evidence linking NGFR to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"SMPDL3A\",\"confidence\":0.01,\"rationale\":\"No evidence linking SMPDL3A to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"CLGN\",\"confidence\":0.01,\"rationale\":\"No evidence linking CLGN to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"RANBP17\",\"confidence\":0.01,\"rationale\":\"No evidence linking RANBP17 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"HMGXB3\",\"confidence\":0.01,\"rationale\":\"No evidence linking HMGXB3 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"RPLP0\",\"confidence\":0.01,\"rationale\":\"No evidence linking RPLP0 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"SEL1L2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SEL1L2 to lipodystrophy or the patient's metabolic phenotype profile.\"},{\"gene\":\"IGSF11\",\"confidence\":0.01,\"rationale\":\"No evidence linking IGSF11 to lipodystrophy or the patient's metabolic phenotype profile.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "OR6K2",
+    "SGIP1",
+    "ADGRG6",
+    "BMX"
+  ]
+}

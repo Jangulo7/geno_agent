@@ -1,0 +1,22 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P13",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17598,
+  "tokens_out": 65,
+  "finish_reason": "stop",
+  "latency_s": 7.804680109024048,
+  "cost_usd": 0.00142604,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"SLC45A2\", \"confidence\": 0.95, \"rationale\": \"SLC45A2 is directly associated with OCA4, presenting with hypopigmentation, blue irides, and iris transillumination, matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "SLC45A2"
+  ]
+}

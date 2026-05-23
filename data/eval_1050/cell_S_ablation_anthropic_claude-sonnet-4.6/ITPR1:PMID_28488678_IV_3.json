@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_28488678_IV_3",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18276,
+  "tokens_out": 719,
+  "finish_reason": "stop",
+  "latency_s": 10.257907152175903,
+  "cost_usd": 0.065613,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.82,\"rationale\":\"ITPR1 evidence directly links it to cerebellar ataxia with quadrupedal gait, nystagmus, dysarthria, mild intellectual disability, and congenital onset via SCA15/SCA29/Gillespie syndrome and CA8-ITPR1 pathway.\"},{\"gene\":\"TNKS\",\"confidence\":0.05,\"rationale\":\"Evidence chunks describe a phenotype matching the patient but TNKS is not specifically implicated; chunks are generic ataxia descriptions with no direct TNKS gene link.\"},{\"gene\":\"EXTL1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking EXTL1 to this phenotype; shared generic ataxia chunks do not implicate EXTL1 specifically.\"},{\"gene\":\"UCP2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking UCP2 to cerebellar ataxia with quadrupedal gait; evidence chunks are non-specific.\"},{\"gene\":\"MRPL14\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking MRPL14 to this neurological phenotype; evidence chunks are generic and non-specific.\"},{\"gene\":\"MAP3K19\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MAP3K19 to cerebellar ataxia or intellectual disability; evidence chunks are non-specific.\"},{\"gene\":\"IDO1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking IDO1 to this phenotype; evidence chunks are generic ataxia descriptions.\"},{\"gene\":\"AMOT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AMOT to cerebellar ataxia with quadrupedal gait; evidence chunks are non-specific.\"},{\"gene\":\"MAP1LC3B2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MAP1LC3B2 to this neurological phenotype; evidence chunks are generic.\"},{\"gene\":\"SLC39A3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC39A3 to cerebellar ataxia or intellectual disability; evidence chunks are non-specific.\"},{\"gene\":\"PIGM\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PIGM to this phenotype; evidence chunks are generic ataxia descriptions.\"},{\"gene\":\"SCT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SCT to cerebellar ataxia with quadrupedal gait; evidence chunks are non-specific.\"},{\"gene\":\"MRPL32\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MRPL32 to this neurological phenotype; evidence chunks are generic.\"},{\"gene\":\"PNLIPRP1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PNLIPRP1 to cerebellar ataxia or intellectual disability; evidence chunks are non-specific.\"},{\"gene\":\"ABCD1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ABCD1 to this specific phenotype profile; evidence chunks are generic and non-specific.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "TNKS",
+    "EXTL1",
+    "UCP2",
+    "MRPL14"
+  ]
+}

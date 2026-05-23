@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR22",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20242,
+  "tokens_out": 712,
+  "finish_reason": "stop",
+  "latency_s": 10.382543087005615,
+  "cost_usd": 0.071406,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.88,\"rationale\":\"LMNA (lamin A/C) causes FPLD2 (Dunnigan syndrome), directly matching all HPO features: limb/truncal fat loss, T2DM, elevated HbA1c, hypertriglyceridemia, hepatic steatosis; explicitly mentioned with 5/5 relevance.\"},{\"gene\":\"INPPL1\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking INPPL1 to this lipodystrophy phenotype; evidence chunks are generic lipodystrophy literature not mentioning this gene.\"},{\"gene\":\"FAM236B\",\"confidence\":0.02,\"rationale\":\"No evidence chunks mention FAM236B in relation to lipodystrophy or the patient's metabolic phenotype.\"},{\"gene\":\"B3GALT4\",\"confidence\":0.02,\"rationale\":\"No evidence chunks mention B3GALT4 as causative for lipodystrophy or associated metabolic features.\"},{\"gene\":\"ATP2C2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ATP2C2 to familial partial lipodystrophy or the described metabolic syndrome.\"},{\"gene\":\"ITGB7\",\"confidence\":0.01,\"rationale\":\"No evidence linking ITGB7 to lipodystrophy, T2DM, or hypertriglyceridemia in the provided chunks.\"},{\"gene\":\"ULK1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ULK1 to familial partial lipodystrophy or the patient's phenotype profile.\"},{\"gene\":\"NIPBL\",\"confidence\":0.01,\"rationale\":\"No evidence linking NIPBL to lipodystrophy or the metabolic features described in this patient.\"},{\"gene\":\"CSDC2\",\"confidence\":0.01,\"rationale\":\"No evidence linking CSDC2 to lipodystrophy or associated metabolic phenotypes in the provided literature.\"},{\"gene\":\"REC114\",\"confidence\":0.01,\"rationale\":\"No evidence linking REC114 to lipodystrophy, T2DM, or hypertriglyceridemia.\"},{\"gene\":\"FNTB\",\"confidence\":0.01,\"rationale\":\"No evidence linking FNTB to familial partial lipodystrophy or the patient's metabolic syndrome.\"},{\"gene\":\"SYDE1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SYDE1 to lipodystrophy or the described phenotype profile.\"},{\"gene\":\"TEX38\",\"confidence\":0.01,\"rationale\":\"No evidence linking TEX38 to lipodystrophy or associated metabolic features.\"},{\"gene\":\"IL36RN\",\"confidence\":0.01,\"rationale\":\"No evidence linking IL36RN to lipodystrophy, T2DM, or hypertriglyceridemia.\"},{\"gene\":\"OR2A14\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR2A14 to lipodystrophy or the patient's metabolic phenotype.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "INPPL1",
+    "FAM236B",
+    "B3GALT4",
+    "ATP2C2"
+  ]
+}

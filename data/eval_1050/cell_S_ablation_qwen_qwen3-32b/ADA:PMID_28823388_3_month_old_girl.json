@@ -1,0 +1,20 @@
+{
+  "case_id": "ADA:PMID_28823388_3_month_old_girl",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ADA",
+  "orig_qwen3_8b_top1": "ADA",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15245,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.305293560028076,
+  "cost_usd": 0.0012260400000000003,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

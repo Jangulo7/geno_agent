@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_22024611_Case_4",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14720,
+  "tokens_out": 64,
+  "finish_reason": "stop",
+  "latency_s": 4.21012282371521,
+  "cost_usd": 0.0011955200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"AIRE\", \"confidence\": 0.95, \"rationale\": \"AIRE mutations directly cause APS-1 with the patient's full phenotype including CMC, adrenal insufficiency, hypoparathyroidism, vitiligo, and gastritis.\"}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

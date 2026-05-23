@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826259_index_patient",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "TANC2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TANC2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14671,
+  "tokens_out": 803,
+  "finish_reason": "stop",
+  "latency_s": 25.445733785629272,
+  "cost_usd": 0.0013985199999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"TANC2\",\n    \"confidence\": 0.92,\n    \"rationale\": \"TANC2 disruption directly links to short stature, reduced body weight, and altered immune parameters including inverted CD4:CD8 ratio and reduced leukocyte counts.\"\n  },\n  {\n    \"gene\": \"TREM2\",\n    \"confidence\": 0.75,\n    \"rationale\": \"TREM2 influences T-cell populations and clonality, with some evidence of immune dysregulation, but lacks direct connection to short stature or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"GPR171\",\n    \"confidence\": 0.65,\n    \"rationale\": \"GPR171 affects immune cell ratios and tumor immunity, but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"GABRR2\",\n    \"confidence\": 0.55,\n    \"rationale\": \"GABRR2 shows some immune dysregulation features but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"KLF1\",\n    \"confidence\": 0.50,\n    \"rationale\": \"KLF1 is associated with immune parameters but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"PRADC1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"PRADC1 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"IGHMBP2\",\n    \"confidence\": 0.40,\n    \"rationale\": \"IGHMBP2 shows immune dysregulation and some hypothyroidism evidence but lacks direct connection to short stature.\"\n  },\n  {\n    \"gene\": \"ZNF706\",\n    \"confidence\": 0.35,\n    \"rationale\": \"ZNF706 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"SPRY2\",\n    \"confidence\": 0.30,\n    \"rationale\": \"SPRY2 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"ABI1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"ABI1 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"RPL38\",\n    \"confidence\": 0.20,\n    \"rationale\": \"RPL38 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"KCNK4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"KCNK4 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"SPDYE17\",\n    \"confidence\": 0.10,\n    \"rationale\": \"SPDYE17 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"SH3GL3\",\n    \"confidence\": 0.08,\n    \"rationale\": \"SH3GL3 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  },\n  {\n    \"gene\": \"NOL7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"NOL7 shows immune dysregulation but lacks direct evidence for hypothyroidism or short stature.\"\n  }\n]",
+  "parsed_top5": [
+    "TANC2",
+    "TREM2",
+    "GPR171",
+    "GABRR2",
+    "KLF1"
+  ]
+}

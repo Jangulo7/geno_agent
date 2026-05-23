@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_M74",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14111,
+  "tokens_out": 686,
+  "finish_reason": "stop",
+  "latency_s": 21.719514846801758,
+  "cost_usd": 0.0033504200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GNAS is strongly linked to PHP1a with Albright's hereditary osteodystrophy (AHO) phenotype, matching short metacarpals, obesity, and short stature.\"\n  },\n  {\n    \"gene\": \"KMT2D\",\n    \"confidence\": 0.75,\n    \"rationale\": \"KMT2D mutations cause Kabuki syndrome, which can present with short stature and obesity, but lacks direct evidence for short metacarpals.\"\n  },\n  {\n    \"gene\": \"PMM2\",\n    \"confidence\": 0.65,\n    \"rationale\": \"PMM2-CDG can cause short stature and skeletal anomalies, but evidence for obesity and short metacarpals is less direct.\"\n  },\n  {\n    \"gene\": \"NIN\",\n    \"confidence\": 0.5,\n    \"rationale\": \"NIN mutations are linked to skeletal dysplasia but lack strong evidence for obesity or specific metacarpal shortening.\"\n  },\n  {\n    \"gene\": \"MAS1L\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking MAS1L to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ACAP1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ACAP1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"H3C4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking H3C4 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"AMER2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking AMER2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TAFA5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking TAFA5 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ALK\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ALK to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SHISA7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SHISA7 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TMEM156\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking TMEM156 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC49A4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SLC49A4 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ANKMY2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ANKMY2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SPADH\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SPADH to the patient's phenotype.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "GNAS",
+    "KMT2D",
+    "PMM2",
+    "NIN",
+    "MAS1L"
+  ]
+}

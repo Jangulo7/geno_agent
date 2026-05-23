@@ -1,0 +1,26 @@
+{
+  "case_id": "GSN:PMID_33499149_II_8",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GSN",
+  "orig_qwen3_8b_top1": "GSN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GSN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17024,
+  "tokens_out": 767,
+  "finish_reason": "stop",
+  "latency_s": 12.18758249282837,
+  "cost_usd": 0.062577,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GSN\",\"confidence\":0.97,\"rationale\":\"GSN evidence directly and explicitly links pathogenic GSN mutations to lattice corneal dystrophy, cutis laxa, cataract, glaucoma, and arrhythmia\u2014matching all five patient HPO phenotypes perfectly.\"},{\"gene\":\"OR10A6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking OR10A6 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"PRPS1L1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PRPS1L1 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"YWHAQ\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking YWHAQ to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"PLIN4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PLIN4 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"PSMA6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PSMA6 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"TEX13A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TEX13A to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"SDHC\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SDHC to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"GDPD3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GDPD3 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"TTBK2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TTBK2 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"RAD51D\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RAD51D to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PIP5KL1 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"CRYGA\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CRYGA to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"CISD3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CISD3 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"},{\"gene\":\"NDUFAF3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NDUFAF3 to the patient's phenotypes; evidence chunks only discuss GSN/gelsolin amyloidosis.\"}]",
+  "parsed_top5": [
+    "GSN",
+    "OR10A6",
+    "PRPS1L1",
+    "YWHAQ",
+    "PLIN4"
+  ]
+}

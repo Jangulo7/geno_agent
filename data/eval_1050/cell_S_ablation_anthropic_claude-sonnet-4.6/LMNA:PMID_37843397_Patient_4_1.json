@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_4_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20269,
+  "tokens_out": 733,
+  "finish_reason": "stop",
+  "latency_s": 10.146254062652588,
+  "cost_usd": 0.071802,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA (lamin A/C) is directly named as the causal gene for FPLD2 (Dunnigan syndrome), with evidence explicitly linking it to lipodystrophy, T2DM, hypertriglyceridemia, hepatic steatosis, and loss of subcutaneous fat in limbs/trunk.\"},{\"gene\":\"TMEM38A\",\"confidence\":0.03,\"rationale\":\"No direct mention in evidence; shares only generic lipodystrophy background literature with no gene-specific association to the phenotype profile.\"},{\"gene\":\"OR2AG1\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"UBN2\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"SPDYE13\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"NLGN3\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"PTGR1\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"CSE1L\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"GH2\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"SDK1\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"TFAP4\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"PKDREJ\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"RASL11A\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"LRRIQ3\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"},{\"gene\":\"UHRF2\",\"confidence\":0.02,\"rationale\":\"No direct mention in evidence; only generic lipodystrophy background literature provided with no gene-specific link to the phenotype.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "TMEM38A",
+    "OR2AG1",
+    "UBN2",
+    "SPDYE13"
+  ]
+}

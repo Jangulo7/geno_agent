@@ -1,0 +1,26 @@
+{
+  "case_id": "FBN2:PMID_9714438_Park_p253",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FBN2",
+  "orig_qwen3_8b_top1": "FBN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14649,
+  "tokens_out": 787,
+  "finish_reason": "stop",
+  "latency_s": 25.37319564819336,
+  "cost_usd": 0.00353579,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FBN2\",\n    \"confidence\": 1.0,\n    \"rationale\": \"Strong evidence linking FBN2 mutations to Congenital Contractural Arachnodactyly (CCA), matching all patient phenotypes including crumpled ears, arachnodactyly, camptodactyly, and aortic root aneurysm.\"\n  },\n  {\n    \"gene\": \"KLHDC10\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentioned in the context of CCA but with less direct evidence and phenotypic overlap compared to FBN2; some phenotypic variability noted.\"\n  },\n  {\n    \"gene\": \"MNAT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic and lack relevant phenotypic details.\"\n  },\n  {\n    \"gene\": \"TCEA3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to FBN2-related conditions.\"\n  },\n  {\n    \"gene\": \"MS4A5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"MIEF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"PAFAH1B1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"PRDX6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"SLC29A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"SDHAF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"CCNC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"LYPD8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"SEMA6A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"PLA2G7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  },\n  {\n    \"gene\": \"ELFN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking this gene to the patient's phenotype; mentions are generic or refer to unrelated conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "FBN2",
+    "KLHDC10",
+    "MNAT1",
+    "TCEA3",
+    "MS4A5"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "TMEM216:PMID_39191256_A_1a",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TMEM216",
+  "orig_qwen3_8b_top1": "USP43",
+  "orig_qwen3_8b_correct": false,
+  "top1": "USP43",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11621,
+  "tokens_out": 1007,
+  "finish_reason": "stop",
+  "latency_s": 14.666480302810669,
+  "cost_usd": 0.049968,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"USP43\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence chunks shared across all genes; USP43 chunk_3 describes a large cohort with rod-cone dystrophy, nyctalopia, and visual field constriction matching patient profile slightly better.\"\n  },\n  {\n    \"gene\": \"GJA10\",\n    \"confidence\": 0.11,\n    \"rationale\": \"GJA10 shares the same chunk_3 large cohort data with nyctalopia and visual field constriction; no unique neurological evidence but retinal phenotype overlap.\"\n  },\n  {\n    \"gene\": \"PIP4K2A\",\n    \"confidence\": 0.09,\n    \"rationale\": \"PIP4K2A chunk_3 references KIZ-related rod dystrophy with nyctalopia and visual field constriction; slightly more detailed retinal dystrophy context than most others.\"\n  },\n  {\n    \"gene\": \"FEM1C\",\n    \"confidence\": 0.08,\n    \"rationale\": \"FEM1C chunk_3 also references KIZ-related rod dystrophy with nyctalopia and visual field constriction, providing marginally relevant retinal dystrophy context.\"\n  },\n  {\n    \"gene\": \"GDAP1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"GDAP1 is known for neuropathy; the shared evidence chunks describe retinal dystrophy but no unique neurological or seizure/hemiplegia link is established.\"\n  },\n  {\n    \"gene\": \"LRRC4C\",\n    \"confidence\": 0.06,\n    \"rationale\": \"All evidence chunks are generic retinal dystrophy descriptions with no specific link to LRRC4C or the neurological features of this patient.\"\n  },\n  {\n    \"gene\": \"CPA5\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are identical generic retinal dystrophy descriptions with no specific CPA5 association or neurological phenotype relevance.\"\n  },\n  {\n    \"gene\": \"SPDYE4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific SPDYE4 link or neurological phenotype support.\"\n  },\n  {\n    \"gene\": \"MTUS1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions; MTUS1 has no established link to rod-cone dystrophy or seizures in provided evidence.\"\n  },\n  {\n    \"gene\": \"CCL7\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific CCL7 association or neurological phenotype relevance.\"\n  },\n  {\n    \"gene\": \"KDELR3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific KDELR3 link or neurological phenotype support.\"\n  },\n  {\n    \"gene\": \"GAGE2B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific GAGE2B association or neurological phenotype relevance.\"\n  },\n  {\n    \"gene\": \"TRAF1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific TRAF1 link or neurological phenotype support.\"\n  },\n  {\n    \"gene\": \"PSG6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific PSG6 association or neurological phenotype relevance.\"\n  },\n  {\n    \"gene\": \"PLBD1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are generic retinal dystrophy descriptions with no specific PLBD1 link or neurological phenotype support.\"\n  }\n]",
+  "parsed_top5": [
+    "USP43",
+    "GJA10",
+    "PIP4K2A",
+    "FEM1C",
+    "GDAP1"
+  ]
+}

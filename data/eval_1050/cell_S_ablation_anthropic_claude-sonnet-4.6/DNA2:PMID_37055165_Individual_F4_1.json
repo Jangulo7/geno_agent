@@ -1,0 +1,26 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F4_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "PPOX",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PPOX",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19271,
+  "tokens_out": 1093,
+  "finish_reason": "stop",
+  "latency_s": 19.41050958633423,
+  "cost_usd": 0.074208,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "Looking at the patient's phenotype profile: Cutaneous photosensitivity, Ventriculomegaly, Platyspondyly, Nail dystrophy, Empty sella turcica, Flared metaphysis, Short metacarpal, Depressed nasal bridge, Deeply set eye, Microcephaly, Osteopenia, Reduced visual acuity.\n\nThis is a complex multisystem syndrome with skeletal dysplasia features (platyspondyly, flared metaphysis, short metacarpal, osteopenia), CNS features (ventriculomegaly, microcephaly, empty sella), facial features, and photosensitivity with nail dystrophy. This phenotype cluster is highly reminiscent of TRNT1 deficiency (SIFD syndrome - Sideroblastic anemia, Immunodeficiency, Fevers, Developmental delay) or a lysosomal storage disorder. However, GNPTAB causes mucolipidosis II/III with platyspondyly, skeletal dysplasia, depressed nasal bridge, and other features.\n\nThe PPOX evidence directly mentions cutaneous photosensitivity as the primary feature, but PPOX (variegate porphyria) doesn't explain the skeletal dysplasia features. None of the other genes have direct evidence matching this complex phenotype. PPOX has the only directly relevant literature evidence (photosensitivity explicitly linked to PPOX mutations), while all others have generic/irrelevant evidence chunks.\n\n[{\"gene\":\"PPOX\",\"confidence\":0.35,\"rationale\":\"Only gene with direct literature evidence linking it to cutaneous photosensitivity via PPOX mutations, though skeletal/CNS features are unexplained by variegate porphyria.\"},{\"gene\":\"GNPTAB\",\"confidence\":0.18,\"rationale\":\"GNPTAB causes mucolipidosis with skeletal dysplasia, platyspondyly, depressed nasal bridge, and microcephaly matching several HPO terms, though evidence chunks are non-specific.\"},{\"gene\":\"TRNT1\",\"confidence\":0.12,\"rationale\":\"TRNT1 deficiency can cause photosensitivity, microcephaly, and multisystem involvement; TTD-related evidence mentions microcephaly and photosensitivity.\"},{\"gene\":\"VPS11\",\"confidence\":0.05,\"rationale\":\"VPS11 associated with leukodystrophy and ventriculomegaly/microcephaly but evidence chunks are non-specific and don't match full phenotype.\"},{\"gene\":\"IRAG1\",\"confidence\":0.04,\"rationale\":\"No direct gene-specific evidence; literature chunks discuss photosensitivity in CEP context but IRAG1 is not causally linked to this phenotype.\"},{\"gene\":\"RFFL\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking RFFL to any of the patient's HPO features; evidence chunks are entirely non-specific.\"},{\"gene\":\"NAPRT\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking NAPRT to the patient's phenotype; evidence chunks are generic and non-specific.\"},{\"gene\":\"AVPR2\",\"confidence\":0.03,\"rationale\":\"AVPR2 causes nephrogenic diabetes insipidus; no evidence linking it to this complex skeletal/CNS/photosensitivity phenotype.\"},{\"gene\":\"PM20D2\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking PM20D2 to any of the patient's HPO features; evidence chunks are entirely non-specific.\"},{\"gene\":\"GRK4\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking GRK4 to this phenotype; evidence chunks discuss unrelated conditions.\"},{\"gene\":\"ZBTB3\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking ZBTB3 to this complex phenotype; evidence chunks are generic and non-specific.\"},{\"gene\":\"KLHL14\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking KLHL14 to this phenotype; evidence chunks are entirely non-specific.\"},{\"gene\":\"TRPM4\",\"confidence\":0.03,\"rationale\":\"TRPM4 associated with cardiac conduction defects; no evidence linking it to this skeletal/CNS/photosensitivity phenotype.\"},{\"gene\":\"LRP10\",\"confidence\":0.03,\"rationale\":\"No relevant evidence linking LRP10 to this complex phenotype; evidence chunks are entirely non-specific.\"},{\"gene\":\"KRTAP10-7\",\"confidence\":0.02,\"rationale\":\"KRTAP10-7 encodes a keratin-associated protein; no plausible mechanism or evidence linking it to this multisystem phenotype.\"}]",
+  "parsed_top5": [
+    "PPOX",
+    "GNPTAB",
+    "TRNT1",
+    "VPS11",
+    "IRAG1"
+  ]
+}

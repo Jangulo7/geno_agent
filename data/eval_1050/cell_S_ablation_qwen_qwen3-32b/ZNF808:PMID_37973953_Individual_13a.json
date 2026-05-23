@@ -1,0 +1,22 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_13a",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11900,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 6.891884803771973,
+  "cost_usd": 0.0009693600000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ZNF808\", \"confidence\": 0.95, \"rationale\": \"Biallelic loss-of-function ZNF808 variants directly cause pancreatic agenesis with neonatal diabetes, low birthweight, and exocrine insufficiency.\"}",
+  "parsed_top5": [
+    "ZNF808"
+  ]
+}

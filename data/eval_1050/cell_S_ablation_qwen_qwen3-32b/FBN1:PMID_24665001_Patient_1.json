@@ -1,0 +1,20 @@
+{
+  "case_id": "FBN1:PMID_24665001_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBN1",
+  "orig_qwen3_8b_top1": "FBN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18842,
+  "tokens_out": 28,
+  "finish_reason": "stop",
+  "latency_s": 3.37229061126709,
+  "cost_usd": 0.0015152,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array of genes ranked by confidence as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array of genes ranked by confidence as specified in the instructions.\"}",
+  "parsed_top5": []
+}

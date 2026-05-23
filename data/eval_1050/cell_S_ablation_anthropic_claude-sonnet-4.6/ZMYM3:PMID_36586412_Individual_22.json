@@ -1,0 +1,26 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_22",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "COL7A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ZMYM3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16097,
+  "tokens_out": 1051,
+  "finish_reason": "stop",
+  "latency_s": 14.108875513076782,
+  "cost_usd": 0.064056,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ZMYM3\",\n    \"confidence\": 0.25,\n    \"rationale\": \"ZMYM3 is an X-linked chromatin regulator associated with intellectual disability, autistic behavior, and speech delay, fitting the neurodevelopmental phenotype profile best among candidates.\"\n  },\n  {\n    \"gene\": \"COL7A1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"COL7A1 chunk_1 explicitly lists intellectual disability, single transverse palmar crease, and proportionate short stature as associated features with higher critic relevance score.\"\n  },\n  {\n    \"gene\": \"GPD1L\",\n    \"confidence\": 0.07,\n    \"rationale\": \"GPD1L shares the same high-relevance chunk as COL7A1 listing intellectual disability and single transverse palmar crease, but has no direct neurodevelopmental disease association.\"\n  },\n  {\n    \"gene\": \"GCFC2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"GCFC2 evidence references FOXP1 syndrome features including intellectual disability, speech delay, and prominent forehead, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"INPP1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"INPP1 evidence references FOXP1 syndrome features including intellectual disability, speech delay, and prominent forehead, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"SLC30A3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"SLC30A3 evidence references FOXP1 syndrome features including intellectual disability, speech delay, and prominent forehead, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"CFD\",\n    \"confidence\": 0.06,\n    \"rationale\": \"CFD evidence references FOXP1 syndrome features including intellectual disability, speech delay, and prominent forehead, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"SPDYE4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"SPDYE4 evidence references FOXP1 syndrome features including intellectual disability, speech delay, and prominent forehead, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"FGG\",\n    \"confidence\": 0.05,\n    \"rationale\": \"FGG evidence references FOXP1 syndrome with intellectual disability, speech delay, and prominent forehead, but FGG itself is a coagulation gene with no neurodevelopmental disease link.\"\n  },\n  {\n    \"gene\": \"TCEA3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"TCEA3 shares case report chunks mentioning intellectual disability and single transverse palmar crease but has no established neurodevelopmental disease association.\"\n  },\n  {\n    \"gene\": \"MTREX\",\n    \"confidence\": 0.04,\n    \"rationale\": \"MTREX shares case report chunks mentioning intellectual disability and single transverse palmar crease but has no established neurodevelopmental disease association.\"\n  },\n  {\n    \"gene\": \"ANGPTL7\",\n    \"confidence\": 0.04,\n    \"rationale\": \"ANGPTL7 shares case report chunks mentioning intellectual disability and single transverse palmar crease but is primarily associated with glaucoma, not neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"SERPINB8\",\n    \"confidence\": 0.03,\n    \"rationale\": \"SERPINB8 shares case report chunks mentioning intellectual disability and single transverse palmar crease but has no established neurodevelopmental disease association.\"\n  },\n  {\n    \"gene\": \"AP1M2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"AP1M2 shares case report chunks mentioning intellectual disability and single transverse palmar crease but has no established neurodevelopmental disease association.\"\n  },\n  {\n    \"gene\": \"GAGE7\",\n    \"confidence\": 0.03,\n    \"rationale\": \"GAGE7 shares case report chunks mentioning intellectual disability and single transverse palmar crease but is a cancer-testis antigen with no neurodevelopmental disease association.\"\n  }\n]",
+  "parsed_top5": [
+    "ZMYM3",
+    "COL7A1",
+    "GPD1L",
+    "GCFC2",
+    "INPP1"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "TANGO2:PMID_26805782_F2_II_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TANGO2",
+  "orig_qwen3_8b_top1": "TANGO2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13779,
+  "tokens_out": 18,
+  "finish_reason": "stop",
+  "latency_s": 1.9443135261535645,
+  "cost_usd": 0.00110736,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing the required array of gene rankings.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing the required array of gene rankings.\"}",
+  "parsed_top5": []
+}

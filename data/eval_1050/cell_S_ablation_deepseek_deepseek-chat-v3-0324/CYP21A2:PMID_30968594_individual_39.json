@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_39",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18427,
+  "tokens_out": 690,
+  "finish_reason": "stop",
+  "latency_s": 38.059537172317505,
+  "cost_usd": 0.0042166999999999994,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple case reports directly link CYP21A2 mutations to hyperpigmentation, adrenal crisis, and hormonal imbalances matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ANGPTL8\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence linking ANGPTL8 to metabolic disorders, but no direct connection to the patient's endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"ARAP3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ARAP3 to the patient's adrenal or hormonal phenotypes.\"\n  },\n  {\n    \"gene\": \"OR4A8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting OR4A8 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"OR2W3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting OR2W3's role in adrenal or hormonal disorders.\"\n  },\n  {\n    \"gene\": \"TBC1D17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking TBC1D17 to hyperpigmentation or endocrine dysfunction.\"\n  },\n  {\n    \"gene\": \"OR7G1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting OR7G1 to the patient's adrenal or hormonal phenotypes.\"\n  },\n  {\n    \"gene\": \"B3GNT5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking B3GNT5 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"IL12A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting IL12A's role in adrenal insufficiency or hyperpigmentation.\"\n  },\n  {\n    \"gene\": \"RPS15\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connecting RPS15 to the patient's endocrine or dermatologic phenotypes.\"\n  },\n  {\n    \"gene\": \"TSTD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking TSTD3 to adrenal or hormonal disorders.\"\n  },\n  {\n    \"gene\": \"FGA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting FGA to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SH3BGRL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SH3BGRL2's role in hyperpigmentation or endocrine dysfunction.\"\n  },\n  {\n    \"gene\": \"SELENOS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking SELENOS to adrenal insufficiency or hormonal imbalances.\"\n  },\n  {\n    \"gene\": \"GLT1D1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting GLT1D1 to the patient's adrenal or dermatologic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "ANGPTL8",
+    "ARAP3",
+    "OR4A8",
+    "OR2W3"
+  ]
+}

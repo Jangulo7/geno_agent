@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_67",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21290,
+  "tokens_out": 705,
+  "finish_reason": "stop",
+  "latency_s": 14.527453422546387,
+  "cost_usd": 0.074445,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CYP21A2\",\"confidence\":0.82,\"rationale\":\"CYP21A2 evidence directly mentions hyperpigmentation, low cortisol, high ACTH, elevated testosterone, and adrenal crisis consistent with 21-hydroxylase deficiency CAH matching all patient HPO phenotypes.\"},{\"gene\":\"KRTAP9-4\",\"confidence\":0.04,\"rationale\":\"Evidence chunks describe adrenal insufficiency phenotypes but gene is not directly implicated; shared literature context only.\"},{\"gene\":\"FGF22\",\"confidence\":0.03,\"rationale\":\"Evidence describes Addison's disease with hyperpigmentation, low cortisol, high ACTH, and low testosterone but gene not directly linked to this phenotype.\"},{\"gene\":\"TMEM174\",\"confidence\":0.02,\"rationale\":\"Evidence mentions primary adrenal insufficiency with hyperpigmentation and low cortisol/high ACTH but no direct gene-phenotype link established.\"},{\"gene\":\"AFTPH\",\"confidence\":0.02,\"rationale\":\"Shared literature context with adrenal insufficiency phenotypes but no direct mechanistic link to AFTPH gene.\"},{\"gene\":\"BCAP31\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe adrenal insufficiency phenotypes but BCAP31 is not directly implicated in this endocrine disorder.\"},{\"gene\":\"CDHR4\",\"confidence\":0.01,\"rationale\":\"Evidence describes adrenal insufficiency with hyperpigmentation but no direct causal link to CDHR4 established.\"},{\"gene\":\"MAPK1\",\"confidence\":0.01,\"rationale\":\"Evidence describes adrenal insufficiency phenotypes but MAPK1 is not directly implicated as causal gene.\"},{\"gene\":\"CDON\",\"confidence\":0.01,\"rationale\":\"Evidence describes adrenal insufficiency with hyperpigmentation but no direct causal link to CDON established.\"},{\"gene\":\"USP32\",\"confidence\":0.01,\"rationale\":\"Evidence describes CAH-like phenotype with elevated ACTH and 17OHP but USP32 is not directly implicated.\"},{\"gene\":\"FBXO34\",\"confidence\":0.005,\"rationale\":\"Shared literature context only; no direct evidence linking FBXO34 to adrenal or endocrine phenotypes.\"},{\"gene\":\"KRT222\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking KRT222 to adrenal insufficiency or the patient's endocrine phenotype profile.\"},{\"gene\":\"TST\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking TST to adrenal insufficiency or the patient's endocrine phenotype profile.\"},{\"gene\":\"SPAG16\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking SPAG16 to adrenal insufficiency or the patient's endocrine phenotype profile.\"},{\"gene\":\"EPHA3\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking EPHA3 to adrenal insufficiency or the patient's endocrine phenotype profile.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "KRTAP9-4",
+    "FGF22",
+    "TMEM174",
+    "AFTPH"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SPTAN1:PMID_29050398_Patient_11",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPTAN1",
+  "orig_qwen3_8b_top1": "RARS2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RARS2",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 18500,
+  "tokens_out": 726,
+  "finish_reason": "stop",
+  "latency_s": 9.493292093276978,
+  "cost_usd": 0.06639,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RARS2\",\"confidence\":0.88,\"rationale\":\"RARS2 mutations cause PCH6 with microcephaly, infantile spasms, hypsarrhythmia, cerebellar/brainstem atrophy, delayed myelination, thin corpus callosum, hypotonia, and developmental delay\u2014matching all patient HPO terms.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.06,\"rationale\":\"SPTAN1 mutations cause West syndrome with infantile spasms, hypsarrhythmia, hypomyelination, and brain atrophy, partially matching the phenotype but with less specific evidence than RARS2.\"},{\"gene\":\"ABHD11\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking ABHD11 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"KIF26B\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking KIF26B to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"CD99\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking CD99 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"GPR42\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking GPR42 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"POLR3E\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking POLR3E to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"CHAF1A\",\"confidence\":0.01,\"rationale\":\"No direct gene-specific evidence linking CHAF1A to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"BRDT\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking BRDT to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"KLHDC2\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking KLHDC2 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"OR1D2\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking OR1D2 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"ASMT\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking ASMT to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"CKMT1A\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking CKMT1A to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"KLHL25\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking KLHL25 to this phenotype profile; evidence chunks are generic DEE descriptions.\"},{\"gene\":\"PCMT1\",\"confidence\":0.0,\"rationale\":\"No direct gene-specific evidence linking PCMT1 to this phenotype profile; evidence chunks are generic DEE descriptions.\"}]",
+  "parsed_top5": [
+    "RARS2",
+    "SPTAN1",
+    "ABHD11",
+    "KIF26B",
+    "CD99"
+  ]
+}

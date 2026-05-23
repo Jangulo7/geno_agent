@@ -1,0 +1,26 @@
+{
+  "case_id": "RPGRIP1:PMID_23505306_Patient_9",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RPGRIP1",
+  "orig_qwen3_8b_top1": "RPGR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NMNAT1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 19357,
+  "tokens_out": 950,
+  "finish_reason": "stop",
+  "latency_s": 14.701703786849976,
+  "cost_usd": 0.072321,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NMNAT1\",\n    \"confidence\": 0.52,\n    \"rationale\": \"NMNAT1-LCA evidence directly mentions eye poking (oculodigital sign), abnormal ERG, RPE mottling, vessel attenuation, high hyperopia, and reduced visual acuity\u2014matching all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"RPGRIP1\",\n    \"confidence\": 0.22,\n    \"rationale\": \"RPGRIP1 evidence shows LCA with RPE mottling, abnormal ERG, reduced visual acuity, and hyperopia in documented cases, covering most patient phenotypes.\"\n  },\n  {\n    \"gene\": \"RPGR\",\n    \"confidence\": 0.08,\n    \"rationale\": \"RPGR evidence shows retinal vessel attenuation, RPE degeneration, reduced ERG and visual acuity consistent with RP, but eye poking and hypermetropia are less characteristic.\"\n  },\n  {\n    \"gene\": \"PCYT2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"PCYT2 evidence references LCA/retinal dystrophy context with eye poking and RPE changes but no direct gene-specific association with this phenotype profile.\"\n  },\n  {\n    \"gene\": \"GSTP1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"GSTP1 evidence relates only to macular pigment transport in MacTel, not directly to the full LCA/retinal dystrophy phenotype profile.\"\n  },\n  {\n    \"gene\": \"EFNA2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct EFNA2-specific retinal disease evidence; shared background literature only.\"\n  },\n  {\n    \"gene\": \"DEK\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct DEK-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"ZNF407\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct ZNF407-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"RUFY2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct RUFY2-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"CTAGE6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct CTAGE6-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"IFNK\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct IFNK-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"FFAR1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct FFAR1-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"STK10\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct STK10-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"SETD5\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct SETD5-specific retinal disease evidence; only background literature shared across candidates.\"\n  },\n  {\n    \"gene\": \"KCNA3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KCNA3 evidence references KCNV2 retinopathy with ERG changes and hypermetropia but is about a different gene, providing no direct KCNA3 support.\"\n  }\n]",
+  "parsed_top5": [
+    "NMNAT1",
+    "RPGRIP1",
+    "RPGR",
+    "PCYT2",
+    "GSTP1"
+  ]
+}

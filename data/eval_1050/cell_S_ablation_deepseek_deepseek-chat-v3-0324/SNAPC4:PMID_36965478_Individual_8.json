@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAPC4:PMID_36965478_Individual_8",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNAPC4",
+  "orig_qwen3_8b_top1": "WDR91",
+  "orig_qwen3_8b_correct": false,
+  "top1": "WDR91",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15269,
+  "tokens_out": 646,
+  "finish_reason": "stop",
+  "latency_s": 31.445189714431763,
+  "cost_usd": 0.0035512200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"WDR91\",\n      \"confidence\": 0.95,\n      \"rationale\": \"Strong evidence linking WDR91 to microcephaly, spastic tetraparesis, and cerebellar atrophy with neuronal degeneration.\"\n    },\n    {\n      \"gene\": \"TREX1\",\n      \"confidence\": 0.7,\n      \"rationale\": \"Associated with Aicardi-Goutieres syndrome, which includes microcephaly and motor regression, but less specific to cerebellar atrophy.\"\n    },\n    {\n      \"gene\": \"PAFAH1B3\",\n      \"confidence\": 0.3,\n      \"rationale\": \"Minimal evidence; some overlap with neurological phenotypes but no direct support for the patient's specific symptoms.\"\n    },\n    {\n      \"gene\": \"MRPS34\",\n      \"confidence\": 0.25,\n      \"rationale\": \"Limited evidence; mentioned in context of microcephaly but no strong link to the full phenotype.\"\n    },\n    {\n      \"gene\": \"NOL4L\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence linking to the patient's specific neurological and developmental symptoms.\"\n    },\n    {\n      \"gene\": \"DDIT4L\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with regression and motor symptoms.\"\n    },\n    {\n      \"gene\": \"POTEA\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"CISH\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"PRR20G\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"NKAIN3\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"PRRC2B\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"NF2\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"RBM28\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"TTF1\",\n      \"confidence\": 0.2,\n      \"rationale\": \"No direct evidence; minimal overlap with neurological symptoms.\"\n    },\n    {\n      \"gene\": \"C1orf167\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No relevant evidence linking to the patient's phenotype.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "WDR91",
+    "TREX1",
+    "PAFAH1B3",
+    "MRPS34",
+    "NOL4L"
+  ]
+}

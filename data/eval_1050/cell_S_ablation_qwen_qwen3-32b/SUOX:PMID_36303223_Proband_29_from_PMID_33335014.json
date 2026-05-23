@@ -1,0 +1,22 @@
+{
+  "case_id": "SUOX:PMID_36303223_Proband_29_from_PMID_33335014",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SUOX",
+  "orig_qwen3_8b_top1": "MACF1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SUOX",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16843,
+  "tokens_out": 51,
+  "finish_reason": "stop",
+  "latency_s": 7.589687824249268,
+  "cost_usd": 0.00136172,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"SUOX\", \"confidence\": 0.95, \"rationale\": \"SUOX mutations cause hypouricemia, hypocystinemia, seizures, and developmental delay, directly matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "SUOX"
+  ]
+}

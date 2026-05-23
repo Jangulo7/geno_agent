@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F6_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15112,
+  "tokens_out": 636,
+  "finish_reason": "stop",
+  "latency_s": 33.97406792640686,
+  "cost_usd": 0.00351212,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLDN16\",\n    \"confidence\": 0.99,\n    \"rationale\": \"CLDN16 mutations directly cause FHHNC, matching all patient phenotypes with strong literature support.\"\n  },\n  {\n    \"gene\": \"EFHC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EFHC2 to renal phenotypes; mentions are incidental.\"\n  },\n  {\n    \"gene\": \"LCN9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting LCN9 to nephrocalcinosis or hypercalciuria.\"\n  },\n  {\n    \"gene\": \"SYDE2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SYDE2's role in renal tubular disorders.\"\n  },\n  {\n    \"gene\": \"FAM47C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking FAM47C to the patient's renal phenotype.\"\n  },\n  {\n    \"gene\": \"PRG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating PRG2 with nephrocalcinosis or magnesium wasting.\"\n  },\n  {\n    \"gene\": \"RAD17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting RAD17 to renal tubular dysfunction.\"\n  },\n  {\n    \"gene\": \"TECTA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting TECTA's involvement in renal phenotypes.\"\n  },\n  {\n    \"gene\": \"SMG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking SMG1 to nephrocalcinosis or hypercalciuria.\"\n  },\n  {\n    \"gene\": \"IWS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating IWS1 with the patient's renal symptoms.\"\n  },\n  {\n    \"gene\": \"FGD5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting FGD5 to renal magnesium wasting.\"\n  },\n  {\n    \"gene\": \"ZFAND2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZFAND2A's role in nephrocalcinosis.\"\n  },\n  {\n    \"gene\": \"NXPE4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking NXPE4 to renal tubular disorders.\"\n  },\n  {\n    \"gene\": \"HSF2BP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating HSF2BP with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SPACA5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SPACA5 to renal dysfunction.\"\n  }\n]",
+  "parsed_top5": [
+    "CLDN16",
+    "EFHC2",
+    "LCN9",
+    "SYDE2",
+    "FAM47C"
+  ]
+}

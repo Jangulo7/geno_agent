@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR18",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20393,
+  "tokens_out": 747,
+  "finish_reason": "stop",
+  "latency_s": 14.039499759674072,
+  "cost_usd": 0.072384,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA (lamin A/C) is the established causal gene for FPLD2 (Dunnigan syndrome), directly evidenced in chunks explicitly naming LMNA for partial lipodystrophy with T2DM, hypertriglyceridemia, HbA1c elevation, hepatic steatosis, and premature CAD.\"},{\"gene\":\"SHE\",\"confidence\":0.04,\"rationale\":\"Evidence chunks describe FPLD clinical cases but do not specifically implicate SHE; no direct gene-disease link to this phenotype profile.\"},{\"gene\":\"LETM1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of LETM1 as causal for this phenotype.\"},{\"gene\":\"TFPI2\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of TFPI2 as causal for this phenotype.\"},{\"gene\":\"SEPTIN9\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of SEPTIN9 as causal for this phenotype.\"},{\"gene\":\"PUS10\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of PUS10 as causal for this phenotype.\"},{\"gene\":\"LCORL\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of LCORL as causal for this phenotype.\"},{\"gene\":\"CLDN18\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of CLDN18 as causal for this phenotype.\"},{\"gene\":\"BBS4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of BBS4 as causal for this phenotype.\"},{\"gene\":\"UPK3B\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of UPK3B as causal for this phenotype.\"},{\"gene\":\"SLC25A4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of SLC25A4 as causal for this phenotype.\"},{\"gene\":\"UMPS\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of UMPS as causal for this phenotype.\"},{\"gene\":\"PLGRKT\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of PLGRKT as causal for this phenotype.\"},{\"gene\":\"SEL1L3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of SEL1L3 as causal for this phenotype.\"},{\"gene\":\"FBXO10\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic lipodystrophy literature with no specific mention of FBXO10 as causal for this phenotype.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "SHE",
+    "LETM1",
+    "TFPI2",
+    "SEPTIN9"
+  ]
+}

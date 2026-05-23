@@ -1,0 +1,26 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_9_individual_II_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "ALS2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ALS2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 10838,
+  "tokens_out": 575,
+  "finish_reason": "stop",
+  "latency_s": 15.41669750213623,
+  "cost_usd": 0.00261035,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"ALS2\", \"confidence\": 0.8, \"rationale\": \"ALS2-related disorders closely match the patient's neuromuscular phenotype and are known to cause progressive limb weakness and respiratory insufficiency.\"},\n  {\"gene\": \"PPP1CC\", \"confidence\": 0.5, \"rationale\": \"PPP1CC has some relevance to muscle function but lacks strong evidence linking it to the patient's specific phenotype.\"},\n  {\"gene\": \"POMK\", \"confidence\": 0.45, \"rationale\": \"POMK mutations can cause muscle weakness but the evidence chunks provided are generic without clear gene-specific relevance.\"},\n  {\"gene\": \"FOXJ1\", \"confidence\": 0.4, \"rationale\": \"FOXJ1 is primarily associated with ciliary dyskinesia; muscle weakness reports are incidental.\"},\n  {\"gene\": \"ACOT2\", \"confidence\": 0.35, \"rationale\": \"ACOT2's metabolic role doesn't strongly correlate with the neuromuscular phenotype.\"},\n  {\"gene\": \"OR13C9\", \"confidence\": 0.3, \"rationale\": \"Olfactory receptor gene with no established link to neuromuscular disorders.\"},\n  {\"gene\": \"MSANTD3\", \"confidence\": 0.3, \"rationale\": \"No known disease associations with the patient's phenotype in literature.\"},\n  {\"gene\": \"ZNF610\", \"confidence\": 0.2, \"rationale\": \"Zinc finger protein without clear neuromuscular disease links.\"},\n  {\"gene\": \"FOXA2\", \"confidence\": 0.2, \"rationale\": \"FOXA2's role in CNS development doesn't align with peripheral muscle pathology.\"},\n  {\"gene\": \"ATP8A2\", \"confidence\": 0.18, \"rationale\": \"Linked to cerebellar ataxia, not matching proximal/distal muscle weakness pattern.\"},\n  {\"gene\": \"HECW2\", \"confidence\": 0.15, \"rationale\": \"Neurodevelopmental disorder gene, irrelevant to progressive myopathy.\"},\n  {\"gene\": \"NKX2-6\", \"confidence\": 0.15, \"rationale\": \"Cardiac development gene with no muscle weakness association.\"},\n  {\"gene\": \"MAGOH\", \"confidence\": 0.1, \"rationale\": \"Essential spliceosome component; mutations cause neurodevelopmental disorders.\"},\n  {\"gene\": \"LALBA\", \"confidence\": 0.05, \"rationale\": \"Encodes alpha-lactalbumin; no disease associations.\"},\n  {\"gene\": \"MMP16\", \"confidence\": 0.05, \"rationale\": \"Extracellular matrix enzyme without neuromuscular disease links.\"}\n]",
+  "parsed_top5": [
+    "ALS2",
+    "PPP1CC",
+    "POMK",
+    "FOXJ1",
+    "ACOT2"
+  ]
+}

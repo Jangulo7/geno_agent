@@ -1,0 +1,26 @@
+{
+  "case_id": "RFX5:PMID_30170160_P7",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFX5",
+  "orig_qwen3_8b_top1": "EXOSC9",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EXOSC9",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14681,
+  "tokens_out": 604,
+  "finish_reason": "stop",
+  "latency_s": 18.20071792602539,
+  "cost_usd": 0.00340128,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EXOSC9\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links EXOSC9 mutations to immune deficiency phenotypes matching the patient's presentation.\"\n  },\n  {\n    \"gene\": \"HTATIP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited clinical overlap suggests secondary relevance, lacking direct mechanistic links.\"\n  },\n  {\n    \"gene\": \"ZNF14\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence tying ZNF14 to the observed immune phenotype.\"\n  },\n  {\n    \"gene\": \"SLC25A45\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No documented association with immune deficiency or relevant phenotypes.\"\n  },\n  {\n    \"gene\": \"TESMIN\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evident connection to immunodeficiency or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ST8SIA2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Lacks evidence linking ST8SIA2 to immune-related conditions.\"\n  },\n  {\n    \"gene\": \"CDH22\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No established role in immune system disorders.\"\n  },\n  {\n    \"gene\": \"HIRA\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Not implicated in immunodeficiency syndromes matching the phenotype.\"\n  },\n  {\n    \"gene\": \"YBEY\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No known association with immune dysfunction or similar cases.\"\n  },\n  {\n    \"gene\": \"WWC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Lacks evidence supporting a role in the patient's condition.\"\n  },\n  {\n    \"gene\": \"TIGD2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant literature connecting TIGD2 to immune deficiencies.\"\n  },\n  {\n    \"gene\": \"RNF122\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No reported cases or mechanisms linking RNF122 to this phenotype.\"\n  },\n  {\n    \"gene\": \"ADAM12\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Not associated with immune system abnormalities or similar presentations.\"\n  },\n  {\n    \"gene\": \"TBC1D32\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence suggesting involvement in immune deficiencies.\"\n  },\n  {\n    \"gene\": \"WDR70\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Lacks documentation linking WDR70 to the observed immune phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "EXOSC9",
+    "HTATIP2",
+    "ZNF14",
+    "SLC25A45",
+    "TESMIN"
+  ]
+}

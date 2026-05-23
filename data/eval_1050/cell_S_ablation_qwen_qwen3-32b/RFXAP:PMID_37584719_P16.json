@@ -1,0 +1,20 @@
+{
+  "case_id": "RFXAP:PMID_37584719_P16",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFXAP",
+  "orig_qwen3_8b_top1": "RFXAP",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 28744,
+  "tokens_out": 30,
+  "finish_reason": "stop",
+  "latency_s": 6.188532829284668,
+  "cost_usd": 0.00230792,
+  "parse_error": "model_self_error:{\"error\": \"I need to analyze the evidence for each gene and rank them by confidence. Let me think through this step by step.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"I need to analyze the evidence for each gene and rank them by confidence. Let me think through this step by step.\"}",
+  "parsed_top5": []
+}

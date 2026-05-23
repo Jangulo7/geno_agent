@@ -1,0 +1,26 @@
+{
+  "case_id": "ARMC9:PMID_28625504_UW348_3",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "BCAT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17712,
+  "tokens_out": 609,
+  "finish_reason": "stop",
+  "latency_s": 16.64972162246704,
+  "cost_usd": 0.00401133,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ARMC9\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking ARMC9 mutations to Joubert syndrome with retinal dystrophy and developmental delay.\"\n  },\n  {\n    \"gene\": \"BCAT1\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Some relevance but lacks direct evidence linking to Joubert syndrome phenotypes.\"\n  },\n  {\n    \"gene\": \"HS3ST3A1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"EPS8L1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PTBP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ARHGAP11B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GBP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR63\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PTGES\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"PLA2G4D\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ERAP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"TRIML2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"KIF9\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ADAP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GABPB2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "ARMC9",
+    "BCAT1",
+    "HS3ST3A1",
+    "EPS8L1",
+    "PTBP2"
+  ]
+}

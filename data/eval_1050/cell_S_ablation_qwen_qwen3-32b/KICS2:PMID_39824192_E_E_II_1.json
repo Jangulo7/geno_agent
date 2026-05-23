@@ -1,0 +1,26 @@
+{
+  "case_id": "KICS2:PMID_39824192_E_E_II_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "KICS2",
+  "orig_qwen3_8b_top1": "DNMT3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC5A8",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13208,
+  "tokens_out": 177,
+  "finish_reason": "stop",
+  "latency_s": 2.6426234245300293,
+  "cost_usd": 0.0011062000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SLC5A8\": 0.85, \"DNMT3A\": 0.7, \"TLCD2\": 0.65, \"NIPA2\": 0.6, \"CBLB\": 0.55, \"RRAS2\": 0.5, \"XKR9\": 0.45, \"ZYG11B\": 0.4, \"GTF2E2\": 0.35, \"TOMM40\": 0.3, \"CSN2\": 0.25, \"PRMT3\": 0.2, \"CYP4F3\": 0.15, \"H1-1\": 0.1, \"KRTAP1-5\": 0.05}",
+  "parsed_top5": [
+    "SLC5A8",
+    "DNMT3A",
+    "TLCD2",
+    "NIPA2",
+    "CBLB"
+  ]
+}

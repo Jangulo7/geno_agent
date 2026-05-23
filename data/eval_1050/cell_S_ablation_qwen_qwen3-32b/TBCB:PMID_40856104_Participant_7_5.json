@@ -1,0 +1,20 @@
+{
+  "case_id": "TBCB:PMID_40856104_Participant_7_5",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TBCB",
+  "orig_qwen3_8b_top1": "CSMD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16966,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.5241637229919434,
+  "cost_usd": 0.0013637200000000001,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

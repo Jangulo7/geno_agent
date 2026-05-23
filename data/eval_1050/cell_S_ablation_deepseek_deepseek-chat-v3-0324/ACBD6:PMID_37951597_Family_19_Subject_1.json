@@ -1,0 +1,22 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_19_Subject_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RPL3L",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RPL3L",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12335,
+  "tokens_out": 51,
+  "finish_reason": "stop",
+  "latency_s": 3.740694999694824,
+  "cost_usd": 0.00250627,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"RPL3L\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Strong evidence linking RPL3L to global developmental delay, behavioral issues, and facial features matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "RPL3L"
+  ]
+}

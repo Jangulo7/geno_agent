@@ -1,0 +1,22 @@
+{
+  "case_id": "SLC19A1:PMID_36517554_patient_2",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SLC19A1",
+  "orig_qwen3_8b_top1": "WIPF1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ATM",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13958,
+  "tokens_out": 66,
+  "finish_reason": "stop",
+  "latency_s": 7.689352512359619,
+  "cost_usd": 0.00113512,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ATM\", \"confidence\": 0.95, \"rationale\": \"The evidence directly links ATM gene mutations to Ataxia-Telangiectasia (Louis-Bar syndrome), which matches the patient's phenotype of cerebellar atrophy, immunodeficiency, and recurrent infections.\"}",
+  "parsed_top5": [
+    "ATM"
+  ]
+}

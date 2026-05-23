@@ -1,0 +1,26 @@
+{
+  "case_id": "NIT1:PMID_38430071_F4_II_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NIT1",
+  "orig_qwen3_8b_top1": "IFNL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ZNF302",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14396,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 26.860164880752563,
+  "cost_usd": 0.00340434,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"ZNF302\",\n      \"confidence\": 0.8,\n      \"rationale\": \"Strong evidence linking ZNF302 to Huntington's disease-like symptoms including chorea, bradykinesia, and cognitive decline.\"\n    },\n    {\n      \"gene\": \"NAA30\",\n      \"confidence\": 0.7,\n      \"rationale\": \"Evidence suggests NAA30 is associated with Huntington's disease, with improvements in chorea and motor symptoms.\"\n    },\n    {\n      \"gene\": \"FBXO6\",\n      \"confidence\": 0.6,\n      \"rationale\": \"FBXO6 is linked to neurodegenerative disorders with symptoms matching the patient's profile.\"\n    },\n    {\n      \"gene\": \"SMR3A\",\n      \"confidence\": 0.5,\n      \"rationale\": \"SMR3A shows some association with Huntington's disease-like symptoms but evidence is less direct.\"\n    },\n    {\n      \"gene\": \"STRN3\",\n      \"confidence\": 0.5,\n      \"rationale\": \"STRN3 has indirect links to neurodegenerative disorders with overlapping symptoms.\"\n    },\n    {\n      \"gene\": \"NECTIN4\",\n      \"confidence\": 0.4,\n      \"rationale\": \"NECTIN4 has some evidence of association with Huntington's disease but less direct than others.\"\n    },\n    {\n      \"gene\": \"FGF10\",\n      \"confidence\": 0.4,\n      \"rationale\": \"FGF10 shows some neurological involvement but lacks strong evidence for this phenotype.\"\n    },\n    {\n      \"gene\": \"GALNS\",\n      \"confidence\": 0.3,\n      \"rationale\": \"GALNS is not strongly linked to the patient's symptoms based on provided evidence.\"\n    },\n    {\n      \"gene\": \"IFNL3\",\n      \"confidence\": 0.3,\n      \"rationale\": \"IFNL3 has minimal direct evidence linking it to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"TAF11L9\",\n      \"confidence\": 0.2,\n      \"rationale\": \"TAF11L9 lacks strong evidence for association with the patient's symptoms.\"\n    },\n    {\n      \"gene\": \"SPTLC3\",\n      \"confidence\": 0.2,\n      \"rationale\": \"SPTLC3 shows minimal evidence for involvement in neurodegenerative disorders.\"\n    },\n    {\n      \"gene\": \"ANXA5\",\n      \"confidence\": 0.1,\n      \"rationale\": \"ANXA5 has no strong evidence linking it to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"AFAP1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"AFAP1 lacks direct evidence for association with the patient's symptoms.\"\n    },\n    {\n      \"gene\": \"FASTKD5\",\n      \"confidence\": 0.1,\n      \"rationale\": \"FASTKD5 shows no strong evidence for involvement in the patient's condition.\"\n    },\n    {\n      \"gene\": \"DAP3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"DAP3 has minimal evidence linking it to the patient's phenotype.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "ZNF302",
+    "NAA30",
+    "FBXO6",
+    "SMR3A",
+    "STRN3"
+  ]
+}

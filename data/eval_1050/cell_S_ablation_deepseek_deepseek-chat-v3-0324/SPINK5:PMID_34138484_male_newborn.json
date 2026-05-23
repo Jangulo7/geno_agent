@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_34138484_male_newborn",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18323,
+  "tokens_out": 797,
+  "finish_reason": "stop",
+  "latency_s": 30.436630964279175,
+  "cost_usd": 0.0042782900000000006,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple high-relevance case reports and discussion directly link SPINK5 mutations to Netherton syndrome, matching the patient's phenotypes including erythroderma, trichorrhexis invaginata, and recurrent infections.\"\n  },\n  {\n    \"gene\": \"SLC4A1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking SLC4A1 to immune-related phenotypes, but not strongly supporting causality for this patient's specific presentation.\"\n  },\n  {\n    \"gene\": \"MTERF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MTERF4 to the patient's phenotypes; case reports are non-specific and lack relevance.\"\n  },\n  {\n    \"gene\": \"IL1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting IL1A as causal for this patient's phenotype profile; case reports are generic and lack relevance.\"\n  },\n  {\n    \"gene\": \"TRERF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking TRERF1 to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  },\n  {\n    \"gene\": \"WFDC8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting WFDC8 as causal; case reports are generic and lack relevance to the patient's presentation.\"\n  },\n  {\n    \"gene\": \"DMRTA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DMRTA2 to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  },\n  {\n    \"gene\": \"PANX1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PANX1 as causal; case reports are generic and lack relevance to the patient's presentation.\"\n  },\n  {\n    \"gene\": \"PACSIN3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PACSIN3 to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  },\n  {\n    \"gene\": \"ELF3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ELF3 as causal; case reports are generic and lack relevance to the patient's presentation.\"\n  },\n  {\n    \"gene\": \"ACACB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ACACB to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  },\n  {\n    \"gene\": \"HNRNPA1L2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting HNRNPA1L2 as causal; case reports are generic and lack relevance to the patient's presentation.\"\n  },\n  {\n    \"gene\": \"FAM90A11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM90A11 to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  },\n  {\n    \"gene\": \"DYNC2I1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting DYNC2I1 as causal; case reports are generic and lack relevance to the patient's presentation.\"\n  },\n  {\n    \"gene\": \"CWF19L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CWF19L1 to the patient's phenotypes; case reports are non-specific and irrelevant.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "SLC4A1",
+    "MTERF4",
+    "IL1A",
+    "TRERF1"
+  ]
+}

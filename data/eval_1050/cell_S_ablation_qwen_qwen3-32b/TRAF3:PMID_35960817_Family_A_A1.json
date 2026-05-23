@@ -1,0 +1,22 @@
+{
+  "case_id": "TRAF3:PMID_35960817_Family_A_A1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TRAF3",
+  "orig_qwen3_8b_top1": "TRAF3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TRAF3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18739,
+  "tokens_out": 71,
+  "finish_reason": "stop",
+  "latency_s": 3.7997214794158936,
+  "cost_usd": 0.0015190000000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"TRAF3\",\"confidence\":0.95,\"rationale\":\"TRAF3 mutations are well-documented in X-linked immunodeficiency with lymphoproliferation and autoimmunity, aligning with the patient's lymphoid hyperplasia, splenomegaly, and anti-Ro/SS-A positivity.\"}",
+  "parsed_top5": [
+    "TRAF3"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "ATP13A2:PMID_21696388_V_5",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ATP13A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16506,
+  "tokens_out": 620,
+  "finish_reason": "stop",
+  "latency_s": 17.890092134475708,
+  "cost_usd": 0.0037786000000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ATP13A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking ATP13A2 to Kufor Rakeb syndrome, which includes all the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SHH\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SHH to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"MOBP\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No relevant evidence connecting MOBP to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"ETFDH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting ETFDH as causal for the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"FSCN2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lack of evidence associating FSCN2 with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"NUAK2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence implicating NUAK2 in the patient's condition.\"\n  },\n  {\n    \"gene\": \"CELA2A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking CELA2A to the phenotypes.\"\n  },\n  {\n    \"gene\": \"C6orf136\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting a role for C6orf136 in this case.\"\n  },\n  {\n    \"gene\": \"CD6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence connecting CD6 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TIGD2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for TIGD2 in this context.\"\n  },\n  {\n    \"gene\": \"PLPP4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence implicating PLPP4 in the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"ACADM\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence suggesting ACADM is causal here.\"\n  },\n  {\n    \"gene\": \"DBH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking DBH to the patient's condition.\"\n  },\n  {\n    \"gene\": \"LRIG1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting LRIG1 as the causal gene.\"\n  },\n  {\n    \"gene\": \"RAB30\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence associating RAB30 with the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "ATP13A2",
+    "SHH",
+    "MOBP",
+    "ETFDH",
+    "FSCN2"
+  ]
+}

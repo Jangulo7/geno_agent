@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM4",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17166,
+  "tokens_out": 700,
+  "finish_reason": "stop",
+  "latency_s": 33.35275340080261,
+  "cost_usd": 0.0039722,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA is strongly associated with familial partial lipodystrophy (FPLD2), matching the patient's limb and truncal fat loss, diabetes, and hypertriglyceridemia.\"\n  },\n  {\n    \"gene\": \"PTPRR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PTPRR to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"BRD10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BRD10 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"SF3B3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SF3B3 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"AADACL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AADACL3 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"TCF23\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TCF23 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"GPC5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GPC5 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"RNF214\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RNF214 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"RND2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RND2 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR35\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GPR35 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"KISS1R\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KISS1R to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"XKRX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking XKRX to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"P2RY6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking P2RY6 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"PWWP2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PWWP2B to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"NUP42\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NUP42 to lipodystrophy or metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "PTPRR",
+    "BRD10",
+    "SF3B3",
+    "AADACL3"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_19758376_Family_2_individual_V_3",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18269,
+  "tokens_out": 835,
+  "finish_reason": "stop",
+  "latency_s": 11.493674039840698,
+  "cost_usd": 0.067332,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.92,\"rationale\":\"AIRE mutations cause APS-1/APECED, directly characterized by hypoparathyroidism (low PTH) and hypothyroidism (elevated TSH), exactly matching all four patient HPO phenotypes with gene-specific evidence.\"},{\"gene\":\"EXD3\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking EXD3 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"KLHL29\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking KLHL29 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"LCN6\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking LCN6 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"COL3A1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking COL3A1 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"SLC30A6\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking SLC30A6 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"DNAJB12\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking DNAJB12 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"PGK1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking PGK1 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"ERBB2\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking ERBB2 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"DTWD2\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking DTWD2 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"CASP8\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking CASP8 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"MRPL42\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking MRPL42 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"KLF16\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking KLF16 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"TUT4\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking TUT4 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"},{\"gene\":\"NTN3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking NTN3 to hypoparathyroidism or hypothyroidism; evidence chunks are generic endocrinopathy descriptions.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "EXD3",
+    "KLHL29",
+    "LCN6",
+    "COL3A1"
+  ]
+}

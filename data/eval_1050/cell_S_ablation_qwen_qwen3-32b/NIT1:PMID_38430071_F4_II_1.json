@@ -1,0 +1,20 @@
+{
+  "case_id": "NIT1:PMID_38430071_F4_II_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NIT1",
+  "orig_qwen3_8b_top1": "IFNL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14924,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 5.255469083786011,
+  "cost_usd": 0.0012003600000000001,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

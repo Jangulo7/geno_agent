@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_17989726_Patient_B",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16166,
+  "tokens_out": 647,
+  "finish_reason": "stop",
+  "latency_s": 56.92598056793213,
+  "cost_usd": 0.0037313900000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching all patient phenotypes including erythroderma, recurrent infections, and growth delay.\"\n  },\n  {\n    \"gene\": \"PTAFR\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PTAFR is linked to urticaria severity but lacks evidence for other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"NCL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NCL to the patient's dermatological or immunological symptoms.\"\n  },\n  {\n    \"gene\": \"PLGRKT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PLGRKT to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MED25\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting MED25 as causal for the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"LY6H\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LY6H has no documented association with the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"B4GALNT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"B4GALNT2 is unrelated to the dermatological and immunological features described.\"\n  },\n  {\n    \"gene\": \"DEFB115\",\n    \"confidence\": 0.1,\n    \"rationale\": \"DEFB115 lacks evidence for involvement in the patient's condition.\"\n  },\n  {\n    \"gene\": \"RRS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RRS1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZNF658\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ZNF658 is not associated with the observed clinical features.\"\n  },\n  {\n    \"gene\": \"LUM\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LUM has no known role in the patient's dermatological or immunological symptoms.\"\n  },\n  {\n    \"gene\": \"ADAM18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ADAM18 lacks evidence for causality in the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CCNB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CCNB1 is unrelated to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"VN1R5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"VN1R5 has no documented association with the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"C4BPB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"C4BPB is not implicated in the patient's condition.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "PTAFR",
+    "NCL",
+    "PLGRKT",
+    "MED25"
+  ]
+}

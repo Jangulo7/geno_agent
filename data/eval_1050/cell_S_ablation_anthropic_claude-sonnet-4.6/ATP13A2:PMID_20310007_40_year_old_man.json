@@ -1,0 +1,26 @@
+{
+  "case_id": "ATP13A2:PMID_20310007_40_year_old_man",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ATP13A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18329,
+  "tokens_out": 820,
+  "finish_reason": "stop",
+  "latency_s": 12.763194561004639,
+  "cost_usd": 0.067287,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"ATP13A2\", \"confidence\": 0.93, \"rationale\": \"ATP13A2 mutations cause Kufor-Rakeb disease, directly matching mask-like facies, supranuclear gaze palsy, slow saccades, parkinsonism, rigidity, bradykinesia, dystonia, visual hallucinations, Babinski sign, and dysarthria with high-relevance evidence (5/5).\"},{\"gene\": \"DPH7\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking DPH7 to this phenotype profile; evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"CHMP4C\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CHMP4C to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"SHC2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SHC2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"KLB\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking KLB to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"HHIPL2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking HHIPL2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"MATN2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MATN2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"RIC8A\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking RIC8A to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"GNG12\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking GNG12 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"RNFT2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking RNFT2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"TGM6\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TGM6 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"PXK\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking PXK to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"PYCR2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking PYCR2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"TTLL6\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TTLL6 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"},{\"gene\": \"SPNS2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SPNS2 to this phenotype profile; all evidence chunks are non-specific and rated low relevance.\"}]",
+  "parsed_top5": [
+    "ATP13A2",
+    "DPH7",
+    "CHMP4C",
+    "SHC2",
+    "KLB"
+  ]
+}

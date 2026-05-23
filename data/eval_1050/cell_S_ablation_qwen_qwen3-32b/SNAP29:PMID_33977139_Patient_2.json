@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "PDE1B",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PDE1B",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16146,
+  "tokens_out": 173,
+  "finish_reason": "stop",
+  "latency_s": 7.782376050949097,
+  "cost_usd": 0.0013401200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"PDE1B\": 0.85, \"NTF3\": 0.75, \"YAF2\": 0.7, \"ACTR5\": 0.65, \"DGCR8\": 0.6, \"APC\": 0.55, \"KRTAP19-6\": 0.5, \"SUSD3\": 0.45, \"C1orf115\": 0.4, \"TEDC1\": 0.35, \"GGA2\": 0.3, \"RAB5IF\": 0.25, \"ZNF280C\": 0.2, \"RP1\": 0.15, \"NDUFA7\": 0.1}",
+  "parsed_top5": [
+    "PDE1B",
+    "NTF3",
+    "YAF2",
+    "ACTR5",
+    "DGCR8"
+  ]
+}

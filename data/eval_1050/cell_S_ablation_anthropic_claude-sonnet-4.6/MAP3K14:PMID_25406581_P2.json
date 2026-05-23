@@ -1,0 +1,26 @@
+{
+  "case_id": "MAP3K14:PMID_25406581_P2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "MAP3K14",
+  "orig_qwen3_8b_top1": "MALT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MALT1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17249,
+  "tokens_out": 1113,
+  "finish_reason": "stop",
+  "latency_s": 18.17610764503479,
+  "cost_usd": 0.068442,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The patient's phenotype \u2014 decreased IgM, decreased IgA, decreased total B cells, reduced NK cells, decreased class-switched memory B cells, recurrent viral/bacterial/fungal infections, chronic diarrhea \u2014 is classic for MALT1 deficiency (an immunodeficiency with combined B and NK cell defects, hypogammaglobulinemia, and susceptibility to bacterial, viral, and candidal infections). MALT1 is a well-established primary immunodeficiency gene causing this exact constellation. None of the evidence chunks directly name any gene as causal, but using prior knowledge of gene-disease associations, MALT1 is the strongest match. The phenotype does not fit MT-ATP8 (mitochondrial), IMPA2 (inositol metabolism), or the other candidates which have no known immunodeficiency associations matching this profile.\n\n[\n  {\"gene\": \"MALT1\", \"confidence\": 0.72, \"rationale\": \"MALT1 deficiency causes combined immunodeficiency with low B cells, reduced NK cells, hypogammaglobulinemia (IgA/IgM), decreased class-switched memory B cells, and susceptibility to bacterial, viral, and candidal infections matching this phenotype exactly.\"},\n  {\"gene\": \"SPIDR\", \"confidence\": 0.05, \"rationale\": \"SPIDR is involved in DNA repair; no strong evidence linking it to this combined B/NK cell immunodeficiency phenotype with candidiasis and hypogammaglobulinemia.\"},\n  {\"gene\": \"SIGLEC1\", \"confidence\": 0.04, \"rationale\": \"SIGLEC1 is a macrophage marker; no established link to combined B/NK cell deficiency with hypogammaglobulinemia and candidiasis.\"},\n  {\"gene\": \"TANK\", \"confidence\": 0.04, \"rationale\": \"TANK modulates NF-\u03baB/TBK1 signaling; no direct established link to this combined immunodeficiency phenotype profile.\"},\n  {\"gene\": \"BMP2K\", \"confidence\": 0.03, \"rationale\": \"BMP2K is a kinase with limited immune function evidence; no known association with this combined B/NK immunodeficiency phenotype.\"},\n  {\"gene\": \"PHETA1\", \"confidence\": 0.03, \"rationale\": \"PHETA1 has no established role in primary immunodeficiency matching this B/NK cell deficiency and hypogammaglobulinemia profile.\"},\n  {\"gene\": \"RHBDL1\", \"confidence\": 0.02, \"rationale\": \"RHBDL1 is a rhomboid protease with no known link to combined B/NK cell immunodeficiency or hypogammaglobulinemia.\"},\n  {\"gene\": \"TMC6\", \"confidence\": 0.02, \"rationale\": \"TMC6 is associated with epidermodysplasia verruciformis (HPV susceptibility) but not the full combined immunodeficiency phenotype described.\"},\n  {\"gene\": \"FYTTD1\", \"confidence\": 0.01, \"rationale\": \"FYTTD1 is an mRNA export factor with no established primary immunodeficiency association matching this phenotype.\"},\n  {\"gene\": \"HIBADH\", \"confidence\": 0.01, \"rationale\": \"HIBADH is a metabolic enzyme; no known link to combined B/NK cell immunodeficiency with hypogammaglobulinemia.\"},\n  {\"gene\": \"AIFM2\", \"confidence\": 0.01, \"rationale\": \"AIFM2 is involved in apoptosis/ferroptosis; no established association with this combined immunodeficiency phenotype.\"},\n  {\"gene\": \"DPF1\", \"confidence\": 0.01, \"rationale\": \"DPF1 is a chromatin remodeling factor with no known primary immunodeficiency association matching this phenotype.\"},\n  {\"gene\": \"MT-ATP8\", \"confidence\": 0.01, \"rationale\": \"MT-ATP8 encodes a mitochondrial ATP synthase subunit; no established link to combined B/NK cell immunodeficiency.\"},\n  {\"gene\": \"IMPA2\", \"confidence\": 0.01, \"rationale\": \"IMPA2 is an inositol monophosphatase; no known association with combined B/NK cell immunodeficiency or hypogammaglobulinemia.\"},\n  {\"gene\": \"YAE1\", \"confidence\": 0.01, \"rationale\": \"YAE1 is involved in Fe-S cluster assembly; no established link to combined B/NK cell immunodeficiency with candidiasis.\"}\n]",
+  "parsed_top5": [
+    "MALT1",
+    "SPIDR",
+    "SIGLEC1",
+    "TANK",
+    "BMP2K"
+  ]
+}

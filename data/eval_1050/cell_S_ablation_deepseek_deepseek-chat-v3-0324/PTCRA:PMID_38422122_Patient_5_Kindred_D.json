@@ -1,0 +1,26 @@
+{
+  "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PTCRA",
+  "orig_qwen3_8b_top1": "PYROXD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PYROXD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16734,
+  "tokens_out": 765,
+  "finish_reason": "stop",
+  "latency_s": 24.52575993537903,
+  "cost_usd": 0.00393585,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PYROXD1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"PYROXD1 variants cause myofibrillar myopathy type 8, presenting with muscle weakness, hyporeflexia, and polyneuropathy, closely matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF883\",\n    \"confidence\": 0.6,\n    \"rationale\": \"ZNF883 is associated with axonal sensory and motor neuropathy, hyporeflexia, and impaired walking, similar to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"SLC39A8\",\n    \"confidence\": 0.5,\n    \"rationale\": \"SLC39A8 mutations can lead to polyneuropathy and hyporeflexia, though evidence is less specific than PYROXD1.\"\n  },\n  {\n    \"gene\": \"NKAP\",\n    \"confidence\": 0.4,\n    \"rationale\": \"NKAP has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"ZBTB47\",\n    \"confidence\": 0.4,\n    \"rationale\": \"ZBTB47 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"VCY1B\",\n    \"confidence\": 0.4,\n    \"rationale\": \"VCY1B has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"NPIPB3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"NPIPB3 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"PRPF40B\",\n    \"confidence\": 0.4,\n    \"rationale\": \"PRPF40B has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"LPA\",\n    \"confidence\": 0.4,\n    \"rationale\": \"LPA has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"PSPN\",\n    \"confidence\": 0.4,\n    \"rationale\": \"PSPN has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"SORCS1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"SORCS1 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"BTNL3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"BTNL3 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"CYP2A7\",\n    \"confidence\": 0.4,\n    \"rationale\": \"CYP2A7 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"SRRM3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"SRRM3 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  },\n  {\n    \"gene\": \"PAFAH1B1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"PAFAH1B1 has no direct evidence linking it to the patient's specific neuromuscular and thyroid phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "PYROXD1",
+    "ZNF883",
+    "SLC39A8",
+    "NKAP",
+    "ZBTB47"
+  ]
+}

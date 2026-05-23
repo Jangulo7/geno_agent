@@ -1,0 +1,26 @@
+{
+  "case_id": "FBXO7:PMID_18513678_individual_5039",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBXO7",
+  "orig_qwen3_8b_top1": "FBXO7",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBXO7",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11441,
+  "tokens_out": 1044,
+  "finish_reason": "stop",
+  "latency_s": 14.928205013275146,
+  "cost_usd": 0.049983,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FBXO7\",\n    \"confidence\": 0.72,\n    \"rationale\": \"FBXO7/PARK15 literature explicitly mentions scissors gait, tendon hyperreflexia, positive Babinski sign, and strephenopodia (talipes equinovarus) as cardinal pyramidal tract features, matching all 4 HPO terms.\"\n  },\n  {\n    \"gene\": \"PNPLA6\",\n    \"confidence\": 0.10,\n    \"rationale\": \"PNPLA6 mutations cause HSP with hyperreflexia, Babinski sign, and scissors gait; evidence is relevant but lacks specific mention of talipes equinovarus and gene is not directly named in highest-relevance chunks.\"\n  },\n  {\n    \"gene\": \"PRRX2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Case report chunk describes scissor gait, hyperreflexia, Babinski sign but no direct gene-disease link to PRRX2 and no mention of talipes equinovarus.\"\n  },\n  {\n    \"gene\": \"NCOA5\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks show scissor gait, hyperreflexia, Babinski sign but no direct causal link to NCOA5 and talipes equinovarus is absent.\"\n  },\n  {\n    \"gene\": \"TRAPPC10\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Only generic HSP/pyramidal sign evidence; no direct TRAPPC10-specific association with the full phenotype profile including talipes equinovarus.\"\n  },\n  {\n    \"gene\": \"PAAF1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks show pyramidal signs including hyperreflexia and Babinski but no direct PAAF1 gene mention or talipes equinovarus association.\"\n  },\n  {\n    \"gene\": \"KLF7\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Scissors gait and Babinski mentioned in evidence but no direct KLF7 causal link and talipes equinovarus not specifically noted.\"\n  },\n  {\n    \"gene\": \"GABRA1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct GABRA1-specific evidence for pyramidal tract signs or talipes equinovarus; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"CDK5RAP1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct CDK5RAP1-specific evidence linking it to the pyramidal sign phenotype or talipes equinovarus.\"\n  },\n  {\n    \"gene\": \"LBH\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct LBH-specific evidence for this phenotype; only generic shared case report chunks without gene-level attribution.\"\n  },\n  {\n    \"gene\": \"THAP6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct THAP6-specific evidence for pyramidal signs or talipes equinovarus; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"DEF8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct DEF8-specific evidence linking it to the patient phenotype; only generic cerebral palsy and pyramidal sign descriptions.\"\n  },\n  {\n    \"gene\": \"RNF13\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct RNF13-specific evidence for pyramidal tract signs or talipes equinovarus; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"G6PD\",\n    \"confidence\": 0.005,\n    \"rationale\": \"No direct G6PD-specific evidence for pyramidal signs or talipes equinovarus; only generic shared chunks unrelated to G6PD function.\"\n  },\n  {\n    \"gene\": \"FGGY\",\n    \"confidence\": 0.005,\n    \"rationale\": \"No direct FGGY-specific evidence for pyramidal tract signs or talipes equinovarus; only generic shared chunks.\"\n  }\n]",
+  "parsed_top5": [
+    "FBXO7",
+    "PNPLA6",
+    "PRRX2",
+    "NCOA5",
+    "TRAPPC10"
+  ]
+}

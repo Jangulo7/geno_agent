@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_35",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20618,
+  "tokens_out": 847,
+  "finish_reason": "stop",
+  "latency_s": 11.926462411880493,
+  "cost_usd": 0.074559,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"COL3A1\",\"confidence\":0.95,\"rationale\":\"COL3A1 mutations cause vascular EDS, directly explaining thin vermilion, narrow nasal ridge, bruising, spontaneous pneumothorax, absent earlobe, talipes equinovarus, dermal translucency, and small joint hypermobility.\"},{\"gene\":\"PRMT7\",\"confidence\":0.02,\"rationale\":\"PRMT7 causes a neurodevelopmental syndrome with brachydactyly and short stature; no direct link to the vascular EDS phenotype profile presented.\"},{\"gene\":\"CORO1B\",\"confidence\":0.005,\"rationale\":\"No evidence linking CORO1B to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"BCDIN3D\",\"confidence\":0.005,\"rationale\":\"No evidence linking BCDIN3D to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"ATP5PB\",\"confidence\":0.005,\"rationale\":\"No evidence linking ATP5PB to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"IL9\",\"confidence\":0.005,\"rationale\":\"No evidence linking IL9 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"SLC38A8\",\"confidence\":0.005,\"rationale\":\"No evidence linking SLC38A8 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"SOWAHB\",\"confidence\":0.005,\"rationale\":\"No evidence linking SOWAHB to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"ADGRL3\",\"confidence\":0.005,\"rationale\":\"No evidence linking ADGRL3 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"SRC\",\"confidence\":0.005,\"rationale\":\"No evidence linking SRC to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"ALG6\",\"confidence\":0.005,\"rationale\":\"No evidence linking ALG6 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"NGDN\",\"confidence\":0.005,\"rationale\":\"No evidence linking NGDN to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"NMD3\",\"confidence\":0.005,\"rationale\":\"No evidence linking NMD3 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"DPYSL5\",\"confidence\":0.005,\"rationale\":\"No evidence linking DPYSL5 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"},{\"gene\":\"AZIN2\",\"confidence\":0.005,\"rationale\":\"No evidence linking AZIN2 to the connective tissue/vascular EDS phenotype; evidence chunks only reference COL3A1-related vEDS context.\"}]",
+  "parsed_top5": [
+    "COL3A1",
+    "PRMT7",
+    "CORO1B",
+    "BCDIN3D",
+    "ATP5PB"
+  ]
+}

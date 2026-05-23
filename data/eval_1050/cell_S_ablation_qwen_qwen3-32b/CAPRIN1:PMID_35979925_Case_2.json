@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "KCTD14",
+  "orig_qwen3_8b_correct": false,
+  "top1": "KCTD14",
+  "top1_correct": false,
+  "causal_rank": 11,
+  "tokens_in": 18165,
+  "tokens_out": 683,
+  "finish_reason": "stop",
+  "latency_s": 14.43597412109375,
+  "cost_usd": 0.00164444,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"KCTD14\": {\"gene\": \"KCTD14\", \"confidence\": 0.95, \"rationale\": \"Strongest match with global developmental delay, autistic behavior, cafe-au-lait spots, and seizures in multiple case reports.\"}, \"FBXO3\": {\"gene\": \"FBXO3\", \"confidence\": 0.85, \"rationale\": \"Shows global developmental delay, autistic traits, seizures, and dysmorphic features matching patient phenotype.\"}, \"SLC31A2\": {\"gene\": \"SLC31A2\", \"confidence\": 0.75, \"rationale\": \"Reports include developmental delay, speech issues, and abnormal EEG findings consistent with patient profile.\"}, \"COX14\": {\"gene\": \"COX14\", \"confidence\": 0.7, \"rationale\": \"Cases with developmental delay, seizures, and hypotonia align with patient's non-motor seizures and developmental issues.\"}, \"HAS3\": {\"gene\": \"HAS3\", \"confidence\": 0.65, \"rationale\": \"Includes developmental delay and seizures, though less specific to the full phenotype profile.\"}, \"SLC66A1\": {\"gene\": \"SLC66A1\", \"confidence\": 0.6, \"rationale\": \"Reports of developmental delay and abnormal EEG, but less detailed phenotypic overlap.\"}, \"FHIP2A\": {\"gene\": \"FHIP2A\", \"confidence\": 0.55, \"rationale\": \"Some overlap with developmental delay and seizures, but limited specific phenotypic details.\"}, \"ANAPC1\": {\"gene\": \"ANAPC1\", \"confidence\": 0.5, \"rationale\": \"General developmental delay and seizures mentioned, but less specific to the full phenotype.\"}, \"CCL4L1\": {\"gene\": \"CCL4L1\", \"confidence\": 0.45, \"rationale\": \"Minimal specific phenotypic overlap with the patient's features.\"}, \"POLR2L\": {\"gene\": \"POLR2L\", \"confidence\": 0.4, \"rationale\": \"General developmental delay reported, but limited specific phenotypic details.\"}, \"CAPRIN1\": {\"gene\": \"CAPRIN1\", \"confidence\": 0.35, \"rationale\": \"Some developmental delay and seizures mentioned, but limited specific phenotypic overlap.\"}, \"HGF\": {\"gene\": \"HGF\", \"confidence\": 0.3, \"rationale\": \"Reports include developmental delay and seizures, but less specific to the full phenotype.\"}, \"CTSV\": {\"gene\": \"CTSV\", \"confidence\": 0.25, \"rationale\": \"Limited specific phenotypic overlap with the patient's features.\"}, \"RPAP1\": {\"gene\": \"RPAP1\", \"confidence\": 0.2, \"rationale\": \"General developmental delay and seizures mentioned, but limited specific phenotypic details.\"}, \"SIGLEC6\": {\"gene\": \"SIGLEC6\", \"confidence\": 0.15, \"rationale\": \"Minimal specific phenotypic overlap with the patient's features.\"}}",
+  "parsed_top5": [
+    "KCTD14",
+    "FBXO3",
+    "SLC31A2",
+    "COX14",
+    "HAS3"
+  ]
+}

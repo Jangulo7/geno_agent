@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "FCGR3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "STEAP4",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12013,
+  "tokens_out": 626,
+  "finish_reason": "stop",
+  "latency_s": 22.019378662109375,
+  "cost_usd": 0.00113632,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"STEAP4\",\"confidence\":0.95,\"rationale\":\"Elevated ALT, AST, GGT, and bilirubin levels with coagulation abnormalities and low albumin strongly suggest hepatocellular injury, aligning with the patient's phenotype.\"},{\"gene\":\"PSMA6\",\"confidence\":0.85,\"rationale\":\"Shows similar lab findings as STEAP4, but lacks distinct evidence linking it specifically to the patient's full phenotype.\"},{\"gene\":\"FCGR3A\",\"confidence\":0.8,\"rationale\":\"Includes persistent liver enzyme abnormalities but lacks evidence of coagulopathy or bilirubin elevation as seen in the patient.\"},{\"gene\":\"TREH\",\"confidence\":0.75,\"rationale\":\"Mentions hepatocellular injury and bilirubin elevation, but lacks specific evidence of coagulopathy or low albumin.\"},{\"gene\":\"SLC35H1\",\"confidence\":0.7,\"rationale\":\"Includes cholestasis markers and elevated liver enzymes, but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"RLN1\",\"confidence\":0.65,\"rationale\":\"Mentions elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"SCX\",\"confidence\":0.65,\"rationale\":\"Includes elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"NES\",\"confidence\":0.6,\"rationale\":\"Mentions hepatocellular injury and bilirubin elevation but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"RLN3\",\"confidence\":0.6,\"rationale\":\"Includes elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"NLGN3\",\"confidence\":0.55,\"rationale\":\"Mentions elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"CTBS\",\"confidence\":0.55,\"rationale\":\"Includes elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.5,\"rationale\":\"Mentions hepatocellular injury and bilirubin elevation but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"FAM216B\",\"confidence\":0.45,\"rationale\":\"Includes elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"LRATD1\",\"confidence\":0.4,\"rationale\":\"Mentions elevated liver enzymes and bilirubin but lacks evidence of coagulopathy or low albumin.\"},{\"gene\":\"UBXN11\",\"confidence\":0.35,\"rationale\":\"Includes cholestasis markers but lacks evidence of hepatocellular injury or coagulopathy as seen in the patient.\"}]",
+  "parsed_top5": [
+    "STEAP4",
+    "PSMA6",
+    "FCGR3A",
+    "TREH",
+    "SLC35H1"
+  ]
+}

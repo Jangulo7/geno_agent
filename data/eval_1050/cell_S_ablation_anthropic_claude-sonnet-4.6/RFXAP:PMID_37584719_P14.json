@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXAP:PMID_37584719_P14",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXAP",
+  "orig_qwen3_8b_top1": "RFXAP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXAP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 25337,
+  "tokens_out": 997,
+  "finish_reason": "stop",
+  "latency_s": 12.068337202072144,
+  "cost_usd": 0.090966,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXAP\",\n    \"confidence\": 0.72,\n    \"rationale\": \"RFXAP causes MHC class II deficiency, directly explaining inverted CD4:CD8 ratio, decreased CD4+ T cells, hypogammaglobulinemia, recurrent pneumonia, chronic diarrhea, failure to thrive, and neurological complications including ataxia.\"\n  },\n  {\n    \"gene\": \"RPP25L\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking RPP25L to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"CINP\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking CINP to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"OSGEP\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking OSGEP to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"CWC15\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking CWC15 to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"IVNS1ABP\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking IVNS1ABP to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"CXXC5\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking CXXC5 to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SLC25A43\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking SLC25A43 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"FABP6\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking FABP6 to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"RNASEH2C\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking RNASEH2C to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"PRAMEF20\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking PRAMEF20 to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SSNA1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking SSNA1 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"FHIP1B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking FHIP1B to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"MDFIC2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking MDFIC2 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"AKR1C3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking AKR1C3 to this combined immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXAP",
+    "RPP25L",
+    "CINP",
+    "OSGEP",
+    "CWC15"
+  ]
+}

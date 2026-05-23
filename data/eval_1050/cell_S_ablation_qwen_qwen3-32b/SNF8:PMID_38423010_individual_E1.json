@@ -1,0 +1,22 @@
+{
+  "case_id": "SNF8:PMID_38423010_individual_E1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNF8",
+  "orig_qwen3_8b_top1": "SNF8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNF8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17816,
+  "tokens_out": 65,
+  "finish_reason": "stop",
+  "latency_s": 10.60494089126587,
+  "cost_usd": 0.00144348,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"SNF8\", \"confidence\": 0.95, \"rationale\": \"SNF8 variants directly cause a spectrum of neurodevelopmental features including intellectual disability, optic atrophy, cerebellar atrophy, and global developmental delay, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "SNF8"
+  ]
+}

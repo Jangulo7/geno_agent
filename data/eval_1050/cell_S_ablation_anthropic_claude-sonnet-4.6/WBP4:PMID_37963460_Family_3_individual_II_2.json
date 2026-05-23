@@ -1,0 +1,26 @@
+{
+  "case_id": "WBP4:PMID_37963460_Family_3_individual_II_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "WBP4",
+  "orig_qwen3_8b_top1": "THAP4",
+  "orig_qwen3_8b_correct": false,
+  "top1": "BDP1",
+  "top1_correct": false,
+  "causal_rank": 8,
+  "tokens_in": 14368,
+  "tokens_out": 997,
+  "finish_reason": "stop",
+  "latency_s": 18.367876529693604,
+  "cost_usd": 0.058059,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"BDP1\",\n    \"confidence\": 0.18,\n    \"rationale\": \"BDP1 chunk_1 uniquely describes patients with speech delay, global developmental delay, and mild hypotonia in a gene-specific case series, slightly more direct than shared generic chunks.\"\n  },\n  {\n    \"gene\": \"GPRIN1\",\n    \"confidence\": 0.09,\n    \"rationale\": \"GPRIN1 chunk_3 describes a specific patient with global developmental delay, motor delay, and language delay with brain MRI findings, providing slightly more gene-specific context.\"\n  },\n  {\n    \"gene\": \"CYP2S1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"CYP2S1 chunk_2 describes a specific patient with global developmental delay, motor delay, language delay, and brain atrophy, offering a somewhat distinct case description.\"\n  },\n  {\n    \"gene\": \"MAST3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence chunks are generic and shared across many genes; no gene-specific mechanistic link to the HPO phenotypes distinguishes MAST3 above others.\"\n  },\n  {\n    \"gene\": \"THAP4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"All evidence chunks are generic case descriptions shared with multiple genes; no specific mechanistic or gene-level evidence links THAP4 to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZWILCH\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence is generic and shared; no gene-specific data links ZWILCH to motor delay, hypotonia, or speech delay.\"\n  },\n  {\n    \"gene\": \"GAL\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are generic and shared; no specific association between GAL and the patient's neurodevelopmental phenotype profile is demonstrated.\"\n  },\n  {\n    \"gene\": \"WBP4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"WBP4 chunk_3 references SRRM2 deletions with motor/speech delay, but this is not WBP4-specific evidence; overall evidence is generic.\"\n  },\n  {\n    \"gene\": \"BRK1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"All evidence chunks are generic case descriptions shared with multiple genes; no specific mechanistic link to hypotonia or developmental delay is provided.\"\n  },\n  {\n    \"gene\": \"CFC1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence is entirely generic and shared; CFC1 is not known to cause isolated neurodevelopmental delay with hypotonia.\"\n  },\n  {\n    \"gene\": \"DEFB105A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence is generic and shared; DEFB105A (defensin) has no established link to neurodevelopmental delay or hypotonia.\"\n  },\n  {\n    \"gene\": \"C9orf152\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence is generic and shared; no specific gene-level data supports C9orf152 as causal for this phenotype.\"\n  },\n  {\n    \"gene\": \"TMEM229A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence is generic and shared; no specific mechanistic or clinical data links TMEM229A to motor delay, hypotonia, or speech delay.\"\n  },\n  {\n    \"gene\": \"CCDC148\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence is generic and shared; no specific association between CCDC148 and neurodevelopmental delay or hypotonia is demonstrated.\"\n  },\n  {\n    \"gene\": \"AIM2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence is generic and shared; AIM2 is an inflammasome component with no established role in neurodevelopmental delay or hypotonia.\"\n  }\n]",
+  "parsed_top5": [
+    "BDP1",
+    "GPRIN1",
+    "CYP2S1",
+    "MAST3",
+    "THAP4"
+  ]
+}

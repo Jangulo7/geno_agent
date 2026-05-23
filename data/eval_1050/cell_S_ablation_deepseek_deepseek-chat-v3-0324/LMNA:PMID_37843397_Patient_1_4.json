@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_1_4",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16363,
+  "tokens_out": 47,
+  "finish_reason": "stop",
+  "latency_s": 4.38141655921936,
+  "cost_usd": 0.0033087900000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"LMNA\",\n  \"confidence\": 0.95,\n  \"rationale\": \"LMNA mutations are strongly linked to familial partial lipodystrophy with metabolic abnormalities matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

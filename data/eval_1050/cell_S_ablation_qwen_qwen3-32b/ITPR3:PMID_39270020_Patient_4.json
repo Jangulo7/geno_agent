@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_4",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18618,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 8.999721050262451,
+  "cost_usd": 0.00150652,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ITPR3\", \"confidence\": 0.95, \"rationale\": \"ITPR3 mutations directly cause impaired T cell Ca2+ influx, reduced naive T cells, and lymphopenia, aligning with the patient's immunological and clinical features.\"}",
+  "parsed_top5": [
+    "ITPR3"
+  ]
+}

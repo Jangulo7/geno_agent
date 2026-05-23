@@ -1,0 +1,26 @@
+{
+  "case_id": "NCF2:PMID_10498624_Case_4_IP",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NCF2",
+  "orig_qwen3_8b_top1": "NCF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NCF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19943,
+  "tokens_out": 719,
+  "finish_reason": "stop",
+  "latency_s": -386.359450340271,
+  "cost_usd": 0.070614,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NCF2\",\"confidence\":0.92,\"rationale\":\"NCF2 encodes p67phox, a cytosolic NADPH oxidase subunit; mutations cause CGD with decreased neutrophil oxidative burst, recurrent bacterial skin infections, and lymphadenopathy matching all patient HPO terms.\"},{\"gene\":\"NOD2\",\"confidence\":0.03,\"rationale\":\"NOD2 plays a role in innate immunity and neutrophil recruitment but is not a known cause of decreased oxidative burst or CGD phenotype.\"},{\"gene\":\"GPI\",\"confidence\":0.02,\"rationale\":\"GPI evidence relates to glycogen phosphorylase inhibitor effects on oxidative burst kinetics, not a direct genetic cause of CGD or the patient's phenotype.\"},{\"gene\":\"USB1\",\"confidence\":0.01,\"rationale\":\"USB1 mutations cause poikiloderma with neutropenia, not decreased oxidative burst or recurrent bacterial skin infections with lymphadenopathy.\"},{\"gene\":\"IMMP2L\",\"confidence\":0.005,\"rationale\":\"No evidence linking IMMP2L to oxidative burst defects or the patient's immunodeficiency phenotype.\"},{\"gene\":\"CMTM3\",\"confidence\":0.005,\"rationale\":\"No evidence linking CMTM3 to neutrophil oxidative burst deficiency or CGD-like phenotype.\"},{\"gene\":\"ZBTB18\",\"confidence\":0.005,\"rationale\":\"No evidence linking ZBTB18 to neutrophil oxidative burst or recurrent bacterial infections with lymphadenopathy.\"},{\"gene\":\"DNAJB13\",\"confidence\":0.005,\"rationale\":\"No evidence linking DNAJB13 to neutrophil oxidative burst defects or the patient's clinical phenotype.\"},{\"gene\":\"ADGRG2\",\"confidence\":0.005,\"rationale\":\"No evidence linking ADGRG2 to neutrophil oxidative burst deficiency or CGD-like phenotype.\"},{\"gene\":\"LRWD1\",\"confidence\":0.005,\"rationale\":\"No evidence linking LRWD1 to neutrophil oxidative burst or recurrent bacterial skin infections.\"},{\"gene\":\"ST6GAL2\",\"confidence\":0.005,\"rationale\":\"No evidence linking ST6GAL2 to neutrophil oxidative burst defects or the patient's immunodeficiency phenotype.\"},{\"gene\":\"CACNG8\",\"confidence\":0.005,\"rationale\":\"No evidence linking CACNG8 to neutrophil oxidative burst or CGD-like phenotype.\"},{\"gene\":\"CBLC\",\"confidence\":0.005,\"rationale\":\"No evidence linking CBLC to neutrophil oxidative burst deficiency or recurrent bacterial infections with lymphadenopathy.\"},{\"gene\":\"ACADS\",\"confidence\":0.005,\"rationale\":\"No evidence linking ACADS to neutrophil oxidative burst defects or the patient's immunodeficiency phenotype.\"},{\"gene\":\"GORASP1\",\"confidence\":0.005,\"rationale\":\"No evidence linking GORASP1 to neutrophil oxidative burst deficiency or CGD-like phenotype.\"}]",
+  "parsed_top5": [
+    "NCF2",
+    "NOD2",
+    "GPI",
+    "USB1",
+    "IMMP2L"
+  ]
+}

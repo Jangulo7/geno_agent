@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16213,
+  "tokens_out": 696,
+  "finish_reason": "stop",
+  "latency_s": 23.29529094696045,
+  "cost_usd": 0.0037785200000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple high-relevance literature chunks directly link SPINK5 mutations to Netherton syndrome, which matches all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"DUS1L\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking DUS1L to the patient's phenotype profile; mentions overlap with unrelated SPINK5 discussions.\"\n  },\n  {\n    \"gene\": \"ATP6V0A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ATP6V0A4 to the observed dermatologic or immunologic phenotypes.\"\n  },\n  {\n    \"gene\": \"MMP16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature evidence supports MMP16's involvement in the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"TMEM72\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Absence of evidence linking TMEM72 to congenital erythroderma or elevated IgE phenotypes.\"\n  },\n  {\n    \"gene\": \"DNAH3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No pathogenic associations found between DNAH3 and the patient's ichthyosis/atopic features.\"\n  },\n  {\n    \"gene\": \"CALHM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented role in skin barrier disorders or atopy; evidence entirely unrelated.\"\n  },\n  {\n    \"gene\": \"GAGE2D\",\n    \"confidence\": 0.05,\n    \"rationale\": \"GAGE2D has no established connection to genodermatoses or inherited skin conditions.\"\n  },\n  {\n    \"gene\": \"SENP5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SENP5's functions are unrelated to dermatologic or immunologic phenotypes described.\"\n  },\n  {\n    \"gene\": \"KBTBD12\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting KBTBD12's involvement in congenital ichthyosis or atopy.\"\n  },\n  {\n    \"gene\": \"CFH\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CFH variants are linked to complement disorders, not the patient's skin/hair pathology.\"\n  },\n  {\n    \"gene\": \"UQCR10\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Mitochondrial protein with no known role in epidermal barrier defects or allergies.\"\n  },\n  {\n    \"gene\": \"ZNF541\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Zinc finger protein without documented associations to the patient's phenotype cluster.\"\n  },\n  {\n    \"gene\": \"ELL\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Transcriptional elongation factor unrelated to dermatologic or immunologic manifestations.\"\n  },\n  {\n    \"gene\": \"LRRC10\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Cardiac-associated gene with no relevance to exfoliative erythroderma or atopy.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "DUS1L",
+    "ATP6V0A4",
+    "MMP16",
+    "TMEM72"
+  ]
+}

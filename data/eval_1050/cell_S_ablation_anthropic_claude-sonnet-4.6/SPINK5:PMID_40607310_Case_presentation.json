@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_40607310_Case_presentation",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19233,
+  "tokens_out": 739,
+  "finish_reason": "stop",
+  "latency_s": 15.400547981262207,
+  "cost_usd": 0.068784,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.97,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: trichorrhexis invaginata, congenital erythroderma, elevated IgE, recurrent skin infections, sparse hair/eyebrows/eyelashes, scaling, pruritus.\"},{\"gene\":\"TM4SF19\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe Netherton syndrome/SPINK5 cases; TM4SF19 has no direct relevance to this phenotype profile.\"},{\"gene\":\"SH3TC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SH3TC1 to this dermatological phenotype; chunks reference SPINK5/Netherton syndrome only.\"},{\"gene\":\"KCNA6\",\"confidence\":0.01,\"rationale\":\"KCNA6 encodes a potassium channel with no established link to ichthyosis, trichorrhexis invaginata, or elevated IgE.\"},{\"gene\":\"YIPF2\",\"confidence\":0.01,\"rationale\":\"No evidence linking YIPF2 to this skin/hair/IgE phenotype; background chunks describe Netherton syndrome.\"},{\"gene\":\"DCAF12L1\",\"confidence\":0.01,\"rationale\":\"No evidence linking DCAF12L1 to Netherton-like phenotype; only background NS/SPINK5 literature present.\"},{\"gene\":\"MAN1A1\",\"confidence\":0.01,\"rationale\":\"MAN1A1 is a mannosidase with no established connection to the described dermatological phenotype.\"},{\"gene\":\"NANP\",\"confidence\":0.01,\"rationale\":\"NANP has no known association with ichthyosis, trichorrhexis invaginata, or atopic diathesis.\"},{\"gene\":\"RNF138\",\"confidence\":0.01,\"rationale\":\"RNF138 is a ubiquitin ligase with no established link to this skin/hair/IgE phenotype.\"},{\"gene\":\"ZDHHC1\",\"confidence\":0.01,\"rationale\":\"ZDHHC1 encodes a palmitoyltransferase with no known role in Netherton-like skin disease.\"},{\"gene\":\"FAM24B\",\"confidence\":0.01,\"rationale\":\"FAM24B has no established disease association relevant to this phenotype profile.\"},{\"gene\":\"METTL21C\",\"confidence\":0.01,\"rationale\":\"METTL21C is a methyltransferase with no known link to ichthyosis or trichorrhexis invaginata.\"},{\"gene\":\"OR52P1\",\"confidence\":0.01,\"rationale\":\"OR52P1 is an olfactory receptor gene with no relevance to this dermatological phenotype.\"},{\"gene\":\"TSGA10\",\"confidence\":0.01,\"rationale\":\"TSGA10 is associated with spermatogenesis, not skin barrier or hair shaft abnormalities.\"},{\"gene\":\"CLNS1A\",\"confidence\":0.01,\"rationale\":\"CLNS1A encodes a chloride channel regulatory protein with no established link to this phenotype.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "TM4SF19",
+    "SH3TC1",
+    "KCNA6",
+    "YIPF2"
+  ]
+}

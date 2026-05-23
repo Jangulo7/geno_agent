@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_19807739_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18840,
+  "tokens_out": 704,
+  "finish_reason": "stop",
+  "latency_s": 10.555878162384033,
+  "cost_usd": 0.06708,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.97,\"rationale\":\"AIRE is the established causal gene for APS-1, directly characterized by the classic triad of chronic mucocutaneous candidiasis, hypoparathyroidism, and primary adrenal insufficiency matching this patient exactly.\"},{\"gene\":\"MISP\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking MISP to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"ETFDH\",\"confidence\":0.01,\"rationale\":\"No evidence linking ETFDH to CMC, hypoparathyroidism, or adrenal insufficiency; chunks reference AIRE/APS-1 only.\"},{\"gene\":\"PARP9\",\"confidence\":0.01,\"rationale\":\"No evidence linking PARP9 to this phenotype triad; evidence chunks describe APS-1 caused by AIRE mutations.\"},{\"gene\":\"LAPTM4B\",\"confidence\":0.01,\"rationale\":\"No evidence linking LAPTM4B to CMC, hypoparathyroidism, or adrenal insufficiency.\"},{\"gene\":\"GCNT1\",\"confidence\":0.01,\"rationale\":\"No evidence linking GCNT1 to this phenotype; chunks only discuss AIRE/APS-1.\"},{\"gene\":\"PEX5L\",\"confidence\":0.01,\"rationale\":\"No evidence linking PEX5L to this phenotype triad; evidence is entirely about AIRE/APS-1.\"},{\"gene\":\"SAMD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SAMD1 to CMC, hypoparathyroidism, or adrenal insufficiency.\"},{\"gene\":\"ARL10\",\"confidence\":0.01,\"rationale\":\"No evidence linking ARL10 to this phenotype; all evidence chunks describe AIRE/APS-1.\"},{\"gene\":\"HEPN1\",\"confidence\":0.01,\"rationale\":\"No evidence linking HEPN1 to this phenotype triad; chunks reference AIRE/APS-1 only.\"},{\"gene\":\"SORBS3\",\"confidence\":0.01,\"rationale\":\"No evidence linking SORBS3 to CMC, hypoparathyroidism, or adrenal insufficiency.\"},{\"gene\":\"TSPAN18\",\"confidence\":0.01,\"rationale\":\"No evidence linking TSPAN18 to this phenotype; evidence describes AIRE/APS-1.\"},{\"gene\":\"ZNF358\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF358 to this phenotype triad; chunks discuss AIRE/APS-1.\"},{\"gene\":\"RHOXF2\",\"confidence\":0.01,\"rationale\":\"No evidence linking RHOXF2 to CMC, hypoparathyroidism, or adrenal insufficiency.\"},{\"gene\":\"CSRP3\",\"confidence\":0.01,\"rationale\":\"No evidence linking CSRP3 to this phenotype; all evidence chunks describe AIRE/APS-1.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "MISP",
+    "ETFDH",
+    "PARP9",
+    "LAPTM4B"
+  ]
+}

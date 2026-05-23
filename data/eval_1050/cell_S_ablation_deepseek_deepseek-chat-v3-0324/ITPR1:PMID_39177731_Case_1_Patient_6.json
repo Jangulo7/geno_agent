@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_39177731_Case_1_Patient_6",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10971,
+  "tokens_out": 668,
+  "finish_reason": "stop",
+  "latency_s": 32.36829161643982,
+  "cost_usd": 0.0027085600000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ITPR1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"ITPR1 mutations directly linked to congenital nonprogressive spinocerebellar ataxia with matching phenotypes including cerebellar atrophy, hypotonia, and dysarthria.\"\n  },\n  {\n    \"gene\": \"ATXN7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"ATXN7 associated with late-onset gait disturbance and dysarthria, but phenotype mismatch with congenital features.\"\n  },\n  {\n    \"gene\": \"GPAA1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"GPAA1 linked to developmental delay and hypotonia, but lacks cerebellar atrophy or ataxia evidence.\"\n  },\n  {\n    \"gene\": \"B3GALT6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"B3GALT6 associated with motor delay but no strong evidence for cerebellar or ocular features.\"\n  },\n  {\n    \"gene\": \"VDR\",\n    \"confidence\": 0.15,\n    \"rationale\": \"VDR mutations may cause hypotonia but no direct link to cerebellar atrophy or ataxia.\"\n  },\n  {\n    \"gene\": \"MAFB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MAFB not strongly associated with cerebellar or motor phenotypes in evidence.\"\n  },\n  {\n    \"gene\": \"PARP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PARP3 lacks evidence linking it to cerebellar or motor dysfunction.\"\n  },\n  {\n    \"gene\": \"SNRPB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SNRPB2 not linked to cerebellar or motor phenotypes in provided evidence.\"\n  },\n  {\n    \"gene\": \"OR4Q2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"OR4Q2 unrelated to neurological or cerebellar phenotypes.\"\n  },\n  {\n    \"gene\": \"PIGA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PIGA mutations may cause hypotonia but no cerebellar or ataxia evidence.\"\n  },\n  {\n    \"gene\": \"MYT1L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"MYT1L not associated with cerebellar or motor phenotypes.\"\n  },\n  {\n    \"gene\": \"PEX7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PEX7 linked to iris hypoplasia but no strong cerebellar or motor evidence.\"\n  },\n  {\n    \"gene\": \"GIPC2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"GIPC2 lacks evidence for cerebellar or motor phenotypes.\"\n  },\n  {\n    \"gene\": \"OR6T1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"OR6T1 unrelated to neurological or cerebellar phenotypes.\"\n  },\n  {\n    \"gene\": \"TMPPE\",\n    \"confidence\": 0.05,\n    \"rationale\": \"TMPPE not linked to cerebellar or motor dysfunction.\"\n  }\n]",
+  "parsed_top5": [
+    "ITPR1",
+    "ATXN7",
+    "GPAA1",
+    "B3GALT6",
+    "VDR"
+  ]
+}

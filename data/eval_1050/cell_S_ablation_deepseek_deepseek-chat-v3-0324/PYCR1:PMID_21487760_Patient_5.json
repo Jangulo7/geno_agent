@@ -1,0 +1,26 @@
+{
+  "case_id": "PYCR1:PMID_21487760_Patient_5",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PYCR1",
+  "orig_qwen3_8b_top1": "PYCR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PYCR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16974,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 30.93513774871826,
+  "cost_usd": 0.003906850000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PYCR1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"PYCR1 mutations directly match the patient's phenotypes including cutis laxa, joint hypermobility, and intellectual disability.\"\n  },\n  {\n    \"gene\": \"CHST3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CHST3 mutations cause similar connective tissue phenotypes but lack direct evidence for intellectual disability or cutis laxa.\"\n  },\n  {\n    \"gene\": \"LYPLA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LYPLA1 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"WDR81\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking WDR81 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF765\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF765 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"UPK1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UPK1A to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ANAPC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ANAPC1 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"INHA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking INHA to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"FER1L6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FER1L6 to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"TBC1D22B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TBC1D22B to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"MFNG\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MFNG to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GYPC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GYPC to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"MYEOV\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MYEOV to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"BMP2K\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BMP2K to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"MSANTD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MSANTD1 to the patient's specific phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "PYCR1",
+    "CHST3",
+    "LYPLA1",
+    "WDR81",
+    "ZNF765"
+  ]
+}

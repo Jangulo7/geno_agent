@@ -1,0 +1,26 @@
+{
+  "case_id": "FBLN5:PMID_12189163_V_6",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBLN5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18979,
+  "tokens_out": 874,
+  "finish_reason": "stop",
+  "latency_s": 12.969682455062866,
+  "cost_usd": 0.070047,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"FBLN5\",\"confidence\":0.82,\"rationale\":\"FBLN5 is directly named as a causal gene for autosomal recessive cutis laxa type 1 (ARCL1), which features redundant skin, supravalvular aortic stenosis, pulmonary emphysema, recurrent pulmonary infections, and failure to thrive\u2014matching all patient HPO terms.\"},{\"gene\":\"NAA80\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking NAA80 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of NAA80.\"},{\"gene\":\"ORC5\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ORC5 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of ORC5.\"},{\"gene\":\"GAGE2A\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking GAGE2A to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of GAGE2A.\"},{\"gene\":\"GREB1L\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking GREB1L to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of GREB1L.\"},{\"gene\":\"SHPK\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SHPK to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of SHPK.\"},{\"gene\":\"EYA2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking EYA2 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of EYA2.\"},{\"gene\":\"ARFGEF2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ARFGEF2 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of ARFGEF2.\"},{\"gene\":\"MISP\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking MISP to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of MISP.\"},{\"gene\":\"TWIST2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TWIST2 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of TWIST2.\"},{\"gene\":\"IBA57\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking IBA57 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of IBA57.\"},{\"gene\":\"RIMS1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking RIMS1 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of RIMS1.\"},{\"gene\":\"SNU13\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SNU13 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of SNU13.\"},{\"gene\":\"POFUT2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking POFUT2 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of POFUT2.\"},{\"gene\":\"BEND7\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking BEND7 to this phenotype; evidence chunks are generic cutis laxa/ELN background literature with no specific mention of BEND7.\"}]",
+  "parsed_top5": [
+    "FBLN5",
+    "NAA80",
+    "ORC5",
+    "GAGE2A",
+    "GREB1L"
+  ]
+}

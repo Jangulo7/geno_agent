@@ -1,0 +1,26 @@
+{
+  "case_id": "SATB2:PMID_31021519_70886_from_Asadollahi_et_al",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SATB2",
+  "orig_qwen3_8b_top1": "SATB2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SATB2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19704,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 8.963122844696045,
+  "cost_usd": 0.069207,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SATB2\",\"confidence\":0.95,\"rationale\":\"All evidence chunks directly describe SATB2-associated syndrome causing dental anomalies, cleft palate, speech delay, global developmental delay, and feeding difficulties\u2014matching all patient HPO terms.\"},{\"gene\":\"TGM7\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TGM7 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"DBF4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DBF4 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"PITPNB\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PITPNB to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"INSIG1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking INSIG1 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"KRT82\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KRT82 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"JPT2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking JPT2 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"TEX26\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TEX26 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"KIAA1586\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KIAA1586 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"DEFB109B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DEFB109B to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"SPATA17\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SPATA17 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"SBK3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SBK3 to this phenotype; evidence chunks reference SATB2 syndrome only.\"},{\"gene\":\"ACSL3\",\"confidence\":0.005,\"rationale\":\"Evidence mentions ACSL4 in X-linked ID context but not ACSL3; no link to this patient's phenotype profile.\"},{\"gene\":\"CLCN2\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CLCN2 to dental anomalies, cleft palate, or developmental delay in provided chunks.\"},{\"gene\":\"ELOVL4\",\"confidence\":0.005,\"rationale\":\"Evidence chunk mentions cleft palate surgery context but no direct link of ELOVL4 to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "SATB2",
+    "TGM7",
+    "DBF4",
+    "PITPNB",
+    "INSIG1"
+  ]
+}

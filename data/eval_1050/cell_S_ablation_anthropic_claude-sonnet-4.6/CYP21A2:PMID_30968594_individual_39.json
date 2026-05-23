@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_39",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21172,
+  "tokens_out": 783,
+  "finish_reason": "stop",
+  "latency_s": 13.587270736694336,
+  "cost_usd": 0.075261,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CYP21A2\", \"confidence\": 0.82, \"rationale\": \"CYP21A2 evidence directly mentions the gene by name in CAH cases with hyperpigmentation, high ACTH, and elevated testosterone, matching all patient HPO phenotypes.\"},{\"gene\": \"ANGPTL8\", \"confidence\": 0.05, \"rationale\": \"ANGPTL8 chunk mentions adrenocortical failure with hyperpigmentation and high ACTH but gene is not directly implicated; evidence is incidental.\"},{\"gene\": \"ARAP3\", \"confidence\": 0.02, \"rationale\": \"No direct gene-phenotype link; evidence chunks describe adrenal insufficiency cases but ARAP3 is not mentioned as causal.\"},{\"gene\": \"OR4A8\", \"confidence\": 0.02, \"rationale\": \"Evidence describes Addison's disease with hyperpigmentation, low testosterone, and high ACTH but OR4A8 has no known role in adrenal/endocrine function.\"},{\"gene\": \"OR2W3\", \"confidence\": 0.01, \"rationale\": \"Olfactory receptor gene with no known adrenal or endocrine function; evidence chunks are non-specific background cases.\"},{\"gene\": \"TBC1D17\", \"confidence\": 0.01, \"rationale\": \"No established link to adrenal insufficiency or the HPO phenotypes; evidence is non-specific background.\"},{\"gene\": \"OR7G1\", \"confidence\": 0.01, \"rationale\": \"Olfactory receptor gene with no known role in adrenal/endocrine pathways; evidence is non-specific.\"},{\"gene\": \"B3GNT5\", \"confidence\": 0.01, \"rationale\": \"Glycosyltransferase with no known adrenal or endocrine function; evidence chunks are non-specific background cases.\"},{\"gene\": \"IL12A\", \"confidence\": 0.01, \"rationale\": \"Cytokine subunit with no direct link to adrenal insufficiency phenotype cluster; evidence is non-specific.\"},{\"gene\": \"RPS15\", \"confidence\": 0.01, \"rationale\": \"Ribosomal protein with no known role in adrenal/endocrine function; evidence is non-specific background.\"},{\"gene\": \"TSTD3\", \"confidence\": 0.01, \"rationale\": \"No established link to adrenal or endocrine phenotypes; evidence chunks are non-specific background cases.\"},{\"gene\": \"FGA\", \"confidence\": 0.01, \"rationale\": \"Fibrinogen alpha chain with no known role in adrenal insufficiency or the HPO phenotype cluster.\"},{\"gene\": \"SH3BGRL2\", \"confidence\": 0.01, \"rationale\": \"No known adrenal or endocrine function; evidence chunks are non-specific background cases.\"},{\"gene\": \"SELENOS\", \"confidence\": 0.01, \"rationale\": \"Selenoprotein with no established link to adrenal insufficiency or the HPO phenotype cluster.\"},{\"gene\": \"GLT1D1\", \"confidence\": 0.01, \"rationale\": \"Glycosyltransferase with no known role in adrenal/endocrine function; evidence is non-specific background.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "ANGPTL8",
+    "ARAP3",
+    "OR4A8",
+    "OR2W3"
+  ]
+}

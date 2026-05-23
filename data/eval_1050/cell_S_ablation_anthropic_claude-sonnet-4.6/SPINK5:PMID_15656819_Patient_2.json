@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_15656819_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18366,
+  "tokens_out": 805,
+  "finish_reason": "stop",
+  "latency_s": 11.666240453720093,
+  "cost_usd": 0.067173,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: congenital exfoliative erythroderma, trichorrhexis invaginata, sparse eyebrows/scalp hair, generalized scaling, sepsis, and growth delay.\"}, {\"gene\": \"KLF3\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking KLF3 to this phenotype profile; evidence chunks describe Netherton syndrome features without mentioning KLF3.\"}, {\"gene\": \"ALDH1B1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ALDH1B1 to congenital exfoliative erythroderma or trichorrhexis invaginata; evidence is non-specific.\"}, {\"gene\": \"L3MBTL3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking L3MBTL3 to this phenotype; evidence chunks are generic and unrelated to this gene.\"}, {\"gene\": \"MORF4L1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MORF4L1 to congenital erythroderma or hair shaft abnormalities in this context.\"}, {\"gene\": \"ZNF732\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ZNF732 to this phenotype profile; evidence is non-specific background.\"}, {\"gene\": \"C14orf39\", \"confidence\": 0.01, \"rationale\": \"No evidence linking C14orf39 to congenital exfoliative erythroderma or trichorrhexis invaginata.\"}, {\"gene\": \"TSPY8\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TSPY8 to this phenotype; evidence describes ectodermal dysplasia features unrelated to Netherton syndrome.\"}, {\"gene\": \"LCOR\", \"confidence\": 0.01, \"rationale\": \"No evidence linking LCOR to congenital erythroderma or trichorrhexis invaginata; evidence is non-specific.\"}, {\"gene\": \"KRT8\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking KRT8 to this specific phenotype profile of Netherton syndrome features.\"}, {\"gene\": \"HTR3A\", \"confidence\": 0.01, \"rationale\": \"No evidence linking HTR3A to congenital exfoliative erythroderma or trichorrhexis invaginata.\"}, {\"gene\": \"MCM3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MCM3 to this phenotype profile; evidence chunks are non-specific.\"}, {\"gene\": \"MT1E\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MT1E to congenital exfoliative erythroderma or trichorrhexis invaginata.\"}, {\"gene\": \"TTF2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TTF2 to this phenotype profile; evidence is non-specific.\"}, {\"gene\": \"TBCE\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TBCE to congenital exfoliative erythroderma or trichorrhexis invaginata in this context.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "KLF3",
+    "ALDH1B1",
+    "L3MBTL3",
+    "MORF4L1"
+  ]
+}

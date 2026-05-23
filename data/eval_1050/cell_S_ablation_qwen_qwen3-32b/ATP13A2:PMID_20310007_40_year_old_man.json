@@ -1,0 +1,20 @@
+{
+  "case_id": "ATP13A2:PMID_20310007_40_year_old_man",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16934,
+  "tokens_out": 38,
+  "finish_reason": "stop",
+  "latency_s": 2.938270330429077,
+  "cost_usd": 0.0013653600000000001,
+  "parse_error": "model_self_error:{\"error\": \"The input data is missing the content for the evidence chunks for most genes. I need the actual text of the evidence chunks to analyze and rank the candidate genes.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input data is missing the content for the evidence chunks for most genes. I need the actual text of the evidence chunks to analyze and rank the candidate genes.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19193,
+  "tokens_out": 1058,
+  "finish_reason": "stop",
+  "latency_s": 15.191140174865723,
+  "cost_usd": 0.073449,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXANK\",\n    \"confidence\": 0.82,\n    \"rationale\": \"RFXANK chunk_1 directly describes a patient with MHC-II deficiency due to RFXANK mutation presenting with recurrent respiratory infections, chronic diarrhea, failure to thrive, and CD4 lymphopenia matching the immunodeficiency phenotype profile.\"\n  },\n  {\n    \"gene\": \"PTPRC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"PTPRC (CD45) encodes a key lymphocyte phosphatase; mutations cause SCID with overlapping features, but no specific evidence chunk directly links it to this patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ADAMTSL4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking ADAMTSL4 to the immunodeficiency/autoimmune phenotype profile; shared chunks are generic SCID literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"TUBB2A\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking TUBB2A to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"EDRF1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking EDRF1 to the patient's phenotype; all evidence chunks are generic immunodeficiency literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"NPSR1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking NPSR1 to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"ATG4A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking ATG4A to the patient's phenotype; all evidence chunks are generic immunodeficiency literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"FAM162B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking FAM162B to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"OR12D2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking OR12D2 to the patient's phenotype; all evidence chunks are generic immunodeficiency literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"SHLD3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking SHLD3 to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"AKR1C8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking AKR1C8 to the patient's phenotype; all evidence chunks are generic immunodeficiency literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"PAPOLB\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking PAPOLB to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"CCDC63\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking CCDC63 to the patient's phenotype; all evidence chunks are generic immunodeficiency literature not specific to this gene.\"\n  },\n  {\n    \"gene\": \"AEBP2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking AEBP2 to the immunodeficiency/autoimmune phenotype; shared chunks are generic and not specific to this gene.\"\n  },\n  {\n    \"gene\": \"CXCL6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking CXCL6 to the patient's phenotype; shared chunks are generic immunodeficiency literature not specific to this gene.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXANK",
+    "PTPRC",
+    "ADAMTSL4",
+    "TUBB2A",
+    "EDRF1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "OTULIN:PMID_38630025_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "OTULIN",
+  "orig_qwen3_8b_top1": "OTULIN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OTULIN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12275,
+  "tokens_out": 678,
+  "finish_reason": "stop",
+  "latency_s": 20.63143038749695,
+  "cost_usd": 0.00297706,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"OTULIN\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking OTULIN mutations to autoinflammatory syndrome with exact patient phenotypes (fever, panniculitis, neutrophilia).\"\n  },\n  {\n    \"gene\": \"PRDX5\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Limited evidence on PRDX5's role in leukocyte regulation, no direct link to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"CCNG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting CCNG2 to the patient's inflammatory or hematologic phenotypes.\"\n  },\n  {\n    \"gene\": \"SYNDIG1L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature evidence supporting SYNDIG1L's involvement in autoinflammatory or neutrophilic conditions.\"\n  },\n  {\n    \"gene\": \"KIF4B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking KIF4B to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"NLRP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Indirect association with inflammasome activity, but no direct match to phenotypes.\"\n  },\n  {\n    \"gene\": \"CER1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No meaningful evidence connecting CER1 to the observed hepatitic or hematologic features.\"\n  },\n  {\n    \"gene\": \"ETS1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence tying ETS1 to the patient's autoinflammatory or neutrophilic presentation.\"\n  },\n  {\n    \"gene\": \"SRSF8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature support for SRSF8's role in this clinical context.\"\n  },\n  {\n    \"gene\": \"SLC30A1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence associating SLC30A1 with the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"RGS13\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Lacks evidence connecting RGS13 to autoinflammatory or hematologic disorders.\"\n  },\n  {\n    \"gene\": \"DEFB130A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking DEFB130A to neutrophilia or systemic inflammation.\"\n  },\n  {\n    \"gene\": \"NDUFB11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence associating NDUFB11 with the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"CCDC188\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature connecting CCDC188 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"SPRR2A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting SPRR2A's involvement in autoinflammatory conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "OTULIN",
+    "PRDX5",
+    "CCNG2",
+    "SYNDIG1L",
+    "KIF4B"
+  ]
+}

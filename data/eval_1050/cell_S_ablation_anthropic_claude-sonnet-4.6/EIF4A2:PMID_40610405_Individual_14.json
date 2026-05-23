@@ -1,0 +1,26 @@
+{
+  "case_id": "EIF4A2:PMID_40610405_Individual_14",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EIF4A2",
+  "orig_qwen3_8b_top1": "PLP1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SETD1B",
+  "top1_correct": false,
+  "causal_rank": 5,
+  "tokens_in": 17814,
+  "tokens_out": 998,
+  "finish_reason": "stop",
+  "latency_s": 14.871421575546265,
+  "cost_usd": 0.068412,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SETD1B\",\n    \"confidence\": 0.52,\n    \"rationale\": \"SETD1B disorder directly causes global developmental delay, language delay, epilepsy including myoclonic absences, tonic-clonic, and focal seizures, matching the patient's complex epilepsy and neurodevelopmental profile.\"\n  },\n  {\n    \"gene\": \"PLP1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"PLP1 evidence directly mentions micrognathia, constipation, dysphagia, and developmental delay in deletion cases, with high critic relevance scores, matching several patient HPO terms.\"\n  },\n  {\n    \"gene\": \"METTL18\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunk mentions inverted nipples, constipation, global developmental delay, and absent speech in an MECP2 duplication case, but no direct METTL18 disease association is established.\"\n  },\n  {\n    \"gene\": \"ATG5\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct ATG5-specific evidence linking to this phenotype profile; evidence chunks describe unrelated cases with overlapping features.\"\n  },\n  {\n    \"gene\": \"EIF4A2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct EIF4A2-specific evidence; shared evidence chunks describe developmental delay, dysphagia, and seizures but attributed to other genes.\"\n  },\n  {\n    \"gene\": \"IDH1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct IDH1 neurodevelopmental disorder evidence; evidence chunks describe unrelated cases with some overlapping features.\"\n  },\n  {\n    \"gene\": \"FXN\",\n    \"confidence\": 0.02,\n    \"rationale\": \"FXN causes Friedreich ataxia, not matching this infantile epileptic encephalopathy profile; no direct supporting evidence in provided chunks.\"\n  },\n  {\n    \"gene\": \"POPDC3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"POPDC3 evidence is from a multi-gene deletion case with obesity/short stature phenotype, not matching this patient's epileptic encephalopathy profile.\"\n  },\n  {\n    \"gene\": \"FKBPL\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct FKBPL disease association evidence provided; evidence chunks are non-specific and describe unrelated conditions.\"\n  },\n  {\n    \"gene\": \"THSD8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct THSD8 neurodevelopmental disease evidence; evidence chunks are non-specific and shared across multiple candidates.\"\n  },\n  {\n    \"gene\": \"PALM2AKAP2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct PALM2AKAP2 disease association; evidence chunks are non-specific and do not support this gene as causal.\"\n  },\n  {\n    \"gene\": \"RNF152\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct RNF152 neurodevelopmental disease evidence; evidence chunks are non-specific and shared across multiple candidates.\"\n  },\n  {\n    \"gene\": \"STARD13\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct STARD13 disease association evidence; evidence chunks are non-specific and do not support this gene as causal.\"\n  },\n  {\n    \"gene\": \"GTF2F2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct GTF2F2 neurodevelopmental disease evidence; evidence chunks are non-specific and shared across multiple candidates.\"\n  },\n  {\n    \"gene\": \"OR4K1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"OR4K1 is an olfactory receptor gene with no established neurodevelopmental disease association; evidence chunks are non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "SETD1B",
+    "PLP1",
+    "METTL18",
+    "ATG5",
+    "EIF4A2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_22024611_Case_4",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13729,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 43.76917123794556,
+  "cost_usd": 0.00330636,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AIRE\",\n    \"confidence\": 1.0,\n    \"rationale\": \"AIRE is the definitive cause of APS-1, matching all patient phenotypes including the triad of chronic mucocutaneous candidiasis, hypoparathyroidism, and adrenal insufficiency.\"\n  },\n  {\n    \"gene\": \"ITGA2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ITGA2B to APS-1 or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TBC1D2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting TBC1D2 to APS-1 or the observed autoimmune and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"NUDT10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature support for NUDT10 in APS-1 or related autoimmune disorders.\"\n  },\n  {\n    \"gene\": \"FTCDNL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking FTCDNL1 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"PHKG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PHKG2 has no known association with APS-1 or the described autoimmune features.\"\n  },\n  {\n    \"gene\": \"POLR2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"POLR2B is not implicated in APS-1 or the patient's phenotype combination.\"\n  },\n  {\n    \"gene\": \"DHRS12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence ties DHRS12 to APS-1 or the patient's autoimmune and endocrine symptoms.\"\n  },\n  {\n    \"gene\": \"SACK1D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SACK1D lacks any documented connection to APS-1 or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"MAPKAPK5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MAPKAPK5 has no known role in APS-1 or the patient's autoimmune and endocrine profile.\"\n  },\n  {\n    \"gene\": \"HMGCLL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"HMGCLL1 is not associated with APS-1 or the described clinical features.\"\n  },\n  {\n    \"gene\": \"TCEA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"TCEA1 has no evidence linking it to APS-1 or the patient's phenotype combination.\"\n  },\n  {\n    \"gene\": \"LCE1F\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LCE1F is unrelated to APS-1 or the patient's autoimmune and endocrine symptoms.\"\n  },\n  {\n    \"gene\": \"CUL5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CUL5 lacks any documented connection to APS-1 or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"C6orf62\",\n    \"confidence\": 0.1,\n    \"rationale\": \"C6orf62 has no known association with APS-1 or the patient's clinical presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "AIRE",
+    "ITGA2B",
+    "TBC1D2",
+    "NUDT10",
+    "FTCDNL1"
+  ]
+}

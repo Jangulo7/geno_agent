@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826260_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "IKZF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19392,
+  "tokens_out": 515,
+  "finish_reason": "stop",
+  "latency_s": 15.436774492263794,
+  "cost_usd": 0.00427495,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"IKZF2\", \"confidence\": 0.85, \"rationale\": \"Strong evidence linking IKZF2 to CD8+ central memory T cells and Tregs, matching patient's phenotype.\"},\n  {\"gene\": \"FAM13B\", \"confidence\": 0.70, \"rationale\": \"Correlation with effector memory CD4+ T cells aligns with patient's increased proportion.\"},\n  {\"gene\": \"MTDH\", \"confidence\": 0.55, \"rationale\": \"Associated with memory B cells and CD4+ T cells, partially matching immune profile.\"},\n  {\"gene\": \"SMTN\", \"confidence\": 0.40, \"rationale\": \"Less direct evidence linking to immune cell dysregulation in patient.\"},\n  {\"gene\": \"FIGLA\", \"confidence\": 0.35, \"rationale\": \"No strong evidence connecting to immune phenotype.\"},\n  {\"gene\": \"PTK6\", \"confidence\": 0.30, \"rationale\": \"Lacks direct evidence supporting causality for immune dysregulation.\"},\n  {\"gene\": \"DEPTOR\", \"confidence\": 0.25, \"rationale\": \"No significant evidence linking to patient's immune phenotypes.\"},\n  {\"gene\": \"KCNS1\", \"confidence\": 0.20, \"rationale\": \"No relevant evidence connecting to immune cell abnormalities.\"},\n  {\"gene\": \"BMI1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence supporting its role in T or B cell phenotypes.\"},\n  {\"gene\": \"DSCAML1\", \"confidence\": 0.10, \"rationale\": \"No compelling evidence linking to immune dysregulation.\"},\n  {\"gene\": \"TFDP1\", \"confidence\": 0.05, \"rationale\": \"Lacks evidence connecting to patient's immune profile.\"},\n  {\"gene\": \"OR2G6\", \"confidence\": 0.04, \"rationale\": \"No relevant immunological associations found.\"},\n  {\"gene\": \"DPPA4\", \"confidence\": 0.03, \"rationale\": \"No evidence supporting immune-related causality.\"},\n  {\"gene\": \"DHPS\", \"confidence\": 0.02, \"rationale\": \"No relevant immunological evidence found.\"},\n  {\"gene\": \"FAM90A12\", \"confidence\": 0.01, \"rationale\": \"No evidence linking to immune dysregulation.\"}\n]",
+  "parsed_top5": [
+    "IKZF2",
+    "FAM13B",
+    "MTDH",
+    "SMTN",
+    "FIGLA"
+  ]
+}

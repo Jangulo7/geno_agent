@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_16",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19369,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 10.133795499801636,
+  "cost_usd": 0.068322,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"COL3A1\",\"confidence\":0.97,\"rationale\":\"COL3A1 mutations cause vascular EDS, directly explaining all HPO features: thin vermilion, narrow nasal ridge, bruising, spontaneous pneumothorax, absent earlobe, dermal translucency, arterial dissection, and arterial rupture.\"},{\"gene\":\"HMBOX1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking HMBOX1 to this phenotype; evidence chunks only describe vEDS/COL3A1 disease context without mentioning this gene.\"},{\"gene\":\"ZNF583\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF583 to vascular connective tissue disease or any of the patient's HPO features.\"},{\"gene\":\"XCL1\",\"confidence\":0.01,\"rationale\":\"No evidence linking XCL1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"ZBTB2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZBTB2 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"CHCHD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CHCHD1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"MTF1\",\"confidence\":0.01,\"rationale\":\"No evidence linking MTF1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"PTPN22\",\"confidence\":0.01,\"rationale\":\"No evidence linking PTPN22 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"ATP8B1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ATP8B1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"OR4C46\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR4C46 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"SELENBP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SELENBP1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"FXR1\",\"confidence\":0.01,\"rationale\":\"No evidence linking FXR1 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"WASF2\",\"confidence\":0.01,\"rationale\":\"No evidence linking WASF2 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"DPF2\",\"confidence\":0.01,\"rationale\":\"No evidence linking DPF2 to vascular EDS or any of the patient's HPO features.\"},{\"gene\":\"P3H1\",\"confidence\":0.01,\"rationale\":\"No evidence linking P3H1 to vascular EDS or any of the patient's HPO features.\"}]",
+  "parsed_top5": [
+    "COL3A1",
+    "HMBOX1",
+    "ZNF583",
+    "XCL1",
+    "ZBTB2"
+  ]
+}

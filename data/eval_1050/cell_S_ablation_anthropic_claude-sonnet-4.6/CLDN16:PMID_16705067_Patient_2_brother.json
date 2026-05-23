@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17973,
+  "tokens_out": 900,
+  "finish_reason": "stop",
+  "latency_s": 13.291996717453003,
+  "cost_usd": 0.067419,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.93,\"rationale\":\"CLDN16 evidence directly describes FHHNC with all patient HPO features: nephrocalcinosis, nephrolithiasis, hypercalciuria, hypomagnesemia, hypermagnesiuria, hematuria, renal insufficiency, elevated creatinine.\"},{\"gene\":\"ATP6V0A4\",\"confidence\":0.03,\"rationale\":\"ATP6V0A4 is linked to distal RTA with nephrocalcinosis but lacks the hypomagnesemia/hypermagnesiuria hallmarks; evidence is tangential to this phenotype profile.\"},{\"gene\":\"WNT11\",\"confidence\":0.005,\"rationale\":\"WNT11 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to WNT11 and the patient's phenotype.\"},{\"gene\":\"NAP1L2\",\"confidence\":0.005,\"rationale\":\"NAP1L2 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to NAP1L2 and the patient's phenotype.\"},{\"gene\":\"FUOM\",\"confidence\":0.005,\"rationale\":\"FUOM evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to FUOM and the patient's phenotype.\"},{\"gene\":\"MKNK1\",\"confidence\":0.005,\"rationale\":\"MKNK1 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to MKNK1 and the patient's phenotype.\"},{\"gene\":\"VSTM1\",\"confidence\":0.005,\"rationale\":\"VSTM1 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to VSTM1 and the patient's phenotype.\"},{\"gene\":\"TMEM209\",\"confidence\":0.005,\"rationale\":\"TMEM209 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to TMEM209 and the patient's phenotype.\"},{\"gene\":\"HMGCS2\",\"confidence\":0.005,\"rationale\":\"HMGCS2 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to HMGCS2 and the patient's phenotype.\"},{\"gene\":\"CSAG2\",\"confidence\":0.005,\"rationale\":\"CSAG2 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to CSAG2 and the patient's phenotype.\"},{\"gene\":\"FAM171B\",\"confidence\":0.005,\"rationale\":\"FAM171B evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to FAM171B and the patient's phenotype.\"},{\"gene\":\"PPP4R4\",\"confidence\":0.005,\"rationale\":\"PPP4R4 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to PPP4R4 and the patient's phenotype.\"},{\"gene\":\"MTERF2\",\"confidence\":0.005,\"rationale\":\"MTERF2 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to MTERF2 and the patient's phenotype.\"},{\"gene\":\"ZNF695\",\"confidence\":0.005,\"rationale\":\"ZNF695 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to ZNF695 and the patient's phenotype.\"},{\"gene\":\"UAP1\",\"confidence\":0.005,\"rationale\":\"UAP1 evidence only references FHHNC/CLDN16 literature with no direct mechanistic link to UAP1 and the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "ATP6V0A4",
+    "WNT11",
+    "NAP1L2",
+    "FUOM"
+  ]
+}

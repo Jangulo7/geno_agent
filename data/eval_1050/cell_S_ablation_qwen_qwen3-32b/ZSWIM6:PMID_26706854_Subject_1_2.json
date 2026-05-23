@@ -1,0 +1,20 @@
+{
+  "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZSWIM6",
+  "orig_qwen3_8b_top1": "PROP1",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16497,
+  "tokens_out": 25,
+  "finish_reason": "stop",
+  "latency_s": 2.391143321990967,
+  "cost_usd": 0.00132676,
+  "parse_error": "model_self_error:{\"error\": \"The input data is incomplete. The 'evidence' field is missing for each candidate gene.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input data is incomplete. The 'evidence' field is missing for each candidate gene.\"}",
+  "parsed_top5": []
+}

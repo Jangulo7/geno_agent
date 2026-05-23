@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_39177731_Case_1_Patient_6",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11510,
+  "tokens_out": 73,
+  "finish_reason": "stop",
+  "latency_s": 1.865736722946167,
+  "cost_usd": 0.0009412400000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"ITPR1 mutations directly cause congenital nonprogressive spinocerebellar ataxia with hypotonia, gait ataxia, dysarthria, and cerebellar atrophy matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "FLT3LG:PMID_38701783_P1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FLT3LG",
+  "orig_qwen3_8b_top1": "CTLA4",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EPHA3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14988,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 31.820417881011963,
+  "cost_usd": 0.00352197,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EPHA3\",\n    \"confidence\": 0.6,\n    \"rationale\": \"EPHA3 evidence includes recurrent infections and bronchiectasis, aligning with patient's recurrent infections and respiratory issues.\"\n  },\n  {\n    \"gene\": \"ANP32A\",\n    \"confidence\": 0.4,\n    \"rationale\": \"ANP32A evidence mentions autoimmune cytopenias and cholangitis, matching some patient phenotypes.\"\n  },\n  {\n    \"gene\": \"RRP1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"RRP1 evidence describes immune thrombocytopenia and recurrent infections, partially overlapping with patient symptoms.\"\n  },\n  {\n    \"gene\": \"RDH10\",\n    \"confidence\": 0.25,\n    \"rationale\": \"RDH10 evidence notes combined immunodeficiency and recurrent infections, somewhat relevant to patient.\"\n  },\n  {\n    \"gene\": \"COX17\",\n    \"confidence\": 0.2,\n    \"rationale\": \"COX17 evidence discusses anemia and diarrhea but lacks specificity for patient's infection profile.\"\n  },\n  {\n    \"gene\": \"IRX5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"IRX5 evidence is generic about diarrhea and anemia, not specific to patient's condition.\"\n  },\n  {\n    \"gene\": \"DPPA4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"DPPA4 evidence is nonspecific, mentioning diarrhea and anemia without clear relevance.\"\n  },\n  {\n    \"gene\": \"MYH6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"MYH6 evidence is generic, discussing anemia and diarrhea without clear connection to patient.\"\n  },\n  {\n    \"gene\": \"NRDE2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"NRDE2 evidence is unrelated to patient's phenotype, focusing on drug side effects.\"\n  },\n  {\n    \"gene\": \"ZNF189\",\n    \"confidence\": 0.2,\n    \"rationale\": \"ZNF189 evidence is nonspecific, mentioning diarrhea and anemia without clear relevance.\"\n  },\n  {\n    \"gene\": \"ENO4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"ENO4 evidence is generic, discussing anemia and diarrhea without clear connection.\"\n  },\n  {\n    \"gene\": \"BMP3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"BMP3 evidence is nonspecific, mentioning diarrhea and anemia without clear relevance.\"\n  },\n  {\n    \"gene\": \"CDH11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CDH11 evidence is generic, discussing diarrhea and anemia without clear connection.\"\n  },\n  {\n    \"gene\": \"AQP5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"AQP5 evidence focuses on secretory diarrhea mechanisms, not matching patient's infection profile.\"\n  },\n  {\n    \"gene\": \"TRPC4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"TRPC4 evidence discusses diarrhea mechanisms, not relevant to patient's recurrent infections.\"\n  }\n]",
+  "parsed_top5": [
+    "EPHA3",
+    "ANP32A",
+    "RRP1",
+    "RDH10",
+    "COX17"
+  ]
+}

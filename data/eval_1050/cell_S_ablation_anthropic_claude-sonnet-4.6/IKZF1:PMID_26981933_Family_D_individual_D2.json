@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_D_individual_D2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19233,
+  "tokens_out": 739,
+  "finish_reason": "stop",
+  "latency_s": 15.762948274612427,
+  "cost_usd": 0.068784,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.82,\"rationale\":\"IKZF1 variants directly cause recurrent pneumonia, reduced CD4/CD8 ratio, decreased B cells, and hypogammaglobulinemia (low IgG, IgA, IgM) as shown in multiple case reports with explicit gene mention.\"},{\"gene\":\"FANCL\",\"confidence\":0.04,\"rationale\":\"FANCL evidence only incidentally mentions immunodeficiency phenotypes in a patient where FANCL variant was deemed non-causal; no direct link to this phenotype profile.\"},{\"gene\":\"TEX261\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for TEX261 describe general CID cohorts with overlapping phenotypes but no specific TEX261-immunodeficiency association.\"},{\"gene\":\"ZNF575\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ZNF575 to the described immunodeficiency phenotype; shared generic evidence chunks only.\"},{\"gene\":\"SACK1H\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SACK1H to immunodeficiency with reduced B cells, inverted CD4:CD8, and hypogammaglobulinemia.\"},{\"gene\":\"MTNR1A\",\"confidence\":0.01,\"rationale\":\"MTNR1A evidence is unrelated to the immune phenotype; shared chunks describe general CID cohorts without MTNR1A involvement.\"},{\"gene\":\"FOXF2\",\"confidence\":0.01,\"rationale\":\"No evidence connecting FOXF2 to primary immunodeficiency with B cell deficiency and hypogammaglobulinemia.\"},{\"gene\":\"GAGE12B\",\"confidence\":0.01,\"rationale\":\"No specific immunodeficiency association for GAGE12B; evidence is generic CID cohort data.\"},{\"gene\":\"ECE1\",\"confidence\":0.01,\"rationale\":\"ECE1 has no established role in primary immunodeficiency matching this phenotype profile.\"},{\"gene\":\"GAST\",\"confidence\":0.01,\"rationale\":\"GAST encodes gastrin with no known role in B cell deficiency or hypogammaglobulinemia.\"},{\"gene\":\"FBXW4\",\"confidence\":0.01,\"rationale\":\"FBXW4 has no established immunodeficiency association matching recurrent pneumonia with B cell and Ig deficiencies.\"},{\"gene\":\"PDE4DIP\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PDE4DIP to the described combined immunodeficiency phenotype.\"},{\"gene\":\"ITGB3BP\",\"confidence\":0.01,\"rationale\":\"ITGB3BP evidence describes unrelated immunodeficiency patterns with high Ig and B cells, opposite to this patient's profile.\"},{\"gene\":\"MKLN1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking MKLN1 to primary immunodeficiency with reduced B cells and hypogammaglobulinemia.\"},{\"gene\":\"GPR148\",\"confidence\":0.01,\"rationale\":\"GPR148 has no known role in primary immunodeficiency; evidence chunks are generic and unrelated to this gene.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "FANCL",
+    "TEX261",
+    "ZNF575",
+    "SACK1H"
+  ]
+}

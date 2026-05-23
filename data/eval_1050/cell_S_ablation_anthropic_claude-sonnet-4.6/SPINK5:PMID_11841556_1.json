@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19262,
+  "tokens_out": 818,
+  "finish_reason": "stop",
+  "latency_s": 8.924324750900269,
+  "cost_usd": 0.070056,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.97, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly matching all HPO phenotypes: congenital exfoliative erythroderma, trichorrhexis invaginata, ichthyosis linearis circumflexa, elevated IgE, recurrent skin infections, hypernatremic dehydration, failure to thrive, and growth delay.\"}, {\"gene\": \"TACC1\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking TACC1 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"EN2\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking EN2 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"TLR7\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking TLR7 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"GALK2\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking GALK2 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"VTCN1\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking VTCN1 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"TUSC2\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking TUSC2 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"TRIM59\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking TRIM59 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"OR52J3\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking OR52J3 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"URB2\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking URB2 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"TMCC1\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking TMCC1 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"UBIAD1\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking UBIAD1 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"ADAP1\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking ADAP1 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"SLC35F4\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking SLC35F4 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}, {\"gene\": \"ADAMTS3\", \"confidence\": 0.002, \"rationale\": \"No direct evidence linking ADAMTS3 to this phenotype; evidence chunks only discuss SPINK5/Netherton syndrome.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "TACC1",
+    "EN2",
+    "TLR7",
+    "GALK2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16154,
+  "tokens_out": 659,
+  "finish_reason": "stop",
+  "latency_s": 39.147302865982056,
+  "cost_usd": 0.00373823,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXANK\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence of RFXANK mutation causing MHC-II deficiency with matching phenotypes including failure to thrive, chronic diarrhea, and recurrent infections.\"\n  },\n  {\n    \"gene\": \"PTPRC\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking PTPRC to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ADAMTSL4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ADAMTSL4 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"TUBB2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting TUBB2A as causal for the patient's condition.\"\n  },\n  {\n    \"gene\": \"EDRF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence linking EDRF1 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"NPSR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating NPSR1 with the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ATG4A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ATG4A to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM162B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting FAM162B as causal for the patient's condition.\"\n  },\n  {\n    \"gene\": \"OR12D2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence linking OR12D2 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SHLD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating SHLD3 with the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"AKR1C8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting AKR1C8 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"PAPOLB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PAPOLB as causal for the patient's condition.\"\n  },\n  {\n    \"gene\": \"CCDC63\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence linking CCDC63 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"AEBP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating AEBP2 with the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CXCL6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting CXCL6 to the observed phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXANK",
+    "PTPRC",
+    "ADAMTSL4",
+    "TUBB2A",
+    "EDRF1"
+  ]
+}

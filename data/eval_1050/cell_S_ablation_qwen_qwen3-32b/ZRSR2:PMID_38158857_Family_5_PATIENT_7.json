@@ -1,0 +1,26 @@
+{
+  "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZRSR2",
+  "orig_qwen3_8b_top1": "ZRSR2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZRSR2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15749,
+  "tokens_out": 174,
+  "finish_reason": "stop",
+  "latency_s": 2.6446166038513184,
+  "cost_usd": 0.00130864,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"ZRSR2\": 0.95, \"HCFC1R1\": 0.85, \"FBXO11\": 0.8, \"GPATCH4\": 0.75, \"SPINK9\": 0.7, \"KATNAL2\": 0.65, \"NRG4\": 0.6, \"UTP20\": 0.55, \"PIAS2\": 0.5, \"THAP6\": 0.45, \"DDX56\": 0.4, \"SYCP2\": 0.35, \"ZNF260\": 0.3, \"EIF2B3\": 0.25, \"ABHD18\": 0.2}",
+  "parsed_top5": [
+    "ZRSR2",
+    "HCFC1R1",
+    "FBXO11",
+    "GPATCH4",
+    "SPINK9"
+  ]
+}

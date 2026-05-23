@@ -1,0 +1,22 @@
+{
+  "case_id": "DOCK8:PMID_29058101_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RPL7L1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20212,
+  "tokens_out": 560,
+  "finish_reason": "stop",
+  "latency_s": 14.089600801467896,
+  "cost_usd": 0.00177376,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"DOCK8\",\"confidence\":0.92,\"rationale\":\"DOCK8 deficiency presents with eczema, recurrent otitis media, elevated IgE, and diarrhea, aligning with the patient's phenotype.\",\"gene\":\"JAK1\",\"confidence\":0.75,\"rationale\":\"JAK1 mutations cause atopic dermatitis, elevated IgE, and recurrent infections, matching key patient features.\",\"gene\":\"STPG1\",\"confidence\":0.68,\"rationale\":\"STPG1 is linked to immunodeficiency with elevated IgE, eczema, and diarrhea, though evidence is less specific.\",\"gene\":\"CA10\",\"confidence\":0.65,\"rationale\":\"CA10 mutations are associated with immunodeficiency and elevated IgE, but less directly linked to otitis media.\",\"gene\":\"ZBTB7A\",\"confidence\":0.62,\"rationale\":\"ZBTB7A is linked to immunodeficiency with elevated IgE and infections, though evidence is less specific.\",\"gene\":\"KIF2A\",\"confidence\":0.58,\"rationale\":\"KIF2A is associated with immunodeficiency and elevated IgE, but less directly linked to eczema.\",\"gene\":\"IFT38\",\"confidence\":0.55,\"rationale\":\"IFT38 mutations are linked to immunodeficiency and elevated IgE, but evidence is limited.\",\"gene\":\"SPAG6\",\"confidence\":0.52,\"rationale\":\"SPAG6 is associated with immunodeficiency and elevated IgE, but less specific to eczema and otitis media.\",\"gene\":\"LRRC41\",\"confidence\":0.50,\"rationale\":\"LRRC41 is linked to immunodeficiency and elevated IgE, but evidence is limited.\",\"gene\":\"OR4S1\",\"confidence\":0.48,\"rationale\":\"OR4S1 is associated with immunodeficiency and elevated IgE, but evidence is limited.\",\"gene\":\"GATAD2B\",\"confidence\":0.45,\"rationale\":\"GATAD2B is linked to immunodeficiency and elevated IgE, but less specific to eczema.\",\"gene\":\"YIPF2\",\"confidence\":0.42,\"rationale\":\"YIPF2 is associated with immunodeficiency and elevated IgE, but evidence is limited.\",\"gene\":\"CRYGS\",\"confidence\":0.40,\"rationale\":\"CRYGS is linked to immunodeficiency and elevated IgE, but evidence is limited.\",\"gene\":\"RPL7L1\",\"confidence\":0.38,\"rationale\":\"RPL7L1 is associated with immunodeficiency and elevated IgE, but evidence is limited.\"}",
+  "parsed_top5": [
+    "RPL7L1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "GDNF",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16966,
+  "tokens_out": 177,
+  "finish_reason": "stop",
+  "latency_s": 2.9922616481781006,
+  "cost_usd": 0.00140684,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GDNF\": 0.95, \"FBLN5\": 0.85, \"TRIM60\": 0.8, \"P3H4\": 0.75, \"TOPBP1\": 0.7, \"ZFP91\": 0.65, \"FHIP2B\": 0.6, \"CCDC85A\": 0.55, \"KCTD19\": 0.5, \"C1orf115\": 0.45, \"KHSRP\": 0.4, \"MYO3B\": 0.35, \"SYT10\": 0.3, \"PMEL\": 0.25, \"OPN1MW3\": 0.2}",
+  "parsed_top5": [
+    "GDNF",
+    "FBLN5",
+    "TRIM60",
+    "P3H4",
+    "TOPBP1"
+  ]
+}

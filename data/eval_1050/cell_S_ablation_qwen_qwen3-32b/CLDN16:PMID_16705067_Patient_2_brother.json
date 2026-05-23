@@ -1,0 +1,20 @@
+{
+  "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16276,
+  "tokens_out": 29,
+  "finish_reason": "stop",
+  "latency_s": 3.2835235595703125,
+  "cost_usd": 0.0013101999999999999,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is malformed. Please ensure that the JSON is correctly formatted with proper syntax, including commas and brackets.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is malformed. Please ensure that the JSON is correctly formatted with proper syntax, including commas and brackets.\"}",
+  "parsed_top5": []
+}

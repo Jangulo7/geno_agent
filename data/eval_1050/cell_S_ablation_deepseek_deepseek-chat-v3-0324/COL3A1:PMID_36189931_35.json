@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_35",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17575,
+  "tokens_out": 632,
+  "finish_reason": "stop",
+  "latency_s": 20.949889659881592,
+  "cost_usd": 0.00400164,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"COL3A1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence links COL3A1 mutations to vascular EDS, perfectly matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PRMT7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PRMT7 variants cause a neurodevelopmental disorder with some overlapping features but not the full phenotype.\"\n  },\n  {\n    \"gene\": \"CORO1B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CORO1B to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"BCDIN3D\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connects BCDIN3D to these clinical features.\"\n  },\n  {\n    \"gene\": \"ATP5PB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting ATP5PB as causal for these phenotypes.\"\n  },\n  {\n    \"gene\": \"IL9\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking IL9 to connective tissue disorders or this phenotype.\"\n  },\n  {\n    \"gene\": \"SLC38A8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting SLC38A8 to this clinical presentation.\"\n  },\n  {\n    \"gene\": \"SOWAHB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature supporting SOWAHB's role in these phenotypes.\"\n  },\n  {\n    \"gene\": \"ADGRL3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking ADGRL3 to connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"SRC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No supportive evidence for SRC's involvement in this phenotype.\"\n  },\n  {\n    \"gene\": \"ALG6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"ALG6 has no known connection to this clinical presentation.\"\n  },\n  {\n    \"gene\": \"NGDN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting NGDN's role in these phenotypes.\"\n  },\n  {\n    \"gene\": \"NMD3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature connects NMD3 to this patient's features.\"\n  },\n  {\n    \"gene\": \"DPYSL5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking DPYSL5 to connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"AZIN2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No supportive evidence for AZIN2's involvement in this phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "COL3A1",
+    "PRMT7",
+    "CORO1B",
+    "BCDIN3D",
+    "ATP5PB"
+  ]
+}

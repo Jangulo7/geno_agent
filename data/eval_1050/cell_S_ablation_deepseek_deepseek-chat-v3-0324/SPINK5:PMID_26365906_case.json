@@ -1,0 +1,22 @@
+{
+  "case_id": "SPINK5:PMID_26365906_case",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15398,
+  "tokens_out": 50,
+  "finish_reason": "stop",
+  "latency_s": 4.816896677017212,
+  "cost_usd": 0.0031181000000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"SPINK5\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Strong association with erythroderma, hypernatremia, recurrent infections, and failure to thrive, matching patient phenotypes.\"\n}",
+  "parsed_top5": [
+    "SPINK5"
+  ]
+}

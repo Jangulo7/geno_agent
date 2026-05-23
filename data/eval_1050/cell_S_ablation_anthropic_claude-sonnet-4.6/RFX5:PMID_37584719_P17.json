@@ -1,0 +1,26 @@
+{
+  "case_id": "RFX5:PMID_37584719_P17",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFX5",
+  "orig_qwen3_8b_top1": "CD72",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CD72",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20325,
+  "tokens_out": 967,
+  "finish_reason": "stop",
+  "latency_s": 26.22678828239441,
+  "cost_usd": 0.07548,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The patient's phenotype \u2014 BCGitis, reduced MHC II cell surface expression, recurrent infections (pneumonia, otitis media), lymphadenitis, splenomegaly, decreased B cells, failure to thrive, protracted diarrhea, cellulitis \u2014 is classic for MHC class II deficiency (Bare Lymphocyte Syndrome type II). None of the provided literature chunks directly name any of these genes as causing MHC II deficiency. However, reasoning from known biology: CD72 is a B-cell co-receptor/regulator with direct relevance to B-cell counts and immune function, and its chunk has the highest critic_relevance score (4/5) with direct mention. The remaining genes have no specific evidence linking them to this phenotype. Given the hallmark \"Reduced MHC II cell surface expression\" combined with BCGitis and decreased B cells, the closest known genes are CIITA, RFX5, RFXANK, RFXAP \u2014 none of which are in the candidate list. Among candidates, CD72 has the most relevant immunological evidence. All others are essentially equally unsupported by the provided evidence.\n\n[{\"gene\":\"CD72\",\"confidence\":0.35,\"rationale\":\"CD72 is a B-cell regulator with direct immunological relevance; its evidence chunk has highest critic_relevance (4/5) and links to B-cell defects and splenomegaly.\"},{\"gene\":\"RPP40\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking RPP40 to MHC II deficiency or this phenotype profile; shared generic immunodeficiency literature only.\"},{\"gene\":\"C1QTNF9\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking C1QTNF9 to MHC II deficiency or this phenotype; only generic immunodeficiency literature shared.\"},{\"gene\":\"SGPP2\",\"confidence\":0.04,\"rationale\":\"No evidence linking SGPP2 to MHC II deficiency or the described immunodeficiency phenotype.\"},{\"gene\":\"SYNDIG1\",\"confidence\":0.04,\"rationale\":\"No evidence linking SYNDIG1 to MHC II deficiency or this combined immunodeficiency phenotype.\"},{\"gene\":\"IGHMBP2\",\"confidence\":0.05,\"rationale\":\"IGHMBP2 evidence mentions B-cell lymphocytosis and infections but not MHC II deficiency or BCGitis specifically.\"},{\"gene\":\"PHLDA1\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking PHLDA1 to MHC II deficiency or this immunodeficiency phenotype profile.\"},{\"gene\":\"FAM161B\",\"confidence\":0.04,\"rationale\":\"No evidence linking FAM161B to MHC II deficiency or the described combined immunodeficiency.\"},{\"gene\":\"ATP6V0E2\",\"confidence\":0.05,\"rationale\":\"ATP6V0E2 evidence includes BCGitis and recurrent infections in shared literature but no direct gene-phenotype link.\"},{\"gene\":\"ZNF596\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking ZNF596 to MHC II deficiency or this immunodeficiency phenotype.\"},{\"gene\":\"ZNF136\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking ZNF136 to MHC II deficiency or this immunodeficiency phenotype.\"},{\"gene\":\"ARHGAP35\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking ARHGAP35 to MHC II deficiency or this immunodeficiency phenotype.\"},{\"gene\":\"IGK\",\"confidence\":0.05,\"rationale\":\"IGK is immunologically relevant but evidence only lists generic manifestation costs; no direct MHC II deficiency link.\"},{\"gene\":\"TLCD4\",\"confidence\":0.05,\"rationale\":\"TLCD4 evidence mentions BTK/CD3D immunodeficiency context but no direct link to MHC II deficiency or this phenotype.\"},{\"gene\":\"BOLA1\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking BOLA1 to MHC II deficiency or this combined immunodeficiency phenotype.\"}]",
+  "parsed_top5": [
+    "CD72",
+    "RPP40",
+    "C1QTNF9",
+    "SGPP2",
+    "SYNDIG1"
+  ]
+}

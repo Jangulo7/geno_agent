@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_5_FV",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17135,
+  "tokens_out": 643,
+  "finish_reason": "stop",
+  "latency_s": 33.38428854942322,
+  "cost_usd": 0.00392211,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NBAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"NBAS mutations are strongly associated with recurrent acute liver failure and match the patient's hepatic phenotype.\"\n  },\n  {\n    \"gene\": \"RETN\",\n    \"confidence\": 0.3,\n    \"rationale\": \"RETN has some relevance to liver enzyme elevation and hypoglycemia, but lacks direct hepatic failure association.\"\n  },\n  {\n    \"gene\": \"HEXB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HEXB to the patient's hepatic phenotype.\"\n  },\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting UMOD to the patient's liver dysfunction.\"\n  },\n  {\n    \"gene\": \"STAP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting STAP2's role in hepatic failure or hyperammonemia.\"\n  },\n  {\n    \"gene\": \"RBM8A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking RBM8A to the patient's liver-related phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC71A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting SLC71A1 to acute hepatic failure or hyperammonemia.\"\n  },\n  {\n    \"gene\": \"PLIN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for PLIN2 in this hepatic phenotype context.\"\n  },\n  {\n    \"gene\": \"KCTD9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supporting KCTD9's role in liver failure or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"RSAD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RSAD2 to the patient's hepatic and metabolic abnormalities.\"\n  },\n  {\n    \"gene\": \"ADGB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ADGB to this clinical presentation.\"\n  },\n  {\n    \"gene\": \"DEPDC5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature associating DEPDC5 with hepatic failure or hyperammonemia.\"\n  },\n  {\n    \"gene\": \"UTRN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting UTRN's involvement in liver dysfunction.\"\n  },\n  {\n    \"gene\": \"NMS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature connecting NMS to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CDKL4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking CDKL4 to hepatic failure or metabolic abnormalities.\"\n  }\n]",
+  "parsed_top5": [
+    "NBAS",
+    "RETN",
+    "HEXB",
+    "UMOD",
+    "STAP2"
+  ]
+}

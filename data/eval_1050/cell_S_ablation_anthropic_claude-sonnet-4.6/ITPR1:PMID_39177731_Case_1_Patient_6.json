@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_39177731_Case_1_Patient_6",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12536,
+  "tokens_out": 809,
+  "finish_reason": "stop",
+  "latency_s": 14.762786626815796,
+  "cost_usd": 0.049743,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.82,\"rationale\":\"ITPR1 mutations cause SCA29 with congenital hypotonia, gross motor delay, gait ataxia, dysarthria, dysmetria, cerebellar vermis atrophy, and ophthalmological abnormalities including persistent pupillary membrane and iris hypoplasia, matching all patient HPO terms.\"},{\"gene\":\"PEX7\",\"confidence\":0.08,\"rationale\":\"PEX7 chunk describes a patient with iris hypoplasia, truncal titubation, cerebellar vermis atrophy, dysarthria, and dysmetria consistent with Gillespie syndrome, but evidence is indirect and not gene-specific.\"},{\"gene\":\"ATXN7\",\"confidence\":0.02,\"rationale\":\"ATXN7 causes SCA7 with progressive adult-onset ataxia and retinal degeneration; lacks congenital onset and iris/pupillary features matching this patient.\"},{\"gene\":\"GPAA1\",\"confidence\":0.015,\"rationale\":\"GPAA1 deficiency causes developmental delay and hypotonia but lacks the specific cerebellar and ocular features (iris hypoplasia, persistent pupillary membrane) seen in this patient.\"},{\"gene\":\"B3GALT6\",\"confidence\":0.01,\"rationale\":\"B3GALT6 causes skeletal dysplasia with motor delay; cerebellar and iris features not characteristic of this gene.\"},{\"gene\":\"VDR\",\"confidence\":0.008,\"rationale\":\"VDR evidence chunks describe non-specific developmental delay and hypotonia without the specific cerebellar/ocular phenotype of this patient.\"},{\"gene\":\"MAFB\",\"confidence\":0.007,\"rationale\":\"MAFB evidence is non-specific developmental delay; no direct link to cerebellar atrophy or iris abnormalities.\"},{\"gene\":\"PARP3\",\"confidence\":0.006,\"rationale\":\"PARP3 evidence describes non-specific neurodevelopmental features without cerebellar or ocular specificity matching this patient.\"},{\"gene\":\"SNRPB2\",\"confidence\":0.006,\"rationale\":\"SNRPB2 evidence is non-specific and does not address cerebellar vermis atrophy or iris/pupillary abnormalities.\"},{\"gene\":\"OR4Q2\",\"confidence\":0.005,\"rationale\":\"OR4Q2 is an olfactory receptor gene with no established link to cerebellar ataxia or ocular phenotypes.\"},{\"gene\":\"PIGA\",\"confidence\":0.005,\"rationale\":\"PIGA causes GPI deficiency with hypotonia and seizures but lacks specific cerebellar vermis atrophy and iris hypoplasia features.\"},{\"gene\":\"MYT1L\",\"confidence\":0.005,\"rationale\":\"MYT1L causes intellectual disability with hypotonia but lacks the specific cerebellar and ocular features of this patient.\"},{\"gene\":\"OR6T1\",\"confidence\":0.004,\"rationale\":\"OR6T1 is an olfactory receptor gene with no established neurological or ocular disease association.\"},{\"gene\":\"GIPC2\",\"confidence\":0.004,\"rationale\":\"GIPC2 evidence is non-specific; no established link to congenital cerebellar ataxia or iris abnormalities.\"},{\"gene\":\"TMPPE\",\"confidence\":0.004,\"rationale\":\"TMPPE evidence is non-specific developmental delay with no established link to cerebellar atrophy or ocular phenotypes.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "PEX7",
+    "ATXN7",
+    "GPAA1",
+    "B3GALT6"
+  ]
+}

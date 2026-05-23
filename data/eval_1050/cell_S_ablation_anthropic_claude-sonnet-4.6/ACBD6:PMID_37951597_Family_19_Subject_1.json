@@ -1,0 +1,26 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_19_Subject_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RPL3L",
+  "orig_qwen3_8b_correct": false,
+  "top1": "UGDH",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13484,
+  "tokens_out": 979,
+  "finish_reason": "stop",
+  "latency_s": 16.085946083068848,
+  "cost_usd": 0.055137,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"UGDH\",\n    \"confidence\": 0.18,\n    \"rationale\": \"UGDH variants cause Epileptic encephalopathy with developmental delay; among candidates, it has the strongest known association with neurodevelopmental syndromic features matching this profile.\"\n  },\n  {\n    \"gene\": \"RPL3L\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Evidence chunks describe developmental delay and behavioral features overlapping patient HPO but no specific facial or urinary features linked to RPL3L.\"\n  },\n  {\n    \"gene\": \"ZMYM5\",\n    \"confidence\": 0.08,\n    \"rationale\": \"ZMYM5 has emerging links to intellectual disability with behavioral features; shared evidence chunks but no specific facial dysmorphology match documented.\"\n  },\n  {\n    \"gene\": \"CPE\",\n    \"confidence\": 0.07,\n    \"rationale\": \"CPE deficiency is associated with intellectual disability, obesity, and behavioral issues; partially overlaps but lacks specific facial feature evidence.\"\n  },\n  {\n    \"gene\": \"SLC25A1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"SLC25A1 defects cause combined D-2/L-2-hydroxyglutaric aciduria with developmental delay; some phenotypic overlap but facial features not well matched.\"\n  },\n  {\n    \"gene\": \"GALNS\",\n    \"confidence\": 0.06,\n    \"rationale\": \"GALNS causes Morquio syndrome with developmental features; shared evidence chunks are generic and do not specifically support this facial/behavioral profile.\"\n  },\n  {\n    \"gene\": \"MMAB\",\n    \"confidence\": 0.06,\n    \"rationale\": \"MMAB causes methylmalonic aciduria with developmental delay; evidence chunks are generic with no specific match to facial dysmorphology or behavioral profile.\"\n  },\n  {\n    \"gene\": \"CSN1S1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"CSN1S1 chunk references Cornelia de Lange syndrome features including developmental delay and behavioral issues, partially overlapping but not a known CdLS gene.\"\n  },\n  {\n    \"gene\": \"CYRIB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No established neurodevelopmental disease association; evidence chunks are generic and do not specifically support this gene as causal.\"\n  },\n  {\n    \"gene\": \"SDHC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SDHC is primarily associated with paraganglioma/pheochromocytoma, not neurodevelopmental delay; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"SIRT3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SIRT3 is a mitochondrial deacetylase with no established link to the described neurodevelopmental/facial phenotype; evidence is generic.\"\n  },\n  {\n    \"gene\": \"OR4D1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Olfactory receptor gene with no known neurodevelopmental disease association; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"VN1R5\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Vomeronasal receptor pseudogene with no established disease association; evidence chunks are entirely generic.\"\n  },\n  {\n    \"gene\": \"HBE1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"HBE1 encodes embryonic hemoglobin with no known link to neurodevelopmental delay or facial dysmorphology; evidence is generic.\"\n  },\n  {\n    \"gene\": \"SPDEF\",\n    \"confidence\": 0.04,\n    \"rationale\": \"SPDEF is a transcription factor linked to epithelial differentiation with no established neurodevelopmental disease association; evidence is generic.\"\n  }\n]",
+  "parsed_top5": [
+    "UGDH",
+    "RPL3L",
+    "ZMYM5",
+    "CPE",
+    "SLC25A1"
+  ]
+}

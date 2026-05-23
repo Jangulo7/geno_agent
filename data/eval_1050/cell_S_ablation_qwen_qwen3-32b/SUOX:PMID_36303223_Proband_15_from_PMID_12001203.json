@@ -1,0 +1,26 @@
+{
+  "case_id": "SUOX:PMID_36303223_Proband_15_from_PMID_12001203",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SUOX",
+  "orig_qwen3_8b_top1": "SUOX",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SUOX",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17072,
+  "tokens_out": 822,
+  "finish_reason": "stop",
+  "latency_s": 2.183757781982422,
+  "cost_usd": 0.00159592,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"SUOX\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SUOX deficiency directly causes isolated sulfite oxidase deficiency, leading to seizures, microcephaly, sulfocysteinuria, and increased taurine.\"\n  },\n  {\n    \"gene\": \"PDSS2\",\n    \"confidence\": 0.65,\n    \"rationale\": \"PDSS2 is involved in the sulfide oxidation pathway, and its defects may contribute to sulfite metabolism disorders with similar clinical features.\"\n  },\n  {\n    \"gene\": \"SPARC\",\n    \"confidence\": 0.55,\n    \"rationale\": \"SPARC is not directly linked to sulfite metabolism but is mentioned in the context of molybdenum cofactor deficiency, which overlaps with some clinical features.\"\n  },\n  {\n    \"gene\": \"DCDC2C\",\n    \"confidence\": 0.45,\n    \"rationale\": \"DCDC2C is not directly related to sulfite metabolism but is mentioned in dietary management of sulfite oxidase deficiency cases.\"\n  },\n  {\n    \"gene\": \"E2F5\",\n    \"confidence\": 0.40,\n    \"rationale\": \"E2F5 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"H3C4\",\n    \"confidence\": 0.35,\n    \"rationale\": \"H3C4 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"CXCL13\",\n    \"confidence\": 0.30,\n    \"rationale\": \"CXCL13 is not directly related to sulfite metabolism but is mentioned in discussions of metabolic disorders with similar features.\"\n  },\n  {\n    \"gene\": \"DUSP18\",\n    \"confidence\": 0.25,\n    \"rationale\": \"DUSP18 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"SORBS3\",\n    \"confidence\": 0.20,\n    \"rationale\": \"SORBS3 is not directly related to sulfite metabolism but is mentioned in discussions of metabolic disorders with similar features.\"\n  },\n  {\n    \"gene\": \"SMIM28\",\n    \"confidence\": 0.15,\n    \"rationale\": \"SMIM28 is not directly related to sulfite metabolism but is mentioned in discussions of metabolic disorders with similar features.\"\n  },\n  {\n    \"gene\": \"SPATA18\",\n    \"confidence\": 0.10,\n    \"rationale\": \"SPATA18 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"RTN4R\",\n    \"confidence\": 0.08,\n    \"rationale\": \"RTN4R is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"NFIX\",\n    \"confidence\": 0.07,\n    \"rationale\": \"NFIX is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"KIFC1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"KIFC1 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  },\n  {\n    \"gene\": \"HAPLN3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"HAPLN3 is not directly related to sulfite metabolism but is mentioned in case reports with overlapping clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "SUOX",
+    "PDSS2",
+    "SPARC",
+    "DCDC2C",
+    "E2F5"
+  ]
+}

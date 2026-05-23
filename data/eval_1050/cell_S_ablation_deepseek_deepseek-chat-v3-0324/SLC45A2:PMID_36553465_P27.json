@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P27",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14762,
+  "tokens_out": 690,
+  "finish_reason": "stop",
+  "latency_s": 38.596055030822754,
+  "cost_usd": 0.0034837,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SLC45A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links SLC45A2 to OCA4 with matching phenotypes including white eyelashes, blue irides, and foveal hypoplasia.\"\n  },\n  {\n    \"gene\": \"C3orf52\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited relevance; primarily associated with woolly hair, not ocular or cutaneous hypopigmentation.\"\n  },\n  {\n    \"gene\": \"ABCA8\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking ABCA8 to albinism or hypopigmentation phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF593\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific evidence connecting ZNF593 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DEPDC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting DEPDC1 in albinism or related hypopigmentation disorders.\"\n  },\n  {\n    \"gene\": \"BRD7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking BRD7 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"VSIG10L2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting VSIG10L2 to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"CIP2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CIP2A's role in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"PPT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking PPT2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CTXN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting CTXN1 to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"RPS3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting RPS3A's involvement in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"EIF2AK2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EIF2AK2 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"AP4B1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting AP4B1 to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"OR2T2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking OR2T2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"COMMD5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting COMMD5's role in albinism or related phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SLC45A2",
+    "C3orf52",
+    "ABCA8",
+    "ZNF593",
+    "DEPDC1"
+  ]
+}

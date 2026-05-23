@@ -1,0 +1,26 @@
+{
+  "case_id": "TMEM216:PMID_39191256_T_34",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TMEM216",
+  "orig_qwen3_8b_top1": "PDE2A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PGRMC1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14867,
+  "tokens_out": 613,
+  "finish_reason": "stop",
+  "latency_s": 35.656283378601074,
+  "cost_usd": 0.00344541,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PGRMC1\",\n    \"confidence\": 0.8,\n    \"rationale\": \"Evidence includes macular edema and rod-cone dystrophy, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"LRP6\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with rod-cone dystrophy and macular atrophy, relevant but less specific.\"\n  },\n  {\n    \"gene\": \"GPR37\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Linked to retinal dystrophy but evidence less directly matches patient symptoms.\"\n  },\n  {\n    \"gene\": \"FIGNL1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some overlap with nyctalopia and visual field loss, but less specific.\"\n  },\n  {\n    \"gene\": \"SCN3B\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Mentions cone-rod dystrophy but lacks direct evidence for macular edema.\"\n  },\n  {\n    \"gene\": \"SNX33\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General retinal dystrophy mentions but no strong phenotypic match.\"\n  },\n  {\n    \"gene\": \"NUTM2G\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Non-specific retinal findings without clear phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"PDE2A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Rod-cone dystrophy mentioned but no direct link to macular edema.\"\n  },\n  {\n    \"gene\": \"PRRC1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Non-specific retinal pathology without clear phenotypic match.\"\n  },\n  {\n    \"gene\": \"BGLAP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to retinal dystrophy or macular edema.\"\n  },\n  {\n    \"gene\": \"CRTC3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence for retinal pathology or macular edema.\"\n  },\n  {\n    \"gene\": \"POU2AF3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for retinal dystrophy or macular edema.\"\n  },\n  {\n    \"gene\": \"SERP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's retinal phenotypes.\"\n  },\n  {\n    \"gene\": \"HPR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in retinal dystrophy or macular edema.\"\n  },\n  {\n    \"gene\": \"GHSR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to retinal pathology or macular edema.\"\n  }\n]",
+  "parsed_top5": [
+    "PGRMC1",
+    "LRP6",
+    "GPR37",
+    "FIGNL1",
+    "SCN3B"
+  ]
+}

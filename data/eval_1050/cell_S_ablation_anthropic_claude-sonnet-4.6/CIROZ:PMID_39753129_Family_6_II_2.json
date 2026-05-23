@@ -1,0 +1,26 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "MOSMO",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MOSMO",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16498,
+  "tokens_out": 838,
+  "finish_reason": "stop",
+  "latency_s": 17.24093008041382,
+  "cost_usd": 0.062064,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"MOSMO\", \"confidence\": 0.72, \"rationale\": \"MOSMO knockout mouse embryos directly show DORV, left-right patterning defects, and heterotaxy phenotypes matching the patient's asplenia, midline liver, DORV, AVCD, and hypoplastic LV profile.\"}, {\"gene\": \"CFAP299\", \"confidence\": 0.05, \"rationale\": \"Evidence chunk mentions laterality-related CNV screening context with DORV and heterotaxy features but no direct CFAP299-specific mechanistic link to the phenotype.\"}, {\"gene\": \"ZFP36L2\", \"confidence\": 0.04, \"rationale\": \"Evidence mentions cardiac looping and DORV in general context but no direct ZFP36L2-specific association with heterotaxy or asplenia.\"}, {\"gene\": \"ZC3H11C\", \"confidence\": 0.04, \"rationale\": \"Evidence chunk is from a laterality CNV study mentioning DORV and heterotaxy features but no direct ZC3H11C-specific causal link demonstrated.\"}, {\"gene\": \"FAM76B\", \"confidence\": 0.03, \"rationale\": \"Only generic heterotaxy/DORV background literature; no direct FAM76B-specific evidence linking it to this phenotype.\"}, {\"gene\": \"PPIB\", \"confidence\": 0.02, \"rationale\": \"Evidence is generic heterotaxy background literature with no PPIB-specific mechanistic connection to asplenia or cardiac laterality defects.\"}, {\"gene\": \"HPCA\", \"confidence\": 0.02, \"rationale\": \"Only generic heterotaxy case report evidence; no HPCA-specific link to left-right patterning or cardiac malformations.\"}, {\"gene\": \"FAM120AOS\", \"confidence\": 0.02, \"rationale\": \"Only generic heterotaxy background literature; no FAM120AOS-specific evidence for this phenotype cluster.\"}, {\"gene\": \"SLC45A2\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence linking SLC45A2 to heterotaxy, asplenia, or congenital heart defects; only background literature.\"}, {\"gene\": \"NXPE1\", \"confidence\": 0.01, \"rationale\": \"No NXPE1-specific evidence for heterotaxy or cardiac laterality defects; only generic background literature provided.\"}, {\"gene\": \"RMDN2\", \"confidence\": 0.01, \"rationale\": \"No RMDN2-specific evidence linking it to heterotaxy or the cardiac phenotypes; only generic background literature.\"}, {\"gene\": \"WEE2\", \"confidence\": 0.01, \"rationale\": \"No WEE2-specific evidence for heterotaxy or congenital heart defects; only generic background literature provided.\"}, {\"gene\": \"SF3A1\", \"confidence\": 0.01, \"rationale\": \"No SF3A1-specific evidence linking it to heterotaxy, asplenia, or cardiac laterality defects; only background literature.\"}, {\"gene\": \"TIGD1\", \"confidence\": 0.01, \"rationale\": \"No TIGD1-specific evidence for heterotaxy or cardiac malformations; only generic background literature provided.\"}, {\"gene\": \"OR2H2\", \"confidence\": 0.01, \"rationale\": \"Olfactory receptor gene with no plausible or evidenced link to heterotaxy, asplenia, or congenital heart defects.\"}]",
+  "parsed_top5": [
+    "MOSMO",
+    "CFAP299",
+    "ZFP36L2",
+    "ZC3H11C",
+    "FAM76B"
+  ]
+}

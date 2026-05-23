@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26384463_Patient_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18962,
+  "tokens_out": 790,
+  "finish_reason": "stop",
+  "latency_s": 13.76995849609375,
+  "cost_usd": 0.068736,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.92, \"rationale\": \"STXBP1 evidence directly describes burst suppression EEG, severe epileptic encephalopathy, profound global developmental delay, cerebral atrophy, and absent speech\u2014matching all patient HPO terms precisely.\"}, {\"gene\": \"HPCA\", \"confidence\": 0.04, \"rationale\": \"HPCA evidence mentions global developmental delay and absent speech in encephalopathy context but lacks direct gene-specific association with burst suppression and the full phenotype profile.\"}, {\"gene\": \"GOLGA8S\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking GOLGA8S to this phenotype; shared chunks describe unrelated conditions with no direct mention of this gene.\"}, {\"gene\": \"IFNA14\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking IFNA14 to epileptic encephalopathy or burst suppression; evidence chunks are generic and unrelated.\"}, {\"gene\": \"GDF5\", \"confidence\": 0.005, \"rationale\": \"GDF5 is a skeletal morphogen with no established link to epileptic encephalopathy; evidence chunks are non-specific.\"}, {\"gene\": \"OR4K13\", \"confidence\": 0.003, \"rationale\": \"Olfactory receptor gene with no known neurological disease association; evidence is entirely non-specific.\"}, {\"gene\": \"KIAA0825\", \"confidence\": 0.003, \"rationale\": \"No established disease gene; evidence chunks are generic with no direct mention of KIAA0825 in neurological context.\"}, {\"gene\": \"GSDMA\", \"confidence\": 0.003, \"rationale\": \"GSDMA is involved in pyroptosis/skin biology with no known link to epileptic encephalopathy; evidence is non-specific.\"}, {\"gene\": \"ADI1\", \"confidence\": 0.003, \"rationale\": \"ADI1 is a metabolic enzyme with no established link to epileptic encephalopathy; evidence chunks are generic.\"}, {\"gene\": \"FAM181A\", \"confidence\": 0.003, \"rationale\": \"No established disease gene for epileptic encephalopathy; evidence chunks are non-specific and unrelated.\"}, {\"gene\": \"GPR149\", \"confidence\": 0.003, \"rationale\": \"Orphan GPCR with no known association to epileptic encephalopathy; evidence is entirely non-specific.\"}, {\"gene\": \"ZNF439\", \"confidence\": 0.003, \"rationale\": \"Zinc finger protein with no established link to epileptic encephalopathy; evidence chunks are generic.\"}, {\"gene\": \"OR5L1\", \"confidence\": 0.003, \"rationale\": \"Olfactory receptor gene with no known neurological disease association; evidence is entirely non-specific.\"}, {\"gene\": \"PARP16\", \"confidence\": 0.003, \"rationale\": \"PARP16 has no established link to epileptic encephalopathy; evidence chunks are generic and non-specific.\"}, {\"gene\": \"AGPS\", \"confidence\": 0.003, \"rationale\": \"AGPS is a peroxisomal enzyme linked to rhizomelic chondrodysplasia, not matching this epileptic encephalopathy phenotype profile.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "HPCA",
+    "GOLGA8S",
+    "IFNA14",
+    "GDF5"
+  ]
+}

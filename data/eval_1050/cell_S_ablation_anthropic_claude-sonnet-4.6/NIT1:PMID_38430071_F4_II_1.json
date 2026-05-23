@@ -1,0 +1,26 @@
+{
+  "case_id": "NIT1:PMID_38430071_F4_II_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NIT1",
+  "orig_qwen3_8b_top1": "IFNL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "STRN3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16362,
+  "tokens_out": 1055,
+  "finish_reason": "stop",
+  "latency_s": 15.475950479507446,
+  "cost_usd": 0.064911,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"STRN3\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence chunks describe HD-like phenotype with chorea, bradykinesia, dysarthria, cognitive impairment, gait disturbance matching patient; no gene-specific link but slightly more relevant chunks.\"\n  },\n  {\n    \"gene\": \"FBXO6\",\n    \"confidence\": 0.10,\n    \"rationale\": \"Evidence includes family with gait disturbance, cognitive dysfunction, chorea, and HD-like presentation with progressive neurodegeneration matching patient phenotype.\"\n  },\n  {\n    \"gene\": \"IFNL3\",\n    \"confidence\": 0.09,\n    \"rationale\": \"IRF2BPL-related case with chorea, dysarthria, cognitive decline, and progressive ataxia partially overlaps patient phenotype including fatigue and gait disturbance.\"\n  },\n  {\n    \"gene\": \"FGF10\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Evidence describes family with bradykinesia, chorea, dysarthria, cognitive impairment matching patient HPO profile via UHDRS-assessed HD-like disorder.\"\n  },\n  {\n    \"gene\": \"TAF11L9\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence describes patients with bradykinesia, chorea, dysarthria, cognitive impairment consistent with patient phenotype but no direct gene-disease link established.\"\n  },\n  {\n    \"gene\": \"SPTLC3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence describes HD-like phenotype with bradykinesia, chorea, dysarthria, cognitive impairment overlapping patient HPO but no specific gene-disease association shown.\"\n  },\n  {\n    \"gene\": \"DAP3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence describes HD-like phenotype with bradykinesia, chorea, dysarthria, cognitive impairment overlapping patient HPO but no specific gene-disease association shown.\"\n  },\n  {\n    \"gene\": \"ZNF302\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence describes juvenile HD with bradykinesia, dysarthria, fatigue, cognitive decline matching patient but no direct ZNF302 gene-disease link established.\"\n  },\n  {\n    \"gene\": \"NAA30\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence describes HD chorea and bradykinesia overlapping patient phenotype but no specific NAA30 gene-disease association is demonstrated in the evidence.\"\n  },\n  {\n    \"gene\": \"SMR3A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes HD phenotype with chorea, bradykinesia, dysarthria overlapping patient but no specific SMR3A gene-disease link is established in the evidence.\"\n  },\n  {\n    \"gene\": \"NECTIN4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes HD with chorea, dysarthria, cognitive decline overlapping patient phenotype but no specific NECTIN4 gene-disease association is demonstrated.\"\n  },\n  {\n    \"gene\": \"GALNS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes HD chorea and bradykinesia overlapping patient phenotype but no specific GALNS gene-disease association is demonstrated in the evidence.\"\n  },\n  {\n    \"gene\": \"ANXA5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes HD chorea and bradykinesia overlapping patient phenotype but no specific ANXA5 gene-disease association is demonstrated in the evidence.\"\n  },\n  {\n    \"gene\": \"FASTKD5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes HD dysarthria and chorea overlapping patient phenotype but no specific FASTKD5 gene-disease association is demonstrated in the evidence.\"\n  },\n  {\n    \"gene\": \"AFAP1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence describes bradykinesia and dysarthria in a movement disorder case but focuses on dystonia/parkinsonism without chorea, less matching the full patient phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "STRN3",
+    "FBXO6",
+    "IFNL3",
+    "FGF10",
+    "TAF11L9"
+  ]
+}

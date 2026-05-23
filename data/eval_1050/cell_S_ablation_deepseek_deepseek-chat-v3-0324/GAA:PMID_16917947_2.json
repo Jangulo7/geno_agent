@@ -1,0 +1,26 @@
+{
+  "case_id": "GAA:PMID_16917947_2",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "WAS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SGCD",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 16640,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 23.191455125808716,
+  "cost_usd": 0.00386007,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SGCD\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking SGCD to degenerative myopathy with elevated CK and muscle weakness, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"GAA\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Evidence suggests GAA mutations cause Pompe disease, which includes elevated CK and muscle weakness, though cardiac involvement is less common here.\"\n  },\n  {\n    \"gene\": \"WAS\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Relevant case reports of elevated AST/ALT and muscle weakness, but less specific to the patient's overall profile.\"\n  },\n  {\n    \"gene\": \"OSTC\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking OSTC to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"STAT1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking STAT1 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"MCOLN1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking MCOLN1 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"PNMA8B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking PNMA8B to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"SLC25A46\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SLC25A46 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"ZNF596\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ZNF596 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"TYW3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking TYW3 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"MAN2A2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking MAN2A2 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"ARHGAP5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ARHGAP5 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"SPG11\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SPG11 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"FBLN5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking FBLN5 to the patient's symptoms; low relevance.\"\n  },\n  {\n    \"gene\": \"ZNF718\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ZNF718 to the patient's symptoms; low relevance.\"\n  }\n]",
+  "parsed_top5": [
+    "SGCD",
+    "GAA",
+    "WAS",
+    "OSTC",
+    "STAT1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "PPIB:PMID_19781681_Proband_P1_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PPIB",
+  "orig_qwen3_8b_top1": "PPIB",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PPIB",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14531,
+  "tokens_out": 639,
+  "finish_reason": "stop",
+  "latency_s": 38.62292718887329,
+  "cost_usd": 0.0033982300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PPIB\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking PPIB to osteogenesis imperfecta with prenatal fractures, bowing, and osteopenia.\"\n  },\n  {\n    \"gene\": \"SLC44A1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SLC44A1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"VAMP5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking VAMP5 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"C17orf99\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking C17orf99 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF362\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ZNF362 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF830\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ZNF830 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"BCL11A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking BCL11A to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CDC23\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CDC23 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"GJB2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking GJB2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SERPINB10\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SERPINB10 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SIM2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SIM2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"OR2L13\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking OR2L13 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PEX10\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking PEX10 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ATP7B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ATP7B to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC25A18\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SLC25A18 to the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "PPIB",
+    "SLC44A1",
+    "VAMP5",
+    "C17orf99",
+    "ZNF362"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "BAG3:PMID_31853710_III_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "BAG3",
+  "orig_qwen3_8b_top1": "GPANK1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PLCG2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14575,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 7.912328720092773,
+  "cost_usd": 0.00118252,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"PLCG2\", \"confidence\": 0.95, \"rationale\": \"PLCG2 is associated with Charcot-Marie-Tooth disease type 2, presenting with pes cavus, Achilles tendon contracture, and distal limb weakness.\"}",
+  "parsed_top5": [
+    "PLCG2"
+  ]
+}

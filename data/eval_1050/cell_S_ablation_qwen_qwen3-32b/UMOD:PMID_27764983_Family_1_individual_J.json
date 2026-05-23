@@ -1,0 +1,22 @@
+{
+  "case_id": "UMOD:PMID_27764983_Family_1_individual_J",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15224,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 3.583366632461548,
+  "cost_usd": 0.0012336,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"UMOD\", \"confidence\": 0.95, \"rationale\": \"UMOD mutations directly cause ADTKD with hyperuricemia, renal fibrosis, and hypoplasia, as shown in mouse models and human cases.\"}",
+  "parsed_top5": [
+    "UMOD"
+  ]
+}

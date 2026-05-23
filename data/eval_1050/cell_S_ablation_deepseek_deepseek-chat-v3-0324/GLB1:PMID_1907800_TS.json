@@ -1,0 +1,26 @@
+{
+  "case_id": "GLB1:PMID_1907800_TS",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GLB1",
+  "orig_qwen3_8b_top1": "GLB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17247,
+  "tokens_out": 623,
+  "finish_reason": "stop",
+  "latency_s": 21.31194043159485,
+  "cost_usd": 0.00392911,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GLB1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct match with GM1 gangliosidosis, including cherry-red spot, platyspondyly, intellectual disability, and extrapyramidal dysfunction.\"\n  },\n  {\n    \"gene\": \"CRYAA\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking to cherry-red spots, but no direct association with other symptoms.\"\n  },\n  {\n    \"gene\": \"FBXO46\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ABRAXAS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"POP7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MUC20\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CFL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SLC16A11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZMYM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SH3BP4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ANTKMT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"LDHAL6A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PRRC2C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PRPF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"FAM156A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "GLB1",
+    "CRYAA",
+    "FBXO46",
+    "ABRAXAS2",
+    "POP7"
+  ]
+}

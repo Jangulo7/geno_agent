@@ -1,0 +1,26 @@
+{
+  "case_id": "TUBA4A:PMID_38884572_Family_1_Patient_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TUBA4A",
+  "orig_qwen3_8b_top1": "ELAVL2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ITPR3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14515,
+  "tokens_out": 652,
+  "finish_reason": "stop",
+  "latency_s": 40.3054621219635,
+  "cost_usd": 0.00340504,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ITPR3\",\n    \"confidence\": 0.7,\n    \"rationale\": \"ITPR3 is strongly associated with cerebellar ataxia and dysmetria, matching the patient's cerebellar atrophy and movement disorder phenotypes.\"\n  },\n  {\n    \"gene\": \"ELAVL2\",\n    \"confidence\": 0.5,\n    \"rationale\": \"ELAVL2 is linked to cerebellar atrophy and dysmetria, though evidence is less specific than ITPR3.\"\n  },\n  {\n    \"gene\": \"TMEM175\",\n    \"confidence\": 0.4,\n    \"rationale\": \"TMEM175 shows some association with dystonia and dysmetria, but evidence is less direct.\"\n  },\n  {\n    \"gene\": \"PKLR\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PKLR's evidence includes ataxia and dysmetria, but lacks strong cerebellar atrophy correlation.\"\n  },\n  {\n    \"gene\": \"ABCC4\",\n    \"confidence\": 0.25,\n    \"rationale\": \"ABCC4 has weak links to ataxia, but no strong phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"RGS10\",\n    \"confidence\": 0.2,\n    \"rationale\": \"RGS10's evidence is nonspecific, with only general ataxia mentions.\"\n  },\n  {\n    \"gene\": \"CNST\",\n    \"confidence\": 0.15,\n    \"rationale\": \"CNST lacks direct evidence for cerebellar or movement disorders.\"\n  },\n  {\n    \"gene\": \"PRRG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PRRG2's evidence is generic and lacks phenotypic specificity.\"\n  },\n  {\n    \"gene\": \"IFI35\",\n    \"confidence\": 0.05,\n    \"rationale\": \"IFI35 has no relevant evidence for the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"OST4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"OST4 shows no direct association with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"RPE\",\n    \"confidence\": 0.05,\n    \"rationale\": \"RPE's evidence is irrelevant to the neurological phenotypes.\"\n  },\n  {\n    \"gene\": \"MOGAT3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"MOGAT3 has no supporting evidence for the observed symptoms.\"\n  },\n  {\n    \"gene\": \"SAMD4B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SAMD4B lacks any relevant phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"SAXO6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SAXO6's evidence does not align with the patient's condition.\"\n  },\n  {\n    \"gene\": \"CENPVL2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CENPVL2 has no meaningful connection to the phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "ITPR3",
+    "ELAVL2",
+    "TMEM175",
+    "PKLR",
+    "ABCC4"
+  ]
+}

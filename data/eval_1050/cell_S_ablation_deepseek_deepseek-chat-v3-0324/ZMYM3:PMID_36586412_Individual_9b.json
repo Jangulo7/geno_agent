@@ -1,0 +1,22 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_9b",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "PTGFR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ERF",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16765,
+  "tokens_out": 37,
+  "finish_reason": "stop",
+  "latency_s": 4.458953142166138,
+  "cost_usd": 0.0033814899999999996,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"ERF\",\n  \"confidence\": 0.8,\n  \"rationale\": \"Strongest match with patient's facial features and intellectual disability.\"\n}",
+  "parsed_top5": [
+    "ERF"
+  ]
+}

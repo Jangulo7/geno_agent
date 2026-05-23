@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_37102386_Family_3_Patient_3",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20147,
+  "tokens_out": 715,
+  "finish_reason": "stop",
+  "latency_s": 11.753666877746582,
+  "cost_usd": 0.071166,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.97,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly matching all HPO features: congenital exfoliative erythroderma, ichthyosis linearis circumflexa, elevated IgE, recurrent infections, sparse hair, failure to thrive, and food allergies.\"},{\"gene\":\"POLGARF\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking POLGARF to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"},{\"gene\":\"LHFPL6\",\"confidence\":0.01,\"rationale\":\"No evidence linking LHFPL6 to ichthyosis or Netherton syndrome phenotype; all relevant evidence points to SPINK5.\"},{\"gene\":\"SLC28A1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC28A1 to this dermatological/immunological phenotype cluster.\"},{\"gene\":\"UQCC4\",\"confidence\":0.01,\"rationale\":\"No evidence linking UQCC4 to Netherton syndrome or any of the patient's HPO features.\"},{\"gene\":\"TPR\",\"confidence\":0.01,\"rationale\":\"No evidence linking TPR to congenital ichthyosis, elevated IgE, or recurrent infections in this context.\"},{\"gene\":\"DLX2\",\"confidence\":0.01,\"rationale\":\"No evidence linking DLX2 to this phenotype; DLX2 is a homeobox gene unrelated to skin barrier or IgE dysregulation.\"},{\"gene\":\"SLFN11\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLFN11 to Netherton syndrome or the patient's phenotype profile.\"},{\"gene\":\"ARHGEF5\",\"confidence\":0.01,\"rationale\":\"No evidence linking ARHGEF5 to ichthyosis, elevated IgE, or recurrent skin/respiratory infections.\"},{\"gene\":\"LACTB\",\"confidence\":0.01,\"rationale\":\"No evidence linking LACTB to this phenotype cluster of congenital ichthyosis and atopy.\"},{\"gene\":\"MAGEE1\",\"confidence\":0.01,\"rationale\":\"No evidence linking MAGEE1 to Netherton syndrome or the patient's HPO features.\"},{\"gene\":\"BMP6\",\"confidence\":0.01,\"rationale\":\"No evidence linking BMP6 to congenital exfoliative erythroderma or elevated IgE phenotype.\"},{\"gene\":\"LCN15\",\"confidence\":0.01,\"rationale\":\"No evidence linking LCN15 to this phenotype; lipocalin family unrelated to skin barrier serine protease defects.\"},{\"gene\":\"SHISAL2B\",\"confidence\":0.01,\"rationale\":\"No evidence linking SHISAL2B to Netherton syndrome or any of the patient's HPO features.\"},{\"gene\":\"SLC37A3\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC37A3 to congenital ichthyosis, elevated IgE, or recurrent infections.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "POLGARF",
+    "LHFPL6",
+    "SLC28A1",
+    "UQCC4"
+  ]
+}

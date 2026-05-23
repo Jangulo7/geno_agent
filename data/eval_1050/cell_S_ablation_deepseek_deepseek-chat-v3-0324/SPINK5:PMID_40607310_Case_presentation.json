@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_40607310_Case_presentation",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16267,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 27.205031871795654,
+  "cost_usd": 0.00377777,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations definitively cause Netherton syndrome, matching all patient phenotypes including trichorrhexis invaginata and erythroderma.\"\n  },\n  {\n    \"gene\": \"TM4SF19\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TM4SF19 to the patient's dermatological phenotype.\"\n  },\n  {\n    \"gene\": \"SH3TC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature evidence supports SH3TC1's involvement in this dermatological presentation.\"\n  },\n  {\n    \"gene\": \"KCNA6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"KCNA6 is unrelated to dermatological phenotypes described in the patient.\"\n  },\n  {\n    \"gene\": \"YIPF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connects YIPF2 to congenital erythroderma or hair abnormalities.\"\n  },\n  {\n    \"gene\": \"DCAF12L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented association between DCAF12L1 and the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MAN1A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MAN1A1 lacks evidence for involvement in dermatological disorders.\"\n  },\n  {\n    \"gene\": \"NANP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"NANP shows no known link to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"RNF138\",\n    \"confidence\": 0.1,\n    \"rationale\": \"RNF138 has no established role in Netherton syndrome or similar conditions.\"\n  },\n  {\n    \"gene\": \"ZDHHC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ZDHHC1 is not associated with the patient's dermatological and immune phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM24B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connects FAM24B to erythroderma or trichorrhexis invaginata.\"\n  },\n  {\n    \"gene\": \"METTL21C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"METTL21C lacks evidence for causing dermatological or immunological disorders.\"\n  },\n  {\n    \"gene\": \"OR52P1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"OR52P1 is an olfactory receptor unrelated to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TSGA10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"TSGA10 has no known role in skin barrier dysfunction or hair abnormalities.\"\n  },\n  {\n    \"gene\": \"CLNS1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CLNS1A is not implicated in Netherton syndrome or similar conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "TM4SF19",
+    "SH3TC1",
+    "KCNA6",
+    "YIPF2"
+  ]
+}

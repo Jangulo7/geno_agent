@@ -1,0 +1,26 @@
+{
+  "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ADAMTS15",
+  "orig_qwen3_8b_top1": "PIERCE1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PIERCE1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16419,
+  "tokens_out": 1087,
+  "finish_reason": "stop",
+  "latency_s": 17.717188596725464,
+  "cost_usd": 0.065562,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PIERCE1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence discusses distal arthrogryposis with finger contractures, absent flexion creases, talipes equinovarus matching patient phenotype, but no direct gene-disease link established.\"\n  },\n  {\n    \"gene\": \"ZFAND2A\",\n    \"confidence\": 0.09,\n    \"rationale\": \"Evidence mentions clinodactyly, tapering fingers, absent flexion creases consistent with patient, but no specific gene-disease association documented in provided chunks.\"\n  },\n  {\n    \"gene\": \"MTHFR\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Evidence covers distal arthrogryposis diagnostic criteria including absent flexion creases and talipes equinovarus, but no direct MTHFR-specific disease link to this phenotype.\"\n  },\n  {\n    \"gene\": \"GON7\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Evidence mentions clinodactyly of 5th finger, tapering fingers, equinovarus foot matching patient features, but no direct causal gene-disease link established.\"\n  },\n  {\n    \"gene\": \"H3-4\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence covers clinodactyly, tapering fingers, camptodactyly, equinovarus foot consistent with patient, but no specific H3-4 gene-disease association provided.\"\n  },\n  {\n    \"gene\": \"HAPLN1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence mentions clinodactyly, tapering fingers, absent flexion creases overlapping with patient phenotype, but no direct HAPLN1 causal link demonstrated.\"\n  },\n  {\n    \"gene\": \"NTN3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence discusses distal arthrogryposis features matching patient, but no specific NTN3 gene-disease causality established in provided literature.\"\n  },\n  {\n    \"gene\": \"PNPLA1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence covers distal arthrogryposis with muscle atrophy, foot deformities, finger contractures matching patient, but no direct PNPLA1 association documented.\"\n  },\n  {\n    \"gene\": \"CAVIN3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence mentions clinodactyly, tapering fingers, equinovarus foot consistent with patient phenotype, but no specific CAVIN3 causal link established.\"\n  },\n  {\n    \"gene\": \"RIC3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence covers clinodactyly, tapering fingers, equinovarus foot overlapping with patient features, but no direct RIC3 gene-disease association provided.\"\n  },\n  {\n    \"gene\": \"SPHK1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence mentions clinodactyly, tapering fingers, equinovarus foot matching patient, but no specific SPHK1 causal link to this phenotype established.\"\n  },\n  {\n    \"gene\": \"GPAA1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence mentions flexion contractures, brachydactyly, clinodactyly overlapping with patient, but no direct GPAA1 gene-disease causality demonstrated.\"\n  },\n  {\n    \"gene\": \"TIGIT\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence covers distal arthrogryposis features and absent flexion creases, but TIGIT is an immune checkpoint gene with no established link to this musculoskeletal phenotype.\"\n  },\n  {\n    \"gene\": \"TRAPPC2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence mentions skeletal features overlapping with patient, but TRAPPC2 is associated with spondyloepiphyseal dysplasia tarda, not distal arthrogryposis with neuropathy.\"\n  },\n  {\n    \"gene\": \"F2RL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence covers distal arthrogryposis features, but F2RL1 encodes a protease-activated receptor with no established link to congenital contracture syndromes.\"\n  }\n]",
+  "parsed_top5": [
+    "PIERCE1",
+    "ZFAND2A",
+    "MTHFR",
+    "GON7",
+    "H3-4"
+  ]
+}

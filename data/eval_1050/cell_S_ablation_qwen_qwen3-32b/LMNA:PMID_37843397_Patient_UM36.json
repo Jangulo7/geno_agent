@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM36",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18153,
+  "tokens_out": 570,
+  "finish_reason": "stop",
+  "latency_s": 16.879475831985474,
+  "cost_usd": 0.0016118400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Strong evidence linking LMNA mutations to lipodystrophy, diabetes, and hepatic steatosis with specific clinical features matching the patient's phenotype.\"},{\"gene\":\"CANX\",\"confidence\":0.65,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic link to the patient's specific symptoms or mutations.\"},{\"gene\":\"PIEZO1\",\"confidence\":0.55,\"rationale\":\"Some overlap with lipodystrophy and diabetes, but no clear genetic evidence linking it to the patient's condition.\"},{\"gene\":\"ELP4\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"PDIA6\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"},{\"gene\":\"AOAH\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"MAB21L1\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"},{\"gene\":\"GSG1\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"CYP2F1\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"GPATCH2L\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"},{\"gene\":\"ME1\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"ZNF484\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"},{\"gene\":\"LGALS2\",\"confidence\":0.5,\"rationale\":\"General discussion of lipodystrophy and diabetes without specific genetic evidence for this gene.\"},{\"gene\":\"DGAT2L6\",\"confidence\":0.5,\"rationale\":\"Mentions of lipodystrophy and diabetes, but no direct genetic evidence linking it to the patient's condition.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CANX",
+    "PIEZO1",
+    "ELP4",
+    "PDIA6"
+  ]
+}

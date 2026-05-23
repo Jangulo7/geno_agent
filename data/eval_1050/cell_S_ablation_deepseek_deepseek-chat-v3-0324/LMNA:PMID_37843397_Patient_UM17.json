@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM17",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17143,
+  "tokens_out": 655,
+  "finish_reason": "stop",
+  "latency_s": 44.373340129852295,
+  "cost_usd": 0.00393295,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy (FPLD) with matching metabolic derangements.\"\n  },\n  {\n    \"gene\": \"PALM2AKAP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence; some association with lipodystrophy phenotypes but less direct than LMNA.\"\n  },\n  {\n    \"gene\": \"F8A3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to lipodystrophy; minimal relevance to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CDKN2AIP\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to lipodystrophy; minimal relevance to metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"LZTR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"SERF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"GABRA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"NMD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"EFR3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"TEX38\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"MBD3L3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"CEACAM7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"ERICH4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"UBE2G2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"OR2M7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence; olfactory receptor gene unrelated to metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "PALM2AKAP2",
+    "F8A3",
+    "CDKN2AIP",
+    "LZTR1"
+  ]
+}

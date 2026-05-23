@@ -1,0 +1,26 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "DNA2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DNA2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20119,
+  "tokens_out": 1063,
+  "finish_reason": "stop",
+  "latency_s": 15.059715509414673,
+  "cost_usd": 0.076302,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DNA2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"DNA2 chunk_1 has critic_relevance 5/5 and explicitly mentions cataracts, dysplastic nails, skeletal anomalies (short phalanges, metaphyseal changes), and ectodermal findings in an RTS-like syndrome matching the photosensitivity/nail dystrophy/cataract/skeletal phenotype.\"\n  },\n  {\n    \"gene\": \"CXCL1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunks are low-relevance (2/5) and not directly linked to CXCL1; phenotype overlap is incidental across shared case report text.\"\n  },\n  {\n    \"gene\": \"KRT24\",\n    \"confidence\": 0.06,\n    \"rationale\": \"KRT24 chunk_3 discusses photosensitivity and nail dystrophy in Kindler syndrome context but does not directly implicate KRT24 as causal for this full phenotype profile.\"\n  },\n  {\n    \"gene\": \"STK24\",\n    \"confidence\": 0.06,\n    \"rationale\": \"STK24 chunk_3 mentions photosensitivity and nail dystrophy in KS differential but no direct gene-phenotype link to the full patient profile.\"\n  },\n  {\n    \"gene\": \"FOXP3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"FOXP3 evidence includes photosensitivity/nail dystrophy discussion but only in KS differential context with no direct mechanistic link to this phenotype.\"\n  },\n  {\n    \"gene\": \"H2BC4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"H2BC4 chunk_2 mentions photosensitivity and nail dystrophy in KS differential but lacks direct evidence linking H2BC4 to this syndrome.\"\n  },\n  {\n    \"gene\": \"EOLA1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"All EOLA1 evidence chunks are low-relevance (2/5) with no direct gene-phenotype association for this complex syndrome.\"\n  },\n  {\n    \"gene\": \"ALB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"ALB evidence is entirely non-specific (2/5 relevance) with no established link to photosensitivity, ocular, or skeletal phenotype cluster.\"\n  },\n  {\n    \"gene\": \"SLC12A2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SLC12A2 evidence chunks are low-relevance case reports with no direct connection to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"SAXO1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SAXO1 evidence is entirely non-specific (2/5 relevance) with no established disease association matching this phenotype.\"\n  },\n  {\n    \"gene\": \"GAST\",\n    \"confidence\": 0.04,\n    \"rationale\": \"GAST evidence is non-specific (2/5 relevance) with no known link to photosensitivity, ocular anomalies, or skeletal dysplasia.\"\n  },\n  {\n    \"gene\": \"PGM1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"PGM1 evidence chunks are low-relevance with no direct association to this multi-system phenotype profile.\"\n  },\n  {\n    \"gene\": \"CRIP2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"CRIP2 evidence is non-specific (2/5 relevance) with no established link to photosensitivity, nail dystrophy, or ocular anomalies.\"\n  },\n  {\n    \"gene\": \"SMCO4\",\n    \"confidence\": 0.04,\n    \"rationale\": \"SMCO4 evidence is entirely non-specific with no known disease association matching this phenotype cluster.\"\n  },\n  {\n    \"gene\": \"SSH2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"SSH2 evidence is non-specific (2/5 relevance) with no established connection to this complex multi-system phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "DNA2",
+    "CXCL1",
+    "KRT24",
+    "STK24",
+    "FOXP3"
+  ]
+}

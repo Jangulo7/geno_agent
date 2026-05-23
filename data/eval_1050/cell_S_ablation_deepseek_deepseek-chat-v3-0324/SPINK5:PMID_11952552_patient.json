@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11952552_patient",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14380,
+  "tokens_out": 644,
+  "finish_reason": "stop",
+  "latency_s": 49.32533264160156,
+  "cost_usd": 0.0033718800000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching erythroderma, scaling, and pili torti.\"\n  },\n  {\n    \"gene\": \"COG2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking COG2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ADH4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ADH4 to erythroderma or hair abnormalities.\"\n  },\n  {\n    \"gene\": \"UXT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting UXT's role in dermatological or hair shaft disorders.\"\n  },\n  {\n    \"gene\": \"ZNG1E\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking ZNG1E to erythroderma or pili torti.\"\n  },\n  {\n    \"gene\": \"CCDC83\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating CCDC83 with the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"GEN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GEN1 to skin or hair phenotypes.\"\n  },\n  {\n    \"gene\": \"NFIC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting NFIC's involvement in dermatological conditions.\"\n  },\n  {\n    \"gene\": \"INSM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking INSM1 to erythroderma or hair shaft defects.\"\n  },\n  {\n    \"gene\": \"LDLRAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating LDLRAP1 with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PNPLA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PNPLA2 to skin or hair abnormalities.\"\n  },\n  {\n    \"gene\": \"ATOH7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ATOH7's role in dermatological disorders.\"\n  },\n  {\n    \"gene\": \"IDH3B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking IDH3B to erythroderma or pili torti.\"\n  },\n  {\n    \"gene\": \"MS4A2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating MS4A2 with the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"GNE\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GNE to skin or hair phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "COG2",
+    "ADH4",
+    "UXT",
+    "ZNG1E"
+  ]
+}

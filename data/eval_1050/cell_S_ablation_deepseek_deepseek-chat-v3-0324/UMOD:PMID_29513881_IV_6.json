@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_29513881_IV_6",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15554,
+  "tokens_out": 643,
+  "finish_reason": "stop",
+  "latency_s": 18.80251407623291,
+  "cost_usd": 0.0036059100000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong association with autosomal dominant tubulointerstitial kidney disease, matching patient's elevated creatinine and kidney pathology.\"\n  },\n  {\n    \"gene\": \"MCAM\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Linked to kidney disease severity in diabetic nephropathy, relevant to chronic kidney disease progression.\"\n  },\n  {\n    \"gene\": \"CEBPD\",\n    \"confidence\": 0.70,\n    \"rationale\": \"Involvement in renal inflammation and injury pathways, though less directly linked to chronic kidney disease.\"\n  },\n  {\n    \"gene\": \"KYNU\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Associated with renal failure via kynurenine pathway, but evidence is more metabolic than directly causal.\"\n  },\n  {\n    \"gene\": \"WIF1\",\n    \"confidence\": 0.60,\n    \"rationale\": \"Limited direct evidence linking to kidney disease; relevance inferred from Wnt signaling studies.\"\n  },\n  {\n    \"gene\": \"TSC22D1\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Mentioned in polycystic kidney disease context, but no strong evidence for causality here.\"\n  },\n  {\n    \"gene\": \"PXDNL\",\n    \"confidence\": 0.50,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"FAF1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"DCPH1\",\n    \"confidence\": 0.40,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"GAGE12C\",\n    \"confidence\": 0.35,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"SPATA31A1\",\n    \"confidence\": 0.30,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"CIMIP2B\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"ZNF224\",\n    \"confidence\": 0.20,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"UBE2NL\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  },\n  {\n    \"gene\": \"HYPK\",\n    \"confidence\": 0.10,\n    \"rationale\": \"No direct evidence linking to kidney disease in provided literature.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "UMOD",
+    "MCAM",
+    "CEBPD",
+    "KYNU",
+    "WIF1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "WNT1:PMID_30012084_older_sister",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "WNT1",
+  "orig_qwen3_8b_top1": "WNT1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "WNT1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13911,
+  "tokens_out": 697,
+  "finish_reason": "stop",
+  "latency_s": 34.79805064201355,
+  "cost_usd": 0.0013080400000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"WNT1\": {\"gene\": \"WNT1\", \"confidence\": 0.95, \"rationale\": \"WNT1 mutations directly cause progressive pseudorheumatoid dysplasia with platyspondyly, osteopenia, fractures, and short stature matching the patient's phenotype.\"}, \"CCNYL1B\": {\"gene\": \"CCNYL1B\", \"confidence\": 0.15, \"rationale\": \"Limited evidence linking CCNYL1B to skeletal deformities and fractures in the provided literature.\"}, \"ATP6V0E2\": {\"gene\": \"ATP6V0E2\", \"confidence\": 0.15, \"rationale\": \"Mildly associated with rickets-like features but lacks direct connection to the patient's full phenotype.\"}, \"NKX3-1\": {\"gene\": \"NKX3-1\", \"confidence\": 0.15, \"rationale\": \"Shows some skeletal involvement but not the comprehensive features seen in the patient.\"}, \"FLNC\": {\"gene\": \"FLNC\", \"confidence\": 0.15, \"rationale\": \"Linked to skeletal abnormalities but not specifically to the combination of features in this case.\"}, \"CNIH2\": {\"gene\": \"CNIH2\", \"confidence\": 0.15, \"rationale\": \"Minimal evidence supporting a direct link to the patient's clinical presentation.\"}, \"CCL15\": {\"gene\": \"CCL15\", \"confidence\": 0.15, \"rationale\": \"No strong evidence connecting CCL15 to the described skeletal and growth abnormalities.\"}, \"PSG3\": {\"gene\": \"PSG3\", \"confidence\": 0.15, \"rationale\": \"Lack of direct association with the patient's specific set of symptoms.\"}, \"CPLX2\": {\"gene\": \"CPLX2\", \"confidence\": 0.15, \"rationale\": \"Insufficient evidence linking CPLX2 to the patient's phenotype.\"}, \"CKLF\": {\"gene\": \"CKLF\", \"confidence\": 0.15, \"rationale\": \"Mildly associated with skeletal issues but not the full spectrum of the patient's condition.\"}, \"STXBP1\": {\"gene\": \"STXBP1\", \"confidence\": 0.15, \"rationale\": \"Primarily linked to neurological issues with minimal skeletal involvement.\"}, \"MEF2B\": {\"gene\": \"MEF2B\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking MEF2B to the patient's skeletal and growth abnormalities.\"}, \"CXorf49\": {\"gene\": \"CXorf49\", \"confidence\": 0.15, \"rationale\": \"Limited relevance to the patient's specific clinical features.\"}, \"OR2T7\": {\"gene\": \"OR2T7\", \"confidence\": 0.15, \"rationale\": \"No strong evidence connecting OR2T7 to the described phenotype.\"}, \"IL12RB2\": {\"gene\": \"IL12RB2\", \"confidence\": 0.15, \"rationale\": \"Minimal evidence supporting a direct link to the patient's condition.\"}}",
+  "parsed_top5": [
+    "WNT1",
+    "CCNYL1B",
+    "ATP6V0E2",
+    "NKX3-1",
+    "FLNC"
+  ]
+}

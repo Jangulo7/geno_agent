@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_36662884_P1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13239,
+  "tokens_out": 699,
+  "finish_reason": "stop",
+  "latency_s": 38.8807590007782,
+  "cost_usd": 0.0031860300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IRF4\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence links IRF4 mutations to hypogammaglobulinemia, abnormal B/T cell subsets, and EBV viremia, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TTC21A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Correlations with immune cell ratios are noted, but no direct causal link to the patient's specific immunophenotype.\"\n  },\n  {\n    \"gene\": \"EN2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Case reports describe immune dysregulation but lack direct mechanistic evidence matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CT45A3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"EBV infection noted, but no direct evidence linking gene to immune cell abnormalities or hypogammaglobulinemia.\"\n  },\n  {\n    \"gene\": \"IYD\",\n    \"confidence\": 0.15,\n    \"rationale\": \"EBV infection noted, but no direct evidence linking gene to immune cell abnormalities or hypogammaglobulinemia.\"\n  },\n  {\n    \"gene\": \"G3BP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"IL23A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"SLC2A14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"GCM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"TMEM131\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"PRSS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"LRRN3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"GDE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"RNF133\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  },\n  {\n    \"gene\": \"CHID1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking gene to immune deficiencies or EBV viremia.\"\n  }\n]",
+  "parsed_top5": [
+    "IRF4",
+    "TTC21A",
+    "EN2",
+    "CT45A3",
+    "IYD"
+  ]
+}

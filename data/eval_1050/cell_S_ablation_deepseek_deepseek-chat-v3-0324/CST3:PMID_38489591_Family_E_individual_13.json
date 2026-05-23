@@ -1,0 +1,26 @@
+{
+  "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CST3",
+  "orig_qwen3_8b_top1": "SRD5A3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SRD5A3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15231,
+  "tokens_out": 601,
+  "finish_reason": "stop",
+  "latency_s": 62.5790228843689,
+  "cost_usd": 0.00350897,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SRD5A3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Homozygous nonsense mutation linked to neurologic disorder with cerebellar atrophy, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SUFU\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Hypomorphic recessive variants cause Joubert syndrome with cerebellar hypoplasia, overlapping some patient features.\"\n  },\n  {\n    \"gene\": \"TBATA\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Involvement in spinocerebellar degeneration with cerebellar peduncle damage, but less specific to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TECPR2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Limited evidence linking to cerebellar atrophy, but no strong phenotypic match.\"\n  },\n  {\n    \"gene\": \"MACROH2A2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC16A14\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC35F6\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC52A1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"MAGIX\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"NAXD\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SFT2D1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"NUDT2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"POTEA\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SUCLG2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"ETV7\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to neurologic or cerebellar phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SRD5A3",
+    "SUFU",
+    "TBATA",
+    "TECPR2",
+    "MACROH2A2"
+  ]
+}

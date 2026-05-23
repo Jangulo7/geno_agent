@@ -1,0 +1,26 @@
+{
+  "case_id": "OTULIN:PMID_38630025_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "OTULIN",
+  "orig_qwen3_8b_top1": "OTULIN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OTULIN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14883,
+  "tokens_out": 778,
+  "finish_reason": "stop",
+  "latency_s": 12.295167446136475,
+  "cost_usd": 0.056319,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"OTULIN\", \"confidence\": 0.93, \"rationale\": \"OTULIN LOF causes ORAS with recurrent fever, panniculitis, neutrophilia, leukocytosis, and hepatic involvement\u2014directly matching all patient HPO phenotypes with 5/5 relevance evidence.\"}, {\"gene\": \"PRDX5\", \"confidence\": 0.02, \"rationale\": \"Only indirect evidence via MSU-induced peritonitis model; no direct link to the patient's phenotype profile.\"}, {\"gene\": \"NLRP2\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe OTULIN/ORAS, not NLRP2-specific disease; no direct support for this phenotype.\"}, {\"gene\": \"CCNG2\", \"confidence\": 0.01, \"rationale\": \"Evidence describes GATA2 haploinsufficiency and HLH, not CCNG2-specific autoinflammatory disease matching this phenotype.\"}, {\"gene\": \"SYNDIG1L\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; chunks reference OTULIN/AAT panniculitis unrelated to SYNDIG1L.\"}, {\"gene\": \"KIF4B\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking KIF4B to fever, panniculitis, neutrophilia, or hepatitis.\"}, {\"gene\": \"CER1\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; case report describes autoimmune hepatitis/neutropenia unrelated to CER1 function.\"}, {\"gene\": \"ETS1\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking ETS1 to this autoinflammatory phenotype profile.\"}, {\"gene\": \"SRSF8\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; all chunks describe OTULIN-related disease unrelated to SRSF8.\"}, {\"gene\": \"SLC30A1\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking SLC30A1 to fever, panniculitis, fasciitis, or hepatitis.\"}, {\"gene\": \"RGS13\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; chunks describe OTULIN/ORAS unrelated to RGS13.\"}, {\"gene\": \"DEFB130A\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking DEFB130A to this autoinflammatory phenotype.\"}, {\"gene\": \"NDUFB11\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; NDUFB11 is a mitochondrial complex I subunit unrelated to this phenotype.\"}, {\"gene\": \"CCDC188\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence linking CCDC188 to fever, panniculitis, fasciitis, or hepatitis.\"}, {\"gene\": \"SPRR2A\", \"confidence\": 0.005, \"rationale\": \"No gene-specific evidence; SPRR2A is a cornified envelope protein with no link to this autoinflammatory phenotype.\"}]",
+  "parsed_top5": [
+    "OTULIN",
+    "PRDX5",
+    "NLRP2",
+    "CCNG2",
+    "SYNDIG1L"
+  ]
+}

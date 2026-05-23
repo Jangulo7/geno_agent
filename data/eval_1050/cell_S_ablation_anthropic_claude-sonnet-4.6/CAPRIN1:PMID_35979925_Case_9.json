@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_9",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "DDX42",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DDX42",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 21555,
+  "tokens_out": 914,
+  "finish_reason": "stop",
+  "latency_s": 13.71564769744873,
+  "cost_usd": 0.078375,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DDX42\",\n    \"confidence\": 0.72,\n    \"rationale\": \"DDX42 chunk_3 describes TRRAP patients with prominent finger pads, thin upper lip vermilion, astigmatism, DD, and ID\u2014directly matching the patient's HPO profile across multiple specific features.\"\n  },\n  {\n    \"gene\": \"CAPRIN1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence linking CAPRIN1 to this phenotype; shared generic evidence chunks only.\"\n  },\n  {\n    \"gene\": \"UPF3B\",\n    \"confidence\": 0.04,\n    \"rationale\": \"UPF3B is associated with X-linked intellectual disability and speech delay but no specific evidence chunk directly supports this patient's full profile.\"\n  },\n  {\n    \"gene\": \"ITGA11\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking ITGA11 to this neurodevelopmental/pigmentation phenotype; only generic shared chunks provided.\"\n  },\n  {\n    \"gene\": \"OLFM2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking OLFM2 to this phenotype profile; only generic shared evidence chunks.\"\n  },\n  {\n    \"gene\": \"MGP\",\n    \"confidence\": 0.02,\n    \"rationale\": \"MGP is associated with calcification disorders, not neurodevelopmental delay with cafe-au-lait spots; no specific supporting evidence.\"\n  },\n  {\n    \"gene\": \"TCEAL6\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking TCEAL6 to this phenotype; only generic shared chunks provided.\"\n  },\n  {\n    \"gene\": \"CENPVL3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking CENPVL3 to this phenotype; only generic shared chunks provided.\"\n  },\n  {\n    \"gene\": \"DBH\",\n    \"confidence\": 0.02,\n    \"rationale\": \"DBH deficiency causes autonomic dysfunction, not the neurodevelopmental/pigmentation profile seen here; no specific supporting evidence.\"\n  },\n  {\n    \"gene\": \"KRTAP21-2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KRTAP21-2 encodes a keratin-associated protein; no plausible link to this neurodevelopmental phenotype and no specific evidence.\"\n  },\n  {\n    \"gene\": \"RAB22A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking RAB22A to this phenotype; only generic shared chunks provided.\"\n  },\n  {\n    \"gene\": \"CCDC198\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking CCDC198 to this phenotype; only generic shared chunks provided.\"\n  },\n  {\n    \"gene\": \"ZPBP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ZPBP is involved in sperm function; no plausible link to this neurodevelopmental phenotype and no specific evidence.\"\n  },\n  {\n    \"gene\": \"MCIDAS\",\n    \"confidence\": 0.01,\n    \"rationale\": \"MCIDAS is associated with ciliary dyskinesia; no specific evidence linking it to this neurodevelopmental/pigmentation profile.\"\n  },\n  {\n    \"gene\": \"FAM240C\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking FAM240C to this phenotype; only generic shared chunks provided.\"\n  }\n]",
+  "parsed_top5": [
+    "DDX42",
+    "CAPRIN1",
+    "UPF3B",
+    "ITGA11",
+    "OLFM2"
+  ]
+}

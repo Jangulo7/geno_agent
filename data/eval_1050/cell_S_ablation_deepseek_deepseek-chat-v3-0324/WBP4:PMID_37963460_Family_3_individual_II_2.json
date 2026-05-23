@@ -1,0 +1,22 @@
+{
+  "case_id": "WBP4:PMID_37963460_Family_3_individual_II_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "WBP4",
+  "orig_qwen3_8b_top1": "THAP4",
+  "orig_qwen3_8b_correct": false,
+  "top1": "BDP1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12663,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 3.9616074562072754,
+  "cost_usd": 0.00257264,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"BDP1\",\n  \"confidence\": 0.7,\n  \"rationale\": \"BDP1 has direct evidence linking it to speech delay, hypotonia, and global developmental delay, matching the patient's profile.\"\n}",
+  "parsed_top5": [
+    "BDP1"
+  ]
+}

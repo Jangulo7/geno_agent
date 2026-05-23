@@ -1,0 +1,22 @@
+{
+  "case_id": "KCNH5:PMID_36307226_Proband_16",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "KCNH5",
+  "orig_qwen3_8b_top1": "FMO5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ABCA8",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17038,
+  "tokens_out": 588,
+  "finish_reason": "stop",
+  "latency_s": 8.188079118728638,
+  "cost_usd": 0.00152768,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"HIVEP3\",\"confidence\":0.95,\"rationale\":\"HIVEP3 mutations are strongly associated with diverse seizure types including myoclonic, tonic-clonic, and status epilepticus, along with developmental delay and cerebral atrophy.\",\"gene\":\"SLC1A1\",\"confidence\":0.85,\"rationale\":\"SLC1A1 mutations are linked to generalized and focal seizures, status epilepticus, and developmental delay, aligning with the patient's phenotype.\",\"gene\":\"THTPA\",\"confidence\":0.8,\"rationale\":\"THTPA mutations are associated with drug-resistant seizures, including myoclonic and tonic-clonic types, and developmental regression.\",\"gene\":\"TRIM69\",\"confidence\":0.75,\"rationale\":\"TRIM69 mutations are linked to myoclonic and generalized seizures, status epilepticus, and developmental delay.\",\"gene\":\"SEC61G\",\"confidence\":0.7,\"rationale\":\"SEC61G mutations are associated with generalized seizures, status epilepticus, and developmental delay.\",\"gene\":\"ORC6\",\"confidence\":0.65,\"rationale\":\"ORC6 mutations are linked to myoclonic and focal seizures, along with developmental delay and cerebral atrophy.\",\"gene\":\"SLC35B2\",\"confidence\":0.6,\"rationale\":\"SLC35B2 mutations are associated with generalized and focal seizures, including status epilepticus and developmental delay.\",\"gene\":\"GMPS\",\"confidence\":0.55,\"rationale\":\"GMPS mutations are linked to myoclonic and generalized seizures, along with developmental delay.\",\"gene\":\"STK24\",\"confidence\":0.5,\"rationale\":\"STK24 mutations are associated with diverse seizure types and developmental delay, though evidence is less specific.\",\"gene\":\"BGLAP\",\"confidence\":0.45,\"rationale\":\"BGLAP mutations are linked to generalized seizures and developmental delay, but evidence is less specific.\",\"gene\":\"NYX\",\"confidence\":0.4,\"rationale\":\"NYX mutations are associated with focal and generalized seizures, but evidence is less specific.\",\"gene\":\"FMO5\",\"confidence\":0.35,\"rationale\":\"FMO5 mutations are linked to generalized seizures and developmental delay, but evidence is less specific.\",\"gene\":\"KLHL26\",\"confidence\":0.3,\"rationale\":\"KLHL26 mutations are associated with diverse seizure types and developmental delay, but evidence is less specific.\",\"gene\":\"HPN\",\"confidence\":0.25,\"rationale\":\"HPN mutations are linked to myoclonic and generalized seizures, but evidence is less specific.\",\"gene\":\"ABCA8\",\"confidence\":0.2,\"rationale\":\"ABCA8 mutations are associated with generalized seizures and developmental delay, but evidence is less specific.\"}",
+  "parsed_top5": [
+    "ABCA8"
+  ]
+}

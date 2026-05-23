@@ -1,0 +1,26 @@
+{
+  "case_id": "FBN1:PMID_24665001_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBN1",
+  "orig_qwen3_8b_top1": "FBN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21396,
+  "tokens_out": 808,
+  "finish_reason": "stop",
+  "latency_s": 12.408905982971191,
+  "cost_usd": 0.076308,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"FBN1\", \"confidence\": 0.91, \"rationale\": \"FBN1 evidence directly mentions the gene by name with 5/5 relevance, linking FBN1 variants to ectopia lentis, myopia, retrognathia, arachnodactyly, scoliosis, and high palate matching the patient's full phenotype profile.\"}, {\"gene\": \"HSPA6\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks are about SGS/MFS context but HSPA6 is not directly implicated; all evidence is non-specific to this gene.\"}, {\"gene\": \"ASPRV1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ASPRV1 to the patient's phenotype; evidence chunks reference FBN1/MFS context only.\"}, {\"gene\": \"MRPL22\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MRPL22 to the patient's phenotype; evidence chunks reference MFS/Marfan context only.\"}, {\"gene\": \"CCDC71L\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CCDC71L to the patient's phenotype; evidence chunks reference MFS/SGS context only.\"}, {\"gene\": \"CWC15\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CWC15 to the patient's phenotype; evidence chunks reference MFS/FBN1 context only.\"}, {\"gene\": \"COG6\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking COG6 to the patient's phenotype; evidence chunks reference MFS/FBN1 context only.\"}, {\"gene\": \"SIK3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SIK3 to the patient's phenotype; evidence chunks reference MFS/SGS context only.\"}, {\"gene\": \"ANKRD40CL\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ANKRD40CL to the patient's phenotype; evidence chunks reference LDS/MFS context only.\"}, {\"gene\": \"DTL\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking DTL to the patient's phenotype; evidence chunks reference MFS/FBN1 context only.\"}, {\"gene\": \"SELENOS\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SELENOS to the patient's phenotype; evidence chunks reference MFS diagnostic criteria only.\"}, {\"gene\": \"SGSH\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SGSH to the patient's phenotype; evidence chunks reference MFS/SGS context only.\"}, {\"gene\": \"CHD1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CHD1 to the patient's phenotype; evidence chunks reference MFS/SGS context only.\"}, {\"gene\": \"SUB1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SUB1 to the patient's phenotype; evidence chunks reference MFS/FBN1 context only.\"}, {\"gene\": \"FGFR1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking FGFR1 to the patient's phenotype; evidence chunks reference MFS diagnostic criteria only.\"}]",
+  "parsed_top5": [
+    "FBN1",
+    "HSPA6",
+    "ASPRV1",
+    "MRPL22",
+    "CCDC71L"
+  ]
+}

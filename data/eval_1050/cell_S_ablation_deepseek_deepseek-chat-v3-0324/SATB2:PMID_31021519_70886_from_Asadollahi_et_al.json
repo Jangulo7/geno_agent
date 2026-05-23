@@ -1,0 +1,22 @@
+{
+  "case_id": "SATB2:PMID_31021519_70886_from_Asadollahi_et_al",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SATB2",
+  "orig_qwen3_8b_top1": "SATB2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SATB2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17004,
+  "tokens_out": 49,
+  "finish_reason": "stop",
+  "latency_s": 4.281534194946289,
+  "cost_usd": 0.0034385300000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"SATB2\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Strong evidence linking SATB2 mutations to the patient's phenotypes including cleft palate, dental anomalies, and developmental delay.\"\n}",
+  "parsed_top5": [
+    "SATB2"
+  ]
+}

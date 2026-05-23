@@ -1,0 +1,22 @@
+{
+  "case_id": "EXTL3:PMID_28331220_Patient_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16919,
+  "tokens_out": 49,
+  "finish_reason": "stop",
+  "latency_s": 6.516970872879028,
+  "cost_usd": 0.0034215300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"EXTL3\",\n  \"confidence\": 0.95,\n  \"rationale\": \"EXTL3 mutations directly cause immunoskeletal dysplasia with neurodevelopmental abnormalities, matching the patient's skeletal and neurological phenotypes.\"\n}",
+  "parsed_top5": [
+    "EXTL3"
+  ]
+}

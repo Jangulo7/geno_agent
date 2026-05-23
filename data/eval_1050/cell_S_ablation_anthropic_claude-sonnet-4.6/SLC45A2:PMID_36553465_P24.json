@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P24",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21801,
+  "tokens_out": 753,
+  "finish_reason": "stop",
+  "latency_s": 13.974313735961914,
+  "cost_usd": 0.076698,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SLC45A2\",\"confidence\":0.92,\"rationale\":\"SLC45A2 evidence directly describes OCA4 patients with white eyelashes, blue irides, iris transillumination, hypopigmented hair, and reduced VA\u2014matching all patient HPO terms.\"},{\"gene\":\"ZKSCAN8\",\"confidence\":0.02,\"rationale\":\"No direct mention of ZKSCAN8 in evidence; chunks describe SLC45A2/OCA4 or OCA8 patients, not this gene.\"},{\"gene\":\"PPP1R8\",\"confidence\":0.01,\"rationale\":\"No evidence linking PPP1R8 to albinism or any of the patient's HPO phenotypes; chunks reference SLC45A2/OCA8 studies only.\"},{\"gene\":\"IL23A\",\"confidence\":0.01,\"rationale\":\"No evidence linking IL23A to pigmentation or ocular albinism phenotypes; all chunks describe unrelated albinism genes.\"},{\"gene\":\"HLCS\",\"confidence\":0.01,\"rationale\":\"No evidence linking HLCS to the oculocutaneous albinism phenotype profile presented in the patient.\"},{\"gene\":\"DCP1A\",\"confidence\":0.01,\"rationale\":\"No evidence linking DCP1A to albinism or the patient's HPO phenotypes; chunks reference SLC45A2/OCA studies only.\"},{\"gene\":\"OR6Q1\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no evidence linking it to albinism or the patient's pigmentation/ocular phenotypes.\"},{\"gene\":\"MTM1\",\"confidence\":0.01,\"rationale\":\"MTM1 is associated with myotubular myopathy, not albinism; no relevant evidence in provided chunks.\"},{\"gene\":\"PTGES3L\",\"confidence\":0.01,\"rationale\":\"No evidence linking PTGES3L to oculocutaneous albinism or any of the patient's HPO phenotypes.\"},{\"gene\":\"WSCD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking WSCD1 to albinism; chunks reference Waardenburg syndrome and SLC45A2 studies unrelated to this gene.\"},{\"gene\":\"OR52E6\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no evidence linking it to albinism or the patient's pigmentation/ocular phenotypes.\"},{\"gene\":\"BST1\",\"confidence\":0.01,\"rationale\":\"BST1 is a cell surface antigen; no evidence linking it to oculocutaneous albinism or the patient's HPO phenotypes.\"},{\"gene\":\"SHISA4\",\"confidence\":0.01,\"rationale\":\"No evidence linking SHISA4 to albinism or the patient's HPO phenotypes; chunks reference unrelated albinism genes.\"},{\"gene\":\"OR1P1\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no evidence linking it to albinism or the patient's pigmentation/ocular phenotypes.\"},{\"gene\":\"BSN\",\"confidence\":0.01,\"rationale\":\"BSN (Bassoon) is a presynaptic scaffolding protein; no evidence linking it to oculocutaneous albinism or the patient's HPO phenotypes.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ZKSCAN8",
+    "PPP1R8",
+    "IL23A",
+    "HLCS"
+  ]
+}

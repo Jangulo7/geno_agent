@@ -1,0 +1,20 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_13",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "MSL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15086,
+  "tokens_out": 34,
+  "finish_reason": "stop",
+  "latency_s": 2.6402533054351807,
+  "cost_usd": 0.0012164,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the 'patient' section which contains the HPO phenotypes. Please provide the HPO phenotypes for the patient.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the 'patient' section which contains the HPO phenotypes. Please provide the HPO phenotypes for the patient.\"}",
+  "parsed_top5": []
+}

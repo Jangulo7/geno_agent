@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_III_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19933,
+  "tokens_out": 999,
+  "finish_reason": "stop",
+  "latency_s": 13.748081684112549,
+  "cost_usd": 0.074784,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CCN2\",\n    \"confidence\": 0.82,\n    \"rationale\": \"CCN2 evidence directly describes patients with short/broad femoral necks, platyspondyly, hyperostosis, waddling gait, joint swelling/pain, limited joint mobility, genu valgum, and short stature matching all patient HPOs.\"\n  },\n  {\n    \"gene\": \"MILR1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct CCN2-level evidence linking MILR1 to this skeletal dysplasia phenotype; evidence chunks are generic/non-specific to this gene.\"\n  },\n  {\n    \"gene\": \"EGFL7\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking EGFL7 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ZNF217\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence linking ZNF217 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"POMZP3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking POMZP3 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"PRG2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking PRG2 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"MCOLN1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking MCOLN1 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SLC29A4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking SLC29A4 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"UQCC1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking UQCC1 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"TMEM196\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking TMEM196 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"TSPAN16\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking TSPAN16 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"NDUFAF4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking NDUFAF4 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SSBP4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking SSBP4 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ATL1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking ATL1 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"LRRTM4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking LRRTM4 to this skeletal dysplasia phenotype; evidence chunks are generic and not gene-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "CCN2",
+    "MILR1",
+    "EGFL7",
+    "ZNF217",
+    "POMZP3"
+  ]
+}

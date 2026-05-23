@@ -1,0 +1,26 @@
+{
+  "case_id": "HMBS:PMID_15534187_proband",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "HMBS",
+  "orig_qwen3_8b_top1": "HMBS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HMBS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19109,
+  "tokens_out": 745,
+  "finish_reason": "stop",
+  "latency_s": 13.844985723495483,
+  "cost_usd": 0.068502,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"HMBS\", \"confidence\": 0.91, \"rationale\": \"HMBS encodes porphobilinogen deaminase; reduced erythrocyte PBGD activity, elevated urinary coproporphyrin, neuropathy, and developmental delay match homozygous dominant AIP caused by biallelic HMBS mutations.\"}, {\"gene\": \"BECN1\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe UROS/CEP, not BECN1; no direct link to the patient's phenotype profile.\"}, {\"gene\": \"NEK1\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe UROS/CEP unrelated to NEK1; no phenotypic overlap supported.\"}, {\"gene\": \"LCE2C\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe UROS/CEP unrelated to LCE2C; no phenotypic overlap supported.\"}, {\"gene\": \"SCYL1\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe UROS/CEP unrelated to SCYL1; no phenotypic overlap supported.\"}, {\"gene\": \"GTF2E1\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe UROS/CEP unrelated to GTF2E1; no phenotypic overlap supported.\"}, {\"gene\": \"OR10A4\", \"confidence\": 0.005, \"rationale\": \"Olfactory receptor gene with no disease relevance; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"GOLGA8Q\", \"confidence\": 0.005, \"rationale\": \"No disease association relevant to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"NIBAN3\", \"confidence\": 0.005, \"rationale\": \"No disease association relevant to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"TCAF2\", \"confidence\": 0.005, \"rationale\": \"No disease association relevant to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"SUSD6\", \"confidence\": 0.005, \"rationale\": \"No disease association relevant to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"CT47A11\", \"confidence\": 0.005, \"rationale\": \"No disease association relevant to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"ATP1A2\", \"confidence\": 0.005, \"rationale\": \"ATP1A2 causes familial hemiplegic migraine, not matching this porphyria/neuropathy profile.\"}, {\"gene\": \"MRPL54\", \"confidence\": 0.005, \"rationale\": \"Mitochondrial ribosomal gene with no established link to this phenotype; evidence chunks describe unrelated CEP/UROS.\"}, {\"gene\": \"OR51G2\", \"confidence\": 0.005, \"rationale\": \"Olfactory receptor gene with no disease relevance; evidence chunks describe unrelated CEP/UROS.\"}]",
+  "parsed_top5": [
+    "HMBS",
+    "BECN1",
+    "NEK1",
+    "LCE2C",
+    "SCYL1"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "CMPK2:PMID_36443312_Family_1_II_3",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CMPK2",
+  "orig_qwen3_8b_top1": "CMPK2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CMPK2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12067,
+  "tokens_out": 54,
+  "finish_reason": "stop",
+  "latency_s": 7.661355972290039,
+  "cost_usd": 0.00245498,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CMPK2\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Direct evidence links CMPK2 to familial brain calcification with specific involvement of globus pallidus, thalamus, and cerebellum.\"\n}",
+  "parsed_top5": [
+    "CMPK2"
+  ]
+}

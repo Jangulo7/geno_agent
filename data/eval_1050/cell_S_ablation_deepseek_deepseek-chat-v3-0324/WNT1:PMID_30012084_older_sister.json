@@ -1,0 +1,22 @@
+{
+  "case_id": "WNT1:PMID_30012084_older_sister",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "WNT1",
+  "orig_qwen3_8b_top1": "WNT1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "WNT1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12982,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 4.459474563598633,
+  "cost_usd": 0.00263875,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"WNT1\",\n  \"confidence\": 0.95,\n  \"rationale\": \"WNT1 mutations directly cause osteogenesis imperfecta with fractures, short stature, and platyspondyly, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "WNT1"
+  ]
+}

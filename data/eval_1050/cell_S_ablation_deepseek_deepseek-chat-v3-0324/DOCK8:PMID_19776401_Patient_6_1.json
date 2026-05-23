@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_19776401_Patient_6_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16359,
+  "tokens_out": 649,
+  "finish_reason": "stop",
+  "latency_s": 29.53540873527527,
+  "cost_usd": 0.0037715300000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DOCK8\",\n    \"confidence\": 0.95,\n    \"rationale\": \"DOCK8 deficiency matches the patient's phenotype profile with recurrent infections, eczema, and bronchiectasis.\"\n  },\n  {\n    \"gene\": \"DNAAF11\",\n    \"confidence\": 0.3,\n    \"rationale\": \"DNAAF11 is associated with PCD, but the patient lacks situs inversus, a key feature.\"\n  },\n  {\n    \"gene\": \"SHANK3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"SHANK3 mutations are linked to neurodevelopmental disorders, not the patient's infection profile.\"\n  },\n  {\n    \"gene\": \"FIS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FIS1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"OR2M4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting OR2M4 to the clinical presentation.\"\n  },\n  {\n    \"gene\": \"SLFNL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SLFNL1 as causal for the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"KCNU1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking KCNU1 to recurrent infections or immune deficiency.\"\n  },\n  {\n    \"gene\": \"BIN3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting BIN3 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"FGG\",\n    \"confidence\": 0.1,\n    \"rationale\": \"FGG mutations are not associated with the patient's immune and infection profile.\"\n  },\n  {\n    \"gene\": \"BOK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking BOK to recurrent infections or immune dysfunction.\"\n  },\n  {\n    \"gene\": \"TSTD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting TSTD1 to the clinical presentation.\"\n  },\n  {\n    \"gene\": \"ELOVL6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supporting ELOVL6 as causal for the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DDX28\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking DDX28 to recurrent infections or immune deficiency.\"\n  },\n  {\n    \"gene\": \"MEIOC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting MEIOC to the clinical presentation.\"\n  },\n  {\n    \"gene\": \"OSER1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting OSER1 as causal for the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "DOCK8",
+    "DNAAF11",
+    "SHANK3",
+    "FIS1",
+    "OR2M4"
+  ]
+}

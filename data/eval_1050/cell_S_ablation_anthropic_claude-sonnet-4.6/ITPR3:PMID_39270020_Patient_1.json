@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "FHL2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FHL2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 22429,
+  "tokens_out": 862,
+  "finish_reason": "stop",
+  "latency_s": 15.57290267944336,
+  "cost_usd": 0.080217,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"FHL2\", \"confidence\": 0.12, \"rationale\": \"FHL2 chunk_3 uniquely describes decreased TEMRA CD8+ T cells and abnormal naive/memory T cell proportions matching patient, but evidence is indirect and critic_relevance low.\"},\n  {\"gene\": \"CIMAP1A\", \"confidence\": 0.08, \"rationale\": \"Shared evidence chunks describe combined T/B cell immunodeficiency with vaccine response failure; no gene-specific mechanistic link to this immune phenotype.\"},\n  {\"gene\": \"TTC12\", \"confidence\": 0.07, \"rationale\": \"Evidence chunks overlap with other candidates; no specific mechanistic link between TTC12 and the combined T cell lymphopenia/IgA elevation phenotype.\"},\n  {\"gene\": \"MRPS11\", \"confidence\": 0.07, \"rationale\": \"Mitochondrial ribosomal protein; shared evidence chunks describe immunodeficiency but no direct mechanistic link to T cell proliferation defects.\"},\n  {\"gene\": \"ATG101\", \"confidence\": 0.07, \"rationale\": \"Autophagy factor with potential immune roles; shared evidence chunks but no direct evidence linking ATG101 to this specific T cell immunodeficiency profile.\"},\n  {\"gene\": \"HSPA8\", \"confidence\": 0.07, \"rationale\": \"Heat shock protein with chaperone roles; shared evidence chunks but no specific link to decreased T cell counts and impaired proliferation phenotype.\"},\n  {\"gene\": \"GNPTAB\", \"confidence\": 0.06, \"rationale\": \"Lysosomal enzyme involved in mucolipidosis; shared evidence chunks but no direct mechanistic connection to T cell lymphopenia or IgA elevation.\"},\n  {\"gene\": \"SAMD4A\", \"confidence\": 0.06, \"rationale\": \"RNA-binding protein; shared evidence chunks describe immunodeficiency but no established role in T cell proliferation or lymphocyte homeostasis.\"},\n  {\"gene\": \"USP2\", \"confidence\": 0.06, \"rationale\": \"Deubiquitinase with some immune regulatory roles; shared evidence chunks but no specific mechanistic link to this combined immunodeficiency phenotype.\"},\n  {\"gene\": \"PRSS1\", \"confidence\": 0.06, \"rationale\": \"Serine protease primarily associated with pancreatitis; shared evidence chunks but no plausible mechanistic link to T cell lymphopenia or IgA elevation.\"},\n  {\"gene\": \"ME1\", \"confidence\": 0.05, \"rationale\": \"Malic enzyme involved in metabolism; shared evidence chunks but no established connection to T cell immunodeficiency or antibody response defects.\"},\n  {\"gene\": \"PADI1\", \"confidence\": 0.05, \"rationale\": \"Peptidylarginine deiminase; shared evidence chunks but no known role in T cell development, proliferation, or immunoglobulin regulation.\"},\n  {\"gene\": \"DBI\", \"confidence\": 0.05, \"rationale\": \"Diazepam binding inhibitor; shared evidence chunks but no established mechanistic link to T cell lymphopenia or impaired vaccine responses.\"},\n  {\"gene\": \"OSER1\", \"confidence\": 0.05, \"rationale\": \"Oxidative stress responsive protein; shared evidence chunks but no known role in T cell biology or combined immunodeficiency.\"},\n  {\"gene\": \"HMGN5\", \"confidence\": 0.05, \"rationale\": \"Nucleosome-binding protein; shared evidence chunks but no established connection to T cell proliferation defects or immunoglobulin dysregulation.\"}\n]",
+  "parsed_top5": [
+    "FHL2",
+    "CIMAP1A",
+    "TTC12",
+    "MRPS11",
+    "ATG101"
+  ]
+}

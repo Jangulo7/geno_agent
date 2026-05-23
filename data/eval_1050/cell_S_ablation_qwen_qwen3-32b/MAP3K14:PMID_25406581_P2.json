@@ -1,0 +1,22 @@
+{
+  "case_id": "MAP3K14:PMID_25406581_P2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "MAP3K14",
+  "orig_qwen3_8b_top1": "MALT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MT-ATP8",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15704,
+  "tokens_out": 552,
+  "finish_reason": "stop",
+  "latency_s": 12.789634466171265,
+  "cost_usd": 0.00141088,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"IMPA2\",\"confidence\":0.85,\"rationale\":\"IMPA2 evidence directly links to B-cell subset abnormalities and immunoglobulin deficiencies matching the patient's phenotype.\",\"gene\":\"DPF1\",\"confidence\":0.7,\"rationale\":\"DPF1 evidence shows reduced switched-memory B cells and IgM deficiencies consistent with the patient's immunophenotype.\",\"gene\":\"PHETA1\",\"confidence\":0.65,\"rationale\":\"PHETA1 evidence includes low switched-memory B cells and IgM reduction aligning with patient findings.\",\"gene\":\"MALT1\",\"confidence\":0.6,\"rationale\":\"MALT1 evidence shows B-cell subset changes and IgM issues relevant to the patient's immune profile.\",\"gene\":\"FYTTD1\",\"confidence\":0.55,\"rationale\":\"FYTTD1 evidence includes B-cell subset abnormalities and IgM deficiencies seen in the patient.\",\"gene\":\"TMC6\",\"confidence\":0.5,\"rationale\":\"TMC6 evidence shows B-cell and IgM abnormalities partially matching the patient's phenotype.\",\"gene\":\"RHBDL1\",\"confidence\":0.45,\"rationale\":\"RHBDL1 evidence includes B-cell subset changes and IgM issues relevant to the patient.\",\"gene\":\"SPIDR\",\"confidence\":0.4,\"rationale\":\"SPIDR evidence shows B-cell and IgM abnormalities partially overlapping with patient findings.\",\"gene\":\"AIFM2\",\"confidence\":0.35,\"rationale\":\"AIFM2 evidence includes B-cell and IgM issues but with less direct relevance to the patient's phenotype.\",\"gene\":\"TANK\",\"confidence\":0.3,\"rationale\":\"TANK evidence shows B-cell and IgM changes but with limited specificity to the patient's profile.\",\"gene\":\"YAE1\",\"confidence\":0.25,\"rationale\":\"YAE1 evidence includes B-cell and IgM abnormalities but with less direct connection to the patient.\",\"gene\":\"HIBADH\",\"confidence\":0.2,\"rationale\":\"HIBADH evidence shows B-cell and IgM issues but with weaker alignment to the patient's phenotype.\",\"gene\":\"BMP2K\",\"confidence\":0.15,\"rationale\":\"BMP2K evidence includes B-cell and IgM changes but with minimal direct relevance to the patient.\",\"gene\":\"SIGLEC1\",\"confidence\":0.1,\"rationale\":\"SIGLEC1 evidence shows B-cell and IgM abnormalities but with limited specificity to the patient.\",\"gene\":\"MT-ATP8\",\"confidence\":0.05,\"rationale\":\"MT-ATP8 evidence is less relevant to B-cell and IgM deficiencies in the patient's phenotype.\"}",
+  "parsed_top5": [
+    "MT-ATP8"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R1928_individual_RS",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17919,
+  "tokens_out": 700,
+  "finish_reason": "stop",
+  "latency_s": 22.261516571044922,
+  "cost_usd": 0.00162952,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"NF1\", \"confidence\": 0.98, \"rationale\": \"Strong evidence directly links NF1 to the patient's HPO phenotypes including neurofibromas, cafe-au-lait spots, axillary/inguinal freckling, Lisch nodules, and optic glioma.\"}, {\"gene\": \"MICAL3\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking MICAL3 to the patient's phenotype.\"}, {\"gene\": \"CHRNB2\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking CHRNB2 to the patient's phenotype.\"}, {\"gene\": \"TIAL1\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking TIAL1 to the patient's phenotype.\"}, {\"gene\": \"TPRN\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking TPRN to the patient's phenotype.\"}, {\"gene\": \"SMYD2\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking SMYD2 to the patient's phenotype.\"}, {\"gene\": \"KAZALD1\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking KAZALD1 to the patient's phenotype.\"}, {\"gene\": \"PMEL\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking PMEL to the patient's phenotype.\"}, {\"gene\": \"PYHIN1\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking PYHIN1 to the patient's phenotype.\"}, {\"gene\": \"ZNF713\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking ZNF713 to the patient's phenotype.\"}, {\"gene\": \"KAT2B\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking KAT2B to the patient's phenotype.\"}, {\"gene\": \"ZNF138\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking ZNF138 to the patient's phenotype.\"}, {\"gene\": \"GALNT15\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking GALNT15 to the patient's phenotype.\"}, {\"gene\": \"PHB2\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking PHB2 to the patient's phenotype.\"}, {\"gene\": \"ACTMAP\", \"confidence\": 0.05, \"rationale\": \"Mentions of NF1 diagnostic criteria but no direct evidence linking ACTMAP to the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "MICAL3",
+    "CHRNB2",
+    "TIAL1",
+    "TPRN"
+  ]
+}

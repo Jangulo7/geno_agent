@@ -1,0 +1,22 @@
+{
+  "case_id": "NBAS:PMID_31761904_Individual_NBAS_11",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "TONSL",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10129,
+  "tokens_out": 51,
+  "finish_reason": "stop",
+  "latency_s": 1.3198442459106445,
+  "cost_usd": 0.0008246,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"NBAS mutations cause SOPH syndrome with short stature, Pelger-Huet anomaly, immunodeficiency, and optic atrophy matching patient's phenotype.\"}",
+  "parsed_top5": [
+    "NBAS"
+  ]
+}

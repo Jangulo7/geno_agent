@@ -1,0 +1,22 @@
+{
+  "case_id": "CMPK2:PMID_36443312_Family_1_II_3",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CMPK2",
+  "orig_qwen3_8b_top1": "CMPK2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CMPK2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13163,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 9.41407322883606,
+  "cost_usd": 0.00106928,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CMPK2\", \"confidence\": 0.95, \"rationale\": \"CMPK2 mutations are directly linked to brain calcification patterns including globus pallidus, thalamus, and cerebellum as described in the evidence.\"}",
+  "parsed_top5": [
+    "CMPK2"
+  ]
+}

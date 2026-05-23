@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_25",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HINT1",
+  "top1_correct": false,
+  "causal_rank": 9,
+  "tokens_in": 14559,
+  "tokens_out": 603,
+  "finish_reason": "stop",
+  "latency_s": 18.703680515289307,
+  "cost_usd": 0.0033761100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HINT1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking HINT1 to intellectual disability and neurodevelopmental disorders matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SRCAP\",\n    \"confidence\": 0.6,\n    \"rationale\": \"SRCAP mutations are associated with Floating-Harbor syndrome, which includes short stature and intellectual disability but lacks some key features.\"\n  },\n  {\n    \"gene\": \"NHERF4\",\n    \"rationale\": \"Some overlap with intellectual disability and autistic behavior, but evidence weaker and less specific.\",\n    \"confidence\": 0.35\n  },\n  {\n    \"gene\": \"CTNND2\",\n    \"rationale\": \"Limited evidence, but some association with neurodevelopmental disorders.\",\n    \"confidence\": 0.3\n  },\n  {\n    \"gene\": \"USP42\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Very limited evidence linking to neurodevelopmental phenotypes with no direct matches.\"\n  },\n  {\n    \"gene\": \"TRIP11\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal evidence connecting to the patient's primary phenotypes.\"\n  },\n  {\n    \"gene\": \"MMP21\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong supportive evidence for the patient's core phenotypes.\"\n  },\n  {\n    \"gene\": \"SULT2A1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Evidence insufficient to link to the patient's combined phenotype.\"\n  },\n  {\n    \"gene\": \"UBR5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No clear evidence supporting a strong phenotypic match.\"\n  },\n  {\n    \"gene\": \"IQCH\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Limited and non-specific evidence.\"\n  },\n  {\n    \"gene\": \"RIPK1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Evidence poorly matches the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"INSL5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No credible evidence linking to neurological or developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"PCNT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence for core neurodevelopmental phenotypes listed.\"\n  },\n  {\n    \"gene\": \"LENG8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Minimal phenotypic overlap with patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DNAJC17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Evidence does not strongly support a causal role.\"\n  }\n]",
+  "parsed_top5": [
+    "HINT1",
+    "SRCAP",
+    "NHERF4",
+    "CTNND2",
+    "USP42"
+  ]
+}

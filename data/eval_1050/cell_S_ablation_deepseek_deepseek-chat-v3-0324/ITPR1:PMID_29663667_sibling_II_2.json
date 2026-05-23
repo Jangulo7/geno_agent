@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16698,
+  "tokens_out": 630,
+  "finish_reason": "stop",
+  "latency_s": 35.45311784744263,
+  "cost_usd": 0.0038247000000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"ITPR1\",\n      \"confidence\": 0.95,\n      \"rationale\": \"Directly linked to Gillespie syndrome, matching all key phenotypes including aniridia, cerebellar atrophy, and intellectual disability.\"\n    },\n    {\n      \"gene\": \"ADSL\",\n      \"confidence\": 0.3,\n      \"rationale\": \"Associated with intellectual disability and hypotonia but lacks evidence for cerebellar atrophy or aniridia.\"\n    },\n    {\n      \"gene\": \"CYFIP1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"\n    },\n    {\n      \"gene\": \"RNASE1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"NANOGP8\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"TMEM200C\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"CHST5\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"LRRTM4\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"GBE1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"ANKRD2\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"DDRGK1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"CCDC181\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"OARD1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"LTA\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    },\n    {\n      \"gene\": \"PALS1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No relevant evidence supporting association with the patient's clinical presentation.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "ITPR1",
+    "ADSL",
+    "CYFIP1",
+    "RNASE1",
+    "NANOGP8"
+  ]
+}

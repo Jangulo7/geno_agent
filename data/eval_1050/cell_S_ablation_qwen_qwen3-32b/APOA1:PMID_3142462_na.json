@@ -1,0 +1,26 @@
+{
+  "case_id": "APOA1:PMID_3142462_na",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "APOA1",
+  "orig_qwen3_8b_top1": "DGKE",
+  "orig_qwen3_8b_correct": false,
+  "top1": "APOA1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19699,
+  "tokens_out": 687,
+  "finish_reason": "stop",
+  "latency_s": 26.37975573539734,
+  "cost_usd": 0.0017682800000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"APOA1\", \"confidence\": 0.92, \"rationale\": \"APOA1 mutations cause hepatic amyloidosis and are linked to the patient's phenotype.\"}, {\"gene\": \"DGKE\", \"confidence\": 0.78, \"rationale\": \"DGKE mutations are associated with aHUS, including thrombocytopenia and hypertension.\"}, {\"gene\": \"KIR3DL2\", \"confidence\": 0.65, \"rationale\": \"KIR3DL2 is linked to immune-mediated thrombocytopenia, a feature of the patient's phenotype.\"}, {\"gene\": \"ENSA\", \"confidence\": 0.55, \"rationale\": \"ENSA is involved in platelet function and thrombocytopenia, relevant to the patient's symptoms.\"}, {\"gene\": \"ATP5MC1\", \"confidence\": 0.45, \"rationale\": \"ATP5MC1 is weakly associated with thrombocytopenia and bruising, but not directly with amyloidosis.\"}, {\"gene\": \"SLC26A2\", \"confidence\": 0.42, \"rationale\": \"SLC26A2 is linked to platelet dysfunction and bruising, but not directly to amyloidosis.\"}, {\"gene\": \"ORC6\", \"confidence\": 0.38, \"rationale\": \"ORC6 is not directly linked to the patient's phenotypes but is involved in DNA replication.\"}, {\"gene\": \"GJA10\", \"confidence\": 0.35, \"rationale\": \"GJA10 is not directly linked to the patient's phenotypes but is involved in cell communication.\"}, {\"gene\": \"C2CD4D\", \"confidence\": 0.32, \"rationale\": \"C2CD4D is not directly linked to the patient's phenotypes but is involved in immune function.\"}, {\"gene\": \"CHCHD1\", \"confidence\": 0.30, \"rationale\": \"CHCHD1 is not directly linked to the patient's phenotypes but is involved in mitochondrial function.\"}, {\"gene\": \"CDPF1\", \"confidence\": 0.28, \"rationale\": \"CDPF1 is not directly linked to the patient's phenotypes but is involved in cell signaling.\"}, {\"gene\": \"H3-4\", \"confidence\": 0.25, \"rationale\": \"H3-4 is not directly linked to the patient's phenotypes but is involved in histone function.\"}, {\"gene\": \"SCOC\", \"confidence\": 0.22, \"rationale\": \"SCOC is not directly linked to the patient's phenotypes but is involved in cell cycle regulation.\"}, {\"gene\": \"GYPB\", \"confidence\": 0.20, \"rationale\": \"GYPB is not directly linked to the patient's phenotypes but is involved in red blood cell function.\"}, {\"gene\": \"TMEM63B\", \"confidence\": 0.18, \"rationale\": \"TMEM63B is not directly linked to the patient's phenotypes but is involved in platelet function.\"}]",
+  "parsed_top5": [
+    "APOA1",
+    "DGKE",
+    "KIR3DL2",
+    "ENSA",
+    "ATP5MC1"
+  ]
+}

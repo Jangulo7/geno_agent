@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_16965330_patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19229,
+  "tokens_out": 788,
+  "finish_reason": "stop",
+  "latency_s": 10.816676378250122,
+  "cost_usd": 0.069507,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.97,\"rationale\":\"AIRE mutations cause APS-1 (APECED), directly explaining all four HPO phenotypes: hypoparathyroidism, primary adrenal insufficiency, alopecia, and keratoconjunctivitis, with multiple high-relevance evidence chunks explicitly naming AIRE.\"},{\"gene\":\"RAP1GAP\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RAP1GAP to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"MGAM\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MGAM to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"ELAVL3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ELAVL3 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"VCPKMT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking VCPKMT to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"ECI2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ECI2 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"MEIKIN\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MEIKIN to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"ICAM3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ICAM3 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"KCTD15\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KCTD15 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"MYL10\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MYL10 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"TK2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TK2 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"LRRC25\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LRRC25 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"NCALD\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NCALD to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"PCMTD1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PCMTD1 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"},{\"gene\":\"LGR4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LGR4 to the patient's phenotypes; evidence chunks only discuss AIRE/APS-1 in background context.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "RAP1GAP",
+    "MGAM",
+    "ELAVL3",
+    "VCPKMT"
+  ]
+}

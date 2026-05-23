@@ -1,0 +1,22 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F9",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16820,
+  "tokens_out": 50,
+  "finish_reason": "stop",
+  "latency_s": 9.37877869606018,
+  "cost_usd": 0.0034025,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"IKZF1\",\n  \"confidence\": 0.9,\n  \"rationale\": \"IKZF1 mutations directly cause B cell development defects and hypogammaglobulinemia matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "IKZF1"
+  ]
+}

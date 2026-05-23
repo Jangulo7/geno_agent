@@ -1,0 +1,26 @@
+{
+  "case_id": "TRAF3:PMID_35960817_Family_A_A1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TRAF3",
+  "orig_qwen3_8b_top1": "TRAF3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TRAF3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21753,
+  "tokens_out": 907,
+  "finish_reason": "stop",
+  "latency_s": 18.382771968841553,
+  "cost_usd": 0.078864,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are essentially identical across all genes (all rated critic_relevance=2/5, none directly mentioning the specific gene). Since the literature evidence doesn't differentiate between genes, I must rely on prior biological knowledge. The phenotype profile (lymphoid hyperplasia, decreased anti-polysaccharide antibody response, recurrent otitis media, bronchiectasis, recurrent sinopulmonary infections, splenomegaly, anti-Ro/SS-A positivity) is consistent with a primary antibody deficiency/CVID-like syndrome. Among the candidates, TRAF3 has known roles in B-cell survival and NF-\u03baB signaling relevant to antibody production; CCDC22 (X-linked) is associated with immunodeficiency with recurrent infections; GON7 is part of the KEOPS complex linked to IEI. None are classic CVID genes, but TRAF3 has the strongest immunological rationale.\n\n[{\"gene\":\"TRAF3\",\"confidence\":0.18,\"rationale\":\"TRAF3 regulates NF-\u03baB and B-cell survival signaling; deficiency can cause antibody deficiency with recurrent sinopulmonary infections and lymphoid hyperplasia.\"},{\"gene\":\"CCDC22\",\"confidence\":0.12,\"rationale\":\"CCDC22 is X-linked and associated with immunodeficiency syndrome featuring recurrent infections and immune dysregulation.\"},{\"gene\":\"GON7\",\"confidence\":0.09,\"rationale\":\"GON7 (KEOPS complex) has emerging links to inborn errors of immunity with antibody deficiency phenotypes.\"},{\"gene\":\"ITGAV\",\"confidence\":0.07,\"rationale\":\"ITGAV integrin signaling can influence immune cell trafficking and B-cell responses, weakly relevant to this phenotype.\"},{\"gene\":\"CENPM\",\"confidence\":0.07,\"rationale\":\"CENPM chunk includes IEI/polysaccharide antibody deficiency introduction text, slightly more specific context than most others.\"},{\"gene\":\"DSCC1\",\"confidence\":0.06,\"rationale\":\"No direct gene-phenotype link; evidence chunks are generic immunodeficiency background not specific to DSCC1.\"},{\"gene\":\"TMIGD2\",\"confidence\":0.06,\"rationale\":\"TMIGD2 is an immune checkpoint receptor; indirect relevance to immune dysregulation but no direct antibody deficiency link.\"},{\"gene\":\"NBPF15\",\"confidence\":0.05,\"rationale\":\"No known immunological function; evidence is generic and not specific to NBPF15.\"},{\"gene\":\"PDLIM7\",\"confidence\":0.05,\"rationale\":\"PDLIM7 has no established role in primary antibody deficiency; evidence is non-specific.\"},{\"gene\":\"L1TD1\",\"confidence\":0.05,\"rationale\":\"L1TD1 has no known immune function relevant to this phenotype profile.\"},{\"gene\":\"AKAP6\",\"confidence\":0.05,\"rationale\":\"AKAP6 is a scaffolding protein with no established link to primary antibody deficiency.\"},{\"gene\":\"TSR2\",\"confidence\":0.05,\"rationale\":\"TSR2 is involved in ribosome biogenesis; no direct link to antibody deficiency or sinopulmonary infections.\"},{\"gene\":\"MRPS15\",\"confidence\":0.04,\"rationale\":\"MRPS15 is a mitochondrial ribosomal protein with no known role in primary antibody deficiency.\"},{\"gene\":\"PADI1\",\"confidence\":0.04,\"rationale\":\"PADI1 citrullinates proteins; anti-Ro positivity is noted but PADI1 is not causally linked to this immunodeficiency profile.\"},{\"gene\":\"CLDN20\",\"confidence\":0.03,\"rationale\":\"CLDN20 is a claudin tight-junction protein with no established role in primary antibody deficiency or sinopulmonary infections.\"}]",
+  "parsed_top5": [
+    "TRAF3",
+    "CCDC22",
+    "GON7",
+    "ITGAV",
+    "CENPM"
+  ]
+}

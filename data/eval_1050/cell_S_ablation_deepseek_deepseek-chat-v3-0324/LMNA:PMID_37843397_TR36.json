@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR36",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17252,
+  "tokens_out": 727,
+  "finish_reason": "stop",
+  "latency_s": 69.36188006401062,
+  "cost_usd": 0.00401019,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy type 2 (FPLD2) with matching phenotypes.\"\n  },\n  {\n    \"gene\": \"PPARG\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentioned in FPLD cases but less directly linked to the specific phenotype profile compared to LMNA.\"\n  },\n  {\n    \"gene\": \"AFMID\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AFMID to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ARAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ARAP1 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CAMKK2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CAMKK2 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"DUSP26\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DUSP26 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"RFXAP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RFXAP to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ZIM3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZIM3 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"COLGALT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking COLGALT2 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"C5orf34\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C5orf34 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"TIMM44\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TIMM44 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"PRAMEF17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PRAMEF17 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"BMS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BMS1 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"PRSS35\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PRSS35 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"SMARCA4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SMARCA4 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CAP1 to lipodystrophy or metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "PPARG",
+    "AFMID",
+    "ARAP1",
+    "CAMKK2"
+  ]
+}

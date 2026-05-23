@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_31",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13017,
+  "tokens_out": 702,
+  "finish_reason": "stop",
+  "latency_s": 14.103815793991089,
+  "cost_usd": 0.049581,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"STXBP1\",\"confidence\":0.72,\"rationale\":\"STXBP1 evidence directly describes DEE with myoclonic, tonic, focal impaired awareness seizures, intellectual disability, aggression, and absent/delayed speech matching the patient's full phenotype profile.\"},{\"gene\":\"ATP7B\",\"confidence\":0.06,\"rationale\":\"ATP7B evidence mentions focal impaired awareness and myoclonic seizures with cognitive impairment, but Wilson disease typically lacks absent speech and skeletal features like kyphosis/short neck.\"},{\"gene\":\"CENPO\",\"confidence\":0.02,\"rationale\":\"No direct CENPO-specific evidence; shared generic epilepsy literature chunks do not support CENPO as a neurodevelopmental epilepsy gene.\"},{\"gene\":\"IL22\",\"confidence\":0.02,\"rationale\":\"IL22 is an immune cytokine gene with no established link to epileptic encephalopathy or intellectual disability; evidence chunks are generic.\"},{\"gene\":\"ARHGAP18\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking ARHGAP18 to this phenotype; shared chunks are non-specific epilepsy literature.\"},{\"gene\":\"WDR18\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking WDR18 to epileptic encephalopathy or intellectual disability with absent speech.\"},{\"gene\":\"IFT140\",\"confidence\":0.02,\"rationale\":\"IFT140 is a ciliopathy gene; no evidence linking it to this epilepsy-intellectual disability phenotype profile.\"},{\"gene\":\"LGR5\",\"confidence\":0.02,\"rationale\":\"LGR5 is a stem cell marker with no established role in epileptic encephalopathy or intellectual disability.\"},{\"gene\":\"PCDH20\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking PCDH20 to this neurodevelopmental epilepsy phenotype.\"},{\"gene\":\"FBRSL1\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking FBRSL1 to this epilepsy and intellectual disability phenotype profile.\"},{\"gene\":\"GK3\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking GK3 to epileptic encephalopathy or the patient's phenotype.\"},{\"gene\":\"SLBP\",\"confidence\":0.02,\"rationale\":\"SLBP is a histone mRNA processing gene with no established link to this epilepsy-intellectual disability phenotype.\"},{\"gene\":\"ZZZ3\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking ZZZ3 to epileptic encephalopathy or intellectual disability with absent speech.\"},{\"gene\":\"SOX4\",\"confidence\":0.02,\"rationale\":\"SOX4 is a transcription factor; no specific evidence linking it to this epilepsy-intellectual disability phenotype.\"},{\"gene\":\"SNX11\",\"confidence\":0.02,\"rationale\":\"SNX11 evidence chunks are generic; no direct link to epileptic encephalopathy with absent speech and skeletal features.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "ATP7B",
+    "CENPO",
+    "IL22",
+    "ARHGAP18"
+  ]
+}

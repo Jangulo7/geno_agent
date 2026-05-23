@@ -1,0 +1,26 @@
+{
+  "case_id": "EXTL3:PMID_28132690_Family_E_II_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11409,
+  "tokens_out": 587,
+  "finish_reason": "stop",
+  "latency_s": 32.90939474105835,
+  "cost_usd": 0.00273379,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EXTL3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"EXTL3 mutations directly cause platyspondyly, seizures, and T-cell immunodeficiency, matching all key phenotypes.\"\n  },\n  {\n    \"gene\": \"C17orf67\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minimal phenotypic overlap; evidence lacks specificity for key features.\"\n  },\n  {\n    \"gene\": \"CARD9\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to skeletal or neurological phenotypes.\"\n  },\n  {\n    \"gene\": \"GSAP\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant phenotypic associations in provided evidence.\"\n  },\n  {\n    \"gene\": \"TGOLN2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting causal role for observed phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC17A7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Unrelated to skeletal dysplasia or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"CTHRC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No documented association with core phenotypes.\"\n  },\n  {\n    \"gene\": \"LRRC8C\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Lacks evidence for skeletal or immunological involvement.\"\n  },\n  {\n    \"gene\": \"PPME1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No reported connections to patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ESRRG\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Irrelevant to observed multisystem manifestations.\"\n  },\n  {\n    \"gene\": \"ASB12\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skeletal or neurological defects.\"\n  },\n  {\n    \"gene\": \"L2HGDH\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Metabolic disorder gene, inconsistent with phenotype.\"\n  },\n  {\n    \"gene\": \"SNRPN\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Prader-Willi related, no overlap with key features.\"\n  },\n  {\n    \"gene\": \"ATP2C1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Hailey-Hailey disease gene, irrelevant to case.\"\n  },\n  {\n    \"gene\": \"SIX5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting causal role for observed phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "EXTL3",
+    "C17orf67",
+    "CARD9",
+    "GSAP",
+    "TGOLN2"
+  ]
+}

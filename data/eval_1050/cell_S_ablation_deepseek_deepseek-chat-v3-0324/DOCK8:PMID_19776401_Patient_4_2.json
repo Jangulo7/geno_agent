@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_19776401_Patient_4_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14175,
+  "tokens_out": 598,
+  "finish_reason": "stop",
+  "latency_s": 22.322956085205078,
+  "cost_usd": 0.00329546,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DOCK8\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking DOCK8 deficiency to recurrent infections, atopic dermatitis, and viral susceptibility matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"NABP1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Some relevance due to recurrent infections and respiratory issues, but less specific than DOCK8.\"\n  },\n  {\n    \"gene\": \"NEK8\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Mention of recurrent otitis media and respiratory symptoms, but lacks specific phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"NUP210\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General mention of recurrent infections, but no strong phenotypic match.\"\n  },\n  {\n    \"gene\": \"ZC3H18\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General respiratory infections noted, but no direct link to the patient's profile.\"\n  },\n  {\n    \"gene\": \"EIF3CL\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Indirect mention of respiratory issues, lacking specificity.\"\n  },\n  {\n    \"gene\": \"CASK\",\n    \"confidence\": 0.2,\n    \"rationale\": \"General respiratory infections, no direct relevance.\"\n  },\n  {\n    \"gene\": \"EML1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Generic respiratory infection reference, no strong link.\"\n  },\n  {\n    \"gene\": \"HCAR1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"General respiratory infections, insufficient specificity.\"\n  },\n  {\n    \"gene\": \"OR4X2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"FAM9B\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Minimal evidence, only general respiratory mentions.\"\n  },\n  {\n    \"gene\": \"ATP8B1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct phenotypic relevance found.\"\n  },\n  {\n    \"gene\": \"CPLX1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Minimal evidence, unrelated to immune deficits.\"\n  },\n  {\n    \"gene\": \"SCAMP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No significant evidence linking to the patient's condition.\"\n  },\n  {\n    \"gene\": \"OR5M3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  }\n]",
+  "parsed_top5": [
+    "DOCK8",
+    "NABP1",
+    "NEK8",
+    "NUP210",
+    "ZC3H18"
+  ]
+}

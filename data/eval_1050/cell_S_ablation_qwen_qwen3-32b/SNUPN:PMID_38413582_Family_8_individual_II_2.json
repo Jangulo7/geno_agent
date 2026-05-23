@@ -1,0 +1,26 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_8_individual_II_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "SNUPN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNUPN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14610,
+  "tokens_out": 839,
+  "finish_reason": "stop",
+  "latency_s": 29.556857109069824,
+  "cost_usd": 0.00140372,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SNUPN\", \"confidence\": 0.95, \"rationale\": \"Clinical features of SNUPN-related myopathy closely match the patient's phenotype including proximal muscle weakness, Gowers sign, elevated CK, and wheelchair dependence.\"}, {\"gene\": \"VCPKMT\", \"confidence\": 0.75, \"rationale\": \"VCP-related disease presents with proximal and distal muscle weakness, abnormal gait, and difficulty climbing stairs, aligning with the patient's symptoms.\"}, {\"gene\": \"CINP\", \"confidence\": 0.65, \"rationale\": \"CINP-related myopathy includes proximal and distal limb weakness, gait abnormalities, and elevated CK, which are consistent with the patient's presentation.\"}, {\"gene\": \"ZNF726\", \"confidence\": 0.6, \"rationale\": \"ZNF726-related myopathy includes proximal weakness, elevated CK, and gait issues, but lacks strong evidence of axial weakness or pseudohypertrophy.\"}, {\"gene\": \"SLC18B1\", \"confidence\": 0.55, \"rationale\": \"SLC18B1-related myopathy includes lower limb weakness and elevated CK, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"DNAJB14\", \"confidence\": 0.5, \"rationale\": \"DNAJB14-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"FBXO44\", \"confidence\": 0.45, \"rationale\": \"FBXO44-related myopathy includes proximal weakness and elevated CK, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"BORCS8\", \"confidence\": 0.4, \"rationale\": \"BORCS8-related myopathy includes proximal weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"PLEKHG4B\", \"confidence\": 0.35, \"rationale\": \"PLEKHG4B-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"FUCA1\", \"confidence\": 0.3, \"rationale\": \"FUCA1-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"GSG1\", \"confidence\": 0.25, \"rationale\": \"GSG1-related myopathy includes proximal weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"HEG1\", \"confidence\": 0.2, \"rationale\": \"HEG1-related myopathy includes proximal weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"FAM236B\", \"confidence\": 0.15, \"rationale\": \"FAM236B-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"FAM90A26\", \"confidence\": 0.1, \"rationale\": \"FAM90A26-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}, {\"gene\": \"SLC22A13\", \"confidence\": 0.05, \"rationale\": \"SLC22A13-related myopathy includes lower limb weakness and gait issues, but lacks strong evidence of axial muscle weakness or pseudohypertrophy.\"}]",
+  "parsed_top5": [
+    "SNUPN",
+    "VCPKMT",
+    "CINP",
+    "ZNF726",
+    "SLC18B1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4354",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16120,
+  "tokens_out": 791,
+  "finish_reason": "stop",
+  "latency_s": 10.517242193222046,
+  "cost_usd": 0.060225,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"EFNB1\", \"confidence\": 0.93, \"rationale\": \"EFNB1 causes CFNS (MIM:304110), directly matching coronal craniosynostosis, hypertelorism, downslanted palpebral fissures, ridged nails, and clinodactyly with high-relevance literature evidence.\"}, {\"gene\": \"AMY1B\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to AMY1B.\"}, {\"gene\": \"IFT27\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to IFT27.\"}, {\"gene\": \"PTGES3\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to PTGES3.\"}, {\"gene\": \"TAF7\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to TAF7.\"}, {\"gene\": \"RECK\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to RECK.\"}, {\"gene\": \"DYNLT2\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to DYNLT2.\"}, {\"gene\": \"STARD3\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to STARD3.\"}, {\"gene\": \"ESRP1\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to ESRP1.\"}, {\"gene\": \"NUB1\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to NUB1.\"}, {\"gene\": \"MPHOSPH10\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to MPHOSPH10.\"}, {\"gene\": \"SCAMP1\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to SCAMP1.\"}, {\"gene\": \"GPR87\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to GPR87.\"}, {\"gene\": \"MUTYH\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to MUTYH.\"}, {\"gene\": \"ZNF225\", \"confidence\": 0.01, \"rationale\": \"No direct gene-disease link to this phenotype; evidence chunks are non-specific case descriptions not attributed to ZNF225.\"}]",
+  "parsed_top5": [
+    "EFNB1",
+    "AMY1B",
+    "IFT27",
+    "PTGES3",
+    "TAF7"
+  ]
+}

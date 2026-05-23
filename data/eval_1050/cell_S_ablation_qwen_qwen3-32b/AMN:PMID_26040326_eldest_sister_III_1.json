@@ -1,0 +1,20 @@
+{
+  "case_id": "AMN:PMID_26040326_eldest_sister_III_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AMN",
+  "orig_qwen3_8b_top1": "AMN",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14985,
+  "tokens_out": 22,
+  "finish_reason": "stop",
+  "latency_s": 3.582995891571045,
+  "cost_usd": 0.00120496,
+  "parse_error": "model_self_error:{\"error\": \"The input text is cut off at the end. Please provide the complete text.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input text is cut off at the end. Please provide the complete text.\"}",
+  "parsed_top5": []
+}

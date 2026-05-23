@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_23802543_girl",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20783,
+  "tokens_out": 822,
+  "finish_reason": "stop",
+  "latency_s": 10.940804719924927,
+  "cost_usd": 0.074679,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly matching trichorrhexis invaginata, congenital exfoliative erythroderma, elevated IgE, sparse hair, dry skin, erythema, and atopic features including food allergy/laryngospasm.\"}, {\"gene\": \"GIGYF2\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe Netherton syndrome cases but GIGYF2 is not mentioned as causal; no biological link to this phenotype profile.\"}, {\"gene\": \"C2CD4C\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"TASOR2\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"VWA5B2\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"DYNLL2\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"SYNGR3\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"CTXN2\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"CYP2S1\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"CRLF3\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"GNRH1\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"CFAP77\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"MAN1C1\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"NSMCE4A\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}, {\"gene\": \"STX6\", \"confidence\": 0.01, \"rationale\": \"No direct mention or biological link to the Netherton syndrome phenotype profile; evidence chunks reference SPINK5-related disease only.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "GIGYF2",
+    "C2CD4C",
+    "TASOR2",
+    "VWA5B2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "TRAF3:PMID_35960817_Family_A_A1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TRAF3",
+  "orig_qwen3_8b_top1": "TRAF3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TRAF3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17204,
+  "tokens_out": 618,
+  "finish_reason": "stop",
+  "latency_s": 31.902615308761597,
+  "cost_usd": 0.003916660000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"TRAF3\",\n    \"confidence\": 0.7,\n    \"rationale\": \"TRAF3 is directly linked to B-cell function and antibody response, matching the patient's immune deficiency profile.\"\n  },\n  {\n    \"gene\": \"CCDC22\",\n    \"confidence\": 0.5,\n    \"rationale\": \"CCDC22 has associations with immune dysregulation, though less specific than TRAF3.\"\n  },\n  {\n    \"gene\": \"DSCC1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"DSCC1 is mentioned in immune deficiency contexts but lacks direct phenotypic links.\"\n  },\n  {\n    \"gene\": \"TMIGD2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"TMIGD2 has immune-related mentions but no strong evidence for this phenotype.\"\n  },\n  {\n    \"gene\": \"NBPF15\",\n    \"confidence\": 0.3,\n    \"rationale\": \"NBPF15 lacks specific immune deficiency evidence.\"\n  },\n  {\n    \"gene\": \"ITGAV\",\n    \"confidence\": 0.3,\n    \"rationale\": \"ITGAV is not strongly linked to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"PDLIM7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PDLIM7 has no direct evidence supporting immune deficiency.\"\n  },\n  {\n    \"gene\": \"L1TD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"L1TD1 is not associated with immune deficiencies.\"\n  },\n  {\n    \"gene\": \"CENPM\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CENPM lacks relevant immune-related evidence.\"\n  },\n  {\n    \"gene\": \"AKAP6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"AKAP6 is not linked to immune dysfunction.\"\n  },\n  {\n    \"gene\": \"TSR2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"TSR2 has no clear connection to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"GON7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"GON7 lacks evidence for immune-related phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPS15\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MRPS15 is not associated with immune deficiencies.\"\n  },\n  {\n    \"gene\": \"PADI1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PADI1 has no relevant immune-related evidence.\"\n  },\n  {\n    \"gene\": \"CLDN20\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CLDN20 is not linked to the patient's immune phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "TRAF3",
+    "CCDC22",
+    "DSCC1",
+    "TMIGD2",
+    "NBPF15"
+  ]
+}

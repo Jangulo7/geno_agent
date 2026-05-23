@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM50",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18135,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 1.6150610446929932,
+  "cost_usd": 0.00146704,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations are directly linked to Familial Partial Lipodystrophy (FPLD2) with truncal and limb fat loss, diabetes, and hepatic steatosis.\"}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

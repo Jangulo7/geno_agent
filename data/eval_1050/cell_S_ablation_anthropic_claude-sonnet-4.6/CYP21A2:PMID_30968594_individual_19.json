@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_19",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18048,
+  "tokens_out": 762,
+  "finish_reason": "stop",
+  "latency_s": 13.212859392166138,
+  "cost_usd": 0.065574,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CYP21A2\",\"confidence\":0.82,\"rationale\":\"CYP21A2 evidence directly links its deficiency to hyperpigmentation, decreased cortisol, and decreased estradiol via impaired steroidogenesis, matching all three patient HPO phenotypes.\"},{\"gene\":\"PSMB2\",\"confidence\":0.04,\"rationale\":\"Evidence chunks describe cases with hyperpigmentation, low cortisol, and low estradiol but PSMB2 is not mentioned as the causal gene in any chunk.\"},{\"gene\":\"ADAT2\",\"confidence\":0.03,\"rationale\":\"Shared case-report evidence describes the phenotype but ADAT2 has no direct mechanistic link to adrenal steroidogenesis or the patient's phenotypes.\"},{\"gene\":\"H3C1\",\"confidence\":0.02,\"rationale\":\"Evidence describes glucocorticoid deficiency cases with hyperpigmentation but H3C1 has no known role in cortisol or estradiol biosynthesis.\"},{\"gene\":\"SVEP1\",\"confidence\":0.02,\"rationale\":\"Evidence is non-specific case reports; SVEP1 has no established role in adrenal steroidogenesis or the observed phenotypes.\"},{\"gene\":\"CIROZ\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CIROZ to hyperpigmentation, cortisol deficiency, or decreased estradiol; evidence is generic case reports.\"},{\"gene\":\"ALKAL1\",\"confidence\":0.01,\"rationale\":\"No mechanistic link between ALKAL1 and adrenal steroidogenesis; evidence chunks are non-specific.\"},{\"gene\":\"PLEKHA8\",\"confidence\":0.01,\"rationale\":\"Evidence describes adrenal insufficiency cases but PLEKHA8 has no known role in cortisol or estradiol metabolism.\"},{\"gene\":\"PLEKHG2\",\"confidence\":0.01,\"rationale\":\"Evidence describes familial glucocorticoid deficiency phenotype but PLEKHG2 is not implicated in steroidogenesis.\"},{\"gene\":\"UAP1L1\",\"confidence\":0.01,\"rationale\":\"No known role in adrenal steroidogenesis; evidence is non-specific case reports shared across candidates.\"},{\"gene\":\"C14orf132\",\"confidence\":0.01,\"rationale\":\"No established link to cortisol or estradiol biosynthesis; evidence is generic adrenal insufficiency case reports.\"},{\"gene\":\"PCYT1B\",\"confidence\":0.01,\"rationale\":\"PCYT1B encodes a phospholipid synthesis enzyme with no direct role in adrenal steroidogenesis or the patient phenotypes.\"},{\"gene\":\"C1QTNF2\",\"confidence\":0.01,\"rationale\":\"No mechanistic connection to hyperpigmentation, cortisol deficiency, or estradiol reduction; evidence is non-specific.\"},{\"gene\":\"NTF3\",\"confidence\":0.01,\"rationale\":\"NTF3 is a neurotrophin with no known role in adrenal steroidogenesis; evidence is non-specific case reports.\"},{\"gene\":\"GPHB5\",\"confidence\":0.01,\"rationale\":\"GPHB5 evidence relates to metabolic syndrome and testosterone regulation, not directly to cortisol deficiency or decreased estradiol.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "PSMB2",
+    "ADAT2",
+    "H3C1",
+    "SVEP1"
+  ]
+}

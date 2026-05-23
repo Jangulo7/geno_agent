@@ -1,0 +1,22 @@
+{
+  "case_id": "PYCR1:PMID_21487760_Patient_5",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PYCR1",
+  "orig_qwen3_8b_top1": "PYCR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PYCR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17877,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 11.323795557022095,
+  "cost_usd": 0.00144668,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"PYCR1\", \"confidence\": 0.95, \"rationale\": \"PYCR1 mutations directly cause ARCL2B with features like joint hypermobility, cutis laxa, and developmental delay matching the patient's HPO terms.\"}",
+  "parsed_top5": [
+    "PYCR1"
+  ]
+}

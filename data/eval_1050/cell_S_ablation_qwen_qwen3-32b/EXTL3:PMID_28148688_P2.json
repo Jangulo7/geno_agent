@@ -1,0 +1,22 @@
+{
+  "case_id": "EXTL3:PMID_28148688_P2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16412,
+  "tokens_out": 44,
+  "finish_reason": "stop",
+  "latency_s": 6.931183338165283,
+  "cost_usd": 0.00132528,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"EXTL3\", \"confidence\": 0.95, \"rationale\": \"Multiple case reports directly link EXTL3 mutations to the patient's skeletal and immunological features.\"}",
+  "parsed_top5": [
+    "EXTL3"
+  ]
+}

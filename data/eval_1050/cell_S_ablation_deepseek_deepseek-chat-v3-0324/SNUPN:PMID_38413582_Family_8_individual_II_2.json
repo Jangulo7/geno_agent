@@ -1,0 +1,22 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_8_individual_II_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "SNUPN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNUPN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13874,
+  "tokens_out": 48,
+  "finish_reason": "stop",
+  "latency_s": 3.669165849685669,
+  "cost_usd": 0.0028117600000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"SNUPN\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Direct evidence of SNUPN mutations causing matching phenotypes including Gowers sign, elevated CK, and proximal weakness.\"\n}",
+  "parsed_top5": [
+    "SNUPN"
+  ]
+}

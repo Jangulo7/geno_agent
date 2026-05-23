@@ -1,0 +1,26 @@
+{
+  "case_id": "CBLB:PMID_36006710_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CBLB",
+  "orig_qwen3_8b_top1": "CLSTN3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CLSTN3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11944,
+  "tokens_out": 936,
+  "finish_reason": "stop",
+  "latency_s": 13.69001054763794,
+  "cost_usd": 0.049872,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLSTN3\",\n    \"confidence\": 0.35,\n    \"rationale\": \"CLSTN3 evidence mentions IL-6 regulation and hepatic inflammation, with some relevance to glucose metabolism, partially overlapping the phenotype profile.\"\n  },\n  {\n    \"gene\": \"LGALS9\",\n    \"confidence\": 0.07,\n    \"rationale\": \"LGALS9 chunk mentions T1D and hypothyroidism in a prediction context but no direct mechanistic link to the full phenotype profile including hemophagocytosis.\"\n  },\n  {\n    \"gene\": \"ABCG5\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ABCG5 evidence includes the patient case with IL-6/IL-10 elevation, hypothyroidism, T1D, and fever but ABCG5 itself is only tangentially mentioned regarding cholesterol transport.\"\n  },\n  {\n    \"gene\": \"IKZF3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Shares the same patient case chunk as most candidates but no gene-specific mechanistic evidence linking IKZF3 to the phenotype profile.\"\n  },\n  {\n    \"gene\": \"RSPO2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Only generic shared evidence chunks; no specific mechanistic link to IL-10/IL-6 elevation, hemophagocytosis, or autoimmune phenotypes.\"\n  },\n  {\n    \"gene\": \"CFAP97D2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; only shares generic patient case and cytokine association chunks with other candidates.\"\n  },\n  {\n    \"gene\": \"TPRG1L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence linking TPRG1L to the phenotype profile; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"ASB4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; only generic shared patient case and cytokine chunks without mechanistic relevance.\"\n  },\n  {\n    \"gene\": \"TBL2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence linking TBL2 to the phenotype profile; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"EIF2S1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; only generic shared patient case and cytokine chunks without mechanistic relevance.\"\n  },\n  {\n    \"gene\": \"SH3BGR\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence linking SH3BGR to the phenotype profile; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"PBLD\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; only generic shared patient case and cytokine chunks without mechanistic relevance.\"\n  },\n  {\n    \"gene\": \"RPS11\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence linking RPS11 to the phenotype profile; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"AGR3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; only generic shared patient case and cytokine chunks without mechanistic relevance.\"\n  },\n  {\n    \"gene\": \"OOSP1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence linking OOSP1 to the phenotype profile; only generic shared chunks with no mechanistic support.\"\n  }\n]",
+  "parsed_top5": [
+    "CLSTN3",
+    "LGALS9",
+    "ABCG5",
+    "IKZF3",
+    "RSPO2"
+  ]
+}

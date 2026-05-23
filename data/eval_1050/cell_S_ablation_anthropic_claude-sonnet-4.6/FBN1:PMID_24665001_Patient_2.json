@@ -1,0 +1,26 @@
+{
+  "case_id": "FBN1:PMID_24665001_Patient_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBN1",
+  "orig_qwen3_8b_top1": "FBN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18811,
+  "tokens_out": 817,
+  "finish_reason": "stop",
+  "latency_s": 12.96186351776123,
+  "cost_usd": 0.068688,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"FBN1\",\"confidence\":0.92,\"rationale\":\"FBN1 evidence directly mentions pectus excavatum, retrognathia, arachnodactyly, pes planus, reduced U/L ratio, myopia, mitral valve prolapse, and aortic root aneurysm as Marfan syndrome features; lipodystrophy/progeroid overlap fits atypical FBN1 variants.\"},{\"gene\":\"PLOD1\",\"confidence\":0.02,\"rationale\":\"PLOD1 evidence only covers kyphoscoliotic EDS features with no direct match to lipodystrophy, progeroid appearance, or aortic root aneurysm in this patient's profile.\"},{\"gene\":\"EMILIN1\",\"confidence\":0.01,\"rationale\":\"EMILIN1 evidence references FBN1/Marfan context but EMILIN1 itself has no established link to the full phenotype including lipodystrophy and progeroid features.\"},{\"gene\":\"DDIT4\",\"confidence\":0.01,\"rationale\":\"DDIT4 evidence describes a Marfan-like case but DDIT4 is not an established connective tissue disease gene and lacks evidence for lipodystrophy or progeroid appearance.\"},{\"gene\":\"KLHL30\",\"confidence\":0.01,\"rationale\":\"KLHL30 evidence is generic Marfan-like case descriptions with no direct gene-phenotype link to lipodystrophy or progeroid features.\"},{\"gene\":\"PLP1\",\"confidence\":0.01,\"rationale\":\"PLP1 is a myelin gene; evidence chunks are incidental and do not support causality for this connective tissue/lipodystrophy phenotype.\"},{\"gene\":\"PIWIL4\",\"confidence\":0.005,\"rationale\":\"PIWIL4 evidence is non-specific; no established role in connective tissue, lipodystrophy, or aortic disease.\"},{\"gene\":\"HSD11B1L\",\"confidence\":0.005,\"rationale\":\"HSD11B1L evidence is entirely non-specific Marfan diagnostic criteria text with no direct gene-phenotype link.\"},{\"gene\":\"SPDYE10\",\"confidence\":0.005,\"rationale\":\"SPDYE10 evidence is non-specific; no known role in connective tissue or lipodystrophy disorders.\"},{\"gene\":\"SPZ1\",\"confidence\":0.005,\"rationale\":\"SPZ1 evidence is non-specific; no established association with this phenotype profile.\"},{\"gene\":\"PRSS41\",\"confidence\":0.005,\"rationale\":\"PRSS41 evidence is non-specific; no known role in connective tissue, lipodystrophy, or aortic disease.\"},{\"gene\":\"JMY\",\"confidence\":0.005,\"rationale\":\"JMY evidence is non-specific; no established link to this phenotype profile.\"},{\"gene\":\"ADAP2\",\"confidence\":0.005,\"rationale\":\"ADAP2 evidence is non-specific; no known role in connective tissue or lipodystrophy disorders.\"},{\"gene\":\"DEFB119\",\"confidence\":0.005,\"rationale\":\"DEFB119 is a defensin gene with no established role in connective tissue, lipodystrophy, or aortic disease.\"},{\"gene\":\"TPK1\",\"confidence\":0.005,\"rationale\":\"TPK1 is a thiamine pyrophosphokinase gene with no established link to this connective tissue/lipodystrophy phenotype.\"}]",
+  "parsed_top5": [
+    "FBN1",
+    "PLOD1",
+    "EMILIN1",
+    "DDIT4",
+    "KLHL30"
+  ]
+}

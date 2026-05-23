@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM32",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17069,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 36.52014684677124,
+  "cost_usd": 0.003945870000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA mutations are strongly associated with familial partial lipodystrophy type 2 (FPLD2), matching the patient's phenotype of limb and truncal fat loss with metabolic complications.\"\n  },\n  {\n    \"gene\": \"KIDINS220\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited direct evidence linking KIDINS220 to lipodystrophy, though some metabolic overlap exists.\"\n  },\n  {\n    \"gene\": \"BPY2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BPY2B to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ALG3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ALG3 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"OR2L3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR2L3 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"RNF170\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RNF170 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"UGGT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UGGT2 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ELL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ELL2 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"GAGE10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GAGE10 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPS14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MRPS14 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"ATMIN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ATMIN to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"MGAT4C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MGAT4C to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"FTMT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FTMT to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CA9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CA9 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"POLR1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POLR1A to lipodystrophy or metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "KIDINS220",
+    "BPY2B",
+    "ALG3",
+    "OR2L3"
+  ]
+}

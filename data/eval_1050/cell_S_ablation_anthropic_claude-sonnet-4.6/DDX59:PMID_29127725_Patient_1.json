@@ -1,0 +1,26 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "DDX59",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DDX59",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 9828,
+  "tokens_out": 622,
+  "finish_reason": "stop",
+  "latency_s": 12.406730890274048,
+  "cost_usd": 0.038814,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DDX59\",\"confidence\":0.72,\"rationale\":\"DDX59 mutations cause OFD syndrome with postaxial polydactyly, clinodactyly, cleft palate, intellectual disability, and cerebral features, directly matching the patient's multi-system phenotype.\"},{\"gene\":\"PKHD1L1\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking PKHD1L1 to this phenotype profile; only generic polydactyly/syndactyly literature shared across candidates.\"},{\"gene\":\"RMI2\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking RMI2 to this complex neurodevelopmental and digital anomaly phenotype.\"},{\"gene\":\"ANKRD53\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking ANKRD53 to this phenotype; only generic polydactyly literature provided.\"},{\"gene\":\"SOST\",\"confidence\":0.03,\"rationale\":\"SOST is associated with bone density disorders; no evidence supporting this complex OFD-like phenotype.\"},{\"gene\":\"STRN4\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking STRN4 to this neurodevelopmental and digital anomaly phenotype.\"},{\"gene\":\"FYTTD1\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking FYTTD1 to this phenotype profile.\"},{\"gene\":\"KRTAP1-3\",\"confidence\":0.02,\"rationale\":\"KRTAP1-3 encodes a keratin-associated protein; no plausible link to this complex syndrome.\"},{\"gene\":\"CA9\",\"confidence\":0.02,\"rationale\":\"CA9 encodes carbonic anhydrase IX; no evidence supporting causality for this phenotype.\"},{\"gene\":\"DUS4L\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking DUS4L to this neurodevelopmental and digital anomaly phenotype.\"},{\"gene\":\"DDX24\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking DDX24 to this phenotype profile.\"},{\"gene\":\"GPR12\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking GPR12 to this complex syndrome.\"},{\"gene\":\"RTL8B\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking RTL8B to this phenotype profile.\"},{\"gene\":\"SLC25A44\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SLC25A44 to this phenotype profile.\"},{\"gene\":\"SRRM4\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SRRM4 to this complex neurodevelopmental and digital anomaly phenotype.\"}]",
+  "parsed_top5": [
+    "DDX59",
+    "PKHD1L1",
+    "RMI2",
+    "ANKRD53",
+    "SOST"
+  ]
+}

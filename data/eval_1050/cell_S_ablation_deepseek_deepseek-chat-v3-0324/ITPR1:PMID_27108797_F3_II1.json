@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_27108797_F3_II1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14546,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 60.122116565704346,
+  "cost_usd": 0.0034412700000000006,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ITPR1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"ITPR1 mutations strongly match the patient's cerebellar ataxia, hypotonia, and developmental delay phenotypes, with literature directly linking it to SCA15/29.\"\n  },\n  {\n    \"gene\": \"POLR3K\",\n    \"confidence\": 0.3,\n    \"rationale\": \"POLR3K-related disorders include cerebellar ataxia and hypotonia, but evidence is less specific to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PMP22\",\n    \"confidence\": 0.25,\n    \"rationale\": \"PMP22 is linked to Charcot-Marie-Tooth with tremor, but lacks cerebellar atrophy or intellectual disability features.\"\n  },\n  {\n    \"gene\": \"PCYOX1L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PCYOX1L to the patient's neurological or ocular phenotypes.\"\n  },\n  {\n    \"gene\": \"HNRNPDL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting HNRNPDL to the patient's ataxia or cerebellar atrophy.\"\n  },\n  {\n    \"gene\": \"CDX1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CDX1 in cerebellar or developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"STRA8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking STRA8 to neurological or cerebellar disorders.\"\n  },\n  {\n    \"gene\": \"NCOA6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting NCOA6 to the patient's ataxia or intellectual disability.\"\n  },\n  {\n    \"gene\": \"ERC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for ERC1 in cerebellar atrophy or developmental delay.\"\n  },\n  {\n    \"gene\": \"IKZF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supporting IKZF4 in neurological or cerebellar phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM149A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking FAM149A to the patient's ataxia or hypotonia.\"\n  },\n  {\n    \"gene\": \"KCNH8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting KCNH8 to cerebellar or developmental disorders.\"\n  },\n  {\n    \"gene\": \"C15orf62\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supporting C15orf62 in the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DCUN1D1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking DCUN1D1 to cerebellar atrophy or intellectual disability.\"\n  },\n  {\n    \"gene\": \"UBTD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting UBTD2 to the patient's neurological features.\"\n  }\n]",
+  "parsed_top5": [
+    "ITPR1",
+    "POLR3K",
+    "PMP22",
+    "PCYOX1L",
+    "HNRNPDL"
+  ]
+}

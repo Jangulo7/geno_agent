@@ -1,0 +1,26 @@
+{
+  "case_id": "ARMC9:PMID_28625504_UW348_3",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "BCAT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20225,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 9.820622682571411,
+  "cost_usd": 0.07119,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ARMC9\",\"confidence\":0.72,\"rationale\":\"ARMC9 chunk_1 directly documents a patient with Joubert syndrome (molar tooth sign, developmental delay, ocular gaze abnormality, reduced cone function/retinal dystrophy) caused by an ARMC9 mutation, matching all patient HPO features.\"},{\"gene\":\"BCAT1\",\"confidence\":0.06,\"rationale\":\"BCAT1 chunk_1 describes a patient with retinal degeneration and global developmental delay but the MRI shows delayed myelination, not molar tooth sign; less specific match.\"},{\"gene\":\"HS3ST3A1\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct mention of HS3ST3A1 causing the phenotype.\"},{\"gene\":\"EPS8L1\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking EPS8L1 to this phenotype profile.\"},{\"gene\":\"PTBP2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking PTBP2 to this phenotype profile.\"},{\"gene\":\"ARHGAP11B\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking ARHGAP11B to this phenotype profile.\"},{\"gene\":\"GBP2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking GBP2 to this phenotype profile.\"},{\"gene\":\"GPR63\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking GPR63 to this phenotype profile.\"},{\"gene\":\"PTGES\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking PTGES to this phenotype profile.\"},{\"gene\":\"PLA2G4D\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking PLA2G4D to this phenotype profile.\"},{\"gene\":\"ERAP2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking ERAP2 to this phenotype profile.\"},{\"gene\":\"TRIML2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking TRIML2 to this phenotype profile.\"},{\"gene\":\"KIF9\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking KIF9 to this phenotype profile.\"},{\"gene\":\"ADAP2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking ADAP2 to this phenotype profile.\"},{\"gene\":\"GABPB2\",\"confidence\":0.02,\"rationale\":\"Only generic Joubert syndrome background literature; no direct evidence linking GABPB2 to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "ARMC9",
+    "BCAT1",
+    "HS3ST3A1",
+    "EPS8L1",
+    "PTBP2"
+  ]
+}

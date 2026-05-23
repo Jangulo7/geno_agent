@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_19807739_Patient_9",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15676,
+  "tokens_out": 607,
+  "finish_reason": "stop",
+  "latency_s": 21.931776523590088,
+  "cost_usd": 0.00360259,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AIRE\",\n    \"confidence\": 1.0,\n    \"rationale\": \"AIRE is clearly linked to APS-1, which matches all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"STPG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking STPG1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TMEM276\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting TMEM276 with the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"ARPIN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature evidence for ARPIN in this context.\"\n  },\n  {\n    \"gene\": \"CNBD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known association with the patient's conditions.\"\n  },\n  {\n    \"gene\": \"CAMK1D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks evidence supporting a role in these phenotypes.\"\n  },\n  {\n    \"gene\": \"PDE9A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct literature linking PDE9A to APS-1 or similar conditions.\"\n  },\n  {\n    \"gene\": \"GPR12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for GPR12 in autoimmune endocrine disorders.\"\n  },\n  {\n    \"gene\": \"APOL5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No connections found between APOL5 and the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GLS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence suggesting GLS involvement in these conditions.\"\n  },\n  {\n    \"gene\": \"RNASE11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known role in autoimmune polyendocrinopathy syndromes.\"\n  },\n  {\n    \"gene\": \"TUBGCP5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking TUBGCP5 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"PORCN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting PORCN with autoimmune endocrine disorders.\"\n  },\n  {\n    \"gene\": \"GNAI2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for GNAI2 in this phenotypic profile.\"\n  },\n  {\n    \"gene\": \"SNIP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No association identified between SNIP1 and the patient's conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "AIRE",
+    "STPG1",
+    "TMEM276",
+    "ARPIN",
+    "CNBD1"
+  ]
+}

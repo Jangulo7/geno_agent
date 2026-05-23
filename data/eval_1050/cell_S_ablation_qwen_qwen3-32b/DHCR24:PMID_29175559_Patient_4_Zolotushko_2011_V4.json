@@ -1,0 +1,22 @@
+{
+  "case_id": "DHCR24:PMID_29175559_Patient_4_Zolotushko_2011_V4",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DHCR24",
+  "orig_qwen3_8b_top1": "DHCR24",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DHCR24",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19890,
+  "tokens_out": 69,
+  "finish_reason": "stop",
+  "latency_s": 8.3016996383667,
+  "cost_usd": 0.00161052,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"DHCR24\", \"confidence\": 0.95, \"rationale\": \"DHCR24 mutations directly correlate with desmosterolosis, including seizures, corpus callosum dysgenesis, white matter volume loss, and ventriculomegaly, matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "DHCR24"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "WNT1:PMID_30012084_older_sister",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "WNT1",
+  "orig_qwen3_8b_top1": "WNT1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "WNT1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15187,
+  "tokens_out": 891,
+  "finish_reason": "stop",
+  "latency_s": 15.370771169662476,
+  "cost_usd": 0.058926,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"WNT1\",\"confidence\":0.82,\"rationale\":\"WNT1 evidence directly describes recessive OI type XV with recurrent fractures, bone deformity, short stature, platyspondyly, developmental delays, and ptosis\u2014matching nearly all patient HPO phenotypes.\"},{\"gene\":\"CXorf49\",\"confidence\":0.04,\"rationale\":\"Evidence discusses OI-related bone fragility genes generically; no direct link to CXorf49 or the specific phenotype combination including ptosis and premature rupture of membranes.\"},{\"gene\":\"OR2T7\",\"confidence\":0.03,\"rationale\":\"Evidence chunks describe OI/skeletal dysplasia cases but none specifically implicate OR2T7; no gene-specific evidence supporting causality for this phenotype profile.\"},{\"gene\":\"IL12RB2\",\"confidence\":0.02,\"rationale\":\"Evidence describes skeletal dysplasia cases unrelated to IL12RB2; this immune receptor gene has no established link to the OI-like phenotype presented.\"},{\"gene\":\"CCNYL1B\",\"confidence\":0.02,\"rationale\":\"Evidence describes skeletal dysplasia cases generically; CCNYL1B has no established role in OI or the specific combination of fractures, platyspondyly, and ptosis.\"},{\"gene\":\"FLNC\",\"confidence\":0.02,\"rationale\":\"FLNC evidence relates to myopathy/cardiomyopathy; skeletal dysplasia cases described are not gene-specific and do not match the full phenotype profile.\"},{\"gene\":\"ATP6V0E2\",\"confidence\":0.01,\"rationale\":\"Evidence describes rickets/hypophosphatemia cases; ATP6V0E2 has no direct established link to OI-type fractures with platyspondyly and ptosis.\"},{\"gene\":\"NKX3-1\",\"confidence\":0.01,\"rationale\":\"NKX3-1 is a prostate transcription factor; evidence chunks describe unrelated skeletal cases with no gene-specific support for this phenotype.\"},{\"gene\":\"CKLF\",\"confidence\":0.01,\"rationale\":\"CKLF is a chemokine-like factor; no evidence linking it to OI-type fractures, platyspondyly, ptosis, or premature rupture of membranes.\"},{\"gene\":\"CCL15\",\"confidence\":0.01,\"rationale\":\"CCL15 is a chemokine; evidence chunks describe unrelated skeletal cases with no gene-specific support for the patient's phenotype profile.\"},{\"gene\":\"PSG3\",\"confidence\":0.01,\"rationale\":\"PSG3 is a pregnancy-specific glycoprotein; no evidence linking it to OI-type skeletal dysplasia with fractures, platyspondyly, and ptosis.\"},{\"gene\":\"CPLX2\",\"confidence\":0.01,\"rationale\":\"CPLX2 is a synaptic protein; no evidence linking it to OI-type fractures, platyspondyly, or the other skeletal phenotypes in this patient.\"},{\"gene\":\"CNIH2\",\"confidence\":0.01,\"rationale\":\"CNIH2 is an AMPA receptor auxiliary subunit; no evidence linking it to OI-type skeletal dysplasia with fractures, platyspondyly, and ptosis.\"},{\"gene\":\"STXBP1\",\"confidence\":0.01,\"rationale\":\"STXBP1 causes epileptic encephalopathy; no evidence linking it to OI-type fractures, platyspondyly, or the skeletal phenotype profile presented.\"},{\"gene\":\"MEF2B\",\"confidence\":0.01,\"rationale\":\"MEF2B is a transcription factor associated with lymphoma; no evidence linking it to OI-type skeletal dysplasia with fractures, platyspondyly, and ptosis.\"}]",
+  "parsed_top5": [
+    "WNT1",
+    "CXorf49",
+    "OR2T7",
+    "IL12RB2",
+    "CCNYL1B"
+  ]
+}

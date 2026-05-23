@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_24736735_G079",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17948,
+  "tokens_out": 717,
+  "finish_reason": "stop",
+  "latency_s": 9.648758888244629,
+  "cost_usd": 0.064599,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"GLI3 mutations directly cause Greig cephalopolysyndactyly syndrome (macrocephaly, hypertelorism, pre/postaxial polydactyly, syndactyly) and other syndromes matching all patient HPO terms; evidence chunks explicitly mention GLI3 with critic_relevance 5/5.\"},{\"gene\":\"TFE3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TFE3 to this phenotype profile; evidence chunks are generic and not specific to TFE3.\"},{\"gene\":\"FGA\",\"confidence\":0.01,\"rationale\":\"No evidence linking FGA to macrocephaly, hypertelorism, polydactyly, or syndactyly; evidence chunks are non-specific.\"},{\"gene\":\"TBCC\",\"confidence\":0.01,\"rationale\":\"No evidence linking TBCC to this phenotype profile; evidence chunks are generic and unrelated to TBCC function.\"},{\"gene\":\"CCDC88C\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CCDC88C to this phenotype combination; evidence chunks are non-specific.\"},{\"gene\":\"S100A3\",\"confidence\":0.01,\"rationale\":\"No evidence linking S100A3 to macrocephaly, polydactyly, or syndactyly; evidence chunks are generic.\"},{\"gene\":\"SLFN12L\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLFN12L to this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"PARVG\",\"confidence\":0.01,\"rationale\":\"No evidence linking PARVG to this phenotype combination; evidence chunks are non-specific.\"},{\"gene\":\"EXOSC6\",\"confidence\":0.01,\"rationale\":\"No evidence linking EXOSC6 to macrocephaly, polydactyly, or syndactyly; evidence chunks are generic.\"},{\"gene\":\"SMAD2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SMAD2 to this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"THOC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking THOC1 to this phenotype combination; evidence chunks are generic.\"},{\"gene\":\"SERPINC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SERPINC1 to macrocephaly, polydactyly, or syndactyly; evidence chunks are non-specific.\"},{\"gene\":\"SLC18A2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC18A2 to this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"OR4X2\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR4X2 to this phenotype combination; evidence chunks are generic.\"},{\"gene\":\"SMYD4\",\"confidence\":0.01,\"rationale\":\"No evidence linking SMYD4 to macrocephaly, polydactyly, or syndactyly; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "GLI3",
+    "TFE3",
+    "FGA",
+    "TBCC",
+    "CCDC88C"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CBS:PMID_8755636_patient",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CBS",
+  "orig_qwen3_8b_top1": "CBS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CBS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16050,
+  "tokens_out": 768,
+  "finish_reason": "stop",
+  "latency_s": 24.48704195022583,
+  "cost_usd": 0.00380136,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CBS\",\n    \"confidence\": 0.9,\n    \"rationale\": \"CBS is strongly associated with hyperhomocystinemia, intellectual disability, and Marfanoid features including tall stature and arachnodactyly, matching all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"CHD8\",\n    \"confidence\": 0.6,\n    \"rationale\": \"CHD8 variants are linked to tall stature and intellectual disability but lack direct association with hyperhomocystinemia, a key patient feature.\"\n  },\n  {\n    \"gene\": \"MYORG\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking MYORG to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"NASP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking NASP to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"CSF3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CSF3 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"MAMDC4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking MAMDC4 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"SIGLEC14\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SIGLEC14 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"SPESP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SPESP1 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"CKAP4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CKAP4 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"ZNF697\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ZNF697 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"PNLIPRP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking PNLIPRP2 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"NMNAT1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking NMNAT1 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"KIAA0930\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking KIAA0930 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"GMNC\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking GMNC to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  },\n  {\n    \"gene\": \"NCAPG2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking NCAPG2 to the patient's phenotypes; evidence chunks are non-specific or irrelevant.\"\n  }\n]",
+  "parsed_top5": [
+    "CBS",
+    "CHD8",
+    "MYORG",
+    "NASP",
+    "CSF3"
+  ]
+}

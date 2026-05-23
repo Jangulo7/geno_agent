@@ -1,0 +1,22 @@
+{
+  "case_id": "USB1:PMID_27247962_USB1_patient",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "USB1",
+  "orig_qwen3_8b_top1": "USB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "USB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12447,
+  "tokens_out": 63,
+  "finish_reason": "stop",
+  "latency_s": 4.380940675735474,
+  "cost_usd": 0.0025379100000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"USB1\",\n  \"confidence\": 0.95,\n  \"rationale\": \"USB1 mutations directly cause Poikiloderma with Neutropenia, matching all patient phenotypes including bronchiectasis, neutropenia, and hypogonadotropic hypogonadism.\"\n}",
+  "parsed_top5": [
+    "USB1"
+  ]
+}

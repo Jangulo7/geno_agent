@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_7",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "TET3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TET3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15077,
+  "tokens_out": 925,
+  "finish_reason": "stop",
+  "latency_s": 11.0206298828125,
+  "cost_usd": 0.059106,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"TET3\",\n    \"confidence\": 0.42,\n    \"rationale\": \"TET3 chunk_2 directly describes a patient with hypertelorism, cafe-au-lait spots, neuropsychomotor delay, and obsessive-compulsive disorder matching the patient's phenotype profile most closely.\"\n  },\n  {\n    \"gene\": \"FKBP5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks are shared with other genes and show no specific FKBP5-disease association with the patient's phenotype; relevance is incidental.\"\n  },\n  {\n    \"gene\": \"SDHD\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunks show no direct SDHD-specific association with hypertelorism, cafe-au-lait spots, polydactyly, or OCD; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"SLC2A3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No specific SLC2A3 evidence linking to the patient's phenotype combination; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"CADPS2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No specific CADPS2 evidence linking to hypertelorism, cafe-au-lait spots, polydactyly, or OCD; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"HAGH\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific HAGH evidence linking to the patient's phenotype; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"NBEAL2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific NBEAL2 evidence linking to the patient's phenotype combination; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"SSC4D\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific SSC4D evidence linking to the patient's phenotype; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"MYO1G\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific MYO1G evidence linking to the patient's phenotype combination; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"NADSYN1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific NADSYN1 evidence linking to the patient's phenotype; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"DVL1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific DVL1 evidence linking to the patient's phenotype combination; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"LGALS9\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific LGALS9 evidence linking to the patient's phenotype; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"USP31\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific USP31 evidence linking to the patient's phenotype combination; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"C12orf71\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific C12orf71 evidence linking to the patient's phenotype; shared generic chunks only.\"\n  },\n  {\n    \"gene\": \"CLPTM1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific CLPTM1 evidence linking to the patient's phenotype combination; evidence is non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "TET3",
+    "FKBP5",
+    "SDHD",
+    "SLC2A3",
+    "CADPS2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_43",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18373,
+  "tokens_out": 869,
+  "finish_reason": "stop",
+  "latency_s": 10.557924270629883,
+  "cost_usd": 0.068154,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CYP21A2\",\"confidence\":0.92,\"rationale\":\"CYP21A2 evidence directly and repeatedly mentions hirsutism, clitoral hypertrophy, growth delay, elevated testosterone, elevated ACTH, and prolactin in CAH patients, matching all HPO phenotypes.\"},{\"gene\":\"UTS2R\",\"confidence\":0.02,\"rationale\":\"UTS2R evidence relates to adrenal ACTH/androgen regulation but no direct gene-disease link to the patient's phenotype profile.\"},{\"gene\":\"GIMAP6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GIMAP6 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to GIMAP6.\"},{\"gene\":\"VRK3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking VRK3 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to VRK3.\"},{\"gene\":\"JRKL\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking JRKL to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to JRKL.\"},{\"gene\":\"SH2D3C\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SH2D3C to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to SH2D3C.\"},{\"gene\":\"RAMACL\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RAMACL to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to RAMACL.\"},{\"gene\":\"MRPL39\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MRPL39 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to MRPL39.\"},{\"gene\":\"CSAG3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CSAG3 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to CSAG3.\"},{\"gene\":\"NDUFS8\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NDUFS8 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to NDUFS8.\"},{\"gene\":\"BOK\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking BOK to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to BOK.\"},{\"gene\":\"OVOL2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking OVOL2 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to OVOL2.\"},{\"gene\":\"IL1RN\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking IL1RN to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to IL1RN.\"},{\"gene\":\"SH2B3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SH2B3 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to SH2B3.\"},{\"gene\":\"OR13A1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking OR13A1 to the patient's phenotype; evidence chunks describe CAH/CYP21A2 pathology unrelated to OR13A1.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "UTS2R",
+    "GIMAP6",
+    "VRK3",
+    "JRKL"
+  ]
+}

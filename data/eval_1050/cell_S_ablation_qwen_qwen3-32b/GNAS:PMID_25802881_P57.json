@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P57",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18253,
+  "tokens_out": 793,
+  "finish_reason": "stop",
+  "latency_s": 11.491239309310913,
+  "cost_usd": 0.00168228,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GNAS\": {\"gene\": \"GNAS\", \"confidence\": 0.95, \"rationale\": \"GNAS mutations cause pseudohypoparathyroidism with hypocalcemia, hyperphosphatemia, obesity, short stature, and short metacarpals.\"}, \"ADORA3\": {\"gene\": \"ADORA3\", \"confidence\": 0.15, \"rationale\": \"ADORA3 is not directly linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"VRK3\": {\"gene\": \"VRK3\", \"confidence\": 0.15, \"rationale\": \"VRK3 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"KRT71\": {\"gene\": \"KRT71\", \"confidence\": 0.15, \"rationale\": \"KRT71 is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"TALDO1\": {\"gene\": \"TALDO1\", \"confidence\": 0.15, \"rationale\": \"TALDO1 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"CFAP52\": {\"gene\": \"CFAP52\", \"confidence\": 0.15, \"rationale\": \"CFAP52 is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"GNAO1\": {\"gene\": \"GNAO1\", \"confidence\": 0.15, \"rationale\": \"GNAO1 is not directly associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"RTP4\": {\"gene\": \"RTP4\", \"confidence\": 0.15, \"rationale\": \"RTP4 is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"SEPTIN7\": {\"gene\": \"SEPTIN7\", \"confidence\": 0.15, \"rationale\": \"SEPTIN7 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"ZNF467\": {\"gene\": \"ZNF467\", \"confidence\": 0.15, \"rationale\": \"ZNF467 is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"TMEM240\": {\"gene\": \"TMEM240\", \"confidence\": 0.15, \"rationale\": \"TMEM240 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"ATAD3A\": {\"gene\": \"ATAD3A\", \"confidence\": 0.15, \"rationale\": \"ATAD3A is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"DUSP5\": {\"gene\": \"DUSP5\", \"confidence\": 0.15, \"rationale\": \"DUSP5 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}, \"ZNF75A\": {\"gene\": \"ZNF75A\", \"confidence\": 0.15, \"rationale\": \"ZNF75A is not linked to pseudohypoparathyroidism or the described phenotypes.\"}, \"SIGLEC1\": {\"gene\": \"SIGLEC1\", \"confidence\": 0.15, \"rationale\": \"SIGLEC1 is not associated with pseudohypoparathyroidism or the described phenotypes.\"}}",
+  "parsed_top5": [
+    "GNAS",
+    "ADORA3",
+    "VRK3",
+    "KRT71",
+    "TALDO1"
+  ]
+}

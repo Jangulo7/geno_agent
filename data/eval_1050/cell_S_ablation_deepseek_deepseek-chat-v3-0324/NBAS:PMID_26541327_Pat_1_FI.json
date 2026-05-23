@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_1_FI",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "MMP10",
+  "orig_qwen3_8b_correct": false,
+  "top1": "GSTO1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 3616,
+  "tokens_out": 574,
+  "finish_reason": "stop",
+  "latency_s": 32.46905755996704,
+  "cost_usd": 0.00116518,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"GSTO1\", \"confidence\": 0.3, \"rationale\": \"Only gene with evidence mentioning bilirubin elevation, matching patient's conjugated hyperbilirubinemia.\"},\n  {\"gene\": \"MMP10\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"ITGB1BP2\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"DCHS1\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"WDR6\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"TCF12\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"KIAA0825\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"FAM169A\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"FLT3LG\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"FAM170A\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"EIF3B\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"ARMH1\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"ZBTB43\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"KCNH8\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"},\n  {\"gene\": \"SCAMP2\", \"confidence\": 0.1, \"rationale\": \"General liver enzyme elevation but no specific match to patient's full phenotype.\"}\n]",
+  "parsed_top5": [
+    "GSTO1",
+    "MMP10",
+    "ITGB1BP2",
+    "DCHS1",
+    "WDR6"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12371,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 31.99413251876831,
+  "cost_usd": 0.0029770100000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"STXBP1\",\n      \"confidence\": 0.95,\n      \"rationale\": \"STXBP1 is strongly associated with infantile spasms, ataxia, and movement disorders, matching the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"RINT1\",\n      \"confidence\": 0.3,\n      \"rationale\": \"RINT1 variants can cause ataxia and spastic paraplegia, but lack direct epilepsy correlation.\"\n    },\n    {\n      \"gene\": \"UPP1\",\n      \"confidence\": 0.2,\n      \"rationale\": \"Limited evidence links UPP1 to ataxia and tremor, but no clear epilepsy association.\"\n    },\n    {\n      \"gene\": \"N4BP1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking N4BP1 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"XK\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking XK to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"HOXB3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking HOXB3 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"CHST1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking CHST1 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"TGFB2\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking TGFB2 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"CA7\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking CA7 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"MEGF8\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking MEGF8 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"GSR\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking GSR to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"OR13J1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking OR13J1 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"LRTM2\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking LRTM2 to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"TIPRL\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking TIPRL to the patient's phenotypes.\"\n    },\n    {\n      \"gene\": \"CCNDBP1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking CCNDBP1 to the patient's phenotypes.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "STXBP1",
+    "RINT1",
+    "UPP1",
+    "N4BP1",
+    "XK"
+  ]
+}

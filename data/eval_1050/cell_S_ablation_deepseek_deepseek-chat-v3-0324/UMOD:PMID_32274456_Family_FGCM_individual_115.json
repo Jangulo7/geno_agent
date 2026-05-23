@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_32274456_Family_FGCM_individual_115",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13947,
+  "tokens_out": 669,
+  "finish_reason": "stop",
+  "latency_s": 18.142755031585693,
+  "cost_usd": 0.0033045300000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"UMOD is strongly associated with autosomal dominant tubulointerstitial kidney disease, featuring CKD stages 3-5 with hematuria and proteinuria.\"\n  },\n  {\n    \"gene\": \"DYNAP\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence linking DYNAP to the patient's phenotypes; generic CKD descriptions only.\"\n  },\n  {\n    \"gene\": \"CEP135\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting CEP135 to CKD or hematuria/\"\n  },\n  {\n    \"gene\": \"USP28\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence linking USP28 to kidney disease or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CNIH3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence associating CNIH3 with CKD or urinary abnormalities.\"\n  },\n  {\n    \"gene\": \"FAM171A2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence for FAM171A2 involvement in renal phenotypes.\"\n  },\n  {\n    \"gene\": \"GRK3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No documented connection between GRK3 and CKD or hematuria/proteinuria.\"\n  },\n  {\n    \"gene\": \"ETHE1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting ETHE1 in CKD or the patient's specific renal symptoms.\"\n  },\n  {\n    \"gene\": \"RXYLT1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant literature links RXYLT1 to kidney disease or related phenotypes.\"\n  },\n  {\n    \"gene\": \"ERMP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence associating ERMP1 with CKD, hematuria, or proteinuria.\"\n  },\n  {\n    \"gene\": \"IL36B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No documented role of IL36B in kidney disease matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"SRGAP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SRGAP2 to CKD or urinary abnormalities.\"\n  },\n  {\n    \"gene\": \"ZFAND2B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant literature connecting ZFAND2B to CKD or renal phenotypes.\"\n  },\n  {\n    \"gene\": \"SH3PXD2A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting SH3PXD2A involvement in kidney disease.\"\n  },\n  {\n    \"gene\": \"LMAN1L\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No documented association between LMAN1L and the patient's renal symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "UMOD",
+    "DYNAP",
+    "CEP135",
+    "USP28",
+    "CNIH3"
+  ]
+}

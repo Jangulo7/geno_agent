@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_D_individual_D2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16117,
+  "tokens_out": 623,
+  "finish_reason": "stop",
+  "latency_s": 19.934834003448486,
+  "cost_usd": 0.0037031100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Multiple cases with hypogammaglobulinemia, recurrent infections, and inverted CD4:CD8 ratio, directly matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"FANCL\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some immune dysfunction noted, but presentation is inconsistent with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF575\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF575 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"TEX261\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TEX261 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"SACK1H\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SACK1H to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"MTNR1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MTNR1A to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"FOXF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FOXF2 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"GAGE12B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GAGE12B to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"ECE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ECE1 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"GAST\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GAST to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"FBXW4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FBXW4 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"PDE4DIP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PDE4DIP to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"ITGB3BP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ITGB3BP to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"MKLN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MKLN1 to immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR148\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GPR148 to immunodeficiency phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "FANCL",
+    "ZNF575",
+    "TEX261",
+    "SACK1H"
+  ]
+}

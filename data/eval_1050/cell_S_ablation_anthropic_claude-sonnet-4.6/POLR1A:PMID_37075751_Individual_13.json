@@ -1,0 +1,26 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_13",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "MSL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MSL3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16099,
+  "tokens_out": 632,
+  "finish_reason": "stop",
+  "latency_s": 13.083883285522461,
+  "cost_usd": 0.057777,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"MSL3\",\"confidence\":0.82,\"rationale\":\"MSL3 evidence directly describes Basilicata-Akhtar syndrome with global developmental delay, hypotonia, low-set ears, and overlapping dysmorphic features matching all patient HPO terms.\"},{\"gene\":\"HDAC3\",\"confidence\":0.05,\"rationale\":\"Evidence mentions seizures, developmental delay, hypotonia, and low-set ears but not specifically linked to HDAC3 as causal gene; chunks are generic case reports.\"},{\"gene\":\"NANOGP8\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking NANOGP8 to the patient's phenotype; shared chunks describe unrelated cases with overlapping features.\"},{\"gene\":\"ZIC5\",\"confidence\":0.02,\"rationale\":\"No specific ZIC5-disease association evidence provided; chunks are generic case descriptions not attributing phenotype to ZIC5.\"},{\"gene\":\"LMNTD1\",\"confidence\":0.02,\"rationale\":\"No direct LMNTD1 causal evidence; shared generic chunks mention low-set ears and developmental delay but not attributed to LMNTD1.\"},{\"gene\":\"ZNF12\",\"confidence\":0.02,\"rationale\":\"No specific ZNF12 causal evidence; evidence chunks are generic case reports shared across multiple candidates.\"},{\"gene\":\"ZSWIM5\",\"confidence\":0.02,\"rationale\":\"No specific ZSWIM5 causal evidence; evidence chunks are generic and not attributing phenotype to ZSWIM5.\"},{\"gene\":\"GSE1\",\"confidence\":0.01,\"rationale\":\"No direct GSE1 causal evidence for this phenotype; shared generic chunks only.\"},{\"gene\":\"GGH\",\"confidence\":0.01,\"rationale\":\"No direct GGH causal evidence; evidence chunks are generic case reports not linked to GGH.\"},{\"gene\":\"ZNF330\",\"confidence\":0.01,\"rationale\":\"No specific ZNF330 causal evidence; generic shared chunks only.\"},{\"gene\":\"RPL11\",\"confidence\":0.01,\"rationale\":\"No specific RPL11 causal evidence for this phenotype profile; generic shared chunks only.\"},{\"gene\":\"CBX5\",\"confidence\":0.01,\"rationale\":\"No specific CBX5 causal evidence; generic shared chunks only.\"},{\"gene\":\"ACER2\",\"confidence\":0.01,\"rationale\":\"No specific ACER2 causal evidence; generic shared chunks only.\"},{\"gene\":\"VAMP7\",\"confidence\":0.01,\"rationale\":\"No specific VAMP7 causal evidence; generic shared chunks only.\"},{\"gene\":\"MLX\",\"confidence\":0.01,\"rationale\":\"No specific MLX causal evidence; generic shared chunks only.\"}]",
+  "parsed_top5": [
+    "MSL3",
+    "HDAC3",
+    "NANOGP8",
+    "ZIC5",
+    "LMNTD1"
+  ]
+}

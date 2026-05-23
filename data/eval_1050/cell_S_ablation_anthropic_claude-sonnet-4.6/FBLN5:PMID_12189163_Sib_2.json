@@ -1,0 +1,26 @@
+{
+  "case_id": "FBLN5:PMID_12189163_Sib_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "SDS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SDS",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20662,
+  "tokens_out": 699,
+  "finish_reason": "stop",
+  "latency_s": 10.988630294799805,
+  "cost_usd": 0.072471,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SDS\",\"confidence\":0.72,\"rationale\":\"SDS evidence directly mentions anteverted nares, ptosis, redundant skin, and delayed skeletal maturation in case reports with high critic relevance scores, matching most patient HPO terms.\"},{\"gene\":\"DAB1\",\"confidence\":0.07,\"rationale\":\"DAB1 evidence mentions anteverted nares in a chromosomal deletion context but lacks direct gene-disease link for the full phenotype profile including emphysema and macrotia.\"},{\"gene\":\"PAIP1\",\"confidence\":0.02,\"rationale\":\"PAIP1 evidence only shows shared background literature with anteverted nares and redundant skin but no direct gene-specific association with the patient's phenotype.\"},{\"gene\":\"SYCE3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SYCE3 to the patient's phenotype; shared background literature only with low critic relevance scores.\"},{\"gene\":\"OR4C13\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking OR4C13 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"REG3G\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking REG3G to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"TRERF1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TRERF1 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"UAP1L1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking UAP1L1 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"TAS2R45\",\"confidence\":0.02,\"rationale\":\"TAS2R45 evidence includes a case with ptosis and anteverted nares but no direct gene-disease link; shared background case report only.\"},{\"gene\":\"GPR37\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GPR37 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"DLEC1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DLEC1 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"XAGE1A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking XAGE1A to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"GCNT4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GCNT4 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"SMYD3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SMYD3 to the patient's phenotype; only shared background literature with low relevance.\"},{\"gene\":\"MCUR1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MCUR1 to the patient's phenotype; only shared background literature with low relevance.\"}]",
+  "parsed_top5": [
+    "SDS",
+    "DAB1",
+    "PAIP1",
+    "SYCE3",
+    "OR4C13"
+  ]
+}

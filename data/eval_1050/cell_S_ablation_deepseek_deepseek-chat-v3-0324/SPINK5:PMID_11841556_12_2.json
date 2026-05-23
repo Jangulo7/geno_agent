@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_12_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16044,
+  "tokens_out": 707,
+  "finish_reason": "stop",
+  "latency_s": 22.88585329055786,
+  "cost_usd": 0.00375319,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence links SPINK5 mutations to Netherton syndrome, matching all the patient's phenotypes including erythroderma, atopic dermatitis, and trichorrhexis invaginata.\"\n  },\n  {\n    \"gene\": \"TBC1D9B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TBC1D9B to the patient's phenotypes; only generic mentions of similar symptoms without gene association.\"\n  },\n  {\n    \"gene\": \"SEL1L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting SEL1L to the patient's specific clinical presentation.\"\n  },\n  {\n    \"gene\": \"HYAL2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Lacks any supporting evidence related to the patient's dermatological and immunological symptoms.\"\n  },\n  {\n    \"gene\": \"ALDH1L1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented associations with skin barrier disorders or elevated IgE levels.\"\n  },\n  {\n    \"gene\": \"ZSCAN9\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence found linking ZSCAN9 to congenital erythroderma or atopic dermatitis.\"\n  },\n  {\n    \"gene\": \"SLC25A35\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature connecting SLC25A35 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KCNB1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No supportive evidence for KCNB1 in the context of skin barrier defects or recurrent infections.\"\n  },\n  {\n    \"gene\": \"FAM180A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No identified role in dermatological or immunological disorders matching the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ILK\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Absence of evidence associating ILK with congenital exfoliative erythroderma or trichorrhexis invaginata.\"\n  },\n  {\n    \"gene\": \"KCNIP1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known connection to the patient's clinical presentation of Netherton-like syndrome.\"\n  },\n  {\n    \"gene\": \"TRMT44\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Lacks any evidence tying TRMT44 to elevated IgE or congenital skin disorders.\"\n  },\n  {\n    \"gene\": \"BRCA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevance to dermatological phenotypes; primarily associated with cancer risk.\"\n  },\n  {\n    \"gene\": \"TENT2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented involvement in skin barrier dysfunction or atopic diathesis.\"\n  },\n  {\n    \"gene\": \"MOGS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking MOGS to congenital erythroderma or recurrent skin infections.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "TBC1D9B",
+    "SEL1L",
+    "HYAL2",
+    "ALDH1L1"
+  ]
+}

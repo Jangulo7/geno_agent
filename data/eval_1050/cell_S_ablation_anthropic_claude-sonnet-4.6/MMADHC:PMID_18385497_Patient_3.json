@@ -1,0 +1,26 @@
+{
+  "case_id": "MMADHC:PMID_18385497_Patient_3",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "MMADHC",
+  "orig_qwen3_8b_top1": "MMADHC",
+  "orig_qwen3_8b_correct": true,
+  "top1": "MMADHC",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17206,
+  "tokens_out": 735,
+  "finish_reason": "stop",
+  "latency_s": 13.147408723831177,
+  "cost_usd": 0.062643,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"MMADHC\",\"confidence\":0.82,\"rationale\":\"MMADHC directly causes methylmalonic aciduria; evidence explicitly links MMA to neonatal respiratory distress, seizures, EEG abnormalities, intellectual disability, and intracranial complications matching the full phenotype.\"},{\"gene\":\"RAB20\",\"confidence\":0.04,\"rationale\":\"Evidence chunk mentions MMA with EEG/neurological findings but RAB20 itself has no direct mechanistic link to the patient's phenotype profile.\"},{\"gene\":\"ITCH\",\"confidence\":0.03,\"rationale\":\"Evidence chunk mentions MMA neurological features but ITCH has no established causal role in methylmalonic aciduria or the patient's specific phenotype cluster.\"},{\"gene\":\"MAP3K6\",\"confidence\":0.02,\"rationale\":\"Evidence mentions atypical methylmalonic aciduria context but MAP3K6 has no known direct association with MMA or the patient's neonatal/metabolic phenotype.\"},{\"gene\":\"PRH1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PRH1 to methylmalonic aciduria or the neonatal/metabolic phenotype; shared evidence chunks are non-specific.\"},{\"gene\":\"ERC2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ERC2 to methylmalonic aciduria or the patient's phenotype; evidence chunks are generic and non-specific.\"},{\"gene\":\"SYNGR3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SYNGR3 to methylmalonic aciduria or the patient's neonatal metabolic phenotype cluster.\"},{\"gene\":\"TNRC18\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TNRC18 to methylmalonic aciduria or the patient's specific phenotype profile.\"},{\"gene\":\"ECT2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ECT2 to methylmalonic aciduria or the patient's neonatal/metabolic phenotype.\"},{\"gene\":\"ABI2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ABI2 to methylmalonic aciduria or the patient's phenotype; evidence is non-specific.\"},{\"gene\":\"DEPDC4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DEPDC4 to methylmalonic aciduria or the patient's neonatal metabolic phenotype cluster.\"},{\"gene\":\"UQCRH\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking UQCRH to methylmalonic aciduria or the patient's specific phenotype profile.\"},{\"gene\":\"KCTD17\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KCTD17 to methylmalonic aciduria or the patient's neonatal/metabolic phenotype.\"},{\"gene\":\"TRPC4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TRPC4 to methylmalonic aciduria or the patient's specific phenotype cluster.\"},{\"gene\":\"SLC22A10\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC22A10 to methylmalonic aciduria or the patient's neonatal metabolic phenotype profile.\"}]",
+  "parsed_top5": [
+    "MMADHC",
+    "RAB20",
+    "ITCH",
+    "MAP3K6",
+    "PRH1"
+  ]
+}

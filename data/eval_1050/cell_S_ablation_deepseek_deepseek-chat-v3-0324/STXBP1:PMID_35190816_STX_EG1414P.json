@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_EG1414P",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13937,
+  "tokens_out": 638,
+  "finish_reason": "stop",
+  "latency_s": 16.10622262954712,
+  "cost_usd": 0.0032786599999999996,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"STXBP1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking STXBP1 to infantile spasms, severe developmental delay, and other matching neurological features.\"\n  },\n  {\n    \"gene\": \"NOS1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Some phenotypic overlap with developmental delay and seizures, but less specific to the full profile seen here.\"\n  },\n  {\n    \"gene\": \"CHDH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence tying CHDH to the described seizure and developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF705A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong literature evidence associating ZNF705A with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"EPN1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence found linking EPN1 to the observed clinical features.\"\n  },\n  {\n    \"gene\": \"FBXO44\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No convincing evidence supporting FBXO44 as a candidate for these symptoms.\"\n  },\n  {\n    \"gene\": \"FOXN1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant literature connecting FOXN1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"MGME1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"MGME1 has no clear association with the described neurological phenotypes.\"\n  },\n  {\n    \"gene\": \"NAPSA\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence found linking NAPSA to infantile epilepsy or developmental delay.\"\n  },\n  {\n    \"gene\": \"RNF8\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No substantial evidence associating RNF8 with the patient's condition.\"\n  },\n  {\n    \"gene\": \"DUS2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"DUS2 lacks documented relevance to the phenotypic presentation observed.\"\n  },\n  {\n    \"gene\": \"PPP1R35\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No reliable evidence connects PPP1R35 to epilepsy or global developmental delay.\"\n  },\n  {\n    \"gene\": \"PINLYP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"PINLYP has no known involvement in epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"GDF15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence supporting GDF15 in this clinical context.\"\n  },\n  {\n    \"gene\": \"ARSB\",\n    \"confidence\": 0.2,\n    \"rationale\": \"ARSB is not implicated in these neurological phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "STXBP1",
+    "NOS1",
+    "CHDH",
+    "ZNF705A",
+    "EPN1"
+  ]
+}

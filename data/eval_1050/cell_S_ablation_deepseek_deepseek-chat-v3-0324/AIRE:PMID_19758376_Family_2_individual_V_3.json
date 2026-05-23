@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_19758376_Family_2_individual_V_3",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15427,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 4.233812570571899,
+  "cost_usd": 0.00312544,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"AIRE\",\n  \"confidence\": 0.95,\n  \"rationale\": \"AIRE is strongly linked to APS-1, which includes hypoparathyroidism and hypothyroidism, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

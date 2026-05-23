@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F6",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14473,
+  "tokens_out": 661,
+  "finish_reason": "stop",
+  "latency_s": 19.537258625030518,
+  "cost_usd": 0.0034035700000000007,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"IKZF1 directly affects B cell development and is linked to decreased memory B cells and immunoglobulins, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"EXOSC10\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking EXOSC10 to B cell defects; relevance unclear for this phenotype.\"\n  },\n  {\n    \"gene\": \"RGS13\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Mentioned in B cell context but no direct evidence linking it to the patient's immunodeficiency.\"\n  },\n  {\n    \"gene\": \"ENTPD8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ENTPD8 to B cell or immunoglobulin deficiencies.\"\n  },\n  {\n    \"gene\": \"THSD7A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting THSD7A to immune system dysfunction.\"\n  },\n  {\n    \"gene\": \"ANP32E\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct relevance to B cell deficiencies or immunoglobulin levels.\"\n  },\n  {\n    \"gene\": \"PSG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting PSG1 to B cell defects or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"RFX7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No clear link between RFX7 and the patient's B cell or immunoglobulin phenotype.\"\n  },\n  {\n    \"gene\": \"OLFML2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in B cell development or immunoglobulin production.\"\n  },\n  {\n    \"gene\": \"TRAPPC5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRAPPC5 to B cell function or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"SPRY1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevance found for SPRY1 in immune deficiencies matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"TAPT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting TAPT1 to immunoglobulin deficiencies or B cell defects.\"\n  },\n  {\n    \"gene\": \"ARV1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking ARV1 to immune system dysfunction.\"\n  },\n  {\n    \"gene\": \"ACOX3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No connection found between ACOX3 and B cell or immunoglobulin abnormalities.\"\n  },\n  {\n    \"gene\": \"LPAR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LPAR1 to B cell or immunoglobulin deficiencies.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "EXOSC10",
+    "RGS13",
+    "ENTPD8",
+    "THSD7A"
+  ]
+}

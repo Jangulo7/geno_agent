@@ -1,0 +1,26 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "MOSMO",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MOSMO",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14052,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 43.640971422195435,
+  "cost_usd": 0.00331321,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"MOSMO\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence linking MOSMO mutations to double outlet right ventricle and hypoplastic left ventricle in mouse models.\"\n  },\n  {\n    \"gene\": \"PPIB\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentioned in context of heterotaxy diagnostic criteria but no direct evidence for cardiac phenotypes.\"\n  },\n  {\n    \"gene\": \"HPCA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HPCA to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM120AOS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM120AOS to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC45A2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC45A2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NXPE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NXPE1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"RMDN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RMDN2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"WEE2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking WEE2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SF3A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SF3A1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZC3H11C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZC3H11C to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CFAP299\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CFAP299 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZFP36L2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZFP36L2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM76B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM76B to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TIGD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TIGD1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"OR2H2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR2H2 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "MOSMO",
+    "PPIB",
+    "HPCA",
+    "FAM120AOS",
+    "SLC45A2"
+  ]
+}

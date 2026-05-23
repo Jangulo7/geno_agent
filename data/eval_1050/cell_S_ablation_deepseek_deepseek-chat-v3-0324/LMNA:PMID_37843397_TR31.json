@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR31",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16955,
+  "tokens_out": 718,
+  "finish_reason": "stop",
+  "latency_s": 25.178452730178833,
+  "cost_usd": 0.00394386,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Multiple high-relevance chunks directly link LMNA mutations to familial partial lipodystrophy (FPLD), matching the patient's adipose loss and metabolic symptoms.\"\n  },\n  {\n    \"gene\": \"ALMS1\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Alstr\u00f6m syndrome (ALMS1) presents with obesity, diabetes, and dyslipidemia but lacks strong evidence for limb/truncal adipose loss seen here.\"\n  },\n  {\n    \"gene\": \"HMCN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HMCN1 to lipodystrophy or metabolic phenotypes in provided chunks.\"\n  },\n  {\n    \"gene\": \"GK3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence tying GK3 to lipodystrophy or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PRR15\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature chunks associate PRR15 with lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"ASPHD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supports ASPHD2's role in lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"MYO15A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MYO15A is not implicated in the provided evidence for lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"ZSCAN21\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence connects ZSCAN21 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"APOBEC4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"APOBEC4 lacks documented associations with lipodystrophy or metabolic syndromes.\"\n  },\n  {\n    \"gene\": \"CAPN6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant chunks link CAPN6 to adipose tissue disorders or insulin resistance.\"\n  },\n  {\n    \"gene\": \"ABCD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ABCD3 is not associated with lipodystrophy or the metabolic profile in provided evidence.\"\n  },\n  {\n    \"gene\": \"RASGEF1C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature evidence ties RASGEF1C to lipodystrophy or adipose dysfunction.\"\n  },\n  {\n    \"gene\": \"STIM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"STIM1 is not linked to the patient's phenotypic features in the provided chunks.\"\n  },\n  {\n    \"gene\": \"LINGO4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supports LINGO4's involvement in lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"ERICH3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ERICH3 has no documented association with lipodystrophy or diabetes in the provided chunks.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "ALMS1",
+    "HMCN1",
+    "GK3",
+    "PRR15"
+  ]
+}

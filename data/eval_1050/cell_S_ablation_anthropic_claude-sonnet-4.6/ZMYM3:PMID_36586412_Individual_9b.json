@@ -1,0 +1,26 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_9b",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "PTGFR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ERF",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18783,
+  "tokens_out": 1098,
+  "finish_reason": "stop",
+  "latency_s": 19.79162883758545,
+  "cost_usd": 0.072819,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "Looking at the patient's HPO phenotypes: Long face, High anterior hairline, Thin vermilion border, Long philtrum, Deeply set eye, Autistic behavior, Intellectual disability, Delayed speech and language development.\n\nThe ERF gene's chunk_3 (discussion section) explicitly describes MALNS (Malan syndrome) caused by NFIX haploinsufficiency, with features including: long and triangular face, prominent forehead with high anterior hairline, deep-set eyes, long philtrum, thin vermilion of the upper lip, developmental delay and intellectual disability. This matches the patient's phenotype almost perfectly. However, this is about NFIX, not ERF itself.\n\nLooking more carefully, the chunk for ERF in the discussion section describes MALNS/NFIX syndrome features that match the patient very well: long face, high anterior hairline, deep-set eyes, long philtrum, thin upper lip vermilion, intellectual disability, developmental delay. The patient also has autistic behavior which fits.\n\nThe evidence chunks are largely shared across genes (same boilerplate text), but ERF uniquely has the MALNS/NFIX discussion chunk that most closely matches ALL the patient's features including long face specifically. The other genes with the UNC13A chunk mention short philtrum (not matching), and the TCEAL1 chunk also mentions short philtrum.\n\nERF's unique chunk describing MALNS features (long face, high anterior hairline, deep-set eyes, long philtrum, thin vermilion, ID, DD) is the best match for this patient's complete phenotype profile.\n\n[{\"gene\":\"ERF\",\"confidence\":0.35,\"rationale\":\"ERF evidence chunk explicitly describes MALNS/NFIX syndrome with long face, high anterior hairline, deep-set eyes, long philtrum, thin upper lip vermilion, intellectual disability, and developmental delay matching all patient HPO terms.\"},{\"gene\":\"NEMF\",\"confidence\":0.06,\"rationale\":\"Shared generic evidence chunks with some overlapping facial features but no specific match to long face or autism; lower prior probability.\"},{\"gene\":\"ATG13\",\"confidence\":0.06,\"rationale\":\"Evidence includes high anterior hairline, deeply set eyes, thin upper lip vermilion via UNC13A chunk, but short philtrum conflicts with patient's long philtrum.\"},{\"gene\":\"CBX8\",\"confidence\":0.06,\"rationale\":\"Evidence includes high anterior hairline, deeply set eyes, thin upper lip vermilion via UNC13A chunk, but short philtrum conflicts with patient's long philtrum.\"},{\"gene\":\"CUL4A\",\"confidence\":0.06,\"rationale\":\"Evidence includes high anterior hairline, deeply set eyes, thin upper lip vermilion via UNC13A chunk, but short philtrum conflicts with patient's long philtrum.\"},{\"gene\":\"RNF122\",\"confidence\":0.06,\"rationale\":\"Evidence includes high anterior hairline, deeply set eyes, thin upper lip vermilion via UNC13A chunk, but short philtrum conflicts with patient's long philtrum.\"},{\"gene\":\"SMIM39\",\"confidence\":0.05,\"rationale\":\"Evidence mentions long philtrum and thin upper vermilion in ARID1B context but no specific link to long face or autism for this gene.\"},{\"gene\":\"MON1A\",\"confidence\":0.05,\"rationale\":\"Evidence mentions long philtrum and thin upper vermilion in ARID1B context but no specific link to long face or autism for this gene.\"},{\"gene\":\"PTGFR\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for PTGFR itself.\"},{\"gene\":\"AFAP1\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for AFAP1 itself.\"},{\"gene\":\"RNASEL\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for RNASEL itself.\"},{\"gene\":\"CTAGE1\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for CTAGE1 itself.\"},{\"gene\":\"RNF170\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for RNF170 itself.\"},{\"gene\":\"VAX1\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for VAX1 itself.\"},{\"gene\":\"NTN1\",\"confidence\":0.04,\"rationale\":\"Generic shared evidence chunks; no specific association with long face, autism, or intellectual disability for NTN1 itself.\"}]",
+  "parsed_top5": [
+    "ERF",
+    "NEMF",
+    "ATG13",
+    "CBX8",
+    "CUL4A"
+  ]
+}

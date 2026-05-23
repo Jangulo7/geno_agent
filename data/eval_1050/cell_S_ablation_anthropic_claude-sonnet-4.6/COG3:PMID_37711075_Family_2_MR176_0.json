@@ -1,0 +1,26 @@
+{
+  "case_id": "COG3:PMID_37711075_Family_2_MR176_0",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COG3",
+  "orig_qwen3_8b_top1": "ATG16L1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PSMC3",
+  "top1_correct": false,
+  "causal_rank": 10,
+  "tokens_in": 20551,
+  "tokens_out": 1073,
+  "finish_reason": "stop",
+  "latency_s": 17.84093737602234,
+  "cost_usd": 0.077748,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PSMC3\",\n    \"confidence\": 0.35,\n    \"rationale\": \"PSMC3 evidence directly describes proteasome-related neurodevelopmental disorders with intellectual disability, speech delay, and behavioral abnormalities matching the patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"FGFR4\",\n    \"confidence\": 0.25,\n    \"rationale\": \"FGFR4 chunk describes families with global developmental delay, severe intellectual disability, absent speech, aggressiveness, seizures, and weak muscle strength closely matching all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"TMEM143\",\n    \"confidence\": 0.08,\n    \"rationale\": \"TMEM143 shares the same high-relevance chunk describing absent speech, GDD, severe ID, aggressiveness, and seizures, but no direct gene-specific mechanistic link is established.\"\n  },\n  {\n    \"gene\": \"FAM153B\",\n    \"confidence\": 0.07,\n    \"rationale\": \"FAM153B shares the same family description chunk with absent speech, GDD, severe ID, aggressiveness, and seizures but lacks direct gene-specific evidence.\"\n  },\n  {\n    \"gene\": \"STK3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"STK3 shares the same family phenotype chunk but has no direct mechanistic evidence linking it to this neurodevelopmental phenotype.\"\n  },\n  {\n    \"gene\": \"ATG16L1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"ATG16L1 evidence mentions autophagy-related neurodevelopmental disorders with GDD/ID but the direct mention is via WIPI2 interaction, not ATG16L1 itself as causal.\"\n  },\n  {\n    \"gene\": \"ORAI1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"ORAI1 evidence mentions calcium signaling disorders with seizures and developmental delay but lacks specific matching to the full phenotype including absent speech and muscle atrophy.\"\n  },\n  {\n    \"gene\": \"NT5DC3\",\n    \"confidence\": 0.03,\n    \"rationale\": \"NT5DC3 evidence describes TBCK-related disorder with neurogenic skeletal muscle atrophy, seizures, and severe developmental delay but the gene itself is not directly implicated.\"\n  },\n  {\n    \"gene\": \"EFHD2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"EFHD2 evidence describes patients with GDD, ID, speech impairment, and seizures but no direct causal link to EFHD2 is established in the provided chunks.\"\n  },\n  {\n    \"gene\": \"COG3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"COG3 shares generic neurodevelopmental disorder evidence chunks but no specific mechanistic or clinical link to the patient's phenotype is provided.\"\n  },\n  {\n    \"gene\": \"RANBP2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"RANBP2 evidence describes patients with GDD, ID, and seizures but no direct gene-specific association with the full phenotype profile is demonstrated.\"\n  },\n  {\n    \"gene\": \"C1QTNF4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"C1QTNF4 has only generic neurodevelopmental disorder evidence with no direct mechanistic link to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MYLK4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"MYLK4 evidence only describes MYT1L-related GDD and autistic behaviors without covering the full phenotype including muscle atrophy, seizures, and absent speech.\"\n  },\n  {\n    \"gene\": \"FBL\",\n    \"confidence\": 0.01,\n    \"rationale\": \"FBL has no direct evidence linking it to the patient's neurodevelopmental phenotype; shared chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"ARMC9\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ARMC9 is typically associated with Joubert syndrome/ciliopathy, and the provided evidence chunks do not directly support it as causal for this phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "PSMC3",
+    "FGFR4",
+    "TMEM143",
+    "FAM153B",
+    "STK3"
+  ]
+}

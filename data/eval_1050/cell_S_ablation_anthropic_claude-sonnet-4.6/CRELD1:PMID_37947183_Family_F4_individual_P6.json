@@ -1,0 +1,26 @@
+{
+  "case_id": "CRELD1:PMID_37947183_Family_F4_individual_P6",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CRELD1",
+  "orig_qwen3_8b_top1": "CASK",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CASK",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19069,
+  "tokens_out": 936,
+  "finish_reason": "stop",
+  "latency_s": 16.685256719589233,
+  "cost_usd": 0.071247,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CASK\",\n    \"confidence\": 0.72,\n    \"rationale\": \"CASK has a high-relevance (5/5) case report chunk directly mentioning the gene and describing hypotonia, feeding difficulties, obstructive sleep apnea, and failure to thrive matching the patient's HPO profile; CASK mutations cause X-linked intellectual disability with epilepsy and global developmental delay.\"\n  },\n  {\n    \"gene\": \"NKX6-1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific evidence linking NKX6-1 to this phenotype profile; shared chunks describe unrelated cases with no direct NKX6-1 disease association matching the HPO terms.\"\n  },\n  {\n    \"gene\": \"GABRQ\",\n    \"confidence\": 0.04,\n    \"rationale\": \"GABRQ encodes a GABA receptor subunit with some epilepsy association, but no direct evidence in provided chunks links it to this full phenotype profile.\"\n  },\n  {\n    \"gene\": \"CCDC63\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No specific evidence in provided chunks links CCDC63 to the patient's neurodevelopmental and respiratory phenotype profile.\"\n  },\n  {\n    \"gene\": \"SIGLEC7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence in provided chunks supports SIGLEC7 as causal for this neurodevelopmental and epilepsy phenotype.\"\n  },\n  {\n    \"gene\": \"ABHD17A\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence in provided chunks links ABHD17A to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MMP26\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence in provided chunks supports MMP26 as causal for this neurodevelopmental phenotype.\"\n  },\n  {\n    \"gene\": \"ANKRD54\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence in provided chunks supports ANKRD54 as causal for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"OR8J2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"OR8J2 is an olfactory receptor gene with no known disease association matching this phenotype profile.\"\n  },\n  {\n    \"gene\": \"CRYM\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence in provided chunks links CRYM to this neurodevelopmental and epilepsy phenotype profile.\"\n  },\n  {\n    \"gene\": \"MDK\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence in provided chunks supports MDK as causal for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"MEF2A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence in provided chunks links MEF2A to this neurodevelopmental phenotype profile.\"\n  },\n  {\n    \"gene\": \"ASIC3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence in provided chunks supports ASIC3 as causal for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"PPP1R2C\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence in provided chunks links PPP1R2C to this neurodevelopmental and epilepsy phenotype profile.\"\n  },\n  {\n    \"gene\": \"GAPDHS\",\n    \"confidence\": 0.01,\n    \"rationale\": \"GAPDHS is involved in sperm glycolysis with no known association to this neurodevelopmental phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "CASK",
+    "NKX6-1",
+    "GABRQ",
+    "CCDC63",
+    "SIGLEC7"
+  ]
+}

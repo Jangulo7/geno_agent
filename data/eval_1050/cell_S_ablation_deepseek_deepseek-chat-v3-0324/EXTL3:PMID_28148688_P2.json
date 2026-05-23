@@ -1,0 +1,22 @@
+{
+  "case_id": "EXTL3:PMID_28148688_P2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15443,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 5.552533388137817,
+  "cost_usd": 0.00313326,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"EXTL3\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Direct evidence links EXTL3 to cloverleaf skull, trident acetabulum, hepatic cysts, and severe T cell immunodeficiency matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "EXTL3"
+  ]
+}

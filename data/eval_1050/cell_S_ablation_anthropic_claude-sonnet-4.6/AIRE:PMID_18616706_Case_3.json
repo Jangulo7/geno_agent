@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_18616706_Case_3",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20488,
+  "tokens_out": 860,
+  "finish_reason": "stop",
+  "latency_s": 12.461062908172607,
+  "cost_usd": 0.074364,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"AIRE\", \"confidence\": 0.97, \"rationale\": \"AIRE loss-of-function directly causes APS-1/APECED, whose classic triad (CMC, hypoparathyroidism, adrenal insufficiency) plus alopecia, vitiligo, and malabsorption perfectly matches this patient's phenotype profile.\"}, {\"gene\": \"DAB2\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks describe APS-1/AIRE disease context only; DAB2 has no established link to this phenotype cluster.\"}, {\"gene\": \"F8\", \"confidence\": 0.01, \"rationale\": \"F8 encodes coagulation factor VIII; evidence chunks reference APECED/AIRE context only with no mechanistic link to this phenotype.\"}, {\"gene\": \"PDHB\", \"confidence\": 0.01, \"rationale\": \"PDHB encodes pyruvate dehydrogenase subunit; evidence chunks are APECED-context only with no direct relevance to this autoimmune syndrome.\"}, {\"gene\": \"NDUFS8\", \"confidence\": 0.01, \"rationale\": \"NDUFS8 is a mitochondrial complex I subunit; evidence chunks reference APECED/AIRE only with no connection to this phenotype.\"}, {\"gene\": \"TTBK2\", \"confidence\": 0.01, \"rationale\": \"TTBK2 is associated with spinocerebellar ataxia; evidence chunks describe APS-1 patients but TTBK2 is not implicated in this syndrome.\"}, {\"gene\": \"CEP44\", \"confidence\": 0.01, \"rationale\": \"CEP44 is a centriole protein; evidence chunks reference APECED context only with no mechanistic link to this autoimmune phenotype.\"}, {\"gene\": \"PRAMEF7\", \"confidence\": 0.01, \"rationale\": \"PRAMEF7 has no established disease association; evidence chunks describe APECED/AIRE context only.\"}, {\"gene\": \"PAPSS2\", \"confidence\": 0.01, \"rationale\": \"PAPSS2 causes skeletal dysplasia; evidence chunks reference APECED/AIRE context only with no link to this phenotype cluster.\"}, {\"gene\": \"LMOD2\", \"confidence\": 0.01, \"rationale\": \"LMOD2 is associated with cardiomyopathy; evidence chunks reference APECED/AIRE context only with no relevance to this syndrome.\"}, {\"gene\": \"ARMH2\", \"confidence\": 0.01, \"rationale\": \"ARMH2 has no established disease link; evidence chunks describe APECED/AIRE context only.\"}, {\"gene\": \"SDIM1\", \"confidence\": 0.01, \"rationale\": \"SDIM1 has no established disease association; evidence chunks reference APECED/AIRE context only.\"}, {\"gene\": \"ADH1C\", \"confidence\": 0.01, \"rationale\": \"ADH1C encodes alcohol dehydrogenase; evidence chunks reference APECED/AIRE context only with no mechanistic link to this phenotype.\"}, {\"gene\": \"SORCS3\", \"confidence\": 0.01, \"rationale\": \"SORCS3 is a neuronal sorting receptor; evidence chunks reference APECED/AIRE context only with no connection to this autoimmune syndrome.\"}, {\"gene\": \"CCDC17\", \"confidence\": 0.01, \"rationale\": \"CCDC17 has no established disease association; evidence chunks reference APECED/AIRE context only with no direct relevance.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "DAB2",
+    "F8",
+    "PDHB",
+    "NDUFS8"
+  ]
+}

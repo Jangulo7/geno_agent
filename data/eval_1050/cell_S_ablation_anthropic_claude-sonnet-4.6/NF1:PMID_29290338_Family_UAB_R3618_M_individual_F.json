@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R3618_M_individual_F",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10995,
+  "tokens_out": 765,
+  "finish_reason": "stop",
+  "latency_s": 9.360666751861572,
+  "cost_usd": 0.04446,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NF1\",\"confidence\":0.97,\"rationale\":\"NF1 directly causes neurofibromatosis type 1, whose cardinal features include neurofibromas, caf\u00e9-au-lait spots, freckling, and hypertension; all patient HPO terms match classic NF1 diagnostic criteria.\"},{\"gene\":\"VSIG2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NF1 cases only; VSIG2 has no established link to the patient's phenotype profile.\"},{\"gene\":\"CCDC196\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CCDC196 to neurofibromas, freckling, caf\u00e9-au-lait spots, or hypertension; chunks describe NF1 cases only.\"},{\"gene\":\"MFAP1\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking MFAP1 to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"CLDN2\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CLDN2 to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"},{\"gene\":\"MCHR2\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking MCHR2 to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"C6orf52\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking C6orf52 to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"},{\"gene\":\"RNASEH2B\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking RNASEH2B to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"CTBS\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CTBS to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"},{\"gene\":\"ZBTB39\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking ZBTB39 to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"VCF2\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking VCF2 to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"},{\"gene\":\"ZNF140\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking ZNF140 to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"CEP89\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CEP89 to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"},{\"gene\":\"TMSB15B\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking TMSB15B to the patient's phenotype; evidence chunks describe NF1 clinical presentations only.\"},{\"gene\":\"CDRT4\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CDRT4 to neurofibromas, freckling, or hypertension; chunks reference NF1 cases only.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "VSIG2",
+    "CCDC196",
+    "MFAP1",
+    "CLDN2"
+  ]
+}

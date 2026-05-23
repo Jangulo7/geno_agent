@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19310,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 9.877799987792969,
+  "cost_usd": 0.067725,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.92,\"rationale\":\"ITPR1 causes Gillespie syndrome, directly matching aniridia, cerebellar atrophy, intellectual disability, hypotonia, and delayed speech\u2014all present in this patient.\"},{\"gene\":\"ADSL\",\"confidence\":0.03,\"rationale\":\"ADSL deficiency shares hypotonia and intellectual disability but lacks aniridia; evidence chunk is only a differential diagnosis mention.\"},{\"gene\":\"CYFIP1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CYFIP1 to this phenotype profile; evidence chunks are generic or unrelated.\"},{\"gene\":\"RNASE1\",\"confidence\":0.01,\"rationale\":\"No evidence linking RNASE1 to aniridia, cerebellar atrophy, or intellectual disability in the provided chunks.\"},{\"gene\":\"NANOGP8\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NANOGP8 to this phenotype; chunks are generic or unrelated.\"},{\"gene\":\"TMEM200C\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM200C to aniridia or the neurodevelopmental phenotype described.\"},{\"gene\":\"CHST5\",\"confidence\":0.01,\"rationale\":\"No evidence linking CHST5 to aniridia, cerebellar atrophy, or intellectual disability in provided chunks.\"},{\"gene\":\"LRRTM4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LRRTM4 to this phenotype profile in the provided evidence.\"},{\"gene\":\"GBE1\",\"confidence\":0.01,\"rationale\":\"GBE1 evidence describes a different phenotype without aniridia; no direct match to this patient.\"},{\"gene\":\"ANKRD2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ANKRD2 to aniridia or the neurodevelopmental phenotype described.\"},{\"gene\":\"DDRGK1\",\"confidence\":0.01,\"rationale\":\"No evidence linking DDRGK1 to aniridia, cerebellar atrophy, or intellectual disability in provided chunks.\"},{\"gene\":\"CCDC181\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CCDC181 to this phenotype; Gillespie syndrome mention is generic background.\"},{\"gene\":\"OARD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking OARD1 to aniridia or the neurodevelopmental phenotype described.\"},{\"gene\":\"LTA\",\"confidence\":0.01,\"rationale\":\"No evidence linking LTA to aniridia, cerebellar atrophy, or intellectual disability in provided chunks.\"},{\"gene\":\"PALS1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PALS1 to this phenotype profile in the provided evidence.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "ADSL",
+    "CYFIP1",
+    "RNASE1",
+    "NANOGP8"
+  ]
+}

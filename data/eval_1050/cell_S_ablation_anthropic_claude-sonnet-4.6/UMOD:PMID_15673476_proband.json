@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15673476_proband",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18737,
+  "tokens_out": 808,
+  "finish_reason": "stop",
+  "latency_s": 13.575703620910645,
+  "cost_usd": 0.068331,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"UMOD/ADTKD-UMOD directly causes corticomedullary cysts, progressive CKD (stages 1-5/ESKD), elevated creatinine, hyperuricemia, and gout\u2014matching all patient HPO phenotypes precisely.\"},{\"gene\":\"TSC1\",\"confidence\":0.02,\"rationale\":\"TSC1 causes renal cysts and CKD in tuberous sclerosis but lacks the hyperuricemia/gout association and has distinct multi-organ hamartoma features not present here.\"},{\"gene\":\"KLK6\",\"confidence\":0.01,\"rationale\":\"KLK6 correlates with serum creatinine as a biomarker but is not a known causal gene for cystic kidney disease, hyperuricemia, or gout.\"},{\"gene\":\"CALR\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CALR to the patient's phenotype of renal corticomedullary cysts, CKD, hyperuricemia, or gout.\"},{\"gene\":\"BRINP2\",\"confidence\":0.005,\"rationale\":\"No evidence linking BRINP2 to renal cystic disease, CKD progression, hyperuricemia, or gout.\"},{\"gene\":\"SSR3\",\"confidence\":0.005,\"rationale\":\"No evidence linking SSR3 to renal corticomedullary cysts, CKD, hyperuricemia, or gout.\"},{\"gene\":\"SEC14L6\",\"confidence\":0.005,\"rationale\":\"No evidence linking SEC14L6 to the patient's renal phenotype, hyperuricemia, or gout.\"},{\"gene\":\"TUSC2\",\"confidence\":0.005,\"rationale\":\"No evidence linking TUSC2 to renal cystic disease, CKD, hyperuricemia, or gout.\"},{\"gene\":\"FCRLB\",\"confidence\":0.005,\"rationale\":\"No evidence linking FCRLB to renal corticomedullary cysts, CKD, hyperuricemia, or gout.\"},{\"gene\":\"SPMIP7\",\"confidence\":0.005,\"rationale\":\"No evidence linking SPMIP7 to renal cystic disease, CKD, hyperuricemia, or gout.\"},{\"gene\":\"RABL2B\",\"confidence\":0.005,\"rationale\":\"No evidence linking RABL2B to renal corticomedullary cysts, CKD, hyperuricemia, or gout.\"},{\"gene\":\"ELFN2\",\"confidence\":0.005,\"rationale\":\"No evidence linking ELFN2 to renal cystic disease, CKD, hyperuricemia, or gout.\"},{\"gene\":\"SRSF4\",\"confidence\":0.005,\"rationale\":\"No evidence linking SRSF4 to renal corticomedullary cysts, CKD, hyperuricemia, or gout.\"},{\"gene\":\"SEPTIN1\",\"confidence\":0.005,\"rationale\":\"No evidence linking SEPTIN1 to renal cystic disease, CKD, hyperuricemia, or gout.\"},{\"gene\":\"JAG1\",\"confidence\":0.005,\"rationale\":\"JAG1 causes Alagille syndrome with renal anomalies but not the specific ADTKD phenotype of corticomedullary cysts with hyperuricemia and gout.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "TSC1",
+    "KLK6",
+    "CALR",
+    "BRINP2"
+  ]
+}

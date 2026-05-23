@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_44",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16333,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 22.77869176864624,
+  "cost_usd": 0.00149284,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CYP21A2\", \"confidence\": 0.95, \"rationale\": \"CYP21A2 mutations are directly linked to increased ACTH, elevated testosterone, and adrenal insufficiency, aligning with the patient's phenotype.\"}, {\"gene\": \"RFX6\", \"confidence\": 0.65, \"rationale\": \"RFX6 is associated with intestinal dysfunction and autoimmune features, but less directly with adrenal or testosterone abnormalities.\"}, {\"gene\": \"SPRR2A\", \"confidence\": 0.5, \"rationale\": \"SPRR2A is linked to cancer progression, not directly to adrenal or hormonal dysregulation.\"}, {\"gene\": \"PLSCR5\", \"confidence\": 0.4, \"rationale\": \"PLSCR5 is mentioned in relation to testosterone in mice, but not in a clinical context matching the patient's features.\"}, {\"gene\": \"CPED1\", \"confidence\": 0.4, \"rationale\": \"CPED1 is associated with testosterone in mice, but not in a clinical context matching the patient's features.\"}, {\"gene\": \"VCPKMT\", \"confidence\": 0.4, \"rationale\": \"VCPKMT is mentioned in relation to testosterone in mice, but not in a clinical context matching the patient's features.\"}, {\"gene\": \"DPY19L4\", \"confidence\": 0.4, \"rationale\": \"DPY19L4 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"MAP7D3\", \"confidence\": 0.4, \"rationale\": \"MAP7D3 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"MTF2\", \"confidence\": 0.4, \"rationale\": \"MTF2 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"CIROP\", \"confidence\": 0.4, \"rationale\": \"CIROP is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"DYNC1LI1\", \"confidence\": 0.4, \"rationale\": \"DYNC1LI1 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"ARRB1\", \"confidence\": 0.4, \"rationale\": \"ARRB1 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"MICU3\", \"confidence\": 0.4, \"rationale\": \"MICU3 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"JAGN1\", \"confidence\": 0.4, \"rationale\": \"JAGN1 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}, {\"gene\": \"DESI1\", \"confidence\": 0.4, \"rationale\": \"DESI1 is not directly linked to adrenal or hormonal dysregulation in the evidence provided.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "RFX6",
+    "SPRR2A",
+    "PLSCR5",
+    "CPED1"
+  ]
+}

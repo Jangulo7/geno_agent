@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_19683336_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18928,
+  "tokens_out": 693,
+  "finish_reason": "stop",
+  "latency_s": 23.76444697380066,
+  "cost_usd": 0.00170828,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"Mutations in SPINK5 directly cause Netherton syndrome, matching the patient's exfoliative erythroderma, recurrent infections, and failure to thrive.\"}, {\"gene\": \"CITED2\", \"confidence\": 0.15, \"rationale\": \"Mildly associated with immunodeficiency but lacks direct evidence linking it to the patient's specific phenotype.\"}, {\"gene\": \"CA8\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking CA8 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"PKN1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking PKN1 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"HNRNPDL\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking HNRNPDL to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"INF2\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking INF2 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"RAB39B\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking RAB39B to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"NSUN5\", \"confidence\": 0.15, \"rationale\": \"Mentions SPINK5 mutations but no direct evidence linking NSUN5 to the patient's phenotype.\"}, {\"gene\": \"THOC7\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking THOC7 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"CHRNA7\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking CHRNA7 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"RBPJL\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking RBPJL to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"AMBN\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking AMBN to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"WDR11\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking WDR11 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"DYNC1I2\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking DYNC1I2 to the patient's exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"MLLT1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking MLLT1 to the patient's exfoliative erythroderma or recurrent infections.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "CITED2",
+    "CA8",
+    "PKN1",
+    "HNRNPDL"
+  ]
+}

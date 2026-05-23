@@ -1,0 +1,26 @@
+{
+  "case_id": "AMN:PMID_26040326_eldest_sister_III_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AMN",
+  "orig_qwen3_8b_top1": "AMN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AMN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13656,
+  "tokens_out": 702,
+  "finish_reason": "stop",
+  "latency_s": 27.423683881759644,
+  "cost_usd": 0.0032717400000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"AMN\",\n    \"confidence\": 0.98,\n    \"rationale\": \"Strong evidence linking AMN mutations to Imerslund-Gr\u00e4sbeck syndrome, which matches the patient's symptoms of megaloblastic anemia, proteinuria, and vitamin B12 deficiency.\"\n  },\n  {\n    \"gene\": \"CUBN\",\n    \"confidence\": 0.65,\n    \"rationale\": \"CUBN mutations are known to cause similar syndromes but with less direct evidence linking to this specific patient's presentation compared to AMN.\"\n  },\n  {\n    \"gene\": \"ADAM10\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some indirect relevance to vitamin B12 metabolism, but no direct evidence linking to the patient's condition.\"\n  },\n  {\n    \"gene\": \"TOP2A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence; no direct link to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TMEM64\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking TMEM64 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"CXorf66\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CXorf66 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"RPUSD1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking RPUSD1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"FBXL7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking FBXL7 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"SLC44A1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SLC44A1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"CTSD\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CTSD to the patient's condition.\"\n  },\n  {\n    \"gene\": \"F7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking F7 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"ANG\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking ANG to the patient's condition.\"\n  },\n  {\n    \"gene\": \"FERMT3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking FERMT3 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"CDK1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CDK1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"AMIGO1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking AMIGO1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"TRIO\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking TRIO to the patient's condition.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "AMN",
+    "CUBN",
+    "ADAM10",
+    "TOP2A",
+    "TMEM64"
+  ]
+}

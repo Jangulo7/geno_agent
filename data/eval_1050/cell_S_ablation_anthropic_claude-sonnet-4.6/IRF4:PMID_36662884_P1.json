@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_36662884_P1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14877,
+  "tokens_out": 994,
+  "finish_reason": "stop",
+  "latency_s": 16.28751540184021,
+  "cost_usd": 0.059541,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IRF4\",\n    \"confidence\": 0.72,\n    \"rationale\": \"IRF4 mutations directly cause hypogammaglobulinemia, low CD4+ T cells, decreased naive B cells, and recurrent sinopulmonary infections matching the patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"TTC21A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence only shows correlations with immune cell ratios in Sj\u00f6gren's syndrome; no direct link to the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"EN2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence describes a patient with recurrent infections and decreased memory B cells but EN2 is not implicated as a causal immunodeficiency gene.\"\n  },\n  {\n    \"gene\": \"CT45A3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Case report describes post-thymectomy patients with EBV and recurrent infections but CT45A3 is not identified as the causal gene.\"\n  },\n  {\n    \"gene\": \"IYD\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence is identical to CT45A3 case report; IYD has no known role in immunodeficiency or the described phenotype.\"\n  },\n  {\n    \"gene\": \"G3BP2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence describes a patient with hypogammaglobulinemia and recurrent infections but G3BP2 is not established as a primary immunodeficiency gene.\"\n  },\n  {\n    \"gene\": \"IL23A\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence only shows naive B cell phenotype without immunoglobulin compromise; IL23A not linked to this combined immunodeficiency pattern.\"\n  },\n  {\n    \"gene\": \"SLC2A14\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence describes TRNT1 deficiency B cell phenotype; SLC2A14 has no established role in the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"GCM1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No relevant evidence linking GCM1 to immunodeficiency, hypogammaglobulinemia, or the described lymphocyte phenotype.\"\n  },\n  {\n    \"gene\": \"TMEM131\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence describes MSN mutation effects on B cells; TMEM131 has no established connection to this immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"PRSS3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only shows minor unswitched memory B cell differences; PRSS3 is a serine protease with no known primary immunodeficiency role.\"\n  },\n  {\n    \"gene\": \"LRRN3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence describes MSN mutation B cell findings; LRRN3 has no established role in immunodeficiency or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"GDE1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only mentions low switched-memory B cells in unrelated patients; GDE1 has no known immunodeficiency association.\"\n  },\n  {\n    \"gene\": \"RNF133\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence describes MSN mutation B cell findings; RNF133 has no established role in primary immunodeficiency.\"\n  },\n  {\n    \"gene\": \"CHID1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence describes B cell changes post-LCPT transition unrelated to immunodeficiency; CHID1 has no known role in this phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "IRF4",
+    "TTC21A",
+    "EN2",
+    "CT45A3",
+    "IYD"
+  ]
+}

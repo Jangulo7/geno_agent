@@ -1,0 +1,26 @@
+{
+  "case_id": "HMGCS2:PMID_25511235_B1_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "HMGCS2",
+  "orig_qwen3_8b_top1": "HMGCS2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HMGCS2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13810,
+  "tokens_out": 755,
+  "finish_reason": "stop",
+  "latency_s": 12.029591798782349,
+  "cost_usd": 0.052755,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"HMGCS2\",\"confidence\":0.92,\"rationale\":\"HMGCS2 deficiency directly causes coma, seizures, hypoglycemia, and metabolic acidosis via failed hepatic ketogenesis; all three evidence chunks explicitly describe this phenotype profile.\"},{\"gene\":\"LOXHD1\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to the patient's phenotype; evidence chunks are generic metabolic crisis descriptions not specific to LOXHD1.\"},{\"gene\":\"NRG4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic metabolic disorder descriptions with no specific link between NRG4 and coma, seizures, hypoglycemia, or metabolic acidosis.\"},{\"gene\":\"CHST11\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe HMGCS2 deficiency features but have no specific association between CHST11 and the patient's phenotype profile.\"},{\"gene\":\"LHX1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic metabolic crisis descriptions with no specific link between LHX1 and the patient's phenotype.\"},{\"gene\":\"TFAP2C\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic metabolic disorder descriptions with no specific association between TFAP2C and the patient's phenotype.\"},{\"gene\":\"E4F1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe generic metabolic encephalopathy features with no specific link between E4F1 and the patient's phenotype.\"},{\"gene\":\"HSPB7\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe generic IEM encephalopathy features with no specific association between HSPB7 and the patient's phenotype.\"},{\"gene\":\"MICB\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe generic metabolic encephalopathy with no specific link between MICB and coma, seizures, hypoglycemia, or metabolic acidosis.\"},{\"gene\":\"OXCT2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe other metabolic disorders (PCD, OTC deficiency) with no specific link between OXCT2 and the patient's phenotype.\"},{\"gene\":\"B3GALT4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic metabolic disorder descriptions with no specific association between B3GALT4 and the patient's phenotype.\"},{\"gene\":\"POU2AF3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe generic metabolic crisis features with no specific link between POU2AF3 and the patient's phenotype.\"},{\"gene\":\"N4BP2L1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe HMGCS2 deficiency features but have no specific association between N4BP2L1 and the patient's phenotype.\"},{\"gene\":\"PPP2R2B\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe pyruvate carboxylase deficiency and generic metabolic disorders with no specific link between PPP2R2B and the patient's phenotype.\"},{\"gene\":\"ZNF555\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe CA5A deficiency and generic metabolic disorders with no specific association between ZNF555 and the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "HMGCS2",
+    "LOXHD1",
+    "NRG4",
+    "CHST11",
+    "LHX1"
+  ]
+}

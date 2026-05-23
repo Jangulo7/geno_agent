@@ -1,0 +1,26 @@
+{
+  "case_id": "FERMT3:PMID_31068971_proband",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FERMT3",
+  "orig_qwen3_8b_top1": "FERMT3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FERMT3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15159,
+  "tokens_out": 768,
+  "finish_reason": "stop",
+  "latency_s": 16.184734106063843,
+  "cost_usd": 0.056997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"FERMT3\",\"confidence\":0.92,\"rationale\":\"FERMT3 mutations cause LAD-III, directly explaining leukocytosis, anemia, thrombocytopenia, recurrent bacterial infections, bacteremia, epistaxis, hematochezia, hepatosplenomegaly, lymphadenopathy, fever, and failure to thrive.\"},{\"gene\":\"VAV1\",\"confidence\":0.02,\"rationale\":\"VAV1 evidence relates to a mouse HLH model with anemia/thrombocytopenia/splenomegaly but no direct human disease link matching this phenotype profile.\"},{\"gene\":\"MYOCD\",\"confidence\":0.01,\"rationale\":\"No relevant evidence linking MYOCD to the patient's immune deficiency, bleeding, or hematologic phenotype profile.\"},{\"gene\":\"DNAH9\",\"confidence\":0.01,\"rationale\":\"DNAH9 evidence chunks are non-specific and do not link this gene to the combined immune deficiency and bleeding phenotype.\"},{\"gene\":\"CYP26B1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CYP26B1 to leukocyte adhesion deficiency, recurrent infections, or the full hematologic phenotype.\"},{\"gene\":\"DMAP1\",\"confidence\":0.01,\"rationale\":\"No relevant evidence connecting DMAP1 to the patient's immune deficiency, leukocytosis, or bleeding phenotype.\"},{\"gene\":\"ZNF879\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF879 to the combined immune deficiency, leukocytosis, and bleeding phenotype observed in this patient.\"},{\"gene\":\"PPP6C\",\"confidence\":0.01,\"rationale\":\"PPP6C evidence is non-specific; no direct link to LAD-III-like phenotype with recurrent infections and leukocytosis.\"},{\"gene\":\"LNPEP\",\"confidence\":0.01,\"rationale\":\"No evidence linking LNPEP to the patient's immune deficiency, leukocytosis, hepatosplenomegaly, or recurrent infections.\"},{\"gene\":\"SSX5\",\"confidence\":0.01,\"rationale\":\"No evidence connecting SSX5 to the combined hematologic and immune deficiency phenotype in this patient.\"},{\"gene\":\"SPRR2A\",\"confidence\":0.01,\"rationale\":\"No evidence linking SPRR2A to leukocyte adhesion deficiency or the full phenotype profile presented.\"},{\"gene\":\"MROH6\",\"confidence\":0.01,\"rationale\":\"MROH6 evidence describes isolated thrombocytopenia without immune deficiency or leukocytosis matching this patient's profile.\"},{\"gene\":\"PHYH\",\"confidence\":0.01,\"rationale\":\"No evidence linking PHYH to the combined immune deficiency, leukocytosis, and bleeding phenotype in this patient.\"},{\"gene\":\"VPS28\",\"confidence\":0.01,\"rationale\":\"No evidence connecting VPS28 to the patient's LAD-III-like phenotype with recurrent infections and leukocytosis.\"},{\"gene\":\"FYB2\",\"confidence\":0.01,\"rationale\":\"FYB2 evidence relates to Fanconi anemia/ITP without the leukocytosis and recurrent bacterial infection pattern characteristic of this patient.\"}]",
+  "parsed_top5": [
+    "FERMT3",
+    "VAV1",
+    "MYOCD",
+    "DNAH9",
+    "CYP26B1"
+  ]
+}

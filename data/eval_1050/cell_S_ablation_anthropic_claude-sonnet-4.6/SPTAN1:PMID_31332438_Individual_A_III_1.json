@@ -1,0 +1,26 @@
+{
+  "case_id": "SPTAN1:PMID_31332438_Individual_A_III_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPTAN1",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HINT1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16022,
+  "tokens_out": 770,
+  "finish_reason": "stop",
+  "latency_s": 16.55663514137268,
+  "cost_usd": 0.059616,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"HINT1\",\"confidence\":0.82,\"rationale\":\"HINT1 evidence directly describes axonal motor neuropathy with lower limb amyotrophy, muscle weakness, gait impairment, and sensory involvement matching all patient HPO terms, with high critic relevance scores.\"},{\"gene\":\"JAM2\",\"confidence\":0.04,\"rationale\":\"Evidence chunks describe axonal neuropathy phenotypes but are not directly linked to JAM2; no specific gene-disease association for this phenotype profile.\"},{\"gene\":\"TMF1\",\"confidence\":0.03,\"rationale\":\"Evidence chunks describe CMT/axonal neuropathy but are not directly attributed to TMF1; no established link to this phenotype profile.\"},{\"gene\":\"C1GALT1\",\"confidence\":0.02,\"rationale\":\"Evidence describes axonal neuropathy phenotypes but not directly linked to C1GALT1; no established association with motor axonal neuropathy.\"},{\"gene\":\"PIGO\",\"confidence\":0.02,\"rationale\":\"Evidence describes sensory axonal polyneuropathy but PIGO is known for hyperphosphatasia/intellectual disability, not motor axonal neuropathy.\"},{\"gene\":\"COQ3\",\"confidence\":0.02,\"rationale\":\"Evidence describes mitochondrial/axonal neuropathy but COQ3 is not an established cause of pure motor axonal neuropathy matching this profile.\"},{\"gene\":\"RRM2B\",\"confidence\":0.01,\"rationale\":\"Evidence describes mitochondrial disease with axonal neuropathy but RRM2B mutations typically cause multisystem mitochondrial disease, not isolated motor axonal neuropathy.\"},{\"gene\":\"HYAL4\",\"confidence\":0.01,\"rationale\":\"Evidence describes sensorimotor axonal neuropathy but HYAL4 has no established link to motor axonal neuropathy or this phenotype profile.\"},{\"gene\":\"BICC1\",\"confidence\":0.01,\"rationale\":\"Evidence describes axonal neuropathy phenotypes but BICC1 is associated with renal/cystic disease, not motor axonal neuropathy.\"},{\"gene\":\"TRABD2B\",\"confidence\":0.01,\"rationale\":\"Evidence describes spastic paraplegia/axonal neuropathy but TRABD2B has no established link to this specific motor axonal neuropathy phenotype.\"},{\"gene\":\"WAC\",\"confidence\":0.01,\"rationale\":\"WAC is associated with intellectual disability (DeSanto-Shinawi syndrome), not motor axonal neuropathy; evidence chunks are non-specific.\"},{\"gene\":\"KIAA0232\",\"confidence\":0.01,\"rationale\":\"No established disease association for KIAA0232 with motor axonal neuropathy; evidence chunks are generic and non-specific.\"},{\"gene\":\"CDC20\",\"confidence\":0.01,\"rationale\":\"CDC20 is a cell cycle regulator with no established link to motor axonal neuropathy; evidence is non-specific.\"},{\"gene\":\"OTOP3\",\"confidence\":0.01,\"rationale\":\"OTOP3 has no established association with motor axonal neuropathy; evidence chunks describe generic CMT phenotypes not linked to this gene.\"},{\"gene\":\"ZNF93\",\"confidence\":0.01,\"rationale\":\"ZNF93 has no established link to motor axonal neuropathy; evidence describes axonal neuropathy phenotypes but not attributed to this gene.\"}]",
+  "parsed_top5": [
+    "HINT1",
+    "JAM2",
+    "TMF1",
+    "C1GALT1",
+    "PIGO"
+  ]
+}

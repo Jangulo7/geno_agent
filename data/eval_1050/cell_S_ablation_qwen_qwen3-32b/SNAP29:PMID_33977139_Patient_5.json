@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_5",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "FRMD7",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CLASRP",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18426,
+  "tokens_out": 795,
+  "finish_reason": "stop",
+  "latency_s": 3.106379747390747,
+  "cost_usd": 0.0016966799999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"CLASRP\",\n    \"confidence\": 0.92,\n    \"rationale\": \"Strongly associated with microcephaly, micrognathia, hypotonia, scoliosis, and strabismus in multiple patient reports.\"\n  },\n  {\n    \"gene\": \"UHRF2\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Linked to microcephaly, micrognathia, hypotonia, and scoliosis in multiple case reports with consistent phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"FRMPD3\",\n    \"confidence\": 0.78,\n    \"rationale\": \"Shows phenotypic overlap with microcephaly, micrognathia, hypotonia, and strabismus in patient reports.\"\n  },\n  {\n    \"gene\": \"ZBTB43\",\n    \"confidence\": 0.72,\n    \"rationale\": \"Associated with microcephaly, micrognathia, and scoliosis in some cases, though less consistently than CLASRP.\"\n  },\n  {\n    \"gene\": \"DHX38\",\n    \"confidence\": 0.68,\n    \"rationale\": \"Linked to microcephaly, micrognathia, and hypotonia, but with less direct evidence for scoliosis and strabismus.\"\n  },\n  {\n    \"gene\": \"KIAA0825\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Shows some overlap with microcephaly and scoliosis, but less consistent craniofacial features.\"\n  },\n  {\n    \"gene\": \"EQTN\",\n    \"confidence\": 0.62,\n    \"rationale\": \"Mildly associated with microcephaly and micrognathia, but less strong evidence for other features.\"\n  },\n  {\n    \"gene\": \"MYNN\",\n    \"confidence\": 0.60,\n    \"rationale\": \"Reports include microcephaly and micrognathia, but less consistent with hypotonia and scoliosis.\"\n  },\n  {\n    \"gene\": \"EFNA1\",\n    \"confidence\": 0.58,\n    \"rationale\": \"Mentions microcephaly and scoliosis, but less craniofacial and ophthalmologic overlap.\"\n  },\n  {\n    \"gene\": \"RHD\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Shows some craniofacial features but lacks strong evidence for hypotonia and strabismus.\"\n  },\n  {\n    \"gene\": \"TIMMDC1\",\n    \"confidence\": 0.52,\n    \"rationale\": \"Reports include microcephaly and scoliosis, but less craniofacial and ophthalmologic overlap.\"\n  },\n  {\n    \"gene\": \"NRM\",\n    \"confidence\": 0.50,\n    \"rationale\": \"Mentions microcephaly and micrognathia, but less consistent with other key features.\"\n  },\n  {\n    \"gene\": \"VCAN\",\n    \"confidence\": 0.48,\n    \"rationale\": \"Shows some craniofacial features but lacks strong evidence for hypotonia and strabismus.\"\n  },\n  {\n    \"gene\": \"FRMD7\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Mentions microcephaly and micrognathia, but less consistent with other key features.\"\n  },\n  {\n    \"gene\": \"NUF2\",\n    \"confidence\": 0.40,\n    \"rationale\": \"Limited evidence for the full range of patient phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "CLASRP",
+    "UHRF2",
+    "FRMPD3",
+    "ZBTB43",
+    "DHX38"
+  ]
+}

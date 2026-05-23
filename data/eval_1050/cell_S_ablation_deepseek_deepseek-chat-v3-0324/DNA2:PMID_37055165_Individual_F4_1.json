@@ -1,0 +1,26 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F4_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "PPOX",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PPOX",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16536,
+  "tokens_out": 656,
+  "finish_reason": "stop",
+  "latency_s": 21.60910391807556,
+  "cost_usd": 0.00381232,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PPOX\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking PPOX mutations to cutaneous photosensitivity via protoporphyrin accumulation, matching the patient's key phenotype.\"\n  },\n  {\n    \"gene\": \"TRNT1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited phenotypic overlap; ichthyosis and photosensitivity mentioned but not strongly linked to the gene.\"\n  },\n  {\n    \"gene\": \"VPS11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking VPS11 to the patient's phenotypes; mentions microcephaly but relevance unclear.\"\n  },\n  {\n    \"gene\": \"RFFL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting RFFL to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NAPRT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting NAPRT to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"IRAG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting IRAG1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LRP10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting LRP10 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"AVPR2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting AVPR2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PM20D2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PM20D2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GRK4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GRK4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZBTB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ZBTB3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KLHL14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting KLHL14 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TRPM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting TRPM4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GNPTAB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GNPTAB to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KRTAP10-7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting KRTAP10-7 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "PPOX",
+    "TRNT1",
+    "VPS11",
+    "RFFL",
+    "NAPRT"
+  ]
+}

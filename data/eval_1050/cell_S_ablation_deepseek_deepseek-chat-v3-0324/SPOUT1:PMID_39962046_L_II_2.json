@@ -1,0 +1,26 @@
+{
+  "case_id": "SPOUT1:PMID_39962046_L_II_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPOUT1",
+  "orig_qwen3_8b_top1": "EIF2S3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RANGAP1",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 19328,
+  "tokens_out": 683,
+  "finish_reason": "stop",
+  "latency_s": 36.51656627655029,
+  "cost_usd": 0.00439151,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RANGAP1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking RANGAP1 to global developmental delay, microcephaly, appendicular spasticity, and failure to thrive.\"\n  },\n  {\n    \"gene\": \"EIF2S3\",\n    \"confidence\": 0.8,\n    \"rationale\": \"EIF2S3 is associated with MEHMO syndrome, which includes microcephaly, developmental delay, and short stature.\"\n  },\n  {\n    \"gene\": \"SPOUT1\",\n    \"confidence\": 0.7,\n    \"rationale\": \"SPOUT1 variants are linked to developmental delay, microcephaly, and failure to thrive, but evidence is less direct.\"\n  },\n  {\n    \"gene\": \"TUBGCP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence connecting TUBGCP2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CLIC3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CLIC3 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"CPA6\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CPA6 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"CTF1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking CTF1 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"SSTR3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SSTR3 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"PDLIM4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking PDLIM4 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"NIFK\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking NIFK to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"LRRC37A3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking LRRC37A3 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"PIANP\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking PIANP to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"MAGEB6B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking MAGEB6B to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"SPDEF\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking SPDEF to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"TMEM151B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting TMEM151B to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "RANGAP1",
+    "EIF2S3",
+    "SPOUT1",
+    "TUBGCP2",
+    "CLIC3"
+  ]
+}

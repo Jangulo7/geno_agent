@@ -1,0 +1,26 @@
+{
+  "case_id": "NDC1:PMID_39003500_Family_3_individual_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NDC1",
+  "orig_qwen3_8b_top1": "NDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NDC1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15924,
+  "tokens_out": 629,
+  "finish_reason": "stop",
+  "latency_s": 21.68006467819214,
+  "cost_usd": 0.00366913,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NDC1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking NDC1 to Triple A-like syndrome with achalasia, developmental delay, and neurological symptoms matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"ISX\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some association with neurological and achalasia symptoms but less direct evidence compared to NDC1.\"\n  },\n  {\n    \"gene\": \"BCAP31\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence linking to neurological and achalasia symptoms, similar to ISX.\"\n  },\n  {\n    \"gene\": \"CSNK1A1L\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal direct evidence connecting to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TCEA1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal direct evidence connecting to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC30A6\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal direct evidence connecting to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ENPP5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"CYP2F1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"NUCB1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"USP29\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"LMNTD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"AMPD2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"KRT35\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"SLC25A32\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"PSMA7\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to the patient's clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "NDC1",
+    "ISX",
+    "BCAP31",
+    "CSNK1A1L",
+    "TCEA1"
+  ]
+}

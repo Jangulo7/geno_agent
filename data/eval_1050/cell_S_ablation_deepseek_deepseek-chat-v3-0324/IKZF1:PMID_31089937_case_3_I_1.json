@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_31089937_case_3_I_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12816,
+  "tokens_out": 606,
+  "finish_reason": "stop",
+  "latency_s": 35.18653178215027,
+  "cost_usd": 0.0030298200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"IKZF1 mutations directly cause B/NK/T cell deficiencies and autoimmunity matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ARHGDIA\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ARHGDIA to immune deficiencies or autoimmunity.\"\n  },\n  {\n    \"gene\": \"ZNF302\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting ZNF302 to immune phenotypes.\"\n  },\n  {\n    \"gene\": \"ULBP3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting ULBP3 in immune cell deficiencies or autoimmunity.\"\n  },\n  {\n    \"gene\": \"RDH11\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature linking RDH11 to immune system disorders.\"\n  },\n  {\n    \"gene\": \"ADGRE2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence connecting ADGRE2 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"ZG16\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence for ZG16 in immune deficiencies.\"\n  },\n  {\n    \"gene\": \"TMEM177\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking TMEM177 to immune system disorders.\"\n  },\n  {\n    \"gene\": \"ADAMTSL5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature supporting ADAMTSL5 in immune deficiencies.\"\n  },\n  {\n    \"gene\": \"PVALB\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence connecting PVALB to immune phenotypes.\"\n  },\n  {\n    \"gene\": \"PCBP4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence for PCBP4 in immune disorders.\"\n  },\n  {\n    \"gene\": \"EPPIN\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking EPPIN to immune deficiencies.\"\n  },\n  {\n    \"gene\": \"ARR3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature supporting ARR3 in immune system disorders.\"\n  },\n  {\n    \"gene\": \"PAN3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence connecting PAN3 to immune phenotypes.\"\n  },\n  {\n    \"gene\": \"KRT39\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence for KRT39 in immune deficiencies.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "ARHGDIA",
+    "ZNF302",
+    "ULBP3",
+    "RDH11"
+  ]
+}

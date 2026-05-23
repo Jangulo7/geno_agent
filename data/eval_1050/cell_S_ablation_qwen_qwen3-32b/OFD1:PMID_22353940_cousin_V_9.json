@@ -1,0 +1,26 @@
+{
+  "case_id": "OFD1:PMID_22353940_cousin_V_9",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OFD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15870,
+  "tokens_out": 734,
+  "finish_reason": "stop",
+  "latency_s": 23.989293575286865,
+  "cost_usd": 0.0014751200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"OFD1\", \"confidence\": 0.95, \"rationale\": \"OFD1 mutations are directly linked to Joubert syndrome, which includes molar tooth sign, enlarged cisterna magna, and intellectual disability, aligning with the patient's phenotype.\"}, {\"gene\": \"RNF126\", \"confidence\": 0.15, \"rationale\": \"Mentions of Joubert syndrome and molar tooth sign are present, but no direct evidence linking RNF126 to the patient's specific features.\"}, {\"gene\": \"H4C1\", \"confidence\": 0.1, \"rationale\": \"Includes molar tooth sign and intellectual disability, but lacks specific gene-phenotype linkage for H4C1.\"}, {\"gene\": \"LSS\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects LSS to the patient's features.\"}, {\"gene\": \"PLPP2\", \"confidence\": 0.1, \"rationale\": \"Includes molar tooth sign and intellectual disability, but no direct evidence links PLPP2 to the patient's features.\"}, {\"gene\": \"AADAC\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects AADAC to the patient's features.\"}, {\"gene\": \"CHMP4B\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence links CHMP4B to the patient's features.\"}, {\"gene\": \"BPIFB6\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects BPIFB6 to the patient's features.\"}, {\"gene\": \"SIRAL2\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence links SIRAL2 to the patient's features.\"}, {\"gene\": \"KRTAP5-3\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects KRTAP5-3 to the patient's features.\"}, {\"gene\": \"CTAG1A\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence links CTAG1A to the patient's features.\"}, {\"gene\": \"RIPOR3\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence links RIPOR3 to the patient's features.\"}, {\"gene\": \"PPIAL4H\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects PPIAL4H to the patient's features.\"}, {\"gene\": \"INKA2\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence links INKA2 to the patient's features.\"}, {\"gene\": \"KRABD5\", \"confidence\": 0.1, \"rationale\": \"Molar tooth sign and intellectual disability are mentioned, but no direct evidence connects KRABD5 to the patient's features.\"}]",
+  "parsed_top5": [
+    "OFD1",
+    "RNF126",
+    "H4C1",
+    "LSS",
+    "PLPP2"
+  ]
+}

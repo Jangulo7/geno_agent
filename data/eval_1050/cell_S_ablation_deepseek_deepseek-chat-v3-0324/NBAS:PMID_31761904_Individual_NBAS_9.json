@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_31761904_Individual_NBAS_9",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12217,
+  "tokens_out": 686,
+  "finish_reason": "stop",
+  "latency_s": 32.72531294822693,
+  "cost_usd": 0.00297162,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NBAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"NBAS mutations directly link to acute hepatic failure, short stature, and hyposegmentation of neutrophil nuclei, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MBD5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"MBD5 variants are associated with brachycephaly and clinodactyly, but lack hepatic or neutrophil involvement.\"\n  },\n  {\n    \"gene\": \"INPP5K\",\n    \"confidence\": 0.2,\n    \"rationale\": \"INPP5K mutations cause short stature and muscular dystrophy, but no evidence links to hepatic or neutrophil phenotypes.\"\n  },\n  {\n    \"gene\": \"GFY\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence links GFY to the patient's phenotypes; short stature mentions are non-specific.\"\n  },\n  {\n    \"gene\": \"MEIOSIN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connects MEIOSIN to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"HOXD11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"HOXD11 is not associated with hepatic failure or neutrophil abnormalities; skeletal features are non-specific.\"\n  },\n  {\n    \"gene\": \"DTNBP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"DTNBP1 lacks evidence for hepatic, skeletal, or neutrophil phenotypes in the provided chunks.\"\n  },\n  {\n    \"gene\": \"MYMK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MYMK mutations are linked to myopathies, not the patient's multisystemic presentation.\"\n  },\n  {\n    \"gene\": \"KASH5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"KASH5 evidence does not support hepatic failure or skeletal dysplasia phenotypes.\"\n  },\n  {\n    \"gene\": \"STYX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"STYX has no documented association with the patient's key phenotypes.\"\n  },\n  {\n    \"gene\": \"SHD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SHD is not implicated in any of the patient's core clinical features.\"\n  },\n  {\n    \"gene\": \"HOXA4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"HOXA4 variants are unrelated to hepatic failure or neutrophil abnormalities.\"\n  },\n  {\n    \"gene\": \"MAGEB5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MAGEB5 lacks evidence linking it to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"FECH\",\n    \"confidence\": 0.1,\n    \"rationale\": \"FECH mutations cause porphyria, not the observed multisystemic syndrome.\"\n  },\n  {\n    \"gene\": \"ZUP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ZUP1 has no known association with the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "NBAS",
+    "MBD5",
+    "INPP5K",
+    "GFY",
+    "MEIOSIN"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_24736735_G079",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15781,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 18.89381718635559,
+  "cost_usd": 0.0036590100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GLI3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking GLI3 to polydactyly, syndactyly, macrocephaly, and hypertelorism, matching the patient's phenotypes perfectly.\"\n  },\n  {\n    \"gene\": \"TFE3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Limited evidence connecting TFE3 to the patient's phenotypes; relevance is minimal.\"\n  },\n  {\n    \"gene\": \"FGA\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking FGA to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TBCC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking TBCC to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CCDC88C\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking CCDC88C to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"S100A3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking S100A3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLFN12L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SLFN12L to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PARVG\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking PARVG to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"EXOSC6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking EXOSC6 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SMAD2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SMAD2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"THOC1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking THOC1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SERPINC1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SERPINC1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC18A2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SLC18A2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"OR4X2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking OR4X2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SMYD4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SMYD4 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GLI3",
+    "TFE3",
+    "FGA",
+    "TBCC",
+    "CCDC88C"
+  ]
+}

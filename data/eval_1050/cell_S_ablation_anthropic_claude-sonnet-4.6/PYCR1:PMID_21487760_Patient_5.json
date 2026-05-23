@@ -1,0 +1,26 @@
+{
+  "case_id": "PYCR1:PMID_21487760_Patient_5",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PYCR1",
+  "orig_qwen3_8b_top1": "PYCR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PYCR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19650,
+  "tokens_out": 839,
+  "finish_reason": "stop",
+  "latency_s": 12.224254369735718,
+  "cost_usd": 0.071535,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"PYCR1\", \"confidence\": 0.92, \"rationale\": \"PYCR1 evidence directly describes ARCL2B with wrinkled/sagging skin, cutis laxa, joint hyperlaxity, growth retardation, psychomotor delay, IUGR, and intellectual disability matching nearly all patient HPOs.\"}, {\"gene\": \"CHST3\", \"confidence\": 0.03, \"rationale\": \"CHST3 evidence describes EDS musculocontractural type with some overlapping features but no direct gene-specific match to this patient's full phenotype profile.\"}, {\"gene\": \"LYPLA1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking LYPLA1 to this phenotype; evidence chunks describe unrelated EDS cases without LYPLA1-specific association.\"}, {\"gene\": \"WDR81\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking WDR81 to cutis laxa or this phenotype profile; evidence describes unrelated OI/EDS cases.\"}, {\"gene\": \"ZNF765\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ZNF765 to this phenotype; evidence chunks are generic EDS/connective tissue disorder descriptions.\"}, {\"gene\": \"UPK1A\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking UPK1A to this phenotype profile; evidence describes unrelated connective tissue disorders.\"}, {\"gene\": \"ANAPC1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ANAPC1 to this phenotype; evidence describes vascular EDS diagnostic criteria without ANAPC1 association.\"}, {\"gene\": \"INHA\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking INHA to this phenotype; evidence describes generic EDS hypermobility features without INHA-specific association.\"}, {\"gene\": \"FER1L6\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking FER1L6 to this phenotype; evidence describes generic EDS features without FER1L6-specific association.\"}, {\"gene\": \"TBC1D22B\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TBC1D22B to this phenotype; evidence describes generic EDS features without TBC1D22B-specific association.\"}, {\"gene\": \"MFNG\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MFNG to this phenotype; evidence describes a progeroid neonate case without MFNG-specific association.\"}, {\"gene\": \"GYPC\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking GYPC to this phenotype; evidence describes EDS cases without GYPC-specific association.\"}, {\"gene\": \"MYEOV\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MYEOV to this phenotype; evidence describes generic EDS/connective tissue features without MYEOV association.\"}, {\"gene\": \"BMP2K\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking BMP2K to this phenotype; evidence describes OI/EDS and NLS cases without BMP2K-specific association.\"}, {\"gene\": \"MSANTD1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MSANTD1 to this phenotype; evidence describes generic EDS features without MSANTD1-specific association.\"}]",
+  "parsed_top5": [
+    "PYCR1",
+    "CHST3",
+    "LYPLA1",
+    "WDR81",
+    "ZNF765"
+  ]
+}

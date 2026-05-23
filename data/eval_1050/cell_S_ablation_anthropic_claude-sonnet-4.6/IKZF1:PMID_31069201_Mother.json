@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_31069201_Mother",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19941,
+  "tokens_out": 695,
+  "finish_reason": "stop",
+  "latency_s": 13.180834293365479,
+  "cost_usd": 0.070248,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"IKZF1 variants directly cause thrombocytopenia, reduced B cells, inverted CD4:CD8 ratio, decreased class-switched memory B cells, low IgA and IgM\u2014matching all patient HPO phenotypes exactly per multiple case reports.\"},{\"gene\":\"OR9A4\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR9A4 to any of the patient's immune or hematologic phenotypes; evidence chunks describe IKZF1 cases only.\"},{\"gene\":\"STYX\",\"confidence\":0.01,\"rationale\":\"No evidence linking STYX to the patient's immunophenotype; evidence chunks are unrelated to this gene.\"},{\"gene\":\"GPR158\",\"confidence\":0.01,\"rationale\":\"No evidence linking GPR158 to B cell deficiency, thrombocytopenia, or CD4:CD8 inversion.\"},{\"gene\":\"SEMA4B\",\"confidence\":0.01,\"rationale\":\"No evidence linking SEMA4B to the patient's combined immune and hematologic phenotype.\"},{\"gene\":\"CENPC\",\"confidence\":0.01,\"rationale\":\"No evidence linking CENPC to immunodeficiency or thrombocytopenia matching this phenotype profile.\"},{\"gene\":\"TMEM41B\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM41B to B cell deficiency, low immunoglobulins, or thrombocytopenia.\"},{\"gene\":\"DNASE1L3\",\"confidence\":0.01,\"rationale\":\"No evidence linking DNASE1L3 to this specific combined immunodeficiency and thrombocytopenia phenotype.\"},{\"gene\":\"SPINK9\",\"confidence\":0.01,\"rationale\":\"No evidence linking SPINK9 to immune dysregulation or thrombocytopenia.\"},{\"gene\":\"NOCT\",\"confidence\":0.01,\"rationale\":\"No evidence linking NOCT to the patient's immunophenotype or thrombocytopenia.\"},{\"gene\":\"SLC25A19\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC25A19 to B cell deficiency, low immunoglobulins, or CD4:CD8 inversion.\"},{\"gene\":\"INA\",\"confidence\":0.01,\"rationale\":\"No evidence linking INA to the patient's immune or hematologic phenotype.\"},{\"gene\":\"USP17L23\",\"confidence\":0.01,\"rationale\":\"No evidence linking USP17L23 to immunodeficiency or thrombocytopenia.\"},{\"gene\":\"STARD10\",\"confidence\":0.01,\"rationale\":\"No evidence linking STARD10 to B cell deficiency, low immunoglobulins, or thrombocytopenia.\"},{\"gene\":\"DTYMK\",\"confidence\":0.01,\"rationale\":\"No evidence linking DTYMK to the patient's combined immunodeficiency and thrombocytopenia phenotype.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "OR9A4",
+    "STYX",
+    "GPR158",
+    "SEMA4B"
+  ]
+}

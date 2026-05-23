@@ -1,0 +1,26 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "ZNF595",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TRAPPC14",
+  "top1_correct": false,
+  "causal_rank": 7,
+  "tokens_in": 19040,
+  "tokens_out": 773,
+  "finish_reason": "stop",
+  "latency_s": 13.837562322616577,
+  "cost_usd": 0.068715,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"TRAPPC14\",\"confidence\":0.12,\"rationale\":\"Evidence chunks mention DORV, TGA, CoA, PDA in CHD context, but no direct gene-specific link; marginally more CHD phenotype overlap in evidence set.\"},{\"gene\":\"SLC37A2\",\"confidence\":0.09,\"rationale\":\"Evidence mentions TGA, DORV, CoA, IAA in CHD tables but no direct mechanistic link to SLC37A2 and the patient's complex phenotype.\"},{\"gene\":\"ELAPOR2\",\"confidence\":0.08,\"rationale\":\"Evidence includes CHD tables listing DORV, TGA, PDA, CoA but no specific association between ELAPOR2 and these cardiac defects.\"},{\"gene\":\"FAM124B\",\"confidence\":0.08,\"rationale\":\"Evidence tables list DORV, TGA, CoA, PDA among CHD subtypes but no direct evidence linking FAM124B to this laterality/conotruncal phenotype.\"},{\"gene\":\"AP2S1\",\"confidence\":0.07,\"rationale\":\"Evidence mentions CHD subtypes including TGA and DORV but no gene-specific mechanistic support for AP2S1 causing this phenotype.\"},{\"gene\":\"ZNF595\",\"confidence\":0.07,\"rationale\":\"Evidence references CTD cohort including TGA and DORV but no direct link between ZNF595 and the patient's complex cardiac laterality defects.\"},{\"gene\":\"CIROZ\",\"confidence\":0.07,\"rationale\":\"Evidence describes CHD classification including DORV and coarctation but no specific mechanistic link to CIROZ.\"},{\"gene\":\"XRN2\",\"confidence\":0.07,\"rationale\":\"Evidence lists conotruncal and left-sided obstructive CHD subtypes but no direct evidence linking XRN2 to this phenotype.\"},{\"gene\":\"KRTAP5-11\",\"confidence\":0.06,\"rationale\":\"Evidence mentions TGA and coarctation in CHD context but no specific link between KRTAP5-11 and cardiac laterality or conotruncal defects.\"},{\"gene\":\"ESYT2\",\"confidence\":0.06,\"rationale\":\"Evidence mentions BAV-associated CHD including DORV and TGA but no direct mechanistic link to ESYT2.\"},{\"gene\":\"MMP24\",\"confidence\":0.06,\"rationale\":\"Evidence mentions BAV-associated CHD including DORV and TGA but no direct mechanistic link to MMP24.\"},{\"gene\":\"PLEKHS1\",\"confidence\":0.06,\"rationale\":\"Evidence mentions BAV-associated CHD including DORV and TGA but no direct mechanistic link to PLEKHS1.\"},{\"gene\":\"MT-ATP6\",\"confidence\":0.05,\"rationale\":\"Mitochondrial ATP synthase gene; evidence only shows generic CHD tables with no specific link to conotruncal or laterality defects.\"},{\"gene\":\"AARS2\",\"confidence\":0.05,\"rationale\":\"Mitochondrial aminoacyl-tRNA synthetase; evidence shows generic CHD tables but no specific link to TGA, DORV, or laterality defects.\"},{\"gene\":\"TAS2R8\",\"confidence\":0.05,\"rationale\":\"Bitter taste receptor gene with no known cardiac developmental role; evidence only shows generic CHD epidemiology tables.\"}]",
+  "parsed_top5": [
+    "TRAPPC14",
+    "SLC37A2",
+    "ELAPOR2",
+    "FAM124B",
+    "AP2S1"
+  ]
+}

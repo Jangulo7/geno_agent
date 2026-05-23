@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_26",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19233,
+  "tokens_out": 625,
+  "finish_reason": "stop",
+  "latency_s": 10.157909870147705,
+  "cost_usd": 0.067074,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"COL3A1\",\"confidence\":0.95,\"rationale\":\"COL3A1 evidence directly and explicitly links it to vEDS, which encompasses all patient HPO features: thin lips, narrow nasal ridge, bruising, spontaneous pneumothorax, absent earlobe, dermal translucency, and small joint hypermobility.\"},{\"gene\":\"ZNF396\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"COX8C\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"MSL3\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"MAB21L3\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"HFM1\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"C1QTNF3\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"MAPK8IP3\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"TPPP3\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"FER1L6\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"LYSET\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"PAGR1\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"AATF\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"CNTNAP3B\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"},{\"gene\":\"ARL2\",\"confidence\":0.007,\"rationale\":\"No direct gene-disease link in evidence; shares only background vEDS literature with other candidates.\"}]",
+  "parsed_top5": [
+    "COL3A1",
+    "ZNF396",
+    "COX8C",
+    "MSL3",
+    "MAB21L3"
+  ]
+}

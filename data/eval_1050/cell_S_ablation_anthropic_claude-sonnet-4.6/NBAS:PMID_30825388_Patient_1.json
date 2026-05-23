@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 22657,
+  "tokens_out": 680,
+  "finish_reason": "stop",
+  "latency_s": 9.544069528579712,
+  "cost_usd": 0.078171,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NBAS\",\"confidence\":0.92,\"rationale\":\"NBAS evidence directly describes elevated ALT/AST, short stature, hypotelorism, hypogammaglobulinemia (low IgA/IgG/IgM), and facial anomalies matching the patient's full phenotype profile.\"},{\"gene\":\"CHST4\",\"confidence\":0.03,\"rationale\":\"CHST4 knockout mice show reduced fecal IgA, but no direct human evidence matching the full patient phenotype including liver enzymes and facial features.\"},{\"gene\":\"CCDC158\",\"confidence\":0.01,\"rationale\":\"No specific CCDC158 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"SSR4\",\"confidence\":0.01,\"rationale\":\"No specific SSR4 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"TANK\",\"confidence\":0.01,\"rationale\":\"No specific TANK evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"GNAT3\",\"confidence\":0.01,\"rationale\":\"No specific GNAT3 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"PRR23A\",\"confidence\":0.01,\"rationale\":\"No specific PRR23A evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"LRRC39\",\"confidence\":0.01,\"rationale\":\"No specific LRRC39 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"C4orf50\",\"confidence\":0.01,\"rationale\":\"No specific C4orf50 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"CCDC141\",\"confidence\":0.01,\"rationale\":\"No specific CCDC141 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"GPSM2\",\"confidence\":0.01,\"rationale\":\"No specific GPSM2 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"BARHL1\",\"confidence\":0.01,\"rationale\":\"No specific BARHL1 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"RP1L1\",\"confidence\":0.01,\"rationale\":\"No specific RP1L1 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"IDNK\",\"confidence\":0.01,\"rationale\":\"No specific IDNK evidence linking it to this phenotype; shared background literature chunks are non-specific.\"},{\"gene\":\"C1QL2\",\"confidence\":0.01,\"rationale\":\"No specific C1QL2 evidence linking it to this phenotype; shared background literature chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "NBAS",
+    "CHST4",
+    "CCDC158",
+    "SSR4",
+    "TANK"
+  ]
+}

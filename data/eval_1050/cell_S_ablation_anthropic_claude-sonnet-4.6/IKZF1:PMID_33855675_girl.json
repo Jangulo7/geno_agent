@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_33855675_girl",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13630,
+  "tokens_out": 741,
+  "finish_reason": "stop",
+  "latency_s": 15.15531301498413,
+  "cost_usd": 0.052005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.82,\"rationale\":\"IKZF1/IKAROS haploinsufficiency directly causes low total B cells, decreased class-switched memory B cells, reduced IgG, and affects T cell development including thymopoiesis (low TRECs), matching all four HPO phenotypes.\"},{\"gene\":\"MSH6\",\"confidence\":0.06,\"rationale\":\"MSH6 (CMMRD) can cause reduced class-switched memory B cells and IgG defects but evidence is weaker and TREC reduction is not a hallmark feature.\"},{\"gene\":\"ATG13\",\"confidence\":0.02,\"rationale\":\"ATG13 is GWAS-associated with IgA deficiency; no direct evidence linking it to the full phenotype profile including low TRECs and total B cell reduction.\"},{\"gene\":\"PLSCR3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking PLSCR3 to B cell deficiency, low IgG, or reduced TRECs; only generic shared evidence chunks.\"},{\"gene\":\"USP39\",\"confidence\":0.01,\"rationale\":\"No gene-specific immunological evidence; only generic shared chunks with no direct link to this phenotype profile.\"},{\"gene\":\"POLG2\",\"confidence\":0.01,\"rationale\":\"POLG2 is a mitochondrial DNA polymerase subunit with no established role in B cell development or TREC reduction.\"},{\"gene\":\"PHETA2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking PHETA2 to B cell lymphopenia, low IgG, or reduced TRECs.\"},{\"gene\":\"TFDP2\",\"confidence\":0.01,\"rationale\":\"No gene-specific immunological evidence; only generic shared chunks unrelated to TFDP2 function.\"},{\"gene\":\"RASGEF1B\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking RASGEF1B to the observed immunodeficiency phenotype.\"},{\"gene\":\"TTF1\",\"confidence\":0.01,\"rationale\":\"TTF1 is a thyroid/lung transcription factor with no established role in B cell or T cell immunodeficiency.\"},{\"gene\":\"REG4\",\"confidence\":0.01,\"rationale\":\"REG4 is a secreted protein with no known role in B cell development, IgG production, or thymopoiesis.\"},{\"gene\":\"PABPC4L\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking PABPC4L to the immunodeficiency phenotype profile.\"},{\"gene\":\"H3Y1\",\"confidence\":0.01,\"rationale\":\"H3Y1 encodes a histone variant with no established direct role in B cell or T cell immunodeficiency.\"},{\"gene\":\"HBD\",\"confidence\":0.01,\"rationale\":\"HBD encodes delta-hemoglobin with no known role in B cell development, IgG production, or TREC levels.\"},{\"gene\":\"KLHL38\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking KLHL38 to B cell lymphopenia, reduced IgG, or low TRECs.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "MSH6",
+    "ATG13",
+    "PLSCR3",
+    "USP39"
+  ]
+}

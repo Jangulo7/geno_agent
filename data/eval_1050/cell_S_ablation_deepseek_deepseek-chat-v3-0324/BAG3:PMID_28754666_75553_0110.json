@@ -1,0 +1,26 @@
+{
+  "case_id": "BAG3:PMID_28754666_75553_0110",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "BAG3",
+  "orig_qwen3_8b_top1": "RPN2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RPN2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13902,
+  "tokens_out": 554,
+  "finish_reason": "stop",
+  "latency_s": 20.75758719444275,
+  "cost_usd": 0.00320698,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"RPN2\", \"confidence\": 0.7, \"rationale\": \"Evidence directly describes decreased nerve conduction velocity and impaired vibration sensation, closely matching patient phenotypes.\"},\n  {\"gene\": \"OR51T1\", \"confidence\": 0.5, \"rationale\": \"Chunks describe sensorimotor neuropathy with vibration impairment, but less specific than RPN2.\"},\n  {\"gene\": \"F13B\", \"confidence\": 0.4, \"rationale\": \"Case report includes reduced vibration sense and nerve conduction abnormalities, though mixed with other features.\"},\n  {\"gene\": \"IVL\", \"confidence\": 0.35, \"rationale\": \"Mentions nerve conduction slowing and distal weakness, but lacks detailed sensory impairment correlation.\"},\n  {\"gene\": \"ARHGEF2\", \"confidence\": 0.3, \"rationale\": \"General neuropathy description with vibration/position sense impairment, but no direct CMAP/NCS details.\"},\n  {\"gene\": \"QTRT2\", \"confidence\": 0.25, \"rationale\": \"Axonal neuropathy noted, but evidence lacks specificity for sensory deficits.\"},\n  {\"gene\": \"TACC1\", \"confidence\": 0.2, \"rationale\": \"Generic neuropathy description without strong genotype-phenotype match.\"},\n  {\"gene\": \"CALY\", \"confidence\": 0.15, \"rationale\": \"Repetitive neuropathy descriptions without unique phenotypic alignment.\"},\n  {\"gene\": \"AKNAD1\", \"confidence\": 0.15, \"rationale\": \"CMT2-like phenotypes but no compelling evidence beyond generic neuropathy.\"},\n  {\"gene\": \"MTAP\", \"confidence\": 0.1, \"rationale\": \"Autosomal dominant neuropathy described without specific sensory/NCS correlation.\"},\n  {\"gene\": \"RGPD1\", \"confidence\": 0.1, \"rationale\": \"Sensorimotor neuropathy mentioned, but evidence is non-specific.\"},\n  {\"gene\": \"ARL17A\", \"confidence\": 0.1, \"rationale\": \"Charcot-Marie-Tooth-like features but no direct evidence for this gene.\"},\n  {\"gene\": \"LNPK\", \"confidence\": 0.05, \"rationale\": \"No unique evidence linking to patient's specific neuropathy profile.\"},\n  {\"gene\": \"SMARCE1\", \"confidence\": 0.05, \"rationale\": \"Generic neuropathy descriptions with no clear causal association.\"},\n  {\"gene\": \"ESR1\", \"confidence\": 0.05, \"rationale\": \"Evidence chunks irrelevant to neuropathy phenotypes.\"}\n]",
+  "parsed_top5": [
+    "RPN2",
+    "OR51T1",
+    "F13B",
+    "IVL",
+    "ARHGEF2"
+  ]
+}

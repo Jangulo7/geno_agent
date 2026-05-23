@@ -1,0 +1,20 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_19_Subject_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RPL3L",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12642,
+  "tokens_out": 33,
+  "finish_reason": "stop",
+  "latency_s": 2.6660358905792236,
+  "cost_usd": 0.0010206,
+  "parse_error": "model_self_error:{\"error\": \"The input data is missing the specific evidence chunks for each gene. Please provide the evidence chunks for each gene to proceed with the analysis.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input data is missing the specific evidence chunks for each gene. Please provide the evidence chunks for each gene to proceed with the analysis.\"}",
+  "parsed_top5": []
+}

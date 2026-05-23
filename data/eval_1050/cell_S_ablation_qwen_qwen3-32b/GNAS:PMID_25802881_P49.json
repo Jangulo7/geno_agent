@@ -1,0 +1,22 @@
+{
+  "case_id": "GNAS:PMID_25802881_P49",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18753,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 1.6031477451324463,
+  "cost_usd": 0.00151592,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"GNAS\", \"confidence\": 0.95, \"rationale\": \"Directly linked to PTH resistance with hypocalcemia, hyperphosphatemia, and metacarpal shortening in multiple cases.\"}",
+  "parsed_top5": [
+    "GNAS"
+  ]
+}

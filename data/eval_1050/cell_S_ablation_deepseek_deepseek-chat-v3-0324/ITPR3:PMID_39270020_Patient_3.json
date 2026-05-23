@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_3",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "IFITM3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IFITM3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15260,
+  "tokens_out": 688,
+  "finish_reason": "stop",
+  "latency_s": 20.35199761390686,
+  "cost_usd": 0.0035817600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IFITM3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence linking IFITM3 to reduced antibody responses and altered T-cell subsets, matching the patient's immune deficits.\"\n  },\n  {\n    \"gene\": \"ATP6V0A2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited relevance; no direct evidence linking ATP6V0A2 to immune dysfunction or patient phenotypes.\"\n  },\n  {\n    \"gene\": \"PEAK1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No substantial evidence connecting PEAK1 to the patient's immune or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"KHDRBS3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting KHDRBS3's role in immune or skeletal phenotypes.\"\n  },\n  {\n    \"gene\": \"CGNL1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence linking CGNL1 to the patient's immunological or other phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF226\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZNF226's involvement in immune dysfunction or skeletal anomalies.\"\n  },\n  {\n    \"gene\": \"ZNF354A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No meaningful evidence connecting ZNF354A to the patient's clinical presentations.\"\n  },\n  {\n    \"gene\": \"TACO1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence associating TACO1 with immune deficiencies or skeletal issues.\"\n  },\n  {\n    \"gene\": \"SNRPB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature linking SNRPB2 to immune or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"NANOS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting NANOS3 to the patient's immune or musculoskeletal phenotypes.\"\n  },\n  {\n    \"gene\": \"YBX2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence associating YBX2 with any of the patient's noted abnormalities.\"\n  },\n  {\n    \"gene\": \"ZNF432\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role for ZNF432 in the patient's immune or skeletal symptoms.\"\n  },\n  {\n    \"gene\": \"RPL21\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence tying RPL21 to the patient's immune deficiencies or skeletal issues.\"\n  },\n  {\n    \"gene\": \"GALNT17\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking GALNT17 to immune dysfunction or skeletal abnormalities.\"\n  },\n  {\n    \"gene\": \"KRTAP5-5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting KRTAP5-5 to the patient's immune or skeletal phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "IFITM3",
+    "ATP6V0A2",
+    "PEAK1",
+    "KHDRBS3",
+    "CGNL1"
+  ]
+}

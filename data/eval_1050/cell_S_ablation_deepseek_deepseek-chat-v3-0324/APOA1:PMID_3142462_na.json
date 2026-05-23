@@ -1,0 +1,26 @@
+{
+  "case_id": "APOA1:PMID_3142462_na",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "APOA1",
+  "orig_qwen3_8b_top1": "DGKE",
+  "orig_qwen3_8b_correct": false,
+  "top1": "APOA1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17331,
+  "tokens_out": 692,
+  "finish_reason": "stop",
+  "latency_s": 17.4689679145813,
+  "cost_usd": 0.003999040000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"APOA1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"APOA1 mutations cause hepatic amyloidosis and systemic involvement, directly matching the patient's hepatic amyloidosis and phenotype spectrum.\"\n  },\n  {\n    \"gene\": \"DGKE\",\n    \"confidence\": 0.7,\n    \"rationale\": \"DGKE variants are linked to thrombotic microangiopathy with thrombocytopenia and hypertension, but evidence primarily focuses on renal, not hepatic, involvement.\"\n  },\n  {\n    \"gene\": \"KIR3DL2\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Associated with immune thrombocytopenia, but lacks direct evidence linking it to hepatic amyloidosis or systemic manifestations.\"\n  },\n  {\n    \"gene\": \"ENSA\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Potential role in platelet dysfunction, but insufficient evidence ties it to hepatic amyloidosis or the full phenotype.\"\n  },\n  {\n    \"gene\": \"H3-4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No clear evidence linking it to the patient's phenotypes; literature relevance is minimal.\"\n  },\n  {\n    \"gene\": \"SCOC\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence connecting SCOC to hepatic amyloidosis, thrombocytopenia, or bruising susceptibility.\"\n  },\n  {\n    \"gene\": \"TMEM63B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence for hepatic amyloidosis or thrombocytopenia in the provided literature.\"\n  },\n  {\n    \"gene\": \"GYPB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No association with the patient's phenotypes found in the provided evidence.\"\n  },\n  {\n    \"gene\": \"ATP5MC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for hepatic amyloidosis or thrombocytopenia in the provided literature.\"\n  },\n  {\n    \"gene\": \"SLC26A2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking it to the patient's phenotypes; literature relevance is minimal.\"\n  },\n  {\n    \"gene\": \"ORC6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No clear association with the patient's amyloidosis or hematologic phenotypes.\"\n  },\n  {\n    \"gene\": \"GJA10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for hepatic amyloidosis or thrombocytopenia in the provided literature.\"\n  },\n  {\n    \"gene\": \"C2CD4D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking it to the patient's phenotypes; literature relevance is minimal.\"\n  },\n  {\n    \"gene\": \"CHCHD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for hepatic amyloidosis or thrombocytopenia in the provided literature.\"\n  },\n  {\n    \"gene\": \"CDPF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting CDPF1 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "APOA1",
+    "DGKE",
+    "KIR3DL2",
+    "ENSA",
+    "H3-4"
+  ]
+}

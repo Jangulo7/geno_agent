@@ -1,0 +1,26 @@
+{
+  "case_id": "SMAD2:PMID_30157302_Patient_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SMAD2",
+  "orig_qwen3_8b_top1": "H3-3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "H3-3A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20375,
+  "tokens_out": 992,
+  "finish_reason": "stop",
+  "latency_s": 18.80275321006775,
+  "cost_usd": 0.076005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"H3-3A\",\n    \"confidence\": 0.72,\n    \"rationale\": \"H3-3A directly causes a syndrome with developmental delay, growth failure, seizures, ASD, flat midface, high palate, and feeding problems\u2014matching nearly all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"CNOT1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"CNOT1 (Vissers-Bodmer syndrome) causes GDD, short stature, and minor anomalies but lacks the complex cardiac defects (DORV, PDA) seen in this patient.\"\n  },\n  {\n    \"gene\": \"ACTA1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"ACTA1 evidence mentions cardiac septal defects in context of actc1 variants but primarily links to nemaline myopathy, not this full multi-system phenotype.\"\n  },\n  {\n    \"gene\": \"ATP1A1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"ATP1A1 evidence shows midface retrusion, ASD, and developmental delay in one family but lacks seizures, DORV, PDA, and high palate matching this patient.\"\n  },\n  {\n    \"gene\": \"C19orf81\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence only describes craniosynostosis cohort inclusion criteria with overlapping features; no direct gene-phenotype link to this patient's profile.\"\n  },\n  {\n    \"gene\": \"AKAP3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence discusses CFC syndrome rasopathy features (failure to thrive, cardiac anomalies) but AKAP3 itself is not established as causative for this phenotype.\"\n  },\n  {\n    \"gene\": \"SEM1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking SEM1 to this patient's phenotype; evidence chunks are generic and non-specific to SEM1.\"\n  },\n  {\n    \"gene\": \"LRP11\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking LRP11 to this patient's phenotype; evidence chunks are generic and non-specific to LRP11.\"\n  },\n  {\n    \"gene\": \"CYP2D6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CYP2D6 to this patient's phenotype; evidence chunks describe unrelated patient series.\"\n  },\n  {\n    \"gene\": \"UMAD1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking UMAD1 to this patient's phenotype; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"LRRTM3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking LRRTM3 to this patient's phenotype; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"C1orf115\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking C1orf115 to this patient's phenotype; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"PBRM1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking PBRM1 to this patient's phenotype; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"DDX46\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking DDX46 to this patient's phenotype; evidence chunks are generic and non-specific.\"\n  },\n  {\n    \"gene\": \"CKB\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CKB to this patient's phenotype; evidence chunks describe unrelated patient series.\"\n  }\n]",
+  "parsed_top5": [
+    "H3-3A",
+    "CNOT1",
+    "ACTA1",
+    "ATP1A1",
+    "C19orf81"
+  ]
+}

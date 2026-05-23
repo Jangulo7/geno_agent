@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_33574344_individual_F5",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19917,
+  "tokens_out": 776,
+  "finish_reason": "stop",
+  "latency_s": 12.732365608215332,
+  "cost_usd": 0.071391,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.82,\"rationale\":\"UMOD evidence directly describes ADTKD-UMOD causing elevated creatinine, progressive CKD to ESRD, and renal cysts\u2014matching all three patient HPO phenotypes specifically.\"},{\"gene\":\"ARMC9\",\"confidence\":0.05,\"rationale\":\"ARMC9 evidence relates to ciliopathy/Joubert syndrome with renal cysts but lacks direct linkage to stage 5 CKD and elevated creatinine as primary phenotype.\"},{\"gene\":\"AFM\",\"confidence\":0.03,\"rationale\":\"AFM evidence shows transcriptomic association with glomerulonephritis but no direct causal link to the patient's specific phenotype triad.\"},{\"gene\":\"SLC25A31\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking SLC25A31 to renal cysts, elevated creatinine, or CKD stage 5; only generic nephrology case reports shared.\"},{\"gene\":\"FMN1\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking FMN1 to the patient's phenotype; evidence chunks are generic renal disease case reports.\"},{\"gene\":\"KCNIP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking KCNIP1 to renal cysts, elevated creatinine, or CKD; only non-specific nephrology literature provided.\"},{\"gene\":\"NALCN\",\"confidence\":0.01,\"rationale\":\"NALCN has no established renal disease association; evidence chunks are generic polycystic kidney disease descriptions unrelated to NALCN.\"},{\"gene\":\"TNRC6B\",\"confidence\":0.01,\"rationale\":\"No evidence linking TNRC6B to the patient's renal phenotype; only generic CKD/cyst case reports shared.\"},{\"gene\":\"KLRC4\",\"confidence\":0.01,\"rationale\":\"KLRC4 is an NK cell receptor gene with no known renal disease association; evidence is non-specific.\"},{\"gene\":\"KRT6A\",\"confidence\":0.01,\"rationale\":\"KRT6A encodes a keratin with no established link to CKD, renal cysts, or elevated creatinine.\"},{\"gene\":\"HNRNPU\",\"confidence\":0.01,\"rationale\":\"HNRNPU is an RNA-binding protein with no known renal disease phenotype; evidence is non-specific.\"},{\"gene\":\"SLC25A20\",\"confidence\":0.01,\"rationale\":\"SLC25A20 is a mitochondrial carnitine transporter with no established link to the patient's renal phenotype triad.\"},{\"gene\":\"SLC75A1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking SLC75A1 to renal cysts, elevated creatinine, or stage 5 CKD.\"},{\"gene\":\"KRTAP5-3\",\"confidence\":0.01,\"rationale\":\"KRTAP5-3 encodes a keratin-associated protein with no known renal disease association; evidence is non-specific.\"},{\"gene\":\"OOSP3\",\"confidence\":0.01,\"rationale\":\"OOSP3 is an oocyte-secreted protein with no established link to CKD, renal cysts, or elevated creatinine.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "ARMC9",
+    "AFM",
+    "SLC25A31",
+    "FMN1"
+  ]
+}

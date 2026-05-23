@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_28425089_subject_10A",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16506,
+  "tokens_out": 168,
+  "finish_reason": "stop",
+  "latency_s": 3.6505117416381836,
+  "cost_usd": 0.0013675199999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"NBAS\": 0.95, \"GATA1\": 0.65, \"FERMT2\": 0.55, \"ABCB4\": 0.5, \"PROK1\": 0.45, \"TLX1\": 0.4, \"GNRH1\": 0.35, \"RETN\": 0.3, \"TREM1\": 0.25, \"RPGR\": 0.2, \"MAGEB2\": 0.15, \"COX17\": 0.1, \"HDAC6\": 0.05, \"C16orf87\": 0.01, \"WBP11\": 0.005}",
+  "parsed_top5": [
+    "NBAS",
+    "GATA1",
+    "FERMT2",
+    "ABCB4",
+    "PROK1"
+  ]
+}

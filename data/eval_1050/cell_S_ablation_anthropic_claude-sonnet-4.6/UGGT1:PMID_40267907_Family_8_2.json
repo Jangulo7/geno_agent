@@ -1,0 +1,26 @@
+{
+  "case_id": "UGGT1:PMID_40267907_Family_8_2",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UGGT1",
+  "orig_qwen3_8b_top1": "DOHH",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DOHH",
+  "top1_correct": false,
+  "causal_rank": 15,
+  "tokens_in": 16606,
+  "tokens_out": 734,
+  "finish_reason": "stop",
+  "latency_s": 15.320082902908325,
+  "cost_usd": 0.060828,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"DOHH\", \"confidence\": 0.82, \"rationale\": \"DOHH biallelic LOF variants directly cause NDD with microcephaly, epilepsy, hypotonia, visual impairment, and severe ID matching nearly all patient HPO terms per cited cohort evidence.\"}, {\"gene\": \"EMC10\", \"confidence\": 0.07, \"rationale\": \"EMC10 biallelic LOF causes GDD/ID with verbal delay, but evidence is less specific to the full phenotype profile including neutropenia and seizures.\"}, {\"gene\": \"TRAK1\", \"confidence\": 0.02, \"rationale\": \"TRAK1 is associated with severe epileptic encephalopathy but evidence chunks provided are non-specific and do not directly support this phenotype profile.\"}, {\"gene\": \"TOPBP1\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking TOPBP1 to this phenotype profile in provided chunks; only generic background literature present.\"}, {\"gene\": \"NUDT16\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking NUDT16 to this phenotype; evidence chunks are non-specific background literature.\"}, {\"gene\": \"OR4C3\", \"confidence\": 0.01, \"rationale\": \"OR4C3 is an olfactory receptor gene with no plausible neurodevelopmental disease link; evidence chunks are non-specific.\"}, {\"gene\": \"PLAAT1\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking PLAAT1 to this phenotype profile in provided chunks.\"}, {\"gene\": \"CAPS2\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking CAPS2 to this phenotype profile; evidence chunks are non-specific background literature.\"}, {\"gene\": \"CBX2\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking CBX2 to this phenotype profile in provided chunks.\"}, {\"gene\": \"FGGY\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking FGGY to this phenotype profile in provided chunks.\"}, {\"gene\": \"RFXANK\", \"confidence\": 0.01, \"rationale\": \"RFXANK is associated with MHC class II deficiency/immunodeficiency, not matching this neurodevelopmental phenotype profile.\"}, {\"gene\": \"RPTN\", \"confidence\": 0.005, \"rationale\": \"RPTN encodes a skin protein with no known neurodevelopmental disease association; evidence chunks are non-specific.\"}, {\"gene\": \"FIGLA\", \"confidence\": 0.005, \"rationale\": \"FIGLA is a reproductive transcription factor with no known link to this neurodevelopmental phenotype.\"}, {\"gene\": \"THAP7\", \"confidence\": 0.005, \"rationale\": \"No specific evidence linking THAP7 to this phenotype profile in provided chunks.\"}, {\"gene\": \"UGGT1\", \"confidence\": 0.005, \"rationale\": \"No specific evidence linking UGGT1 to this phenotype profile in provided chunks.\"}]",
+  "parsed_top5": [
+    "DOHH",
+    "EMC10",
+    "TRAK1",
+    "TOPBP1",
+    "NUDT16"
+  ]
+}

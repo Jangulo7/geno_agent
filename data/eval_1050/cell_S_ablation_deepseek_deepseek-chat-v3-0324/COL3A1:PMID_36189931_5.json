@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_5",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19105,
+  "tokens_out": 644,
+  "finish_reason": "stop",
+  "latency_s": 25.33651900291443,
+  "cost_usd": 0.00431688,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"COL3A1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Matches patient's phenotypes (thin vermilion, narrow nose, bruising, dermal translucency, small joint hypermobility) with vascular Ehlers-Danlos syndrome.\"\n  },\n  {\n    \"gene\": \"ZNF142\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Dysmorphic features overlap partially but less specific than COL3A1 for connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"CDC23\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Minor dysmorphic features noted but no strong match to patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PPP2R5A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to patient's specific connective tissue or facial features.\"\n  },\n  {\n    \"gene\": \"GJB5\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Ectodermal dysplasia mentioned but not matching core patient phenotypes.\"\n  },\n  {\n    \"gene\": \"NR4A2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to connective tissue or patient's specific features.\"\n  },\n  {\n    \"gene\": \"KIAA1586\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting causal role in patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NDST3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant phenotypic overlap with patient's presentation.\"\n  },\n  {\n    \"gene\": \"GPR15\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting to patient's connective tissue or dysmorphic features.\"\n  },\n  {\n    \"gene\": \"EPS15L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting involvement in patient's condition.\"\n  },\n  {\n    \"gene\": \"C2orf74\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC24A5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Unrelated to connective tissue disorders or patient's specific features.\"\n  },\n  {\n    \"gene\": \"PRR20A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"RPAP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant phenotypic overlap with the patient's presentation.\"\n  },\n  {\n    \"gene\": \"PPP6R2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to connective tissue or dysmorphic features.\"\n  }\n]",
+  "parsed_top5": [
+    "COL3A1",
+    "ZNF142",
+    "CDC23",
+    "PPP2R5A",
+    "GJB5"
+  ]
+}

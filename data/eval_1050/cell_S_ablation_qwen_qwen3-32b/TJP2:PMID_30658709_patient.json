@@ -1,0 +1,22 @@
+{
+  "case_id": "TJP2:PMID_30658709_patient",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TJP2",
+  "orig_qwen3_8b_top1": "AK6",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CUX2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15773,
+  "tokens_out": 69,
+  "finish_reason": "stop",
+  "latency_s": 4.378149509429932,
+  "cost_usd": 0.00128116,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CUX2\", \"confidence\": 0.95, \"rationale\": \"CUX2 mutations are associated with progressive familial intrahepatic cholestasis (PFIC) with cholestatic jaundice, pruritus, and elevated liver enzymes, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "CUX2"
+  ]
+}

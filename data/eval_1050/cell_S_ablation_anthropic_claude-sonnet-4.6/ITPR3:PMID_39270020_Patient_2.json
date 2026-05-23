@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19713,
+  "tokens_out": 742,
+  "finish_reason": "stop",
+  "latency_s": 11.282216787338257,
+  "cost_usd": 0.070269,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR3\",\"confidence\":0.82,\"rationale\":\"ITPR3 evidence directly shows impaired anti-CD3/CD28 and PHA T-cell proliferation, decreased lymphocyte subsets, abnormal IgM, and confirmed pathogenicity of ITPR3 variants in patients with this exact phenotype profile.\"},{\"gene\":\"BAG3\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for BAG3 are non-specific background immunology cases with no direct link to BAG3 mutations causing this immunodeficiency phenotype.\"},{\"gene\":\"COX11\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking COX11 to combined immunodeficiency with T-cell proliferation defects; evidence chunks are generic immunology background.\"},{\"gene\":\"SMIM24\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SMIM24 to this immunodeficiency phenotype; evidence is generic background shared across multiple genes.\"},{\"gene\":\"SMG8\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SMG8 to combined immunodeficiency with T-cell proliferation defects; evidence is non-specific background.\"},{\"gene\":\"B3GNT4\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking B3GNT4 to this immunodeficiency phenotype; evidence chunks are generic background.\"},{\"gene\":\"GPIHBP1\",\"confidence\":0.01,\"rationale\":\"GPIHBP1 evidence explicitly states T-cell function is preserved, making it an unlikely cause of the patient's T-cell deficiency phenotype.\"},{\"gene\":\"HSFX2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking HSFX2 to combined immunodeficiency; evidence is generic background with no gene-specific association.\"},{\"gene\":\"FOXB1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking FOXB1 to combined immunodeficiency with T-cell proliferation defects; evidence is non-specific background.\"},{\"gene\":\"ABHD11\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ABHD11 to this immunodeficiency phenotype; evidence is generic background.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SPTAN1 to combined immunodeficiency with T-cell proliferation defects; evidence is non-specific background.\"},{\"gene\":\"EPB41L5\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking EPB41L5 to this immunodeficiency phenotype; evidence is generic background.\"},{\"gene\":\"GPX2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking GPX2 to combined immunodeficiency with T-cell proliferation defects; evidence is non-specific background.\"},{\"gene\":\"CLEC14A\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CLEC14A to this immunodeficiency phenotype; evidence is generic background.\"},{\"gene\":\"GPBAR1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking GPBAR1 to combined immunodeficiency with T-cell proliferation defects; evidence is non-specific background.\"}]",
+  "parsed_top5": [
+    "ITPR3",
+    "BAG3",
+    "COX11",
+    "SMIM24",
+    "SMG8"
+  ]
+}

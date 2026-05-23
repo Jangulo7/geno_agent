@@ -1,0 +1,22 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_12",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "CAPRIN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CAPRIN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16511,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 1.6053507328033447,
+  "cost_usd": 0.00133572,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CAPRIN1\", \"confidence\": 0.95, \"rationale\": \"CAPRIN1 mutations directly correlate with focal seizures, speech delay, ADHD, ASD, and language impairment in patient phenotype.\"}",
+  "parsed_top5": [
+    "CAPRIN1"
+  ]
+}

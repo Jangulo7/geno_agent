@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_31069201_Mother",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18232,
+  "tokens_out": 622,
+  "finish_reason": "stop",
+  "latency_s": 26.992343187332153,
+  "cost_usd": 0.00163272,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"IKZF1\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking IKZF1 mutations to immune thrombocytopenia, hypogammaglobulinemia, and B/T cell dysfunction matching the patient's phenotype.\"}, {\"gene\": \"DNASE1L3\", \"confidence\": 0.2, \"rationale\": \"Mildly relevant to immune dysfunction but lacks direct evidence linking it to the patient's specific phenotype.\"}, {\"gene\": \"SLC25A19\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"NOCT\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"STARD10\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"USP17L23\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"INA\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"SPINK9\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"CENPC\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"TMEM41B\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"SEMA4B\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"GPR158\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"STYX\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"OR9A4\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}, {\"gene\": \"DTYMK\", \"confidence\": 0.18, \"rationale\": \"No direct evidence linking it to the patient's immunological or hematological features.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "DNASE1L3",
+    "SLC25A19",
+    "NOCT",
+    "STARD10"
+  ]
+}

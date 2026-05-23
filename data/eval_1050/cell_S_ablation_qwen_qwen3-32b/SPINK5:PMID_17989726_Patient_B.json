@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_17989726_Patient_B",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17258,
+  "tokens_out": 733,
+  "finish_reason": "stop",
+  "latency_s": 24.89312171936035,
+  "cost_usd": 0.00158588,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"Mutations in SPINK5 cause Netherton syndrome, which presents with erythroderma, atopic dermatitis, hair shaft abnormalities, and recurrent infections, aligning with the patient's HPO features.\"},{\"gene\":\"PTAFR\",\"confidence\":0.35,\"rationale\":\"PTAFR is associated with chronic spontaneous urticaria severity, but evidence does not directly link it to the full spectrum of the patient's skin and systemic symptoms.\"},{\"gene\":\"NCL\",\"confidence\":0.25,\"rationale\":\"NCL is linked to neuronal ceroid lipofuscinoses, primarily neurological, with no direct evidence supporting its role in the patient's skin and immune-related symptoms.\"},{\"gene\":\"PLGRKT\",\"confidence\":0.25,\"rationale\":\"PLGRKT is a pseudogene with no known functional role in skin barrier or immune-related disorders, and no direct evidence supports its involvement in the patient's phenotype.\"},{\"gene\":\"MED25\",\"confidence\":0.25,\"rationale\":\"MED25 is involved in transcriptional regulation, but no evidence directly connects it to the patient's skin, immune, or growth-related symptoms.\"},{\"gene\":\"LY6H\",\"confidence\":0.25,\"rationale\":\"LY6H is a leukocyte antigen, but no evidence directly links it to the patient's skin barrier defects or immune-related symptoms.\"},{\"gene\":\"B4GALNT2\",\"confidence\":0.25,\"rationale\":\"B4GALNT2 is involved in glycosylation, but no evidence directly supports its role in the patient's skin or immune-related symptoms.\"},{\"gene\":\"DEFB115\",\"confidence\":0.25,\"rationale\":\"DEFB115 is a defensin gene, but no evidence directly links it to the patient's skin barrier defects or immune-related symptoms.\"},{\"gene\":\"RRS1\",\"confidence\":0.25,\"rationale\":\"RRS1 is a ribosomal protein gene, with no known role in skin or immune disorders, and no evidence supports its involvement in the patient's phenotype.\"},{\"gene\":\"ZNF658\",\"confidence\":0.25,\"rationale\":\"ZNF658 is a zinc finger protein gene, but no evidence directly links it to the patient's skin or immune-related symptoms.\"},{\"gene\":\"LUM\",\"confidence\":0.25,\"rationale\":\"LUM is involved in extracellular matrix formation, but no evidence directly supports its role in the patient's skin or immune-related symptoms.\"},{\"gene\":\"ADAM18\",\"confidence\":0.25,\"rationale\":\"ADAM18 is a metalloprotease, but no evidence directly links it to the patient's skin barrier defects or immune-related symptoms.\"},{\"gene\":\"CCNB1\",\"confidence\":0.25,\"rationale\":\"CCNB1 is a cell cycle regulator, with no known role in skin or immune disorders, and no evidence supports its involvement in the patient's phenotype.\"},{\"gene\":\"VN1R5\",\"confidence\":0.25,\"rationale\":\"VN1R5 is a vomeronasal receptor gene, with no known role in skin or immune disorders, and no evidence supports its involvement in the patient's phenotype.\"},{\"gene\":\"C4BPB\",\"confidence\":0.25,\"rationale\":\"C4BPB is a complement regulatory protein, but no evidence directly links it to the patient's skin or immune-related symptoms.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "PTAFR",
+    "NCL",
+    "PLGRKT",
+    "MED25"
+  ]
+}

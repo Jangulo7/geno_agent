@@ -1,0 +1,22 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P6",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16945,
+  "tokens_out": 54,
+  "finish_reason": "stop",
+  "latency_s": 1.995042324066162,
+  "cost_usd": 0.00137072,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"RFXANK mutations cause MHC class II deficiency, leading to recurrent infections, failure to thrive, and hepatomegaly as described in multiple case reports.\"}",
+  "parsed_top5": [
+    "RFXANK"
+  ]
+}

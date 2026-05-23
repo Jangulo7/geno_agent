@@ -1,0 +1,22 @@
+{
+  "case_id": "GLI3:PMID_24736735_G099",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "BAG1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13863,
+  "tokens_out": 494,
+  "finish_reason": "stop",
+  "latency_s": 11.209579706192017,
+  "cost_usd": 0.0012473599999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"GLI3 mutations are directly linked to preaxial polydactyly, syndactyly, and macrocephaly in Greig cephalopolysyndactyly syndrome.\",\"gene\":\"PTTG1IP\",\"confidence\":0.65,\"rationale\":\"Associated with preaxial polydactyly and syndactyly but lacks direct linkage to macrocephaly.\",\"gene\":\"ZNF707\",\"confidence\":0.55,\"rationale\":\"Mentions preaxial polydactyly and syndactyly but no specific gene-disease association.\",\"gene\":\"ANXA11\",\"confidence\":0.5,\"rationale\":\"Reports preaxial polydactyly and syndactyly but no clear genetic causality.\",\"gene\":\"DCPH1\",\"confidence\":0.45,\"rationale\":\"Linked to preaxial polydactyly but lacks macrocephaly association.\",\"gene\":\"RABL6\",\"confidence\":0.4,\"rationale\":\"Mentions preaxial polydactyly but no specific syndrome or gene-disease link.\",\"gene\":\"C7orf25\",\"confidence\":0.35,\"rationale\":\"General mentions of preaxial polydactyly without specific gene-disease connection.\",\"gene\":\"DTWD2\",\"confidence\":0.3,\"rationale\":\"No direct evidence linking to the described phenotypes.\",\"gene\":\"ICA1\",\"confidence\":0.25,\"rationale\":\"Reports polydactyly and syndactyly but no clear genetic causality.\",\"gene\":\"ARHGEF15\",\"confidence\":0.2,\"rationale\":\"Mentions preaxial polydactyly but no specific gene-phenotype link.\",\"gene\":\"TFB1M\",\"confidence\":0.15,\"rationale\":\"General references to preaxial polydactyly without specific gene-disease evidence.\",\"gene\":\"SYCN\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the described phenotypes.\",\"gene\":\"PAXIP1\",\"confidence\":0.05,\"rationale\":\"No specific gene-disease association for the given phenotypes.\",\"gene\":\"BAG1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the described phenotypes.\"}",
+  "parsed_top5": [
+    "BAG1"
+  ]
+}

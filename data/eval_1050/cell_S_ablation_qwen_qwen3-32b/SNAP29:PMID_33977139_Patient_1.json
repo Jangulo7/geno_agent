@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "NDUFV3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NDUFV3",
+  "top1_correct": false,
+  "causal_rank": 6,
+  "tokens_in": 17660,
+  "tokens_out": 779,
+  "finish_reason": "stop",
+  "latency_s": 26.12729811668396,
+  "cost_usd": 0.0016309200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"NDUFV3\", \"confidence\": 0.92, \"rationale\": \"NDUFV3 mutations are associated with axial hypotonia, hypertonia, seizures, scoliosis, strabismus, and premature thelarche, aligning closely with the patient's phenotype.\"}, {\"gene\": \"COG1\", \"confidence\": 0.75, \"rationale\": \"COG1 mutations are linked to hypotonia, scoliosis, strabismus, and seizures, but less consistently with premature thelarche and ichthyosis.\"}, {\"gene\": \"ADGRG2\", \"confidence\": 0.65, \"rationale\": \"ADGRG2 is associated with hypotonia, scoliosis, and facial dysmorphisms, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"KCNQ3\", \"confidence\": 0.60, \"rationale\": \"KCNQ3 is primarily linked to seizures and strabismus, with less frequent reports of hypotonia and scoliosis.\"}, {\"gene\": \"ESPN\", \"confidence\": 0.55, \"rationale\": \"ESPN is associated with hypotonia and scoliosis, but less frequently with seizures, strabismus, and ichthyosis.\"}, {\"gene\": \"SNAP29\", \"confidence\": 0.50, \"rationale\": \"SNAP29 is linked to hypotonia and motor delays, but less consistently with seizures, strabismus, and ichthyosis.\"}, {\"gene\": \"PLA2G4A\", \"confidence\": 0.45, \"rationale\": \"PLA2G4A is associated with seizures and hypotonia, but less frequently with scoliosis and ichthyosis.\"}, {\"gene\": \"TBC1D3L\", \"confidence\": 0.40, \"rationale\": \"TBC1D3L is linked to hypotonia and developmental delay, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"HOXA10\", \"confidence\": 0.38, \"rationale\": \"HOXA10 is associated with scoliosis and hypotonia, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"FKBP10\", \"confidence\": 0.35, \"rationale\": \"FKBP10 is linked to scoliosis and hypotonia, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"LARS1\", \"confidence\": 0.32, \"rationale\": \"LARS1 is associated with seizures and hypotonia, but less frequently with scoliosis and ichthyosis.\"}, {\"gene\": \"SYAP1\", \"confidence\": 0.30, \"rationale\": \"SYAP1 is linked to hypotonia and developmental delay, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"RPL34\", \"confidence\": 0.28, \"rationale\": \"RPL34 is associated with hypotonia and seizures, but less frequently with scoliosis and ichthyosis.\"}, {\"gene\": \"TYW3\", \"confidence\": 0.25, \"rationale\": \"TYW3 is linked to hypotonia and developmental delay, but less frequently with seizures and ichthyosis.\"}, {\"gene\": \"OR14A16\", \"confidence\": 0.20, \"rationale\": \"OR14A16 is not typically associated with the patient's complex phenotype, including seizures and ichthyosis.\"}]",
+  "parsed_top5": [
+    "NDUFV3",
+    "COG1",
+    "ADGRG2",
+    "KCNQ3",
+    "ESPN"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "OFD1:PMID_19800048_IV_4",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OFD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13225,
+  "tokens_out": 639,
+  "finish_reason": "stop",
+  "latency_s": 19.441603422164917,
+  "cost_usd": 0.0031370300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n    {\n        \"gene\": \"OFD1\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Strong evidence linking OFD1 to the patient's severe intellectual disability, postaxial polydactyly, and recurrent infections, with direct phenotypic overlap.\"\n    },\n    {\n        \"gene\": \"TSC22D3\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Evidence suggests involvement in cerebral malformations and polydactyly, but less direct than OFD1.\"\n    },\n    {\n        \"gene\": \"TYW1\",\n        \"confidence\": 0.5,\n        \"rationale\": \"Some association with polydactyly and developmental delay, but evidence is less specific.\"\n    },\n    {\n        \"gene\": \"MUSTN1\",\n        \"confidence\": 0.4,\n        \"rationale\": \"Minimal evidence linking to the patient's phenotype; mostly related to polydactyly.\"\n    },\n    {\n        \"gene\": \"NMRK1\",\n        \"confidence\": 0.4,\n        \"rationale\": \"Limited evidence connecting to polydactyly or intellectual disability.\"\n    },\n    {\n        \"gene\": \"OMD\",\n        \"confidence\": 0.3,\n        \"rationale\": \"No strong evidence linking to the patient's specific symptoms.\"\n    },\n    {\n        \"gene\": \"PLN\",\n        \"confidence\": 0.3,\n        \"rationale\": \"No direct evidence supporting a role in the patient's phenotype.\"\n    },\n    {\n        \"gene\": \"SACK1C\",\n        \"confidence\": 0.3,\n        \"rationale\": \"No relevant evidence connecting to the patient's symptoms.\"\n    },\n    {\n        \"gene\": \"LAMTOR1\",\n        \"confidence\": 0.3,\n        \"rationale\": \"No direct evidence linking to the patient's condition.\"\n    },\n    {\n        \"gene\": \"ASB9\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Minimal evidence; not strongly implicated in the phenotypes.\"\n    },\n    {\n        \"gene\": \"SMIM17\",\n        \"confidence\": 0.2,\n        \"rationale\": \"No significant evidence supporting a causal role.\"\n    },\n    {\n        \"gene\": \"LHFPL7\",\n        \"confidence\": 0.2,\n        \"rationale\": \"No direct evidence linking to the patient's symptoms.\"\n    },\n    {\n        \"gene\": \"ADAM8\",\n        \"confidence\": 0.2,\n        \"rationale\": \"No relevant evidence connecting to the patient's phenotype.\"\n    },\n    {\n        \"gene\": \"ESPL1\",\n        \"confidence\": 0.2,\n        \"rationale\": \"No strong evidence linking to the patient's symptoms.\"\n    },\n    {\n        \"gene\": \"HCFC2\",\n        \"confidence\": 0.1,\n        \"rationale\": \"No evidence supporting a role in the patient's condition.\"\n    }\n]\n```",
+  "parsed_top5": [
+    "OFD1",
+    "TSC22D3",
+    "TYW1",
+    "MUSTN1",
+    "NMRK1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_17250669_Patient_A",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17440,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 22.51000690460205,
+  "cost_usd": 0.004020070000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy (FPLD2) with patient's phenotypes like insulin-resistant diabetes and lipodystrophy.\"\n  },\n  {\n    \"gene\": \"FRYL\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minimal direct evidence connecting FRYL to the observed lipodystrophy and metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"VPREB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VPREB3 to lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"VEGFB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence associating VEGFB with the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"PPP4R2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence connecting PPP4R2 to lipodystrophy or metabolic syndromes.\"\n  },\n  {\n    \"gene\": \"LILRB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented association between LILRB1 and the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DNAJC14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting DNAJC14's role in lipodystrophy or related metabolic conditions.\"\n  },\n  {\n    \"gene\": \"XRN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking XRN1 to the observed clinical features.\"\n  },\n  {\n    \"gene\": \"RNF145\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating RNF145 with lipodystrophy or diabetes phenotypes.\"\n  },\n  {\n    \"gene\": \"HPCAL4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence connecting HPCAL4 to lipodystrophy or metabolic dysfunctions.\"\n  },\n  {\n    \"gene\": \"ARHGAP4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No data implicating ARHGAP4 in lipodystrophy or insulin resistance.\"\n  },\n  {\n    \"gene\": \"SH3BGRL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known role of SH3BGRL2 in the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"ARMCX5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking ARMCX5 to lipodystrophy or related metabolic issues.\"\n  },\n  {\n    \"gene\": \"BEND6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known association between BEND6 and the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"EBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting EBP to lipodystrophy or diabetic conditions.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "LMNA",
+    "FRYL",
+    "VPREB3",
+    "VEGFB",
+    "PPP4R2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "NDC1:PMID_39003500_Family_3_individual_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NDC1",
+  "orig_qwen3_8b_top1": "NDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NDC1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18998,
+  "tokens_out": 812,
+  "finish_reason": "stop",
+  "latency_s": 13.673697233200073,
+  "cost_usd": 0.069174,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NDC1\",\n    \"confidence\": 0.72,\n    \"rationale\": \"NDC1 chunk_1 directly states biallelic NDC1 variants cause achalasia, developmental delay, and neurological phenotype similar to Triple A syndrome, matching multiple patient HPO terms.\"\n  },\n  {\n    \"gene\": \"TCEA1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct gene-specific evidence; shared generic achalasia/aspiration pneumonia literature only.\"\n  },\n  {\n    \"gene\": \"BCAP31\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No direct gene-specific evidence linking BCAP31 to this phenotype profile; only generic shared literature.\"\n  },\n  {\n    \"gene\": \"PSMA7\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No direct gene-specific evidence; shared generic achalasia/MIRAGE syndrome literature only.\"\n  },\n  {\n    \"gene\": \"KRT35\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia/MIRAGE syndrome literature.\"\n  },\n  {\n    \"gene\": \"NUCB1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia/MIRAGE syndrome literature.\"\n  },\n  {\n    \"gene\": \"ENPP5\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia/MIRAGE syndrome literature.\"\n  },\n  {\n    \"gene\": \"SLC25A32\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"AMPD2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"USP29\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"ISX\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia/Triple A syndrome literature.\"\n  },\n  {\n    \"gene\": \"LMNTD1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"SLC30A6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"CYP2F1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  },\n  {\n    \"gene\": \"CSNK1A1L\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct gene-specific evidence; only generic shared achalasia literature.\"\n  }\n]",
+  "parsed_top5": [
+    "NDC1",
+    "TCEA1",
+    "BCAP31",
+    "PSMA7",
+    "KRT35"
+  ]
+}

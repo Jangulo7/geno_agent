@@ -1,0 +1,26 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_14",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "IRF2BL",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NLRP12",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16127,
+  "tokens_out": 1173,
+  "finish_reason": "stop",
+  "latency_s": 23.507445573806763,
+  "cost_usd": 0.065976,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "Looking at the evidence, I notice that most genes share the same recycled literature chunks with low critic relevance (2/5), making direct gene-to-phenotype attribution difficult. However, I need to differentiate based on which gene's evidence best matches the patient's full HPO profile including: seizures, global developmental delay, hypotonia, short stature, micrognathia, low-set ears, depressed nasal bridge, anteverted nares, underdeveloped nasal alae, epicanthus, upslanted palpebral fissures, and hypertelorism.\n\nKey observations:\n- NLRP12's chunk_3 specifically discusses 8p deletions with features including upslanting palpebral fissures, hypertelorism, epicanthal folds, ear anomalies, short nose, micrognathia, developmental delay, growth retardation, hypotonia - matching the patient's profile most comprehensively including seizures and short stature.\n- WDFY2 and ZMYND12 have a chunk mentioning low-set ears specifically, which is a distinguishing feature.\n- SPTAN1 is known for epileptic encephalopathy with hypotonia and developmental delay, and its chunk_3 describes intractable seizures with hypotonia.\n- ZNF287's chunk_3 describes a case with hypertelorism, epicanthus, upslanted palpebral fissures, flat nasal bridge, and developmental delay.\n\nSPTAN1 is a well-established epileptic encephalopathy gene with seizures + hypotonia + developmental delay, and its evidence chunk describes intractable seizures. NLRP12's discussion chunk most comprehensively matches the full phenotype profile.\n\n[{\"gene\":\"NLRP12\",\"confidence\":0.22,\"rationale\":\"Evidence chunk explicitly describes 8p deletion syndrome with upslanting palpebral fissures, hypertelorism, epicanthal folds, ear anomalies, micrognathia, developmental delay, growth retardation, and hypotonia matching the full HPO profile.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.15,\"rationale\":\"SPTAN1 causes epileptic encephalopathy; evidence chunk describes intractable seizures with hypotonia and developmental delay, matching key patient features.\"},{\"gene\":\"ZNF287\",\"confidence\":0.10,\"rationale\":\"Evidence includes a case with hypertelorism, epicanthus, upslanted palpebral fissures, flat nasal bridge, and psychomotor delay closely matching patient phenotype.\"},{\"gene\":\"WDFY2\",\"confidence\":0.08,\"rationale\":\"Evidence includes low-set ears, hypertelorism, epicanthal folds, and developmental delay; low-set ears is a distinguishing feature matching the patient.\"},{\"gene\":\"ZMYND12\",\"confidence\":0.07,\"rationale\":\"Evidence mentions low-set ears, hypertelorism, epicanthal folds alongside developmental delay, partially matching the patient's HPO profile.\"},{\"gene\":\"NLRC4\",\"confidence\":0.05,\"rationale\":\"Evidence shows epicanthus, upslanted palpebral fissures, hypertelorism, and developmental delay but lacks seizures and other key features.\"},{\"gene\":\"SIRPB2\",\"confidence\":0.05,\"rationale\":\"Shared evidence chunks show overlapping facial features and developmental delay but no specific gene-disease link to this phenotype profile.\"},{\"gene\":\"MFSD12\",\"confidence\":0.04,\"rationale\":\"Evidence chunks show overlapping dysmorphic features but MFSD12 is primarily associated with pigmentation disorders, not this neurodevelopmental profile.\"},{\"gene\":\"TP53I11\",\"confidence\":0.04,\"rationale\":\"Evidence shows some overlapping features but TP53I11 lacks established association with this neurodevelopmental/dysmorphic syndrome.\"},{\"gene\":\"ATP11B\",\"confidence\":0.04,\"rationale\":\"Shared evidence chunks show facial dysmorphism and developmental delay but no specific established link to this phenotype cluster.\"},{\"gene\":\"ATP6V1G2\",\"confidence\":0.04,\"rationale\":\"Evidence overlaps with facial features and developmental delay but ATP6V1G2 lacks strong established causality for this syndrome.\"},{\"gene\":\"NFKBIE\",\"confidence\":0.04,\"rationale\":\"Evidence chunks show overlapping features but NFKBIE is primarily an immune gene without strong neurodevelopmental syndrome association.\"},{\"gene\":\"PCARE\",\"confidence\":0.03,\"rationale\":\"PCARE is associated with retinal dystrophy; evidence chunks show overlapping features but poor phenotype match for this neurodevelopmental profile.\"},{\"gene\":\"HTR6\",\"confidence\":0.03,\"rationale\":\"HTR6 encodes a serotonin receptor; evidence chunks show overlapping features but no established link to this dysmorphic neurodevelopmental syndrome.\"},{\"gene\":\"ZNF385C\",\"confidence\":0.02,\"rationale\":\"Least supported candidate; ZNF385C has no established neurodevelopmental syndrome association and evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "NLRP12",
+    "SPTAN1",
+    "ZNF287",
+    "WDFY2",
+    "ZMYND12"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "KCNH5:PMID_36307226_Proband_16",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "KCNH5",
+  "orig_qwen3_8b_top1": "FMO5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC1A1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16272,
+  "tokens_out": 619,
+  "finish_reason": "stop",
+  "latency_s": 26.957314491271973,
+  "cost_usd": 0.00373103,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SLC1A1\",\n    \"confidence\": 0.8,\n    \"rationale\": \"Strongest evidence linking SLC1A1 to epileptic encephalopathy and multiple seizure types.\"\n  },\n  {\n    \"gene\": \"THTPA\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some evidence of drug-resistant epilepsy and developmental delay, but less specific.\"\n  },\n  {\n    \"gene\": \"HIVEP3\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Moderate evidence for epilepsy phenotypes, but less direct than SLC1A1.\"\n  },\n  {\n    \"gene\": \"STK24\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General epilepsy evidence, but lacks specificity for the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NYX\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Some epilepsy evidence, but not strongly linked to encephalopathy.\"\n  },\n  {\n    \"gene\": \"ORC6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited epilepsy evidence, no strong phenotypic match.\"\n  },\n  {\n    \"gene\": \"KLHL26\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Weak epilepsy evidence, no clear phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"TRIM69\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Minimal epilepsy evidence, no direct phenotypic link.\"\n  },\n  {\n    \"gene\": \"GMPS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking GMPS to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"HPN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking HPN to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC35B2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SLC35B2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"FMO5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking FMO5 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SEC61G\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SEC61G to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"BGLAP\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking BGLAP to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ABCA8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking ABCA8 to the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "SLC1A1",
+    "THTPA",
+    "HIVEP3",
+    "STK24",
+    "NYX"
+  ]
+}

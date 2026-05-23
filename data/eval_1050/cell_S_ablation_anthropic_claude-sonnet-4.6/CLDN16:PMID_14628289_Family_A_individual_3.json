@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_14628289_Family_A_individual_3",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19708,
+  "tokens_out": 909,
+  "finish_reason": "stop",
+  "latency_s": 14.254818201065063,
+  "cost_usd": 0.072759,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CLDN16\", \"confidence\": 0.93, \"rationale\": \"CLDN16 mutations directly cause FHHNC, characterized by nephrocalcinosis, hypercalciuria, hypermagnesiuria, and nocturnal enuresis\u2014matching all four patient HPO phenotypes with highest-relevance evidence chunks.\"}, {\"gene\": \"UMOD\", \"confidence\": 0.02, \"rationale\": \"UMOD evidence mentions hypercalciuria in a mouse model context but no direct link to the full phenotype profile; no specific mention of UMOD causing this syndrome.\"}, {\"gene\": \"ITGA2B\", \"confidence\": 0.01, \"rationale\": \"ITGA2B is associated with Glanzmann thrombasthenia; evidence chunks referencing nephrocalcinosis/hypercalciuria relate to SLC4A1, not ITGA2B itself.\"}, {\"gene\": \"TRABD\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TRABD to nephrocalcinosis, hypercalciuria, hypermagnesiuria, or enuresis; evidence chunks are generic FHHNC background.\"}, {\"gene\": \"CMKLR1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CMKLR1 to the patient phenotype; evidence is generic FHHNC background unrelated to this gene.\"}, {\"gene\": \"ZCCHC7\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ZCCHC7 to nephrocalcinosis or renal magnesium/calcium wasting; evidence is generic FHHNC background.\"}, {\"gene\": \"RHBDF1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking RHBDF1 to the patient phenotype; evidence chunks are generic FHHNC background unrelated to this gene.\"}, {\"gene\": \"CGN\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CGN to nephrocalcinosis, hypercalciuria, or hypermagnesiuria; evidence is generic FHHNC background.\"}, {\"gene\": \"RMP24\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking RMP24 to the patient phenotype; evidence chunks are generic FHHNC background unrelated to this gene.\"}, {\"gene\": \"KCNK3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking KCNK3 to nephrocalcinosis or renal calcium/magnesium wasting; evidence is generic FHHNC background.\"}, {\"gene\": \"SDHA\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking SDHA to the patient phenotype; evidence chunks are generic FHHNC background unrelated to this gene.\"}, {\"gene\": \"PHF24\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking PHF24 to nephrocalcinosis, hypercalciuria, or hypermagnesiuria; evidence is generic FHHNC background.\"}, {\"gene\": \"STYXL1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking STYXL1 to the patient phenotype; evidence chunks are generic FHHNC background unrelated to this gene.\"}, {\"gene\": \"MAGEB3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MAGEB3 to nephrocalcinosis or renal mineral wasting; evidence is generic FHHNC background.\"}, {\"gene\": \"DNA2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking DNA2 to nephrocalcinosis, hypercalciuria, or hypermagnesiuria; evidence chunks are generic FHHNC background.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "UMOD",
+    "ITGA2B",
+    "TRABD",
+    "CMKLR1"
+  ]
+}

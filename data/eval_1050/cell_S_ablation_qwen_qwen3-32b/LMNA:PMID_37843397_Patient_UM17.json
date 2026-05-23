@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM17",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18089,
+  "tokens_out": 640,
+  "finish_reason": "stop",
+  "latency_s": 13.565621137619019,
+  "cost_usd": 0.0016263200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"LMNA\": {\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy with metabolic complications matching patient's phenotype.\"}, \"F8A3\": {\"gene\": \"F8A3\", \"confidence\": 0.3, \"rationale\": \"Mentions of PPARG gene variant in FPLD3, but less direct connection to patient's specific symptoms.\"}, \"PALM2AKAP2\": {\"gene\": \"PALM2AKAP2\", \"confidence\": 0.25, \"rationale\": \"Some studies on limb lipodystrophy and metabolic issues, but not strongly gene-specific.\"}, \"CDKN2AIP\": {\"gene\": \"CDKN2AIP\", \"confidence\": 0.2, \"rationale\": \"General lipodystrophy references without specific gene linkage.\"}, \"TEX38\": {\"gene\": \"TEX38\", \"confidence\": 0.18, \"rationale\": \"Mildly relevant to metabolic issues but no direct gene-phenotype link.\"}, \"EFR3A\": {\"gene\": \"EFR3A\", \"confidence\": 0.17, \"rationale\": \"Abstract mentions of lipodystrophy without specific gene evidence.\"}, \"NMD3\": {\"gene\": \"NMD3\", \"confidence\": 0.16, \"rationale\": \"Some metabolic disorder references but no clear connection to lipodystrophy.\"}, \"SERF2\": {\"gene\": \"SERF2\", \"confidence\": 0.15, \"rationale\": \"General diabetes and fat loss mentions without gene-specific data.\"}, \"GABRA1\": {\"gene\": \"GABRA1\", \"confidence\": 0.14, \"rationale\": \"No direct evidence linking to lipodystrophy or metabolic symptoms.\"}, \"CEACAM7\": {\"gene\": \"CEACAM7\", \"confidence\": 0.13, \"rationale\": \"General lipodystrophy references without specific gene evidence.\"}, \"MBD3L3\": {\"gene\": \"MBD3L3\", \"confidence\": 0.12, \"rationale\": \"Minimal relevant evidence in provided texts.\"}, \"OR2M7\": {\"gene\": \"OR2M7\", \"confidence\": 0.11, \"rationale\": \"Very limited and indirect mentions of lipodystrophy.\"}, \"LZTR1\": {\"gene\": \"LZTR1\", \"confidence\": 0.1, \"rationale\": \"No specific gene-phenotype connection in evidence.\"}, \"ERICH4\": {\"gene\": \"ERICH4\", \"confidence\": 0.09, \"rationale\": \"Abstract mentions without direct gene relevance.\"}, \"UBE2G2\": {\"gene\": \"UBE2G2\", \"confidence\": 0.08, \"rationale\": \"No clear connection to patient's symptoms in evidence.\"}}",
+  "parsed_top5": [
+    "LMNA",
+    "F8A3",
+    "PALM2AKAP2",
+    "CDKN2AIP",
+    "TEX38"
+  ]
+}

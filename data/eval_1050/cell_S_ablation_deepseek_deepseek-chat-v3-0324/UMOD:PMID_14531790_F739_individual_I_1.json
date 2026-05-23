@@ -1,0 +1,22 @@
+{
+  "case_id": "UMOD:PMID_14531790_F739_individual_I_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15200,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 7.531808614730835,
+  "cost_usd": 0.0030838899999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"UMOD\",\n  \"confidence\": 0.95,\n  \"rationale\": \"UMOD mutations are well-documented to cause autosomal dominant tubulointerstitial kidney disease with hyperuricemia and chronic kidney disease, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "UMOD"
+  ]
+}

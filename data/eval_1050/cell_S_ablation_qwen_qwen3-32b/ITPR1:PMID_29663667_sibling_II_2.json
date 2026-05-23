@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17999,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.124011993408203,
+  "cost_usd": 0.0014556,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"ITPR1 mutations cause Gillespie syndrome, which includes aniridia, cerebellar atrophy, intellectual disability, and hypotonia matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

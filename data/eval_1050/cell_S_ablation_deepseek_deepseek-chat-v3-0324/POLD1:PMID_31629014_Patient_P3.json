@@ -1,0 +1,22 @@
+{
+  "case_id": "POLD1:PMID_31629014_Patient_P3",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "POLD1",
+  "orig_qwen3_8b_top1": "GATA2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "POLD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17185,
+  "tokens_out": 50,
+  "finish_reason": "stop",
+  "latency_s": 4.0139479637146,
+  "cost_usd": 0.0034755,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"POLD1\",\n  \"confidence\": 0.85,\n  \"rationale\": \"Strong evidence linking POLD1 to immunodeficiency with hypogammaglobulinemia, recurrent infections, and lymphoid hyperplasia.\"\n}",
+  "parsed_top5": [
+    "POLD1"
+  ]
+}

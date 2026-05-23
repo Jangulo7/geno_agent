@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P75",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14070,
+  "tokens_out": 639,
+  "finish_reason": "stop",
+  "latency_s": 19.865158796310425,
+  "cost_usd": 0.00330603,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence links GNAS to PHP1A/PPHP with obesity, short stature, and metacarpal shortening, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"WNT16\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Indirect association with skeletal anomalies and obesity in translocation case, but less specific than GNAS.\"\n  },\n  {\n    \"gene\": \"POLG\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POLG to the clinical features described here.\"\n  },\n  {\n    \"gene\": \"PZP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PZP to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TCEAL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TCEAL2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DPYD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DPYD to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"OR8J3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR8J3 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ULBP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ULBP3 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"UNC80\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking UNC80 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MED26\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MED26 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"BTBD18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BTBD18 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"IFNG\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IFNG to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ASIC3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ASIC3 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZBP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZBP1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"KHDRBS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KHDRBS2 to the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "GNAS",
+    "WNT16",
+    "POLG",
+    "PZP",
+    "TCEAL2"
+  ]
+}

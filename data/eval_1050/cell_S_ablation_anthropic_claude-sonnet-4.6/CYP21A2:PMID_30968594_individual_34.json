@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_34",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15835,
+  "tokens_out": 732,
+  "finish_reason": "stop",
+  "latency_s": 14.800410747528076,
+  "cost_usd": 0.058485,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CYP21A2\",\"confidence\":0.92,\"rationale\":\"CYP21A2 mutations cause 21-hydroxylase deficiency (CAH), directly explaining clitoral hypertrophy, elevated testosterone, decreased ACTH (on treatment/suppression), elevated prolactin, and low estradiol via androgen excess.\"},{\"gene\":\"ZP1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ZP1 to the patient's adrenal/androgen phenotype; evidence chunks are non-specific.\"},{\"gene\":\"BSCL2\",\"confidence\":0.01,\"rationale\":\"BSCL2 causes congenital lipodystrophy; no mechanistic link to the described hormonal profile or clitoral hypertrophy.\"},{\"gene\":\"TBCC\",\"confidence\":0.01,\"rationale\":\"TBCC is a tubulin chaperone with no established connection to adrenal steroidogenesis or the patient's phenotype.\"},{\"gene\":\"BMP3\",\"confidence\":0.01,\"rationale\":\"BMP3 is involved in bone morphogenesis; no evidence linking it to hyperandrogenism or adrenal dysfunction.\"},{\"gene\":\"PGAP2\",\"confidence\":0.01,\"rationale\":\"PGAP2 is involved in GPI anchor biosynthesis; no relevant connection to the hormonal phenotype described.\"},{\"gene\":\"CSPG5\",\"confidence\":0.01,\"rationale\":\"CSPG5 encodes a proteoglycan with no known role in adrenal steroidogenesis or sex hormone regulation.\"},{\"gene\":\"MUC22\",\"confidence\":0.01,\"rationale\":\"MUC22 encodes a mucin protein; no established link to the patient's endocrine phenotype.\"},{\"gene\":\"TMEM35A\",\"confidence\":0.01,\"rationale\":\"TMEM35A has no known role in adrenal or gonadal steroidogenesis relevant to this phenotype.\"},{\"gene\":\"MAGED4\",\"confidence\":0.01,\"rationale\":\"MAGED4 is a cancer-testis antigen with no established connection to CAH or hyperandrogenism.\"},{\"gene\":\"SSU72L1\",\"confidence\":0.01,\"rationale\":\"SSU72L1 is a phosphatase with no known role in adrenal steroid biosynthesis or the described phenotype.\"},{\"gene\":\"FAM131A\",\"confidence\":0.01,\"rationale\":\"FAM131A has no established mechanistic link to adrenal hyperandrogenism or the patient's hormonal profile.\"},{\"gene\":\"PRELID2\",\"confidence\":0.01,\"rationale\":\"PRELID2 is a mitochondrial lipid transfer protein with no known connection to adrenal steroidogenesis.\"},{\"gene\":\"GNLY\",\"confidence\":0.01,\"rationale\":\"GNLY encodes granulysin, an immune effector molecule unrelated to adrenal or sex hormone biology.\"},{\"gene\":\"ZNF286A\",\"confidence\":0.01,\"rationale\":\"ZNF286A is a zinc finger transcription factor with no established link to CAH or the described endocrine phenotype.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "ZP1",
+    "BSCL2",
+    "TBCC",
+    "BMP3"
+  ]
+}
