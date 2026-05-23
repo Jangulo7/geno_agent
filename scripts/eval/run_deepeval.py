@@ -189,6 +189,18 @@ def main() -> int:
         help="Run only the first N sidecars (smoke/debug).",
     )
     parser.add_argument(
+        "--stratified-n-per-cat",
+        type=int,
+        default=None,
+        help="Sample N cases per MONDO category (seed 42). Requires --test-cases.",
+    )
+    parser.add_argument(
+        "--test-cases",
+        type=Path,
+        default=None,
+        help="test_cases.jsonl for per-case category labels (needed by --stratified-n-per-cat).",
+    )
+    parser.add_argument(
         "--max-concurrency",
         type=int,
         default=8,
@@ -221,6 +233,33 @@ def main() -> int:
     if not sidecars:
         logger.error("No sidecars found in %s", args.responses_dir)
         return 1
+
+    # Optional stratified sub-sample by MONDO category (seed 42).
+    if args.stratified_n_per_cat is not None:
+        if args.test_cases is None:
+            logger.error("--stratified-n-per-cat requires --test-cases.")
+            return 2
+        import random
+        from collections import defaultdict
+
+        cat_of: dict[str, str] = {}
+        with args.test_cases.open() as fh:
+            for line in fh:
+                if line.strip():
+                    c = json.loads(line)
+                    cat_of[c["case_id"]] = c.get("category", "unknown")
+        by_cat: dict[str, list] = defaultdict(list)
+        for sc in sidecars:
+            by_cat[cat_of.get(sc.get("case_id"), "unknown")].append(sc)
+        rng = random.Random(42)
+        sampled: list[dict] = []
+        for cat in sorted(by_cat):
+            pool = by_cat[cat]
+            n_take = min(args.stratified_n_per_cat, len(pool))
+            sampled.extend(rng.sample(pool, n_take))
+            logger.info("  stratified: %s -> %d sampled (from %d)", cat, n_take, len(pool))
+        sidecars = sampled
+        logger.info("  sidecars after stratified sample: %d", len(sidecars))
 
     results: list[dict] = []
     t0 = time.time()

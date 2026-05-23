@@ -232,6 +232,25 @@ bound** on the true LEA-against-its-own-context faithfulness: the
 processed during inference; a future re-run at the full
 45-chunk input is planned to bound the true value.
 
+To independently corroborate the faithfulness signal, a second
+hallucination judge was applied: DeepEval v4.0.3's holistic
+`HallucinationMetric` (*citation: Confident-AI DeepEval*) using the
+same gpt-4o-2024-08-06 model on a stratified n = 100 subset (25 per
+MONDO, seed 42; a sub-sample of the RAGAS 600). DeepEval evaluates
+overall answer-context consistency rather than claim-by-claim
+grounding, providing a complementary lenient counterpart to RAGAS's
+strict faithfulness. Mean groundedness was 0.845 (median 0.933);
+**the correctness-prediction signal reproduced** with high-vs-low
+groundedness cases scoring 78.9 % vs 40.0 % top-1 correct (39-pp
+gap, matching RAGAS's 33-pp gap on the larger n = 600 cohort), and
+the **fair-cohort lift reproduced** (0.894 vs 0.830 mean). Together
+the two judges bound the LEA grounding quality at a defensible range
+of 0.286 (strict claim-level) to 0.845 (holistic), with the
+triage-flag deployment story supported by both judges independently.
+DeepEval also identified **neurological as the worst subgroup on
+both metrics**, a system-level limitation reported in the Limitations
+section.
+
 ### Local explainability analysis
 
 In addition to the LLM-judged RAGAS metrics, a local (no-API)

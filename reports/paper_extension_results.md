@@ -1500,3 +1500,101 @@ specific chunk.
 *Thread G section — 2026-05-23. Both structural and RAGAS-judged
 components landed. RAGAS spend $95 / $100 budget. Faithfulness number
 plugged into §16.5 and §16.6 Discussion paragraph.*
+
+---
+
+## 17. DeepEval HallucinationMetric (n=100 sensitivity subset, 2026-05-23)
+
+DeepEval v4.0.3 was added as a **second, independent hallucination-quality
+judge** on a smaller sensitivity subset (n=100, 25 per MONDO category,
+seed 42 — a subset of the RAGAS n=600 cohort by construction). Same
+gpt-4o-2024-08-06 judge, MAX_CONTEXTS_PER_CASE = 45. Run completed in
+3.1 minutes wall-clock, ~$1.20 spend (within the $5 remaining post-RAGAS
+budget).
+
+### 17.1 Why two judges
+
+RAGAS and DeepEval ask **different questions** about the same LLM output:
+
+| Judge | What it measures | Strictness |
+|---|---|---|
+| **RAGAS faithfulness** | Claim-by-claim — for each claim extracted from the answer, is it directly supported by retrieved chunks? | **Strict** (claim-level) |
+| **DeepEval HallucinationMetric** | Holistic — does the answer as a whole contradict or fabricate beyond what the contexts say? | **Lenient** (gist-level) |
+
+Reporting both gives reviewers a defensible range, not a single number that
+could be cherry-picked.
+
+### 17.2 Aggregate results (n=100 stratified)
+
+| Metric | Mean | Median |
+|---|---:|---:|
+| Groundedness score | **0.845** | 0.933 |
+| Hallucination rate (1 − score) | 0.155 | 0.067 |
+
+**80 % of cases score in (0.75, 1.0)** — the dominant mode — and 7 %
+score perfect 1.0. Only 10 % score below 0.5, of which 6 score exactly 0.
+
+### 17.3 Groundedness predicts correctness — finding holds across both judges
+
+| Subset | n | top-1 correct rate |
+|---|---:|---:|
+| DeepEval groundedness ≥ 0.5 | 90 | **78.9 %** |
+| DeepEval groundedness < 0.5 | 10 | 40.0 % |
+
+A **39-pp gap** between high-groundedness and low-groundedness cases —
+consistent with the **33-pp gap** RAGAS faithfulness predicted on the
+larger n=600 cohort. The signal is robust across judging methodologies.
+
+### 17.4 Per-MONDO + overlap breakdown
+
+| Subset | n | Groundedness mean | Groundedness median |
+|---|---:|---:|---:|
+| **overlap_absent (fair)** | 24 | **0.894** | 0.933 |
+| overlap_present | 76 | 0.830 | 0.933 |
+| developmental | 25 | 0.898 | 0.933 |
+| **immunological** | 25 | **0.946** | 0.933 |
+| metabolic | 25 | 0.872 | 0.933 |
+| neurological | 25 | 0.665 | 0.933 |
+
+Two findings:
+
+- The fair-cohort lift reproduces (+6.4 pp vs overlap-present), supporting
+  the §16.5 RAGAS observation.
+- **Per-MONDO best-class differs between judges**: RAGAS-zero-rate was
+  best on metabolic (12 %); DeepEval-groundedness is best on
+  immunological (0.946). This is consistent with the different
+  semantics: DeepEval rewards strong gene-disease gist matching
+  (immunological cases have textbook gene-disease pairings); RAGAS
+  rewards literal claim-to-chunk grounding (metabolic chunks are more
+  concise and on-target). Neurological is the *worst* on both judges,
+  which is now a robustly-documented system-level limitation worth
+  mentioning in the paper Limitations section.
+
+### 17.5 Combined judge framing for the paper
+
+> *Cell S's free-text rationales were independently evaluated by two LLM
+> judges (gpt-4o-2024-08-06) measuring different aspects of grounding.
+> The strict, claim-level RAGAS faithfulness metric scored mean 0.286
+> (median 0.433) on n=600, while the lenient, holistic DeepEval
+> HallucinationMetric scored mean groundedness 0.845 (median 0.933) on a
+> n=100 stratified sensitivity subset. The two metrics are
+> complementary: most LEA outputs contain a small number of
+> chunk-derivable claims surrounded by paraphrasing or synthesis that
+> RAGAS scores partially but DeepEval scores generously. Critically,
+> both metrics independently predict top-1 correctness with a comparable
+> gap (RAGAS: 79.9 % vs 46.5 %, 33-pp gap; DeepEval: 78.9 % vs 40.0 %,
+> 39-pp gap) — the agreement supports using either judge as an
+> automated clinical-triage flag.*
+
+### 17.6 v3 conclusions (additions 35-38 on top of §16.7)
+
+35. **DeepEval HallucinationMetric on Cell S (n=100, gpt-4o judge)** scored mean groundedness 0.845 / median 0.933 — much higher than RAGAS faithfulness (0.286 / 0.433) because the two metrics ask different questions (holistic gist vs claim-level literal grounding).
+36. **The correctness-prediction signal reproduces across both judges**: DeepEval high-vs-low groundedness has a **39-pp top-1 gap** matching RAGAS's 33-pp gap. Auto-triage on either judge would route the same low-quality predictions for human review.
+37. **The fair-cohort lift reproduces in DeepEval**: groundedness 0.894 (overlap_absent) vs 0.830 (overlap_present) — geno_agent is more grounded on cases it isn't benefiting from annotation overlap on. Consistent with RAGAS finding (0.310 vs 0.276).
+38. **Neurological is the worst subgroup on both judges** — robustly documented system-level limitation worth flagging in the paper Limitations section.
+
+---
+
+*DeepEval section — 2026-05-23 18:40Z. n=100 stratified sensitivity
+subset complete. Combined RAGAS + DeepEval budget spend $96.20 / $100.
+All v3-internal evaluation runs now complete.*

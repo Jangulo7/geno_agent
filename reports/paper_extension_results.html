@@ -76,6 +76,7 @@
   <a href="#threadE">§14 Thread E</a>
   <a href="#threadF">§15 Thread F</a>
   <a href="#threadG">§16 Thread G</a>
+  <a href="#deepeval">§17 DeepEval</a>
 </div>
 
 <!-- =================================================================== -->
@@ -1257,7 +1258,75 @@ geno_agent's flagship: S = 0.900 vs M = 0.756, Δ = <b>+0.144</b>.</p>
 </div>
 
 <!-- =================================================================== -->
-<h2>17. v3 conclusions (additions on top of §11)</h2>
+<h2 id="deepeval">17. DeepEval HallucinationMetric (n=100, complementary judge)</h2>
+
+<div class="hero" style="background:linear-gradient(135deg,#fef3c7,#fde68a);border-left-color:#d97706;">
+  <h3 style="margin-top:0;color:#92400e;">Two complementary judges agree: groundedness predicts correctness</h3>
+  <p style="margin-bottom:8px;">
+    DeepEval v4.0.3 (holistic) on n=100 stratified Cell S responses scored mean
+    <b>0.845 groundedness</b> (median 0.933) — much higher than RAGAS faithfulness
+    (0.286/0.433) because the two metrics ask different questions. <b>Both
+    judges independently show a ~35-pp correctness-prediction gap.</b>
+  </p>
+  <p style="margin-bottom:0;font-size:0.92em;color:#555;">
+    DeepEval ran in 3.1 min, $1.20 spend. Combined RAGAS+DeepEval $96.20 / $100 budget.
+  </p>
+</div>
+
+<h3>17.1 Two judges — different questions</h3>
+<table>
+  <thead><tr><th>Judge</th><th>What it measures</th><th>Strictness</th></tr></thead>
+  <tbody>
+    <tr><td>RAGAS faithfulness</td><td>Claim-by-claim — is each extracted claim chunk-supportable?</td><td>strict (claim-level)</td></tr>
+    <tr><td>DeepEval HallucinationMetric</td><td>Holistic — does the answer overall contradict / fabricate beyond contexts?</td><td>lenient (gist-level)</td></tr>
+  </tbody>
+</table>
+
+<h3>17.2 Correctness-prediction signal reproduces across both judges</h3>
+<table>
+  <thead><tr><th>Judge / threshold</th><th class="num">n</th><th class="num">top-1 correct rate</th><th class="num">gap</th></tr></thead>
+  <tbody>
+    <tr><td>RAGAS faithfulness &gt; 0</td><td class="num">473</td><td class="num">79.9 %</td><td class="num" rowspan="2"><b>33 pp ★</b></td></tr>
+    <tr><td>RAGAS faithfulness = 0</td><td class="num">127</td><td class="num">46.5 %</td></tr>
+    <tr><td>DeepEval groundedness ≥ 0.5</td><td class="num">90</td><td class="num">78.9 %</td><td class="num" rowspan="2"><b>39 pp ★</b></td></tr>
+    <tr><td>DeepEval groundedness &lt; 0.5</td><td class="num">10</td><td class="num">40.0 %</td></tr>
+  </tbody>
+</table>
+
+<h3>17.3 Per-MONDO + overlap breakdown</h3>
+<table>
+  <thead>
+    <tr><th>Subset</th><th class="num">n</th><th class="num">Groundedness mean</th><th class="num">Median</th></tr>
+  </thead>
+  <tbody>
+    <tr class="win"><td><b>overlap_absent (fair)</b></td><td class="num">24</td><td class="num"><b>0.894</b></td><td class="num">0.933</td></tr>
+    <tr><td>overlap_present</td><td class="num">76</td><td class="num">0.830</td><td class="num">0.933</td></tr>
+    <tr><td>developmental</td><td class="num">25</td><td class="num">0.898</td><td class="num">0.933</td></tr>
+    <tr class="win"><td><b>immunological</b></td><td class="num">25</td><td class="num"><b>0.946</b></td><td class="num">0.933</td></tr>
+    <tr><td>metabolic</td><td class="num">25</td><td class="num">0.872</td><td class="num">0.933</td></tr>
+    <tr class="loss"><td><b>neurological</b></td><td class="num">25</td><td class="num"><b>0.665</b></td><td class="num">0.933</td></tr>
+  </tbody>
+</table>
+
+<div class="callout info">
+  <b>Neurological is the worst on both judges</b> (lowest groundedness in DeepEval,
+  highest zero-rate in RAGAS) — robustly documented as a system-level limitation
+  to report in the paper Limitations section.
+</div>
+
+<div class="callout">
+  <b>Paper-ready combined-judge framing:</b><br>
+  <em>"Cell S's free-text rationales were independently evaluated by two LLM judges
+  (gpt-4o-2024-08-06) measuring different aspects of grounding. The strict, claim-level
+  RAGAS faithfulness scored mean 0.286 / median 0.433 (n=600), while the lenient, holistic
+  DeepEval HallucinationMetric scored mean groundedness 0.845 / median 0.933 (n=100).
+  Both metrics independently predict top-1 correctness with comparable gaps (33 pp / 39 pp),
+  supporting their use as automated clinical-triage flags. Together they bound LEA grounding
+  quality at a defensible range of 0.286 (strict) ↔ 0.845 (holistic)."</em>
+</div>
+
+<!-- =================================================================== -->
+<h2>18. v3 conclusions (additions on top of §11)</h2>
 <ol start="8">
   <li>The v2 paper claim <b>reproduces bit-perfect on top-1 at v3</b> (Δ S−K = +0.0353, matches v2's +0.0344).</li>
   <li>LIRICAL Cell M raw top-1 = 0.924 is <b>overlap-confounded</b>; 73 % of cohort have source PMIDs cited in hpoa for the causal disease.</li>

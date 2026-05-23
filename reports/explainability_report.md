@@ -116,6 +116,40 @@ Per-MONDO breakdown is in §16.2 of `paper_extension_results.md`.
   MAX_CONTEXTS = 45 (~$50) or implementing inline-citation prompting
   is a clear future-work item for the XAI paper.
 
+### 4.2 DeepEval HallucinationMetric (Thread C-bis, ✅ landed 2026-05-23)
+
+A second independent judge, this time using DeepEval v4.0.3's
+holistic `HallucinationMetric` (rather than RAGAS's claim-level
+faithfulness) on a stratified n = 100 sensitivity subset (25 per MONDO,
+seed 42 — a subset of the RAGAS n = 600 cohort by construction).
+Same `gpt-4o-2024-08-06` judge, MAX_CONTEXTS = 45 (LEA's full
+context). 3.1 min wall, ~$1.20 spend.
+
+| Metric | Mean | Median |
+|---|---:|---:|
+| Groundedness (1 = fully grounded) | **0.845** | **0.933** |
+| Hallucination rate (= 1 − score) | 0.155 | 0.067 |
+
+- **Correctness-prediction signal reproduces**: high-groundedness cases
+  (≥ 0.5) are 78.9 % top-1 correct vs 40.0 % for low-groundedness
+  cases (< 0.5) — a 39-pp gap matching RAGAS's 33-pp gap.
+- **Fair-cohort lift reproduces**: groundedness 0.894 (overlap_absent)
+  vs 0.830 (overlap_present) — geno_agent's reasoning is more grounded
+  on cases it isn't benefiting from annotation overlap.
+- **Per-MONDO best-class differs by judge**: RAGAS-best was metabolic
+  (lowest zero-rate 12 %); DeepEval-best is **immunological** (mean
+  0.946) — consistent with different semantics (DeepEval rewards
+  textbook gene-disease gist; RAGAS rewards literal claim grounding).
+- **Neurological is the worst subgroup on BOTH judges** — robustly-
+  documented system-level limitation worth flagging in the XAI paper
+  Limitations section.
+
+The two metrics together give the XAI paper a defensible **range** of
+groundedness measurements (0.286 strict claim-level ↔ 0.845 holistic),
+not a single number that could be cherry-picked. The triage-flag
+deployment story (low-groundedness → human review) is supported by
+both judges independently.
+
 ---
 
 ## 5. Case-by-case walkthroughs

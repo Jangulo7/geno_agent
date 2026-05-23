@@ -1,0 +1,611 @@
+{
+  "judge_model": "gpt-4o-2024-08-06",
+  "n_cases_total": 100,
+  "n_cases_scored": 100,
+  "n_cases_skipped": 0,
+  "elapsed_seconds": 185.0397629737854,
+  "aggregate_mean_hallucination_score": 0.8451373143904742,
+  "aggregate_mean_hallucination_rate": 0.15486268560952576,
+  "per_case": [
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual element (elevated ALT, AST, and GGT) while failing to mention numerous key contextual elements such as ferritin levels, elevated alkaline phosphatase, and typical abnormalities involving hepatocellular injury, leading to a high level of contradiction."
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output consistently fails to align with the expected factual content, as evidenced by numerous contradictions. These contradictions highlight the absence of critical details such as clinical presentations, echocardiogram findings, and classifications related to congenital heart defects, leading to a complete lack of factual alignment."
+    },
+    {
+      "case_id": "AEBP1:PMID_29606302_C_IV_6",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to acknowledge potential phenotypic overlaps with various genes (e.g., CD44, TNFSF14, COL15A1) that are mentioned in the context as related to EDS features. This indicates a high level of hallucination, as the output does not align with the provided factual context."
+    },
+    {
+      "case_id": "NHS:PMID_30642278_proband_III_1",
+      "hallucination_score": 0.9285714285714286,
+      "hallucination_rate": 0.0714285714285714,
+      "reason": "The score is 0.93 because the actual output contains a high number of contradictions, with multiple genes incorrectly linked to the patient's phenotypes, despite only a few factual alignments with the NHS gene. This indicates a significant level of hallucination in the output."
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4271",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions regarding phenotypic overlaps with various genes, despite the context indicating craniosynostosis as a common feature. This misalignment with the context results in a high hallucination score, reflecting significant inaccuracies in the output."
+    },
+    {
+      "case_id": "EDA:PMID_18702659_proband",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output only correctly aligns with one factual detail regarding the EDA gene, while it fails to accurately link 14 other genes to their respective phenotypes as described in the context. This high number of contradictions significantly increases the hallucination score, indicating a substantial deviation from the factual context provided."
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual detail regarding DNA2, while it fails to address numerous specific clinical, genetic, and phenotypic details mentioned in the context, leading to a high level of contradiction and omission."
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_26",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output correctly identifies COL3A1's link to vascular EDS, aligning with the context. However, it incorrectly states no relevant evidence for multiple genes (e.g., ZNF396, COX8C, MSL3) despite the context mentioning EDS, suggesting potential relevance. This high number of contradictions contributes to a high hallucination score."
+    },
+    {
+      "case_id": "NHS:PMID_30642278_individual_II_5",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output correctly aligns with factual evidence in 3 instances but contains 40 contradictions where it incorrectly associates unrelated genes with patient phenotypes, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context in one instance but fails to provide specific gene-phenotype links for 14 genes mentioned in the context, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "NBAS:PMID_28425089_subject_10A",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, indicating a high level of hallucination. While there is one factual alignment, the numerous contradictions, such as incorrect associations of genes with phenotypes, significantly outweigh the alignments, leading to a high hallucination score."
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+      "hallucination_score": 0.9375,
+      "hallucination_rate": 0.0625,
+      "reason": "The score is 0.94 because there are significantly more contradictions than factual alignments. The actual output frequently contradicts the context by stating no direct evidence of PSIS or hypopituitarism for multiple genes, despite the context mentioning PSIS. Additionally, the output incorrectly links ROBO1 mutations to PSIS, which is not supported by the context. These discrepancies indicate a high level of hallucination in the output."
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output consistently aligns with the context regarding NDUFV3 variants but frequently contradicts the context by omitting additional features like neuro-psychomotor development delay for other genes, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+      "hallucination_score": 0.9767441860465116,
+      "hallucination_rate": 0.023255813953488413,
+      "reason": "The score is 0.98 because the actual output only aligns with one factual detail regarding ITPR1 and Gillespie syndrome, while failing to provide evidence or mention numerous other genetic links and phenotypes described in the context. This significant number of contradictions indicates a high level of hallucination."
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_I_2",
+      "hallucination_score": 0.9375,
+      "hallucination_rate": 0.0625,
+      "reason": "The score is 0.94 because the actual output aligns with only one factual context regarding joint abnormalities and kyphosis for CCN2, while it fails to mention or align with numerous specific clinical manifestations and phenotypic overlaps described for other contexts, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_11",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple low-confidence mentions of genes (DHX30, CHD7, KDELR2, PRIM1, FAM237B, GSTM1, RBPJ, ZBTB33, CACNG6, RAB11FIP3, IQGAP1, CIMIP7, CFAP90, ACBD3) that do not align with the context's detailed descriptions, indicating a high level of hallucination despite correctly identifying LMNA in relation to Hutchinson-Gilford Progeria Syndrome."
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_A017",
+      "hallucination_score": 0.9767441860465116,
+      "hallucination_rate": 0.023255813953488413,
+      "reason": "The score is 0.98 because the actual output only aligns with one factual context regarding GLI3, while it incorrectly associates numerous other genes with the patient's phenotype without evidence from the context, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "ARMC9:PMID_28625504_SA2_3",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly states no direct phenotype-genotype link for several genes (TGFB3, CDC45, BRAT1, NELL2, TRPV6, CABCOCO1, SCAF4, BRAP, OSMR, SEC61G, GNG3, TCP11, CDH6, RIMS3) despite the context mentioning their association with Joubert syndrome features. This indicates a high level of hallucination, as the output fails to align with the provided factual context in numerous instances."
+    },
+    {
+      "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+      "hallucination_score": 0.6666666666666666,
+      "hallucination_rate": 0.33333333333333337,
+      "reason": "The score is 0.67 because while the actual output consistently aligns with the context regarding neonatal hypotonia and scoliosis, it fails to mention core myopathies and specific patient features described in the context, leading to a significant number of contradictions."
+    },
+    {
+      "case_id": "CHUK:PMID_20961246_fetus_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, failing to acknowledge the involvement of several genes (MBD5, CYP7B1, GET3, EPHX4, PLEKHD1, CCDC124, TMEM139, NACA, PDE8B, YWHAG, SLC30A5, NAF1, LRRC24, OR10H2) in specific cases, despite the context providing evidence of their roles. This indicates a high level of hallucination in the output."
+    },
+    {
+      "case_id": "DDX59:PMID_29127725_Patient_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context on only one factual point regarding DDX59 mutations, while it fails to provide evidence for multiple other genes (PKHD1L1, RMI2, ANKRD53, etc.) that the context associates with polydactyly. This significant number of contradictions indicates a high level of hallucination in the output."
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all factual alignments are consistent with the context's description of the patient's condition."
+    },
+    {
+      "case_id": "ITPR1:PMID_27108797_F3_II1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, particularly in the associations of genes like POLR3K and PMP22 with specific phenotypes. Additionally, many genes mentioned in the output lack contextual evidence linking them to the patient's phenotype, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous mentions of genes (SCOC, SLC17A9, FOXI1, GNAQ, SPANXC, ZNF274, H1-4, ITK, ZCCHC18, DUSP22, TRA2A, AGPAT3, IDNK, COL6A6) that do not align with the context, indicating a high level of hallucination. Only one factual alignment was identified, which is insufficient to lower the score significantly."
+    },
+    {
+      "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output consistently fails to mention specific CNS anomalies, facial features, and developmental delays described in the context for multiple genes, indicating a complete lack of alignment with the provided factual context."
+    },
+    {
+      "case_id": "TAP2:PMID_10560675_P1",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output consistently fails to align with the context by omitting critical details such as the exclusion criteria for patients with specific lung conditions, the phenotypic classification of CRS, prevalence estimates of UAD, and specific genetic and clinical findings. These omissions indicate a complete lack of factual alignment, resulting in the highest possible hallucination score."
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_D_individual_D_II_2",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output only aligns with one factual context regarding IKZF1, while it fails to provide evidence for numerous other gene-phenotype links mentioned in the context, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_7_Patient_9",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to acknowledge potential phenotype links for several genes (CIAO2A, LYNX1, LRRC3, etc.) despite the context suggesting their involvement in severe infections and immunocompromised conditions. This indicates a high level of hallucination as the output does not align with the provided context for these cases."
+    },
+    {
+      "case_id": "SEC61A1:PMID_32325141_index_patient",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output repeatedly mentions 'MHC II deficiency,' which is not supported by the context, indicating a complete lack of factual alignment and a high level of hallucination."
+    },
+    {
+      "case_id": "IKZF1:PMID_33855675_girl",
+      "hallucination_score": 0.9782608695652174,
+      "hallucination_rate": 0.021739130434782594,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual point regarding IKZF1's role in B cell development, while it fails to address numerous critical aspects discussed in the context, such as bacterial DNA levels, specific case studies, chronic lung changes, and various genetic and immunological processes. This significant number of contradictions indicates a high level of hallucination."
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_21_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains a high number of contradictions (41 instances) compared to factual alignments (3 instances). This indicates a significant level of misinformation or misalignment with the provided context, leading to a high hallucination score."
+    },
+    {
+      "case_id": "MAP3K14:PMID_25406581_P2",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output fails to align with any of the factual details provided in the context, resulting in numerous contradictions without any factual alignments."
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_patient_11",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output incorrectly evaluates multiple genes (PLIN1, PLD4, SPSB1, NES, SHANK3, HMX3, PSAPL1, TNFSF8, M1AP, MRM1, ZNF208, CCDC172, POU3F1, OR7C2) that are not mentioned in the context, leading to a high number of contradictions and unnecessary evaluations, which significantly increases the hallucination score."
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_A_1",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output contains numerous references to genes and phenotypes not mentioned in the context, indicating a high level of hallucination. Only one factual alignment was identified, while multiple contradictions were noted, where the output incorrectly linked various genes to the patient phenotype without contextual evidence."
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains a high number of contradictions, incorrectly suggesting multiple genes have no direct phenotype linkage to Netherton syndrome, despite the context not mentioning these genes in relation to the syndrome. This indicates a significant level of hallucination in the output."
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_5",
+      "hallucination_score": 0.9767441860465116,
+      "hallucination_rate": 0.023255813953488413,
+      "reason": "The score is 0.98 because the actual output contains numerous mentions of entities such as GUK1, ZNF76, EVPLL, and others that are not supported by the context, indicating a high level of hallucination. Only one factual alignment was identified, which is insufficient to offset the extensive list of contradictions."
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F7",
+      "hallucination_score": 0.9782608695652174,
+      "hallucination_rate": 0.021739130434782594,
+      "reason": "The score is 0.98 because there is a significant number of contradictions between the actual output and the context, particularly regarding the mention of normal Ig levels with B cell defects across multiple genes, which contradicts the context discussing various B cell and T cell abnormalities. The high number of contradictions relative to the single factual alignment indicates a high level of hallucination in the output."
+    },
+    {
+      "case_id": "IKZF1:PMID_33097959_boy",
+      "hallucination_score": 0.7333333333333333,
+      "hallucination_rate": 0.2666666666666667,
+      "reason": "The score is 0.73 because while there are multiple factual alignments between the actual output and the context, there are also numerous contradictions where the output fails to acknowledge phenotype links for several genes that the context describes as associated with immune dysfunction and thrombocytopenia. This discrepancy indicates a significant level of hallucination in the output."
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to recognize direct links between various genes and immune system issues, despite the context providing evidence of such links. This indicates a high level of hallucination, as the output does not accurately reflect the factual information provided in the context."
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_5_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context regarding DOCK8 deficiency but fails to mention key phenotypes such as bronchiectasis and eosinophilia for MTOR, and does not specify phenotypes related to multiple genes involving ciliary defects, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "COPZ1:PMID_39642330_Patient_3",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output fails to align with the context for multiple genes, incorrectly stating no phenotypic links for RTTN, PRR18, ITPR3, and others, despite the context describing macrocytic anemia and related symptoms. This indicates a high level of hallucination due to numerous contradictions."
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P16",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly links various genes (SET, DAGLA, PIGT, CACNB3, TF, EDARADD, VARS1, IFITM3, RPP25L, CLRN3, STAG3, SEMA5B, SLC35A4, ADAM29) to symptoms described in the context, which should be associated with a missense mutation in RFXANK. This indicates a high level of hallucination, as the output fails to accurately reflect the context in numerous instances."
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_2_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context for DOCK8 but contradicts the context for 14 other genes, where relevant evidence is ignored despite contextually described symptoms. This high number of contradictions significantly increases the hallucination score."
+    },
+    {
+      "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context on T-cell subset abnormalities and TREC levels but fails to mention or connect numerous other genes (e.g., ZBED4, DNAI1, KCNQ5) to T-cell phenotypes as discussed in the context, indicating a high level of factual misalignment."
+    },
+    {
+      "case_id": "PSMB9:PMID_34819510_Patient_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output fails to mention phenotypic links for multiple genes (WDR19, CCL17, PKM, FOLR2, SP140, CPHXL, FCAR, TPP2, REL, ANKRD17, SAXO6, FAM151B, XYLB, NDST3) that are discussed in the context, leading to significant factual contradictions. Only one alignment was noted, which is insufficient to lower the hallucination score."
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_2",
+      "hallucination_score": 0.9767441860465116,
+      "hallucination_rate": 0.023255813953488413,
+      "reason": "The score is 0.98 because the actual output contains numerous contradictions, specifically linking multiple genes to T-cell proliferation issues without context support, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_11",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because while the actual output correctly aligns with the context regarding the AIRE gene's link to APECED syndrome, it incorrectly states no relevant evidence for numerous other genes (e.g., NUMB, SERPINA5, TDRKH) that are unrelated to the context, leading to a high number of contradictions."
+    },
+    {
+      "case_id": "SPINK5:PMID_16670861_twin_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output correctly identifies SPINK5's link to Netherton syndrome, aligning with the context. However, it fails to recognize potential relevance for 14 other genes (e.g., NHP2, GATD1, CPNE4) that the context suggests could be related to Netherton syndrome, indicating a high level of contradiction and thus a high hallucination score."
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple incorrect references to genes (DNAH3, ATP6V0A4, MMP16, TMEM72, CALHM4, GAGE2D, SENP5, KBTBD12, CFH, UQCR10, ZNF541, ELL, LRRC10, DUS1L) that are not linked to Netherton syndrome, leading to a high number of contradictions compared to the single factual alignment with SPINK5."
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual detail regarding IKZF1, while it fails to mention numerous other critical details and genes such as RNASE7, ATAD2, HNRNPAB, and others, leading to a high number of contradictions with the context."
+    },
+    {
+      "case_id": "VMA12:PMID_26833330_F3_II1",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because there are numerous contradictions between the actual output and the expected factual details. The actual output fails to mention any of the specific biochemical markers and levels for multiple genes, leading to a complete misalignment with the expected factual context."
+    },
+    {
+      "case_id": "UMOD:PMID_29513881_III_11",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions regarding the association of various genes with CKD and renal cysts, despite the context providing clear evidence of these links. Only one factual alignment was identified, indicating a high level of hallucination in the output."
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P59",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions regarding the phenotypic evidence for various genes linked to PHP, despite the context providing clear associations. Only one factual alignment was identified, indicating a high level of hallucination in the output."
+    },
+    {
+      "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, incorrectly associating ATP6V0A4 with distal RTA instead of FHHNC and failing to recognize the context's mention of several genes (WNT11, NAP1L2, FUOM, MKNK1, VSTM1, TMEM209, HMGCS2, CSAG2, FAM171B, PPP4R4, MTERF2, ZNF695, UAP1) in relation to FHHNC. Only one factual alignment was identified, leading to a high hallucination score."
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM45",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual point regarding LMNA's link to certain conditions, while it fails to address numerous specific features and diagnoses related to FPLD and other conditions as required by the context, leading to a high level of contradiction."
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_5_individual_10Y11M",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to recognize phenotypic overlaps with several conditions mentioned in the context, despite the presence of shared features such as microcephaly and growth retardation. This indicates a high level of hallucination, as the output does not align well with the provided factual context."
+    },
+    {
+      "case_id": "UGGT1:PMID_40267907_Family_8_2",
+      "hallucination_score": 0.8,
+      "hallucination_rate": 0.19999999999999996,
+      "reason": "The score is 0.80 because while there are some factual alignments regarding the association of certain genes with neurodevelopmental disorders, there are numerous contradictions where the actual output fails to recognize direct evidence linking multiple genes to the patient's phenotype, as described in the context. This high number of contradictions significantly impacts the hallucination score, indicating a substantial deviation from the provided context."
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR31",
+      "hallucination_score": 0.8571428571428571,
+      "hallucination_rate": 0.1428571428571429,
+      "reason": "The score is 0.86 because while the actual output correctly aligns with the context in identifying LMNA and ALMS1's associations with lipodystrophy and related conditions, it incorrectly claims no evidence for several genes (e.g., PRR15, ASPHD2, MYO15A) linked to lipodystrophy, despite the context mentioning these associations. This results in a high number of contradictions, indicating a significant level of hallucination."
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR27",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous incorrect references to genes such as PLOD1, MRPL45, and others, which are not linked to lipodystrophy in the provided context. Despite correctly identifying the LMNA gene's association with lipodystrophy, the high number of contradictions significantly outweighs the factual alignments, resulting in a high hallucination score."
+    },
+    {
+      "case_id": "UMOD:PMID_17245395_Family_K8_individual_II_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output only aligns with one factual detail (UMOD linked to ADTKD-UMOD) while failing to link multiple other genes (e.g., SLC6A2, N4BP1, MAP3K20) to the phenotype, despite the context describing relevant renal issues. This indicates a high level of hallucination due to numerous contradictions."
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F6_individual_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, failing to establish direct phenotypic links for several genes (COPS7A, CEP290, IGFBP6, PSORS1C1, TRAPPC3, GBE1, DNM1, TXNL4A, STARD4, UNC45A, ZKSCAN2, NDUFS7, OR51I1, TTPA) to renal disease or gout, despite the context indicating such associations. Only one factual alignment was noted, leading to a high hallucination score."
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P49",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because while the actual output correctly aligns with the context regarding GNAS and PTH resistance, it fails to recognize relevant evidence for multiple other genes (e.g., UFSP1, WNT16, ZPBP, etc.) that are described in the context as being involved in PTH resistance. This high number of contradictions significantly outweighs the few factual alignments, resulting in a high hallucination score."
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM53",
+      "hallucination_score": 0.3333333333333333,
+      "hallucination_rate": 0.6666666666666667,
+      "reason": "The score is 0.33 because while the actual output correctly aligns with the context regarding the PPARG gene's link to FPLD3, it consistently omits the crucial detail about the LMNA mutation causing FPLD2, which is a significant contradiction."
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_18",
+      "hallucination_score": 0.9767441860465116,
+      "hallucination_rate": 0.023255813953488413,
+      "reason": "The score is 0.98 because the actual output aligns with only one factual point regarding CYP21A2, while it fails to address numerous key aspects and specific cases mentioned in the context, leading to a high level of contradiction and omission."
+    },
+    {
+      "case_id": "PYCR1:PMID_21487760_Patient_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output consistently fails to recognize phenotypic overlaps for multiple genes (e.g., LOX, KRTAP3-2, SPATA21) that are mentioned in the context, leading to a high number of contradictions compared to factual alignments."
+    },
+    {
+      "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous incorrect associations between various genes (e.g., PSMB9, POLR1B, LRRK2, etc.) and FHHNC, which are not supported by the context. Only one correct alignment is present, linking CLDN16 to FHHNC, while the majority of the output is contradicted by the context, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "B3GALT6:PMID_23664117_family_F8_subject_P9",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output frequently fails to align with the context by not recognizing potential links between patient features and specific phenotypes for multiple genes. Despite correctly identifying B3GALT6's association with SPEDS, it overlooks or dismisses connections for other genes like SLC5A2, GPR21, and others, where the context suggests possible links to features such as kyphoscoliosis and joint hypermobility. This consistent pattern of contradiction and oversight results in a high hallucination score."
+    },
+    {
+      "case_id": "MMADHC:PMID_18385497_Patient_4",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output only correctly aligns one factual detail (MMADHC linked to methylmalonic aciduria) with the context, while failing to correctly associate 14 other entities (SGCG, CIBAR1, CMA1, CHRNB3, RPA4, ROBO4, FFAR3, HCRT, PRPF3, RIN2, DEFA5, MAGEA6, MRO, IRF7) with methylmalonic acidemia as mentioned in the context. This high number of contradictions significantly increases the hallucination score."
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_44",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly states no link to ACTH/testosterone for several genes, while the context provides evidence of their relation to serum testosterone levels. This misalignment between the output and context results in a high hallucination score."
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P4",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly links genes such as DHCR7, GPS1, TMBIM6, and others to OCA4, despite the context clearly associating OCA4 with SLC45A2. These inaccuracies significantly outweigh the single factual alignment, resulting in a high hallucination score."
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_3_individual_12Y",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all factual alignments are consistent with the provided context, indicating no hallucination."
+    },
+    {
+      "case_id": "UMOD:PMID_37487849_patient",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output aligns with the context on only one factual point regarding ADTKD-UMOD, while it contradicts the context on numerous other points, failing to provide direct phenotype evidence for multiple genes and lacking specific phenotype overlap with others. This high number of contradictions relative to alignments results in a high hallucination score."
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F1_individual_3",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous contradictions where genes such as WAS, ACSL4, CHMP3, and others are incorrectly linked to the patient's phenotype, which is focused on ADTKD and genetic kidney diseases. These incorrect associations indicate a high level of hallucination, as the output diverges significantly from the factual context provided."
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_56",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it assigns low confidence to several genes (PLCD1, PTMA, APLNR, HERPUD1, MFAP5, FUBP3, ZDHHC15, A2ML1, EIF3G, PINX1, ZSWIM3, THUMPD1, BAGE3, UQCC4) despite the context suggesting their involvement in hormone regulation. This misalignment between the output and the context indicates a high level of hallucination, resulting in a high score."
+    },
+    {
+      "case_id": "UMOD:PMID_15575003_daughter_IV_2",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output only aligns with the context in one instance, linking UMOD to ADTKD with hyperuricemia, renal fibrosis, and interstitial fibrosis. However, it contradicts the context in numerous instances by failing to provide direct links to the full phenotype profiles for multiple genes, resulting in a high hallucination score."
+    },
+    {
+      "case_id": "CAPRIN1:PMID_35979925_Case_9",
+      "hallucination_score": 0.9318181818181818,
+      "hallucination_rate": 0.06818181818181823,
+      "reason": "The score is 0.93 because there are significantly more contradictions (39 instances) than factual alignments (3 instances) between the actual output and the context, indicating a high level of hallucination in the output."
+    },
+    {
+      "case_id": "LRP5:PMID_20034086_Patient_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly states no direct evidence linking several genes (CETN1, NPM3, CEP57L1, SLC31A1, MMP14, DAB2, IFT80, PAMR1, ARHGEF3, F11, SGPP2, DDX18, ZSCAN12, CKS2) to the patient's phenotypes, despite the context indicating their association with PHPV. This high number of contradictions significantly impacts the hallucination score, indicating a high level of factual misalignment."
+    },
+    {
+      "case_id": "KCNH5:PMID_36307226_Proband_16",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all factual alignments are consistent and accurate, indicating no hallucination."
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F1_II_1",
+      "hallucination_score": 1.0,
+      "hallucination_rate": 0.0,
+      "reason": "The score is 1.00 because the actual output contains numerous mentions of genes and conditions that are not supported by the context, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "SNAPIN:PMID_40930097_Family_B_II_3",
+      "hallucination_score": 0.9375,
+      "hallucination_rate": 0.0625,
+      "reason": "The score is 0.94 because the actual output correctly aligns with the context for KLHL40, but it incorrectly states no phenotypic overlap for 44 other genes, despite the context indicating relevance to joint contractures and talipes. This high number of contradictions significantly impacts the hallucination score."
+    },
+    {
+      "case_id": "TANGO2:PMID_26805781_Family_2_Subject2_II_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to acknowledge metabolic and neurological features for several genes, despite the context providing evidence of such features. This indicates a high level of hallucination, as the output does not align well with the provided factual context."
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD6_IV_7",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous contradictions where it fails to align with the context regarding the phenotypic overlaps of multiple genes. While it correctly identifies LMNA's link to Emery-Dreifuss muscular dystrophy, it inaccurately reports no phenotypic overlap for several genes (e.g., TTN, CTAGE9, INHBC, etc.) despite the context providing detailed symptom associations. This high number of discrepancies results in a high hallucination score."
+    },
+    {
+      "case_id": "EEFSEC:PMID_39753114_F3_II_1",
+      "hallucination_score": 0.08888888888888889,
+      "hallucination_rate": 0.9111111111111111,
+      "reason": "The score is 0.09 because the actual output predominantly aligns with the context, accurately associating multiple genes with developmental delay and intellectual disability. However, minor contradictions exist due to the omission of specific details about biochemical testing and genetic variants for a few genes, slightly affecting the overall factual consistency."
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_Spo1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it fails to align with the context regarding phenotype matches for several genes. While it correctly identifies LMNA's association with Emery-Dreifuss muscular dystrophy, it incorrectly states no specific phenotype matches for numerous genes that are described in the context as associated with muscle weakness and contractures. This high number of contradictions significantly increases the hallucination score."
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_7",
+      "hallucination_score": 0.13333333333333333,
+      "hallucination_rate": 0.8666666666666667,
+      "reason": "The score is 0.13 because the actual output mostly aligns with the context, correctly identifying phenotypic matches or lack thereof for multiple genes. However, there are two notable contradictions where the output fails to recognize relevant phenotypic matches for FBN2 and SYT7, which slightly increases the hallucination score."
+    },
+    {
+      "case_id": "GNB1:PMID_27108799_Individual_1",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous contradictions and lacks alignment with the context, particularly in failing to establish direct gene-phenotype links for multiple genes and missing key phenotypes described in the context. Only one factual alignment was noted, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "SPTAN1:PMID_29050398_Patient_11",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all factual alignments are consistent and accurate, indicating no hallucination."
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_T267A_2",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions with the context, particularly in misidentifying or omitting phenotype associations for several genes such as SNX14, SYNE2, and others. These inaccuracies indicate a high level of hallucination, as the output fails to align with the factual evidence provided in the context."
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_25951140_Case_2",
+      "hallucination_score": 0.8666666666666667,
+      "hallucination_rate": 0.1333333333333333,
+      "reason": "The score is 0.87 because there are significantly more contradictions than alignments between the actual output and the context. While the output correctly aligns with the context on two points regarding STXBP1 and KCNQ2, it contradicts the context on thirteen points by incorrectly stating no direct evidence for several genes associated with seizures and developmental delay, leading to a high hallucination score."
+    },
+    {
+      "case_id": "SPTAN1:PMID_35150594_G_II_1",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all mentioned symptoms align consistently with the context's description of hereditary spastic paraplegia (HSP) symptoms."
+    },
+    {
+      "case_id": "SNF8:PMID_38423010_individual_E1",
+      "hallucination_score": 0.9772727272727273,
+      "hallucination_rate": 0.022727272727272707,
+      "reason": "The score is 0.98 because the actual output predominantly focuses on SNF8, which aligns with only one context, while failing to address numerous other contexts centered on different genes and their related symptoms, leading to a high level of factual misalignment."
+    },
+    {
+      "case_id": "BAG3:PMID_31853710_III_2",
+      "hallucination_score": 0.9777777777777777,
+      "hallucination_rate": 0.022222222222222254,
+      "reason": "The score is 0.98 because the actual output contains numerous mentions of genes and proteins such as PLCG2, SEC61B, RASIP1, CALCOCO2, and others, which are not referenced in the context. This indicates a high level of hallucination, as the output introduces information not supported by the provided context, despite some alignment with key phenotypes like pes cavus, areflexia, and neuropathy."
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_97",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains numerous contradictions with the context, particularly in failing to associate multiple genes (PPL, WDR53, TUBA3D, LPGAT1, GIN1, SCAMP4, ARL8B, FOXC1, OGN, GAB4, MT-CO3, OLFML2B, MT-CO1, NXF1) with developmental delay and speech issues, as described in the context. Only one factual alignment was noted, indicating a high level of hallucination in the output."
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_22",
+      "hallucination_score": 0.0,
+      "hallucination_rate": 1.0,
+      "reason": "The score is 0.00 because there are no contradictions between the actual output and the context, and all factual alignments are consistently present, indicating complete accuracy and no hallucination."
+    },
+    {
+      "case_id": "ESAM:PMID_36996813_Individual_11",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because while the actual output correctly aligns ESAM with NEDIHSS, ICH, seizures, hydrocephalus, and calcification, it fails to provide specific phenotype links for multiple other entities such as GPR143, UBN2, B3GNT8, and others, which are not supported by the context. This results in a high number of contradictions compared to factual alignments, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "RGS9BP:PMID_14702087_Guatemalan_patient",
+      "hallucination_score": 0.021739130434782608,
+      "hallucination_rate": 0.9782608695652174,
+      "reason": "The score is 0.02 because the actual output consistently aligns with the context regarding the link between RGS9BP and bradyopsia, with only a minor contradiction regarding the omission of ABCA4 mutations, which are relevant to retinal diseases."
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where genes are incorrectly associated with conditions not supported by the context, such as RINT1 and UPP1. Additionally, several genes are mentioned without any phenotypic overlap, indicating a high level of hallucination."
+    },
+    {
+      "case_id": "ITPR1:PMID_28488678_IV_3",
+      "hallucination_score": 0.9333333333333333,
+      "hallucination_rate": 0.06666666666666665,
+      "reason": "The score is 0.93 because the actual output contains multiple contradictions where it incorrectly states no phenotypic overlap with several genes, despite the context describing overlapping symptoms such as quadrupedal gait and nystagmus. This indicates a high level of hallucination in the output, as it fails to align with the provided factual context."
+    },
+    {
+      "case_id": "ZFX:PMID_38325380_Patient_9",
+      "hallucination_score": 0.8666666666666667,
+      "hallucination_rate": 0.1333333333333333,
+      "reason": "The score is 0.87 because while there are some factual alignments, the majority of the output contains contradictions where the actual output fails to recognize the context's discussion of neurofibromatosis and related features for multiple genes, leading to a high level of hallucination."
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F7_II_1",
+      "hallucination_score": 0.5,
+      "hallucination_rate": 0.5,
+      "reason": "The score is 0.50 because while the actual output consistently aligns with the context regarding symptoms such as spastic paraplegia, corpus callosum hypoplasia, and developmental delay, it fails to mention specific genes highlighted in the context, leading to a balanced mix of factual alignments and contradictions."
+    }
+  ]
+}

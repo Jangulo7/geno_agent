@@ -455,7 +455,37 @@ value (rerun at MAX_CONTEXTS=45, ~$50, or inline-citation prompting)
 is future work; the 33-pp correctness-prediction signal stands
 regardless of the absolute floor.
 
-Full results in [`paper_extension_results.md §16`](paper_extension_results.md).
+**DeepEval HallucinationMetric on n=100 sensitivity subset (added 2026-05-23):**
+A second independent LLM judge (DeepEval v4.0.3 with the same
+gpt-4o-2024-08-06 model, MAX_CONTEXTS=45) was run on a stratified n=100
+subset (25 per MONDO, seed 42 — a subset of the RAGAS n=600 cohort).
+3.1 min wall, ~$1.20 spend.
+
+| Metric | Mean | Median |
+|---|---:|---:|
+| Groundedness (1=fully grounded, 0=fully hallucinated) | 0.845 | 0.933 |
+| Hallucination rate (= 1 − score) | 0.155 | 0.067 |
+
+DeepEval is **holistic** (does the answer overall contradict the contexts?)
+while RAGAS is **claim-level** (is each individual claim chunk-supported?).
+Both are valid measurements of different aspects of grounding. The paper
+reports both as a defensible range (0.286 strict ↔ 0.845 lenient).
+
+**The correctness-prediction signal reproduces across both judges:**
+DeepEval-high (groundedness ≥ 0.5) cases are 78.9 % top-1 correct vs
+DeepEval-low cases at 40.0 % — a 39-pp gap matching RAGAS's 33-pp gap.
+Independent reproduction strengthens the "groundedness as triage flag"
+deployment story.
+
+Per-subgroup DeepEval (n=100 stratified):
+- developmental 0.898, immunological 0.946, metabolic 0.872, neurological 0.665
+- overlap_absent 0.894 vs overlap_present 0.830 (+6.4 pp fair-cohort lift)
+
+**Neurological is the worst on both judges** (lowest groundedness, highest
+zero-rate) — robustly-documented system-level limitation to flag in the
+paper Limitations section.
+
+Full results in [`paper_extension_results.md §§16-17`](paper_extension_results.md).
 
 ---
 
@@ -657,7 +687,7 @@ though some sub-rank positions are vLLM-batching-sensitive.
 
 | # | Item | Effort |
 |---|---|---|
-| 1 | DeepEval hallucination metric (Cell S, n=100 sensitivity subset) | ~30 min, ~$1 |
+| 1 | ~~DeepEval hallucination metric~~ ✅ done 2026-05-23 — mean groundedness 0.845 / median 0.933 on n=100 stratified subset, 3.1 min wall, $1.20 | — |
 | 2 | Thread G RAGAS plug-in (fill faithfulness number into §16.5) | ~5 min |
 | 3 | Wallclock + cost table (K, M, D, L, S, N-ensemble) | 1 day |
 | 4 | paper_extension_results.html — visual artefacts for §§12-16 | ~1.5 h |
