@@ -26,10 +26,58 @@ robustness, and frontier-LLM ablation"*
 
 ---
 
-## Abstract (❌ pending)
+## Abstract (✅ DRAFTED — this commit, 350 words, at Genome Medicine limit)
 
-(Structured 250-350 words, Genome Medicine format: Background / Methods /
-Results / Conclusions.)
+**Background.** Rare diseases affect ~300 million people globally, yet
+roughly half of sequenced cases remain undiagnosed. Curated
+phenotype-driven tools such as Exomiser and LIRICAL are the current
+standard but lag the published literature by years and benefit from
+training-data exposure to benchmark cases — a confound prior
+evaluations have not addressed. Whether a literature-only multi-agent
+retrieval-augmented LLM system can match curated tools under
+deconfounded conditions is unknown.
+
+**Methods.** We developed **geno_agent**, a four-agent LangGraph
+pipeline (Planner, Retriever, Critic, Synthesiser) augmented by an
+LLM-as-Evidence-Aggregator (LEA) using a locally-served Qwen3-8B
+model, operating over a frozen 4.2-million-chunk index of 287,000
+PubMed Central Open Access articles. We evaluated five systems
+(Exomiser, LIRICAL, multi-agent baseline, +cross-encoder rerank, and
+geno_agent) on a disproportionate stratified n = 1,047 cohort drawn
+from Phenopacket Store v0.1.26, with paired-bootstrap 95 % CIs and
+McNemar tests. Results were stratified by a per-case
+annotation-overlap flag (whether the source publication is cited by
+`phenotype.hpoa` for the causal gene's OMIM disease) and by
+source-publication year. Rationale grounding was quantified with
+GPT-4o-judged RAGAS and DeepEval, and robustness verified by
+replaying LEA prompts against three frontier LLMs (Qwen3-32B, Claude
+Sonnet 4.6, DeepSeek-V3) on n = 300.
+
+**Results.** geno_agent achieved overall top-1 of 0.726 (95 % CI
+0.698-0.752), exceeding Exomiser at 0.691 (Δ = +0.035, p = 0.019).
+LIRICAL's apparent top-1 of 0.924 was largely an annotation-overlap
+artefact: on the fair-comparison cohort (n = 282), LIRICAL collapsed
+to 0.777, tied with Exomiser (Δ = -0.004), while **geno_agent became
+the top-ranked system at 0.858, beating LIRICAL (+0.082 ★) and
+Exomiser (+0.078 ★)**. Exomiser dropped 37 pp on post-2020
+publications, where geno_agent's advantage was 2.7 × larger. Both
+GPT-4o judges independently predicted top-1 correctness with a
+33-39 pp gap, enabling an automated triage flag. The headline result
+was robust across three frontier LLM families (within 2.4 pp).
+
+**Conclusions.** A literature-only, locally-deployable, multi-agent
+retrieval-augmented system can match or exceed curated phenotype-
+driven tools for rare-disease gene prioritisation. Annotation-overlap
+stratification reveals systematic overstatement of curated-tool
+benchmark performance and should become standard practice. geno_agent
+uniquely produces quantifiable, citation-traceable rationales,
+supporting a deployment pattern in which low-faithfulness predictions
+are routed for human review.
+
+**Keywords:** rare disease, gene prioritisation, retrieval-augmented
+generation, multi-agent systems, large language models, Phenopacket
+Store, Exomiser, LIRICAL, RAGAS, DeepEval, clinical decision support,
+LangGraph, Human Phenotype Ontology
 
 ---
 
@@ -867,8 +915,11 @@ RAG-in-biomed work).
 
 ---
 
-*Manuscript draft v1 — 2026-05-24. Results section drafted (~2,250
-words) synthesising paper_extension_results.md §§12-20. All other
-sections pending. Next drafting sessions: Discussion (~6 h), Background
-(~3 h), Abstract (~2 h), then Tables/Figures rendering (~6 h) and
-References (~3 h).*
+*Manuscript draft v5 — 2026-05-24. Abstract (350 w, at journal limit),
+Background (~1,170 w), Results (~2,330 w), Discussion (~1,830 w), and
+References (35 cites compiled) drafted; Methods section in companion
+file `manuscript_methods_draft.md` (~3,270 w). Combined main-text body
+~8,940 words inline. Pending: Title, Related Work (~2 h, reuses
+DeepRare comparability table), Conclusions extraction from Discussion §8,
+Declarations, Tables/Figures rendering (~6 h), and ~20-30 additional
+citations during Related Work drafting.*
