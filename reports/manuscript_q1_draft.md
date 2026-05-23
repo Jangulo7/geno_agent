@@ -798,13 +798,96 @@ Six concrete items from `reports/tripod_llm_compliance.md §5 Item 19g`.
 
 ---
 
-## Related work (❌ pending)
+## Related work (✅ DRAFTED — this commit, ~640 words)
 
-(~600 words. Outline: Exomiser/LIRICAL/AI-MARRVEL family of curated-KB
-tools → DeepRare 2026 as the curated-KB-plus-live-web agentic class →
-contrast with the literature-only locally-deployable class geno_agent
-establishes. Reuse the 13-dimension architectural comparison from
-`reports/deeprare_comparability_analysis.md §2`.)
+Prior work on automated rare-disease gene prioritisation can be
+organised along two architectural axes: the **primary knowledge
+source** (curated knowledge bases vs primary literature) and the
+**inference-time orchestration** (single deterministic model vs
+multi-agent LLM-in-the-loop). geno_agent occupies a quadrant that
+prior work has not formally evaluated.
+
+### Curated phenotype-driven gene prioritisation
+
+The dominant family of clinical tools — Exomiser [Smedley et al., 2015],
+LIRICAL [Robinson et al., 2020], Phen2Gene [Zhao et al., 2020], and
+the recent **AI-MARRVEL** [Mao et al., 2024] — all share three
+architectural choices: (i) they consume curated phenotype-gene-disease
+tables (`phenotype.hpoa`, OMIM, ClinVar, multi-omics knowledge graphs)
+as their primary signal; (ii) they emit a numeric score or likelihood
+ratio with no free-text rationale; and (iii) they make no calls to a
+generative model. Exomiser combines hiPhive phenotype-gene scoring
+with variant deleteriousness ranking; LIRICAL applies a likelihood-
+ratio framework over `phenotype.hpoa`; AI-MARRVEL fuses multi-omics
+features with a BERT-based phenotype matcher. The **PhEval** benchmark
+[Bridges et al., 2025] harmonises evaluation across this family. None
+of these systems address the publication-curation lag that limits
+their applicability to recently-described phenotypes [Boycott et al.,
+2019], and none formally stratify performance by training-data overlap
+— a confound this paper documents as substantial (Methods §6, Results
+§3).
+
+### Retrieval-augmented generation in biomedicine
+
+The retrieval-augmented generation paradigm [Lewis et al., 2020;
+Gao et al., 2024] has been adapted to multiple biomedical tasks, but
+not previously to rare-disease gene prioritisation in a deconfounded
+evaluation. **BiomedRAG** [Li et al., 2025] applies general RAG to
+biomedical question-answering, **MIRAGE** [Xiong et al., 2024]
+benchmarks RAG variants on five medical QA datasets, and **GeneGPT**
+[Jin et al., 2024] augments LLMs with NCBI Entrez tool calls for
+gene-information retrieval. **MedCPT** [Jin et al., 2023] provides a
+biomedical contrastive cross-encoder that geno_agent uses for
+reranking. None of these systems target the rare-disease
+gene-prioritisation task end-to-end with a free-text per-gene
+rationale, and none have been compared head-to-head against curated
+phenotype-driven tools with statistical paired-bootstrap CIs.
+
+### Agentic LLM systems for rare-disease diagnosis
+
+The closest published comparator is **DeepRare** [Zhao et al., 2026,
+*Nature*], a multi-agent rare-disease diagnostic system released
+during the preparation of this work. DeepRare achieves Recall@1 of
+57.18 % on HPO-only inputs across 2,919 diseases via a multi-round
+reflective pipeline integrating live web search, ChromeDriver-based
+scraping of Orphanet expert pages, OMIM, PubCaseFinder, Phenobrain,
+and per-case calls to a frontier LLM (OpenAI/Anthropic/Gemini/
+DeepSeek). Its primary knowledge sources are curated rare-disease
+databases, and its production web app requires 16 Ascend 910B GPUs
+for local LLM deployment.
+
+geno_agent is architecturally distinct on five dimensions: (i)
+**literature-only** — a single frozen full-text PMC Open Access index,
+with no curated knowledge bases at inference time; (ii) **gene-level
+output** rather than disease-level; (iii) **single-pass LEA reasoning**
+rather than multi-round reflection; (iv) **bit-perfect reproducibility**
+on the headline metric across independent runs, versus DeepRare's
+live-web non-determinism; (v) **all-local deployment** on a single
+workstation GPU. A head-to-head benchmark was deemed methodologically
+uninformative because the output-unit mismatch (disease vs gene) and
+knowledge-source mismatch (curated KBs + live web vs frozen
+literature) introduce confounds that no remapping can fully remove —
+notably, DeepRare's Orphanet/OMIM dependency exposes it to the same
+annotation-overlap confound this paper documents for LIRICAL,
+amplifying rather than informing the fair-comparison question.
+Conceptually, DeepRare is the 2026 state-of-the-art for the
+**curated-KB-plus-live-web agentic** class, while geno_agent
+establishes a state-of-the-art for the **literature-only locally-
+deployable gene-prioritisation** class. Outside rare-disease
+diagnosis, related multi-agent biomedical systems include CellAgent
+for single-cell analysis [Xiao et al., 2024] and the broader agentic-
+bioinformatics surveys [Yang T. et al., 2025; Zhou et al., 2025].
+
+### Position of geno_agent in the landscape
+
+The four quadrants defined by knowledge-source × inference-time-LLM
+orchestration are populated as: curated-KB / no-LLM by Exomiser, LIRICAL,
+AI-MARRVEL, Phen2Gene; curated-KB / LLM-in-loop by DeepRare;
+literature / no-LLM by classical IR baselines on the same index;
+**literature / LLM-in-loop by geno_agent**. This last quadrant is the
+one in which a deconfounded, deterministic, locally-deployable system
+had not previously been demonstrated to match or exceed curated tools
+under a formal evaluation; the present work fills that gap.
 
 ---
 
@@ -817,13 +900,15 @@ and data availability, Acknowledgements.
 
 ---
 
-## References (⚠️ partial — 39 cites compiled, more to add during Related Work draft)
+## References (⚠️ partial — 38 cites compiled; ~15-20 more to add during Tables/Figures + Methods cite-pass)
 
 Provided by author 2026-05-24, APA-style; will be re-formatted to
-Springer Vancouver at submission. ~20-30 additional citations expected
-during Related Work drafting (DeepRare, AI-MARRVEL, MedCPT, vLLM,
-Phenopacket Store v0.1.26 release, Qwen3, GPT-4o judge, additional
-RAG-in-biomed work).
+Springer Vancouver at submission. Additional citations still pending
+during Methods-inlining + Tables/Figures finalisation (vLLM [Kwon et
+al., 2023], Qwen3 technical report [Yang A. et al., 2025],
+Phenopacket Store v0.1.26 release notes, OpenAI GPT-4o card, Lin et
+al. 2021 hybrid retrieval, McNemar 1947, additional methodological
+cites).
 
 1. Boycott, K. M., Rath, A., Chong, J. X., Hartley, T., Alkuraya, F. S., Baynam, G., … Lau, L. P. L. (2019). International cooperation to enable the diagnosis of all rare genetic diseases. *American Journal of Human Genetics, 104*(3), 405–414. https://doi.org/10.1016/j.ajhg.2019.01.013
 
@@ -895,6 +980,12 @@ RAG-in-biomed work).
 
 35. Zhou, J., Jiang, J., Han, Z., Wang, Z., & Gao, X. (2025). Streamline automated biomedical discoveries with agentic bioinformatics. *Briefings in Bioinformatics, 26*(5), bbaf505. https://doi.org/10.1093/bib/bbaf505
 
+36. Jin, Q., Kim, W., Chen, Q., Comeau, D. C., Yeganova, L., Wilbur, W. J., & Lu, Z. (2023). MedCPT: Contrastive pre-trained transformers with large-scale PubMed search logs for zero-shot biomedical information retrieval. *Bioinformatics, 39*(11), btad651. https://doi.org/10.1093/bioinformatics/btad651
+
+37. Mao, D., Liu, C., Wang, L., Al-Ouran, R., Deisseroth, C., Pasupuleti, S., … Liu, P. (2024). AI-MARRVEL — A knowledge-driven AI system for diagnosing Mendelian disorders. *NEJM AI, 1*(5), AIoa2300009. https://doi.org/10.1056/AIoa2300009
+
+38. Zhao, W., Cui, W., Xie, J., Liu, K., Tang, Q., Lu, P., Lin, M., Jiang, J., Liu, K., Wang, T., & Xie, X. (2026). DeepRare: A multi-agent framework for rare-disease diagnosis with reasoning. *Nature* (preprint arXiv:2506.20430). https://arxiv.org/abs/2506.20430
+
 ---
 
 ## Tables and figures (⚠️ source data ready, render pending)
@@ -915,11 +1006,12 @@ RAG-in-biomed work).
 
 ---
 
-*Manuscript draft v5 — 2026-05-24. Abstract (350 w, at journal limit),
-Background (~1,170 w), Results (~2,330 w), Discussion (~1,830 w), and
-References (35 cites compiled) drafted; Methods section in companion
-file `manuscript_methods_draft.md` (~3,270 w). Combined main-text body
-~8,940 words inline. Pending: Title, Related Work (~2 h, reuses
-DeepRare comparability table), Conclusions extraction from Discussion §8,
-Declarations, Tables/Figures rendering (~6 h), and ~20-30 additional
-citations during Related Work drafting.*
+*Manuscript draft v6 — 2026-05-24. Abstract (350 w, at journal limit),
+Background (~1,170 w), Related Work (~640 w), Results (~2,330 w),
+Discussion (~1,830 w), and References (38 cites compiled) drafted;
+Methods section in companion file `manuscript_methods_draft.md`
+(~3,270 w). Combined main-text body ~9,590 words inline. Pending:
+Title, Conclusions extraction from Discussion §8, Declarations,
+Tables/Figures rendering (~6 h), and ~15-20 remaining methodological
+citations (vLLM, Qwen3 tech report, GPT-4o card, Lin 2021,
+McNemar 1947, Phenopacket Store v0.1.26 release).*
