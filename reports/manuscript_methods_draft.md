@@ -337,9 +337,20 @@ before submission, but are out of scope for the present draft:
 6. **DeepRare head-to-head comparison on a n = 100 subset** — the
    2025 EJHG benchmark uses DeepRare; reviewers will expect a direct
    comparison. Estimated 5-7 days of work post-RAGAS.
-7. **Qwen3-32B AWQ ablation on a n = 100 subset** — to demonstrate
-   the headline numbers are not artefacts of the 8B model size.
-   Estimated 2-3 days of work post-RAGAS.
+7. **LLM ablation on n = 300 subset** — ✅ landed 2026-05-23. Replayed
+   saved LEA prompts against three frontier LLMs via OpenRouter
+   (Qwen3-32B Instruct, Claude Sonnet 4.6, DeepSeek-V3-0324). On the
+   fair-comparison cohort (overlap-absent, n=84), all three production-
+   quality models landed within 2.4 pp of Qwen3-8B (0.869–0.893), with
+   all three beating LIRICAL (0.777) and Exomiser (0.780) by ≥7 pp.
+   Claude Sonnet 4.6 delivered a +5.0 pp ★ lift on the full cohort
+   (p<0.001) but the lift was not significant on the fair cohort.
+   Qwen3-32B Instruct exhibited a 22 % JSON-format refusal rate (a
+   usability characteristic, not a top-1-quality issue: on parsed
+   responses its top-1 matched the 8B baseline at 0.722). $21.42 of
+   $30 OpenRouter budget consumed. The headline geno_agent result is
+   therefore robust to LLM family choice; full table in
+   `paper_extension_results.md §20`.
 
 ---
 
