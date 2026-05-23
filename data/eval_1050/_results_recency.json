@@ -149,6 +149,33 @@
           0.7496,
           0.7952
         ]
+      },
+      "N": {
+        "top1": [
+          0.7755,
+          0.7498,
+          0.8004
+        ],
+        "top5": [
+          0.8558,
+          0.8348,
+          0.8777
+        ],
+        "top10": [
+          0.9026,
+          0.8835,
+          0.9198
+        ],
+        "mrr": [
+          0.8192,
+          0.7983,
+          0.8404
+        ],
+        "ndcg10": [
+          0.8336,
+          0.8133,
+          0.8526
+        ]
       }
     },
     "pre_2020": {
@@ -285,6 +312,33 @@
           0.8779,
           0.8552,
           0.9015
+        ]
+      },
+      "N": {
+        "top1": [
+          0.8735,
+          0.8469,
+          0.8985
+        ],
+        "top5": [
+          0.9268,
+          0.9052,
+          0.9468
+        ],
+        "top10": [
+          0.9484,
+          0.9301,
+          0.9651
+        ],
+        "mrr": [
+          0.9017,
+          0.8789,
+          0.9226
+        ],
+        "ndcg10": [
+          0.9102,
+          0.891,
+          0.9309
         ]
       }
     },
@@ -423,6 +477,33 @@
           0.5938,
           0.6754
         ]
+      },
+      "N": {
+        "top1": [
+          0.6435,
+          0.5987,
+          0.6861
+        ],
+        "top5": [
+          0.7601,
+          0.7197,
+          0.8027
+        ],
+        "top10": [
+          0.8408,
+          0.8072,
+          0.8744
+        ],
+        "mrr": [
+          0.7081,
+          0.6696,
+          0.7459
+        ],
+        "ndcg10": [
+          0.7304,
+          0.697,
+          0.7682
+        ]
       }
     },
     "post_2020_overlap_absent": {
@@ -559,6 +640,33 @@
           0.9071,
           0.8522,
           0.9563
+        ]
+      },
+      "N": {
+        "top1": [
+          0.875,
+          0.8068,
+          0.9432
+        ],
+        "top5": [
+          0.9545,
+          0.9091,
+          0.9886
+        ],
+        "top10": [
+          0.9773,
+          0.9432,
+          1.0
+        ],
+        "mrr": [
+          0.9142,
+          0.8635,
+          0.9585
+        ],
+        "ndcg10": [
+          0.9288,
+          0.8854,
+          0.9687
         ]
       }
     },
@@ -697,6 +805,33 @@
           0.8689,
           0.9404
         ]
+      },
+      "N": {
+        "top1": [
+          0.8402,
+          0.7835,
+          0.8866
+        ],
+        "top5": [
+          0.9536,
+          0.9227,
+          0.9794
+        ],
+        "top10": [
+          0.9691,
+          0.9433,
+          0.9897
+        ],
+        "mrr": [
+          0.8935,
+          0.8565,
+          0.9277
+        ],
+        "ndcg10": [
+          0.9108,
+          0.8797,
+          0.9415
+        ]
       }
     },
     "cat_developmental_post_2020": {
@@ -833,6 +968,33 @@
           0.5765,
           0.4759,
           0.6716
+        ]
+      },
+      "N": {
+        "top1": [
+          0.5843,
+          0.4831,
+          0.6854
+        ],
+        "top5": [
+          0.6854,
+          0.5955,
+          0.7753
+        ],
+        "top10": [
+          0.7753,
+          0.6854,
+          0.8539
+        ],
+        "mrr": [
+          0.6429,
+          0.5499,
+          0.7335
+        ],
+        "ndcg10": [
+          0.6608,
+          0.5739,
+          0.7435
         ]
       }
     },
@@ -971,6 +1133,33 @@
           0.5449,
           0.704
         ]
+      },
+      "N": {
+        "top1": [
+          0.6417,
+          0.5583,
+          0.725
+        ],
+        "top5": [
+          0.7583,
+          0.6833,
+          0.8333
+        ],
+        "top10": [
+          0.8667,
+          0.8,
+          0.925
+        ],
+        "mrr": [
+          0.7092,
+          0.636,
+          0.7753
+        ],
+        "ndcg10": [
+          0.738,
+          0.6695,
+          0.7991
+        ]
       }
     },
     "cat_metabolic_post_2020": {
@@ -1108,6 +1297,33 @@
           0.8105,
           0.9305
         ]
+      },
+      "N": {
+        "top1": [
+          0.9,
+          0.8333,
+          0.9556
+        ],
+        "top5": [
+          0.9667,
+          0.9222,
+          1.0
+        ],
+        "top10": [
+          0.9667,
+          0.9222,
+          1.0
+        ],
+        "mrr": [
+          0.9296,
+          0.8798,
+          0.9685
+        ],
+        "ndcg10": [
+          0.9369,
+          0.8877,
+          0.9758
+        ]
       }
     },
     "cat_neurological_post_2020": {
@@ -1244,6 +1460,33 @@
           0.5249,
           0.4536,
           0.6002
+        ]
+      },
+      "N": {
+        "top1": [
+          0.5238,
+          0.449,
+          0.6054
+        ],
+        "top5": [
+          0.6803,
+          0.6054,
+          0.7483
+        ],
+        "top10": [
+          0.7823,
+          0.7143,
+          0.8435
+        ],
+        "mrr": [
+          0.6112,
+          0.5447,
+          0.6798
+        ],
+        "ndcg10": [
+          0.6399,
+          0.5717,
+          0.7047
         ]
       }
     }
@@ -1469,6 +1712,94 @@
             "significant": true
           }
         }
+      },
+      "N_vs_S": {
+        "n": 1047,
+        "metrics": {
+          "top1": {
+            "point": 0.0497,
+            "ci_lo": 0.0315,
+            "ci_hi": 0.0678,
+            "significant": true,
+            "a_wins": 74,
+            "b_wins": 22,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": 0.0573,
+            "ci_lo": 0.043,
+            "ci_hi": 0.0707,
+            "significant": true,
+            "a_wins": 61,
+            "b_wins": 1,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": 0.086,
+            "ci_lo": 0.0697,
+            "ci_hi": 0.1032,
+            "significant": true,
+            "a_wins": 91,
+            "b_wins": 1,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": 0.053,
+            "ci_lo": 0.042,
+            "ci_hi": 0.0644,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0603,
+            "ci_lo": 0.05,
+            "ci_hi": 0.0708,
+            "significant": true
+          }
+        }
+      },
+      "N_vs_M": {
+        "n": 1047,
+        "metrics": {
+          "top1": {
+            "point": -0.148,
+            "ci_lo": -0.1767,
+            "ci_hi": -0.1213,
+            "significant": true,
+            "a_wins": 40,
+            "b_wins": 195,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": -0.1328,
+            "ci_lo": -0.1576,
+            "ci_hi": -0.1108,
+            "significant": true,
+            "a_wins": 11,
+            "b_wins": 150,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": -0.0965,
+            "ci_lo": -0.1146,
+            "ci_hi": -0.0783,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 101,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.1335,
+            "ci_lo": -0.1563,
+            "ci_hi": -0.1117,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.1306,
+            "ci_lo": -0.1532,
+            "ci_hi": -0.1106,
+            "significant": true
+          }
+        }
       }
     },
     "pre_2020": {
@@ -1688,6 +2019,94 @@
             "point": 0.0808,
             "ci_lo": 0.0556,
             "ci_hi": 0.1077,
+            "significant": true
+          }
+        }
+      },
+      "N_vs_S": {
+        "n": 601,
+        "metrics": {
+          "top1": {
+            "point": 0.0349,
+            "ci_lo": 0.0116,
+            "ci_hi": 0.0632,
+            "significant": true,
+            "a_wins": 41,
+            "b_wins": 20,
+            "mcnemar_p": 0.00985
+          },
+          "top5": {
+            "point": 0.0266,
+            "ci_lo": 0.0133,
+            "ci_hi": 0.0416,
+            "significant": true,
+            "a_wins": 17,
+            "b_wins": 1,
+            "mcnemar_p": 0.00014
+          },
+          "top10": {
+            "point": 0.0383,
+            "ci_lo": 0.0233,
+            "ci_hi": 0.0549,
+            "significant": true,
+            "a_wins": 24,
+            "b_wins": 1,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": 0.0312,
+            "ci_lo": 0.0167,
+            "ci_hi": 0.0472,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0323,
+            "ci_lo": 0.0199,
+            "ci_hi": 0.0463,
+            "significant": true
+          }
+        }
+      },
+      "N_vs_M": {
+        "n": 601,
+        "metrics": {
+          "top1": {
+            "point": -0.0416,
+            "ci_lo": -0.0699,
+            "ci_hi": -0.0133,
+            "significant": true,
+            "a_wins": 27,
+            "b_wins": 52,
+            "mcnemar_p": 0.00655
+          },
+          "top5": {
+            "point": -0.0532,
+            "ci_lo": -0.0749,
+            "ci_hi": -0.03,
+            "significant": true,
+            "a_wins": 11,
+            "b_wins": 43,
+            "mcnemar_p": 1e-05
+          },
+          "top10": {
+            "point": -0.0499,
+            "ci_lo": -0.0682,
+            "ci_hi": -0.0333,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 30,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.0441,
+            "ci_lo": -0.0665,
+            "ci_hi": -0.0228,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.0484,
+            "ci_lo": -0.0694,
+            "ci_hi": -0.0278,
             "significant": true
           }
         }
@@ -1913,6 +2332,94 @@
             "significant": true
           }
         }
+      },
+      "N_vs_S": {
+        "n": 446,
+        "metrics": {
+          "top1": {
+            "point": 0.0695,
+            "ci_lo": 0.0448,
+            "ci_hi": 0.0964,
+            "significant": true,
+            "a_wins": 33,
+            "b_wins": 2,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": 0.0987,
+            "ci_lo": 0.0717,
+            "ci_hi": 0.1256,
+            "significant": true,
+            "a_wins": 44,
+            "b_wins": 0,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": 0.1502,
+            "ci_lo": 0.1166,
+            "ci_hi": 0.1839,
+            "significant": true,
+            "a_wins": 67,
+            "b_wins": 0,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": 0.0823,
+            "ci_lo": 0.0662,
+            "ci_hi": 0.0991,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.098,
+            "ci_lo": 0.0806,
+            "ci_hi": 0.1165,
+            "significant": true
+          }
+        }
+      },
+      "N_vs_M": {
+        "n": 446,
+        "metrics": {
+          "top1": {
+            "point": -0.2915,
+            "ci_lo": -0.3386,
+            "ci_hi": -0.2466,
+            "significant": true,
+            "a_wins": 13,
+            "b_wins": 143,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": -0.2399,
+            "ci_lo": -0.2803,
+            "ci_hi": -0.2018,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 107,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": -0.1592,
+            "ci_lo": -0.1951,
+            "ci_hi": -0.1278,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 71,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.254,
+            "ci_lo": -0.2939,
+            "ci_hi": -0.2169,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.2413,
+            "ci_lo": -0.2798,
+            "ci_hi": -0.2076,
+            "significant": true
+          }
+        }
       }
     },
     "post_2020_overlap_absent": {
@@ -2135,6 +2642,94 @@
             "significant": false
           }
         }
+      },
+      "N_vs_S": {
+        "n": 88,
+        "metrics": {
+          "top1": {
+            "point": 0.0227,
+            "ci_lo": -0.0227,
+            "ci_hi": 0.0795,
+            "significant": false,
+            "a_wins": 4,
+            "b_wins": 2,
+            "mcnemar_p": 0.6875
+          },
+          "top5": {
+            "point": 0.0227,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0568,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 0,
+            "mcnemar_p": 0.5
+          },
+          "top10": {
+            "point": 0.0227,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0568,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 0,
+            "mcnemar_p": 0.5
+          },
+          "mrr": {
+            "point": 0.0211,
+            "ci_lo": -0.0065,
+            "ci_hi": 0.049,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0217,
+            "ci_lo": -0.0015,
+            "ci_hi": 0.0449,
+            "significant": false
+          }
+        }
+      },
+      "N_vs_M": {
+        "n": 88,
+        "metrics": {
+          "top1": {
+            "point": 0.1023,
+            "ci_lo": 0.0227,
+            "ci_hi": 0.1818,
+            "significant": true,
+            "a_wins": 11,
+            "b_wins": 2,
+            "mcnemar_p": 0.02246
+          },
+          "top5": {
+            "point": -0.0455,
+            "ci_lo": -0.0909,
+            "ci_hi": -0.0114,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 4,
+            "mcnemar_p": 0.125
+          },
+          "top10": {
+            "point": -0.0227,
+            "ci_lo": -0.0568,
+            "ci_hi": 0.0,
+            "significant": false,
+            "a_wins": 0,
+            "b_wins": 2,
+            "mcnemar_p": 0.5
+          },
+          "mrr": {
+            "point": 0.0436,
+            "ci_lo": -0.0034,
+            "ci_hi": 0.0921,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0251,
+            "ci_lo": -0.0158,
+            "ci_hi": 0.0649,
+            "significant": false
+          }
+        }
       }
     },
     "pre_2020_overlap_absent": {
@@ -2354,6 +2949,94 @@
             "point": -0.0126,
             "ci_lo": -0.0573,
             "ci_hi": 0.0353,
+            "significant": false
+          }
+        }
+      },
+      "N_vs_S": {
+        "n": 194,
+        "metrics": {
+          "top1": {
+            "point": -0.0206,
+            "ci_lo": -0.0773,
+            "ci_hi": 0.0361,
+            "significant": false,
+            "a_wins": 13,
+            "b_wins": 17,
+            "mcnemar_p": 0.58466
+          },
+          "top5": {
+            "point": 0.0206,
+            "ci_lo": 0.0052,
+            "ci_hi": 0.0412,
+            "significant": true,
+            "a_wins": 4,
+            "b_wins": 0,
+            "mcnemar_p": 0.125
+          },
+          "top10": {
+            "point": 0.0361,
+            "ci_lo": 0.0103,
+            "ci_hi": 0.0619,
+            "significant": true,
+            "a_wins": 7,
+            "b_wins": 0,
+            "mcnemar_p": 0.01562
+          },
+          "mrr": {
+            "point": -0.0037,
+            "ci_lo": -0.0342,
+            "ci_hi": 0.0278,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0064,
+            "ci_lo": -0.0196,
+            "ci_hi": 0.0318,
+            "significant": false
+          }
+        }
+      },
+      "N_vs_M": {
+        "n": 194,
+        "metrics": {
+          "top1": {
+            "point": 0.0619,
+            "ci_lo": 0.0052,
+            "ci_hi": 0.1186,
+            "significant": true,
+            "a_wins": 23,
+            "b_wins": 11,
+            "mcnemar_p": 0.05761
+          },
+          "top5": {
+            "point": 0.0052,
+            "ci_lo": -0.0361,
+            "ci_hi": 0.0464,
+            "significant": false,
+            "a_wins": 10,
+            "b_wins": 9,
+            "mcnemar_p": 1.0
+          },
+          "top10": {
+            "point": -0.0309,
+            "ci_lo": -0.0567,
+            "ci_hi": -0.0103,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 6,
+            "mcnemar_p": 0.03125
+          },
+          "mrr": {
+            "point": 0.0366,
+            "ci_lo": -0.0049,
+            "ci_hi": 0.0796,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0191,
+            "ci_lo": -0.0176,
+            "ci_hi": 0.0548,
             "significant": false
           }
         }

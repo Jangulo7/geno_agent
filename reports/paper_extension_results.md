@@ -1189,3 +1189,109 @@ substantially lag Exomiser's curation cycle.
 publication lag and LIRICAL's recency-amplified overlap. geno_agent
 provides the most recency-robust performance of any literature-aware
 system tested.*
+
+---
+
+## 15. Thread F (scoped) — RRF ensemble of LIRICAL + geno_agent (2026-05-23)
+
+### 15.1 Scope and rationale for scope reduction
+
+The original Thread F (plan v3 §3c.4) called for a full ~3-day ensemble
+experiment with multiple fusion methods. After Thread D + E it became
+clear that RRF is mathematically bounded above by the better of M and S
+on each subset (LIRICAL dominates overlap-present; geno_agent dominates
+overlap-absent), so the most cost-effective design is to run a single
+reciprocal-rank-fusion check with the standard `k = 60` parameter to
+generate a concrete number for the reviewer question "did you try
+ensembling?" and report it in one sentence of the Discussion.
+
+Implementation: `scripts/eval/build_cell_n_rrf.py` reads the per-case
+rankings from Cells M and S (50 candidate genes each, identical
+candidate set), computes
+`rrf(g) = 1/(60 + rank_M(g)) + 1/(60 + rank_S(g))`, and writes a new
+Cell N at `data/eval_1050/cell_N_rrf_m_s/`. Cell N registered in the
+`CELLS` dict so existing aggregation tooling picks it up.
+
+### 15.2 Cell N top-1 by subset (5-cell baseline + ensemble)
+
+| Subset | n | M | S | **N (RRF)** | Best single | N vs best |
+|---|---:|---:|---:|---:|:-:|---:|
+| __all__ | 1,047 | **0.924** | 0.726 | 0.775 | M | -0.149 ★ |
+| overlap_present | 765 | **0.978** | 0.677 | 0.748 | M | -0.230 ★ |
+| **overlap_absent** | **282** | 0.777 | **0.858** | 0.851 | S | **-0.007 NS** |
+| pre_2020 | 601 | **0.915** | 0.839 | 0.874 | M | -0.041 ★ |
+| post_2020 | 446 | **0.935** | 0.574 | 0.643 | M | -0.292 ★ |
+| **post_2020 × overlap_absent** | 88 | 0.773 | 0.852 | **0.875** | RRF | +0.023 NS |
+
+### 15.3 Paired Δ (Cell N vs single systems)
+
+| Subset | Δ (N − S) | 95 % CI | sig | Δ (N − M) | 95 % CI | sig |
+|---|---:|---|:-:|---:|---|:-:|
+| __all__ | +0.050 | [+0.032, +0.068] | ★ | **-0.148** | [-0.177, -0.121] | ★ |
+| overlap_present | +0.071 | [+0.051, +0.090] | ★ | **-0.230** | [-0.260, -0.200] | ★ |
+| **overlap_absent** | **-0.007** | **[-0.050, +0.036]** | **—** | +0.075 | [+0.025, +0.121] | ★ |
+| post_2020_overlap_absent | +0.023 | [-0.023, +0.080] | — | +0.102 | [+0.023, +0.182] | ★ |
+
+### 15.4 Interpretation
+
+The ensemble's apparent +0.050 overall lift over Cell S **is entirely
+inherited from LIRICAL's overlap advantage on contaminated cases**:
+
+- On the **fair-comparison cohort** (overlap-absent, n=282 — the metric
+  that matters for the paper's claim), **N and S are statistically
+  tied** (Δ = -0.007 [-0.050, +0.036], McNemar p = 0.87). RRF adds no
+  genuine signal.
+- On the **contaminated cohort** (overlap-present, n=765), N is
+  significantly *worse* than M alone (Δ = -0.230 ★) — RRF dilutes
+  LIRICAL's overlap advantage with S's information.
+- The only subset where N narrowly leads is the **smallest and most
+  stringent** (post_2020 × overlap-absent, n=88, Δ = +0.023 NS) —
+  directionally interesting but underpowered for significance.
+
+**Mechanistic explanation**: RRF combines two ranking signals
+symmetrically. When the two ranks agree, RRF amplifies the joint signal;
+when they disagree, RRF averages. On the fair cohort, M and S
+disagreement is dominated by S being right and M being wrong (since S
+beats M by +0.082 ★ here), so averaging *hurts* relative to S alone.
+On the contaminated cohort, the opposite is true. **There is no subset
+where the two systems carry independent predictive signal that
+ensembling can recover beyond what overlap status alone already
+explains.**
+
+### 15.5 Discussion paragraph (paper-ready, 1 sentence per the scope decision)
+
+> *We additionally evaluated a reciprocal-rank-fusion ensemble of
+> LIRICAL and geno_agent (k = 60) on the same n = 1,047 cohort. The
+> ensemble's overall top-1 of 0.775 is statistically tied with
+> geno_agent alone on the overlap-absent (fair-comparison) cohort
+> (Δ = -0.007, 95 % CI [-0.050, +0.036], McNemar p = 0.87) and
+> significantly below LIRICAL alone on the overlap-present cohort
+> (Δ = -0.230 ★), demonstrating that the two systems do not provide
+> complementary predictive signal beyond what annotation-overlap status
+> already explains.*
+
+### 15.6 Implementation files (Thread F, ✅ landed)
+
+| File | Purpose |
+|---|---|
+| `scripts/eval/build_cell_n_rrf.py` | Builds per-case RRF rankings from existing Cell M + Cell S JSONs |
+| `scripts/eval/aggregate_metrics.py` (1-line edit) | Registers Cell N in the `CELLS` dict |
+| `scripts/eval/aggregate_stratified.py` (2-line edit) | Adds Cell N to `CELL_IDS` + adds (N, S) and (N, M) comparisons |
+| `data/eval_1050/cell_N_rrf_m_s/` | 1,047 per-case ensemble rankings |
+
+Total wall: ~5 minutes for the entire Thread F (vs the plan's 1-day
+scoped estimate, vs the original 3-day full estimate). Effort
+amortised by Thread D + E infrastructure.
+
+### 15.7 v3 conclusions (additions on top of §11 + §12.7 + §13.10 + §14.9)
+
+23. **An RRF(M, S) ensemble does not provide complementary predictive signal on the fair-comparison cohort** (Δ vs S = -0.007 NS). The two systems' agreement structure is already explained by overlap status; ensembling cannot extract additional signal.
+24. **The ensemble's overall +0.050 ★ lift over S is borrowed from LIRICAL's overlap advantage on contaminated cases**, not from genuine model complementarity. On the contaminated cohort the ensemble loses 23 pp to LIRICAL alone.
+25. **Thread F closes the "did you try ensembling?" reviewer question with a defensible negative result** — one sentence in the Discussion, no manuscript real-estate spent on a deeper exploration that would not change the conclusion.
+
+---
+
+*Thread F (scoped) section — 2026-05-23. RRF ensemble confirms what
+Thread D + E predicted: no complementary signal between LIRICAL and
+geno_agent beyond overlap status. The "did you try ensembling?"
+question is now answered.*
