@@ -1225,10 +1225,35 @@ geno_agent's flagship: S = 0.900 vs M = 0.756, Δ = <b>+0.144</b>.</p>
   </tbody>
 </table>
 
+<h3>16.3 RAGAS-judged faithfulness (Thread C, ✅ landed 2026-05-23 18:13Z, $95 / $100 budget, 167.8 min wall)</h3>
+<table>
+  <thead><tr><th>Metric</th><th class="num">n cases</th><th class="num">Mean</th><th class="num">Median</th></tr></thead>
+  <tbody>
+    <tr><td>context_precision</td><td class="num">578</td><td class="num">0.650</td><td class="num">0.794</td></tr>
+    <tr><td>context_recall</td><td class="num">600</td><td class="num">0.796</td><td class="num">1.000</td></tr>
+    <tr class="hl"><td><b>faithfulness</b></td><td class="num">600</td><td class="num"><b>0.286</b></td><td class="num"><b>0.433</b></td></tr>
+  </tbody>
+</table>
+
 <div class="callout">
-  <b>RAGAS faithfulness number:</b> <span style="color:#6d28d9;font-weight:600;">TBD</span> —
-  pending Thread C run completion (Cell S n=600 stratified, gpt-4o-2024-08-06 judge, in flight).
-  Will be plugged into both this section and the §16.5 Discussion paragraph when available.
+  <b>Key secondary finding — faithfulness as a correctness predictor:</b><br>
+  Cases at faithfulness = 0 are <b>46.5 % top-1 correct</b>; cases at faithfulness &gt; 0 are
+  <b>79.9 % top-1 correct</b>. That's a 33-pp gap — making the RAGAS faithfulness score
+  usable as an automated clinical-triage flag.
+</div>
+
+<div class="callout info">
+  <b>Faithfulness is higher on the fair cohort</b> (mean 0.310 vs 0.276 on overlap-present),
+  consistent with §16.2's rationale-coverage finding that LEA explains itself better on
+  the cohort it isn't benefiting from annotation-overlap on.
+</div>
+
+<div class="callout warning">
+  <b>Honest caveat (must appear in the paper Methods):</b>
+  RAGAS scored against ≤ 20 chunks per case (budget cap) whereas LEA itself processed up
+  to 45 chunks during inference. Chunks 21-45 are invisible to the judge, so the 0.286
+  mean is a <b>lower bound</b> on the true LEA-against-its-own-context faithfulness.
+  Future work: rerun at MAX_CONTEXTS = 45 (~$50) or implement inline-citation prompting.
 </div>
 
 <!-- =================================================================== -->

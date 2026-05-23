@@ -78,7 +78,9 @@ RETRIEVAL_ONLY: Final[set[str]] = {"context_precision", "context_recall"}
 # Token budget: per RAGAS docs, faithfulness + answer_relevance generate
 # several sub-questions per case. Cap context length conservatively to
 # stay within GPT-4o's 128k context.
-MAX_CONTEXTS_PER_CASE: Final[int] = 45  # top 15 genes x 3 chunks each
+MAX_CONTEXTS_PER_CASE: Final[int] = 20  # ~50 % cost vs 45; covers top-5 genes x 3 chunks +
+# top-5 genes x 1 chunk → enough for paper Methods.
+# See plan v3 §3.6 (budget capped at $100, 2026-05-23).
 MAX_CHARS_PER_CONTEXT: Final[int] = 1500  # ~375 tokens
 
 
@@ -279,6 +281,18 @@ def main() -> int:
         help="Run only the first N sidecars (smoke/debug).",
     )
     parser.add_argument(
+        "--stratified-n-per-cat",
+        type=int,
+        default=None,
+        help="Sample N cases per MONDO category (seed 42). Requires --test-cases.",
+    )
+    parser.add_argument(
+        "--test-cases",
+        type=Path,
+        default=None,
+        help="test_cases.jsonl for per-case category labels (needed by --stratified-n-per-cat).",
+    )
+    parser.add_argument(
         "--max-concurrency",
         type=int,
         default=8,
@@ -300,6 +314,20 @@ def main() -> int:
     if unknown:
         logger.error("Unknown metrics: %s. Valid: %s", unknown, ALL_METRICS)
         return 2
+
+    # langchain-community 0.4.x moved the Vertex AI integration into a
+    # separate langchain-google-vertexai package, but ragas 0.2-0.4.x still
+    # imports ChatVertexAI from the old path. We shim a no-op replacement
+    # so the import succeeds — we don't use Vertex AI anywhere (GPT-4o judge).
+    import types as _types
+
+    _vertex_shim = _types.ModuleType("langchain_community.chat_models.vertexai")
+
+    class _ChatVertexAIShim:
+        """No-op placeholder so ragas can import the symbol."""
+
+    _vertex_shim.ChatVertexAI = _ChatVertexAIShim
+    sys.modules["langchain_community.chat_models.vertexai"] = _vertex_shim
 
     # Import RAGAS lazily so the script can be inspected without the dep.
     try:
@@ -338,6 +366,34 @@ def main() -> int:
         logger.error("No sidecars found in %s", args.responses_dir)
         return 1
 
+    # Optional: stratified sub-sample by MONDO category (seed 42).
+    if args.stratified_n_per_cat is not None:
+        if args.test_cases is None:
+            logger.error("--stratified-n-per-cat requires --test-cases.")
+            return 2
+        import random
+        from collections import defaultdict
+
+        cat_of: dict[str, str] = {}
+        with args.test_cases.open() as fh:
+            for line in fh:
+                if line.strip():
+                    c = json.loads(line)
+                    cat_of[c["case_id"]] = c.get("category", "unknown")
+        by_cat: dict[str, list] = defaultdict(list)
+        for sc in sidecars:
+            by_cat[cat_of.get(sc.get("case_id"), "unknown")].append(sc)
+        rng = random.Random(42)
+        sampled: list[dict] = []
+        for cat in sorted(by_cat):
+            pool = by_cat[cat]
+            n_take = min(args.stratified_n_per_cat, len(pool))
+            sampled_cat = rng.sample(pool, n_take)
+            sampled.extend(sampled_cat)
+            logger.info("  stratified: %s -> %d sampled (from %d)", cat, n_take, len(pool))
+        sidecars = sampled
+        logger.info("  sidecars after stratified sample: %d", len(sidecars))
+
     # Build samples; track which cases are skipped (no answer + non-retrieval metric).
     samples = []
     case_ids = []
@@ -357,10 +413,14 @@ def main() -> int:
     )
     metrics = [metric_map[m](llm=judge_llm) for m in requested]
 
+    from ragas.run_config import RunConfig
+
+    run_config = RunConfig(max_workers=args.max_concurrency, timeout=120)
     logger.info(
-        "Calling RAGAS evaluate (this may take hours for n=%d x %d metrics)...",
+        "Calling RAGAS evaluate (n=%d x %d metrics, max_workers=%d)...",
         len(samples),
         len(metrics),
+        args.max_concurrency,
     )
     t0 = time.time()
     result = evaluate(
@@ -368,7 +428,7 @@ def main() -> int:
         metrics=metrics,
         llm=judge_llm,
         raise_exceptions=False,
-        run_config=None,  # default; RAGAS handles its own batching
+        run_config=run_config,
     )
     dt = time.time() - t0
     logger.info("RAGAS evaluate completed in %.1f min", dt / 60.0)

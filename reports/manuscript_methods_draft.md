@@ -213,6 +213,25 @@ would introduce self-evaluation bias, while GPT-4o is the de-facto
 standard RAG-quality judge in 2025-2026 (*citation: Es et al., RAGAS
 benchmark*). Production use of geno_agent does not require GPT-4o.
 
+The RAGAS evaluation completed in 167.8 minutes wall-clock at a
+documented OpenAI spend of ~US $95. Aggregate scores were:
+**context precision = 0.650 (mean) / 0.794 (median); context recall
+= 0.796 / 1.000; faithfulness = 0.286 / 0.433**. The median of
+faithfulness is more representative than the mean owing to a 21 %
+zero-tail concentrated in cases where Cell S's top-1 prediction was
+incorrect (mean faithfulness 0.160 on top-1-wrong cases vs 0.333 on
+top-1-correct; **the 33-percentage-point top-1 correctness gap
+between zero-faithfulness and non-zero-faithfulness cases (46.5 % vs
+79.9 %) makes the RAGAS score a useful automated triage flag for
+clinical deployment**). Faithfulness was slightly higher on the
+fair-comparison cohort (mean 0.310 vs 0.276 overlap-present),
+consistent with the higher rationale-substantiveness rate on the
+same subset (§*results*). The faithfulness measurement is a **lower
+bound** on the true LEA-against-its-own-context faithfulness: the
+20-chunk-per-case judge input excluded chunks 21-45 that LEA itself
+processed during inference; a future re-run at the full
+45-chunk input is planned to bound the true value.
+
 ### Local explainability analysis
 
 In addition to the LLM-judged RAGAS metrics, a local (no-API)

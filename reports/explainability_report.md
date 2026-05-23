@@ -90,6 +90,32 @@ Combining Thread G's findings with the layer catalog:
 
 Per-MONDO breakdown is in §16.2 of `paper_extension_results.md`.
 
+### 4.1 RAGAS-judged faithfulness (Thread C, ✅ landed 2026-05-23)
+
+| Metric | n (cases) | Mean | Median |
+|---|---:|---:|---:|
+| context_precision | 578 | 0.650 | 0.794 |
+| context_recall | 600 | 0.796 | 1.000 |
+| **faithfulness** | 600 | **0.286** | **0.433** |
+
+- Faithfulness is a **strong correctness predictor**: 46.5 % top-1
+  correct at faithfulness = 0 vs 79.9 % at faithfulness > 0 — a
+  33-pp gap, usable as a clinical-triage flag.
+- Faithfulness is slightly higher on the **fair cohort** (mean 0.310
+  vs 0.276 overlap-present), consistent with the §4 rationale-coverage
+  finding.
+- Modal bucket is (0.25, 0.50] (51 % of cases); most LEA outputs get
+  partial credit (typically one of two-to-three claims directly
+  supported by shown chunks). The 21 % zero-tail is concentrated in
+  top-1-wrong cases.
+- **Honest caveat for the XAI paper:** RAGAS scored against ≤ 20
+  chunks per case (budget cap, $95 / $100 spent) while LEA itself saw
+  up to 45 chunks during inference. Chunks 21-45 are invisible to the
+  judge, so the measured 0.286 is a **lower bound** on the true
+  LEA-against-its-own-context faithfulness. Rerunning at
+  MAX_CONTEXTS = 45 (~$50) or implementing inline-citation prompting
+  is a clear future-work item for the XAI paper.
+
 ---
 
 ## 5. Case-by-case walkthroughs

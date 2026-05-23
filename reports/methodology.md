@@ -425,9 +425,35 @@ Two findings:
    concrete answer to the "is the LLM-in-the-loop reproducible?" reviewer
    question.
 
-**RAGAS faithfulness number is pending Thread C completion** (n=600
-stratified, gpt-4o-2024-08-06 judge, currently in flight as background
-task `b4jz1ajib`, ~2-3 h wall, ~$95 OpenAI spend).
+**RAGAS faithfulness landed 2026-05-23 18:13Z** (n = 600 stratified
+Cell S, gpt-4o-2024-08-06 judge, MAX_CONTEXTS=20, 167.8 min wall,
+~$95 OpenAI spend — within the $100 budget):
+
+| Metric | Mean | Median |
+|---|---:|---:|
+| context_precision | 0.650 | 0.794 |
+| context_recall | 0.796 | 1.000 |
+| faithfulness | **0.286** | **0.433** |
+
+The most important *secondary* finding: **faithfulness is a strong
+top-1 correctness predictor**. Cases at faithfulness = 0 are 46.5 %
+top-1 correct; cases at faithfulness > 0 are 79.9 % correct — a
+33-pp gap. This makes faithfulness usable as an automated clinical-
+triage flag (low-faithfulness predictions auto-routed for human
+review). Faithfulness is also slightly higher on the fair-comparison
+cohort (mean 0.310 vs 0.276 overlap-present), consistent with
+geno_agent's higher rationale-coverage rate on the same subset
+(94 % vs 77 % causal-gene substantive, see Thread G structural part).
+
+**Honest caveat (must appear in the Methods):** faithfulness was
+computed against ≤ 20 retrieved contexts per case to fit the $100
+budget; LEA itself saw up to 45 chunks during inference. Chunks 21-45
+are invisible to the judge, so claims they support may be marked
+"unsupported". The measured 0.286 is therefore a *lower bound* on
+the true faithfulness against LEA's actual input. Bounding the true
+value (rerun at MAX_CONTEXTS=45, ~$50, or inline-citation prompting)
+is future work; the 33-pp correctness-prediction signal stands
+regardless of the absolute floor.
 
 Full results in [`paper_extension_results.md §16`](paper_extension_results.md).
 
@@ -625,7 +651,7 @@ though some sub-rank positions are vLLM-batching-sensitive.
 
 | Item | Status | ETA |
 |---|---|---|
-| **v3-7 RAGAS pipeline (Cell S n=600 stratified, 3 metrics, gpt-4o-2024-08-06)** | 🟢 running (task `b4jz1ajib`) | ~2-3 h wall, ~$95 |
+| **v3-7 RAGAS pipeline (Cell S n=600 stratified, 3 metrics)** | ✅ done (commit pending) — faithfulness 0.286 / 0.433 (mean / median), context_precision 0.650, context_recall 0.796 | 167.8 min, $95 |
 
 ### 7.3 Pending (Strategy A roadmap)
 

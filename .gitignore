@@ -59,3 +59,7 @@ frontend/.env.local
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Paper-v3 RAGAS raw output (per-case prompts + contexts; 17.7 MB).
+# Aggregate + per-case scores live in data/eval_1050/ragas_cell_S_n600_summary.json (101 KB, committed).
+data/eval_1050/ragas_cell_S_n600.json

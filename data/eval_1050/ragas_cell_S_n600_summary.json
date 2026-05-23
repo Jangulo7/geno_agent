@@ -1,0 +1,3670 @@
+{
+  "meta": {
+    "judge_model": "gpt-4o-2024-08-06",
+    "judge_temperature": 0.0,
+    "metrics": [
+      "faithfulness",
+      "context_precision",
+      "context_recall"
+    ],
+    "n_cases_total": 600,
+    "n_cases_evaluated": 600,
+    "n_cases_skipped": 0,
+    "elapsed_seconds": 10068.667478084564,
+    "elapsed_minutes": 167.8,
+    "estimated_cost_usd": 95,
+    "source": "data/eval_1050/ragas_cell_S_n600.json (full, 17.7 MB, gitignored)",
+    "subset": "Cell S, n=600 stratified (150 per MONDO category, seed 42)",
+    "max_contexts_per_case": 20
+  },
+  "aggregate": {
+    "faithfulness": {
+      "n_scored": 600,
+      "n_null": 0,
+      "mean": 0.28571216189802623,
+      "median": 0.43333333333333335,
+      "min": 0.0,
+      "max": 1.0,
+      "distribution_buckets": {
+        "(0.25,0.5]": 308,
+        "0.00": 127,
+        "(0,0.1]": 87,
+        "(0.1,0.25]": 60,
+        "(0.5,0.75]": 16,
+        "1.00": 2
+      }
+    },
+    "context_precision": {
+      "n_scored": 578,
+      "n_null": 22,
+      "mean": 0.6504145874873175,
+      "median": 0.794484097600332,
+      "min": 0.0,
+      "max": 0.9999999999950001,
+      "distribution_buckets": {
+        "null": 22,
+        "(0.5,0.75]": 82,
+        "(0.75,1.0)": 323,
+        "0.00": 113,
+        "(0.1,0.25]": 22,
+        "(0.25,0.5]": 35,
+        "(0,0.1]": 3
+      }
+    },
+    "context_recall": {
+      "n_scored": 600,
+      "n_null": 0,
+      "mean": 0.7958333333333333,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "distribution_buckets": {
+        "0.00": 118,
+        "1.00": 473,
+        "(0.25,0.5]": 9
+      }
+    }
+  },
+  "per_case_scores": [
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AEBP1:PMID_29606302_C_IV_6",
+      "faithfulness": 0.0,
+      "context_precision": 0.7195526695461282,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NHS:PMID_30642278_proband_III_1",
+      "faithfulness": 0.5,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4271",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EDA:PMID_18702659_proband",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_26",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NHS:PMID_30642278_individual_II_5",
+      "faithfulness": 0.5,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+      "faithfulness": 0.5,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NBAS:PMID_28425089_subject_10A",
+      "faithfulness": 0.1,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+      "faithfulness": 0.4375,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_1",
+      "faithfulness": 0.13636363636363635,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+      "faithfulness": 0.53125,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_I_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_11",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_A017",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8409090908880682,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ARMC9:PMID_28625504_SA2_3",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "CHUK:PMID_20961246_fetus_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DDX59:PMID_29127725_Patient_1",
+      "faithfulness": 0.5,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108797_F3_II1",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+      "faithfulness": 0.0,
+      "context_precision": null,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_35743164_Patient_10",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DDX59:PMID_23972372_family_1_V_13",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_31761904_Individual_NBAS_11",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.1772727272668182,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_1_FI",
+      "faithfulness": 0.08695652173913043,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NBAS:PMID_30825388_Patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_13a",
+      "faithfulness": 0.5,
+      "context_precision": 0.7646464646337205,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_22428873_P6",
+      "faithfulness": 0.0,
+      "context_precision": 0.7820300342293997,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DDX59:PMID_29127725_Patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.10512820512294872,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G079",
+      "faithfulness": 0.5,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4354",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_14",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "OFD1:PMID_22353940_cousin_V_9",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_13",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_5",
+      "faithfulness": 0.5,
+      "context_precision": 0.8055555555354167,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_30825388_Patient_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WNT1:PMID_30012084_older_sister",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EXTL3:PMID_28148688_P2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PPIB:PMID_19781681_Proband_P1_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": null,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_35",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "PIEZO2:PMID_27843126_A_III_5",
+      "faithfulness": 0.0,
+      "context_precision": 0.13992673992207572,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EXTL3:PMID_28132690_Family_E_II_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_6",
+      "faithfulness": 0.46875,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_5",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "FBN1:PMID_24665001_Patient_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.8088235293915441,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_1_II_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "FBLN5:PMID_12189163_Sib_2",
+      "faithfulness": 0.03125,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "EXTL3:PMID_28331220_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SMAD2:PMID_30157302_Patient_2",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_3269",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ARMC9:PMID_28625504_UW348_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_31761904_Individual_NBAS_9",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G099",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.6565719855120586,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_29169895_proband",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_16",
+      "faithfulness": 0.0,
+      "context_precision": 0.8191858478702885,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBN1:PMID_24665001_Patient_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7365489308604168,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_II_3",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_31340402_patient",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EMILIN1:PMID_36351433_F3_III_1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_9",
+      "faithfulness": 0.11764705882352941,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_7",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBLN5:PMID_12189163_V_6",
+      "faithfulness": 0.03225806451612903,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_39177731_Case_1_Patient_6",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CWC27:PMID_28285769_Individual_6_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_III_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "OFD1:PMID_19800048_IV_4",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_5_FV",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F4_1",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "EMILIN1:PMID_36351433_F2_IV_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "OFD1:PMID_19800048_III_9",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_13b",
+      "faithfulness": 0.5,
+      "context_precision": 0.8155555555392444,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_3_II_2",
+      "faithfulness": 0.4375,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "PIEZO2:PMID_27843126_B_II_7",
+      "faithfulness": 0.3,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_12",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G094",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_11_FX",
+      "faithfulness": 0.2,
+      "context_precision": 0.10238095237583333,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "FBLN5:PMID_24962763_4_year_old_Burmese_girl",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_7",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8854647168882099,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBN1:PMID_20979188_patient",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBLN5:PMID_12189163_Sib_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DDX59:PMID_23972372_family_2_V_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.81666666664625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_3301",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_III_8",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_4",
+      "faithfulness": 0.21951219512195122,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL5A2:PMID_27656288_patient",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_28698159_P2",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_2_PATIENT_2",
+      "faithfulness": 0.11363636363636363,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_16_FXV_b",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.8555555555384444,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G109_Sister",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.7200750509320535,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_8_FVII",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4021",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_33949769_participant",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RAB34:PMID_37384395_F3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "EXTL3:PMID_28132690_Family_C_II_1",
+      "faithfulness": 0.0625,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "BUD13:PMID_35670808_Family_2_A3",
+      "faithfulness": 0.1,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NBAS:PMID_28576691_Patient_1",
+      "faithfulness": 0.46875,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "THOC2:PMID_34976470_fetus_one",
+      "faithfulness": 0.0,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EXTL3:PMID_28132690_Family_A_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FKBP10:PMID_29801479_proband",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": null,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_26286438_Patient_1",
+      "faithfulness": 0.4318181818181818,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_III_13",
+      "faithfulness": 0.16666666666666666,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DDX59:PMID_23972372_family_2_V_7",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_G2554R_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_31761904_Individual_NBAS_57",
+      "faithfulness": 0.6808510638297872,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IFT140:PMID_37628605_Proband_2",
+      "faithfulness": 0.06521739130434782,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FGFR3:PMID_30681580_proband",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "OFD1:PMID_16783569_IV_11",
+      "faithfulness": 0.03125,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_28",
+      "faithfulness": 0.5,
+      "context_precision": 0.8683441226999282,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "OFD1:PMID_22353940_cousin_V_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_8",
+      "faithfulness": 0.5,
+      "context_precision": 0.79999999998,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFEMP1:PMID_31792352_proband",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_28600779_ITPR1",
+      "faithfulness": 0.4411764705882353,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G002",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.7156862744978758,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_G2554R_2",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_31015584_Individual_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7362701625777712,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RAB34:PMID_37384395_F2_1",
+      "faithfulness": 0.47619047619047616,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_15",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EFEMP1:PMID_32006683_patients_IV_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108798_SVP",
+      "faithfulness": 0.5,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_29575310_patient",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.99999999995,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "NBAS:PMID_31761904_individual_NBAS_82",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.6984126984010582,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SMAD2:PMID_30157302_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.14285714284285714,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G006",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.656222943714741,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KRT10:PMID_16505000_III_2_affected_boy",
+      "faithfulness": 0.5,
+      "context_precision": 0.6908993783907422,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_II_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_30249237_proband",
+      "faithfulness": 0.2,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZNF808:PMID_37973953_Individual_2",
+      "faithfulness": 0.47058823529411764,
+      "context_precision": 0.7611111110984259,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_6",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RUNX2:PMID_31548836_Family_B_II1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7099443319778894,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EMILIN1:PMID_36351433_F4_II_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_L2611del",
+      "faithfulness": 0.5151515151515151,
+      "context_precision": 0.81666666664625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RUNX2:PMID_31548836_Family_D_II1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.7603550428214163,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CWC27:PMID_28285769_Individual_5_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G048",
+      "faithfulness": 0.5,
+      "context_precision": 0.6261337868391278,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NBAS:PMID_28410752_na",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108798_91_91",
+      "faithfulness": 0.3939393939393939,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_18",
+      "faithfulness": 0.5,
+      "context_precision": 0.8419657048548286,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_3_PATIENT_4",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_37075751_Individual_8",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RAB34:PMID_37384395_F2_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108797_F1_II1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_G114_Sister",
+      "faithfulness": 0.36666666666666664,
+      "context_precision": 0.7227272727128182,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.9945983379449039,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_3",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_5",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "FERMT3:PMID_31068971_proband",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NCF2:PMID_7795241_patient_KA",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_15_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.733333333308889,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F9",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11952552_patient",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_Sibling_of_patient_7",
+      "faithfulness": 0.5,
+      "context_precision": 0.7572863247787519,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_24506793_Case_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_29889099_Family_B",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_26031502_proband",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.721455347763121,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_6_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NHEJ1:PMID_16439204_P2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TAP2:PMID_10560675_P1",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_D_individual_D_II_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F6",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P11",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_B_1",
+      "faithfulness": 0.09090909090909091,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_4_Patient_6",
+      "faithfulness": 1.0,
+      "context_precision": 0.6759259259184156,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_34862657_Case_report",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.7869499187609464,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_Sibling_of_patient_11",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLD1:PMID_31629014_Patient_P2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_22089833_3_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8086687293221897,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_13",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9139395004666322,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TRAF3:PMID_35960817_Family_D_D1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RFX5:PMID_30170160_P7",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NHEJ1:PMID_37703920_Family_1_Patient_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IL27RA:PMID_38509369_P1_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.18253968253055555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19807739_Patient_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999950001,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IRF1:PMID_36736301_P1",
+      "faithfulness": 0.6744186046511628,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CD28:PMID_34214472_patient_P2",
+      "faithfulness": 0.47058823529411764,
+      "context_precision": 0.6111111110805556,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COPG1:PMID_33529166_P3",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_22089833_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.794526143780918,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CBLB:PMID_36006710_Patient_1",
+      "faithfulness": 0.4186046511627907,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B3",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.31795634919840027,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B4",
+      "faithfulness": 0.5,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_19683336_Patient_9",
+      "faithfulness": 0.46875,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_D_III_1",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.49999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8573971578441019,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31089937_case_3_I_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_E_individual_E_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NHEJ1:PMID_37703920_Family_3_Patient_5",
+      "faithfulness": 0.4375,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "TNF:PMID_39198650_P1",
+      "faithfulness": 0.18181818181818182,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PRF1:PMID_28468610_8_year_old_boy",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "POLD1:PMID_31629014_Patient_P3",
+      "faithfulness": 0.5,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_29889099_Family_G_individual_G_II_2",
+      "faithfulness": 1.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_33855675_girl",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_7",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9175467406955147,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_36302985_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_38734037_proband",
+      "faithfulness": 0.625,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19807739_Patient_6",
+      "faithfulness": 0.0,
+      "context_precision": 0.7448412698319593,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_3_Patient_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.7041666666578645,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_3",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7749999999889285,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_E_II_1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.8029520816366382,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TRAF3:PMID_35960817_Family_C_C2",
+      "faithfulness": 0.45454545454545453,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MAP3K14:PMID_25406581_P1",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "FLT3LG:PMID_38701783_P1",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_19683336_Patient_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.91666666664375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DOCK8:PMID_29058101_Patient_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.49505529483813854,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TRAF3:PMID_35960817_Family_B_B1",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_6",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9299365788247528,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "OTULIN:PMID_38630025_Patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.8346844930612815,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_24",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.752815292778403,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_17989726_Patient_D",
+      "faithfulness": 0.4,
+      "context_precision": 0.26666666665333333,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.6577252139503831,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8620996843641721,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_13_2",
+      "faithfulness": 0.5161290322580645,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_26365906_case",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.94999999997625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_15656819_Patient_2",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IRF4:PMID_36917008_P1",
+      "faithfulness": 0.5,
+      "context_precision": 0.48566729322498825,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ICOSLG:PMID_30498080_patient_1",
+      "faithfulness": 0.5161290322580645,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_E_individual_E1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_22089833_7",
+      "faithfulness": 0.5,
+      "context_precision": 0.7552244109435737,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IRF1:PMID_36736301_P2",
+      "faithfulness": 0.4,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_41047924_Case_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.7474896375479522,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39560673_P2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_22024611_Case_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.6851851851737654,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_34888090_index_patient",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MCTS1:PMID_37875108_Patient_6",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NCF2:PMID_10498624_Case_3_AA",
+      "faithfulness": 0.26666666666666666,
+      "context_precision": 0.99999999995,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "IL27RA:PMID_38509369_P1_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_A_individual_A2",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P9",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SEC61A1:PMID_28782633_Family_II_patient_II_P3",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SEC61A1:PMID_28782633_Family_1_14_year_old_male_P8",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_G_individual_G_II_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_1_1",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.7656204906095532,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SEC61A1:PMID_28782633_Family_1_24_year_old_son_P4",
+      "faithfulness": 0.1,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLD3:PMID_38099988_patient",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_33097959_boy",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_29889099_Family_A",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_25710899_boy",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7280772005699198,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_I_individual_I_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF2:PMID_34826260_Patient_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFX5:PMID_37584719_P17",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_21",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9028855313677454,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "POLD3:PMID_37030525_proband_IV_6",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_7_Patient_9",
+      "faithfulness": 0.0,
+      "context_precision": 0.6642857142762245,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.821958489847747,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_8",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.6464646464430976,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_F_individual_F_I_1",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.0,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P7",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_19683336_Patient_8",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999950001,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_6_individual_II_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.8426049729940925,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_21692842_Case_Report",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7074346405140329,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_2_1",
+      "faithfulness": 0.26666666666666666,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SEC61A1:PMID_28782633_Family_1_20_year_old_son_P6",
+      "faithfulness": 0.5,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_4",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_37771582_Case_description",
+      "faithfulness": 0.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_30016041_Case_report",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.7041666666578645,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFXAP:PMID_22390233_Case_report",
+      "faithfulness": 0.0,
+      "context_precision": 0.07631578946986842,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "COPZ1:PMID_39642330_Patient_2",
+      "faithfulness": 0.16666666666666666,
+      "context_precision": 0.14090909090204548,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TRAF3:PMID_35960817_Family_B_B4",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF2:PMID_34826260_Patient_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.083333333325,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFX5:PMID_37584719_P18",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_1_individual_III_13",
+      "faithfulness": 0.5,
+      "context_precision": 0.7944420514197459,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_35479066_index",
+      "faithfulness": 0.48484848484848486,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR3:PMID_39560673_P5",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P15",
+      "faithfulness": 0.36666666666666664,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_19",
+      "faithfulness": 0.5,
+      "context_precision": 0.8443788455496869,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_22089833_4_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_11",
+      "faithfulness": 0.5,
+      "context_precision": 0.6570436507854377,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_patient_11",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8215938384010455,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.7584674097763041,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_15_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.8027999155070294,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COPG1:PMID_33529166_P2",
+      "faithfulness": 0.45161290322580644,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SEC61A1:PMID_28782633_Family_1_21_year_old_daughter_P5",
+      "faithfulness": 0.5,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.6770215078986529,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_33534181_patient",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.6785072951664229,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_12_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.7186434837020867,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_22089833_8",
+      "faithfulness": 0.2,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P12",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_14",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8541665189976744,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_30965037_Patient_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_5_Patient_7",
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.7591610312705762,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_A_individual_A_II_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B6",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_38734037_sister",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F12",
+      "faithfulness": 0.2,
+      "context_precision": 0.8333333333125,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPINK5:PMID_15656819_Patient_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MAP3K14:PMID_25406581_P2",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "POLD1:PMID_31449058_Patient_2",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "CLDN16:PMID_26426912_Patient_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.7623453945376728,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_14",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_5_individual_10Y11M",
+      "faithfulness": 0.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_36",
+      "faithfulness": 0.5,
+      "context_precision": 0.6468623481688968,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CBS:PMID_8755636_patient",
+      "faithfulness": 0.5405405405405406,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM7",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P15",
+      "faithfulness": 0.5,
+      "context_precision": 0.6214553477642322,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM4",
+      "faithfulness": 0.5,
+      "context_precision": 0.79999999998,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CHST14:PMID_30249733_Case_presentation",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P18",
+      "faithfulness": 0.5,
+      "context_precision": 0.721455347763121,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_M31",
+      "faithfulness": 0.06451612903225806,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_33616882_Case_report",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.6910866910751731,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "BCKDHB:PMID_14742428_WA",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR15",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7282828282682626,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37303127_Individual_2",
+      "faithfulness": 0.12903225806451613,
+      "context_precision": 0.3853991585851306,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_3_6",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.8409090908880682,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F1_individual_3",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.7639922090516319,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM32",
+      "faithfulness": 0.5,
+      "context_precision": 0.6437839995044006,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_27067446_IV1",
+      "faithfulness": 0.6222222222222222,
+      "context_precision": 0.9308207197945564,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_31068150_father",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM15",
+      "faithfulness": 0.5,
+      "context_precision": 0.7527777777683681,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7981618072276936,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_14531790_F762_individual_IV_3",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_11",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7050653594692902,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR21",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.7053571428453869,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_17245395_Family_K10_individual_I_1",
+      "faithfulness": 0.5666666666666667,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PAX4:PMID_36595822_Case_presentation",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F6_individual_1",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.7071428571287143,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_57",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P77",
+      "faithfulness": 0.2,
+      "context_precision": 0.8266666666501334,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F3_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.7379063042147146,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM50",
+      "faithfulness": 0.21875,
+      "context_precision": 0.7477124182856993,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_67",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_33574344_individual_F7",
+      "faithfulness": 0.5,
+      "context_precision": 0.7115384615242307,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_15983957_F1_individual_II_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.81666666664625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "B3GALT6:PMID_23664117_family_F7_subject_P8",
+      "faithfulness": 0.03225806451612903,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR27",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.8242424242259394,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_20151160_Patient_3_father",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_S8",
+      "faithfulness": 0.5428571428571428,
+      "context_precision": 0.7333333333186667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MMADHC:PMID_18385497_Patient_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_29513881_III_11",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM49",
+      "faithfulness": 0.5,
+      "context_precision": 0.8055555555354167,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM21",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_31068150_index_patient",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DHCR24:PMID_29175559_Patient_1_FitzPatrick_1998",
+      "faithfulness": 0.0,
+      "context_precision": 0.3333333333,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_32",
+      "faithfulness": 0.5,
+      "context_precision": 0.7050653594692902,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MOCS3:PMID_33897766_Case_Description",
+      "faithfulness": 0.0625,
+      "context_precision": 0.1156045751595452,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PYGL:PMID_28984260_child",
+      "faithfulness": 0.41935483870967744,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SUOX:PMID_36303223_Proband_27_from_PMID_31870341",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.19642857141875,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_63",
+      "faithfulness": 0.5,
+      "context_precision": 0.7103174603056217,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DHCR24:PMID_29175559_Patient_4_Zolotushko_2011_V4",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P74",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7005208333245768,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F7_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9615896358483319,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SUOX:PMID_36303223_Proband_23_from_PMID_28725568",
+      "faithfulness": 0.5,
+      "context_precision": 0.7222222222077778,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR9",
+      "faithfulness": 0.45161290322580644,
+      "context_precision": 0.35416666665781255,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GAA:PMID_16917947_11",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HMGCS2:PMID_31392109_Case_presentation",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SUOX:PMID_36303223_Proband_16_from_PMID_12368985",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_15856319_index_case",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8827160493729082,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ALG9:PMID_26453364_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P19",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR30",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.8155555555392444,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SUOX:PMID_36303223_Proband_3_from_PMID_10519592",
+      "faithfulness": 0.5,
+      "context_precision": 0.6917876241342764,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F12_1",
+      "faithfulness": 0.4482758620689655,
+      "context_precision": 0.8590894520956899,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P17",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM37",
+      "faithfulness": 0.4642857142857143,
+      "context_precision": 0.8333333333125,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_34",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_4_1",
+      "faithfulness": 0.2,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P5",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.4426899580627139,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P27",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P39",
+      "faithfulness": 0.3,
+      "context_precision": 0.6683178534460338,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_15673476_son",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_64",
+      "faithfulness": 0.5,
+      "context_precision": 0.7570292207716505,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P55",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9141738345677469,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ERCC6:PMID_30113454_index",
+      "faithfulness": 0.0,
+      "context_precision": 0.24206349205542327,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_22034507_BII_4",
+      "faithfulness": 0.0,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HMBS:PMID_15534187_proband",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM41",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GAA:PMID_16917947_13",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR25",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.7603174603022539,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MMADHC:PMID_18385497_P5",
+      "faithfulness": 0.4375,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "UMOD:PMID_22034507_CIII_2",
+      "faithfulness": 0.16666666666666666,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P16",
+      "faithfulness": 0.38235294117647056,
+      "context_precision": 0.7365821962231347,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM45",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P20",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F13_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8033514609105559,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F9_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8335778726435229,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PYCR1:PMID_21487760_Patient_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F2_1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.6511835503339115,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F15_1",
+      "faithfulness": 0.2,
+      "context_precision": 0.834697482225797,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P21",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "VMA12:PMID_26833330_F3_II1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "DHCR24:PMID_29175559_Patient_6_Zolotushko_2011_IV5",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PCYT1A:PMID_24889630_Proband_2",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.083333333325,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR23",
+      "faithfulness": 0.5,
+      "context_precision": 0.7331123737282098,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_33",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P21",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.6497545948122624,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SUOX:PMID_36303223_Proband_24_from_PMID_28629418",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR32",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7625272331027596,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PYCR1:PMID_21487760_Patient_4",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_1_4",
+      "faithfulness": 0.5,
+      "context_precision": 0.8333333333125,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_68",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "BCKDK:PMID_22956686_18_IV_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_24321194_II_8",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9346084562309045,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GRHPR:PMID_28569194_Case_presentation",
+      "faithfulness": 0.5,
+      "context_precision": 0.83902452838426,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "DLL3:PMID_15200511_individual_II_5",
+      "faithfulness": 0.5,
+      "context_precision": 0.7047619047501588,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "B3GALT6:PMID_23664117_family_F8_subject_P9",
+      "faithfulness": 0.5,
+      "context_precision": 0.7426721970757099,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ADA:PMID_28823388_3_month_old_girl",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P18",
+      "faithfulness": 0.5,
+      "context_precision": 0.7438851181405255,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR18",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.81666666664625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COG3:PMID_37711075_Family_1_BAB13340",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "HMGCS2:PMID_25511235_A1_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.8168350168214029,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GTF2H5:PMID_30359777_Clinical_report",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "MAN2B2:PMID_31775018_patient",
+      "faithfulness": 0.2,
+      "context_precision": 0.24206349205542327,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F17_1",
+      "faithfulness": 0.6363636363636364,
+      "context_precision": 0.8097984861075272,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_16501001_patient",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7241341991251475,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_26426912_Patient_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.7436881745648068,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ATP6V1A:PMID_28065471_PV_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PLAAT3:PMID_37919452_Family_1_patient_2",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.12878787878143938,
+      "context_recall": 0.5
+    },
+    {
+      "case_id": "CLDN16:PMID_26426912_Patient_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7654651516720081,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GYS1:PMID_17928598_Patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_14628289_Family_A_individual_3",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.6259744975361697,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ANKH:PMID_22647861_41_year_old_woman",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR26",
+      "faithfulness": 0.5,
+      "context_precision": 0.7603174603022539,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HMGCS2:PMID_25511235_B1_1",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.7333333333186667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HMGCS2:PMID_35308163_Patient_10",
+      "faithfulness": 0.4838709677419355,
+      "context_precision": 0.6914285714216571,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P4",
+      "faithfulness": 0.46875,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_3_4",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8714285714111428,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_14531790_F739_individual_I_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_27764983_Family_1_individual_J",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CTSA:PMID_24769197_patient",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR36",
+      "faithfulness": 0.5,
+      "context_precision": 0.7129629629550411,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_14531790_F524_individual_II_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.6903793574783444,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F3_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.7454849755433102,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM43",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.6465469228519365,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM51",
+      "faithfulness": 0.46875,
+      "context_precision": 0.6701935319498604,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HMGCS2:PMID_25511235_B3_1",
+      "faithfulness": 0.07142857142857142,
+      "context_precision": 0.8055555555354167,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P65",
+      "faithfulness": 0.5,
+      "context_precision": 0.8674951899894067,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ERCC3:PMID_9012405_index_case_TTD6VI",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.81666666664625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR19",
+      "faithfulness": 0.6666666666666666,
+      "context_precision": 0.6587301587207482,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GLB1:PMID_1907800_TS",
+      "faithfulness": 0.11764705882352941,
+      "context_precision": 0.8845138831447832,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P57",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.6124302884296756,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM17",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7847744360790144,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UMOD:PMID_23826568_index",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UGGT1:PMID_40267907_Family_5_1",
+      "faithfulness": 0.09090909090909091,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CLDN16:PMID_24321194_II_6",
+      "faithfulness": 0.5,
+      "context_precision": 0.7750709984962105,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UGGT1:PMID_40267907_Family_3_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AHDC1:PMID_30152016_Case_3",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBN2:PMID_10797416_Belleh_Patient_CF1347",
+      "faithfulness": 0.5,
+      "context_precision": 0.7734126984016496,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_28944233_273873",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WWOX:PMID_27495153_Patient_2",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KICS2:PMID_39824192_B_B_II_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_EG1141P",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WWOX:PMID_39507621_patient",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NF1:PMID_20513137_individual_N849_GSM_GSM492747",
+      "faithfulness": 0.36666666666666664,
+      "context_precision": 0.7596150309322302,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_HSJD_Patient_14",
+      "faithfulness": 0.2,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPTAN1:PMID_29050398_Patient_11",
+      "faithfulness": 0.06818181818181818,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TMEM216:PMID_39191256_T_9a",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_6",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_P_17",
+      "faithfulness": 0.0,
+      "context_precision": 0.49999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_28826917_Patient_A",
+      "faithfulness": 0.0,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_T267A_2",
+      "faithfulness": 0.4,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "EEFSEC:PMID_39753114_F2_II_7",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_EG1192P",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_25951140_Case_2",
+      "faithfulness": 0.45161290322580644,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CMPK2:PMID_36443312_Family_1_II_3",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.5833333333041666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LRP5:PMID_20034086_Patient_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7584923847997466,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TRA2B:PMID_36549593_Id3",
+      "faithfulness": 0.1,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AHDC1:PMID_39359946_Patient_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TMEM216:PMID_39191256_T_32",
+      "faithfulness": 0.14705882352941177,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NHLRC1:PMID_15781812_individual_138",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNB1:PMID_29174093_proband",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "GCDH:PMID_27672653_Individual_4",
+      "faithfulness": 0.0,
+      "context_precision": 0.8106030192643807,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_STXBP1adult_Pt32",
+      "faithfulness": 0.5,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F6_II_3",
+      "faithfulness": 0.45161290322580644,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD3_III_3",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.7098484848396117,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_31124279_Patient_9",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_Syrbe_26",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_G3_P14",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GSN:PMID_33499149_II_8",
+      "faithfulness": 0.5161290322580645,
+      "context_precision": 0.8052904611666195,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GON4L:PMID_39500882_Patient_3",
+      "faithfulness": 0.42424242424242425,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZSWIM6:PMID_29198722_p_Arg913Ter_Affected_Individual_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPOUT1:PMID_39962046_L_II_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.24206349205542327,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBXO7:PMID_18513678_individual_5039",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MSL2:PMID_38815585_Individual_16",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_37196654_Individual_8",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "KCNH5:PMID_36307226_Proband_16",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "BAG3:PMID_28754666_75553_0110",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_EG0573P",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.8604545145199856,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WDR83OS:PMID_39471804_Family_8_Saudi_Proband_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "TMEM216:PMID_39191256_T_22",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SNF8:PMID_38423010_individual_D1",
+      "faithfulness": 0.46875,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "POLR1A:PMID_36917474_Patient_2",
+      "faithfulness": 0.48484848484848486,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TMEM216:PMID_39191256_T_34",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SPTAN1:PMID_35150594_F_II_1",
+      "faithfulness": 0.2,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RGS9BP:PMID_19818506_Patient_1A",
+      "faithfulness": 0.5,
+      "context_precision": 0.8895926496193348,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_SP_L",
+      "faithfulness": 0.4375,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "AHDC1:PMID_34229113_Patient_2",
+      "faithfulness": 0.1,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COQ4:PMID_36047608_Patient_3_F2_II_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_F2594S_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_9b",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_Patient_1_from_Kikuiri_et_al",
+      "faithfulness": 0.4,
+      "context_precision": 0.7345286576095477,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_G2550R_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TSC2:PMID_8825048_index_case",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.7073934837021992,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TUBA4A:PMID_38884572_Family_1_Patient_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_102",
+      "faithfulness": 0.4,
+      "context_precision": 0.6585164835070761,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NF1:PMID_29290338_Family_SGR_RGEA_individual_RS",
+      "faithfulness": 0.0,
+      "context_precision": 0.8010076757918703,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD2_II_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_37196654_Individual_2",
+      "faithfulness": 0.3,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_27171548_100146",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_97",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UBR5:PMID_39721588_Individual_25",
+      "faithfulness": 0.08823529411764706,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_CHCO_03",
+      "faithfulness": 0.16666666666666666,
+      "context_precision": 0.26666666665333333,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MAL:PMID_35217805_IV3",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.19999999998,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_70886_from_Asadollahi_et_al",
+      "faithfulness": 0.0,
+      "context_precision": 0.9186440931165438,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FBXO11:PMID_38740982_Family_1_Individual_1_2",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_D34V_2",
+      "faithfulness": 0.4,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "APOA1:PMID_12050338_patient_16",
+      "faithfulness": 0.42857142857142855,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_16",
+      "faithfulness": 0.3409090909090909,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ACBD6:PMID_37951597_Family_10_Subject_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RFC4:PMID_39106866_Individual_2",
+      "faithfulness": 0.46875,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_EG0931P",
+      "faithfulness": 0.5,
+      "context_precision": 0.7461805555462283,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WWOX:PMID_30356099_Patient_15",
+      "faithfulness": 0.5,
+      "context_precision": 0.94999999997625,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "FTH1:PMID_37660254_Patient_4",
+      "faithfulness": 0.0,
+      "context_precision": 0.14285714284285714,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD6_IV_7",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NF1:PMID_29290338_Family_MIL_R361_018_individual_F",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9155531202808541,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_P_09",
+      "faithfulness": 0.14705882352941177,
+      "context_precision": 0.7299191606386046,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "ZMYM3:PMID_24721225_III_1",
+      "faithfulness": 0.5,
+      "context_precision": 0.24206349205542327,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC6A17:PMID_25704603_Family_M328_individual_IV_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_31",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CRELD1:PMID_37947183_Family_F10_individual_P13",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "KDM6B:PMID_31124279_Patient_4",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.8333333332916666,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "PNPLA6:PMID_24355708_IHG25190_individual_2",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_37196654_Individual_19",
+      "faithfulness": 0.5,
+      "context_precision": 0.14090909090204548,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NDC1:PMID_39003500_Family_3_individual_1",
+      "faithfulness": 0.18181818181818182,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_37196654_Individual_77",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "MUSK:PMID_19949040_Patient_3",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_31124279_Patient_11",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_23661368_Family_8_II_1",
+      "faithfulness": 0.16666666666666666,
+      "context_precision": 0.2916666666520833,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CRELD1:PMID_37947183_Family_F2_individual_P2",
+      "faithfulness": 0.23333333333333334,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "TBCB:PMID_40856104_Participant_7_5",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NF1:PMID_20513137_individual_NF01465_GSM_GSM492681",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.8624322371438555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TUBA4A:PMID_37418012_Family_1_IV_7",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "FAM177A1:PMID_38767059_Alazami_et_al_indiv_5",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_34722527_individual_MOL0358_3",
+      "faithfulness": 0.5,
+      "context_precision": 0.7333333333186667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KDM6B:PMID_31124279_Patient_5",
+      "faithfulness": 0.1,
+      "context_precision": 0.18253968253055555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC4A10:PMID_37459438_Family_3_II_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_23505306_Patient_9",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.5249999999868751,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SPTAN1:PMID_35150594_G_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_32521962_P2",
+      "faithfulness": 0.25,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "KCNT1:PMID_23086397_Patient_1",
+      "faithfulness": 0.13333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "GNB1:PMID_27108799_Individual_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TAF4:PMID_35904126_Proband_4",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "KDM6B:PMID_37196654_Individual_58_DDD_305030",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F9_II_1",
+      "faithfulness": 0.41935483870967744,
+      "context_precision": 0.1772727272668182,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NF1:PMID_29290338_Family_UAB_R1928_individual_RS",
+      "faithfulness": 0.15555555555555556,
+      "context_precision": 0.9648015050909523,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_12920066_small_family_10CRD",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "GNB1:PMID_27108799_Individual_11",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26514728_Patient_11",
+      "faithfulness": 0.5161290322580645,
+      "context_precision": 0.7111111111022222,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NIT1:PMID_38430071_F4_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ESAM:PMID_36996813_Individual_11",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CAPN1:PMID_27153400_Family_B_IV_9",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "KCNH5:PMID_36307226_Proband_3",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_22",
+      "faithfulness": 0.0,
+      "context_precision": 0.17361111110243055,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CAPRIN1:PMID_35979925_Case_12",
+      "faithfulness": 0.0,
+      "context_precision": 0.99999999995,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "HNRPA2B1:PMID_35484142_F4_P4",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.32499999998375,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC9A6:PMID_39810750_Proband_1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "COL11A1:PMID_28971234_child",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.26666666665333333,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "UBR5:PMID_39721588_Individual_21",
+      "faithfulness": 0.0625,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CAPRIN1:PMID_35979925_Case_9",
+      "faithfulness": 0.22580645161290322,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "BAG3:PMID_31853710_III_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ACBD6:PMID_37951597_Family_28_Subject_2",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "AHDC1:PMID_29696776_Patient_4",
+      "faithfulness": 0.06451612903225806,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SNF8:PMID_38423010_individual_C2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "OFD1:PMID_11950863_Individual_II_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.999999999975,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TMEM216:PMID_39191256_A_1a",
+      "faithfulness": 0.26666666666666666,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "NF1:PMID_26178382_UAB_R7705",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.861568078949143,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_25951140_Case_32",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_29390993_Patient_P1",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.3833333333205555,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TANGO2:PMID_26805781_Family_8_Subject_8_II_1",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_26047050_Patient_SRF115",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_EG1414P",
+      "faithfulness": 0.45161290322580644,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "RPGRIP1:PMID_26047050_Patient_SRF153",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "CAPRIN1:PMID_35979925_Case_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_8",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "TANGO2:PMID_26805782_F2_II_2",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_112",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "WBP4:PMID_37963460_Family_3_individual_II_2",
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_4a",
+      "faithfulness": 0.03333333333333333,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "TUBA4A:PMID_37418012_Family_1_IV_1",
+      "faithfulness": 0.0,
+      "context_precision": 0.12878787878143938,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NKX6-2:PMID_29388673_Fam_3_III_1",
+      "faithfulness": 0.06666666666666667,
+      "context_precision": 0.24206349205542327,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SLC4A10:PMID_38054405_Family_3_individual_P4",
+      "faithfulness": 0.5,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+      "faithfulness": 0.1,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_SATB2_22_from_Zarate_et_al_2018a",
+      "faithfulness": 0.0,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_Spo4",
+      "faithfulness": 0.43333333333333335,
+      "context_precision": 0.8611111110895834,
+      "context_recall": 1.0
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F1_II_1",
+      "faithfulness": 0.0625,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "case_id": "ATP13A2:PMID_20310007_40_year_old_man",
+      "faithfulness": 0.4666666666666667,
+      "context_precision": 0.9999999999666667,
+      "context_recall": 1.0
+    }
+  ]
+}

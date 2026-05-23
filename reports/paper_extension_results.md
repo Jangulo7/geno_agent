@@ -1377,23 +1377,104 @@ the fallback rate is **exactly 0 (0/282)**. The headline numbers in
 metric that matters (the fair cohort). This addresses a likely
 reviewer concern about LLM-in-the-loop reproducibility.
 
-### 16.5 Paper-ready Discussion paragraph
+### 16.5 RAGAS results (Thread C, ✅ landed 2026-05-23)
 
-> *geno_agent (Cell S) is the only system in this comparison that
+RAGAS v0.3.9 evaluation completed in 167.8 min on n = 600 stratified
+Cell S sidecars (150 per MONDO category, seed 42), using
+`gpt-4o-2024-08-06` as the LLM judge via OpenAI API at
+`MAX_CONTEXTS_PER_CASE = 20` and `max_workers = 8`. Cost ~$95
+(within the $100 budget).
+
+**Aggregate scores:**
+
+| Metric | n | Mean | Median | Min | Max |
+|---|---:|---:|---:|---:|---:|
+| context_precision | 578 | 0.650 | **0.794** | 0.000 | 1.000 |
+| context_recall | 600 | 0.796 | **1.000** | 0.000 | 1.000 |
+| faithfulness | 600 | 0.286 | **0.433** | 0.000 | 1.000 |
+
+**Faithfulness predicts top-1 correctness** (this is the load-bearing finding):
+
+| Subset of n=600 | n | Faithfulness mean | Faithfulness median |
+|---|---:|---:|---:|
+| top-1 correct | 437 | **0.333** | **0.467** |
+| top-1 wrong | 163 | 0.160 | 0.067 |
+
+A 33-pp gap in top-1 correctness rate between zero-faithfulness cases
+(46.5 % correct) and non-zero (79.9 % correct) makes faithfulness a
+**useful automated correctness flag** for clinical deployment:
+low-faithfulness predictions can be auto-triaged for human review.
+
+**Faithfulness is higher on the fair-comparison cohort:**
+
+| Subset | n | Mean | Median |
+|---|---:|---:|---:|
+| overlap_absent (fair) | 168 | **0.310** | **0.433** |
+| overlap_present | 432 | 0.276 | 0.400 |
+
+geno_agent's reasoning is more grounded on the cases it isn't benefiting
+from annotation-overlap on. Consistent with §16.3's rationale-coverage
+finding (94.0 % substantive on fair vs 76.9 % on overlap-present).
+
+**Faithfulness distribution (n=600):**
+
+| Bucket | n | % | |
+|---|---:|---:|---|
+| 0.00 | 127 | 21.2 % | ████████████████████████ |
+| (0, 0.10] | 87 | 14.5 % | ███████████████ |
+| (0.10, 0.25] | 60 | 10.0 % | ████████████ |
+| **(0.25, 0.50]** | **308** | **51.3 %** | **█████████████████████████████████████████████████████████████** |
+| (0.50, 0.75] | 16 | 2.7 % | ███ |
+| 1.00 | 2 | 0.3 % | |
+
+The modal bucket is (0.25, 0.50] — over half of cases get partial credit
+on faithfulness (typically 1 of 2-3 LEA claims literally supported by
+chunks). The 21.2 % zero-faithfulness tail is concentrated in
+**top-1-wrong cases** (matching the correctness-prediction finding above).
+
+**Zero-faithfulness rate by MONDO category:**
+
+| Category | n | zero-faith rate |
+|---|---:|---:|
+| **metabolic** | 150 | **12.0 %** (best) |
+| immunological | 150 | 17.3 % |
+| developmental | 150 | 27.3 % |
+| neurological | 150 | 28.0 % |
+
+Metabolic-on-fair-cohort remains the flagship subgroup across every
+dimension measured (top-1 = 0.900, +0.144 vs LIRICAL, 94.8 % rationale
+substantive, 12 % zero-faithfulness — best on all four).
+
+**Caveat (honest, must appear in the paper):** RAGAS faithfulness is
+computed against the contexts shown to the judge, capped at 20 chunks
+per case to fit the $100 budget. LEA itself saw up to 45 chunks
+(top-3 per top-15 genes), so chunks 21-45 — which the judge could not
+see — may support some claims marked unsupported. The true LEA-against-
+its-own-context faithfulness is therefore likely higher than 0.286
+mean. Future work: rerun faithfulness only at MAX_CONTEXTS=45 (~$50
+additional spend) to bound the true value, or rerun with inline
+PMCID-citation prompting so each LEA claim self-attributes to a
+specific chunk.
+
+### 16.6 Paper-ready Discussion paragraph (REVISED with RAGAS numbers)
+
+> *Cell S (geno_agent) is the only system in this comparison that
 > produces evidence-traceable rankings: each ranked gene is accompanied
-> by an LEA-generated rationale (median 80 chars) citing the
+> by an LEA-generated rationale (median 80 chars) backed by the
 > open-access PMC passages the model considered (mean 2.81 unique
 > PMCIDs per top-ranked gene). On the fair-comparison cohort
 > (n = 282, overlap-absent), 94.0 % of cases have a substantive
 > rationale for the causal gene (vs 76.9 % on overlap-present). The
 > LEA deterministic-baseline fallback rate is 0.2 % overall and 0.0 %
-> on the fair cohort. LIRICAL and Exomiser produce numeric scores
-> only; an equivalent rationale-quality metric cannot be computed for
-> them. Clinical-reviewer interpretability is a deployment-relevant
-> property that geno_agent uniquely satisfies among the literature-aware
-> systems tested. RAGAS faithfulness on the LEA rationales
-> (n = 600 stratified, GPT-4o judge) = **TBD** — pending Thread C run
-> completion (~2-3 h wall, ~$95 OpenAI spend).*
+> on the fair cohort. RAGAS evaluation (n = 600 stratified, GPT-4o
+> judge) yielded mean faithfulness 0.286 (median 0.433), context
+> precision 0.650, and context recall 0.796. Faithfulness is a
+> strong correctness predictor: cases scoring 0 faithfulness have a
+> 46.5 % top-1 accuracy rate vs 79.9 % for cases with > 0
+> faithfulness — a 33-pp gap that supports clinical-triage workflows
+> in which low-faithfulness outputs are auto-flagged for human
+> review. LIRICAL and Exomiser produce numeric scores only; an
+> equivalent rationale-quality metric cannot be computed for them.*
 
 ### 16.6 Implementation files (Thread G structural part, ✅ landed)
 
@@ -1408,9 +1489,14 @@ reviewer concern about LLM-in-the-loop reproducibility.
 27. **81.5 % of all cases** have a substantive LEA rationale for the causal gene; on the fair-comparison overlap-absent cohort this rises to **94.0 %** — a 17-pp lift consistent with Thread D's accuracy story (LEA performs better *and* explains itself better on the cohort that matters).
 28. **Metabolic-on-overlap-absent is geno_agent's flagship subgroup** across every dimension we measure: highest top-1 accuracy (0.900), largest top-1 advantage over LIRICAL (+0.144), and highest rationale-substantiveness rate (94.8 %).
 29. **LEA fallback rate is 0.2 % overall and 0.0 % on the fair cohort** — addresses the "is the LLM-in-the-loop reproducible?" reviewer concern with concrete numbers.
+30. **RAGAS faithfulness on Cell S** (n = 600 stratified, GPT-4o judge): mean 0.286 / median 0.433. Context precision 0.650, recall 0.796. Cost ~$95, within the $100 budget.
+31. **Faithfulness is a strong correctness predictor**: cases at faithfulness = 0 have 46.5 % top-1 correct; cases at faithfulness > 0 have 79.9 % top-1 correct — a 33-pp gap that supports clinical-triage workflows where low-faithfulness predictions are auto-flagged for human review.
+32. **Faithfulness is higher on the fair cohort** (0.310 mean vs 0.276 on overlap-present) — geno_agent's reasoning is more grounded when it isn't benefiting from annotation overlap.
+33. **Metabolic remains the flagship across every dimension**: lowest zero-faithfulness rate (12.0 %) on top of top-1 = 0.900, +0.144 vs LIRICAL, and 94.8 % rationale substantiveness.
+34. **Honest caveat:** faithfulness was computed against ≤ 20 contexts per case (budget cap), whereas LEA itself saw up to 45 chunks. Chunks 21-45 — invisible to the judge — may support claims marked unsupported, so the measured 0.286 is plausibly a lower bound on the true value. Future work: rerun at MAX_CONTEXTS = 45 (~$50) or use inline-citation prompting.
 
 ---
 
-*Thread G section (structural part) — 2026-05-23. Local analysis
-landed; RAGAS faithfulness number will be filled in §16.5 when the
-Cell S n=600 RAGAS run completes (~2-3 h, ~$95).*
+*Thread G section — 2026-05-23. Both structural and RAGAS-judged
+components landed. RAGAS spend $95 / $100 budget. Faithfulness number
+plugged into §16.5 and §16.6 Discussion paragraph.*
