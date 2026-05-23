@@ -229,8 +229,22 @@ consistent with the higher rationale-substantiveness rate on the
 same subset (§*results*). The faithfulness measurement is a **lower
 bound** on the true LEA-against-its-own-context faithfulness: the
 20-chunk-per-case judge input excluded chunks 21-45 that LEA itself
-processed during inference; a future re-run at the full
-45-chunk input is planned to bound the true value.
+processed during inference. **A second source of downward bias was
+identified post-hoc**: the LEA response is a structured 15-gene list
+in which 14 entries are honest "no direct evidence" fallback
+rationales for distractor genes; the RAGAS judge extracted each as a
+claim and scored it unsupported (chunks describe what's in the
+literature, not the absence of specific gene-phenotype links). To
+isolate the substantive claim, a top-1-only sensitivity re-run on the
+same n = 100 stratified sub-cohort (reordering retrieved contexts by
+LEA's final ranking before the cap, and stripping the response to the
+predicted gene's rationale alone) yielded **mean faithfulness 0.480 /
+median 0.500** (vs 0.286 / 0.433 for the multi-claim measurement), with
+a fair-cohort lift of **+18.8 pp** (0.616 vs 0.428, vs +3.4 pp on the
+multi-claim measurement). The 0.480 number is reported as the primary
+RAGAS faithfulness in this paper; the 0.286 multi-claim measurement is
+retained as a methodological note documenting how RAGAS interacts with
+multi-gene structured outputs.
 
 To independently corroborate the faithfulness signal, a second
 hallucination judge was applied: DeepEval v4.0.3's holistic

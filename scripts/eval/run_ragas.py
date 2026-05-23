@@ -106,7 +106,7 @@ def _build_question(sidecar: dict) -> str:
     )
 
 
-def _build_contexts(sidecar: dict) -> list[str]:
+def _build_contexts(sidecar: dict, reorder_by_lea_rank: bool = False) -> list[str]:
     """Build the retrieved-context list for RAGAS.
 
     Strategy: prefer the LEA evidence (top-15 genes x top-3 chunks)
@@ -115,6 +115,12 @@ def _build_contexts(sidecar: dict) -> list[str]:
 
     Args:
         sidecar: Sidecar JSON dict.
+        reorder_by_lea_rank: If True, order genes by LEA's final
+            ranking instead of CE-rerank order. This guarantees
+            LEA-top-1's chunks are in the context window even when
+            MAX_CONTEXTS truncates. Required for top-1-only faithfulness
+            (otherwise the top-1 gene's chunks may be excluded — bug
+            documented in commit 7401b3b's follow-up analysis).
 
     Returns:
         List of context strings, ordered by gene-then-chunk. Total
@@ -126,6 +132,19 @@ def _build_contexts(sidecar: dict) -> list[str]:
     if not evidence:
         # Cell L fallback: use the full per-gene retrieval (cap aggressively).
         evidence = sidecar.get("retrieved_per_gene", {})
+
+    # Optional: re-order the (gene, chunks) iteration by LEA's final ranking
+    # so top-1's chunks come first.
+    if reorder_by_lea_rank:
+        parsed = lea_log.get("lea_response_parsed") or []
+        if isinstance(parsed, list):
+            rank_of = {e.get("gene"): i for i, e in enumerate(parsed) if isinstance(e, dict)}
+            evidence = dict(
+                sorted(
+                    evidence.items(),
+                    key=lambda kv: rank_of.get(kv[0], 10_000),
+                )
+            )
 
     contexts: list[str] = []
     for gene, chunks in evidence.items():
@@ -145,7 +164,7 @@ def _build_contexts(sidecar: dict) -> list[str]:
     return contexts
 
 
-def _build_answer(sidecar: dict) -> str | None:
+def _build_answer(sidecar: dict, top1_only: bool = False) -> str | None:
     """Build the LLM-answer string for RAGAS.
 
     For Cell S, this is LEA's raw text response (the reasoning the LLM
@@ -154,12 +173,34 @@ def _build_answer(sidecar: dict) -> str | None:
 
     Args:
         sidecar: Sidecar JSON dict.
+        top1_only: If True, return only the LEA-top-1 gene's rationale
+            as a single substantive claim, dropping the 14 lower-ranked
+            "no evidence" fallback rationales. This bounds the true
+            LEA faithfulness without the multi-claim measurement
+            artifact in which honest "no direct evidence" rationales
+            for distractor genes are scored as unsupported claims.
 
     Returns:
         Answer text or ``None`` if no LEA response is available
         (Cell L, or Cell S fallback cases).
     """
     lea_log = sidecar.get("lea_log") or {}
+
+    if top1_only:
+        parsed = lea_log.get("lea_response_parsed") or []
+        if not isinstance(parsed, list) or not parsed:
+            return None
+        top1 = parsed[0]
+        gene = top1.get("gene", "?")
+        conf = top1.get("confidence", 0.0)
+        rationale = (top1.get("rationale") or "").strip()
+        if not rationale:
+            return None
+        # Compose as a single declarative statement focused on the substantive
+        # top-1 claim. Skip the JSON ranking wrapper and the 14 distractor
+        # rationales.
+        return f"The most likely causal gene is {gene} (confidence {conf:.2f}). {rationale}"
+
     raw = lea_log.get("lea_response_raw")
     if not raw:
         return None
@@ -201,20 +242,23 @@ def _load_sidecars(responses_dir: Path, limit: int | None) -> list[dict]:
     return sidecars
 
 
-def _build_sample(sidecar: dict, metric_names: list[str]):
+def _build_sample(sidecar: dict, metric_names: list[str], top1_only: bool = False):
     """Build a RAGAS SingleTurnSample from one sidecar.
 
     Args:
         sidecar: One sidecar JSON.
         metric_names: Which metrics will be computed (controls what
             fields must be populated).
+        top1_only: If True, strip the response to LEA-top-1's rationale
+            only AND reorder contexts so top-1's chunks come first.
+            Use for the top-1-only faithfulness sensitivity analysis.
 
     Returns:
         ragas.SingleTurnSample or None if required fields missing.
     """
     from ragas import SingleTurnSample
 
-    contexts = _build_contexts(sidecar)
+    contexts = _build_contexts(sidecar, reorder_by_lea_rank=top1_only)
     if not contexts:
         return None  # cannot evaluate without contexts
 
@@ -230,7 +274,7 @@ def _build_sample(sidecar: dict, metric_names: list[str]):
     # Faithfulness + answer_relevance need a free-text answer.
     needs_answer = any(m in {"faithfulness", "answer_relevance"} for m in metric_names)
     if needs_answer:
-        answer = _build_answer(sidecar)
+        answer = _build_answer(sidecar, top1_only=top1_only)
         if answer is None:
             # Cell L: no answer. If only retrieval metrics requested, OK.
             # If faithfulness/answer_relevance requested but no answer,
@@ -291,6 +335,16 @@ def main() -> int:
         type=Path,
         default=None,
         help="test_cases.jsonl for per-case category labels (needed by --stratified-n-per-cat).",
+    )
+    parser.add_argument(
+        "--top1-only",
+        action="store_true",
+        help="Faithfulness sensitivity mode: strip the LEA response to the "
+        "top-1 gene's rationale only AND reorder contexts so top-1's "
+        "chunks come first. Bounds the true LEA faithfulness without "
+        "the multi-claim measurement artifact (where 14 honest 'no "
+        "direct evidence' fallback rationales for distractor genes "
+        "are scored as unsupported claims).",
     )
     parser.add_argument(
         "--max-concurrency",
@@ -399,7 +453,7 @@ def main() -> int:
     case_ids = []
     skipped = []
     for sc in sidecars:
-        sample = _build_sample(sc, requested)
+        sample = _build_sample(sc, requested, top1_only=args.top1_only)
         if sample is None:
             skipped.append(sc.get("case_id", "?"))
             continue

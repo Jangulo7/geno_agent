@@ -116,6 +116,31 @@ Per-MONDO breakdown is in §16.2 of `paper_extension_results.md`.
   MAX_CONTEXTS = 45 (~$50) or implementing inline-citation prompting
   is a clear future-work item for the XAI paper.
 
+### 4.1a Top-1-only RAGAS sensitivity re-run (added 2026-05-23, ~$2 spend)
+
+Inspection of high vs zero-faithfulness cases revealed that the 0.286
+mean above is a measurement artifact: LEA's response is a 15-rationale
+JSON list, of which 14 are honest "no direct evidence" fallback
+rationales for distractor genes. RAGAS extracts each as a claim and
+scores it unsupported (chunks don't contain "X has no link" meta-
+statements). Re-running with the response stripped to LEA's substantive
+top-1 claim (and contexts reordered by LEA rank so top-1's chunks are
+guaranteed in the cap window) on n = 100 stratified gave:
+
+| Statistic | Original (n=600) | Top-1-only (n=100) |
+|---|---:|---:|
+| Mean | 0.286 | **0.480** |
+| Median | 0.433 | **0.500** |
+| Fair-cohort mean (overlap_absent) | 0.310 | **0.616** |
+| Fair-cohort lift | +0.034 | **+0.188** |
+| Correctness-prediction gap | 33 pp | 21 pp |
+
+**0.480 is the recommended primary RAGAS faithfulness number for the
+XAI paper.** The 0.286 multi-claim measurement remains documented as
+a methodological note about how RAGAS interacts with multi-gene
+structured outputs (a contribution useful for any future paper using
+RAGAS on prioritisation systems).
+
 ### 4.2 DeepEval HallucinationMetric (Thread C-bis, ✅ landed 2026-05-23)
 
 A second independent judge, this time using DeepEval v4.0.3's

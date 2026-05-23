@@ -455,6 +455,35 @@ value (rerun at MAX_CONTEXTS=45, ~$50, or inline-citation prompting)
 is future work; the 33-pp correctness-prediction signal stands
 regardless of the absolute floor.
 
+**RAGAS top-1-only sensitivity re-run (added 2026-05-23 19:07Z):**
+Investigation of high vs zero-faithfulness cases on the original n=600
+run revealed that ~70 % of the LEA response is a JSON list of 14
+"no direct evidence" rationales for distractor genes that RAGAS scores
+as unsupported claims (each distractor rationale claims absence of
+evidence — and chunks don't literally contain "X has no link"
+statements). Re-running with `--top1-only` (strip response to LEA's
+substantive top-1 claim + reorder contexts by LEA rank so top-1's
+chunks are guaranteed in the cap window) on n=100 stratified gave:
+
+| Statistic | Original (n=600) | Top-1-only (n=100) | Paired Δ on n=66 |
+|---|---:|---:|---:|
+| Mean | 0.286 | **0.480** | +0.229 |
+| Median | 0.433 | **0.500** | +0.200 |
+| Fair-cohort mean | 0.310 | **0.616** | +0.306 |
+| Fair-cohort lift | +0.034 | **+0.188** | +0.154 |
+
+68 % of cases improved, 12 % worsened. The (0.5, 1.0) range now holds
+44 % of cases (vs 1 % in the original). **The 0.480 number is the
+recommended primary measurement for the paper**; the original 0.286
+is retained as a documented methodological caveat (the multi-claim
+artifact is a known RAGAS-on-multi-gene-output pattern that warrants
+mention in any paper using RAGAS on rare-disease prioritisation
+output).
+
+The correctness-prediction signal also reproduces (top-1-only > 0.5
+vs ≤ 0.5: 82.8 % vs 62.2 % top-1 correct, 21-pp gap), confirming the
+auto-triage-flag deployment story.
+
 **DeepEval HallucinationMetric on n=100 sensitivity subset (added 2026-05-23):**
 A second independent LLM judge (DeepEval v4.0.3 with the same
 gpt-4o-2024-08-06 model, MAX_CONTEXTS=45) was run on a stratified n=100
