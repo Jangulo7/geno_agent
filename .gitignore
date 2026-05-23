@@ -64,3 +64,8 @@ yarn-error.log*
 # Aggregate + per-case scores live in data/eval_1050/ragas_cell_S_n600_summary.json (101 KB, committed).
 data/eval_1050/ragas_cell_S_n600.json
 data/eval_1050/ragas_top1only_cell_S_n100.json
+
+# Local agent state — Claude Code session state (do not commit)
+.claude/
+# DeepEval cache (created on import; per-machine, not reproducibility-critical)
+.deepeval/
