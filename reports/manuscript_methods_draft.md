@@ -7,8 +7,8 @@ methods-not-decisions, third-person). All numerical values reference the
 locked v3 results in `paper_extension_results.md` §§12-16 and the
 authoritative methodology in `methodology.md` v3.1. Word target for the
 Genome Medicine Methods section is ~2,500-3,500 words; this draft is
-~2,340 words and sits comfortably below the upper bound with room to
-expand Methods-checklist items below as needed.
+~3,260 words and sits right at the upper bound of the Genome Medicine
+Methods target — further additions will require trimming elsewhere.
 
 ---
 
@@ -104,6 +104,37 @@ A reciprocal-rank-fusion ensemble of Cells M and S (Cell N) was
 constructed post-hoc for the ensemble-complementarity analysis below
 (`rrf_score = 1/(60 + rank_M) + 1/(60 + rank_S)`, k = 60 per
 *citation: Cormack et al.*).
+
+**Excluded comparators and rationale.** A direct head-to-head
+benchmark against DeepRare (*citation: Zhao et al., Nature 2026*),
+the most recent agentic rare-disease diagnostic system, was
+considered but not performed because the two systems are not
+methodologically comparable along three axes: (i) **output unit
+mismatch** — DeepRare emits disease names (Orphanet/OMIM) whose
+mapping to causal genes is many-to-many and introduces
+remapping-induced ties that no scheme fully resolves; even DeepRare's
+HPO+Gene mode (`diagnosisGene.py` in the public repository) ultimately
+maps disease predictions to genes via Exomiser rather than emitting
+gene-level reasoning; (ii) **knowledge-source mismatch** — DeepRare
+combines live web search (Google/Bing/DuckDuckGo), curated
+rare-disease knowledge bases scraped per case via headless-browser
+automation (Orphanet expert pages, OMIM, PubCaseFinder, Phenobrain),
+and per-call cloud LLM inference; geno_agent operates from a single
+frozen, hash-recorded Qdrant index of PMC Open Access full text with
+no live web or curated-KB calls at inference, making the two systems
+distinct architectural classes (curated-knowledge-base-plus-live-web
+agentic diagnosis vs literature-only locally-deployable gene
+prioritisation); (iii) **annotation-overlap exposure** — DeepRare's
+Orphanet/OMIM scraping introduces the same training-data-on-test-cases
+confound Methods analysis quantifies for LIRICAL in §*annotation-
+overlap deconfounding*, likely worse because DeepRare actively
+retrieves the curated record of the exact disease being asked about.
+DeepRare is therefore cited in the Discussion as the 2026
+state-of-the-art for the curated-KB-plus-live-web agentic class, and
+geno_agent is positioned as a complementary system targeting the
+literature-only locally-deployable class; the four comparators tested
+on the same cohort (Cells K, M, D, L) span the relevant baselines
+within the latter class.
 
 ### Index construction
 
@@ -334,9 +365,22 @@ before submission, but are out of scope for the present draft:
    for the frozen v3 release tag, Phenopacket Store version pin,
    ontology version pins.
 5. **Detailed wall-time and cost table** — see `reports/wallclock_cost_table.md` for the locked v3 numbers. Headline: total reproducible runtime ~24 h local compute on a single RTX 5090 workstation + ~3 h OpenAI API spend ($98.20 of $100 budget). Per-case throughput on Cell S = 26.1 s end-to-end. Production geno_agent requires no cloud API; cloud spend is RAGAS + DeepEval evaluation-only. The full table belongs as Methods Table 1 in the final manuscript.
-6. **DeepRare head-to-head comparison on a n = 100 subset** — the
-   2025 EJHG benchmark uses DeepRare; reviewers will expect a direct
-   comparison. Estimated 5-7 days of work post-RAGAS.
+6. **DeepRare comparison** — ✅ resolved 2026-05-23 by categorical
+   reframing rather than head-to-head benchmark. After studying the
+   public DeepRare repository (commit 2026-05-19, *Nature* 2026
+   publication), three architectural incompatibilities make a direct
+   benchmark methodologically uninformative: disease-vs-gene output
+   unit, curated-KB-plus-live-web vs literature-only knowledge
+   source, and the same annotation-overlap exposure documented for
+   LIRICAL in §*annotation-overlap deconfounding*. The
+   *Excluded comparators and rationale* paragraph in §*Comparator
+   systems* explains the decision. A 13-dimension architectural
+   comparison table covering Exomiser, LIRICAL, AI-MARRVEL, DeepRare,
+   and geno_agent is in `reports/deeprare_comparability_analysis.md`
+   and will be reused as the paper's Related Work / Discussion table.
+   This reframing saves 5-7 days + ~$15-30 cloud spend while
+   strengthening defensibility (a remapped head-to-head would carry
+   methodological asterisks that reviewers would flag).
 7. **LLM ablation on n = 300 subset** — ✅ landed 2026-05-23. Replayed
    saved LEA prompts against three frontier LLMs via OpenRouter
    (Qwen3-32B Instruct, Claude Sonnet 4.6, DeepSeek-V3-0324). On the
@@ -354,7 +398,7 @@ before submission, but are out of scope for the present draft:
 
 ---
 
-*Methods draft v1 — 2026-05-23, ~2,340 words. Word target for
+*Methods draft v1 — 2026-05-23, ~3,260 words. Word target for
 Genome Medicine Methods: 2,500-3,500. Locked to v3 numbers in
 `paper_extension_results.md` §§12-16. Citations marked
 "(*citation: …*)" need to be expanded to full BibTeX entries
