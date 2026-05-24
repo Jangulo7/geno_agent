@@ -27,6 +27,11 @@ logs/
 *.tmp
 *.swp
 
+# Manuscript conversion preview outputs (regenerable from
+# scripts/manuscript/convert_apa_to_vancouver.py)
+reports/_vancouver_preview/
+reports/*.apa_backup_*
+
 # OS / editors
 .DS_Store
 Thumbs.db
