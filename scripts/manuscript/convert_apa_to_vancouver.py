@@ -470,11 +470,23 @@ def rewrite_inline_citations(
 
 
 def replace_reference_section(text: str, new_refs_md: str) -> str:
-    """Swap the original APA references block with the Vancouver list."""
-    match = re.search(r"^##\s+References.*?$", text, re.MULTILINE | re.IGNORECASE)
-    if not match:
+    """Swap the APA references block with the Vancouver list, preserving tail.
+
+    The References section runs until the next top-level ``## `` heading
+    (typically ``## Tables and figures``) or end-of-file. Anything after
+    the References section is preserved verbatim.
+    """
+    start_match = re.search(r"^##\s+References.*?$", text, re.MULTILINE | re.IGNORECASE)
+    if not start_match:
         return text
-    return text[: match.start()] + new_refs_md.rstrip() + "\n"
+    after_refs = text[start_match.end() :]
+    next_heading = re.search(r"^##\s", after_refs, re.MULTILINE)
+    tail = "" if next_heading is None else after_refs[next_heading.start() :]
+    head = text[: start_match.start()]
+    body = new_refs_md.rstrip() + "\n"
+    if tail:
+        body += "\n---\n\n" + tail
+    return head + body
 
 
 def write_outputs(

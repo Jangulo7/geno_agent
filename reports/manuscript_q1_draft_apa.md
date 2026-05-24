@@ -106,15 +106,17 @@ LangGraph, Human Phenotype Ontology
 Rare diseases are individually rare but collectively common: an estimated
 **3.5-5.9 % of the global population (~300 million individuals) live
 with one of the more than 7,000 currently catalogued rare conditions**
-[1, 2]. The median patient
+[Nguengang Wakap et al., 2020; Global Genes, 2020]. The median patient
 with an undiagnosed rare disease is seen by seven specialists and
-waits **5-7 years for a correct molecular diagnosis** [3]. Despite the routine clinical availability of exome and genome
+waits **5-7 years for a correct molecular diagnosis** [Boycott et al.,
+2019]. Despite the routine clinical availability of exome and genome
 sequencing, **approximately half of all sequenced rare-disease cases
 remain without a confirmed molecular diagnosis** at the time of test
-reporting [4]. A substantial fraction of these
+reporting [Clark et al., 2018]. A substantial fraction of these
 undiagnosed cases is not attributable to undetectable variants but to
 the limits of current bioinformatic tools when interpreting variants
-of uncertain significance (VUS) under the ACMG/AMP framework [5], particularly in patients whose phenotypes are atypical,
+of uncertain significance (VUS) under the ACMG/AMP framework [Richards
+et al., 2015], particularly in patients whose phenotypes are atypical,
 under-described, or characterised only by individual case reports.
 
 ### Phenotype-driven computational prioritisation
@@ -123,22 +125,23 @@ The dominant computational paradigm for rare-disease gene
 prioritisation is **phenotype-driven**: candidate genes from upstream
 variant calling are re-ranked by similarity between the patient's
 clinical phenotype and a curated database of disease-phenotype
-associations [6]. The Human Phenotype Ontology
-(HPO) [7] provides the standard vocabulary for
+associations [Jacobsen et al., 2022a]. The Human Phenotype Ontology
+(HPO) [Köhler et al., 2021] provides the standard vocabulary for
 encoding patient phenotypes, and the GA4GH Phenopacket schema
-[8] defines a computable representation of
+[Jacobsen et al., 2022b] defines a computable representation of
 clinical cases that is now widely adopted as a benchmark format,
 operationalised through the publicly-released Phenopacket Store corpus
-[9]. The PhEval framework [10]
+[Danis et al., 2025]. The PhEval framework [Bridges et al., 2025]
 provides a standardised harness for comparing phenotype-driven variant
 and gene prioritisation algorithms.
 
 Three families of phenotype-driven prioritisation tools have
-established the current state of the art. **Exomiser** [11] applies the hiPhive scoring function over a graph that
+established the current state of the art. **Exomiser** [Smedley et al.,
+2015] applies the hiPhive scoring function over a graph that
 integrates HPO disease-phenotype associations with protein-protein
-interactions. **LIRICAL** [12] computes per-gene
+interactions. **LIRICAL** [Robinson et al., 2020] computes per-gene
 likelihood ratios from the `phenotype.hpoa` annotation file under an
-explicit Bayesian framework. **Phen2Gene** [13]
+explicit Bayesian framework. **Phen2Gene** [Zhao et al., 2020]
 combines HPO term-frequency signals with curated phenotype-gene
 linkages from MEDLINE-mined sources. All three are deterministic,
 locally-deployable, and benchmark well when the causal gene is already
@@ -154,12 +157,12 @@ cycle. PubMed indexes more than **one million new biomedical articles
 per year**, of which the PubMed Central Open Access (PMC OA) subset
 alone contains more than **four million full-text articles**, with new
 phenotype-expansion case reports and functional studies appearing
-continuously [3]. The result is a structural
+continuously [Boycott et al., 2019]. The result is a structural
 inability to surface gene-phenotype associations that exist *only* in
 the unstructured literature — precisely the cases where the
 diagnostic odyssey is longest. A second, related concern documented in
 the machine-learning-for-science literature is **training-data
-leakage** [14]: when benchmark cases are drawn
+leakage** [Kapoor & Narayanan, 2023]: when benchmark cases are drawn
 from the same publications that curators use to populate the very
 knowledge bases against which the tools are evaluated, benchmark
 performance systematically overstates real-world generalisation. To
@@ -169,24 +172,29 @@ gap that the present study addresses.
 
 ### Large language models and retrieval-augmented generation
 
-Recent advances in transformer-based language models [15, 16] have enabled a class of tools that can
+Recent advances in transformer-based language models [Vaswani et al.,
+2017; Devlin et al., 2019] have enabled a class of tools that can
 reason directly from unstructured biomedical text. Pre-training on
 biomedical corpora yields domain-specific representations that
 outperform general-purpose embeddings on retrieval and downstream
-tasks [17]. Retrieval-augmented generation (RAG) [18] couples a retrieval component over a frozen knowledge
+tasks [Gu et al., 2021]. Retrieval-augmented generation (RAG) [Lewis
+et al., 2020] couples a retrieval component over a frozen knowledge
 corpus with a generative language model, allowing the model to ground
 its outputs in source documents rather than relying on parametric
 memory alone — a particularly attractive property for clinical
 applications where citation traceability and reproducibility are
-non-negotiable [19, 20]. The RAG
-literature has matured rapidly over the past two years [21], with biomedical adaptations such as BiomedRAG [22] and benchmark suites such as MIRAGE [23]
+non-negotiable [Yang R. et al., 2025; Raza et al., 2024]. The RAG
+literature has matured rapidly over the past two years [Gao et al.,
+2024], with biomedical adaptations such as BiomedRAG [Li M. et al.,
+2025] and benchmark suites such as MIRAGE [Xiong et al., 2024]
 establishing the methodology in the medical-NLP community.
 
 ### Multi-agent LLM systems in biomedicine
 
 Beyond single-pass RAG, **agentic** systems decompose tasks across
 specialised LLM agents that coordinate through a shared state graph,
-enabling iterative query refinement and self-correction [24, 25, 26]. Recent biomedical
+enabling iterative query refinement and self-correction [Wooldridge,
+2009; LangChain AI, 2024; Wei et al., 2022]. Recent biomedical
 applications and surveys are discussed in §Related Work. The
 applicability of the agentic paradigm to rare-disease gene
 prioritisation is the central architectural premise of the present
@@ -195,13 +203,14 @@ study.
 ### LLM evaluation and the hallucination problem
 
 A well-documented LLM failure mode is **hallucination** — generation
-of plausible but factually unsupported content [27] —
+of plausible but factually unsupported content [Ji et al., 2023] —
 a particularly acute concern in clinical applications. Two LLM-judge
 frameworks have emerged as the de facto standards for quantifying
-generation quality: **RAGAS** [28] for claim-level
-faithfulness against retrieved contexts and **DeepEval** [29] for holistic hallucination scoring. Both rely on a separate
+generation quality: **RAGAS** [Es et al., 2024] for claim-level
+faithfulness against retrieved contexts and **DeepEval** [Confident
+AI, 2024] for holistic hallucination scoring. Both rely on a separate
 GPT-4-class judge model; the broader LLM-as-judge practice is
-surveyed in Zheng et al. [30] and Li M. et al. [31], with the
+surveyed in Zheng et al. [2023] and Li M. et al. [2024], with the
 caveat that judge-model bias must be controlled by selecting a judge
 from a different model family than the system being judged.
 
@@ -215,7 +224,7 @@ against curated phenotype-driven tools** on a large stratified
 Phenopacket Store cohort; (ii) **no published evaluation of rare-
 disease prioritisation tools has formally stratified results by
 annotation-overlap status**, despite the well-recognised leakage
-concern [14]; and (iii) **no rare-disease
+concern [Kapoor & Narayanan, 2023]; and (iii) **no rare-disease
 prioritisation study has quantified LLM-generated rationale
 faithfulness** as a deployable triage signal. The present study
 addresses all three gaps. Specifically, we (1) describe geno_agent, a
@@ -571,7 +580,7 @@ The annotation-overlap analysis is the methodological centrepiece of
 this work. The premise — that a benchmark's curators and a competing
 tool's training data may overlap with the source publications of the
 benchmark cases themselves — is well-recognised in the rare-disease
-genomics literature [11, 12].
+genomics literature [Smedley et al., 2015; Robinson et al., 2020].
 What the present study contributes is a **per-case binary
 overlap flag** that allows direct stratification of results into
 overlap-present and overlap-absent subsets, computed from a
@@ -679,11 +688,11 @@ aggregation.
 
 Three families of rare-disease gene-prioritisation tools provide the
 relevant comparison context: (i) **classical phenotype-driven tools**
-(Exomiser [11], LIRICAL [12],
-AI-MARRVEL [32]) that operate from curated
+(Exomiser [Smedley et al., 2015], LIRICAL [Robinson et al., 2020],
+AI-MARRVEL [Mao et al., 2024]) that operate from curated
 phenotype-gene tables and produce numeric scores; (ii) **agentic
 curated-knowledge-base-plus-live-web systems**, of which DeepRare
-[33] is the current state-of-the-art,
+[Zhao W. et al., *Nature* 2026] is the current state-of-the-art,
 combining live web search,
 scraped curated-database content (Orphanet expert pages, OMIM,
 PubCaseFinder), and per-case cloud LLM inference to emit ranked
@@ -841,9 +850,9 @@ prior work has not formally evaluated.
 
 ### Curated phenotype-driven gene prioritisation
 
-The dominant family of clinical tools — Exomiser [11],
-LIRICAL [12], Phen2Gene [13], and
-the recent **AI-MARRVEL** [32] — all share three
+The dominant family of clinical tools — Exomiser [Smedley et al., 2015],
+LIRICAL [Robinson et al., 2020], Phen2Gene [Zhao et al., 2020], and
+the recent **AI-MARRVEL** [Mao et al., 2024] — all share three
 architectural choices: (i) they consume curated phenotype-gene-disease
 tables (`phenotype.hpoa`, OMIM, ClinVar, multi-omics knowledge graphs)
 as their primary signal; (ii) they emit a numeric score or likelihood
@@ -852,21 +861,23 @@ generative model. Exomiser combines hiPhive phenotype-gene scoring
 with variant deleteriousness ranking; LIRICAL applies a likelihood-
 ratio framework over `phenotype.hpoa`; AI-MARRVEL fuses multi-omics
 features with a BERT-based phenotype matcher. The **PhEval** benchmark
-[10] harmonises evaluation across this family. None
+[Bridges et al., 2025] harmonises evaluation across this family. None
 of these systems address the publication-curation lag that limits
-their applicability to recently-described phenotypes [3], and none formally stratify performance by training-data overlap
+their applicability to recently-described phenotypes [Boycott et al.,
+2019], and none formally stratify performance by training-data overlap
 — a confound this paper documents as substantial (Methods §6, Results
 §3).
 
 ### Retrieval-augmented generation in biomedicine
 
-The retrieval-augmented generation paradigm [18, 21] has been adapted to multiple biomedical tasks, but
+The retrieval-augmented generation paradigm [Lewis et al., 2020;
+Gao et al., 2024] has been adapted to multiple biomedical tasks, but
 not previously to rare-disease gene prioritisation in a deconfounded
-evaluation. **BiomedRAG** [22] applies general RAG to
-biomedical question-answering, **MIRAGE** [23]
+evaluation. **BiomedRAG** [Li et al., 2025] applies general RAG to
+biomedical question-answering, **MIRAGE** [Xiong et al., 2024]
 benchmarks RAG variants on five medical QA datasets, and **GeneGPT**
-[34] augments LLMs with NCBI Entrez tool calls for
-gene-information retrieval. **MedCPT** [35] provides a
+[Jin et al., 2024] augments LLMs with NCBI Entrez tool calls for
+gene-information retrieval. **MedCPT** [Jin et al., 2023] provides a
 biomedical contrastive cross-encoder that geno_agent uses for
 reranking. None of these systems target the rare-disease
 gene-prioritisation task end-to-end with a free-text per-gene
@@ -905,8 +916,8 @@ Conceptually, DeepRare is the 2026 state-of-the-art for the
 establishes a state-of-the-art for the **literature-only locally-
 deployable gene-prioritisation** class. Outside rare-disease
 diagnosis, related multi-agent biomedical systems include CellAgent
-for single-cell analysis [36] and the broader agentic-
-bioinformatics surveys [37, 38].
+for single-cell analysis [Xiao et al., 2024] and the broader agentic-
+bioinformatics surveys [Yang T. et al., 2025; Zhou et al., 2025].
 
 ### Position of geno_agent in the landscape
 
@@ -926,7 +937,7 @@ under a formal evaluation; the present work fills that gap.
 ### Ethics approval and consent to participate
 
 This study used **de-identified phenotypic data from the GA4GH
-Phenopacket Store v0.1.26 release** [9], which is a
+Phenopacket Store v0.1.26 release** [Danis et al., 2025], which is a
 publicly-distributed corpus of case-level phenotypes derived from
 already-published medical literature. No new patient data were
 collected, no identifiable patient information was processed, and no
@@ -1042,107 +1053,113 @@ including this one.
 
 ---
 
-## References
+## References (✅ DRAFTED — 50 cites compiled, all in-text refs resolved)
 
-1. Nguengang Wakap S, Lambert DM, Olry A, Rodwell C, Gueydan C, Lanneau V, et al. Estimating cumulative point prevalence of rare diseases: Analysis of the Orphanet database. European Journal of Human Genetics. 2020;28(2):165-173. doi:10.1038/s41431-019-0508-0.
+Provided by author 2026-05-24 (entries 1-35), extended through Related
+Work + Methods cite-pass on 2026-05-24 (entries 36-50). APA-style;
+will be re-formatted to Springer Vancouver at submission. All in-text
+`[CIT: …]` and `*citation: …*` placeholders in the manuscript draft
+and the companion Methods file have been resolved against this list.
 
-2. Global Genes. RARE facts. 2020. https://globalgenes.org/rare-disease-facts/.
+1. Boycott, K. M., Rath, A., Chong, J. X., Hartley, T., Alkuraya, F. S., Baynam, G., … Lau, L. P. L. (2019). International cooperation to enable the diagnosis of all rare genetic diseases. *American Journal of Human Genetics, 104*(3), 405–414. https://doi.org/10.1016/j.ajhg.2019.01.013
 
-3. Boycott KM, Rath A, Chong JX, Hartley T, Alkuraya FS, Baynam G, et al. International cooperation to enable the diagnosis of all rare genetic diseases. American Journal of Human Genetics. 2019;104(3):405-414. doi:10.1016/j.ajhg.2019.01.013.
+2. Bridges, Y., de Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., … Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. *BMC Bioinformatics, 26*, 87. https://doi.org/10.1186/s12859-025-06105-4
 
-4. Clark MM, Stark Z, Farnaes L, Tan TY, White SM, Dimmock D, et al. Meta-analysis of the diagnostic and clinical utility of genome and exome sequencing and chromosomal microarray in children with suspected genetic diseases. npj Genomic Medicine. 2018;3(1):16. doi:10.1038/s41525-018-0053-8.
+3. Clark, M. M., Stark, Z., Farnaes, L., Tan, T. Y., White, S. M., Dimmock, D., & Kingsmore, S. F. (2018). Meta-analysis of the diagnostic and clinical utility of genome and exome sequencing and chromosomal microarray in children with suspected genetic diseases. *npj Genomic Medicine, 3*(1), 16. https://doi.org/10.1038/s41525-018-0053-8
 
-5. Richards S, Aziz N, Bale S, Bick D, Das S, Gastier-Foster J, et al. Standards and guidelines for the interpretation of sequence variants: A joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genetics in Medicine. 2015;17(5):405-424. doi:10.1038/gim.2015.30.
+4. Confident AI. (2024). *DeepEval: The open-source LLM evaluation framework* [Computer software]. Retrieved from https://github.com/confident-ai/deepeval
 
-6. Jacobsen JOB, Kelly C, Cipriani V, Genomics England Research Consortium, Mungall CJ, Reese J, et al. Phenotype-driven approaches to enhance variant prioritization and diagnosis of rare disease. Human Mutation. 2022;43(8):1071-1081. doi:10.1002/humu.24380.
+5. Danis, D., Bamshad, M. J., Bridges, Y., Caballero-Oteyza, A., Cacheiro, P., Carmody, L. C., … Robinson, P. N. (2025). A corpus of GA4GH Phenopackets: Case-level phenotyping for genomic diagnostics and discovery. *Human Genetics and Genomics Advances, 6*(1), 100371. https://doi.org/10.1016/j.xhgg.2024.100371
 
-7. Köhler S, Gargano M, Matentzoglu N, Carmody LC, Lewis-Smith D, Vasilevsky NA, et al. The Human Phenotype Ontology in 2021. Nucleic Acids Research. 2021;49(D1):D1207-D1217. doi:10.1093/nar/gkaa1043.
+6. Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. In *Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT)* (pp. 4171–4186). https://doi.org/10.18653/v1/N19-1423
 
-8. Jacobsen JOB, Baudis M, Baynam GS, Beckmann JS, Beltran S, Buske OJ, et al. The GA4GH Phenopacket schema defines a computable representation of clinical data. Nature Biotechnology. 2022;40(6):817-820. doi:10.1038/s41587-022-01357-4.
+7. Es, S., James, J., Espinosa Anke, L., & Schockaert, S. (2024). RAGAs: Automated evaluation of retrieval augmented generation. In *Proceedings of the 18th Conference of the European Chapter of the ACL: System Demonstrations* (pp. 150–158). Association for Computational Linguistics.
 
-9. Danis D, Bamshad MJ, Bridges Y, Caballero-Oteyza A, Cacheiro P, Carmody LC, et al. A corpus of GA4GH Phenopackets: Case-level phenotyping for genomic diagnostics and discovery. Human Genetics and Genomics Advances. 2025;6(1):100371. doi:10.1016/j.xhgg.2024.100371.
+8. Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., … Wang, H. (2024). *Retrieval-augmented generation for large language models: A survey* (arXiv preprint arXiv:2312.10997). Retrieved from https://arxiv.org/abs/2312.10997
 
-10. Bridges Y, de Souza V, Cortes KG, Haendel M, Harris NL, Korn DR, et al. Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics. 2025;26:87. doi:10.1186/s12859-025-06105-4.
+9. Global Genes. (2020). *RARE facts*. Retrieved from https://globalgenes.org/rare-disease-facts/
 
-11. Smedley D, Jacobsen JOB, Jäger M, Köhler S, Holtgrewe M, Schubach M, et al. Next-generation diagnostics and disease-gene discovery with the Exomiser. Nature Protocols. 2015;10(12):2004-2015. doi:10.1038/nprot.2015.124.
+10. Gu, Y., Tinn, R., Cheng, H., Lucas, M., Usuyama, N., Liu, X., … Poon, H. (2021). Domain-specific language model pretraining for biomedical natural language processing. *ACM Transactions on Computing for Healthcare, 3*(1), 1–23. https://doi.org/10.1145/3458754
 
-12. Robinson PN, Ravanmehr V, Jacobsen JOB, Danis D, Zhang XA, Carmody LC, et al. Interpretable clinical genomics with a likelihood ratio paradigm. American Journal of Human Genetics. 2020;107(3):403-417. doi:10.1016/j.ajhg.2020.06.021.
+11. Jacobsen, J. O. B., Kelly, C., Cipriani, V., Genomics England Research Consortium, Mungall, C. J., Reese, J., … Smedley, D. (2022a). Phenotype-driven approaches to enhance variant prioritization and diagnosis of rare disease. *Human Mutation, 43*(8), 1071–1081. https://doi.org/10.1002/humu.24380
 
-13. Zhao M, Havrilla JM, Fang L, Chen Y, Peng J, Liu C, et al. Phen2Gene: Rapid phenotype-driven gene prioritization for rare diseases. NAR Genomics and Bioinformatics. 2020;2(2):lqaa032. doi:10.1093/nargab/lqaa032.
+12. Jacobsen, J. O. B., Baudis, M., Baynam, G. S., Beckmann, J. S., Beltran, S., Buske, O. J., … Robinson, P. N. (2022b). The GA4GH Phenopacket schema defines a computable representation of clinical data. *Nature Biotechnology, 40*(6), 817–820. https://doi.org/10.1038/s41587-022-01357-4
 
-14. Kapoor S, Narayanan A. Leakage and the reproducibility crisis in machine-learning-based science. Patterns. 2023;4(9):100804. doi:10.1016/j.patter.2023.100804.
+13. Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., … Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys, 55*(12), 1–38. https://doi.org/10.1145/3571730
 
-15. Vaswani A, Shazeer N, Parmar N, Uszkoreit J, Jones L, Gomez AN, et al. Attention is all you need. In: Advances in Neural Information Processing Systems. 2017.
+14. Jin, Q., Yang, Y., Chen, Q., & Lu, Z. (2024). GeneGPT: Augmenting large language models with domain tools for improved access to biomedical information. *Bioinformatics, 40*(2), btae075. https://doi.org/10.1093/bioinformatics/btae075
 
-16. Devlin J, Chang MW, Lee K, Toutanova K. BERT: Pre-training of deep bidirectional transformers for language understanding. In: Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT). 2019. doi:10.18653/v1/N19-1423.
+15. Kapoor, S., & Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. *Patterns, 4*(9), 100804. https://doi.org/10.1016/j.patter.2023.100804
 
-17. Gu Y, Tinn R, Cheng H, Lucas M, Usuyama N, Liu X, et al. Domain-specific language model pretraining for biomedical natural language processing. ACM Transactions on Computing for Healthcare. 2021;3(1):1-23. doi:10.1145/3458754.
+16. Köhler, S., Gargano, M., Matentzoglu, N., Carmody, L. C., Lewis-Smith, D., Vasilevsky, N. A., … Robinson, P. N. (2021). The Human Phenotype Ontology in 2021. *Nucleic Acids Research, 49*(D1), D1207–D1217. https://doi.org/10.1093/nar/gkaa1043
 
-18. Lewis P, Perez E, Piktus A, Petroni F, Karpukhin V, Goyal N, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. In: Advances in Neural Information Processing Systems. 2020.
+17. LangChain AI. (2024). *LangGraph: Build resilient language agents as graphs* [Computer software]. Retrieved from https://github.com/langchain-ai/langgraph
 
-19. Yang R, Ning Y, Keppo E, Liu M, Hong C, Bitterman DS, et al. Retrieval-augmented generation for generative artificial intelligence in health care. npj Health Systems. 2025;2:Article. doi:10.1038/s44401-024-00004-1.
+18. Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., … Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. In *Advances in Neural Information Processing Systems* (Vol. 33, pp. 9459–9474). Curran Associates.
 
-20. Raza MM, Venkatesh KP, Kvedar JC. Generative AI and large language models in health care: Pathways to implementation. npj Digital Medicine. 2024;7(1):62. doi:10.1038/s41746-023-00988-4.
+19. Li, H., Dong, Q., Chen, J., Su, H., Zhou, Y., Ai, Q., … Liu, Y. (2024). *LLMs-as-judges: A comprehensive survey on LLM-based evaluation methods* (arXiv preprint arXiv:2412.05579). Retrieved from https://arxiv.org/abs/2412.05579
 
-21. Gao Y, Xiong Y, Gao X, Jia K, Pan J, Bi Y, et al. Retrieval-augmented generation for large language models: A survey. arXiv preprint. 2024. https://arxiv.org/abs/2312.10997.
+20. Li, M., Kilicoglu, H., Xu, H., & Zhang, R. (2025). BiomedRAG: A retrieval augmented large language model for biomedicine. *Journal of Biomedical Informatics, 162*, 104769. https://doi.org/10.1016/j.jbi.2024.104769
 
-22. Li M, Kilicoglu H, Xu H, Zhang R. BiomedRAG: A retrieval augmented large language model for biomedicine. Journal of Biomedical Informatics. 2025;162:104769. doi:10.1016/j.jbi.2024.104769.
+21. Nguengang Wakap, S., Lambert, D. M., Olry, A., Rodwell, C., Gueydan, C., Lanneau, V., … Rath, A. (2020). Estimating cumulative point prevalence of rare diseases: Analysis of the Orphanet database. *European Journal of Human Genetics, 28*(2), 165–173. https://doi.org/10.1038/s41431-019-0508-0
 
-23. Xiong G, Jin Q, Lu Z, Zhang A. Benchmarking retrieval-augmented generation for medicine. In: Findings of the Association for Computational Linguistics: ACL 2024. 2024. doi:10.18653/v1/2024.findings-acl.372.
+22. Raza, M. M., Venkatesh, K. P., & Kvedar, J. C. (2024). Generative AI and large language models in health care: Pathways to implementation. *npj Digital Medicine, 7*(1), 62. https://doi.org/10.1038/s41746-023-00988-4
 
-24. Wooldridge M. An introduction to multiagent systems. 2nd ed. 2009.
+23. Richards, S., Aziz, N., Bale, S., Bick, D., Das, S., Gastier-Foster, J., … Rehm, H. L. (2015). Standards and guidelines for the interpretation of sequence variants: A joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. *Genetics in Medicine, 17*(5), 405–424. https://doi.org/10.1038/gim.2015.30
 
-25. LangChain AI. LangGraph: Build resilient language agents as graphs. [Computer software]. 2024. https://github.com/langchain-ai/langgraph.
+24. Robinson, P. N., Ravanmehr, V., Jacobsen, J. O. B., Danis, D., Zhang, X. A., Carmody, L. C., … Smedley, D. (2020). Interpretable clinical genomics with a likelihood ratio paradigm. *American Journal of Human Genetics, 107*(3), 403–417. https://doi.org/10.1016/j.ajhg.2020.06.021
 
-26. Wei J, Wang X, Schuurmans D, Bosma M, Ichter B, Xia F, et al. Chain-of-thought prompting elicits reasoning in large language models. In: Advances in Neural Information Processing Systems. 2022.
+25. Smedley, D., Jacobsen, J. O. B., Jäger, M., Köhler, S., Holtgrewe, M., Schubach, M., … Robinson, P. N. (2015). Next-generation diagnostics and disease-gene discovery with the Exomiser. *Nature Protocols, 10*(12), 2004–2015. https://doi.org/10.1038/nprot.2015.124
 
-27. Ji Z, Lee N, Frieske R, Yu T, Su D, Xu Y, et al. Survey of hallucination in natural language generation. ACM Computing Surveys. 2023;55(12):1-38. doi:10.1145/3571730.
+26. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., … Polosukhin, I. (2017). Attention is all you need. In *Advances in Neural Information Processing Systems* (Vol. 30, pp. 5998–6008). Curran Associates.
 
-28. Es S, James J, Espinosa Anke L, Schockaert S. RAGAs: Automated evaluation of retrieval augmented generation. In: Proceedings of the 18th Conference of the European Chapter of the ACL: System Demonstrations. 2024.
+27. Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., … Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. In *Advances in Neural Information Processing Systems* (Vol. 35, pp. 24824–24837). Curran Associates.
 
-29. Confident AI. DeepEval: The open-source LLM evaluation framework. [Computer software]. 2024. https://github.com/confident-ai/deepeval.
+28. Wooldridge, M. (2009). *An introduction to multiagent systems* (2nd ed.). Chichester, England: John Wiley & Sons.
 
-30. Zheng L, Chiang WL, Sheng Y, Zhuang S, Wu Z, Zhuang Y, et al. Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. In: Advances in Neural Information Processing Systems. 2023.
+29. Xiao, Y., Liu, J., Zheng, Y., Xie, X., Hao, J., Li, M., … Peng, J. (2024). *CellAgent: An LLM-driven multi-agent framework for automated single-cell data analysis* (bioRxiv preprint). https://doi.org/10.1101/2024.05.13.593861
 
-31. Li H, Dong Q, Chen J, Su H, Zhou Y, Ai Q, et al. LLMs-as-judges: A comprehensive survey on LLM-based evaluation methods. arXiv preprint. 2024. https://arxiv.org/abs/2412.05579.
+30. Xiong, G., Jin, Q., Lu, Z., & Zhang, A. (2024). Benchmarking retrieval-augmented generation for medicine. In *Findings of the Association for Computational Linguistics: ACL 2024* (pp. 6233–6251). Association for Computational Linguistics. https://doi.org/10.18653/v1/2024.findings-acl.372
 
-32. Mao D, Liu C, Wang L, Al-Ouran R, Deisseroth C, Pasupuleti S, et al. AI-MARRVEL — A knowledge-driven AI system for diagnosing Mendelian disorders. NEJM AI. 2024;1(5):AIoa2300009. doi:10.1056/AIoa2300009.
+31. Yang, R., Ning, Y., Keppo, E., Liu, M., Hong, C., Bitterman, D. S., … Liu, N. (2025). Retrieval-augmented generation for generative artificial intelligence in health care. *npj Health Systems, 2*, Article 2. https://doi.org/10.1038/s44401-024-00004-1
 
-33. Zhao W, Cui W, Xie J, Liu K, Tang Q, Lu P, et al. DeepRare: A multi-agent framework for rare-disease diagnosis with reasoning. Nature. 2026. https://arxiv.org/abs/2506.20430.
+32. Yang, T., Xiao, Y., Bao, Z., Hao, J., & Peng, J. (2025). The rise and potential opportunities of large language model agents in bioinformatics and biomedicine. *Briefings in Bioinformatics, 26*(6), bbaf601. https://doi.org/10.1093/bib/bbaf601
 
-34. Jin Q, Yang Y, Chen Q, Lu Z. GeneGPT: Augmenting large language models with domain tools for improved access to biomedical information. Bioinformatics. 2024;40(2):btae075. doi:10.1093/bioinformatics/btae075.
+33. Zhao, M., Havrilla, J. M., Fang, L., Chen, Y., Peng, J., Liu, C., … Wang, K. (2020). Phen2Gene: Rapid phenotype-driven gene prioritization for rare diseases. *NAR Genomics and Bioinformatics, 2*(2), lqaa032. https://doi.org/10.1093/nargab/lqaa032
 
-35. Jin Q, Kim W, Chen Q, Comeau DC, Yeganova L, Wilbur WJ, et al. MedCPT: Contrastive pre-trained transformers with large-scale PubMed search logs for zero-shot biomedical information retrieval. Bioinformatics. 2023;39(11):btad651. doi:10.1093/bioinformatics/btad651.
+34. Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., … Stoica, I. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. In *Advances in Neural Information Processing Systems* (Vol. 36). Curran Associates.
 
-36. Xiao Y, Liu J, Zheng Y, Xie X, Hao J, Li M, et al. CellAgent: An LLM-driven multi-agent framework for automated single-cell data analysis. bioRxiv preprint. 2024. doi:10.1101/2024.05.13.593861.
+35. Zhou, J., Jiang, J., Han, Z., Wang, Z., & Gao, X. (2025). Streamline automated biomedical discoveries with agentic bioinformatics. *Briefings in Bioinformatics, 26*(5), bbaf505. https://doi.org/10.1093/bib/bbaf505
 
-37. Yang T, Xiao Y, Bao Z, Hao J, Peng J. The rise and potential opportunities of large language model agents in bioinformatics and biomedicine. Briefings in Bioinformatics. 2025;26(6):bbaf601. doi:10.1093/bib/bbaf601.
+36. Jin, Q., Kim, W., Chen, Q., Comeau, D. C., Yeganova, L., Wilbur, W. J., & Lu, Z. (2023). MedCPT: Contrastive pre-trained transformers with large-scale PubMed search logs for zero-shot biomedical information retrieval. *Bioinformatics, 39*(11), btad651. https://doi.org/10.1093/bioinformatics/btad651
 
-38. Zhou J, Jiang J, Han Z, Wang Z, Gao X. Streamline automated biomedical discoveries with agentic bioinformatics. Briefings in Bioinformatics. 2025;26(5):bbaf505. doi:10.1093/bib/bbaf505.
+37. Mao, D., Liu, C., Wang, L., Al-Ouran, R., Deisseroth, C., Pasupuleti, S., … Liu, P. (2024). AI-MARRVEL — A knowledge-driven AI system for diagnosing Mendelian disorders. *NEJM AI, 1*(5), AIoa2300009. https://doi.org/10.1056/AIoa2300009
 
-39. Vasilevsky NA, Matentzoglu NA, Toro S, Flack JE, Hegde H, Unni DR, et al. Mondo: Unifying diseases for the world, by the world. medRxiv preprint. 2022. doi:10.1101/2022.04.13.22273750.
+38. Zhao, W., Cui, W., Xie, J., Liu, K., Tang, Q., Lu, P., Lin, M., Jiang, J., Liu, K., Wang, T., & Xie, X. (2026). DeepRare: A multi-agent framework for rare-disease diagnosis with reasoning. *Nature* (preprint arXiv:2506.20430). https://arxiv.org/abs/2506.20430
 
-40. Lohr SL. Sampling: Design and analysis. 3rd ed. 2022. doi:10.1201/9780429298899.
+39. Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E., Zhang, H., & Stoica, I. (2023). Efficient memory management for large language model serving with PagedAttention. In *Proceedings of the 29th Symposium on Operating Systems Principles (SOSP '23)* (pp. 611-626). Association for Computing Machinery. https://doi.org/10.1145/3600006.3613165
 
-41. Lin J, Nogueira R, Yates A. Pretrained transformers for text ranking: BERT and beyond. Morgan & Claypool. 2021. doi:10.2200/S01123ED1V01Y202108HLT053.
+40. Yang, A., Yang, B., Zhang, B., Hui, B., Zheng, B., Yu, B., … Qiu, Z. (2025). *Qwen3 technical report* (arXiv preprint arXiv:2505.09388). https://arxiv.org/abs/2505.09388
 
-42. Cormack GV, Clarke CLA, Büttcher S. Reciprocal Rank Fusion outperforms Condorcet and individual rank learning methods. In: Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '09). 2009. doi:10.1145/1571941.1572114.
+41. OpenAI. (2024). *GPT-4o system card*. OpenAI. https://openai.com/index/gpt-4o-system-card/
 
-43. Yang A, Yang B, Zhang B, Hui B, Zheng B, Yu B, et al. Qwen3 technical report. arXiv preprint. 2025. https://arxiv.org/abs/2505.09388.
+42. Lin, J., Nogueira, R., & Yates, A. (2021). *Pretrained transformers for text ranking: BERT and beyond*. Morgan & Claypool. https://doi.org/10.2200/S01123ED1V01Y202108HLT053
 
-44. Kwon W, Li Z, Zhuang S, Sheng Y, Zheng L, Yu CH, et al. Efficient memory management for large language model serving with PagedAttention. In: Proceedings of the 29th Symposium on Operating Systems Principles (SOSP '23). 2023. doi:10.1145/3600006.3613165.
+43. McNemar, Q. (1947). Note on the sampling error of the difference between correlated proportions or percentages. *Psychometrika, 12*(2), 153-157. https://doi.org/10.1007/BF02295996
 
-45. National Library of Medicine. PubMed Central Open Access subset. [Data resource]. 2024. https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/.
+44. Cormack, G. V., Clarke, C. L. A., & Büttcher, S. (2009). Reciprocal Rank Fusion outperforms Condorcet and individual rank learning methods. In *Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '09)* (pp. 758-759). Association for Computing Machinery. https://doi.org/10.1145/1571941.1572114
 
-46. McNemar Q. Note on the sampling error of the difference between correlated proportions or percentages. Psychometrika. 1947;12(2):153-157. doi:10.1007/BF02295996.
+45. Vasilevsky, N. A., Matentzoglu, N. A., Toro, S., Flack, J. E., Hegde, H., Unni, D. R., … Mungall, C. J. (2022). Mondo: Unifying diseases for the world, by the world. *medRxiv preprint*, 2022.04.13.22273750. https://doi.org/10.1101/2022.04.13.22273750
 
-47. OpenAI. GPT-4o system card. OpenAI. 2024. https://openai.com/index/gpt-4o-system-card/.
+46. National Library of Medicine. (2024). *PubMed Central Open Access subset* [Data resource]. NCBI / U.S. National Library of Medicine. https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/
 
-48. Cruz Rivera S, Liu X, Chan AW, Denniston AK, Calvert MJ. Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension. Nature Medicine. 2020;26(9):1351-1363. doi:10.1038/s41591-020-1037-7.
+47. Cruz Rivera, S., Liu, X., Chan, A.-W., Denniston, A. K., & Calvert, M. J., on behalf of the SPIRIT-AI and CONSORT-AI Working Group. (2020). Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension. *Nature Medicine, 26*(9), 1351-1363. https://doi.org/10.1038/s41591-020-1037-7
 
-49. Collins GS, Moons KGM, Dhiman P, Riley RD, Beam AL, Van Calster B, et al. TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ. 2024;385:e078378. doi:10.1136/bmj-2023-078378.
+48. Collins, G. S., Moons, K. G. M., Dhiman, P., Riley, R. D., Beam, A. L., Van Calster, B., … Logullo, P. (2024). TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. *BMJ, 385*, e078378. https://doi.org/10.1136/bmj-2023-078378
 
-50. Gallifant J, Afshar M, Ameen S, Aphinyanaphongs Y, Chen S, Cacciamani G, et al. The TRIPOD-LLM reporting guideline for studies using large language models. Nature Medicine. 2025;31(1):60-69. doi:10.1038/s41591-024-03425-5.
+49. Gallifant, J., Afshar, M., Ameen, S., Aphinyanaphongs, Y., Chen, S., Cacciamani, G., … Bates, D. W. (2025). The TRIPOD-LLM reporting guideline for studies using large language models. *Nature Medicine, 31*(1), 60-69. https://doi.org/10.1038/s41591-024-03425-5
+
+50. Lohr, S. L. (2022). *Sampling: Design and analysis* (3rd ed.). Chapman and Hall / CRC. https://doi.org/10.1201/9780429298899
 
 ---
 
