@@ -18,14 +18,14 @@ Methods target — further additions will require trimming elsewhere.
 
 Clinical cases were drawn from the Global Alliance for Genomics and
 Health (GA4GH) Phenopacket Store v0.1.26 (released 13 January 2026)
-(*citation: Phenopacket Store consortium*), which aggregates published
-rare-disease patient phenopackets curated from primary literature with
-solved (gene-level) diagnoses. Cases were retained if they met four
+[Danis et al., 2025], which aggregates published rare-disease
+patient phenopackets curated from primary literature with solved
+(gene-level) diagnoses. Cases were retained if they met four
 criteria: (i) a single causal gene supported by a SOLVED interpretation
 status, (ii) at least one Human Phenotype Ontology term (HPO; v2026-02-16,
-*citation: Köhler et al.*), (iii) a Mondo Disease Ontology mapping to one
+[Köhler et al., 2021]), (iii) a Mondo Disease Ontology mapping to one
 of four broad categories — developmental, immunological, metabolic, or
-neurological (MONDO v2026-03-03, *citation: Vasilevsky et al.*) — and
+neurological (MONDO v2026-03-03, [Vasilevsky et al., 2022]) — and
 (iv) at least five PubMed Central Open Access (PMC OA) full-text
 articles indexed for the causal gene in our local Qdrant corpus (see
 *Index construction*), ensuring downstream literature retrieval is
@@ -41,8 +41,7 @@ a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
 sampling is standard practice in epidemiological and clinical-genomics
 benchmarking when one subgroup is rate-limiting for statistical power
 and the overall cohort is large enough that overall-cohort estimates
-remain unbiased after stratum-weight correction (*citation: Lohr,
-Sampling: Design and Analysis*).
+remain unbiased after stratum-weight correction [Lohr, 2022].
 
 For each case, the canonical 50-gene candidate list comprised the
 single causal gene plus 49 distractor genes sampled deterministically
@@ -66,12 +65,12 @@ Five gene-prioritisation systems were evaluated on the same n = 1,047
 cohort, each operating on the same 50-gene candidate list per case:
 
 **Cell K (Exomiser HPO-only baseline).** Exomiser v14.0.0
-(*citation: Smedley et al.*) was run with the default phenotype-only
+[Smedley et al., 2015] was run with the default phenotype-only
 configuration (hiPhive scoring on the patient's HPO terms; no variant
 input). The candidate gene list was passed as a whitelist.
 
 **Cell M (LIRICAL HPO-only baseline).** LIRICAL v2.4.0
-(*citation: Robinson et al.*) was run with the same HPO term input.
+[Robinson et al., 2020] was run with the same HPO term input.
 LIRICAL outputs a posterior probability per OMIM disease; these were
 mapped to gene rankings via NCBI mim2gene_medgen (2026-04-07) and
 Orphanet en_product6.xml. When multiple diseases mapped to a candidate
@@ -79,18 +78,20 @@ gene, the maximum posterior was used.
 
 **Cell D (multi-agent hybrid baseline).** A deterministic four-agent
 LangGraph pipeline (planner → retriever → critic → synthesiser) using
-hybrid dense + BM25 retrieval (Reciprocal Rank Fusion, k = 60) over a
-local PMC OA Qdrant index (see *Index construction*). The synthesiser
+hybrid dense + BM25 retrieval [Lin et al., 2021] with Reciprocal Rank
+Fusion (k = 60, [Cormack et al., 2009]) over a local PMC OA Qdrant
+index (see *Index construction*). The synthesiser
 ranks candidates by the sum of inverse-rank chunk scores per gene.
 
 **Cell L (Cell D + cross-encoder reranking).** Identical to Cell D but
 with an additional MedCPT cross-encoder pass over the top-50 retrieved
-chunks per gene (*citation: Jin et al.*, MedCPT). The reranker
+chunks per gene [Jin Q. et al., 2023]. The reranker
 re-scores each chunk for query-specific relevance.
 
 **Cell S (Cell L + LLM-as-Evidence-Aggregator, "geno_agent").** Cell L
 plus a final synthesis step in which a locally-hosted 8-billion-parameter
-LLM (Qwen3-8B, served via vLLM 0.20.1 on an NVIDIA RTX 5090) is shown
+LLM (Qwen3-8B [Yang A. et al., 2025], served via vLLM 0.20.1
+[Kwon et al., 2023] on an NVIDIA RTX 5090) is shown
 the top-3 reranked chunks per top-15 gene and asked to produce a
 ranked list with a per-gene confidence (0-1) and a free-text rationale.
 The system prompt instructs the model to reason from the retrieved
@@ -103,10 +104,10 @@ reproducibility.
 A reciprocal-rank-fusion ensemble of Cells M and S (Cell N) was
 constructed post-hoc for the ensemble-complementarity analysis below
 (`rrf_score = 1/(60 + rank_M) + 1/(60 + rank_S)`, k = 60 per
-*citation: Cormack et al.*).
+[Cormack et al., 2009]).
 
 **Excluded comparators and rationale.** A direct head-to-head
-benchmark against DeepRare (*citation: Zhao et al., Nature 2026*),
+benchmark against DeepRare [Zhao W. et al., 2026],
 the most recent agentic rare-disease diagnostic system, was
 considered but not performed because the two systems are not
 methodologically comparable along three axes: (i) **output unit
@@ -139,13 +140,13 @@ within the latter class.
 ### Index construction
 
 A 3.4 million-article subset of the PubMed Central Open Access XML
-corpus (downloaded 2026-05; *citation: NCBI PMC OA*) was parsed and
+corpus (downloaded 2026-05; [National Library of Medicine, 2024]) was parsed and
 filtered for genetics / genomics / rare-disease relevance via MeSH
 descriptor matching (terms: Genetic Diseases, Rare Diseases, Mutation,
 Pathogenicity, Inheritance Patterns) and full-text inclusion criteria,
 yielding 287,000 articles. Articles were chunked at 512 tokens with
-50-token overlap using a PubMedBERT-base tokeniser (*citation: Gu et
-al.*); chunk identifiers were derived deterministically via UUID5 on
+50-token overlap using a PubMedBERT-base tokeniser [Gu et al., 2021];
+chunk identifiers were derived deterministically via UUID5 on
 the content key to enable bit-identical re-indexing. Dense embeddings
 were computed with PubMedBERT and stored in Qdrant v1.14.1 alongside
 sparse embeddings from FastEmbed BM25, supporting hybrid retrieval via
@@ -167,9 +168,9 @@ in the metric between the two cells was computed, and a 1,000-resample
 bootstrap of this per-case difference vector yielded the point
 estimate and 95 % CI for Δ. A two-sided exact McNemar test was
 applied to the discordant-pair counts (A > B, B < A) for binary
-metrics. Statistical significance is reported by the conjunction of
-"95 % CI excludes zero" and "McNemar p < 0.05" — both criteria are
-required for a Δ to be flagged ★.
+metrics [McNemar, 1947]. Statistical significance is reported by the
+conjunction of "95 % CI excludes zero" and "McNemar p < 0.05" — both
+criteria are required for a Δ to be flagged ★.
 
 Per-MONDO subgroup analyses repeated the above on each category's
 cases. The immunological subgroup (n = 300), as the smallest
@@ -228,8 +229,9 @@ and on each overlap stratum.
 ### RAG-quality evaluation
 
 Independent evaluation of Cell S's retrieval-augmented generation
-quality used the RAGAS framework v0.3.9 (*citation: Es et al.*) with
-GPT-4o (`gpt-4o-2024-08-06`) as the LLM judge via the OpenAI API.
+quality used the RAGAS framework v0.3.9 [Es et al., 2024] with
+GPT-4o (`gpt-4o-2024-08-06`) [OpenAI, 2024] as the LLM judge via the
+OpenAI API.
 Three metrics were computed: **faithfulness** (fraction of LEA's claims
 supported by retrieved chunks), **context precision** (fraction of
 retrieved chunks relevant to the patient phenotype query), and
@@ -241,8 +243,9 @@ with up to 20 retrieved-context chunks per case provided to the judge
 GPT-4o judge constitutes a deliberate, documented deviation from the
 otherwise all-local production pipeline; using a Qwen-family judge
 would introduce self-evaluation bias, while GPT-4o is the de-facto
-standard RAG-quality judge in 2025-2026 (*citation: Es et al., RAGAS
-benchmark*). Production use of geno_agent does not require GPT-4o.
+standard RAG-quality judge in 2025-2026 [Es et al., 2024;
+Li H. et al., 2024]. Production use of geno_agent does not require
+GPT-4o.
 
 The RAGAS evaluation completed in 167.8 minutes wall-clock at a
 documented OpenAI spend of ~US $95. Aggregate scores were:
@@ -279,7 +282,7 @@ multi-gene structured outputs.
 
 To independently corroborate the faithfulness signal, a second
 hallucination judge was applied: DeepEval v4.0.3's holistic
-`HallucinationMetric` (*citation: Confident-AI DeepEval*) using the
+`HallucinationMetric` [Confident AI, 2024] using the
 same gpt-4o-2024-08-06 model on a stratified n = 100 subset (25 per
 MONDO, seed 42; a sub-sample of the RAGAS 600). DeepEval evaluates
 overall answer-context consistency rather than claim-by-claim
@@ -355,7 +358,7 @@ before submission, but are out of scope for the present draft:
 
 1. **CONSORT-AI / TRIPOD-LLM checklist** — Genome Medicine requires
    adherence to reporting guidelines for AI clinical-decision tools
-   (*citation: Cruz Rivera et al. 2020; Collins et al. 2024*).
+   [Cruz Rivera et al., 2020; Collins et al., 2024; Gallifant et al., 2025].
 2. **Ethics statement** — Phenopacket Store data is publicly
    available, fully de-identified, and IRB-exempt per its source
    licensing. A formal IRB-exempt declaration sentence will be added.
@@ -398,11 +401,17 @@ before submission, but are out of scope for the present draft:
 
 ---
 
-*Methods draft v1 — 2026-05-23, ~3,260 words. Word target for
+*Methods draft v2 — 2026-05-24, ~3,290 words. Word target for
 Genome Medicine Methods: 2,500-3,500. Locked to v3 numbers in
-`paper_extension_results.md` §§12-16. Citations marked
-"(*citation: …*)" need to be expanded to full BibTeX entries
-before submission. Once RAGAS completes (in flight, task `b4jz1ajib`),
-the §RAGAS faithfulness paragraph will be amended with the actual
-faithfulness score. Reviewer-checklist items above are deliberately
-deferred until manuscript-assembly time.*
+`paper_extension_results.md` §§12-16. **Citation cite-pass (Option
+C) completed 2026-05-24**: all 16 `*citation: …*` placeholders have
+been resolved against the consolidated 50-entry References list in
+`reports/manuscript_q1_draft.md §References`. New references added
+during this pass: Danis 2025 (Phenopacket Store), Vasilevsky 2022
+(MONDO), Lohr 2022 (sampling design), Jin Q. 2023 (MedCPT),
+Cormack 2009 (RRF), Kwon 2023 (vLLM), Yang A. 2025 (Qwen3),
+Lin 2021 (hybrid retrieval), McNemar 1947, NLM 2024 (PMC OA),
+OpenAI 2024 (GPT-4o), Cruz Rivera 2020 (CONSORT-AI),
+Collins 2024 (TRIPOD+AI), Gallifant 2025 (TRIPOD-LLM). RAGAS results
+now inlined. Methods file remains separate from the main manuscript
+draft to ease inlining at submission-assembly time.*

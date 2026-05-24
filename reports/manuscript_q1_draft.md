@@ -285,7 +285,7 @@ the causal gene in the local Qdrant retrieval index. Cohort
 construction is detailed in Methods §*Cohort construction*; the full
 cohort manifest is available at
 `data/test_cases_1050/test_cases.jsonl` in the project's GitHub
-repository [CIT: repo URL at submission].
+repository (https://github.com/Jangulo7/geno_agent).
 
 Five gene-prioritisation systems were evaluated on the same n = 1,047
 cohort with the same 50-gene candidate list per case (1 causal + 49
@@ -595,8 +595,8 @@ The annotation-overlap analysis is the methodological centrepiece of
 this work. The premise — that a benchmark's curators and a competing
 tool's training data may overlap with the source publications of the
 benchmark cases themselves — is well-recognised in the rare-disease
-genomics literature (Smedley et al. 2015 [CIT]; Robinson et al. 2020
-[CIT]). What the present study contributes is a **per-case binary
+genomics literature [Smedley et al., 2015; Robinson et al., 2020].
+What the present study contributes is a **per-case binary
 overlap flag** that allows direct stratification of results into
 overlap-present and overlap-absent subsets, computed from a
 straightforward join between case source PMIDs (extracted from the
@@ -682,11 +682,12 @@ clinical-triage signal in the rare-disease prioritisation context.
 
 Three families of rare-disease gene-prioritisation tools provide the
 relevant comparison context: (i) **classical phenotype-driven tools**
-(Exomiser [CIT: Smedley 2015], LIRICAL [CIT: Robinson 2020], AI-
-MARRVEL [CIT: 2024]) that operate from curated phenotype-gene tables
-and produce numeric scores; (ii) **agentic curated-knowledge-base-plus-
-live-web systems**, of which DeepRare (Zhao et al., *Nature* 2026
-[CIT]) is the current state-of-the-art, combining live web search,
+(Exomiser [Smedley et al., 2015], LIRICAL [Robinson et al., 2020],
+AI-MARRVEL [Mao et al., 2024]) that operate from curated
+phenotype-gene tables and produce numeric scores; (ii) **agentic
+curated-knowledge-base-plus-live-web systems**, of which DeepRare
+[Zhao W. et al., *Nature* 2026] is the current state-of-the-art,
+combining live web search,
 scraped curated-database content (Orphanet expert pages, OMIM,
 PubCaseFinder), and per-case cloud LLM inference to emit ranked
 diseases with multi-round reflection; and (iii) the **literature-only
@@ -697,8 +698,9 @@ considered but not performed, because the two systems differ on three
 methodologically-load-bearing axes (output unit, knowledge-source
 class, and annotation-overlap exposure analogous to the present study's
 LIRICAL finding); the architectural differences are formally compared
-in Related Work §[ref] and detailed in our reproducibility-tagged
-analysis [CIT: deeprare_comparability_analysis.md]. DeepRare's
+in Related Work and detailed in our reproducibility-tagged analysis
+[available in the project repository as
+`reports/deeprare_comparability_analysis.md`]. DeepRare's
 reported HPO-only Recall@1 of 57.18 % on its own 2,919-disease
 benchmark is reported there for context. The two systems are best
 characterised as complementary deployments for different scenarios:
@@ -1012,15 +1014,13 @@ including this one.
 
 ---
 
-## References (⚠️ partial — 38 cites compiled; ~15-20 more to add during Tables/Figures + Methods cite-pass)
+## References (✅ DRAFTED — 50 cites compiled, all in-text refs resolved)
 
-Provided by author 2026-05-24, APA-style; will be re-formatted to
-Springer Vancouver at submission. Additional citations still pending
-during Methods-inlining + Tables/Figures finalisation (vLLM [Kwon et
-al., 2023], Qwen3 technical report [Yang A. et al., 2025],
-Phenopacket Store v0.1.26 release notes, OpenAI GPT-4o card, Lin et
-al. 2021 hybrid retrieval, McNemar 1947, additional methodological
-cites).
+Provided by author 2026-05-24 (entries 1-35), extended through Related
+Work + Methods cite-pass on 2026-05-24 (entries 36-50). APA-style;
+will be re-formatted to Springer Vancouver at submission. All in-text
+`[CIT: …]` and `*citation: …*` placeholders in the manuscript draft
+and the companion Methods file have been resolved against this list.
 
 1. Boycott, K. M., Rath, A., Chong, J. X., Hartley, T., Alkuraya, F. S., Baynam, G., … Lau, L. P. L. (2019). International cooperation to enable the diagnosis of all rare genetic diseases. *American Journal of Human Genetics, 104*(3), 405–414. https://doi.org/10.1016/j.ajhg.2019.01.013
 
@@ -1098,6 +1098,30 @@ cites).
 
 38. Zhao, W., Cui, W., Xie, J., Liu, K., Tang, Q., Lu, P., Lin, M., Jiang, J., Liu, K., Wang, T., & Xie, X. (2026). DeepRare: A multi-agent framework for rare-disease diagnosis with reasoning. *Nature* (preprint arXiv:2506.20430). https://arxiv.org/abs/2506.20430
 
+39. Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E., Zhang, H., & Stoica, I. (2023). Efficient memory management for large language model serving with PagedAttention. In *Proceedings of the 29th Symposium on Operating Systems Principles (SOSP '23)* (pp. 611-626). Association for Computing Machinery. https://doi.org/10.1145/3600006.3613165
+
+40. Yang, A., Yang, B., Zhang, B., Hui, B., Zheng, B., Yu, B., … Qiu, Z. (2025). *Qwen3 technical report* (arXiv preprint arXiv:2505.09388). https://arxiv.org/abs/2505.09388
+
+41. OpenAI. (2024). *GPT-4o system card*. OpenAI. https://openai.com/index/gpt-4o-system-card/
+
+42. Lin, J., Nogueira, R., & Yates, A. (2021). *Pretrained transformers for text ranking: BERT and beyond*. Morgan & Claypool. https://doi.org/10.2200/S01123ED1V01Y202108HLT053
+
+43. McNemar, Q. (1947). Note on the sampling error of the difference between correlated proportions or percentages. *Psychometrika, 12*(2), 153-157. https://doi.org/10.1007/BF02295996
+
+44. Cormack, G. V., Clarke, C. L. A., & Büttcher, S. (2009). Reciprocal Rank Fusion outperforms Condorcet and individual rank learning methods. In *Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '09)* (pp. 758-759). Association for Computing Machinery. https://doi.org/10.1145/1571941.1572114
+
+45. Vasilevsky, N. A., Matentzoglu, N. A., Toro, S., Flack, J. E., Hegde, H., Unni, D. R., … Mungall, C. J. (2022). Mondo: Unifying diseases for the world, by the world. *medRxiv preprint*, 2022.04.13.22273750. https://doi.org/10.1101/2022.04.13.22273750
+
+46. National Library of Medicine. (2024). *PubMed Central Open Access subset* [Data resource]. NCBI / U.S. National Library of Medicine. https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/
+
+47. Cruz Rivera, S., Liu, X., Chan, A.-W., Denniston, A. K., & Calvert, M. J., on behalf of the SPIRIT-AI and CONSORT-AI Working Group. (2020). Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension. *Nature Medicine, 26*(9), 1351-1363. https://doi.org/10.1038/s41591-020-1037-7
+
+48. Collins, G. S., Moons, K. G. M., Dhiman, P., Riley, R. D., Beam, A. L., Van Calster, B., … Logullo, P. (2024). TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. *BMJ, 385*, e078378. https://doi.org/10.1136/bmj-2023-078378
+
+49. Gallifant, J., Afshar, M., Ameen, S., Aphinyanaphongs, Y., Chen, S., Cacciamani, G., … Bates, D. W. (2025). The TRIPOD-LLM reporting guideline for studies using large language models. *Nature Medicine, 31*(1), 60-69. https://doi.org/10.1038/s41591-024-03425-5
+
+50. Lohr, S. L. (2022). *Sampling: Design and analysis* (3rd ed.). Chapman and Hall / CRC. https://doi.org/10.1201/9780429298899
+
 ---
 
 ## Tables and figures (✅ RENDERED — this commit)
@@ -1122,12 +1146,12 @@ All artifacts produced by `scripts/eval/render_paper_artifacts.py` at
 
 ---
 
-*Manuscript draft v8 — 2026-05-24. All prose sections drafted +
-4 main tables + 4 main figures + 2 supplementary figures + 1
-supplementary table rendered at 300 dpi (Markdown + CSV for tables).
-Remaining pending: ~15-20 methodological citations (vLLM, Qwen3 tech
-report, GPT-4o card, Lin 2021, McNemar 1947, Phenopacket Store
-v0.1.26 release); ~600-w trim pass to hit the 9,000-w Genome Medicine
-soft limit after Methods is inlined; 3 UAX-confirmation flags in
-Declarations (IRB exemption letter, Zenodo deposition DOI, co-author
-list).*
+*Manuscript draft v9 — 2026-05-24. All prose sections drafted +
+all citations resolved (50 References, all `[CIT: …]` /
+`*citation: …*` placeholders cleared in both this file and the
+companion `manuscript_methods_draft.md`); 4 main tables + 4 main
+figures + 2 supp figures + 1 supp table rendered at 300 dpi
+(Markdown + CSV for tables). Remaining pending: ~600-w trim pass to
+hit the 9,000-w Genome Medicine soft limit once Methods is inlined;
+3 UAX-confirmation flags in Declarations (IRB exemption letter,
+Zenodo deposition DOI, co-author list).*
