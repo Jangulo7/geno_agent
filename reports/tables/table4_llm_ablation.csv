@@ -1,0 +1,5 @@
+Model,Overall Top-1 (n=300),Fair-cohort Top-1 (n=84),Mean latency (s),Cost (USD),Parse/API errors
+Qwen3-8B (production),0.717 (0.663-0.763),0.869 (0.798-0.941),26.1 (local),$0.00 (local),—
+Claude Sonnet 4.6,0.767 (0.720-0.810),0.893 (0.821-0.952),13.87,$19.95,22
+DeepSeek-V3-0324,0.737 (0.683-0.783),0.881 (0.798-0.952),25.09,$1.05,1
+Qwen3-32B-Instruct,0.563 (0.507-0.620),0.679 (0.571-0.774),8.71,$0.42,66

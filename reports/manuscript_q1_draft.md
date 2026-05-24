@@ -1100,33 +1100,34 @@ cites).
 
 ---
 
-## Tables and figures (⚠️ source data ready, render pending)
+## Tables and figures (✅ RENDERED — this commit)
 
-| ID | Description | Source data | Status |
+All artifacts produced by `scripts/eval/render_paper_artifacts.py` at
+300 dpi (figures) and Markdown + CSV (tables). Tables in
+`reports/tables/`; figures in `reports/figures/`.
+
+| ID | Description | Output | Headline |
 |---|---|---|---|
-| Table 1 | Per-cell operational profile (wallclock + cost) | `reports/wallclock_cost_table.md` | source ready |
-| Table 2 | Overall 5-cell metrics (top-1, top-5, top-10, MRR, NDCG@10) with CIs | `data/eval_1050/_results_summary.md` | source ready |
-| Table 3 | Paired Δ on overlap-absent fair cohort | `data/eval_1050/_results_stratified.md` | source ready |
-| Table 4 | LLM-family ablation results | `data/eval_1050/_results_lea_ablation.md` | source ready |
-| Figure 1 | CONSORT-style cohort flow diagram | needs render | pending |
-| Figure 2 | Multi-agent architecture diagram | inline SVG in Streamlit demo, needs publication-grade version | pending |
-| Figure 3 | Per-MONDO top-1 stacked bar (5 cells) | needs render | pending |
-| Figure 4 | Faithfulness vs top-1 correctness scatter | needs render | pending |
-| Supp Fig 1 | LIRICAL recency paradox bar chart | needs render | pending |
-| Supp Fig 2 | LLM-family ablation comparison | needs render | pending |
-| Supp Table 1 | TRIPOD-LLM compliance checklist | `reports/tripod_llm_compliance.md` | source ready |
+| Table 1 | Per-cell operational profile (wallclock + cost) | `tables/table1_wallclock_cost.{md,csv}` | 26.1 s/case mean for Cell S; $0 cloud at inference |
+| Table 2 | Overall 6-cell metrics (top-1, top-5, top-10, MRR, NDCG@10) with paired-bootstrap 95 % CIs | `tables/table2_overall.{md,csv}` | Cell S top-1 = 0.726 (CI 0.698-0.753) |
+| Table 3 | Paired Δ on overlap-absent fair cohort (n=282) | `tables/table3_fair_paired_delta.{md,csv}` | S > K +0.078 ★, S > M +0.082 ★, S > L +0.035 ★ |
+| Table 4 | LLM-family ablation results (n=300, n=84 fair) | `tables/table4_llm_ablation.{md,csv}` | 3 frontier LLMs converge within 2.4 pp on fair cohort |
+| Figure 1 | CONSORT-style cohort flow diagram | `figures/fig1_consort_flow.png` | 7,036 → 1,047 with exclusions itemised |
+| Figure 2 | Multi-agent architecture diagram | `figures/fig2_architecture.png` | 7 stages; LangGraph / rerank / LEA colour-coded |
+| Figure 3 | Per-MONDO top-1 grouped bar (5 cells) | `figures/fig3_per_mondo_top1.png` | Per-supercategory ranking visible |
+| Figure 4 | Faithfulness vs top-1 correctness (RAGAS + DeepEval) | `figures/fig4_faithfulness_vs_correctness.png` | RAGAS +27.3 pp / DeepEval +16.9 pp gap |
+| Supp Fig 1 | Top-1 by source-publication-year cohort (pre/post-2020) | `figures/supp_fig1_lirical_recency_paradox.png` | Exomiser -37 pp on post-2020 annotated |
+| Supp Fig 2 | LLM-family ablation: overall vs fair cohort | `figures/supp_fig2_llm_family_ablation.png` | 2.4 pp 3-LLM spread; Qwen3-32B outlier visible |
+| Supp Table 1 | TRIPOD-LLM compliance checklist | `tables/supp_table1_tripod_llm.md` (pointer to `reports/tripod_llm_compliance.md`) | 23 addressed / 16 partial / 5 pending |
 
 ---
 
-*Manuscript draft v7 — 2026-05-24. All prose sections drafted:
-3 Title candidates, Abstract (350 w, at journal limit), Background
-(~1,170 w), Related Work (~640 w), Methods (~3,270 w, companion file),
-Results (~2,330 w), Discussion (~1,830 w incl. internal §6 Limitations
-+ §7 Future work), Conclusions (~180 w), Declarations (~640 w with 3
-UAX-confirmation flags), References (38 cites). Combined main-text
-body ~9,770 words inline (Methods + Declarations + Conclusions
-included). Remaining pending: Tables + Figures rendering (~6 h);
-~15-20 remaining methodological citations (vLLM, Qwen3 tech report,
-GPT-4o card, Lin 2021, McNemar 1947, Phenopacket Store v0.1.26
-release); a ~600-w trim pass to hit the 9,000-w Genome Medicine soft
-limit after Methods is inlined.*
+*Manuscript draft v8 — 2026-05-24. All prose sections drafted +
+4 main tables + 4 main figures + 2 supplementary figures + 1
+supplementary table rendered at 300 dpi (Markdown + CSV for tables).
+Remaining pending: ~15-20 methodological citations (vLLM, Qwen3 tech
+report, GPT-4o card, Lin 2021, McNemar 1947, Phenopacket Store
+v0.1.26 release); ~600-w trim pass to hit the 9,000-w Genome Medicine
+soft limit after Methods is inlined; 3 UAX-confirmation flags in
+Declarations (IRB exemption letter, Zenodo deposition DOI, co-author
+list).*
