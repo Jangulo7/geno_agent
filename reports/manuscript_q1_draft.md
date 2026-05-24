@@ -197,37 +197,28 @@ establishing the methodology in the medical-NLP community.
 
 ### Multi-agent LLM systems in biomedicine
 
-Beyond single-pass RAG, **agentic** systems decompose complex tasks
-across multiple specialised LLM agents that coordinate through a
-shared state graph, enabling iterative query refinement, explicit
-relevance grading, and self-correction loops that single-pass
-architectures cannot support [Wooldridge, 2009; LangChain AI, 2024;
-Wei et al., 2022]. Early biomedical applications include CellAgent for
-single-cell data analysis [Xiao et al., 2024], GeneGPT for tool-
-augmented access to NCBI services [Jin et al., 2024], and a broader
-class of bioinformatics agents recently reviewed in Yang T. et al.
-[2025] and Zhou et al. [2025]. The applicability of the agentic
-paradigm to rare-disease gene prioritisation is the central
-architectural premise of the present study.
+Beyond single-pass RAG, **agentic** systems decompose tasks across
+specialised LLM agents that coordinate through a shared state graph,
+enabling iterative query refinement and self-correction [Wooldridge,
+2009; LangChain AI, 2024; Wei et al., 2022]. Recent biomedical
+applications and surveys are discussed in §Related Work. The
+applicability of the agentic paradigm to rare-disease gene
+prioritisation is the central architectural premise of the present
+study.
 
 ### LLM evaluation and the hallucination problem
 
-A well-documented failure mode of LLMs is **hallucination** — the
-generation of plausible-sounding but factually unsupported content
-[Ji et al., 2023]. This concern is particularly acute in clinical
-applications, where ungrounded outputs may directly affect patient
-care. Two LLM-judge frameworks have emerged as the de facto standards
-for quantifying generation quality in RAG pipelines: **RAGAS** [Es et
-al., 2024], which decomposes faithfulness into claim-level
-verification against retrieved contexts, and **DeepEval** [Confident
-AI, 2024], which provides a holistic hallucination metric. Both
-frameworks rely on a separate LLM judge — typically GPT-4-class — to
-score the outputs of the system under evaluation. The broader
-practice of LLM-as-judge has been systematically validated for
-preference benchmarking [Zheng et al., 2023] and comprehensively
-surveyed [Li M. et al., 2024], with the recognised limitation that
-judge-model bias must be controlled by selecting a judge from a
-different model family than the system being judged.
+A well-documented LLM failure mode is **hallucination** — generation
+of plausible but factually unsupported content [Ji et al., 2023] —
+a particularly acute concern in clinical applications. Two LLM-judge
+frameworks have emerged as the de facto standards for quantifying
+generation quality: **RAGAS** [Es et al., 2024] for claim-level
+faithfulness against retrieved contexts and **DeepEval** [Confident
+AI, 2024] for holistic hallucination scoring. Both rely on a separate
+GPT-4-class judge model; the broader LLM-as-judge practice is
+surveyed in Zheng et al. [2023] and Li M. et al. [2024], with the
+caveat that judge-model bias must be controlled by selecting a judge
+from a different model family than the system being judged.
 
 ### The gap this study addresses
 
@@ -1146,12 +1137,14 @@ All artifacts produced by `scripts/eval/render_paper_artifacts.py` at
 
 ---
 
-*Manuscript draft v9 — 2026-05-24. All prose sections drafted +
-all citations resolved (50 References, all `[CIT: …]` /
-`*citation: …*` placeholders cleared in both this file and the
-companion `manuscript_methods_draft.md`); 4 main tables + 4 main
-figures + 2 supp figures + 1 supp table rendered at 300 dpi
-(Markdown + CSV for tables). Remaining pending: ~600-w trim pass to
-hit the 9,000-w Genome Medicine soft limit once Methods is inlined;
-3 UAX-confirmation flags in Declarations (IRB exemption letter,
-Zenodo deposition DOI, co-author list).*
+*Manuscript draft v10 — 2026-05-24. Manuscript is **submission-ready
+prose-wise** pending only the 3 UAX-confirmation flags. All sections
+drafted + all 50 references resolved + 11 tables/figures rendered at
+300 dpi + body trimmed to ~8,535 words inline (Background 1,072 +
+Related Work 668 + Methods 2,611 + Results 2,313 + Discussion 1,723 +
+Conclusions 148), comfortably within Genome Medicine's 9,000-word
+soft target with 465 words of headroom. Pending: (a) thesis advisor +
+co-author confirmation for IRB exemption letter, Zenodo deposition
+DOI, and final co-author list; (b) Springer Vancouver citation
+reformatting at submission time; (c) cover letter + reviewer
+suggestions.*

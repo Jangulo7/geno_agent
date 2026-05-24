@@ -106,36 +106,14 @@ constructed post-hoc for the ensemble-complementarity analysis below
 (`rrf_score = 1/(60 + rank_M) + 1/(60 + rank_S)`, k = 60 per
 [Cormack et al., 2009]).
 
-**Excluded comparators and rationale.** A direct head-to-head
-benchmark against DeepRare [Zhao W. et al., 2026],
-the most recent agentic rare-disease diagnostic system, was
-considered but not performed because the two systems are not
-methodologically comparable along three axes: (i) **output unit
-mismatch** — DeepRare emits disease names (Orphanet/OMIM) whose
-mapping to causal genes is many-to-many and introduces
-remapping-induced ties that no scheme fully resolves; even DeepRare's
-HPO+Gene mode (`diagnosisGene.py` in the public repository) ultimately
-maps disease predictions to genes via Exomiser rather than emitting
-gene-level reasoning; (ii) **knowledge-source mismatch** — DeepRare
-combines live web search (Google/Bing/DuckDuckGo), curated
-rare-disease knowledge bases scraped per case via headless-browser
-automation (Orphanet expert pages, OMIM, PubCaseFinder, Phenobrain),
-and per-call cloud LLM inference; geno_agent operates from a single
-frozen, hash-recorded Qdrant index of PMC Open Access full text with
-no live web or curated-KB calls at inference, making the two systems
-distinct architectural classes (curated-knowledge-base-plus-live-web
-agentic diagnosis vs literature-only locally-deployable gene
-prioritisation); (iii) **annotation-overlap exposure** — DeepRare's
-Orphanet/OMIM scraping introduces the same training-data-on-test-cases
-confound Methods analysis quantifies for LIRICAL in §*annotation-
-overlap deconfounding*, likely worse because DeepRare actively
-retrieves the curated record of the exact disease being asked about.
-DeepRare is therefore cited in the Discussion as the 2026
-state-of-the-art for the curated-KB-plus-live-web agentic class, and
-geno_agent is positioned as a complementary system targeting the
-literature-only locally-deployable class; the four comparators tested
-on the same cohort (Cells K, M, D, L) span the relevant baselines
-within the latter class.
+**Excluded comparators.** A head-to-head benchmark against DeepRare
+[Zhao W. et al., 2026] was considered but not performed because the
+two systems are architecturally distinct classes — DeepRare uses
+curated KBs + live web with disease-level output and is exposed to
+the same annotation-overlap confound this Methods quantifies for
+LIRICAL. The full architectural comparison and reasoning are given in
+§Related Work; a detailed audit of the DeepRare repository is
+provided in `reports/deeprare_comparability_analysis.md`.
 
 ### Index construction
 
