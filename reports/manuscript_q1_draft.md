@@ -37,15 +37,9 @@ Final selection deferred to co-author review.
 
 ## Authors (❌ pending)
 
-- Johanna Angulo Quintero (Universidad Alfonso X) — *first author,
-  corresponding*
-- [Thesis advisor — confirm name + affiliation]
-- [Additional co-authors — confirm]
-
-## Authors (❌ pending)
-
-- Johanna Angulo Quintero (Universidad Alfonso X)
-- [Thesis advisor — confirm name + affiliation]
+- Johanna Angulo (Universidad Europea, Madrid, Spain) —
+  *first author, corresponding*
+- [PhD advisor — confirm name + affiliation]
 - [Additional co-authors — confirm]
 
 ---
@@ -669,6 +663,27 @@ providing an audit-traceable triage workflow. To our knowledge, this
 is the first quantification of LLM faithfulness as a deployable
 clinical-triage signal in the rare-disease prioritisation context.
 
+### Deployment operational characteristics
+
+Two operational characteristics shape responsible deployment. *Handling
+of poor-quality input.* Three layers protect against degraded inputs:
+at cohort construction, cases with fewer than two HPO terms or fewer
+than five PMC articles for the causal gene are excluded as
+out-of-scope; at runtime, if LEA fails to return parseable JSON the
+system falls back to the cross-encoder rerank ordering and logs the
+reason in `lea_log.lea_fallback_reason` (fall-back rate on the
+n = 1,047 cohort = 0.2 % overall and 0.0 % on the fair cohort); and
+per-gene LEA confidence scores act as a per-prediction quality signal,
+with the deployment threshold routing top-1 predictions below 0.8
+confidence to manual review. *Required user expertise.* geno_agent is
+designed for clinical-genetics-trained end users; the expertise burden
+falls upstream (accurate HPO phenotyping from patient interview) and
+downstream (variant interpretation from the ranked list and per-gene
+rationale). No machine-learning, prompt-engineering, or coding
+expertise is required to use the system, and the accompanying
+clinician-facing UI (master plan §11) fully automates retrieval and
+aggregation.
+
 ### Comparison with existing systems
 
 Three families of rare-disease gene-prioritisation tools provide the
@@ -699,6 +714,26 @@ DeepRare for institutional settings with infrastructure to support
 multi-tool integration + live web access + cloud LLM APIs; geno_agent
 for clinical-genetics consultations requiring single-workstation
 deployment, PHI safety, and reproducibility.
+
+### Fairness and representation
+
+The evaluation cohort inherits three distributional features of its
+source that bound generalisability. First, the Phenopacket Store
+consortium curates cases derived from previously-published case
+reports, so conditions and populations that are systematically
+under-published — rare diseases in low- and middle-income countries,
+in non-academic settings, or in pediatric metabolic subspecialties
+with thin case-report coverage — are correspondingly
+under-represented. Second, the PMC Open Access corpus is
+overwhelmingly English-language, biasing the literature signal toward
+English-publishing institutions and away from work appearing only in
+non-English regional journals. Third, the disproportionate
+stratification (250 / 300 / 250 / 247 across the four MONDO
+supercategories) was chosen for subgroup statistical power rather
+than to mirror epidemiological prevalence; per-MONDO findings are
+architectural-class evidence, not population-frequency estimates. HPO
+terms are assigned by upstream clinicians, so geno_agent inherits any
+phenotyping bias present at the source-publication stage.
 
 ### Limitations
 
@@ -897,7 +932,7 @@ under a formal evaluation; the present work fills that gap.
 
 ---
 
-## Declarations (✅ DRAFTED — this commit; UAX-confirmation items flagged)
+## Declarations (✅ DRAFTED — this commit; UE-confirmation items flagged)
 
 ### Ethics approval and consent to participate
 
@@ -907,11 +942,24 @@ publicly-distributed corpus of case-level phenotypes derived from
 already-published medical literature. No new patient data were
 collected, no identifiable patient information was processed, and no
 direct or indirect re-identification was attempted at any stage of
-the pipeline. Per Universidad Alfonso X institutional policy
-[**flagged — UAX advisor to confirm**] and per the GA4GH Phenopacket
-Store data-use terms, the present secondary analysis of fully de-
-identified, already-published data is exempt from prospective IRB
-review.
+the pipeline. Per **Universidad Europea (UE) institutional policy**
+and per the GA4GH Phenopacket Store data-use terms, the present
+secondary analysis of fully de-identified, already-published benchmark
+data does not involve human experimentation and is therefore exempt
+from prospective ethics-committee review. A formal exemption letter
+from UE confirming this status for the present publication is provided
+as Supplementary File 2 [**flagged — UE ethics-secretary signature
+pending; request template at
+`reports/ue_irb_exemption_request_template.md`**].
+
+This methodological development/evaluation study was not registered
+with a clinical-trial registry, as it is not a clinical trial and does
+not involve a clinical intervention or patient follow-up.
+
+This study did not involve direct patient or public participation
+(PPI). The Phenopacket Store cases used as evaluation data were
+originally consented at the time of source publication by the authors
+of the underlying case reports.
 
 ### Consent for publication
 
@@ -964,23 +1012,23 @@ execution, or reporting of this study.
 
 ### Funding
 
-This work was conducted as part of the first author's Master's thesis
-(Trabajo Fin de Máster) at Universidad Alfonso X El Sabio,
-Madrid, Spain. **No external grant funding** was used. Computational
-infrastructure (a single NVIDIA RTX 5090 workstation) was provided by
-the first author. Cloud LLM API spend for the evaluation-only
-components (GPT-4o judge for RAGAS + DeepEval, ~$95; OpenRouter
-spend for the LLM-family ablation, ~$22) was paid by the first
-author and was not subsidised by any third party.
+This work was conducted as part of the first author's **doctoral
+research at Universidad Europea (UE)**, Madrid, Spain. **No external
+grant funding** was used. Computational infrastructure (a single
+NVIDIA RTX 5090 workstation) was provided by the first author. Cloud
+LLM API spend for the evaluation-only components (GPT-4o judge for
+RAGAS + DeepEval, ~$95; OpenRouter spend for the LLM-family ablation,
+~$22) was paid by the first author and was not subsidised by any
+third party.
 
 ### Authors' contributions
 
 [**Flagged — final author list and CRediT contributions to be
-confirmed with the thesis supervisor and any additional co-authors
-before submission.**] The first author (JAQ) conceived the study,
+confirmed with the UE PhD advisor and any additional co-authors
+before submission.**] The first author (JA) conceived the study,
 designed and implemented all agents, ran all evaluation experiments,
 performed the statistical analyses, and drafted the manuscript. The
-thesis advisor [name to be confirmed] supervised the work, reviewed
+PhD advisor [name to be confirmed] supervised the work, reviewed
 methodological choices, and provided manuscript feedback. All authors
 read and approved the final manuscript.
 
@@ -1133,18 +1181,25 @@ All artifacts produced by `scripts/eval/render_paper_artifacts.py` at
 | Figure 4 | Faithfulness vs top-1 correctness (RAGAS + DeepEval) | `figures/fig4_faithfulness_vs_correctness.png` | RAGAS +27.3 pp / DeepEval +16.9 pp gap |
 | Supp Fig 1 | Top-1 by source-publication-year cohort (pre/post-2020) | `figures/supp_fig1_lirical_recency_paradox.png` | Exomiser -37 pp on post-2020 annotated |
 | Supp Fig 2 | LLM-family ablation: overall vs fair cohort | `figures/supp_fig2_llm_family_ablation.png` | 2.4 pp 3-LLM spread; Qwen3-32B outlier visible |
-| Supp Table 1 | TRIPOD-LLM compliance checklist | `tables/supp_table1_tripod_llm.md` (pointer to `reports/tripod_llm_compliance.md`) | 23 addressed / 16 partial / 5 pending |
+| Supp Table 1 | TRIPOD-LLM per-item compliance (re-audit v2) | `tables/supp_table1_tripod_llm.md` (full per-item table; companion to `reports/tripod_llm_compliance.md` v2) | 31 ✅ / 8 ⚠️ / 0 ❌ / 7 ➖ NA |
 
 ---
 
-*Manuscript draft v10 — 2026-05-24. Manuscript is **submission-ready
-prose-wise** pending only the 3 UAX-confirmation flags. All sections
-drafted + all 50 references resolved + 11 tables/figures rendered at
-300 dpi + body trimmed to ~8,535 words inline (Background 1,072 +
-Related Work 668 + Methods 2,611 + Results 2,313 + Discussion 1,723 +
-Conclusions 148), comfortably within Genome Medicine's 9,000-word
-soft target with 465 words of headroom. Pending: (a) thesis advisor +
-co-author confirmation for IRB exemption letter, Zenodo deposition
-DOI, and final co-author list; (b) Springer Vancouver citation
-reformatting at submission time; (c) cover letter + reviewer
-suggestions.*
+*Manuscript draft v12 — 2026-05-24 (TRIPOD-LLM re-audit + Methods/
+Discussion prose closure). Manuscript is **submission-ready prose-wise**
+pending only the UE-confirmation flags. All sections drafted + all 50
+references resolved + 11 tables/figures rendered at 300 dpi + Supp
+Table 1 expanded to full per-item TRIPOD-LLM table. Body now ~8,976
+words inline (Background 1,072 + Related Work 668 + Methods 2,707 +
+Results 2,313 + Discussion ~2,068 + Conclusions 148), within Genome
+Medicine's 9,000-word soft target with ~24 words headroom. Discussion
+additions: §Deployment operational characteristics (poor-input
+handling + required user expertise) and §Fairness and representation;
+Methods adds §Prompt design and curation. Affiliation set to
+**Universidad Europea (UE)** for PhD submission. Pending: (a) UE
+ethics-secretary signature on the exemption letter (request template
+at `reports/ue_irb_exemption_request_template.md`); (b) Zenodo DOI for
+frozen Qdrant index at submission time; (c) final UE co-author list +
+CRediT contributions; (d) Springer Vancouver citation reformatting;
+(e) cover letter + reviewer suggestions; (f) TRIPOD-LLM-statement PDF
+generated via https://tripod-llm.vercel.app/.*

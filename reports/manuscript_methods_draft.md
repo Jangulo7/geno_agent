@@ -115,6 +115,19 @@ LIRICAL. The full architectural comparison and reasoning are given in
 §Related Work; a detailed audit of the DeepRare repository is
 provided in `reports/deeprare_comparability_analysis.md`.
 
+### Prompt design and curation
+
+The LEA system + user prompt was authored in a single design pass at
+the start of the v3 evaluation phase, without formal A/B iteration,
+in-context exemplars, or chain-of-thought elicitation. Prompt drafts
+were validated only on hand-constructed synthetic toy inputs; no case
+drawn from the n = 1,047 evaluation cohort or the n = 300 ablation
+sub-sample was used to develop or tune the prompt. The full system and
+user prompt templates, per-case rendered inputs, and raw LLM responses
+are captured deterministically in
+`data/eval_1050/cell_S_responses/<case>.json:lea_log.*` for replay,
+audit, and adversarial prompt-rewriting experiments.
+
 ### Index construction
 
 A 3.4 million-article subset of the PubMed Central Open Access XML

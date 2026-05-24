@@ -912,7 +912,7 @@ def page_about() -> None:
             "**Multi-Agent RAG for Rare-Disease Gene Prioritization**\n\n"
             "Master in Artificial Intelligence, Universidad Alfonso X (UAX).\n"
             "Defended 2026-05.\n\n"
-            "**Author:** Johanna Angulo Quintero\n\n"
+            "**Author:** Johanna Angulo\n\n"
             "### Companion work\n"
             "A post-thesis paper extension (n=1,047 cohort, annotation-overlap "
             "deconfounding, publication-recency stratification, LLM-family ablation, "

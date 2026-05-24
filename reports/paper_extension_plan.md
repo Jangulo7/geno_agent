@@ -1,6 +1,6 @@
 # Paper Extension Plan — n=500 Validation
 
-**Author:** Johanna Angulo Quintero
+**Author:** Johanna Angulo
 **Date:** 2026-05-16
 **Branch:** `paper/n500-validation`
 **Master plan:** extends `MASTER_PROJECT_v2.1.md` §11.5 / §11.8
