@@ -9,14 +9,38 @@
 
 ---
 
-## Title (❌ pending)
+## Title (✅ 3 candidates DRAFTED for co-author selection)
 
-**Working title:**
-*"Literature-only multi-agent retrieval-augmented gene prioritisation for
-rare disease: fair-cohort evaluation against curated baselines, recency
-robustness, and frontier-LLM ablation"*
+Three candidates ranked by recommended fit for Genome Medicine. All
+three are within the journal's typical 12-20-word range and lead with
+the methodological novelty (annotation-overlap deconfounding) or the
+deployment property (literature-only, locally-deployable).
 
-(Final title needs co-author review.)
+**Candidate 1 (recommended) — methodology-first, action verb, balanced
+length (18 words):**
+
+> ***Literature-only multi-agent retrieval-augmented gene prioritisation
+> for rare disease: a deconfounded benchmark against curated baselines.***
+
+**Candidate 2 — finding-first, headline-grade, shorter (15 words):**
+
+> ***A literature-only multi-agent LLM system matches curated tools for
+> rare-disease gene prioritisation under deconfounded evaluation.***
+
+**Candidate 3 — system-name-first, descriptive (19 words):**
+
+> ***geno_agent: a literature-grounded multi-agent retrieval-augmented
+> system for rare-disease gene prioritisation with annotation-overlap-
+> deconfounded evaluation against Exomiser and LIRICAL.***
+
+Final selection deferred to co-author review.
+
+## Authors (❌ pending)
+
+- Johanna Angulo Quintero (Universidad Alfonso X) — *first author,
+  corresponding*
+- [Thesis advisor — confirm name + affiliation]
+- [Additional co-authors — confirm]
 
 ## Authors (❌ pending)
 
@@ -757,44 +781,33 @@ workflow; (6) extension of the cohort to non-Phenopacket-Store sources
 (e.g., curated UDP cases, internal hospital cohorts under appropriate
 data-sharing agreements).
 
-### Conclusion
-
-A **literature-only, locally-deployable, multi-agent retrieval-augmented
-gene-prioritisation system can match — and on the fair-comparison
-cohort, exceed — established curated-knowledge-base tools** for
-rare-disease causal-gene prioritisation. The result is robust across
-three independent LLM families (Qwen, Anthropic, DeepSeek), preserved
-across an independent v2 → v3 reproducibility re-run, and accompanied
-by the unique deployment property of evidence-traceable rationales
-with quantifiable LLM-judge faithfulness. The annotation-overlap
-deconfounding methodology contributes a stratification tool the
-rare-disease benchmark community should adopt for any future
-evaluation of literature-aware or knowledge-base-aware prioritisation
-tools on Phenopacket Store. The recency-stratification finding —
-Exomiser losing 37 percentage points on post-2020 papers — is a
-direct empirical signature of the curation-publication lag that
-literature-only retrieval naturally bypasses, with concrete implications
-for rare-disease clinical deployment as the publication cadence in
-the field accelerates.
+*Note — the standalone Conclusions section that follows Discussion
+contains the synthesis paragraph. The Discussion-internal §8
+("Conclusion") subsection was elevated to a top-level section in
+manuscript v7 to align with the BMC structural convention.*
 
 ---
 
-## Conclusions (❌ pending)
+## Conclusions (✅ DRAFTED — this commit, ~180 words)
 
-(~150 words. Single-paragraph synthesis.)
-
----
-
-## Limitations (⚠️ partial — covered in Discussion §19b of TRIPOD-LLM compliance)
-
-Eight known limitations consolidated in
-`reports/tripod_llm_compliance.md §5 Item 19b`. To be inlined.
-
----
-
-## Future work (❌ pending)
-
-Six concrete items from `reports/tripod_llm_compliance.md §5 Item 19g`.
+A **literature-only, locally-deployable, multi-agent retrieval-
+augmented gene-prioritisation system can match — and on the fair-
+comparison cohort, exceed — established curated-knowledge-base tools**
+for rare-disease causal-gene prioritisation. The result is robust
+across three independent frontier LLM families (Qwen, Anthropic,
+DeepSeek), preserved across an independent v2 → v3 reproducibility
+re-run, and accompanied by the unique deployment property of evidence-
+traceable rationales with quantifiable LLM-judge faithfulness that
+predicts top-1 correctness with a 33-39 percentage-point gap.
+The annotation-overlap deconfounding methodology contributed by this
+study is a stratification tool the rare-disease benchmark community
+should adopt for any future evaluation of literature-aware or
+knowledge-base-aware prioritisation tools on Phenopacket Store. The
+recency-stratification finding — Exomiser losing 37 percentage points
+on post-2020 source publications — is a direct empirical signature of
+the curation-publication lag that literature-only retrieval bypasses
+by construction, with concrete implications for rare-disease clinical
+deployment as the publication cadence in the field accelerates.
 
 ---
 
@@ -891,12 +904,111 @@ under a formal evaluation; the present work fills that gap.
 
 ---
 
-## Declarations (❌ pending)
+## Declarations (✅ DRAFTED — this commit; UAX-confirmation items flagged)
 
-To be drafted: Ethical approval (Phenopacket Store de-identified, IRB-
-exempt — confirm with UAX), Funding (UAX TFM, OpenAI/OpenRouter spend
-by author), Competing interests (none), Authors' contributions, Code
-and data availability, Acknowledgements.
+### Ethics approval and consent to participate
+
+This study used **de-identified phenotypic data from the GA4GH
+Phenopacket Store v0.1.26 release** [Danis et al., 2025], which is a
+publicly-distributed corpus of case-level phenotypes derived from
+already-published medical literature. No new patient data were
+collected, no identifiable patient information was processed, and no
+direct or indirect re-identification was attempted at any stage of
+the pipeline. Per Universidad Alfonso X institutional policy
+[**flagged — UAX advisor to confirm**] and per the GA4GH Phenopacket
+Store data-use terms, the present secondary analysis of fully de-
+identified, already-published data is exempt from prospective IRB
+review.
+
+### Consent for publication
+
+Not applicable. All source phenotypes are derived from the published
+literature and the GA4GH Phenopacket Store public release; no
+individual patient is identifiable in this manuscript or in any
+supplementary file.
+
+### Availability of data and materials
+
+- **Source code** (full evaluation pipeline, all agents, all
+  evaluation scripts, all aggregation utilities): publicly available
+  at https://github.com/Jangulo7/geno_agent under the **MIT licence**
+  (proposed; final licence to be confirmed at submission time).
+- **Frozen evaluation manifest** (per-case phenotypes, candidate
+  lists, MONDO categorisation): `data/test_cases_1050/` in the same
+  repository, with `MANIFEST.tsv` recording SHA-256 of every input
+  artefact.
+- **Per-case result sidecars** for all five cells (Exomiser, LIRICAL,
+  multi-agent baseline, +rerank, geno_agent), the LLM-family ablation
+  (Qwen3-32B, Sonnet 4.6, DeepSeek-V3), and the GPT-4o-judged RAGAS +
+  DeepEval outputs: `data/eval_1050/cell_*/`,
+  `data/eval_1050/cell_S_ablation_*/`,
+  `data/eval_1050/ragas_*.json`, `data/eval_1050/deepeval_*.json`.
+- **Frozen Qdrant index** (4.2 M PMC OA chunks, MedCPT dense
+  embeddings + BM25 sparse): persistent local volume mounted at
+  `~/rare-disease-rag/qdrant_storage/`. A bit-perfect snapshot is
+  hosted at [**flagged — Zenodo deposition pending at submission
+  time**], with SHA-256 manifest in the repository.
+- **Pinned ontology versions**: HPO v2026-02-16, MONDO v2026-03-03,
+  GO 2026-03-25, HGNC 2026-04-07. SHA-256 recorded in
+  `data/MANIFEST.tsv`.
+- **Reproducibility seed**: `PYTHONHASHSEED=42`; UUID5-derived
+  chunk IDs; deterministic agent state-graph traversal.
+
+The Phenopacket Store source release is publicly available at
+https://github.com/monarch-initiative/phenopacket-store (Danis et al.,
+2025). Exomiser v14.1.0 and LIRICAL v2.0.2 were used as released and
+are available at https://github.com/exomiser/Exomiser and
+https://github.com/TheJacksonLaboratory/LIRICAL respectively. The
+Qwen3-8B model weights are released under Apache 2.0 by Alibaba Cloud
+and available at https://huggingface.co/Qwen/Qwen3-8B.
+
+### Competing interests
+
+The authors declare that they have **no competing financial or
+non-financial interests** with respect to this work. No funding from
+commercial AI or biomedical-AI vendors influenced the design,
+execution, or reporting of this study.
+
+### Funding
+
+This work was conducted as part of the first author's Master's thesis
+(Trabajo Fin de Máster) at Universidad Alfonso X El Sabio,
+Madrid, Spain. **No external grant funding** was used. Computational
+infrastructure (a single NVIDIA RTX 5090 workstation) was provided by
+the first author. Cloud LLM API spend for the evaluation-only
+components (GPT-4o judge for RAGAS + DeepEval, ~$95; OpenRouter
+spend for the LLM-family ablation, ~$22) was paid by the first
+author and was not subsidised by any third party.
+
+### Authors' contributions
+
+[**Flagged — final author list and CRediT contributions to be
+confirmed with the thesis supervisor and any additional co-authors
+before submission.**] The first author (JAQ) conceived the study,
+designed and implemented all agents, ran all evaluation experiments,
+performed the statistical analyses, and drafted the manuscript. The
+thesis advisor [name to be confirmed] supervised the work, reviewed
+methodological choices, and provided manuscript feedback. All authors
+read and approved the final manuscript.
+
+### Acknowledgements
+
+The authors thank the **Monarch Initiative** for releasing and
+maintaining the GA4GH Phenopacket Store, the **Jackson Laboratory**
+for releasing and maintaining LIRICAL and the Human Phenotype
+Ontology, and the **Monarch / Exomiser team** for the Exomiser
+codebase. We acknowledge the **NCBI PubMed Central Open Access
+Subset** as the underlying corpus that makes literature-only
+rare-disease reasoning feasible at scale, and the **Alibaba Cloud
+Qwen team** for releasing the Qwen3-8B model under a permissive
+licence. We acknowledge the contributions of the broader open-source
+ecosystem — **Qdrant**, **vLLM**, **LangChain / LangGraph**,
+**fastembed**, **sentence-transformers**, **RAGAS**, **DeepEval**,
+**pronto**, and the **Anthropic Claude** family used as a coding
+assistant during pipeline development. Finally, we thank the
+rare-disease patient community whose published cases form the
+empirical foundation of every rare-disease prioritisation benchmark,
+including this one.
 
 ---
 
@@ -1006,12 +1118,15 @@ cites).
 
 ---
 
-*Manuscript draft v6 — 2026-05-24. Abstract (350 w, at journal limit),
-Background (~1,170 w), Related Work (~640 w), Results (~2,330 w),
-Discussion (~1,830 w), and References (38 cites compiled) drafted;
-Methods section in companion file `manuscript_methods_draft.md`
-(~3,270 w). Combined main-text body ~9,590 words inline. Pending:
-Title, Conclusions extraction from Discussion §8, Declarations,
-Tables/Figures rendering (~6 h), and ~15-20 remaining methodological
-citations (vLLM, Qwen3 tech report, GPT-4o card, Lin 2021,
-McNemar 1947, Phenopacket Store v0.1.26 release).*
+*Manuscript draft v7 — 2026-05-24. All prose sections drafted:
+3 Title candidates, Abstract (350 w, at journal limit), Background
+(~1,170 w), Related Work (~640 w), Methods (~3,270 w, companion file),
+Results (~2,330 w), Discussion (~1,830 w incl. internal §6 Limitations
++ §7 Future work), Conclusions (~180 w), Declarations (~640 w with 3
+UAX-confirmation flags), References (38 cites). Combined main-text
+body ~9,770 words inline (Methods + Declarations + Conclusions
+included). Remaining pending: Tables + Figures rendering (~6 h);
+~15-20 remaining methodological citations (vLLM, Qwen3 tech report,
+GPT-4o card, Lin 2021, McNemar 1947, Phenopacket Store v0.1.26
+release); a ~600-w trim pass to hit the 9,000-w Genome Medicine soft
+limit after Methods is inlined.*
