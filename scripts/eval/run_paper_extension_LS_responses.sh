@@ -42,10 +42,26 @@ VLLM_LOG="${LOG_DIR}/vllm_paper_v3.log"
 MIN_FREE_MIB="${MIN_FREE_MIB:-4000}"
 VLLM_READY_TIMEOUT="${VLLM_READY_TIMEOUT:-900}"
 
+# vLLM endpoint + resource caps. Configurable, and passed through to
+# start_vllm.sh explicitly (start_vllm_capped) so the health probe and the
+# launched server always agree on host/port and the caps are enforced rather
+# than merely logged.
+VLLM_HOST="${VLLM_HOST:-127.0.0.1}"
+VLLM_PORT="${VLLM_PORT:-8001}"
+VLLM_GPU_MEM_UTIL="${VLLM_GPU_MEM_UTIL:-0.75}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-32768}"
+VLLM_MAX_NUM_SEQS="${VLLM_MAX_NUM_SEQS:-1}"
+
 mkdir -p "$LOG_DIR" "$OUT_ROOT"
 exec > >(tee -a "$PAPER_LOG") 2>&1
 
 log() { printf '%s [%s] %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$1" "$2"; }
+
+# Best-effort count of *.json in a dir; never fails the run under pipefail
+# (nullglob in a subshell turns an empty match or missing dir into 0).
+count_json() {
+    ( shopt -s nullglob; set -- "$1"/*.json; echo "$#" )
+}
 
 gpu_free_mib() {
     nvidia-smi --query-gpu=memory.free --format=csv,noheader,nounits | head -1 | tr -d ' '
@@ -63,7 +79,7 @@ assert_gpu_free() {
 }
 
 vllm_health() {
-    curl -sf -o /dev/null -w "%{http_code}" "http://127.0.0.1:8001/v1/models" 2>/dev/null || echo "000"
+    curl -sf -o /dev/null -w "%{http_code}" "http://${VLLM_HOST}:${VLLM_PORT}/v1/models" 2>/dev/null || echo "000"
 }
 
 wait_for_vllm_ready() {
@@ -89,8 +105,13 @@ wait_for_vllm_ready() {
 vllm_pid_file="${LOG_DIR}/vllm_paper_v3.pid"
 
 start_vllm_capped() {
-    log INFO "Starting vLLM (util=0.75, max-len=32768, max-num-seqs=1)..."
-    bash "${PROJECT_ROOT}/scripts/eval/start_vllm.sh" >"${VLLM_LOG}" 2>&1 &
+    log INFO "Starting vLLM (util=${VLLM_GPU_MEM_UTIL}, max-len=${VLLM_MAX_MODEL_LEN}, max-num-seqs=${VLLM_MAX_NUM_SEQS}, port=${VLLM_PORT})..."
+    # Export the caps explicitly so start_vllm.sh enforces them — its defaults
+    # match these, but an inherited VLLM_* override must not silently win.
+    VLLM_HOST="$VLLM_HOST" VLLM_PORT="$VLLM_PORT" \
+    VLLM_GPU_MEM_UTIL="$VLLM_GPU_MEM_UTIL" VLLM_MAX_MODEL_LEN="$VLLM_MAX_MODEL_LEN" \
+    VLLM_MAX_NUM_SEQS="$VLLM_MAX_NUM_SEQS" \
+        bash "${PROJECT_ROOT}/scripts/eval/start_vllm.sh" >"${VLLM_LOG}" 2>&1 &
     echo $! > "$vllm_pid_file"
     log INFO "vLLM wrapper pid=$(cat "$vllm_pid_file") (log: ${VLLM_LOG})"
     wait_for_vllm_ready
@@ -201,12 +222,10 @@ kill_vllm
 log INFO "============================================================"
 log INFO "v3 re-run complete."
 for cell in cell_L_rerank_inside_d cell_S_rerank_inside_plus_lea; do
-    n=$(ls "$OUT_ROOT/$cell"/*.json 2>/dev/null | wc -l)
-    log INFO "  ${cell}: ${n} case JSONs"
+    log INFO "  ${cell}: $(count_json "$OUT_ROOT/$cell") case JSONs"
 done
 for sidecar in cell_L_responses cell_S_responses; do
-    n=$(ls "$OUT_ROOT/$sidecar"/*.json 2>/dev/null | wc -l)
-    log INFO "  ${sidecar}: ${n} sidecar JSONs"
+    log INFO "  ${sidecar}: $(count_json "$OUT_ROOT/$sidecar") sidecar JSONs"
 done
 log INFO "Next: re-aggregate (K + D + L + S + M) and run RAGAS/DeepEval."
 log INFO "============================================================"
