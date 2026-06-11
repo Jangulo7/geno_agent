@@ -70,6 +70,13 @@ yarn-error.log*
 data/eval_1050/ragas_cell_S_n600.json
 data/eval_1050/ragas_top1only_cell_S_n100.json
 
+# LOPO per-case sidecars (38 MB / 3,143 files). Summaries
+# data/eval_1050_lopo_full/_lopo_*.{md,json} ARE committed; per-case dirs are not
+# (same convention as data/eval_1050/cell_*).
+data/eval_1050_lopo_full/cell_S_control/
+data/eval_1050_lopo_full/cell_S_lopo/
+data/eval_1050_lopo_full/leak_S/
+
 # Local agent state — Claude Code session state (do not commit)
 .claude/
 # DeepEval cache (created on import; per-machine, not reproducibility-critical)

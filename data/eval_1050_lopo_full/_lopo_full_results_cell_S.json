@@ -1,0 +1,117 @@
+{
+  "lopo_root": "/home/hana77/ia_jo/uax_tfm/geno_agent/data/eval_1050_lopo_full",
+  "cell": "S",
+  "n_cases": 1047,
+  "strata": {
+    "full": {
+      "control_vs_lopo": {
+        "n": 1047,
+        "control_top1": 0.7259,
+        "lopo_top1": 0.7106,
+        "delta": 0.0153,
+        "mcnemar_p": 3e-05,
+        "discordant_ctrl_only": 16,
+        "discordant_lopo_only": 0,
+        "control_top5": 0.7985,
+        "control_top10": 0.8185,
+        "lopo_top5": 0.7794,
+        "lopo_top10": 0.8004
+      },
+      "lopo_vs_K": {
+        "n": 1047,
+        "acc_a": 0.7106,
+        "acc_b": 0.6905,
+        "delta": 0.0201,
+        "discordant_a_only": 123,
+        "discordant_b_only": 102,
+        "mcnemar_p": 0.1823
+      },
+      "lopo_vs_M": {
+        "n": 1047,
+        "acc_a": 0.7106,
+        "acc_b": 0.9236,
+        "delta": -0.213,
+        "discordant_a_only": 60,
+        "discordant_b_only": 283,
+        "mcnemar_p": 0.0
+      },
+      "source_in_pool_rate": 0.1175
+    },
+    "overlap_present": {
+      "control_vs_lopo": {
+        "n": 765,
+        "control_top1": 0.6771,
+        "lopo_top1": 0.6562,
+        "delta": 0.0209,
+        "mcnemar_p": 3e-05,
+        "discordant_ctrl_only": 16,
+        "discordant_lopo_only": 0,
+        "control_top5": 0.7503,
+        "control_top10": 0.7739,
+        "lopo_top5": 0.7242,
+        "lopo_top10": 0.749
+      },
+      "source_in_pool_rate": 0.1085
+    },
+    "overlap_absent (FAIR)": {
+      "control_vs_lopo": {
+        "n": 282,
+        "control_top1": 0.8582,
+        "lopo_top1": 0.8582,
+        "delta": 0.0,
+        "mcnemar_p": 1.0,
+        "discordant_ctrl_only": 0,
+        "discordant_lopo_only": 0,
+        "control_top5": 0.9291,
+        "control_top10": 0.9397,
+        "lopo_top5": 0.9291,
+        "lopo_top10": 0.9397
+      },
+      "lopo_vs_K": {
+        "n": 282,
+        "acc_a": 0.8582,
+        "acc_b": 0.7801,
+        "delta": 0.078,
+        "discordant_a_only": 49,
+        "discordant_b_only": 27,
+        "mcnemar_p": 0.01544
+      },
+      "lopo_vs_M": {
+        "n": 282,
+        "acc_a": 0.8582,
+        "acc_b": 0.7766,
+        "delta": 0.0816,
+        "discordant_a_only": 52,
+        "discordant_b_only": 29,
+        "mcnemar_p": 0.014
+      },
+      "source_in_pool_rate": 0.1418
+    }
+  },
+  "per_mondo": {
+    "developmental": {
+      "n": 250,
+      "control_top1": 0.72,
+      "lopo_top1": 0.704,
+      "delta": 0.016
+    },
+    "immunological": {
+      "n": 300,
+      "control_top1": 0.7467,
+      "lopo_top1": 0.7433,
+      "delta": 0.0033
+    },
+    "metabolic": {
+      "n": 250,
+      "control_top1": 0.872,
+      "lopo_top1": 0.864,
+      "delta": 0.008
+    },
+    "neurological": {
+      "n": 247,
+      "control_top1": 0.5587,
+      "lopo_top1": 0.5223,
+      "delta": 0.0364
+    }
+  }
+}

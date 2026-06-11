@@ -42,6 +42,12 @@ class RetrievedChunk:
         score_dense: Cosine similarity from the dense vector channel.
         score_bm25: BM25 score from the sparse vector channel.
         score_rrf: Reciprocal-rank-fusion score in hybrid mode.
+        pmid: Source PubMed ID as a bare digit string (e.g. ``"24573067"``),
+            or ``""`` when the source article has no linked PMID. Surfaced from
+            the Qdrant payload so leave-one-paper-out evaluation can exclude a
+            case's own source publication from retrieval (paper extension,
+            literature-redundancy analysis). Not all PMC OA articles carry a
+            PMID, hence the empty-string default.
     """
 
     chunk_id: str
@@ -51,6 +57,7 @@ class RetrievedChunk:
     score_dense: float | None = None
     score_bm25: float | None = None
     score_rrf: float | None = None
+    pmid: str = ""
 
 
 @dataclass(slots=True)
