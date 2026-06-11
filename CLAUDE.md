@@ -25,8 +25,11 @@ Qdrant under any pretext.
 - Heavy persistent artifacts (qdrant_storage, models, logs) live OUTSIDE
   the git repo, under `~/rare-disease-rag/`.
 - Phase 2 LLM is local: Qwen3-8B (or open-weights ~8B fallback) via vLLM.
-  No cloud LLM API in any code path. CopilotKit Cloud is NOT used; the
-  React UI talks to the local FastAPI backend on loopback only.
+  No cloud LLM API in the production / inference code path. (The sole
+  exception is the offline RAGAS / DeepEval rationale-quality evaluation,
+  which calls an external OpenAI-compatible endpoint — GPT-4o in the paper —
+  for measurement only, never for gene prioritisation.) CopilotKit Cloud is
+  NOT used; the React UI talks to the local FastAPI backend on loopback only.
 
 ## Code style
 
