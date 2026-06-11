@@ -102,7 +102,7 @@ MULTI_AGENT_TOP_K: Final[int] = 10
 
 
 # ---------------------------------------------------------------- cell map
-CellId = Literal["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+CellId = Literal["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "Q", "R"]
 CELL_NAMES: dict[CellId, str] = {
     "A": "cell_A_single_dense",
     "B": "cell_B_single_hybrid",
@@ -114,6 +114,8 @@ CELL_NAMES: dict[CellId, str] = {
     "H": "cell_H_multi_llmcritic_hybrid",
     "I": "cell_I_multi_llmboth_dense",
     "J": "cell_J_multi_llmboth_hybrid",
+    "Q": "cell_Q_multi_lea_dense",
+    "R": "cell_R_multi_lea_hybrid",
 }
 
 
@@ -196,12 +198,15 @@ def run_multi_agent_cell(
     hgnc_index,
     use_llm_planner: bool = False,
     use_llm_critic: bool = False,
+    use_lea_synthesiser: bool = False,
 ) -> list[GeneCandidate]:
-    """Cells C/D (and E-J): full Planner→Retriever→Critic→Synthesizer graph.
+    """Cells C/D (and E-J, Q-R): full Planner→Retriever→Critic→Synthesizer graph.
 
     ``use_llm_planner`` / ``use_llm_critic`` toggle the LLM-prompted variants
     of those two agents per master plan §11.1 C7c. Both default to False
-    (deterministic), preserving the C/D cell semantics.
+    (deterministic), preserving the C/D cell semantics. ``use_lea_synthesiser``
+    swaps the deterministic Synth for the multi-gene LLM aggregator (LEA,
+    cells Q/R/S, master plan §11.9).
     """
     graph = build_graph(
         hpo_ontology=hpo_ontology,
@@ -211,6 +216,7 @@ def run_multi_agent_cell(
         retriever_mode=retrieval_mode,
         use_llm_planner=use_llm_planner,
         use_llm_critic=use_llm_critic,
+        use_lea_synthesiser=use_lea_synthesiser,
     )
     initial = AgentState(
         case_id=case["case_id"],
@@ -271,9 +277,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    cells = sorted({c.upper() for c in args.cells if c.upper() in "ABCDEFGHIJ"})
+    cells = sorted({c.upper() for c in args.cells if c.upper() in "ABCDEFGHIJQR"})
     if not cells:
-        log.error("No valid cells in --cells %s; pick from A-J", args.cells)
+        log.error("No valid cells in --cells %s; pick from A-J, Q, R", args.cells)
         return 1
 
     # Load all the dependencies once.
@@ -377,6 +383,23 @@ def main() -> int:
             hgnc_index=hgnc,
             use_llm_planner=True,
             use_llm_critic=True,
+        ),
+        # LEA cells (master plan §11.9): LLM-as-Evidence-Aggregator replaces Synth
+        "Q": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="dense",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_lea_synthesiser=True,
+        ),
+        "R": lambda case: run_multi_agent_cell(
+            case=case,
+            retrieval_mode="hybrid",
+            search_cfg=search_cfg,
+            hpo_ontology=hpo,
+            hgnc_index=hgnc,
+            use_lea_synthesiser=True,
         ),
     }
 

@@ -78,6 +78,7 @@ def build_graph(
     low_conf_threshold: int = DEFAULT_LOW_CONF_THRESHOLD,
     use_llm_planner: bool = False,
     use_llm_critic: bool = False,
+    use_lea_synthesiser: bool = False,
 ) -> CompiledStateGraph:
     """Build and compile the four-agent LangGraph state graph.
 
@@ -130,8 +131,15 @@ def build_graph(
         def _critic(state: AgentState) -> AgentState:
             return critic_node(state, hpo_ontology, hgnc_index)
 
-    def _synthesizer(state: AgentState) -> AgentState:
-        return synthesizer_node(state)
+    if use_lea_synthesiser:
+        from src.agents.synthesizer_lea import lea_synthesizer_node
+
+        def _synthesizer(state: AgentState) -> AgentState:
+            return lea_synthesizer_node(state, hpo_ontology)
+    else:
+
+        def _synthesizer(state: AgentState) -> AgentState:
+            return synthesizer_node(state)
 
     def _retriever_loop(state: AgentState) -> AgentState:
         """Loop-body retriever: increments iteration before re-fetching."""

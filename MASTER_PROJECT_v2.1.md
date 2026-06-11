@@ -2679,6 +2679,8 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 
 - **Qdrant client/server version match (resolved in §7 step [4]).** `docker-compose.yml` was bumped from `qdrant/qdrant:v1.12.4` → `qdrant/qdrant:v1.14.1` to align with `qdrant-client==1.14.3` in pytorch-env. v1.14.1 is the highest server tag in the v1.14.x line (no v1.14.3 server release exists). Bump performed before any collection had data, so no migration was required.
 
+- **Factorial cell letter remapping (Phase 2d, 2026-05-14 → 2026-05-15).** The original §11.5 names *Cell E* as the Exomiser baseline. Phase 2d added six LLM-augmented cells in alphabetical order *after* the deterministic 2×2, pushing Exomiser from E to K. Phase 2e (§11.8, added 2026-05-15) reserves L-O for the cross-encoder re-ranker cells. Final layout: A–D deterministic 2×2 · E–F LLM-Planner · G–H LLM-Critic · I–J LLM-both · K Exomiser (deferred) · L–O re-ranker (proposed). The §11.5 prose still describes the original 2×2+1 design; this remapping is an additive extension, not a replacement.
+
 ### Phase 2 design choices (added 2026-05-09)
 
 | Methodology spec | Implementation | Rationale |
@@ -3003,7 +3005,132 @@ MONDO category.
 | 2b — FastAPI + copilotkit-sdk-python wrapper | 2 days | ~3 days |
 | 2c — CopilotKit React UI + custom geno_agent components | 3–5 days | ~5–7 days |
 | Eval harness + LaTeX results | 2 days | ~3 days |
-| **Total Phase 2** | **12–14 days** | **~3 weeks** |
+| 2d — LLM-augmented factorial (Planner + Critic) | 3 days | ~5 days |
+| **2e — Cross-encoder re-ranker (§11.8)** | **3 days** | **~4 days** |
+| **Total Phase 2** | **18–20 days** | **~4 weeks** |
+
+---
+
+### 11.8 Phase 2e — Cross-encoder re-ranker (added 2026-05-15)
+
+**Motivation.** The Phase 2d LLM-augmented factorial (cells E-J,
+`reports/progress_report_15052026_llm_critic_results.md`) showed that
+neither LLM-Planner nor LLM-Critic produces a top-1 improvement over the
+deterministic Cell D (multi-agent + hybrid retrieval). The factorial
+decomposition cleanly isolates **retrieval** as the binding constraint:
+
+- Retrieval mode (dense → hybrid) is worth ~+49 pp top-1 on Cell C → D.
+- Architecture (single → multi) is worth ~+5 pp under hybrid.
+- LLM augmentation has no main effect on top-1; it only redistributes
+  ranks beyond position 1.
+
+The direct way to attack the retrieval ceiling is a re-ranking stage
+between first-stage retrieval and the Critic.
+
+**Pipeline change.**
+
+```
+Current  (Phase 2d):  query → planner → retrieve(top_k=50) → critic → synth
+Proposed (Phase 2e):  query → planner → retrieve(top_k=50) → reranker(top_k=10) → critic → synth
+```
+
+A cross-encoder computes a single relevance score by attending jointly
+over (query, chunk) — much higher capacity than the two-tower
+(query · chunk) dot product used at retrieval time, but too expensive
+to run on the full corpus. Restricting it to the top-50 retrieved
+candidates is the standard two-stage IR pattern (Nogueira & Cho 2019;
+MS MARCO leaderboard; BEIR benchmark).
+
+**Default model.** `ncbi/MedCPT-Cross-Encoder` (440 MB, ~25 ms/chunk on
+RTX 5090). PubMed-fine-tuned on query–passage pairs — direct domain
+match. Fallback: `BAAI/bge-reranker-v2-m3` (600 MB, ~28 ms/chunk).
+Both are open-weight, local, no cloud API — consistent with §11.1.
+
+**Expected lift.** From the IR literature on biomedical retrieval
+benchmarks (TREC-COVID, BioASQ, NFCorpus):
+
+- BM25 → BM25 + BGE-reranker-large: **+5 to +15 pp top-1**
+- Hybrid → hybrid + cross-encoder: **+3 to +10 pp top-1**
+
+Applied to Cell D's 0.627 top-1: conservative estimate ≈ 0.65; optimistic
+estimate ≈ 0.73.
+
+**Compute budget.** Per case: 2 500 chunk-gene pairs × 25 ms ≈ 62 s of
+re-ranking. VRAM resident: ~600 MB next to Qwen3-8B (16 GB) and
+PubMedBERT (440 MB). RTX 5090 has 32 GB; plenty of headroom. Four
+re-ranker factorial cells × 75 cases × ~62 s = ~5.2 h GPU; overnight
+feasible.
+
+**Factorial cells (L–O).**
+
+- **Cell L** — multi-agent + reranker · dense
+- **Cell M** — multi-agent + reranker · hybrid
+- **Cell N** — multi-agent + reranker + LLM-Planner · hybrid
+- **Cell O** — multi-agent + reranker + LLM-Critic · hybrid
+
+Cells L and M isolate the reranker's main effect; N and O test whether
+re-ranking restores the LLM components' lost headroom.
+
+**Implementation outline.**
+
+```
+src/agents/reranker.py
+    class CrossEncoderReranker:
+        def __init__(self, model_id: str = "ncbi/MedCPT-Cross-Encoder"): ...
+        def rerank(self, query: str, chunks: list[RetrievedChunk], top_k: int) -> list[RetrievedChunk]: ...
+
+src/agents/graph.py
+    add use_reranker: bool = False kwarg to build_graph()
+    insert a rerank node between retrieve and critic when True
+
+scripts/eval/run_factorial.py
+    add cells L, M, N, O to the dispatch table
+
+tests/test_reranker.py
+    smoke test for chunk-id integrity + deterministic top-k slicing
+```
+
+**Determinism.** Cross-encoders are deterministic at inference time
+(no sampling, no temperature). Same `PYTHONHASHSEED=42` policy applies.
+The re-ranker score will be recorded in each chunk's metadata for
+auditability.
+
+**Milestones (estimated).**
+
+| Day | Deliverable |
+|-----|-------------|
+| 1 | `src/agents/reranker.py` + `build_graph` integration behind a feature flag; smoke test on 1 case. |
+| 2 | Cells L + M (reranker on deterministic multi-agent). ~10 h GPU. |
+| 3 | Cells N + O (reranker stacked on LLM-Planner + LLM-Critic). ~10 h GPU. |
+| 4 | Aggregator update + milestone report + PR `phase2e/cross-encoder-reranker` → main. |
+
+**Acceptance criteria (Phase 2e done = ALL of).**
+
+- [ ] `src/agents/reranker.py` loads the chosen cross-encoder and
+  exposes a deterministic `rerank()` method with unit tests.
+- [ ] `scripts/eval/run_factorial.py` runs cells L–O end-to-end.
+- [ ] `data/eval/_results_summary.{md,json,csv}` includes cells A–O
+  with paired bootstrap 95 % CIs.
+- [ ] Phase 2e milestone report (`reports/progress_report_*_reranker_results.md`)
+  + visual HTML variant documents the lift (or lack of it) and updates
+  the thesis findings.
+- [ ] `data/MANIFEST.tsv` records the cross-encoder model SHA-256.
+
+**Open questions resolved in Step 1.**
+
+1. **Truncation depth.** Re-rank top-50 → top-10 (default); revisit
+   top-100 → top-10 if compute allows.
+2. **Per-gene vs global re-ranking.** Per-gene first (preserves
+   existing architecture); global pooling deferred to a follow-up.
+3. **Score combination.** Straight replacement of the second-stage
+   score (the standard IR pattern). No learned linear combinations
+   until baseline lift is established.
+
+**Master plan impact.** No change to §0 (phase ordering), §11.1 (LLM
+stack: re-ranker is a separate non-LLM model), §11.4 (compute budget:
+fits inside existing VRAM), or §11.6 (Phase 2 acceptance criteria
+remain a strict subset of Phase 2e acceptance). Phase 2e is **additive**
+to the Phase 2 commitments, not a replacement.
 
 ---
 
