@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_22024611_Case_4",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16336,
+  "tokens_out": 868,
+  "finish_reason": "stop",
+  "latency_s": 13.645670413970947,
+  "cost_usd": 0.062028,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.97,\"rationale\":\"AIRE loss-of-function directly causes APS-1 (OMIM 240300), whose cardinal triad and additional features match all patient HPO terms including hypoparathyroidism, adrenal insufficiency, CMC, vitiligo, atrophic gastritis, enamel hypoplasia, hypogonadism, and anti-21-hydroxylase antibodies.\"},{\"gene\":\"ITGA2B\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning ITGA2B as causal.\"},{\"gene\":\"TBC1D2\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning TBC1D2 as causal.\"},{\"gene\":\"NUDT10\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning NUDT10 as causal.\"},{\"gene\":\"FTCDNL1\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning FTCDNL1 as causal.\"},{\"gene\":\"PHKG2\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning PHKG2 as causal.\"},{\"gene\":\"POLR2B\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning POLR2B as causal.\"},{\"gene\":\"DHRS12\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning DHRS12 as causal.\"},{\"gene\":\"SACK1D\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning SACK1D as causal.\"},{\"gene\":\"MAPKAPK5\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning MAPKAPK5 as causal.\"},{\"gene\":\"HMGCLL1\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning HMGCLL1 as causal.\"},{\"gene\":\"TCEA1\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning TCEA1 as causal.\"},{\"gene\":\"LCE1F\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning LCE1F as causal.\"},{\"gene\":\"CUL5\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning CUL5 as causal.\"},{\"gene\":\"C6orf62\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype; evidence chunks only describe APS-1/AIRE biology without mentioning C6orf62 as causal.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "ITGA2B",
+    "TBC1D2",
+    "NUDT10",
+    "FTCDNL1"
+  ]
+}

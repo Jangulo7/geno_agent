@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_29408330_case_report",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 7807,
+  "tokens_out": 182,
+  "finish_reason": "stop",
+  "latency_s": 5.169298887252808,
+  "cost_usd": 0.0006755200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IRF4\": 0.85, \"OR10C1\": 0.15, \"ATP6V0D1\": 0.15, \"SMIM3\": 0.15, \"SYCP1\": 0.15, \"SLC36A4\": 0.15, \"FIGN\": 0.15, \"SFMBT2\": 0.15, \"SBNO1\": 0.15, \"OR2T1\": 0.15, \"AP4M1\": 0.15, \"NPR3\": 0.15, \"FGFBP3\": 0.15, \"H2AJ\": 0.15, \"OR6C1\": 0.15}",
+  "parsed_top5": [
+    "IRF4",
+    "OR10C1",
+    "ATP6V0D1",
+    "SMIM3",
+    "SYCP1"
+  ]
+}

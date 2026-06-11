@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19662,
+  "tokens_out": 646,
+  "finish_reason": "stop",
+  "latency_s": 51.82742786407471,
+  "cost_usd": 0.00442982,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NBAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"NBAS mutations directly cause recurrent liver failure, short stature, and immunological abnormalities matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CHST4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CHST4 deficiency is linked to decreased IgA, but lacks evidence for other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"CCDC158\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CCDC158 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"SSR4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SSR4 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"TANK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TANK to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"GNAT3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GNAT3 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"PRR23A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PRR23A to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"LRRC39\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRC39 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"C4orf50\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C4orf50 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"CCDC141\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CCDC141 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"GPSM2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GPSM2 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"BARHL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BARHL1 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"RP1L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RP1L1 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"IDNK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IDNK to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"C1QL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C1QL2 to the patient's clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "NBAS",
+    "CHST4",
+    "CCDC158",
+    "SSR4",
+    "TANK"
+  ]
+}

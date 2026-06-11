@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R3618_M_individual_F",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 9500,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 65.95656323432922,
+  "cost_usd": 0.00246056,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"NF1 is strongly associated with neurofibromas, freckling, and caf\u00e9-au-lait spots, matching the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CCDC196\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CCDC196 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"MFAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MFAP1 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"CLDN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CLDN2 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"MCHR2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MCHR2 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"C6orf52\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C6orf52 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"RNASEH2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RNASEH2B to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"CTBS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CTBS to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"ZBTB39\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZBTB39 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"VCF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VCF2 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"ZNF140\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF140 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"CEP89\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CEP89 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"TMSB15B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TMSB15B to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"CDRT4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CDRT4 to neurofibromas or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"VSIG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VSIG2 to neurofibromas or caf\u00e9-au-lait spots.\"\n  }\n]",
+  "parsed_top5": [
+    "NF1",
+    "CCDC196",
+    "MFAP1",
+    "CLDN2",
+    "MCHR2"
+  ]
+}

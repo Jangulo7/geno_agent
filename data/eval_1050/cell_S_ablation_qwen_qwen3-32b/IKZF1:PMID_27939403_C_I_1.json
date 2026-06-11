@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_27939403_C_I_1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19518,
+  "tokens_out": 724,
+  "finish_reason": "stop",
+  "latency_s": 14.646344661712646,
+  "cost_usd": 0.00176416,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IKZF1\": {\"gene\": \"IKZF1\", \"confidence\": 0.9, \"rationale\": \"IKZF1 mutations affect B cell and T cell development, leading to hypogammaglobulinemia and inverted CD4:CD8 ratio.\"}, \"TIGIT\": {\"gene\": \"TIGIT\", \"confidence\": 0.6, \"rationale\": \"TIGIT is involved in immune regulation, but evidence is less direct for the given phenotypes.\"}, \"RBFOX2\": {\"gene\": \"RBFOX2\", \"confidence\": 0.5, \"rationale\": \"RBFOX2 is associated with immune dysfunction, but evidence is limited to general immunodeficiency.\"}, \"CCDC88B\": {\"gene\": \"CCDC88B\", \"confidence\": 0.4, \"rationale\": \"CCDC88B has limited direct evidence linking it to the specific immunological phenotypes described.\"}, \"NOMO3\": {\"gene\": \"NOMO3\", \"confidence\": 0.4, \"rationale\": \"NOMO3 is not well-characterized in immunodeficiency contexts, with limited relevant evidence.\"}, \"SLC43A1\": {\"gene\": \"SLC43A1\", \"confidence\": 0.4, \"rationale\": \"SLC43A1 has no strong evidence linking it to the described immunological abnormalities.\"}, \"CYP4A11\": {\"gene\": \"CYP4A11\", \"confidence\": 0.4, \"rationale\": \"CYP4A11 is not typically associated with immunodeficiency, with limited relevant evidence.\"}, \"FAM20A\": {\"gene\": \"FAM20A\", \"confidence\": 0.4, \"rationale\": \"FAM20A has limited evidence linking it to the described immunological phenotypes.\"}, \"GNAT3\": {\"gene\": \"GNAT3\", \"confidence\": 0.4, \"rationale\": \"GNAT3 is not typically associated with immunodeficiency, with limited relevant evidence.\"}, \"KCNMB1\": {\"gene\": \"KCNMB1\", \"confidence\": 0.4, \"rationale\": \"KCNMB1 has limited evidence linking it to the described immunological abnormalities.\"}, \"MACO1\": {\"gene\": \"MACO1\", \"confidence\": 0.4, \"rationale\": \"MACO1 is not well-characterized in immunodeficiency contexts, with limited relevant evidence.\"}, \"MDH1B\": {\"gene\": \"MDH1B\", \"confidence\": 0.4, \"rationale\": \"MDH1B has limited evidence linking it to the described immunological phenotypes.\"}, \"XRN1\": {\"gene\": \"XRN1\", \"confidence\": 0.4, \"rationale\": \"XRN1 is not typically associated with immunodeficiency, with limited relevant evidence.\"}, \"CGREF1\": {\"gene\": \"CGREF1\", \"confidence\": 0.4, \"rationale\": \"CGREF1 has limited evidence linking it to the described immunological abnormalities.\"}, \"ASB16\": {\"gene\": \"ASB16\", \"confidence\": 0.4, \"rationale\": \"ASB16 is not well-characterized in immunodeficiency contexts, with limited relevant evidence.\"}}",
+  "parsed_top5": [
+    "IKZF1",
+    "TIGIT",
+    "RBFOX2",
+    "CCDC88B",
+    "NOMO3"
+  ]
+}

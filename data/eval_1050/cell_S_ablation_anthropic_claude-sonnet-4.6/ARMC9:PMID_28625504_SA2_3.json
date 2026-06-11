@@ -1,0 +1,26 @@
+{
+  "case_id": "ARMC9:PMID_28625504_SA2_3",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "ARMC9",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19672,
+  "tokens_out": 646,
+  "finish_reason": "stop",
+  "latency_s": 9.637792348861694,
+  "cost_usd": 0.068706,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ARMC9\",\"confidence\":0.82,\"rationale\":\"ARMC9 chunk_1 directly reports a Joubert syndrome case with ARMC9 mutation presenting polydactyly, developmental delay, ocular gaze abnormality, and reduced cone function, matching the patient's full phenotype profile.\"},{\"gene\":\"OSMR\",\"confidence\":0.04,\"rationale\":\"OSMR evidence includes a JS case with ptosis and nystagmus but no direct gene-disease link for OSMR; only generic JS literature shared with other candidates.\"},{\"gene\":\"RIMS3\",\"confidence\":0.03,\"rationale\":\"RIMS3 evidence only contains generic Joubert syndrome literature with no specific RIMS3-JS association documented.\"},{\"gene\":\"TGFB3\",\"confidence\":0.02,\"rationale\":\"TGFB3 evidence is generic JS literature with no direct link between TGFB3 mutations and the patient's phenotype.\"},{\"gene\":\"CDC45\",\"confidence\":0.02,\"rationale\":\"CDC45 evidence is generic JS literature with no specific CDC45-JS association documented.\"},{\"gene\":\"BRAT1\",\"confidence\":0.02,\"rationale\":\"BRAT1 evidence is generic JS literature with no specific BRAT1-JS association documented.\"},{\"gene\":\"NELL2\",\"confidence\":0.01,\"rationale\":\"NELL2 evidence is generic JS literature with no specific NELL2-JS association documented.\"},{\"gene\":\"TRPV6\",\"confidence\":0.01,\"rationale\":\"TRPV6 evidence is generic JS literature with no specific TRPV6-JS association documented.\"},{\"gene\":\"CABCOCO1\",\"confidence\":0.01,\"rationale\":\"CABCOCO1 evidence is generic JS literature with no specific CABCOCO1-JS association documented.\"},{\"gene\":\"SCAF4\",\"confidence\":0.01,\"rationale\":\"SCAF4 evidence is generic JS literature with no specific SCAF4-JS association documented.\"},{\"gene\":\"BRAP\",\"confidence\":0.01,\"rationale\":\"BRAP evidence is generic JS literature with no specific BRAP-JS association documented.\"},{\"gene\":\"SEC61G\",\"confidence\":0.01,\"rationale\":\"SEC61G evidence is generic JS literature with no specific SEC61G-JS association documented.\"},{\"gene\":\"GNG3\",\"confidence\":0.01,\"rationale\":\"GNG3 evidence is generic JS literature with no specific GNG3-JS association documented.\"},{\"gene\":\"TCP11\",\"confidence\":0.01,\"rationale\":\"TCP11 evidence is generic JS literature with no specific TCP11-JS association documented.\"},{\"gene\":\"CDH6\",\"confidence\":0.01,\"rationale\":\"CDH6 evidence is generic JS literature with no specific CDH6-JS association documented.\"}]",
+  "parsed_top5": [
+    "ARMC9",
+    "OSMR",
+    "RIMS3",
+    "TGFB3",
+    "CDC45"
+  ]
+}

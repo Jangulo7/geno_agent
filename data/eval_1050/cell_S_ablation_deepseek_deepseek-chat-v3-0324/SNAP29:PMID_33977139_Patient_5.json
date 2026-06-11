@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_5",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "FRMD7",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FRMD7",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17165,
+  "tokens_out": 604,
+  "finish_reason": "stop",
+  "latency_s": 31.07409405708313,
+  "cost_usd": 0.00389808,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FRMD7\",\n    \"confidence\": 0.8,\n    \"rationale\": \"Multiple reports link FRMD7 to nystagmus, microcephaly, and hypotonia, closely matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CLASRP\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Evidence suggests craniofacial and skeletal abnormalities, but less specific to the patient's key features.\"\n  },\n  {\n    \"gene\": \"UHRF2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentions microcephaly and hypotonia but lacks strong phenotypic specificity.\"\n  },\n  {\n    \"gene\": \"MYNN\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Overlaps with some patient symptoms but no strong gene-phenotype correlation.\"\n  },\n  {\n    \"gene\": \"EFNA1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minor association with hypotonia and scoliosis but not compelling.\"\n  },\n  {\n    \"gene\": \"FRMPD3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Generic developmental delay features, no unique match to patient.\"\n  },\n  {\n    \"gene\": \"RHD\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct phenotypic relevance; likely incidental.\"\n  },\n  {\n    \"gene\": \"DHX38\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"KIAA0825\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Minimal phenotypic overlap; unlikely causal.\"\n  },\n  {\n    \"gene\": \"ZBTB43\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No clear connection to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"NRM\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks specific evidence matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"VCAN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant phenotypic overlap found.\"\n  },\n  {\n    \"gene\": \"EQTN\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No convincing evidence linking to the patient's condition.\"\n  },\n  {\n    \"gene\": \"TIMMDC1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct match to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"NUF2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant phenotypic association identified.\"\n  }\n]",
+  "parsed_top5": [
+    "FRMD7",
+    "CLASRP",
+    "UHRF2",
+    "MYNN",
+    "EFNA1"
+  ]
+}

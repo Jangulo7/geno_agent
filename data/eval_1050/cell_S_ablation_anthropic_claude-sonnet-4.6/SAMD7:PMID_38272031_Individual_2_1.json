@@ -1,0 +1,26 @@
+{
+  "case_id": "SAMD7:PMID_38272031_Individual_2_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SAMD7",
+  "orig_qwen3_8b_top1": "MAP1LC3C",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TRHDE",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14342,
+  "tokens_out": 788,
+  "finish_reason": "stop",
+  "latency_s": 11.120326042175293,
+  "cost_usd": 0.054846,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"TRHDE\", \"confidence\": 0.18, \"rationale\": \"TRHDE chunk describes a case with macular atrophy, pale optic discs, central hypoautofluorescence, and macular dystrophy most closely matching the patient's full HPO profile.\"}, {\"gene\": \"MAP1LC3C\", \"confidence\": 0.08, \"rationale\": \"Evidence describes optic atrophy, temporal disc pallor, reduced visual acuity, and macular changes but no direct gene-disease link established.\"}, {\"gene\": \"KCMF1\", \"confidence\": 0.08, \"rationale\": \"Evidence includes central scotoma, macular dystrophy, and optic nerve pallor in a retinal dystrophy context, partially matching the phenotype.\"}, {\"gene\": \"COL11A1\", \"confidence\": 0.07, \"rationale\": \"Evidence mentions widespread macular atrophy and optic disc pallor but evidence is generic and not gene-specific.\"}, {\"gene\": \"TSTD1\", \"confidence\": 0.07, \"rationale\": \"Evidence mentions macular atrophy and optic disc pallor but is shared generic evidence with no specific gene-disease link.\"}, {\"gene\": \"MBD3L3\", \"confidence\": 0.06, \"rationale\": \"Evidence mentions macular atrophy and optic disc pallor but is generic and not specifically linked to this gene.\"}, {\"gene\": \"ZIC1\", \"confidence\": 0.06, \"rationale\": \"Evidence mentions macular atrophy and optic disc pallor but is generic and not specifically linked to this gene.\"}, {\"gene\": \"BACH2\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to BACH2.\"}, {\"gene\": \"RWDD3\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to RWDD3.\"}, {\"gene\": \"TPRN\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to TPRN.\"}, {\"gene\": \"ZNF222\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to ZNF222.\"}, {\"gene\": \"C1orf159\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to C1orf159.\"}, {\"gene\": \"ZNF581\", \"confidence\": 0.05, \"rationale\": \"Evidence describes hypoautofluorescent patches and macular thinning but is generic and not specifically linked to ZNF581.\"}, {\"gene\": \"FNTA\", \"confidence\": 0.05, \"rationale\": \"Evidence mentions optic disc pallor and macular atrophy but is generic and not specifically linked to FNTA.\"}, {\"gene\": \"DAZ2\", \"confidence\": 0.05, \"rationale\": \"Evidence mentions optic disc pallor and macular atrophy but is generic and not specifically linked to DAZ2.\"}]",
+  "parsed_top5": [
+    "TRHDE",
+    "MAP1LC3C",
+    "KCMF1",
+    "COL11A1",
+    "TSTD1"
+  ]
+}

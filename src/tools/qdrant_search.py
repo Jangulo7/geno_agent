@@ -62,6 +62,7 @@ def _hit_to_chunk(hit: models.ScoredPoint, mode: RetrievalMode) -> RetrievedChun
         score_dense=hit.score if mode == "dense" else None,
         score_bm25=hit.score if mode == "bm25" else None,
         score_rrf=hit.score if mode == "hybrid" else None,
+        pmid=str(p.get("pmid") or ""),
     )
 
 

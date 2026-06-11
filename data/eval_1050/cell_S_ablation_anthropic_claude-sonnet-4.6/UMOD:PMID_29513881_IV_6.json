@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_29513881_IV_6",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18586,
+  "tokens_out": 737,
+  "finish_reason": "stop",
+  "latency_s": 15.0520761013031,
+  "cost_usd": 0.066813,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.82,\"rationale\":\"UMOD variants directly cause ADTKD-UMOD, a hereditary nephropathy characterized by CKD with elevated creatinine and hyperechogenic kidneys, matching all three patient HPO phenotypes.\"},{\"gene\":\"WIF1\",\"confidence\":0.05,\"rationale\":\"Evidence mentions WIF1 as a Wnt antagonist studied in vascular calcification in CKD context, but no direct causal link to the patient's phenotype profile.\"},{\"gene\":\"MCAM\",\"confidence\":0.04,\"rationale\":\"MCAM shows putatively causal inverse relation with eGFR in MR analysis and is elevated in CKD/diabetic nephropathy, but no direct disease-causing gene evidence for this phenotype.\"},{\"gene\":\"KYNU\",\"confidence\":0.02,\"rationale\":\"KYNU activity changes observed in polycystic kidney disease animal models alongside creatinine elevation, but only as a secondary metabolic marker, not a causal gene.\"},{\"gene\":\"TSC22D1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe CKD with hyperechogenic kidneys but TSC22D1 is not specifically implicated as the causal gene in those reports.\"},{\"gene\":\"CEBPD\",\"confidence\":0.01,\"rationale\":\"CEBPD is linked to renal ischemia-reperfusion injury mechanisms but not to hereditary CKD with hyperechogenic kidneys.\"},{\"gene\":\"PXDNL\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking PXDNL to the patient's phenotype; shared generic CKD/hyperechogenic kidney case reports are non-specific.\"},{\"gene\":\"FAF1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking FAF1 to hereditary CKD or hyperechogenic kidneys; evidence chunks are non-specific case reports.\"},{\"gene\":\"DCPH1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking DCPH1 to the patient's phenotype profile; evidence is non-specific.\"},{\"gene\":\"GAGE12C\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking GAGE12C to hereditary CKD with hyperechogenic kidneys.\"},{\"gene\":\"SPATA31A1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SPATA31A1 to the patient's phenotype; evidence chunks are non-specific.\"},{\"gene\":\"CIMIP2B\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CIMIP2B to hereditary CKD with hyperechogenic kidneys.\"},{\"gene\":\"ZNF224\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ZNF224 to the patient's phenotype profile.\"},{\"gene\":\"UBE2NL\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking UBE2NL to hereditary CKD with hyperechogenic kidneys.\"},{\"gene\":\"HYPK\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking HYPK to the patient's phenotype profile of CKD with hyperechogenic kidneys.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "WIF1",
+    "MCAM",
+    "KYNU",
+    "TSC22D1"
+  ]
+}

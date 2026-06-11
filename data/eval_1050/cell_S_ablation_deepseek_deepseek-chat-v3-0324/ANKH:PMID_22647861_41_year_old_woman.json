@@ -1,0 +1,26 @@
+{
+  "case_id": "ANKH:PMID_22647861_41_year_old_woman",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ANKH",
+  "orig_qwen3_8b_top1": "ANKH",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ANKH",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11447,
+  "tokens_out": 723,
+  "finish_reason": "stop",
+  "latency_s": 27.87868356704712,
+  "cost_usd": 0.0028461100000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ANKH\",\n    \"confidence\": 0.9,\n    \"rationale\": \"ANKH's evidence strongly links to joint pain and chondrocalcinosis, matching the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"FEV\",\n    \"confidence\": 0.5,\n    \"rationale\": \"FEV's evidence discusses polyarthritis but lacks specificity for the patient's metabolic and joint phenotypes.\"\n  },\n  {\n    \"gene\": \"WASF3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"WASF3's evidence mentions joint pain but lacks direct relevance to the patient's hypophosphatemia and hyperparathyroidism.\"\n  },\n  {\n    \"gene\": \"ESCO1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"ESCO1's evidence is generic joint pain descriptions with no direct link to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"NBDY\",\n    \"confidence\": 0.3,\n    \"rationale\": \"NBDY's evidence is nonspecific and does not address the patient's metabolic or joint issues.\"\n  },\n  {\n    \"gene\": \"CYP2C18\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CYP2C18's evidence lacks relevance to the patient's hypophosphatemia and joint pathology.\"\n  },\n  {\n    \"gene\": \"CLEC3A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CLEC3A's evidence does not specifically address the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"DMRTC1B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"DMRTC1B's evidence is generic and does not match the patient's specific metabolic and joint issues.\"\n  },\n  {\n    \"gene\": \"CXADR\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CXADR's evidence is unrelated to the patient's hypophosphatemia and arthropathy.\"\n  },\n  {\n    \"gene\": \"CATSPERD\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CATSPERD's evidence does not connect to the patient's metabolic or joint symptoms.\"\n  },\n  {\n    \"gene\": \"OLA1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"OLA1's evidence is irrelevant to the patient's hypophosphatemia and joint pathology.\"\n  },\n  {\n    \"gene\": \"CNTNAP3B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CNTNAP3B's evidence does not align with the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"XYLB\",\n    \"confidence\": 0.3,\n    \"rationale\": \"XYLB's evidence lacks relevance to the patient's metabolic and joint issues.\"\n  },\n  {\n    \"gene\": \"KCNH2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"KCNH2's evidence mentions joint pain but is unrelated to the patient's primary metabolic disorder.\"\n  },\n  {\n    \"gene\": \"EPHX1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"EPHX1's evidence does not address the patient's hypophosphatemia or chondrocalcinosis.\"\n  }\n]",
+  "parsed_top5": [
+    "ANKH",
+    "FEV",
+    "WASF3",
+    "ESCO1",
+    "NBDY"
+  ]
+}

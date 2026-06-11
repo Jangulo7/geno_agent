@@ -1,0 +1,26 @@
+{
+  "case_id": "NKX6-2:PMID_29388673_Fam_3_III_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NKX6-2",
+  "orig_qwen3_8b_top1": "POLR3D",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NKX6-2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14952,
+  "tokens_out": 1157,
+  "finish_reason": "stop",
+  "latency_s": 15.374844074249268,
+  "cost_usd": 0.062211,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NKX6-2\",\n    \"confidence\": 0.52,\n    \"rationale\": \"NKX6-2 directly causes early-onset spastic ataxia with CNS hypomyelination, thin corpus callosum, motor delay, and spasticity\u2014matching all patient HPO phenotypes; mouse knockout shows widespread hypomyelination.\"\n  },\n  {\n    \"gene\": \"POLR3D\",\n    \"confidence\": 0.22,\n    \"rationale\": \"POLR3-related hypomyelinating leukodystrophy features hypomyelination, thin corpus callosum, spasticity, and developmental delay; POLR3D is a rare causative subunit with documented typical POLR3-HLD presentation.\"\n  },\n  {\n    \"gene\": \"CACNA2D2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Biallelic CACNA2D2 loss-of-function causes global developmental delay, corpus callosum hypoplasia, and hypomyelinating leukodystrophy, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"OR1D4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks for OR1D4 describe DEGS1-related hypomyelinating leukodystrophy features but are not specific to OR1D4; no direct gene-phenotype link established.\"\n  },\n  {\n    \"gene\": \"SLC38A11\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic DEGS1-related leukodystrophy descriptions not specific to SLC38A11; no direct evidence linking this gene to the patient phenotype.\"\n  },\n  {\n    \"gene\": \"BCL2L11\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions unrelated to BCL2L11 function; no direct evidence supporting BCL2L11 as causal for this phenotype.\"\n  },\n  {\n    \"gene\": \"GRIP1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to GRIP1; no direct evidence linking GRIP1 to hypomyelination or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KIF16B\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks describe KIF1C-related disease with overlapping features but are not specific to KIF16B; no direct evidence linking KIF16B to this phenotype.\"\n  },\n  {\n    \"gene\": \"CNBP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to CNBP; no direct evidence linking CNBP to hypomyelination or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ENPP7\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic DEGS1-related leukodystrophy descriptions not specific to ENPP7; no direct evidence supporting ENPP7 as causal here.\"\n  },\n  {\n    \"gene\": \"HOXA13\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to HOXA13; HOXA13 is known for limb/urogenital defects, not hypomyelinating leukodystrophy.\"\n  },\n  {\n    \"gene\": \"DGLUCY\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to DGLUCY; no direct evidence linking DGLUCY to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"AGPAT1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to AGPAT1; no direct evidence linking AGPAT1 to hypomyelination or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NCLN\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to NCLN; no direct evidence linking NCLN to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"CRYL1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence chunks are generic leukodystrophy descriptions not specific to CRYL1; no direct evidence linking CRYL1 to hypomyelination or the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "NKX6-2",
+    "POLR3D",
+    "CACNA2D2",
+    "OR1D4",
+    "SLC38A11"
+  ]
+}

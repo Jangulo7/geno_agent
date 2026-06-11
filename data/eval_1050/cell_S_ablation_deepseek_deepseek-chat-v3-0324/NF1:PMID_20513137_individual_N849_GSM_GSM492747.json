@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_20513137_individual_N849_GSM_GSM492747",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10454,
+  "tokens_out": 740,
+  "finish_reason": "stop",
+  "latency_s": 44.50938630104065,
+  "cost_usd": 0.0026606000000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NF1\",\n    \"confidence\": 0.99,\n    \"rationale\": \"NF1 is directly linked to neurofibromas, freckling, and scoliosis with strong clinical evidence and diagnostic criteria.\"\n  },\n  {\n    \"gene\": \"LRRFIP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRFIP2 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"RASD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RASD2 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"PPP2R5A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PPP2R5A to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"MPPE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MPPE1 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"IL7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IL7 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"LRRN4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRN4 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"PDXDC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PDXDC1 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"PIDD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PIDD1 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"C6orf120\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C6orf120 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"FBXO43\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FBXO43 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"PDCD2L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PDCD2L to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"CDH24\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CDH24 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"IGFBP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IGFBP2 to the patient's phenotypes; mentioned only in NF1 context.\"\n  },\n  {\n    \"gene\": \"KCP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KCP to the patient's phenotypes; mentioned only in NF1 context.\"\n  }\n]",
+  "parsed_top5": [
+    "NF1",
+    "LRRFIP2",
+    "RASD2",
+    "PPP2R5A",
+    "MPPE1"
+  ]
+}

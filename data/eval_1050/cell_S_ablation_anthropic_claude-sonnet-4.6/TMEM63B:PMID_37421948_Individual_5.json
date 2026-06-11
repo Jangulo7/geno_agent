@@ -1,0 +1,26 @@
+{
+  "case_id": "TMEM63B:PMID_37421948_Individual_5",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TMEM63B",
+  "orig_qwen3_8b_top1": "TMEM63B",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TMEM63B",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15394,
+  "tokens_out": 738,
+  "finish_reason": "stop",
+  "latency_s": 12.332061529159546,
+  "cost_usd": 0.057252,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"TMEM63B\", \"confidence\": 0.82, \"rationale\": \"TMEM63B chunk_1 directly links DEE with early-onset nystagmus and cortical visual impairment in a cohort study, matching the patient's epilepsy, nystagmus, and visual impairment profile with high specificity (critic_relevance 5/5).\"},{\"gene\": \"POC1B\", \"confidence\": 0.04, \"rationale\": \"Only generic shared evidence chunks; no direct POC1B-specific link to this phenotype profile.\"},{\"gene\": \"DAP3\", \"confidence\": 0.03, \"rationale\": \"Only generic shared evidence chunks with no DAP3-specific association to the patient's phenotype.\"},{\"gene\": \"KRT80\", \"confidence\": 0.02, \"rationale\": \"KRT80 is a keratin gene with no plausible neurological disease mechanism; evidence chunks are non-specific.\"},{\"gene\": \"RAB27B\", \"confidence\": 0.02, \"rationale\": \"No RAB27B-specific evidence linking it to DEE, nystagmus, or myelination abnormalities in the provided chunks.\"},{\"gene\": \"C7orf25\", \"confidence\": 0.02, \"rationale\": \"No specific evidence connecting C7orf25 to this neurological phenotype profile.\"},{\"gene\": \"SLC1A1\", \"confidence\": 0.02, \"rationale\": \"SLC1A1 evidence chunks are non-specific and do not directly support this phenotype combination.\"},{\"gene\": \"PRDM2\", \"confidence\": 0.01, \"rationale\": \"No PRDM2-specific evidence for DEE, nystagmus, or myelination abnormalities in provided chunks.\"},{\"gene\": \"FBH1\", \"confidence\": 0.01, \"rationale\": \"FBH1 is a DNA helicase with no established neurological disease link; evidence is non-specific.\"},{\"gene\": \"LRP2BP\", \"confidence\": 0.01, \"rationale\": \"No LRP2BP-specific evidence supporting causality for this phenotype profile.\"},{\"gene\": \"SPMIP8\", \"confidence\": 0.01, \"rationale\": \"No SPMIP8-specific evidence linking it to DEE or the patient's neurological features.\"},{\"gene\": \"MAP2\", \"confidence\": 0.01, \"rationale\": \"No MAP2-specific disease evidence in provided chunks despite its neuronal expression role.\"},{\"gene\": \"AMT\", \"confidence\": 0.01, \"rationale\": \"AMT causes nonketotic hyperglycinemia but no direct evidence in chunks links it to this specific phenotype.\"},{\"gene\": \"CTXND1\", \"confidence\": 0.01, \"rationale\": \"No CTXND1-specific evidence supporting causality for this neurological phenotype profile.\"},{\"gene\": \"STX8\", \"confidence\": 0.01, \"rationale\": \"No STX8-specific evidence linking it to DEE, nystagmus, or myelination abnormalities in provided chunks.\"}]",
+  "parsed_top5": [
+    "TMEM63B",
+    "POC1B",
+    "DAP3",
+    "KRT80",
+    "RAB27B"
+  ]
+}

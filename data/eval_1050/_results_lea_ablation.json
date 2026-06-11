@@ -1,0 +1,1211 @@
+{
+  "cohort_size": 300,
+  "subsets": {
+    "__all__": 300,
+    "overlap_present": 216,
+    "overlap_absent": 84,
+    "cat_developmental": 75,
+    "cat_immunological": 75,
+    "cat_metabolic": 75,
+    "cat_neurological": 75
+  },
+  "models": [
+    "qwen3-8b (production)",
+    "anthropic_claude-sonnet-4.6",
+    "deepseek_deepseek-chat-v3-0324",
+    "qwen_qwen3-32b"
+  ],
+  "per_cell": {
+    "__all__": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.7167,
+          0.6633,
+          0.7633
+        ],
+        "top5": [
+          0.7833,
+          0.7367,
+          0.8267
+        ],
+        "top10": [
+          0.8067,
+          0.7633,
+          0.85
+        ],
+        "mrr": [
+          0.7485,
+          0.7026,
+          0.7928
+        ],
+        "ndcg10": [
+          0.7613,
+          0.7177,
+          0.8071
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.7667,
+          0.72,
+          0.81
+        ],
+        "top5": [
+          0.81,
+          0.7633,
+          0.8533
+        ],
+        "top10": [
+          0.82,
+          0.7767,
+          0.8633
+        ],
+        "mrr": [
+          0.7878,
+          0.7456,
+          0.8301
+        ],
+        "ndcg10": [
+          0.7951,
+          0.7512,
+          0.8376
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.7367,
+          0.6833,
+          0.7833
+        ],
+        "top5": [
+          0.79,
+          0.7433,
+          0.8333
+        ],
+        "top10": [
+          0.8,
+          0.7567,
+          0.8433
+        ],
+        "mrr": [
+          0.7595,
+          0.7151,
+          0.8027
+        ],
+        "ndcg10": [
+          0.7688,
+          0.7229,
+          0.816
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.5633,
+          0.5067,
+          0.62
+        ],
+        "top5": [
+          0.5833,
+          0.52,
+          0.64
+        ],
+        "top10": [
+          0.59,
+          0.5333,
+          0.6467
+        ],
+        "mrr": [
+          0.5729,
+          0.5218,
+          0.6247
+        ],
+        "ndcg10": [
+          0.5763,
+          0.5207,
+          0.6319
+        ]
+      }
+    },
+    "overlap_present": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.6574,
+          0.6019,
+          0.7222
+        ],
+        "top5": [
+          0.7315,
+          0.6713,
+          0.787
+        ],
+        "top10": [
+          0.7546,
+          0.6991,
+          0.8056
+        ],
+        "mrr": [
+          0.6921,
+          0.6313,
+          0.7465
+        ],
+        "ndcg10": [
+          0.7055,
+          0.6495,
+          0.7596
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.7176,
+          0.662,
+          0.7778
+        ],
+        "top5": [
+          0.7593,
+          0.6991,
+          0.8148
+        ],
+        "top10": [
+          0.7731,
+          0.7176,
+          0.8241
+        ],
+        "mrr": [
+          0.7399,
+          0.681,
+          0.7937
+        ],
+        "ndcg10": [
+          0.7471,
+          0.6902,
+          0.8
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.6806,
+          0.625,
+          0.7407
+        ],
+        "top5": [
+          0.7407,
+          0.6806,
+          0.8009
+        ],
+        "top10": [
+          0.75,
+          0.6944,
+          0.8009
+        ],
+        "mrr": [
+          0.7059,
+          0.6434,
+          0.7598
+        ],
+        "ndcg10": [
+          0.7159,
+          0.6564,
+          0.7687
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.5185,
+          0.4583,
+          0.588
+        ],
+        "top5": [
+          0.5417,
+          0.4769,
+          0.6111
+        ],
+        "top10": [
+          0.5463,
+          0.4815,
+          0.6111
+        ],
+        "mrr": [
+          0.5287,
+          0.4628,
+          0.595
+        ],
+        "ndcg10": [
+          0.532,
+          0.4672,
+          0.5966
+        ]
+      }
+    },
+    "overlap_absent": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.869,
+          0.7976,
+          0.9405
+        ],
+        "top5": [
+          0.9167,
+          0.8452,
+          0.9643
+        ],
+        "top10": [
+          0.9405,
+          0.881,
+          0.9881
+        ],
+        "mrr": [
+          0.8936,
+          0.8328,
+          0.9484
+        ],
+        "ndcg10": [
+          0.9047,
+          0.8442,
+          0.9555
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.8929,
+          0.8214,
+          0.9524
+        ],
+        "top5": [
+          0.9405,
+          0.881,
+          0.9881
+        ],
+        "top10": [
+          0.9405,
+          0.881,
+          0.9881
+        ],
+        "mrr": [
+          0.9111,
+          0.854,
+          0.9647
+        ],
+        "ndcg10": [
+          0.9184,
+          0.8618,
+          0.9661
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.881,
+          0.7976,
+          0.9524
+        ],
+        "top5": [
+          0.9167,
+          0.8571,
+          0.9762
+        ],
+        "top10": [
+          0.9286,
+          0.869,
+          0.9762
+        ],
+        "mrr": [
+          0.8973,
+          0.8333,
+          0.9539
+        ],
+        "ndcg10": [
+          0.9049,
+          0.8446,
+          0.9562
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.6786,
+          0.5714,
+          0.7738
+        ],
+        "top5": [
+          0.6905,
+          0.5952,
+          0.7857
+        ],
+        "top10": [
+          0.7024,
+          0.5952,
+          0.7976
+        ],
+        "mrr": [
+          0.6865,
+          0.5794,
+          0.7877
+        ],
+        "ndcg10": [
+          0.6903,
+          0.5959,
+          0.7856
+        ]
+      }
+    },
+    "cat_developmental": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.6933,
+          0.6,
+          0.8
+        ],
+        "top5": [
+          0.7333,
+          0.6267,
+          0.84
+        ],
+        "top10": [
+          0.76,
+          0.6667,
+          0.8533
+        ],
+        "mrr": [
+          0.7126,
+          0.6127,
+          0.8102
+        ],
+        "ndcg10": [
+          0.7219,
+          0.6163,
+          0.8194
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.7467,
+          0.64,
+          0.84
+        ],
+        "top5": [
+          0.7733,
+          0.6667,
+          0.8667
+        ],
+        "top10": [
+          0.7867,
+          0.6933,
+          0.88
+        ],
+        "mrr": [
+          0.7597,
+          0.6622,
+          0.8533
+        ],
+        "ndcg10": [
+          0.7662,
+          0.6679,
+          0.86
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.72,
+          0.6133,
+          0.8267
+        ],
+        "top5": [
+          0.7333,
+          0.6267,
+          0.84
+        ],
+        "top10": [
+          0.7333,
+          0.64,
+          0.8267
+        ],
+        "mrr": [
+          0.7245,
+          0.6279,
+          0.82
+        ],
+        "ndcg10": [
+          0.7257,
+          0.6191,
+          0.8267
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.5733,
+          0.4533,
+          0.68
+        ],
+        "top5": [
+          0.5733,
+          0.4533,
+          0.68
+        ],
+        "top10": [
+          0.5867,
+          0.48,
+          0.6933
+        ],
+        "mrr": [
+          0.5768,
+          0.459,
+          0.6834
+        ],
+        "ndcg10": [
+          0.5781,
+          0.4667,
+          0.6895
+        ]
+      }
+    },
+    "cat_immunological": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.8,
+          0.72,
+          0.88
+        ],
+        "top5": [
+          0.84,
+          0.76,
+          0.92
+        ],
+        "top10": [
+          0.84,
+          0.7467,
+          0.92
+        ],
+        "mrr": [
+          0.8177,
+          0.7221,
+          0.8933
+        ],
+        "ndcg10": [
+          0.8226,
+          0.7319,
+          0.8968
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.8133,
+          0.7333,
+          0.8933
+        ],
+        "top5": [
+          0.8667,
+          0.7867,
+          0.9333
+        ],
+        "top10": [
+          0.8667,
+          0.7867,
+          0.9333
+        ],
+        "mrr": [
+          0.836,
+          0.7493,
+          0.9053
+        ],
+        "ndcg10": [
+          0.8437,
+          0.757,
+          0.9151
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.8133,
+          0.7333,
+          0.8933
+        ],
+        "top5": [
+          0.8533,
+          0.7733,
+          0.92
+        ],
+        "top10": [
+          0.8533,
+          0.7733,
+          0.9333
+        ],
+        "mrr": [
+          0.8278,
+          0.7389,
+          0.9022
+        ],
+        "ndcg10": [
+          0.8342,
+          0.7484,
+          0.9067
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.6133,
+          0.5067,
+          0.72
+        ],
+        "top5": [
+          0.64,
+          0.5333,
+          0.7467
+        ],
+        "top10": [
+          0.64,
+          0.5333,
+          0.7467
+        ],
+        "mrr": [
+          0.6267,
+          0.52,
+          0.7333
+        ],
+        "ndcg10": [
+          0.6302,
+          0.5235,
+          0.7284
+        ]
+      }
+    },
+    "cat_metabolic": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.84,
+          0.7467,
+          0.92
+        ],
+        "top5": [
+          0.8933,
+          0.8267,
+          0.96
+        ],
+        "top10": [
+          0.9333,
+          0.8667,
+          0.9867
+        ],
+        "mrr": [
+          0.8714,
+          0.7994,
+          0.9381
+        ],
+        "ndcg10": [
+          0.8855,
+          0.8217,
+          0.9403
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.8933,
+          0.8133,
+          0.96
+        ],
+        "top5": [
+          0.9067,
+          0.84,
+          0.96
+        ],
+        "top10": [
+          0.92,
+          0.8533,
+          0.9733
+        ],
+        "mrr": [
+          0.9034,
+          0.84,
+          0.9621
+        ],
+        "ndcg10": [
+          0.9056,
+          0.834,
+          0.96
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.8533,
+          0.76,
+          0.9333
+        ],
+        "top5": [
+          0.92,
+          0.8533,
+          0.9733
+        ],
+        "top10": [
+          0.92,
+          0.8533,
+          0.9733
+        ],
+        "mrr": [
+          0.8814,
+          0.8136,
+          0.9431
+        ],
+        "ndcg10": [
+          0.8904,
+          0.8206,
+          0.9484
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.6667,
+          0.56,
+          0.76
+        ],
+        "top5": [
+          0.68,
+          0.5733,
+          0.7867
+        ],
+        "top10": [
+          0.6933,
+          0.5867,
+          0.7867
+        ],
+        "mrr": [
+          0.6722,
+          0.5533,
+          0.7733
+        ],
+        "ndcg10": [
+          0.6772,
+          0.5629,
+          0.7838
+        ]
+      }
+    },
+    "cat_neurological": {
+      "qwen3-8b (production)": {
+        "top1": [
+          0.5333,
+          0.4133,
+          0.64
+        ],
+        "top5": [
+          0.6667,
+          0.56,
+          0.76
+        ],
+        "top10": [
+          0.6933,
+          0.5733,
+          0.8
+        ],
+        "mrr": [
+          0.5923,
+          0.4886,
+          0.6968
+        ],
+        "ndcg10": [
+          0.6153,
+          0.5169,
+          0.7171
+        ]
+      },
+      "anthropic_claude-sonnet-4.6": {
+        "top1": [
+          0.6133,
+          0.5067,
+          0.72
+        ],
+        "top5": [
+          0.6933,
+          0.5733,
+          0.7867
+        ],
+        "top10": [
+          0.7067,
+          0.6,
+          0.8
+        ],
+        "mrr": [
+          0.6521,
+          0.5522,
+          0.7571
+        ],
+        "ndcg10": [
+          0.6648,
+          0.567,
+          0.7633
+        ]
+      },
+      "deepseek_deepseek-chat-v3-0324": {
+        "top1": [
+          0.56,
+          0.44,
+          0.6667
+        ],
+        "top5": [
+          0.6533,
+          0.5467,
+          0.7467
+        ],
+        "top10": [
+          0.6933,
+          0.5733,
+          0.8
+        ],
+        "mrr": [
+          0.6043,
+          0.5007,
+          0.7106
+        ],
+        "ndcg10": [
+          0.6249,
+          0.5282,
+          0.7293
+        ]
+      },
+      "qwen_qwen3-32b": {
+        "top1": [
+          0.4,
+          0.2933,
+          0.5067
+        ],
+        "top5": [
+          0.44,
+          0.3333,
+          0.56
+        ],
+        "top10": [
+          0.44,
+          0.32,
+          0.56
+        ],
+        "mrr": [
+          0.4158,
+          0.3082,
+          0.5224
+        ],
+        "ndcg10": [
+          0.4199,
+          0.3132,
+          0.5239
+        ]
+      }
+    }
+  },
+  "paired_vs_production": {
+    "__all__": {
+      "anthropic_claude-sonnet-4.6_vs_prod": {
+        "n": 300,
+        "metrics": {
+          "top1": {
+            "point": 0.05,
+            "ci_lo": 0.0267,
+            "ci_hi": 0.0733,
+            "significant": true,
+            "a_wins": 15,
+            "b_wins": 0,
+            "mcnemar_p": 6e-05
+          },
+          "top5": {
+            "point": 0.0267,
+            "ci_lo": 0.01,
+            "ci_hi": 0.0467,
+            "significant": true,
+            "a_wins": 8,
+            "b_wins": 0,
+            "mcnemar_p": 0.00781
+          },
+          "top10": {
+            "point": 0.0133,
+            "ci_lo": -0.0033,
+            "ci_hi": 0.0333,
+            "significant": false,
+            "a_wins": 6,
+            "b_wins": 2,
+            "mcnemar_p": 0.28906
+          },
+          "mrr": {
+            "point": 0.0393,
+            "ci_lo": 0.0227,
+            "ci_hi": 0.0586,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0338,
+            "ci_lo": 0.0189,
+            "ci_hi": 0.0516,
+            "significant": true
+          }
+        }
+      },
+      "deepseek_deepseek-chat-v3-0324_vs_prod": {
+        "n": 300,
+        "metrics": {
+          "top1": {
+            "point": 0.02,
+            "ci_lo": 0.0033,
+            "ci_hi": 0.04,
+            "significant": true,
+            "a_wins": 7,
+            "b_wins": 1,
+            "mcnemar_p": 0.07031
+          },
+          "top5": {
+            "point": 0.0067,
+            "ci_lo": -0.01,
+            "ci_hi": 0.0233,
+            "significant": false,
+            "a_wins": 5,
+            "b_wins": 3,
+            "mcnemar_p": 0.72656
+          },
+          "top10": {
+            "point": -0.0067,
+            "ci_lo": -0.0233,
+            "ci_hi": 0.01,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 4,
+            "mcnemar_p": 0.6875
+          },
+          "mrr": {
+            "point": 0.011,
+            "ci_lo": -0.0023,
+            "ci_hi": 0.0249,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0075,
+            "ci_lo": -0.0056,
+            "ci_hi": 0.0205,
+            "significant": false
+          }
+        }
+      },
+      "qwen_qwen3-32b_vs_prod": {
+        "n": 300,
+        "metrics": {
+          "top1": {
+            "point": -0.1533,
+            "ci_lo": -0.2033,
+            "ci_hi": -0.1067,
+            "significant": true,
+            "a_wins": 6,
+            "b_wins": 52,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": -0.2,
+            "ci_lo": -0.25,
+            "ci_hi": -0.1567,
+            "significant": true,
+            "a_wins": 2,
+            "b_wins": 62,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": -0.2167,
+            "ci_lo": -0.2667,
+            "ci_hi": -0.17,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 65,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.1757,
+            "ci_lo": -0.2204,
+            "ci_hi": -0.1315,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.185,
+            "ci_lo": -0.2308,
+            "ci_hi": -0.1415,
+            "significant": true
+          }
+        }
+      }
+    },
+    "overlap_present": {
+      "anthropic_claude-sonnet-4.6_vs_prod": {
+        "n": 216,
+        "metrics": {
+          "top1": {
+            "point": 0.0602,
+            "ci_lo": 0.0278,
+            "ci_hi": 0.0926,
+            "significant": true,
+            "a_wins": 13,
+            "b_wins": 0,
+            "mcnemar_p": 0.00024
+          },
+          "top5": {
+            "point": 0.0278,
+            "ci_lo": 0.0093,
+            "ci_hi": 0.0509,
+            "significant": true,
+            "a_wins": 6,
+            "b_wins": 0,
+            "mcnemar_p": 0.03125
+          },
+          "top10": {
+            "point": 0.0185,
+            "ci_lo": -0.0093,
+            "ci_hi": 0.0417,
+            "significant": false,
+            "a_wins": 6,
+            "b_wins": 2,
+            "mcnemar_p": 0.28906
+          },
+          "mrr": {
+            "point": 0.0478,
+            "ci_lo": 0.025,
+            "ci_hi": 0.0713,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0415,
+            "ci_lo": 0.0206,
+            "ci_hi": 0.0641,
+            "significant": true
+          }
+        }
+      },
+      "deepseek_deepseek-chat-v3-0324_vs_prod": {
+        "n": 216,
+        "metrics": {
+          "top1": {
+            "point": 0.0231,
+            "ci_lo": 0.0046,
+            "ci_hi": 0.0463,
+            "significant": true,
+            "a_wins": 5,
+            "b_wins": 0,
+            "mcnemar_p": 0.0625
+          },
+          "top5": {
+            "point": 0.0093,
+            "ci_lo": -0.0139,
+            "ci_hi": 0.0278,
+            "significant": false,
+            "a_wins": 4,
+            "b_wins": 2,
+            "mcnemar_p": 0.6875
+          },
+          "top10": {
+            "point": -0.0046,
+            "ci_lo": -0.0231,
+            "ci_hi": 0.0139,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 3,
+            "mcnemar_p": 1.0
+          },
+          "mrr": {
+            "point": 0.0138,
+            "ci_lo": 0.0006,
+            "ci_hi": 0.0288,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0103,
+            "ci_lo": -0.0023,
+            "ci_hi": 0.0258,
+            "significant": false
+          }
+        }
+      },
+      "qwen_qwen3-32b_vs_prod": {
+        "n": 216,
+        "metrics": {
+          "top1": {
+            "point": -0.1389,
+            "ci_lo": -0.1898,
+            "ci_hi": -0.088,
+            "significant": true,
+            "a_wins": 4,
+            "b_wins": 34,
+            "mcnemar_p": 0.0
+          },
+          "top5": {
+            "point": -0.1898,
+            "ci_lo": -0.2361,
+            "ci_hi": -0.1389,
+            "significant": true,
+            "a_wins": 2,
+            "b_wins": 43,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": -0.2083,
+            "ci_lo": -0.2546,
+            "ci_hi": -0.1574,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 45,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.1634,
+            "ci_lo": -0.2101,
+            "ci_hi": -0.1146,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.1736,
+            "ci_lo": -0.221,
+            "ci_hi": -0.1254,
+            "significant": true
+          }
+        }
+      }
+    },
+    "overlap_absent": {
+      "anthropic_claude-sonnet-4.6_vs_prod": {
+        "n": 84,
+        "metrics": {
+          "top1": {
+            "point": 0.0238,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0595,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 0,
+            "mcnemar_p": 0.5
+          },
+          "top5": {
+            "point": 0.0238,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0595,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 0,
+            "mcnemar_p": 0.5
+          },
+          "top10": {
+            "point": 0.0,
+            "ci_lo": 0.0,
+            "ci_hi": 0.0,
+            "significant": false,
+            "a_wins": 0,
+            "b_wins": 0,
+            "mcnemar_p": 1.0
+          },
+          "mrr": {
+            "point": 0.0176,
+            "ci_lo": 0.0009,
+            "ci_hi": 0.0385,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": 0.0137,
+            "ci_lo": 0.0008,
+            "ci_hi": 0.0292,
+            "significant": true
+          }
+        }
+      },
+      "deepseek_deepseek-chat-v3-0324_vs_prod": {
+        "n": 84,
+        "metrics": {
+          "top1": {
+            "point": 0.0119,
+            "ci_lo": -0.0238,
+            "ci_hi": 0.0476,
+            "significant": false,
+            "a_wins": 2,
+            "b_wins": 1,
+            "mcnemar_p": 1.0
+          },
+          "top5": {
+            "point": 0.0,
+            "ci_lo": -0.0357,
+            "ci_hi": 0.0357,
+            "significant": false,
+            "a_wins": 1,
+            "b_wins": 1,
+            "mcnemar_p": 1.0
+          },
+          "top10": {
+            "point": -0.0119,
+            "ci_lo": -0.0357,
+            "ci_hi": 0.0,
+            "significant": false,
+            "a_wins": 0,
+            "b_wins": 1,
+            "mcnemar_p": 1.0
+          },
+          "mrr": {
+            "point": 0.0038,
+            "ci_lo": -0.0337,
+            "ci_hi": 0.0315,
+            "significant": false
+          },
+          "ndcg10": {
+            "point": 0.0001,
+            "ci_lo": -0.034,
+            "ci_hi": 0.0237,
+            "significant": false
+          }
+        }
+      },
+      "qwen_qwen3-32b_vs_prod": {
+        "n": 84,
+        "metrics": {
+          "top1": {
+            "point": -0.1905,
+            "ci_lo": -0.2976,
+            "ci_hi": -0.0952,
+            "significant": true,
+            "a_wins": 2,
+            "b_wins": 18,
+            "mcnemar_p": 0.0004
+          },
+          "top5": {
+            "point": -0.2262,
+            "ci_lo": -0.3214,
+            "ci_hi": -0.131,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 19,
+            "mcnemar_p": 0.0
+          },
+          "top10": {
+            "point": -0.2381,
+            "ci_lo": -0.3333,
+            "ci_hi": -0.1429,
+            "significant": true,
+            "a_wins": 0,
+            "b_wins": 20,
+            "mcnemar_p": 0.0
+          },
+          "mrr": {
+            "point": -0.207,
+            "ci_lo": -0.3038,
+            "ci_hi": -0.1185,
+            "significant": true
+          },
+          "ndcg10": {
+            "point": -0.2144,
+            "ci_lo": -0.3098,
+            "ci_hi": -0.1266,
+            "significant": true
+          }
+        }
+      }
+    }
+  },
+  "cost_summary": {
+    "anthropic_claude-sonnet-4.6": {
+      "total_cost_usd": 19.9465,
+      "mean_latency_s": 13.87,
+      "n_with_parse_or_api_error": 22
+    },
+    "deepseek_deepseek-chat-v3-0324": {
+      "total_cost_usd": 1.0471,
+      "mean_latency_s": 25.09,
+      "n_with_parse_or_api_error": 1
+    },
+    "qwen_qwen3-32b": {
+      "total_cost_usd": 0.4164,
+      "mean_latency_s": 8.71,
+      "n_with_parse_or_api_error": 66
+    }
+  }
+}

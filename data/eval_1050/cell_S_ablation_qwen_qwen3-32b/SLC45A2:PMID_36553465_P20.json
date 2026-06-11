@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P20",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20701,
+  "tokens_out": 797,
+  "finish_reason": "stop",
+  "latency_s": 17.797502279281616,
+  "cost_usd": 0.00187924,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SLC45A2\": {\"gene\": \"SLC45A2\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking SLC45A2 mutations to oculocutaneous albinism type 4 (OCA4) with white eyelashes, blue irides, and iris transillumination defects.\"}, \"POP5\": {\"gene\": \"POP5\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking POP5 to the patient's albinism phenotype in the provided data.\"}, \"PIAS2\": {\"gene\": \"PIAS2\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking PIAS2 to the patient's albinism phenotype in the provided data.\"}, \"TRAPPC3L\": {\"gene\": \"TRAPPC3L\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking TRAPPC3L to the patient's albinism phenotype in the provided data.\"}, \"ALDH16A1\": {\"gene\": \"ALDH16A1\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking ALDH16A1 to the patient's albinism phenotype in the provided data.\"}, \"PNPLA2\": {\"gene\": \"PNPLA2\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking PNPLA2 to the patient's albinism phenotype in the provided data.\"}, \"ZC3H12A\": {\"gene\": \"ZC3H12A\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking ZC3H12A to the patient's albinism phenotype in the provided data.\"}, \"BRI3\": {\"gene\": \"BRI3\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking BRI3 to the patient's albinism phenotype in the provided data.\"}, \"HSBP1L1\": {\"gene\": \"HSBP1L1\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking HSBP1L1 to the patient's albinism phenotype in the provided data.\"}, \"ITGA2B\": {\"gene\": \"ITGA2B\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking ITGA2B to the patient's albinism phenotype in the provided data.\"}, \"OGFOD1\": {\"gene\": \"OGFOD1\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking OGFOD1 to the patient's albinism phenotype in the provided data.\"}, \"ADAMTS17\": {\"gene\": \"ADAMTS17\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking ADAMTS17 to the patient's albinism phenotype in the provided data.\"}, \"CDC40\": {\"gene\": \"CDC40\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking CDC40 to the patient's albinism phenotype in the provided data.\"}, \"HSP90AB1\": {\"gene\": \"HSP90AB1\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking HSP90AB1 to the patient's albinism phenotype in the provided data.\"}, \"H1-5\": {\"gene\": \"H1-5\", \"confidence\": 0.1, \"rationale\": \"No direct evidence linking H1-5 to the patient's albinism phenotype in the provided data.\"}}",
+  "parsed_top5": [
+    "SLC45A2",
+    "POP5",
+    "PIAS2",
+    "TRAPPC3L",
+    "ALDH16A1"
+  ]
+}

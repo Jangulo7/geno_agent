@@ -1,0 +1,26 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_1_II_3",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "PCBD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PCBD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15512,
+  "tokens_out": 515,
+  "finish_reason": "stop",
+  "latency_s": 20.303297519683838,
+  "cost_usd": 0.0034989500000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"PCBD1\", \"confidence\": 0.85, \"rationale\": \"Direct evidence links PCBD1 to heterotaxy and cardiac defects matching the patient's phenotypes.\"},\n  {\"gene\": \"PPIB\", \"confidence\": 0.60, \"rationale\": \"Moderate relevance to heterotaxy but less specific than PCBD1.\"},\n  {\"gene\": \"CA3\", \"confidence\": 0.40, \"rationale\": \"Limited evidence connecting CA3 to congenital heart defects.\"},\n  {\"gene\": \"CEP162\", \"confidence\": 0.35, \"rationale\": \"Minimal supporting evidence for cardiac or laterality defects.\"},\n  {\"gene\": \"ABO\", \"confidence\": 0.30, \"rationale\": \"No clear link to the patient's congenital anomalies.\"},\n  {\"gene\": \"DCAF15\", \"confidence\": 0.30, \"rationale\": \"No relevant evidence for cardiac or heterotaxy phenotypes.\"},\n  {\"gene\": \"TESC\", \"confidence\": 0.30, \"rationale\": \"No direct association with the patient's condition.\"},\n  {\"gene\": \"CNOT11\", \"confidence\": 0.25, \"rationale\": \"Unrelated to the described cardiac or laterality defects.\"},\n  {\"gene\": \"UPK3BL1\", \"confidence\": 0.25, \"rationale\": \"No evidence supporting a role in cardiac or laterality disorders.\"},\n  {\"gene\": \"ZNF697\", \"confidence\": 0.20, \"rationale\": \"No relevant phenotypic associations found.\"},\n  {\"gene\": \"METTL22\", \"confidence\": 0.20, \"rationale\": \"Lacks evidence connecting to congenital heart defects.\"},\n  {\"gene\": \"DMRTB1\", \"confidence\": 0.20, \"rationale\": \"No direct phenotypic overlap with the patient's condition.\"},\n  {\"gene\": \"RHEBL1\", \"confidence\": 0.20, \"rationale\": \"No known role in cardiac or laterality development.\"},\n  {\"gene\": \"PIGL\", \"confidence\": 0.15, \"rationale\": \"Associated with CHIME syndrome, unrelated to this phenotype.\"},\n  {\"gene\": \"DEDD\", \"confidence\": 0.15, \"rationale\": \"No evidence linking to heterotaxy or congenital heart defects.\"}\n]",
+  "parsed_top5": [
+    "PCBD1",
+    "PPIB",
+    "CA3",
+    "CEP162",
+    "ABO"
+  ]
+}

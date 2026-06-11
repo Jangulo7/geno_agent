@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_7",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 9688,
+  "tokens_out": 48,
+  "finish_reason": "stop",
+  "latency_s": 5.547937631607056,
+  "cost_usd": 0.00078848,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"LMNA mutations are directly linked to lipodystrophy, cardiovascular issues, and metabolic complications matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

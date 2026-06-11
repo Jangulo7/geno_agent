@@ -1,0 +1,26 @@
+{
+  "case_id": "FBXO11:PMID_38740982_Family_1_Individual_1_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FBXO11",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AHDC1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 13346,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 35.83086442947388,
+  "cost_usd": 0.0031874100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AHDC1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"AHDC1 mutations cause Xia-Gibbs syndrome, matching all patient phenotypes including developmental delay, intellectual disability, seizures, and short stature.\"\n  },\n  {\n    \"gene\": \"FBXO11\",\n    \"confidence\": 0.4,\n    \"rationale\": \"FBXO11 variants cause neurodevelopmental disorder with intellectual disability and seizures, but phenotype overlap is less specific than AHDC1.\"\n  },\n  {\n    \"gene\": \"MARK4\",\n    \"confidence\": 0.35,\n    \"rationale\": \"MARK4 variants are linked to developmental delay and intellectual disability, but evidence lacks strong seizure or growth phenotype correlation.\"\n  },\n  {\n    \"gene\": \"SERPINI1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SERPINI1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MUC21\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MUC21 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MAX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MAX to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"GPR151\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GPR151 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CRB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CRB3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"NODAL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NODAL to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"FAR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAR1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"NKAIN3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NKAIN3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"AKIRIN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AKIRIN2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"NCAPD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NCAPD2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"VTCN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VTCN1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZNF225\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF225 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "AHDC1",
+    "FBXO11",
+    "MARK4",
+    "SERPINI1",
+    "MUC21"
+  ]
+}

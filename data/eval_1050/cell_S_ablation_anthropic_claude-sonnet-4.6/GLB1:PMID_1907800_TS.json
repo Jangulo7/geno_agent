@@ -1,0 +1,26 @@
+{
+  "case_id": "GLB1:PMID_1907800_TS",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GLB1",
+  "orig_qwen3_8b_top1": "GLB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20106,
+  "tokens_out": 770,
+  "finish_reason": "stop",
+  "latency_s": 9.313283681869507,
+  "cost_usd": 0.071868,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GLB1\",\"confidence\":0.93,\"rationale\":\"GLB1 encodes \u03b2-galactosidase; its deficiency directly causes GM1 gangliosidosis with decreased \u03b2-galactosidase activity, cherry red spot, platyspondyly, intellectual disability, and extrapyramidal signs\u2014matching all patient HPO terms.\"},{\"gene\":\"ABRAXAS2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ABRAXAS2 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"POP7\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking POP7 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"MUC20\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MUC20 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"CFL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CFL1 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"SLC16A11\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC16A11 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"ZMYM4\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking ZMYM4 to this phenotype; evidence chunks describe GM1 gangliosidosis clinical case without mentioning ZMYM4.\"},{\"gene\":\"SH3BP4\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking SH3BP4 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"ANTKMT\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking ANTKMT to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"LDHAL6A\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking LDHAL6A to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"PRRC2C\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking PRRC2C to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"FBXO46\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking FBXO46 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"CRYAA\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking CRYAA to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"PRPF4\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking PRPF4 to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"},{\"gene\":\"FAM156A\",\"confidence\":0.005,\"rationale\":\"No direct evidence linking FAM156A to this phenotype profile; evidence chunks are about GM1 gangliosidosis context only.\"}]",
+  "parsed_top5": [
+    "GLB1",
+    "ABRAXAS2",
+    "POP7",
+    "MUC20",
+    "CFL1"
+  ]
+}

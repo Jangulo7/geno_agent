@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P16",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12910,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 47.93329906463623,
+  "cost_usd": 0.00308481,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXANK\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple case reports directly link RFXANK mutations to MHC II deficiency, presenting with chronic diarrhea, recurrent pneumonia, and failure to thrive.\"\n  },\n  {\n    \"gene\": \"SET\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence linking SET to immunodeficiency phenotypes, but less specific than RFXANK.\"\n  },\n  {\n    \"gene\": \"DAGLA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DAGLA to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PIGT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PIGT to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CACNB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CACNB3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TF\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TF to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"EDARADD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EDARADD to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"VARS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VARS1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"IFITM3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IFITM3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RPP25L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RPP25L to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CLRN3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CLRN3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"STAG3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking STAG3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SEMA5B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SEMA5B to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SLC35A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC35A4 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ADAM29\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADAM29 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXANK",
+    "SET",
+    "DAGLA",
+    "PIGT",
+    "CACNB3"
+  ]
+}

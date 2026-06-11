@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_P_17",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16690,
+  "tokens_out": 704,
+  "finish_reason": "stop",
+  "latency_s": 16.54895257949829,
+  "cost_usd": 0.06063,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"STXBP1\",\"confidence\":0.82,\"rationale\":\"STXBP1 evidence directly mentions focal seizures, developmental delay, infantile spasms evolving to focal seizures, and is a well-established developmental epileptic encephalopathy gene matching the full HPO profile.\"},{\"gene\":\"MOXD1\",\"confidence\":0.04,\"rationale\":\"Evidence chunks not specifically linked to MOXD1; generic epilepsy encephalopathy descriptions with no direct gene-phenotype association.\"},{\"gene\":\"ELOVL1\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking ELOVL1 to this phenotype profile; shared generic epilepsy encephalopathy chunks only.\"},{\"gene\":\"APTX\",\"confidence\":0.02,\"rationale\":\"APTX causes ataxia-oculomotor apraxia; evidence chunks are generic and not specifically tied to APTX or this phenotype profile.\"},{\"gene\":\"ADAM23\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking ADAM23 to this epileptic encephalopathy phenotype; only generic shared chunks.\"},{\"gene\":\"KCNIP4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KCNIP4 to this phenotype; only generic epilepsy encephalopathy chunks shared across candidates.\"},{\"gene\":\"CFHR4\",\"confidence\":0.01,\"rationale\":\"CFHR4 is a complement factor gene with no established link to epileptic encephalopathy; evidence is generic.\"},{\"gene\":\"SERINC1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SERINC1 to this neurodevelopmental epilepsy phenotype profile.\"},{\"gene\":\"NFKBIL1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking NFKBIL1 to epileptic encephalopathy with this phenotype profile.\"},{\"gene\":\"CLCA4\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CLCA4 to this epileptic encephalopathy phenotype profile.\"},{\"gene\":\"GPR22\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking GPR22 to this neurodevelopmental epilepsy phenotype profile.\"},{\"gene\":\"MVB12B\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking MVB12B to this epileptic encephalopathy phenotype profile.\"},{\"gene\":\"PGK1\",\"confidence\":0.01,\"rationale\":\"PGK1 deficiency causes hemolytic anemia/myopathy; no specific evidence linking it to this epileptic encephalopathy profile.\"},{\"gene\":\"CSNK1G3\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CSNK1G3 to this epileptic encephalopathy phenotype profile.\"},{\"gene\":\"ZNF682\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ZNF682 to this neurodevelopmental epilepsy phenotype profile.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "MOXD1",
+    "ELOVL1",
+    "APTX",
+    "ADAM23"
+  ]
+}

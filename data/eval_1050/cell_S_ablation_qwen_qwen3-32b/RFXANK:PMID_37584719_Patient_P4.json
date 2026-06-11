@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P4",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13692,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 25.228773593902588,
+  "cost_usd": 0.0012916400000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"RFXANK\", \"confidence\": 0.95, \"rationale\": \"RFXANK mutations cause MHC class II deficiency with failure to thrive, chronic diarrhea, and recurrent pneumonia as key features.\"}, {\"gene\": \"DTNA\", \"confidence\": 0.35, \"rationale\": \"DTNA is associated with chronic respiratory and gastrointestinal symptoms, but lacks direct evidence for the causal link to the patient's phenotype.\"}, {\"gene\": \"CENPO\", \"confidence\": 0.3, \"rationale\": \"CENPO is linked to SCID with failure to thrive and infections, but evidence is less specific to the patient's phenotype.\"}, {\"gene\": \"MYLK\", \"confidence\": 0.25, \"rationale\": \"MYLK is associated with gastrointestinal and respiratory symptoms, but lacks strong evidence for the causal link.\"}, {\"gene\": \"PTGR3\", \"confidence\": 0.25, \"rationale\": \"PTGR3 is linked to chronic diarrhea and infections, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"GRHL3\", \"confidence\": 0.25, \"rationale\": \"GRHL3 is associated with chronic infections and failure to thrive, but lacks direct evidence for the patient's condition.\"}, {\"gene\": \"ZBED5\", \"confidence\": 0.25, \"rationale\": \"ZBED5 is linked to chronic gastrointestinal symptoms and failure to thrive, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"ADRB1\", \"confidence\": 0.25, \"rationale\": \"ADRB1 is associated with respiratory and gastrointestinal symptoms, but lacks strong evidence for the causal link.\"}, {\"gene\": \"COPB2\", \"confidence\": 0.25, \"rationale\": \"COPB2 is linked to chronic infections and failure to thrive, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"SNX3\", \"confidence\": 0.25, \"rationale\": \"SNX3 is associated with chronic gastrointestinal symptoms and failure to thrive, but lacks strong evidence for the causal link.\"}, {\"gene\": \"DPY19L1\", \"confidence\": 0.25, \"rationale\": \"DPY19L1 is linked to chronic diarrhea and infections, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"RNF4\", \"confidence\": 0.25, \"rationale\": \"RNF4 is associated with chronic gastrointestinal symptoms and failure to thrive, but lacks strong evidence for the causal link.\"}, {\"gene\": \"KCTD5\", \"confidence\": 0.25, \"rationale\": \"KCTD5 is linked to chronic infections and failure to thrive, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"LETM2\", \"confidence\": 0.25, \"rationale\": \"LETM2 is associated with chronic gastrointestinal symptoms and failure to thrive, but lacks strong evidence for the causal link.\"}, {\"gene\": \"PRRX1\", \"confidence\": 0.25, \"rationale\": \"PRRX1 is linked to chronic infections and failure to thrive, but evidence is not specific to the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "RFXANK",
+    "DTNA",
+    "CENPO",
+    "MYLK",
+    "PTGR3"
+  ]
+}

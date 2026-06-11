@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_26178382_UAB_R7705",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15257,
+  "tokens_out": 808,
+  "finish_reason": "stop",
+  "latency_s": 9.743699312210083,
+  "cost_usd": 0.057891,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"NF1\", \"confidence\": 0.97, \"rationale\": \"NF1 evidence directly and explicitly links freckling, multiple caf\u00e9-au-lait spots, and Lisch nodules as cardinal diagnostic criteria for NF1 disease caused by NF1 gene mutations.\"}, {\"gene\": \"PKIB\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe NF1 disease context only; PKIB has no direct association with the patient's phenotype profile.\"}, {\"gene\": \"KRT38\", \"confidence\": 0.01, \"rationale\": \"No evidence linking KRT38 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; chunks reference NF1 disease context only.\"}, {\"gene\": \"TMEM119\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TMEM119 to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"MX2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MX2 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}, {\"gene\": \"REG3A\", \"confidence\": 0.01, \"rationale\": \"No evidence linking REG3A to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"NFX1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking NFX1 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}, {\"gene\": \"PPIA\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PPIA to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"DDAH1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking DDAH1 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}, {\"gene\": \"COPS5\", \"confidence\": 0.01, \"rationale\": \"No evidence linking COPS5 to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"ERLN\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ERLN to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}, {\"gene\": \"TRAFD1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TRAFD1 to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"DACT3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking DACT3 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}, {\"gene\": \"MLH3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MLH3 to the patient's phenotype; chunks are NF1 disease background only.\"}, {\"gene\": \"ACKR2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ACKR2 to freckling, caf\u00e9-au-lait spots, or Lisch nodules; only NF1 disease context present.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "PKIB",
+    "KRT38",
+    "TMEM119",
+    "MX2"
+  ]
+}

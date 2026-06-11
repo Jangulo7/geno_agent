@@ -1,0 +1,22 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "MYORG",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12095,
+  "tokens_out": 662,
+  "finish_reason": "stop",
+  "latency_s": 9.390161514282227,
+  "cost_usd": 0.00115296,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"NBAS\", \"confidence\": 0.95, \"rationale\": \"NBAS variants cause recurrent ALF with elevated aminotransferases, hypogammaglobulinemia, and facial anomalies matching the patient's phenotype.\", \"gene\": \"EFHD1\", \"confidence\": 0.6, \"rationale\": \"EFHD1 knockout mice show reduced liver enzymes and inflammation, partially aligning with elevated aminotransferases in patient.\", \"gene\": \"TNF\", \"confidence\": 0.4, \"rationale\": \"TNF-\u03b1 is associated with liver enzymes and immunoglobulin levels, but not directly causal in the described phenotype.\", \"gene\": \"TPO\", \"confidence\": 0.3, \"rationale\": \"TPO is linked to liver enzymes and immunoglobulin abnormalities, but evidence is less specific to the patient's features.\", \"gene\": \"YLPM1\", \"confidence\": 0.2, \"rationale\": \"YLPM1 is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"MS4A6A\", \"confidence\": 0.2, \"rationale\": \"MS4A6A is associated with liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"TRADD\", \"confidence\": 0.2, \"rationale\": \"TRADD is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"GLB1L3\", \"confidence\": 0.2, \"rationale\": \"GLB1L3 is associated with liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"KANK2\", \"confidence\": 0.2, \"rationale\": \"KANK2 is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"DGCR6\", \"confidence\": 0.2, \"rationale\": \"DGCR6 is associated with liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"MBD3L4\", \"confidence\": 0.2, \"rationale\": \"MBD3L4 is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"DRAP1\", \"confidence\": 0.2, \"rationale\": \"DRAP1 is associated with liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"MIB2\", \"confidence\": 0.2, \"rationale\": \"MIB2 is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"ANAPC4\", \"confidence\": 0.2, \"rationale\": \"ANAPC4 is associated with liver enzymes and immunoglobulin levels but lacks direct causal evidence.\", \"gene\": \"MYORG\", \"confidence\": 0.2, \"rationale\": \"MYORG is mentioned in the context of liver enzymes and immunoglobulin levels but lacks direct causal evidence.\"}",
+  "parsed_top5": [
+    "MYORG"
+  ]
+}

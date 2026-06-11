@@ -1,0 +1,20 @@
+{
+  "case_id": "FLT3LG:PMID_38701783_P1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FLT3LG",
+  "orig_qwen3_8b_top1": "CTLA4",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16116,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.431863784790039,
+  "cost_usd": 0.00129572,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_E_individual_E1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18596,
+  "tokens_out": 626,
+  "finish_reason": "stop",
+  "latency_s": 23.3940167427063,
+  "cost_usd": 0.00166296,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"IKZF1\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking germline IKZF1 variants to immune deficiency, recurrent infections, and inverted CD4:CD8 ratio.\"}, {\"gene\": \"ANO10\", \"confidence\": 0.65, \"rationale\": \"Associated with immune deficiency and chronic diarrhea, but less specific evidence for the full phenotype.\"}, {\"gene\": \"EPS8L2\", \"confidence\": 0.6, \"rationale\": \"Linked to immune abnormalities and chronic diarrhea, but not strongly specific to the full clinical profile.\"}, {\"gene\": \"IER5\", \"confidence\": 0.55, \"rationale\": \"Mildly associated with immune dysfunction and chronic diarrhea, but not well-characterized in this context.\"}, {\"gene\": \"IGFBP6\", \"confidence\": 0.5, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}, {\"gene\": \"MAIP1\", \"confidence\": 0.5, \"rationale\": \"Mildly associated with immune dysfunction and chronic diarrhea, but not well-characterized in this context.\"}, {\"gene\": \"FLYWCH2\", \"confidence\": 0.45, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}, {\"gene\": \"SMIM10L2B\", \"confidence\": 0.4, \"rationale\": \"Mildly associated with immune dysfunction, but not well-characterized in this context.\"}, {\"gene\": \"MRPL51\", \"confidence\": 0.4, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}, {\"gene\": \"TMEFF2\", \"confidence\": 0.35, \"rationale\": \"Mildly associated with immune dysfunction, but not well-characterized in this context.\"}, {\"gene\": \"GPR37\", \"confidence\": 0.3, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}, {\"gene\": \"CLCN6\", \"confidence\": 0.3, \"rationale\": \"Mildly associated with immune dysfunction, but not well-characterized in this context.\"}, {\"gene\": \"RPP21\", \"confidence\": 0.25, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}, {\"gene\": \"SYNE2\", \"confidence\": 0.2, \"rationale\": \"Mildly associated with immune dysfunction, but not well-characterized in this context.\"}, {\"gene\": \"SEMA3D\", \"confidence\": 0.15, \"rationale\": \"Mildly associated with immune dysfunction, but not strongly linked to the full clinical profile.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "ANO10",
+    "EPS8L2",
+    "IER5",
+    "IGFBP6"
+  ]
+}

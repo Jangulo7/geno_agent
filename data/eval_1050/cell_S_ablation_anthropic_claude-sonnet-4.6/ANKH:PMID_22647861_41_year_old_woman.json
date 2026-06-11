@@ -1,0 +1,26 @@
+{
+  "case_id": "ANKH:PMID_22647861_41_year_old_woman",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ANKH",
+  "orig_qwen3_8b_top1": "ANKH",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ANKH",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13096,
+  "tokens_out": 1003,
+  "finish_reason": "stop",
+  "latency_s": 18.078192710876465,
+  "cost_usd": 0.054333,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ANKH\",\n    \"confidence\": 0.82,\n    \"rationale\": \"ANKH encodes the inorganic pyrophosphate transporter directly linked to CCAL2 (chondrocalcinosis), polyarticular arthropathy, and joint calcification, matching the patient's polyarticular chondrocalcinosis, intervertebral disk calcification, and joint pain profile.\"\n  },\n  {\n    \"gene\": \"KCNH2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunk mentions hypophosphatemia and ankle pain in XLH context but KCNH2 is a cardiac potassium channel gene with no established link to this phenotype.\"\n  },\n  {\n    \"gene\": \"EPHX1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunk references XLH/hypophosphatemia but EPHX1 encodes epoxide hydrolase with no known role in chondrocalcinosis or phosphate metabolism disorders.\"\n  },\n  {\n    \"gene\": \"FEV\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence linking FEV to chondrocalcinosis or phosphate metabolism; evidence chunks describe unrelated arthropathies.\"\n  },\n  {\n    \"gene\": \"WASF3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking WASF3 to chondrocalcinosis, hypophosphatemia, or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ESCO1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking ESCO1 to chondrocalcinosis or phosphate/calcium metabolism disorders.\"\n  },\n  {\n    \"gene\": \"NBDY\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking NBDY to chondrocalcinosis or the patient's metabolic/articular phenotype.\"\n  },\n  {\n    \"gene\": \"CYP2C18\",\n    \"confidence\": 0.01,\n    \"rationale\": \"CYP2C18 is a cytochrome P450 enzyme with no known role in pyrophosphate metabolism or chondrocalcinosis.\"\n  },\n  {\n    \"gene\": \"CLEC3A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking CLEC3A to chondrocalcinosis, hypophosphatemia, or secondary hyperparathyroidism.\"\n  },\n  {\n    \"gene\": \"DMRTC1B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking DMRTC1B to the patient's phenotype of chondrocalcinosis and phosphate metabolism.\"\n  },\n  {\n    \"gene\": \"CXADR\",\n    \"confidence\": 0.01,\n    \"rationale\": \"CXADR encodes a viral receptor with no known role in chondrocalcinosis or phosphate/calcium metabolism.\"\n  },\n  {\n    \"gene\": \"CATSPERD\",\n    \"confidence\": 0.01,\n    \"rationale\": \"CATSPERD is a sperm calcium channel subunit with no established link to chondrocalcinosis or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"OLA1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking OLA1 to chondrocalcinosis, hypophosphatemia, or secondary hyperparathyroidism.\"\n  },\n  {\n    \"gene\": \"CNTNAP3B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking CNTNAP3B to the patient's articular or metabolic phenotype.\"\n  },\n  {\n    \"gene\": \"XYLB\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking XYLB to chondrocalcinosis or phosphate/calcium metabolism disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "ANKH",
+    "KCNH2",
+    "EPHX1",
+    "FEV",
+    "WASF3"
+  ]
+}

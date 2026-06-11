@@ -1,0 +1,22 @@
+{
+  "case_id": "DHCR24:PMID_29175559_Patient_4_Zolotushko_2011_V4",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DHCR24",
+  "orig_qwen3_8b_top1": "DHCR24",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DHCR24",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18075,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 4.384125471115112,
+  "cost_usd": 0.0036619699999999996,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"DHCR24\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Strong evidence linking DHCR24 mutations to desmosterolosis with matching phenotypes including seizures, agenesis of corpus callosum, and elevated desmosterol.\"\n  }",
+  "parsed_top5": [
+    "DHCR24"
+  ]
+}

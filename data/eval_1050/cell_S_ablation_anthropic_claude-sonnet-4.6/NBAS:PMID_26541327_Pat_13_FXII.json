@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "FCGR3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PSMA6",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12384,
+  "tokens_out": 939,
+  "finish_reason": "stop",
+  "latency_s": 22.762449502944946,
+  "cost_usd": 0.051237,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence provided for all 15 genes is essentially identical in quality (all rated 1/5 relevance, generic liver function test descriptions not specific to any gene). I must rely on prior knowledge of gene-disease associations to rank them.\n\nThe phenotype profile \u2014 acute hepatic failure, hyperammonemia, conjugated hyperbilirubinemia, elevated liver enzymes, prolonged PT, seizures, global developmental delay, short stature, and notably **hyposegmentation of neutrophil nuclei** \u2014 is highly characteristic of a urea cycle or organic acidemia disorder. The combination of hepatic failure + hyperammonemia + neutrophil hyposegmentation + developmental delay + seizures strongly suggests a congenital disorder of glycosylation or a specific metabolic disease. PSMA6 (proteasome subunit) variants have been linked to neonatal/infantile liver failure with hyperammonemia and developmental delay. None of the other genes have strong known associations with this specific combination. Given the lack of discriminating evidence, I apply prior biological knowledge.\n\n[{\"gene\":\"PSMA6\",\"confidence\":0.18,\"rationale\":\"Proteasome dysfunction can cause multisystem disease with liver failure, hyperammonemia, and developmental delay; best fit among candidates given phenotype profile.\"},{\"gene\":\"SLC35H1\",\"confidence\":0.12,\"rationale\":\"Solute carrier/transporter genes can underlie congenital disorders of glycosylation with hepatic and neurological features matching the phenotype.\"},{\"gene\":\"UBXN11\",\"confidence\":0.08,\"rationale\":\"UBX domain protein involved in protein quality control; plausible link to hepatic failure and developmental phenotypes but limited direct evidence.\"},{\"gene\":\"STEAP4\",\"confidence\":0.07,\"rationale\":\"Involved in iron/metal metabolism; some hepatic expression but weak link to the full phenotype including hyperammonemia and neutrophil hyposegmentation.\"},{\"gene\":\"CTBS\",\"confidence\":0.07,\"rationale\":\"Chitobiase involved in glycan degradation; lysosomal dysfunction could contribute to hepatic and neurological features but evidence is indirect.\"},{\"gene\":\"FCGR3A\",\"confidence\":0.06,\"rationale\":\"Fc receptor gene; limited mechanistic link to hepatic failure and hyperammonemia in this context.\"},{\"gene\":\"NLGN3\",\"confidence\":0.06,\"rationale\":\"Neuroligin-3 associated with autism/neurodevelopmental disorders; could explain developmental delay but not hepatic failure or hyperammonemia.\"},{\"gene\":\"NES\",\"confidence\":0.05,\"rationale\":\"Nestin is an intermediate filament expressed in neural/muscle progenitors; weak link to hepatic failure phenotype.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.05,\"rationale\":\"Limited characterized disease association; insufficient evidence to support causality for this complex phenotype.\"},{\"gene\":\"FAM216B\",\"confidence\":0.05,\"rationale\":\"Poorly characterized gene with no strong known disease association matching this phenotype profile.\"},{\"gene\":\"LRATD1\",\"confidence\":0.05,\"rationale\":\"Lecithin retinol acyltransferase domain-containing protein; no strong known link to hepatic failure with hyperammonemia and neutrophil anomalies.\"},{\"gene\":\"TREH\",\"confidence\":0.04,\"rationale\":\"Trehalase enzyme; deficiency causes trehalose malabsorption but not acute hepatic failure or hyperammonemia.\"},{\"gene\":\"RLN1\",\"confidence\":0.04,\"rationale\":\"Relaxin-1 peptide hormone; no established link to pediatric hepatic failure, hyperammonemia, or neutrophil hyposegmentation.\"},{\"gene\":\"RLN3\",\"confidence\":0.04,\"rationale\":\"Relaxin-3 neuropeptide; primarily CNS expression with no known association to hepatic failure or hyperammonemia.\"},{\"gene\":\"SCX\",\"confidence\":0.04,\"rationale\":\"Scleraxis transcription factor involved in tendon development; no plausible mechanistic link to hepatic failure or hyperammonemia.\"}]",
+  "parsed_top5": [
+    "PSMA6",
+    "SLC35H1",
+    "UBXN11",
+    "STEAP4",
+    "CTBS"
+  ]
+}

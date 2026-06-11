@@ -1,0 +1,26 @@
+{
+  "case_id": "FBLN5:PMID_12189163_V_6",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBLN5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15666,
+  "tokens_out": 573,
+  "finish_reason": "stop",
+  "latency_s": 24.27652645111084,
+  "cost_usd": 0.0035744100000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FBLN5\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong association with cutis laxa, emphysema, and aortic stenosis, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"GREB1L\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence linking to cardiovascular or pulmonary phenotypes.\"\n  },\n  {\n    \"gene\": \"TWIST2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"SHPK\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting to the observed clinical features.\"\n  },\n  {\n    \"gene\": \"EYA2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks direct association with the patient's phenotypic profile.\"\n  },\n  {\n    \"gene\": \"ARFGEF2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No compelling evidence supporting a role in these phenotypes.\"\n  },\n  {\n    \"gene\": \"MISP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Absence of literature linking to relevant clinical features.\"\n  },\n  {\n    \"gene\": \"IBA57\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence connecting to the patient's condition.\"\n  },\n  {\n    \"gene\": \"RIMS1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Unrelated to the observed phenotypes based on available data.\"\n  },\n  {\n    \"gene\": \"SNU13\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant phenotypic associations found.\"\n  },\n  {\n    \"gene\": \"POFUT2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks connection to the clinical presentation.\"\n  },\n  {\n    \"gene\": \"BEND7\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No pertinent evidence linking to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"NAA80\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No mention in relevant phenotypic contexts.\"\n  },\n  {\n    \"gene\": \"ORC5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Irrelevant to the clinical profile presented.\"\n  },\n  {\n    \"gene\": \"GAGE2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No association with the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "FBLN5",
+    "GREB1L",
+    "TWIST2",
+    "SHPK",
+    "EYA2"
+  ]
+}

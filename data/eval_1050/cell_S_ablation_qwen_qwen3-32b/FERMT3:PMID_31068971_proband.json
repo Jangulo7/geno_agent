@@ -1,0 +1,26 @@
+{
+  "case_id": "FERMT3:PMID_31068971_proband",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FERMT3",
+  "orig_qwen3_8b_top1": "FERMT3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FERMT3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14087,
+  "tokens_out": 780,
+  "finish_reason": "stop",
+  "latency_s": 24.088603496551514,
+  "cost_usd": 0.00134536,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"FERMT3\", \"confidence\": 0.95, \"rationale\": \"FERMT3 mutations cause LAD-III, a disorder with immune dysfunction, bleeding, thrombocytopenia, and recurrent infections matching the patient's HPOs.\"}, {\"gene\": \"VAV1\", \"confidence\": 0.65, \"rationale\": \"VAV1 is linked to HLH-like phenotypes with anemia, thrombocytopenia, and splenomegaly, but lacks direct evidence for bleeding or infections.\"}, {\"gene\": \"MROH6\", \"confidence\": 0.55, \"rationale\": \"MROH6 is associated with thrombocytopenia and splenomegaly, but lacks strong evidence for immune dysfunction or bleeding.\"}, {\"gene\": \"DNAH9\", \"confidence\": 0.5, \"rationale\": \"DNAH9 is linked to thrombocytopenia and bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"SSX5\", \"confidence\": 0.45, \"rationale\": \"SSX5 is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"PPP6C\", \"confidence\": 0.4, \"rationale\": \"PPP6C is linked to thrombocytopenia and bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"LNPEP\", \"confidence\": 0.35, \"rationale\": \"LNPEP is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"SPRR2A\", \"confidence\": 0.3, \"rationale\": \"SPRR2A is linked to thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"PHYH\", \"confidence\": 0.25, \"rationale\": \"PHYH is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"DMAP1\", \"confidence\": 0.2, \"rationale\": \"DMAP1 is linked to thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"CYP26B1\", \"confidence\": 0.15, \"rationale\": \"CYP26B1 is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"ZNF879\", \"confidence\": 0.1, \"rationale\": \"ZNF879 is linked to thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"MYOCD\", \"confidence\": 0.08, \"rationale\": \"MYOCD is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"VPS28\", \"confidence\": 0.05, \"rationale\": \"VPS28 is linked to thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}, {\"gene\": \"FYB2\", \"confidence\": 0.03, \"rationale\": \"FYB2 is associated with thrombocytopenia and mild bleeding, but lacks strong evidence for immune dysfunction or anemia.\"}]",
+  "parsed_top5": [
+    "FERMT3",
+    "VAV1",
+    "MROH6",
+    "DNAH9",
+    "SSX5"
+  ]
+}

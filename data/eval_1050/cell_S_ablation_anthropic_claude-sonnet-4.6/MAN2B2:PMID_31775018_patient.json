@@ -1,0 +1,26 @@
+{
+  "case_id": "MAN2B2:PMID_31775018_patient",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "MAN2B2",
+  "orig_qwen3_8b_top1": "IL17F",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MAN2B2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17800,
+  "tokens_out": 1017,
+  "finish_reason": "stop",
+  "latency_s": 18.068650484085083,
+  "cost_usd": 0.068655,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"MAN2B2\",\n    \"confidence\": 0.72,\n    \"rationale\": \"MAN2B2 deficiency (CDG) directly causes recurrent thrush/oral candidiasis, vasculitis, chronic diarrhea, thrombocytopenia, developmental delay, and hepatomegaly\u2014matching nearly all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"IL17F\",\n    \"confidence\": 0.10,\n    \"rationale\": \"IL17F deficiency causes chronic mucocutaneous candidiasis and vasculitis but lacks the neurological, hepatic, and hematologic features seen in this patient.\"\n  },\n  {\n    \"gene\": \"CNTNAP2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CNTNAP2 variants cause developmental delay, strabismus, and microcephaly but do not explain the immunological, hepatic, or hematologic features of this patient.\"\n  },\n  {\n    \"gene\": \"VIPAS39\",\n    \"confidence\": 0.03,\n    \"rationale\": \"VIPAS39/ARC syndrome includes microcephaly and developmental delay but primarily features cholestasis, arthrogryposis, and renal tubular dysfunction, not the immune/CNS profile here.\"\n  },\n  {\n    \"gene\": \"SPTBN1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"SPTBN1 is linked to neurodevelopmental disorders but lacks evidence for the immunological, hepatic, and hematologic features in this patient.\"\n  },\n  {\n    \"gene\": \"ZNF429\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific disease-gene evidence linking ZNF429 to this phenotype profile; only generic developmental delay case reports shared across candidates.\"\n  },\n  {\n    \"gene\": \"SLC37A4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"SLC37A4 causes glycogen storage disease Ib with neutropenia and infections but does not match the full neurological and vascular phenotype here.\"\n  },\n  {\n    \"gene\": \"ALDH18A1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ALDH18A1 causes microcephaly and psychomotor retardation but not the immunological or hepatic features prominent in this patient.\"\n  },\n  {\n    \"gene\": \"CCDC107\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CCDC107 to this specific combination of immune, neurological, and hematologic phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC24A1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"SLC24A1 is associated with congenital stationary night blindness, not the multisystem phenotype described here.\"\n  },\n  {\n    \"gene\": \"C12orf76\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking C12orf76 to this patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"COL19A1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"COL19A1 has no established disease association matching this multisystem immunological and neurological phenotype.\"\n  },\n  {\n    \"gene\": \"TLR4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"TLR4 variants affect innate immunity but lack evidence for the specific combination of CNS, hepatic, and hematologic features in this patient.\"\n  },\n  {\n    \"gene\": \"BCL7A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"BCL7A evidence shows only generic developmental delay cases without the specific immune, hepatic, and vascular features of this patient.\"\n  },\n  {\n    \"gene\": \"GH2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"GH2 encodes placental growth hormone with no established link to this multisystem immunological and neurological phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "MAN2B2",
+    "IL17F",
+    "CNTNAP2",
+    "VIPAS39",
+    "SPTBN1"
+  ]
+}

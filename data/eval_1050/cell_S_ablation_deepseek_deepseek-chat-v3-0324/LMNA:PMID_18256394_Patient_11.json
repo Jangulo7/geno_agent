@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_11",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14547,
+  "tokens_out": 740,
+  "finish_reason": "stop",
+  "latency_s": 30.6941134929657,
+  "cost_usd": 0.0034792000000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"LMNA\",\n      \"confidence\": 0.95,\n      \"rationale\": \"LMNA mutations cause Hutchinson-Gilford Progeria Syndrome, matching all key phenotypes including lipodystrophy, alopecia, failure to thrive, and dental anomalies.\"\n    },\n    {\n      \"gene\": \"CHD7\",\n      \"confidence\": 0.6,\n      \"rationale\": \"CHD7 mutations are linked to CHARGE syndrome, which includes proptosis and failure to thrive, but lacks full phenotypic overlap.\"\n    },\n    {\n      \"gene\": \"KDELR2\",\n      \"confidence\": 0.4,\n      \"rationale\": \"KDELR2 variants are associated with osteogenesis imperfecta, which includes short stature and bone deformities, but not the full phenotype.\"\n    },\n    {\n      \"gene\": \"DHX30\",\n      \"confidence\": 0.35,\n      \"rationale\": \"DHX30 mutations cause neurodevelopmental disorders with short stature and failure to thrive, but lack key features like lipodystrophy.\"\n    },\n    {\n      \"gene\": \"PRIM1\",\n      \"confidence\": 0.3,\n      \"rationale\": \"PRIM1 deficiency can cause growth restriction and lipodystrophy, but evidence is less specific to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"FAM237B\",\n      \"confidence\": 0.25,\n      \"rationale\": \"FAM237B's role in metabolism is unclear, with no direct evidence linking it to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"GSTM1\",\n      \"confidence\": 0.2,\n      \"rationale\": \"GSTM1 null variants are linked to Kotb disease, but this does not align well with the patient's features.\"\n    },\n    {\n      \"gene\": \"RBPJ\",\n      \"confidence\": 0.15,\n      \"rationale\": \"RBPJ variants cause Notch-related syndromes, but these lack the progeroid and lipodystrophy features.\"\n    },\n    {\n      \"gene\": \"ZBTB33\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No strong evidence links ZBTB33 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"CACNG6\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links CACNG6 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"RAB11FIP3\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links RAB11FIP3 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"IQGAP1\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links IQGAP1 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"CIMIP7\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links CIMIP7 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"CFAP90\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links CFAP90 to the patient's phenotype.\"\n    },\n    {\n      \"gene\": \"ACBD3\",\n      \"confidence\": 0.05,\n      \"rationale\": \"No evidence links ACBD3 to the patient's phenotype.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "LMNA",
+    "CHD7",
+    "KDELR2",
+    "DHX30",
+    "PRIM1"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "GLI3:PMID_24736735_A017",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19831,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.9787092208862305,
+  "cost_usd": 0.00160216,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"GLI3 mutations are directly linked to postaxial polydactyly, macrocephaly, and corpus callosum hypoplasia in multiple studies.\"}",
+  "parsed_top5": [
+    "GLI3"
+  ]
+}

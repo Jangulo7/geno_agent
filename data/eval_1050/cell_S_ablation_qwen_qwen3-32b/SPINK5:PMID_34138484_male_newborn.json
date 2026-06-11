@@ -1,0 +1,20 @@
+{
+  "case_id": "SPINK5:PMID_34138484_male_newborn",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19750,
+  "tokens_out": 20,
+  "finish_reason": "stop",
+  "latency_s": 3.4487147331237793,
+  "cost_usd": 0.0015856,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as requested.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as requested.\"}",
+  "parsed_top5": []
+}

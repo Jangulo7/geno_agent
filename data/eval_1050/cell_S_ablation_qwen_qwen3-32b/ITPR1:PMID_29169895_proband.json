@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_29169895_proband",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15341,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 2.1714324951171875,
+  "cost_usd": 0.00124352,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"ITPR1 is directly linked to SCA29 with features matching the patient's cerebellar atrophy, hypotonia, and developmental delay.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

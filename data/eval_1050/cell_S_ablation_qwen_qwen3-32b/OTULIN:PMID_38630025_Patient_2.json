@@ -1,0 +1,26 @@
+{
+  "case_id": "OTULIN:PMID_38630025_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "OTULIN",
+  "orig_qwen3_8b_top1": "OTULIN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OTULIN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13462,
+  "tokens_out": 670,
+  "finish_reason": "stop",
+  "latency_s": 18.302807807922363,
+  "cost_usd": 0.0012645599999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"OTULIN\",\"confidence\":0.95,\"rationale\":\"OTULIN mutations cause OTULIN-related autoinflammatory syndrome with fever, panniculitis, neutrophilia, and inflammation, directly matching the patient's HPO phenotypes.\"},{\"gene\":\"PRDX5\",\"confidence\":0.35,\"rationale\":\"PRDX5 is involved in inflammation but evidence is limited to mouse models and not directly linked to the patient's clinical features.\"},{\"gene\":\"CCNG2\",\"confidence\":0.25,\"rationale\":\"CCNG2 is mentioned in the context of HLH and inflammation, but not directly associated with the patient's specific symptoms.\"},{\"gene\":\"SYNDIG1L\",\"confidence\":0.2,\"rationale\":\"SYNDIG1L is not directly linked to the patient's symptoms, with evidence only in the context of OTULIN deficiency.\"},{\"gene\":\"KIF4B\",\"confidence\":0.2,\"rationale\":\"KIF4B is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"NLRP2\",\"confidence\":0.2,\"rationale\":\"NLRP2 is associated with inflammasome activity but not directly linked to the patient's specific clinical features.\"},{\"gene\":\"CER1\",\"confidence\":0.2,\"rationale\":\"CER1 is mentioned in the context of fever and inflammation but not directly associated with the patient's symptoms.\"},{\"gene\":\"ETS1\",\"confidence\":0.2,\"rationale\":\"ETS1 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"SRSF8\",\"confidence\":0.2,\"rationale\":\"SRSF8 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"SLC30A1\",\"confidence\":0.2,\"rationale\":\"SLC30A1 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"RGS13\",\"confidence\":0.2,\"rationale\":\"RGS13 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"DEFB130A\",\"confidence\":0.2,\"rationale\":\"DEFB130A is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"NDUFB11\",\"confidence\":0.2,\"rationale\":\"NDUFB11 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"CCDC188\",\"confidence\":0.2,\"rationale\":\"CCDC188 is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"},{\"gene\":\"SPRR2A\",\"confidence\":0.2,\"rationale\":\"SPRR2A is mentioned in the context of OTULIN deficiency but has no direct evidence linking it to the patient's symptoms.\"}]",
+  "parsed_top5": [
+    "OTULIN",
+    "PRDX5",
+    "CCNG2",
+    "SYNDIG1L",
+    "KIF4B"
+  ]
+}

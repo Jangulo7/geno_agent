@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM50",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17278,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 45.4791157245636,
+  "cost_usd": 0.00397381,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy with matching phenotypes.\"\n  },\n  {\n    \"gene\": \"ARID5B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking ARID5B to lipodystrophy or diabetes phenotypes.\"\n  },\n  {\n    \"gene\": \"GP9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GP9 to the patient's metabolic or adipose phenotypes.\"\n  },\n  {\n    \"gene\": \"ESPNL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ESPNL's role in lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"PRKCE\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks evidence connecting PRKCE to lipodystrophy or diabetes phenotypes.\"\n  },\n  {\n    \"gene\": \"PHLDB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature linking PHLDB2 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"PEX12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating PEX12 with lipodystrophy or metabolic syndromes.\"\n  },\n  {\n    \"gene\": \"CABYR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence for CABYR's involvement in adipose or metabolic disorders.\"\n  },\n  {\n    \"gene\": \"TSPEAR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connecting TSPEAR to lipodystrophy or diabetes phenotypes.\"\n  },\n  {\n    \"gene\": \"TMEM72\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks evidence linking TMEM72 to the patient's adipose or metabolic conditions.\"\n  },\n  {\n    \"gene\": \"ZSCAN5C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting ZSCAN5C's role in lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"SLC5A7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting SLC5A7 to adipose tissue disorders or metabolic syndromes.\"\n  },\n  {\n    \"gene\": \"CLNS1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature associating CLNS1A with lipodystrophy or related phenotypes.\"\n  },\n  {\n    \"gene\": \"TFE3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks evidence linking TFE3 to the patient's adipose or metabolic conditions.\"\n  },\n  {\n    \"gene\": \"AMMECR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting AMMECR1's involvement in lipodystrophy or diabetes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "ARID5B",
+    "GP9",
+    "ESPNL",
+    "PRKCE"
+  ]
+}

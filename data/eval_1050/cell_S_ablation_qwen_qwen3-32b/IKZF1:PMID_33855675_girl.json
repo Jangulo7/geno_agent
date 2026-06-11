@@ -1,0 +1,22 @@
+{
+  "case_id": "IKZF1:PMID_33855675_girl",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12024,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 1.3579297065734863,
+  "cost_usd": 0.0009778800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"IKZF1 mutations directly affect B cell development, CSR, and BCR signaling, aligning with decreased B cells, IgG, and memory B cells in the patient.\"}",
+  "parsed_top5": [
+    "IKZF1"
+  ]
+}

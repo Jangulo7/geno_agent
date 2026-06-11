@@ -1,0 +1,22 @@
+{
+  "case_id": "EXTL3:PMID_28331220_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18151,
+  "tokens_out": 77,
+  "finish_reason": "stop",
+  "latency_s": 8.203871488571167,
+  "cost_usd": 0.0014736399999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"EXTL3\", \"confidence\": 0.95, \"rationale\": \"Homozygous mutations in EXTL3 cause immunoskeletal dysplasia with neurodevelopmental abnormalities, including platyspondyly, kyphoscoliosis, brachydactyly, hypotonia, and global developmental delay.\"}",
+  "parsed_top5": [
+    "EXTL3"
+  ]
+}

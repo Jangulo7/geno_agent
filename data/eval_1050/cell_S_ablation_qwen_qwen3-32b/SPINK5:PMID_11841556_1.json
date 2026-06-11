@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17323,
+  "tokens_out": 164,
+  "finish_reason": "stop",
+  "latency_s": 3.881967782974243,
+  "cost_usd": 0.00143176,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SPINK5\": 0.95, \"TACC1\": 0.1, \"EN2\": 0.1, \"TLR7\": 0.1, \"GALK2\": 0.1, \"VTCN1\": 0.1, \"TUSC2\": 0.1, \"TRIM59\": 0.1, \"OR52J3\": 0.1, \"URB2\": 0.1, \"TMCC1\": 0.1, \"UBIAD1\": 0.1, \"ADAP1\": 0.1, \"SLC35F4\": 0.1, \"ADAMTS3\": 0.1}",
+  "parsed_top5": [
+    "SPINK5",
+    "TACC1",
+    "EN2",
+    "TLR7",
+    "GALK2"
+  ]
+}

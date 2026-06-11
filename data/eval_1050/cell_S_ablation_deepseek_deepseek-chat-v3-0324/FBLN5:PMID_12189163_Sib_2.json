@@ -1,0 +1,26 @@
+{
+  "case_id": "FBLN5:PMID_12189163_Sib_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "SDS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SDS",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17944,
+  "tokens_out": 588,
+  "finish_reason": "stop",
+  "latency_s": 21.778733491897583,
+  "cost_usd": 0.0040415600000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SDS\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Multiple case reports align with patient's phenotypes (ptosis, anteverted nares, delayed skeletal maturation, respiratory issues).\"\n  },\n  {\n    \"gene\": \"DAB1\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Disrupted neuronal migration gene with some phenotypic overlap (anteverted nares, developmental delay).\"\n  },\n  {\n    \"gene\": \"TRERF1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minimal relevant evidence; generic dysmorphism overlap.\"\n  },\n  {\n    \"gene\": \"PAIP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct phenotypic match; low relevance evidence.\"\n  },\n  {\n    \"gene\": \"SYCE3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct phenotypic match; low relevance evidence.\"\n  },\n  {\n    \"gene\": \"OR4C13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Olfactory receptor gene; irrelevant to phenotypes.\"\n  },\n  {\n    \"gene\": \"REG3G\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Pancreatic secretory protein; no disease association.\"\n  },\n  {\n    \"gene\": \"UAP1L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to phenotypes.\"\n  },\n  {\n    \"gene\": \"TAS2R45\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Taste receptor gene; irrelevant to phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR37\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant disease associations.\"\n  },\n  {\n    \"gene\": \"DLEC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting phenotypic match.\"\n  },\n  {\n    \"gene\": \"XAGE1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Cancer/testis antigen; irrelevant to phenotypes.\"\n  },\n  {\n    \"gene\": \"GCNT4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Glycosyltransferase; no disease association.\"\n  },\n  {\n    \"gene\": \"SMYD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Histone methyltransferase; no phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"MCUR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Mitochondrial calcium regulator; no relevant evidence.\"\n  }\n]",
+  "parsed_top5": [
+    "SDS",
+    "DAB1",
+    "TRERF1",
+    "PAIP1",
+    "SYCE3"
+  ]
+}

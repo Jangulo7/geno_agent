@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_I_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14958,
+  "tokens_out": 625,
+  "finish_reason": "stop",
+  "latency_s": 37.14352488517761,
+  "cost_usd": 0.0034728500000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CCN2\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence of joint swelling, short stature, and kyphosis with detailed radiological findings matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"CDX1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some overlap with short stature and joint issues, but less specific to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"POU3F2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking to skeletal abnormalities, not strongly matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"MOSPD3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's specific joint and skeletal symptoms.\"\n  },\n  {\n    \"gene\": \"IGIP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a connection to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"STAC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting a role in the patient's skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"MAGEA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to skeletal dysplasia or joint symptoms.\"\n  },\n  {\n    \"gene\": \"RPS6KA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SPRR2D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"SLCO3A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"SEC23A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting to skeletal or joint phenotypes.\"\n  },\n  {\n    \"gene\": \"LIG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a connection to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LRRC75B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to skeletal or joint abnormalities.\"\n  },\n  {\n    \"gene\": \"VPS37B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"C7orf25\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting to the patient's specific symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "CCN2",
+    "CDX1",
+    "POU3F2",
+    "MOSPD3",
+    "IGIP"
+  ]
+}

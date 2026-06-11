@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P4",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15614,
+  "tokens_out": 758,
+  "finish_reason": "stop",
+  "latency_s": 15.337894678115845,
+  "cost_usd": 0.058212,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RFXANK\",\"confidence\":0.91,\"rationale\":\"Multiple high-relevance chunks directly link RFXANK mutations to MHC class II deficiency presenting with recurrent pneumonia, chronic diarrhea, and failure to thrive\u2014exactly matching all three HPO phenotypes.\"},{\"gene\":\"DTNA\",\"confidence\":0.03,\"rationale\":\"Evidence chunks describe general immunodeficiency phenotypes not specifically linked to DTNA; no direct gene-disease connection to this phenotype profile.\"},{\"gene\":\"CENPO\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic SCID/immunodeficiency case descriptions with no specific CENPO gene-disease link to the phenotype profile.\"},{\"gene\":\"MYLK\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe unrelated immunodeficiency cases; no established MYLK connection to failure to thrive, chronic diarrhea, and recurrent pneumonia.\"},{\"gene\":\"PTGR3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic immunodeficiency descriptions with no specific PTGR3 association to the patient's phenotype profile.\"},{\"gene\":\"GRHL3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe general SCID phenotypes unrelated to GRHL3 function; no direct link to this triad of symptoms.\"},{\"gene\":\"ZBED5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe general immunodeficiency/GI phenotypes not specifically attributed to ZBED5; no direct causal link established.\"},{\"gene\":\"ADRB1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic immunodeficiency case reports with no specific ADRB1 connection to failure to thrive, diarrhea, or pneumonia.\"},{\"gene\":\"COPB2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe unrelated immunodeficiency cases; no established COPB2 link to this phenotype triad.\"},{\"gene\":\"SNX3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic immunodeficiency descriptions with no specific SNX3 gene-disease association to the patient's phenotypes.\"},{\"gene\":\"DPY19L1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe general immunodeficiency phenotypes; no direct DPY19L1 connection to failure to thrive, chronic diarrhea, or recurrent pneumonia.\"},{\"gene\":\"RNF4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks are generic immunodeficiency case reports with no specific RNF4 association to this phenotype profile.\"},{\"gene\":\"KCTD5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe unrelated immunodeficiency cases; no established KCTD5 link to the patient's phenotype triad.\"},{\"gene\":\"LETM2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe general SCID/immunodeficiency phenotypes with no specific LETM2 gene-disease connection to this triad.\"},{\"gene\":\"PRRX1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe general SCID phenotypes unrelated to PRRX1 function; no direct causal link to failure to thrive, diarrhea, or pneumonia.\"}]",
+  "parsed_top5": [
+    "RFXANK",
+    "DTNA",
+    "CENPO",
+    "MYLK",
+    "PTGR3"
+  ]
+}

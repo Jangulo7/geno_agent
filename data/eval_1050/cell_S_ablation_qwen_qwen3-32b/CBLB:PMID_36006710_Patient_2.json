@@ -1,0 +1,22 @@
+{
+  "case_id": "CBLB:PMID_36006710_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CBLB",
+  "orig_qwen3_8b_top1": "CLSTN3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CLSTN3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11045,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 1.6601207256317139,
+  "cost_usd": 0.00090012,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"CLSTN3\",\"confidence\":0.85,\"rationale\":\"CLSTN3 overexpression reduces hepatic inflammation and steatosis, aligning with elevated IL-6 and IL-10, hypothyroidism, and diabetes.\"}",
+  "parsed_top5": [
+    "CLSTN3"
+  ]
+}

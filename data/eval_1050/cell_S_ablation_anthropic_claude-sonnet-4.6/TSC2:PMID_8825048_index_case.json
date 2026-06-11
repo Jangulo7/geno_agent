@@ -1,0 +1,26 @@
+{
+  "case_id": "TSC2:PMID_8825048_index_case",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TSC2",
+  "orig_qwen3_8b_top1": "TSC2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TSC2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18908,
+  "tokens_out": 660,
+  "finish_reason": "stop",
+  "latency_s": 11.184344291687012,
+  "cost_usd": 0.066624,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"TSC2\",\"confidence\":0.97,\"rationale\":\"TSC2 evidence directly and specifically links loss-of-function variants to hypomelanotic macules, cardiac rhabdomyoma, and TSC\u2014perfectly matching all three patient HPO phenotypes.\"},{\"gene\":\"GNA12\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GNA12 to the patient's phenotypes; evidence chunks describe TSC, not GNA12.\"},{\"gene\":\"ENKD1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ENKD1 to hypomelanotic macule, cardiac rhabdomyoma, or bradycardia.\"},{\"gene\":\"SLCO6A1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLCO6A1 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"MORN4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MORN4 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"CFAP54\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CFAP54 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"RABGAP1L\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RABGAP1L to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"ZNF71\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF71 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"PCDH18\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PCDH18 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"CCDC42\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CCDC42 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"GPX3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GPX3 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"RNF182\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RNF182 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"ZFC3H1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZFC3H1 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"KLF8\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KLF8 to the patient's phenotypes; evidence chunks describe TSC only.\"},{\"gene\":\"COL22A1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking COL22A1 to the patient's phenotypes; evidence chunks describe TSC only.\"}]",
+  "parsed_top5": [
+    "TSC2",
+    "GNA12",
+    "ENKD1",
+    "SLCO6A1",
+    "MORN4"
+  ]
+}

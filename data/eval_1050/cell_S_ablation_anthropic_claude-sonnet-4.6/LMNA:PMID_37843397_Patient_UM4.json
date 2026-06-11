@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM4",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20169,
+  "tokens_out": 721,
+  "finish_reason": "stop",
+  "latency_s": 13.060595512390137,
+  "cost_usd": 0.071322,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA (lamin A/C) is directly named as the causal gene for FPLD2 (Dunnigan syndrome), with evidence explicitly linking it to lipodystrophy, T2DM, hypertriglyceridemia, elevated HbA1c, loss of limb/truncal subcutaneous fat, and hepatic steatosis.\"},{\"gene\":\"PTPRR\",\"confidence\":0.02,\"rationale\":\"No direct mention of PTPRR in any evidence chunk; evidence only covers general lipodystrophy background with no gene-specific link.\"},{\"gene\":\"BRD10\",\"confidence\":0.02,\"rationale\":\"No direct mention of BRD10 in evidence; chunks describe general lipodystrophy phenotypes without implicating this gene.\"},{\"gene\":\"SF3B3\",\"confidence\":0.02,\"rationale\":\"No direct mention of SF3B3; evidence chunks are generic lipodystrophy/FPLD background not specific to this gene.\"},{\"gene\":\"AADACL3\",\"confidence\":0.02,\"rationale\":\"No direct mention of AADACL3; evidence is generic lipodystrophy literature not linking this gene to the phenotype.\"},{\"gene\":\"TCF23\",\"confidence\":0.02,\"rationale\":\"No direct mention of TCF23; evidence chunks are generic FPLD background without any gene-specific association.\"},{\"gene\":\"GPC5\",\"confidence\":0.02,\"rationale\":\"No direct mention of GPC5; evidence is generic lipodystrophy background not implicating this gene.\"},{\"gene\":\"RNF214\",\"confidence\":0.02,\"rationale\":\"No direct mention of RNF214; evidence chunks cover general FPLD without linking this gene to the phenotype.\"},{\"gene\":\"RND2\",\"confidence\":0.02,\"rationale\":\"No direct mention of RND2; evidence is generic lipodystrophy literature without gene-specific support.\"},{\"gene\":\"GPR35\",\"confidence\":0.02,\"rationale\":\"No direct mention of GPR35; evidence chunks are generic FPLD background not implicating this gene.\"},{\"gene\":\"KISS1R\",\"confidence\":0.02,\"rationale\":\"No direct mention of KISS1R; evidence is generic lipodystrophy background without gene-specific association.\"},{\"gene\":\"XKRX\",\"confidence\":0.02,\"rationale\":\"No direct mention of XKRX; evidence chunks are generic FPLD literature not linking this gene to the phenotype.\"},{\"gene\":\"P2RY6\",\"confidence\":0.02,\"rationale\":\"No direct mention of P2RY6; evidence is generic lipodystrophy background without implicating this gene.\"},{\"gene\":\"PWWP2B\",\"confidence\":0.02,\"rationale\":\"No direct mention of PWWP2B; evidence chunks are generic FPLD background not specific to this gene.\"},{\"gene\":\"NUP42\",\"confidence\":0.02,\"rationale\":\"No direct mention of NUP42; evidence is generic lipodystrophy literature without gene-specific support.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "PTPRR",
+    "BRD10",
+    "SF3B3",
+    "AADACL3"
+  ]
+}

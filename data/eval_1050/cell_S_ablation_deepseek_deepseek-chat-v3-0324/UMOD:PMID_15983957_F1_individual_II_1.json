@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15983957_F1_individual_II_1",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17339,
+  "tokens_out": 597,
+  "finish_reason": "stop",
+  "latency_s": 20.127954959869385,
+  "cost_usd": 0.0039274900000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"UMOD strongly linked to chronic kidney disease, hyperuricemia, gout, and renal cysts with multiple pathogenic variants reported.\"\n  },\n  {\n    \"gene\": \"AKR1B10\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Some evidence for CKD and hyperuricemia but lacks direct gene-phenotype association.\"\n  },\n  {\n    \"gene\": \"LCE3C\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking LCE3C to renal phenotypes.\"\n  },\n  {\n    \"gene\": \"OR6C2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence for renal involvement.\"\n  },\n  {\n    \"gene\": \"C1orf115\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role in kidney disease.\"\n  },\n  {\n    \"gene\": \"GBP5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking GBP5 to kidney phenotypes.\"\n  },\n  {\n    \"gene\": \"INTS2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence for INTS2 involvement in renal conditions.\"\n  },\n  {\n    \"gene\": \"TMEM275\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting TMEM275 to kidney dysfunction.\"\n  },\n  {\n    \"gene\": \"ERLIN1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No supporting evidence for ERLIN1 in renal disease.\"\n  },\n  {\n    \"gene\": \"SPRR2F\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking SPRR2F to kidney-related phenotypes.\"\n  },\n  {\n    \"gene\": \"OR51A4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence for renal involvement.\"\n  },\n  {\n    \"gene\": \"STRBP\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting STRBP in kidney disease.\"\n  },\n  {\n    \"gene\": \"DCAKD\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking DCAKD to renal symptoms.\"\n  },\n  {\n    \"gene\": \"FGF7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting FGF7 to kidney phenotypes.\"\n  },\n  {\n    \"gene\": \"DNAAF3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking DNAAF3 to renal dysfunction.\"\n  }\n]",
+  "parsed_top5": [
+    "UMOD",
+    "AKR1B10",
+    "LCE3C",
+    "OR6C2",
+    "C1orf115"
+  ]
+}

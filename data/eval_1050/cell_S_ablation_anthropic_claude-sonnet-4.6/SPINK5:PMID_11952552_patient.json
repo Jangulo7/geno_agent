@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11952552_patient",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16699,
+  "tokens_out": 852,
+  "finish_reason": "stop",
+  "latency_s": 11.609358787536621,
+  "cost_usd": 0.062877,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.92, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: erythroderma, epidermal acanthosis, white scaling, erythema, and pili torti, with high-relevance direct mentions.\"}, {\"gene\": \"COG2\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking COG2 to this phenotype; evidence chunks are generic ichthyosis/NS background text not specific to COG2.\"}, {\"gene\": \"ADH4\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ADH4 to erythroderma, scaling, or pili torti; all chunks are generic background unrelated to ADH4.\"}, {\"gene\": \"UXT\", \"confidence\": 0.01, \"rationale\": \"No evidence linking UXT to this skin/hair phenotype; chunks are generic NS/CTCL background not specific to UXT.\"}, {\"gene\": \"ZNG1E\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ZNG1E to erythroderma or pili torti; chunks are generic background unrelated to ZNG1E.\"}, {\"gene\": \"CCDC83\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CCDC83 to this phenotype; chunks are generic background text not specific to CCDC83.\"}, {\"gene\": \"GEN1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking GEN1 to erythroderma or pili torti; chunks are generic ichthyosis/NS background unrelated to GEN1.\"}, {\"gene\": \"NFIC\", \"confidence\": 0.01, \"rationale\": \"No evidence linking NFIC to this skin/hair phenotype; chunks are generic NS/CTCL background not specific to NFIC.\"}, {\"gene\": \"INSM1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking INSM1 to erythroderma or pili torti; chunks are generic background unrelated to INSM1.\"}, {\"gene\": \"LDLRAP1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking LDLRAP1 to this phenotype; chunks are generic ichthyosis background unrelated to LDLRAP1.\"}, {\"gene\": \"PNPLA2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PNPLA2 to erythroderma with pili torti; chunks are generic ARCI background unrelated to PNPLA2.\"}, {\"gene\": \"ATOH7\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ATOH7 to this skin/hair phenotype; chunks are generic ichthyosis background unrelated to ATOH7.\"}, {\"gene\": \"IDH3B\", \"confidence\": 0.01, \"rationale\": \"No evidence linking IDH3B to erythroderma or pili torti; chunks are generic background unrelated to IDH3B.\"}, {\"gene\": \"MS4A2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MS4A2 to this phenotype; chunks are generic NS/CTCL background not specific to MS4A2.\"}, {\"gene\": \"GNE\", \"confidence\": 0.01, \"rationale\": \"No evidence linking GNE to erythroderma or pili torti; chunks are generic NS/CTCL background unrelated to GNE.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "COG2",
+    "ADH4",
+    "UXT",
+    "ZNG1E"
+  ]
+}

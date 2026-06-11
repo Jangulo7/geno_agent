@@ -1,0 +1,26 @@
+{
+  "case_id": "TRAF3:PMID_39579173_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TRAF3",
+  "orig_qwen3_8b_top1": "FYN",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FYN",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 18744,
+  "tokens_out": 662,
+  "finish_reason": "stop",
+  "latency_s": 45.52061629295349,
+  "cost_usd": 0.00425854,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"FYN\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence links FYN mutations to immunodeficiency with recurrent infections, lymphoid hyperplasia, and decreased lymphocyte counts matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TRAF3\",\n    \"confidence\": 0.7,\n    \"rationale\": \"TRAF3 haploinsufficiency is associated with immune dysregulation, IBD, and recurrent infections, partially matching the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"LRRC51\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRC51 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"GGTLC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GGTLC1 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"G3BP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking G3BP1 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"TRIB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRIB1 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"FAM228A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM228A to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"ARID3C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ARID3C to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"TRIM28\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRIM28 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"ADGRE3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADGRE3 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"NFS1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NFS1 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"AURKA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AURKA to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"RECQL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RECQL to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"CLPSL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CLPSL1 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"DNAJC3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DNAJC3 to the patient's immune phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "FYN",
+    "TRAF3",
+    "LRRC51",
+    "GGTLC1",
+    "G3BP1"
+  ]
+}

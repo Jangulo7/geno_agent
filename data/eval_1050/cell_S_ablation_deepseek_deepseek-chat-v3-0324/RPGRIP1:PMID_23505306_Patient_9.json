@@ -1,0 +1,26 @@
+{
+  "case_id": "RPGRIP1:PMID_23505306_Patient_9",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RPGRIP1",
+  "orig_qwen3_8b_top1": "RPGR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RPGR",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 16654,
+  "tokens_out": 671,
+  "finish_reason": "stop",
+  "latency_s": 20.294972896575928,
+  "cost_usd": 0.0038474700000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RPGR\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence of RPGR mutations causing phenotypes matching the patient's symptoms including retinal arteriole attenuation and reduced ERG.\"\n  },\n  {\n    \"gene\": \"RPGRIP1\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Strong association with LCA and retinal phenotypes, though evidence slightly less specific than RPGR for this patient.\"\n  },\n  {\n    \"gene\": \"NMNAT1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Known to cause severe retinal degeneration, but evidence chunks less directly tied to this patient's specific features.\"\n  },\n  {\n    \"gene\": \"PCYT2\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Implicated in retinal dystrophy but evidence lacks direct mutation-phenotype correlation for this case.\"\n  },\n  {\n    \"gene\": \"GSTP1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Involved in macular pigment transport but no direct link to the patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"EFNA2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking EFNA2 to the patient's retinal phenotypes.\"\n  },\n  {\n    \"gene\": \"DEK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting DEK to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"ZNF407\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in retinal disease matching this patient's presentation.\"\n  },\n  {\n    \"gene\": \"RUFY2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking RUFY2 to inherited retinal disorders resembling this case.\"\n  },\n  {\n    \"gene\": \"CTAGE6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature evidence connecting CTAGE6 to retinal degeneration phenotypes.\"\n  },\n  {\n    \"gene\": \"IFNK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence associating IFNK with retinal dystrophy or LCA.\"\n  },\n  {\n    \"gene\": \"FFAR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supportive evidence for FFAR1's involvement in inherited retinal diseases.\"\n  },\n  {\n    \"gene\": \"STK10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking STK10 to retinal phenotypes matching the patient's features.\"\n  },\n  {\n    \"gene\": \"SETD5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence tying SETD5 to inherited retinal disorders or LCA.\"\n  },\n  {\n    \"gene\": \"KCNA3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant association with retinal disease; evidence refers to KCNV2, not KCNA3.\"\n  }\n]",
+  "parsed_top5": [
+    "RPGR",
+    "RPGRIP1",
+    "NMNAT1",
+    "PCYT2",
+    "GSTP1"
+  ]
+}

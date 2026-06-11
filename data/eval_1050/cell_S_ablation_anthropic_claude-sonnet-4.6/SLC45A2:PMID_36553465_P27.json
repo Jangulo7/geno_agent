@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P27",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17244,
+  "tokens_out": 785,
+  "finish_reason": "stop",
+  "latency_s": 14.74387788772583,
+  "cost_usd": 0.063507,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SLC45A2\", \"confidence\": 0.92, \"rationale\": \"Direct evidence: SLC45A2 mutations cause OCA4 with white eyelashes, blue irides, foveal hypoplasia, astigmatism, nystagmus, reduced VA, and hypopigmentation of hair\u2014matching all patient HPO terms.\"}, {\"gene\": \"ABCA8\", \"confidence\": 0.03, \"rationale\": \"ABCA8 evidence describes OCA8 with nystagmus and foveal hypoplasia but lacks direct gene-specific mechanistic link to this phenotype profile.\"}, {\"gene\": \"C3orf52\", \"confidence\": 0.01, \"rationale\": \"Evidence only describes general OCA/hypopigmentation syndromes; no direct link between C3orf52 and the patient's specific phenotype profile.\"}, {\"gene\": \"ZNF593\", \"confidence\": 0.01, \"rationale\": \"Evidence describes OCA-like phenotype in families but no direct mechanistic evidence linking ZNF593 to OCA or this phenotype profile.\"}, {\"gene\": \"DEPDC1\", \"confidence\": 0.01, \"rationale\": \"Evidence is generic OCA background; no direct evidence linking DEPDC1 to albinism or the patient's phenotype.\"}, {\"gene\": \"BRD7\", \"confidence\": 0.01, \"rationale\": \"Evidence is generic OCA background; no direct evidence linking BRD7 to albinism or the patient's phenotype.\"}, {\"gene\": \"VSIG10L2\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to VSIG10L2 and the patient's phenotype.\"}, {\"gene\": \"CIP2A\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to CIP2A and the patient's phenotype.\"}, {\"gene\": \"PPT2\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to PPT2 and the patient's phenotype.\"}, {\"gene\": \"CTXN1\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to CTXN1 and the patient's phenotype.\"}, {\"gene\": \"RPS3A\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to RPS3A and the patient's phenotype.\"}, {\"gene\": \"EIF2AK2\", \"confidence\": 0.0, \"rationale\": \"Evidence describes Griscelli-like silvery hair with HLH, not matching this patient's OCA4-like profile.\"}, {\"gene\": \"AP4B1\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to AP4B1 and the patient's phenotype.\"}, {\"gene\": \"OR2T2\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to OR2T2 and the patient's phenotype.\"}, {\"gene\": \"COMMD5\", \"confidence\": 0.0, \"rationale\": \"Only generic OCA background evidence; no direct link to COMMD5 and the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ABCA8",
+    "C3orf52",
+    "ZNF593",
+    "DEPDC1"
+  ]
+}

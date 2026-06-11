@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P21",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17572,
+  "tokens_out": 836,
+  "finish_reason": "stop",
+  "latency_s": 15.907662391662598,
+  "cost_usd": 0.065256,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SLC45A2\",\"confidence\":0.82,\"rationale\":\"Direct patient evidence: SLC45A2 mutations cause OCA4 with white eyelashes, blue irides, hypopigmented hair, nystagmus, astigmatism, reduced VA, and melanocytic nevi\u2014matching all HPO terms.\"},{\"gene\":\"CARD8\",\"confidence\":0.06,\"rationale\":\"Evidence chunk describes OCA8 patients with nystagmus, strabismus (exo/esotropia), reduced VA, and iris transillumination, but CARD8 is not a known albinism gene; likely a co-located gene.\"},{\"gene\":\"SLC26A9\",\"confidence\":0.02,\"rationale\":\"Evidence chunk describes OCA8 phenotype overlapping patient features but SLC26A9 has no established role in albinism or pigmentation disorders.\"},{\"gene\":\"C2orf49\",\"confidence\":0.02,\"rationale\":\"Shares OCA8 evidence chunk with overlapping ocular phenotype but C2orf49 has no direct link to albinism or pigmentation pathways.\"},{\"gene\":\"NDUFA8\",\"confidence\":0.01,\"rationale\":\"Only generic OCA/albinism background evidence; NDUFA8 is a mitochondrial complex I subunit with no known pigmentation role.\"},{\"gene\":\"DDX18\",\"confidence\":0.01,\"rationale\":\"Only generic OCA background evidence; DDX18 is an RNA helicase with no established connection to albinism or pigmentation.\"},{\"gene\":\"H2AC18\",\"confidence\":0.01,\"rationale\":\"Only generic OCA background evidence; H2AC18 is a histone gene with no known role in pigmentation or albinism.\"},{\"gene\":\"SLC8A3\",\"confidence\":0.01,\"rationale\":\"Only generic OCA background evidence; SLC8A3 is a sodium-calcium exchanger with no established pigmentation or albinism association.\"},{\"gene\":\"ZNF891\",\"confidence\":0.01,\"rationale\":\"Evidence describes OCA-like families with white eyelashes/eyebrows, blue irides, nystagmus, but ZNF891 is not an established albinism gene.\"},{\"gene\":\"BRINP1\",\"confidence\":0.01,\"rationale\":\"Shares same OCA family description as ZNF891 evidence but BRINP1 has no known role in pigmentation or albinism.\"},{\"gene\":\"RAB17\",\"confidence\":0.01,\"rationale\":\"RAB17 is involved in melanosome transport but evidence only describes indirect pathway roles; no direct patient genotype-phenotype match.\"},{\"gene\":\"LPP\",\"confidence\":0.005,\"rationale\":\"LPP evidence relates to cicatricial alopecia and melanocyte stem cells, not to the oculocutaneous albinism phenotype profile presented.\"},{\"gene\":\"PSAP\",\"confidence\":0.005,\"rationale\":\"Only generic OCA background text; PSAP (prosaposin) has no established direct role in albinism or the patient's pigmentation/ocular phenotype.\"},{\"gene\":\"MRPL45\",\"confidence\":0.005,\"rationale\":\"Only generic OCA background text; MRPL45 is a mitochondrial ribosomal protein with no known connection to albinism or pigmentation.\"},{\"gene\":\"WFDC13\",\"confidence\":0.005,\"rationale\":\"WFDC13 evidence relates to keratosis follicularis spinulosa with sparse eyebrows/astigmatism but lacks the pigmentation and ocular albinism features of this patient.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "CARD8",
+    "SLC26A9",
+    "C2orf49",
+    "NDUFA8"
+  ]
+}

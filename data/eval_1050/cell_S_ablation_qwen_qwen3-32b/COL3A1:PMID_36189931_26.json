@@ -1,0 +1,22 @@
+{
+  "case_id": "COL3A1:PMID_36189931_26",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19257,
+  "tokens_out": 65,
+  "finish_reason": "stop",
+  "latency_s": 9.042901039123535,
+  "cost_usd": 0.00155876,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"COL3A1\", \"confidence\": 0.95, \"rationale\": \"COL3A1 mutations cause vascular EDS, which matches the patient's thin vermilion border, narrow nasal ridge, bruising, pneumothorax, and dermal translucency.\"}",
+  "parsed_top5": [
+    "COL3A1"
+  ]
+}

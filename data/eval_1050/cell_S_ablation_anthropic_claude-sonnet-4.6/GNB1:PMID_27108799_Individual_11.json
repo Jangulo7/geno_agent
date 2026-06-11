@@ -1,0 +1,26 @@
+{
+  "case_id": "GNB1:PMID_27108799_Individual_11",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNB1",
+  "orig_qwen3_8b_top1": "GNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15740,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 11.006194114685059,
+  "cost_usd": 0.057195,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GNB1\",\"confidence\":0.82,\"rationale\":\"GNB1 evidence directly describes autosomal dominant neurodevelopmental disorder with global developmental delay, hypotonia, seizures, nystagmus, hydronephrosis, and growth failure\u2014matching nearly all patient HPO terms.\"},{\"gene\":\"GPR143\",\"confidence\":0.05,\"rationale\":\"GPR143 is linked to X-linked ocular albinism and congenital nystagmus but lacks evidence for the neurodevelopmental, epileptic, and renal features seen in this patient.\"},{\"gene\":\"OR10G4\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking OR10G4 to this phenotype; evidence chunks describe unrelated patients and genes.\"},{\"gene\":\"STXBP6\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking STXBP6 to this multi-system neurodevelopmental phenotype; evidence chunks are non-specific.\"},{\"gene\":\"OR8D1\",\"confidence\":0.01,\"rationale\":\"OR8D1 is an olfactory receptor gene with no evidence supporting causality for this neurodevelopmental phenotype.\"},{\"gene\":\"SERTAD2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SERTAD2 to this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"BICDL2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking BICDL2 to this multi-system neurodevelopmental phenotype.\"},{\"gene\":\"NALF1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NALF1 to this phenotype; evidence chunks are non-specific.\"},{\"gene\":\"ELP3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ELP3 to this phenotype profile in the provided evidence.\"},{\"gene\":\"SPTBN1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SPTBN1 to this phenotype in the provided chunks.\"},{\"gene\":\"PANO1\",\"confidence\":0.01,\"rationale\":\"No evidence linking PANO1 to this neurodevelopmental phenotype profile.\"},{\"gene\":\"C19orf25\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking C19orf25 to this phenotype; evidence chunks are non-specific.\"},{\"gene\":\"DBI\",\"confidence\":0.01,\"rationale\":\"No evidence linking DBI to this multi-system neurodevelopmental phenotype.\"},{\"gene\":\"IFNA16\",\"confidence\":0.01,\"rationale\":\"IFNA16 is an interferon gene with no evidence supporting causality for this neurodevelopmental phenotype.\"},{\"gene\":\"RAX\",\"confidence\":0.01,\"rationale\":\"RAX is a retinal homeobox gene with no evidence supporting causality for this multi-system neurodevelopmental phenotype.\"}]",
+  "parsed_top5": [
+    "GNB1",
+    "GPR143",
+    "OR10G4",
+    "STXBP6",
+    "OR8D1"
+  ]
+}

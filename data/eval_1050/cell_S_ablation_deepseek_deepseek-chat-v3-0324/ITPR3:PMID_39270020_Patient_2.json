@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16657,
+  "tokens_out": 662,
+  "finish_reason": "stop",
+  "latency_s": 31.599092960357666,
+  "cost_usd": 0.0038411400000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ITPR3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Evidence links ITPR3 mutations to impaired T-cell proliferation and calcium flux, matching the patient's immunological phenotype.\"\n  },\n  {\n    \"gene\": \"BAG3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking BAG3 to the patient's specific T-cell or B-cell defects.\"\n  },\n  {\n    \"gene\": \"COX11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting COX11 to the observed immunological abnormalities.\"\n  },\n  {\n    \"gene\": \"SMIM24\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks evidence associating SMIM24 with T-cell or B-cell dysfunction.\"\n  },\n  {\n    \"gene\": \"SMG8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No supporting evidence for SMG8's role in immune cell proliferation or function.\"\n  },\n  {\n    \"gene\": \"B3GNT4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No data linking B3GNT4 to the described immunological phenotypes.\"\n  },\n  {\n    \"gene\": \"GPIHBP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence tying GPIHBP1 to T-cell or B-cell proliferation defects.\"\n  },\n  {\n    \"gene\": \"HSFX2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature suggesting HSFX2 involvement in immune system anomalies.\"\n  },\n  {\n    \"gene\": \"FOXB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacking evidence for FOXB1's association with the observed immunological defects.\"\n  },\n  {\n    \"gene\": \"ABHD11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature connecting ABHD11 to the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"SPTAN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented role for SPTAN1 in immune cell proliferation or function.\"\n  },\n  {\n    \"gene\": \"EPB41L5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Absence of evidence linking EPB41L5 to T-cell or B-cell abnormalities.\"\n  },\n  {\n    \"gene\": \"GPX2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No data associating GPX2 with the described immunological deficiencies.\"\n  },\n  {\n    \"gene\": \"CLEC14A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CLEC14A's role in immune system dysfunction.\"\n  },\n  {\n    \"gene\": \"GPBAR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacking any literature connecting GPBAR1 to T-cell or B-cell defects.\"\n  }\n]",
+  "parsed_top5": [
+    "ITPR3",
+    "BAG3",
+    "COX11",
+    "SMIM24",
+    "SMG8"
+  ]
+}

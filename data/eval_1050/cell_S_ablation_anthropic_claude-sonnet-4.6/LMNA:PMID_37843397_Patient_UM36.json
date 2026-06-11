@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM36",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20318,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 10.459588527679443,
+  "cost_usd": 0.071469,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA chunks explicitly describe FPLD2 caused by LMNA mutation with loss of truncal and limb subcutaneous fat, T2DM, elevated HbA1c, and hepatic steatosis\u2014directly matching all patient HPO phenotypes.\"},{\"gene\":\"CANX\",\"confidence\":0.04,\"rationale\":\"CANX evidence only references general lipodystrophy literature with no direct gene-specific association to the patient's phenotype profile.\"},{\"gene\":\"PIEZO1\",\"confidence\":0.02,\"rationale\":\"No PIEZO1-specific evidence linking it to lipodystrophy, T2DM, or hepatic steatosis; chunks are generic lipodystrophy background.\"},{\"gene\":\"ELP4\",\"confidence\":0.02,\"rationale\":\"No ELP4-specific evidence; all chunks are generic lipodystrophy background with no mention of ELP4.\"},{\"gene\":\"PDIA6\",\"confidence\":0.02,\"rationale\":\"No PDIA6-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"AOAH\",\"confidence\":0.02,\"rationale\":\"No AOAH-specific evidence linking it to lipodystrophy or metabolic phenotypes in the provided chunks.\"},{\"gene\":\"MAB21L1\",\"confidence\":0.01,\"rationale\":\"No MAB21L1-specific evidence; chunks are generic lipodystrophy background with no gene-specific association.\"},{\"gene\":\"GSG1\",\"confidence\":0.01,\"rationale\":\"No GSG1-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"CYP2F1\",\"confidence\":0.01,\"rationale\":\"No CYP2F1-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.01,\"rationale\":\"No PIP5KL1-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"GPATCH2L\",\"confidence\":0.01,\"rationale\":\"No GPATCH2L-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"ME1\",\"confidence\":0.01,\"rationale\":\"No ME1-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"ZNF484\",\"confidence\":0.01,\"rationale\":\"No ZNF484-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"LGALS2\",\"confidence\":0.01,\"rationale\":\"No LGALS2-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"DGAT2L6\",\"confidence\":0.01,\"rationale\":\"No DGAT2L6-specific evidence; chunks are generic lipodystrophy background unrelated to this gene.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CANX",
+    "PIEZO1",
+    "ELP4",
+    "PDIA6"
+  ]
+}

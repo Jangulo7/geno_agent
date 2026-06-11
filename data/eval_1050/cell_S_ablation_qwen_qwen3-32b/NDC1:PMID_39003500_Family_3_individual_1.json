@@ -1,0 +1,20 @@
+{
+  "case_id": "NDC1:PMID_39003500_Family_3_individual_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NDC1",
+  "orig_qwen3_8b_top1": "NDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17102,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 3.8364481925964355,
+  "cost_usd": 0.0013740400000000002,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'evidence' field for each gene.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'evidence' field for each gene.\"}",
+  "parsed_top5": []
+}

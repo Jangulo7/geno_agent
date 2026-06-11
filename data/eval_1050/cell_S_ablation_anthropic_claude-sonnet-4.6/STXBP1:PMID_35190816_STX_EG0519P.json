@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_EG0519P",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11973,
+  "tokens_out": 953,
+  "finish_reason": "stop",
+  "latency_s": 15.535154342651367,
+  "cost_usd": 0.050214,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"STXBP1\",\n    \"confidence\": 0.72,\n    \"rationale\": \"STXBP1 evidence directly describes ataxia-tremor-retardation syndrome with tremor, gait ataxia, dysmetria, hypotonia, and intellectual disability matching the patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"TDG\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic ataxia descriptions not specifically linked to TDG; no direct gene-phenotype association supporting causality.\"\n  },\n  {\n    \"gene\": \"SEMA4F\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic ataxia descriptions not specifically linked to SEMA4F; no direct gene-phenotype association supporting causality.\"\n  },\n  {\n    \"gene\": \"ZHX3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunks are generic ataxia descriptions not specifically linked to ZHX3; no direct gene-phenotype association supporting causality.\"\n  },\n  {\n    \"gene\": \"IRF6\",\n    \"confidence\": 0.02,\n    \"rationale\": \"IRF6 is known for orofacial clefting syndromes, not ataxia/ID; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"PTPN7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking PTPN7 to this neurological phenotype; evidence chunks are generic ataxia descriptions.\"\n  },\n  {\n    \"gene\": \"WDR31\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking WDR31 to ataxia/ID phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ZIC1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"ZIC1 has cerebellar roles but evidence chunks are generic; no direct link to this specific phenotype combination.\"\n  },\n  {\n    \"gene\": \"DAGLB\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking DAGLB to this phenotype; evidence chunks are generic ataxia assessment descriptions.\"\n  },\n  {\n    \"gene\": \"MT1M\",\n    \"confidence\": 0.01,\n    \"rationale\": \"MT1M is a metallothionein with no established link to ataxia/ID; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"FAM236A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"FAM236A is poorly characterized; evidence chunks are generic ataxia descriptions with no gene-specific association.\"\n  },\n  {\n    \"gene\": \"KHDRBS2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking KHDRBS2 to this neurological phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ERG28\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ERG28 is a sterol biosynthesis gene with no established link to ataxia/ID; evidence chunks are generic ataxia descriptions.\"\n  },\n  {\n    \"gene\": \"RNF19A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking RNF19A to this phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SNN\",\n    \"confidence\": 0.01,\n    \"rationale\": \"SNN (stannin) has no established link to ataxia/ID; evidence chunks are generic case descriptions not specific to this gene.\"\n  }\n]",
+  "parsed_top5": [
+    "STXBP1",
+    "TDG",
+    "SEMA4F",
+    "ZHX3",
+    "IRF6"
+  ]
+}

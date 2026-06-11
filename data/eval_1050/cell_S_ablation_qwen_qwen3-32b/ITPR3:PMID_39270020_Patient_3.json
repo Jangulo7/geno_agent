@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_3",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "IFITM3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IFITM3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16213,
+  "tokens_out": 191,
+  "finish_reason": "stop",
+  "latency_s": 3.661238670349121,
+  "cost_usd": 0.00135052,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IFITM3\": 0.85, \"KRTAP5-5\": 0.15, \"NANOS3\": 0.15, \"SNRPB2\": 0.15, \"ZNF354A\": 0.15, \"ZNF226\": 0.15, \"TACO1\": 0.15, \"RPL21\": 0.15, \"GALNT17\": 0.15, \"PEAK1\": 0.15, \"ZNF432\": 0.15, \"YBX2\": 0.15, \"KHDRBS3\": 0.15, \"CGNL1\": 0.15, \"ATP6V0A2\": 0.15}",
+  "parsed_top5": [
+    "IFITM3",
+    "KRTAP5-5",
+    "NANOS3",
+    "SNRPB2",
+    "ZNF354A"
+  ]
+}

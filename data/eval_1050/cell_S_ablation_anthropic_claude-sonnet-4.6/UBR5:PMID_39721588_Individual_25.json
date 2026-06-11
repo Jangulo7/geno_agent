@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_25",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SRCAP",
+  "top1_correct": false,
+  "causal_rank": 12,
+  "tokens_in": 16477,
+  "tokens_out": 1190,
+  "finish_reason": "stop",
+  "latency_s": 19.933640956878662,
+  "cost_usd": 0.067281,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SRCAP\",\n    \"confidence\": 0.52,\n    \"rationale\": \"SRCAP causes Floating-Harbor syndrome with proportionate short stature, intellectual disability, ADHD, and behavioral issues; the introduction chunk directly mentions SRCAP mutations and these features matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"NHERF4\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence chunk describes siblings with short stature, hypertelorism, intellectual disability, autism, ADHD, and seizures\u2014closely matching the patient\u2014but the gene-disease link is indirect (MARK4 variant mentioned).\"\n  },\n  {\n    \"gene\": \"CTNND2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Shares the same evidence chunk describing hypertelorism, short stature, ID, autism, ADHD, and seizures in siblings, but no direct gene-specific literature support for this phenotype cluster.\"\n  },\n  {\n    \"gene\": \"SULT2A1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence chunk describes siblings with short stature, hypertelorism, ID, autism, ADHD, and seizures matching patient HPOs, but no direct causal link between SULT2A1 and this syndrome is established.\"\n  },\n  {\n    \"gene\": \"DNAJC17\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence chunk describes short stature, hypertelorism, ID, autism, ADHD, and seizures, but no specific DNAJC17-disease association for this phenotype cluster is supported.\"\n  },\n  {\n    \"gene\": \"HINT1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"HINT1 chunk mentions febrile seizures, ID, ADHD, and short stature in a case report, but HINT1 is classically associated with neuromyotonia, not this neurodevelopmental/dysmorphic syndrome.\"\n  },\n  {\n    \"gene\": \"LENG8\",\n    \"confidence\": 0.03,\n    \"rationale\": \"LENG8 evidence describes ID, ADHD, ASD, short stature, seizures, and microcephaly in patients with likely pathogenic variants, providing some phenotypic overlap but limited specificity.\"\n  },\n  {\n    \"gene\": \"PCNT\",\n    \"confidence\": 0.02,\n    \"rationale\": \"PCNT causes microcephalic osteodysplastic primordial dwarfism with short stature and microcephaly, but evidence chunks are non-specific and don't directly link PCNT to this full phenotype.\"\n  },\n  {\n    \"gene\": \"USP42\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Shared case report evidence mentions short stature, microcephaly, ID, ADHD, and febrile seizures but no direct USP42-specific disease association for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"TRIP11\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence chunks are non-specific to TRIP11; no direct literature linking TRIP11 to this combination of short stature, hypertelorism, microcephaly, ID, ADHD, autism, and febrile seizures.\"\n  },\n  {\n    \"gene\": \"MMP21\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking MMP21 to this neurodevelopmental/dysmorphic phenotype; evidence chunks are shared non-specific case reports.\"\n  },\n  {\n    \"gene\": \"UBR5\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking UBR5 to short stature, hypertelorism, microcephaly, ID, ADHD, autism, and febrile seizures; only non-specific shared case report chunks.\"\n  },\n  {\n    \"gene\": \"IQCH\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence supporting IQCH as causal for this phenotype cluster; only non-specific shared evidence chunks present.\"\n  },\n  {\n    \"gene\": \"RIPK1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"RIPK1 is associated with immunodeficiency/autoinflammation, not this neurodevelopmental syndrome; no specific evidence linking it to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"INSL5\",\n    \"confidence\": 0.01,\n    \"rationale\": \"INSL5 is a peptide hormone with no established link to neurodevelopmental disorders, short stature, hypertelorism, or microcephaly; only non-specific shared evidence chunks.\"\n  }\n]",
+  "parsed_top5": [
+    "SRCAP",
+    "NHERF4",
+    "CTNND2",
+    "SULT2A1",
+    "DNAJC17"
+  ]
+}

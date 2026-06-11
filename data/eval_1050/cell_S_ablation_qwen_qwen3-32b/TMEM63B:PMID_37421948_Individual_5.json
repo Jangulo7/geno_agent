@@ -1,0 +1,22 @@
+{
+  "case_id": "TMEM63B:PMID_37421948_Individual_5",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TMEM63B",
+  "orig_qwen3_8b_top1": "TMEM63B",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TMEM63B",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14113,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 5.625625371932983,
+  "cost_usd": 0.0011461199999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"TMEM63B\", \"confidence\": 0.9, \"rationale\": \"TMEM63B variants are directly linked to early-onset nystagmus, visual impairment, and epilepsy with developmental delay, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "TMEM63B"
+  ]
+}

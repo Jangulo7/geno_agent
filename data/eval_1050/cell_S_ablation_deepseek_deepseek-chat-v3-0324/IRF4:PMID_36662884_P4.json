@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_36662884_P4",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "Pik3r1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13230,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 45.970062494277954,
+  "cost_usd": 0.00316421,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IRF4\",\n    \"confidence\": 0.9,\n    \"rationale\": \"IRF4 is critical for B cell class-switching and memory B cell generation, directly matching the patient's immune phenotype.\"\n  },\n  {\n    \"gene\": \"LRRC19\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Evidence suggests B cell dysfunction but lacks direct links to class-switching defects seen in the patient.\"\n  },\n  {\n    \"gene\": \"SNX5\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Involvement in B cell function is plausible but evidence is less specific to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"BAIAP3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking to B cell defects; no direct support for class-switching abnormalities.\"\n  },\n  {\n    \"gene\": \"ADSS1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence linking to B cell biology or the patient's specific immune defects.\"\n  },\n  {\n    \"gene\": \"NLRP6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence connecting NLRP6 to B cell class-switching or memory B cell defects.\"\n  },\n  {\n    \"gene\": \"CDCA3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence linking CDCA3 to B cell dysfunction or immunoglobulin deficiencies.\"\n  },\n  {\n    \"gene\": \"TMEM214\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting a role in B cell biology or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PNISR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking PNISR to B cell function or immune deficiencies.\"\n  },\n  {\n    \"gene\": \"SYPL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SYPL1 to B cell defects or immune dysregulation.\"\n  },\n  {\n    \"gene\": \"ZFX\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role in B cell biology or immune system function.\"\n  },\n  {\n    \"gene\": \"SMAD9\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking SMAD9 to B cell dysfunction or immunoglobulin production.\"\n  },\n  {\n    \"gene\": \"VPS50\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting VPS50 to B cell defects or immune deficiencies.\"\n  },\n  {\n    \"gene\": \"KSR1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking KSR1 to B cell biology or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"VPS72\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role in B cell function or immune system disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "IRF4",
+    "LRRC19",
+    "SNX5",
+    "BAIAP3",
+    "ADSS1"
+  ]
+}

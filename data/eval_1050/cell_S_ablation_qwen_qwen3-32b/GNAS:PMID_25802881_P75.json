@@ -1,0 +1,22 @@
+{
+  "case_id": "GNAS:PMID_25802881_P75",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14917,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.8549752235412598,
+  "cost_usd": 0.0012090400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"GNAS\", \"confidence\": 0.95, \"rationale\": \"GNAS mutations directly link to PHP1a with AHO phenotype, including short metacarpals, short stature, and obesity as described in multiple case reports.\"}",
+  "parsed_top5": [
+    "GNAS"
+  ]
+}

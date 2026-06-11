@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_31089937_case_3_I_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15906,
+  "tokens_out": 823,
+  "finish_reason": "stop",
+  "latency_s": 14.595323324203491,
+  "cost_usd": 0.060063,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"IKZF1\", \"confidence\": 0.82, \"rationale\": \"IKZF1 mutations directly cause B/T/NK cell defects, autoimmune thrombocytopenia, recurrent infections, and autoimmunity\u2014matching all patient HPO phenotypes with gene-specific evidence.\"}, {\"gene\": \"ZNF302\", \"confidence\": 0.03, \"rationale\": \"No gene-specific evidence linking ZNF302 to this immunodeficiency phenotype; evidence chunks describe unrelated CVID patients.\"}, {\"gene\": \"ULBP3\", \"confidence\": 0.02, \"rationale\": \"No gene-specific evidence; ULBP3 is an NK ligand with no established link to this combined immunodeficiency phenotype.\"}, {\"gene\": \"RDH11\", \"confidence\": 0.02, \"rationale\": \"No gene-specific evidence; RDH11 is a retinol dehydrogenase with no known role in lymphocyte development or autoimmunity.\"}, {\"gene\": \"ADGRE2\", \"confidence\": 0.02, \"rationale\": \"No gene-specific evidence; ADGRE2 is an adhesion GPCR not linked to B/T/NK deficiency or autoimmune thrombocytopenia.\"}, {\"gene\": \"ZG16\", \"confidence\": 0.02, \"rationale\": \"No gene-specific evidence; ZG16 is a lectin with no established immunodeficiency association matching this phenotype.\"}, {\"gene\": \"TMEM177\", \"confidence\": 0.02, \"rationale\": \"No gene-specific evidence; TMEM177 has no known role in lymphocyte biology or autoimmunity.\"}, {\"gene\": \"ADAMTSL5\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; ADAMTSL5 is an extracellular matrix protein unrelated to this immunodeficiency phenotype.\"}, {\"gene\": \"PVALB\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; PVALB is a calcium-binding protein with no known immune function relevant to this phenotype.\"}, {\"gene\": \"PCBP4\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; PCBP4 is an RNA-binding protein with no established link to combined immunodeficiency.\"}, {\"gene\": \"EPPIN\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; EPPIN is a serine protease inhibitor expressed in testis, unrelated to this phenotype.\"}, {\"gene\": \"ARR3\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; ARR3 is a retinal arrestin with no known immune function.\"}, {\"gene\": \"PAN3\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; PAN3 is an mRNA deadenylase subunit with no established immunodeficiency association.\"}, {\"gene\": \"KRT39\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; KRT39 is a keratin protein with no known role in lymphocyte development or autoimmunity.\"}, {\"gene\": \"ARHGDIA\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; ARHGDIA regulates Rho GTPases but lacks direct evidence linking it to this combined immunodeficiency phenotype.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "ZNF302",
+    "ULBP3",
+    "RDH11",
+    "ADGRE2"
+  ]
+}

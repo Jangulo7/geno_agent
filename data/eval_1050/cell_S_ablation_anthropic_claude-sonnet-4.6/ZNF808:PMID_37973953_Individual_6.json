@@ -1,0 +1,26 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_6",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15303,
+  "tokens_out": 700,
+  "finish_reason": "stop",
+  "latency_s": 12.887632846832275,
+  "cost_usd": 0.056409,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ZNF808\",\"confidence\":0.91,\"rationale\":\"ZNF808 biallelic loss-of-function directly causes pancreatic agenesis with permanent neonatal diabetes and low birthweight/SGA, matching all three patient HPO phenotypes exactly.\"},{\"gene\":\"SLC40A1\",\"confidence\":0.03,\"rationale\":\"SLC40A1 linked to hereditary hemochromatosis with secondary diabetes; no direct evidence for pancreatic aplasia or SGA.\"},{\"gene\":\"CALCOCO2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference GATA6/ZNF808 pancreatic agenesis context but CALCOCO2 itself has no direct link to pancreatic aplasia or SGA.\"},{\"gene\":\"TIGAR\",\"confidence\":0.01,\"rationale\":\"TIGAR evidence relates to pancreatitis risk classification, not pancreatic aplasia or neonatal diabetes.\"},{\"gene\":\"YY1AP1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking YY1AP1 to pancreatic aplasia, neonatal diabetes, or SGA in provided chunks.\"},{\"gene\":\"MICALL2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MICALL2 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"AKR7A2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AKR7A2 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"MCAT\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MCAT to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"NME3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NME3 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"TNNT3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TNNT3 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"SLC35E2B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC35E2B to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"TCEAL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TCEAL1 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"TEK\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TEK to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"OR10K1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking OR10K1 to pancreatic aplasia, neonatal diabetes, or SGA.\"},{\"gene\":\"CCDC144A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CCDC144A to pancreatic aplasia, neonatal diabetes, or SGA.\"}]",
+  "parsed_top5": [
+    "ZNF808",
+    "SLC40A1",
+    "CALCOCO2",
+    "TIGAR",
+    "YY1AP1"
+  ]
+}

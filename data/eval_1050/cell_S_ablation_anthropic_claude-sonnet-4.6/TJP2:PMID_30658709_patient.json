@@ -1,0 +1,26 @@
+{
+  "case_id": "TJP2:PMID_30658709_patient",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TJP2",
+  "orig_qwen3_8b_top1": "AK6",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DPY19L3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17054,
+  "tokens_out": 1084,
+  "finish_reason": "stop",
+  "latency_s": 18.916049480438232,
+  "cost_usd": 0.067422,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks provided are essentially identical across all genes (all rated critic_relevance=2/5, none with direct gene-specific mentions). Since the literature evidence doesn't differentiate the genes, I must rely on prior knowledge about which gene is most plausibly causal for this phenotype profile.\n\nThe phenotype profile \u2014 conjugated hyperbilirubinemia, elevated bile acids, elevated AST/ALT, hepatosplenomegaly, pruritus, jaundice, growth delay, scoliosis, pointed helix \u2014 is highly consistent with Progressive Familial Intrahepatic Cholestasis (PFIC) or a related cholestatic liver disease. The \"pointed helix\" and \"scoliosis\" suggest a syndromic form. Among the candidate genes, none are canonical PFIC genes (ATP8B1, ABCB11, ABCB4), but FCSK has been associated with a congenital disorder of glycosylation with cholestatic liver disease. DPY19L3 has a chunk specifically describing a patient with persistent itching, elevated bile acids, direct hyperbilirubinemia, transaminitis, hepatosplenomegaly, and poor weight gain \u2014 matching this phenotype most closely. The CUX2 chunk also describes a cholestatic pattern. Given the DPY19L3 chunk most specifically describes a matching clinical scenario including splenomegaly and progressive cholestatic disease, it ranks highest.\n\n[{\"gene\":\"DPY19L3\",\"confidence\":0.25,\"rationale\":\"DPY19L3 evidence chunk describes a patient with persistent itching, elevated bile acids, direct hyperbilirubinemia, transaminitis, hepatosplenomegaly, and poor weight gain most closely matching this phenotype.\"},{\"gene\":\"FCSK\",\"confidence\":0.15,\"rationale\":\"FCSK evidence includes a case of familial intrahepatic cholestasis with conjugated hyperbilirubinemia, pruritus, elevated AST/ALT, and low GGT, consistent with PFIC-like phenotype.\"},{\"gene\":\"CUX2\",\"confidence\":0.10,\"rationale\":\"CUX2 chunk describes cholestatic jaundice with conjugated hyperbilirubinemia, pruritus, elevated ALP/ALT/AST, and PFIC discussion, partially matching the phenotype.\"},{\"gene\":\"AK6\",\"confidence\":0.05,\"rationale\":\"No specific gene-disease link to this cholestatic phenotype; evidence chunks are generic liver injury literature with no direct AK6 relevance.\"},{\"gene\":\"AHR\",\"confidence\":0.05,\"rationale\":\"AHR has roles in bilirubin metabolism but evidence chunks are generic; no direct link to this full syndromic cholestatic phenotype.\"},{\"gene\":\"ALDH3B1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking ALDH3B1 to this cholestatic syndromic phenotype; evidence chunks are generic liver injury literature.\"},{\"gene\":\"APOD\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking APOD to this cholestatic phenotype; evidence chunks are generic PFIC/liver disease background.\"},{\"gene\":\"UBAC2\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking UBAC2 to this cholestatic phenotype; evidence chunks are generic liver disease background.\"},{\"gene\":\"CST2\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking CST2 to this cholestatic phenotype; evidence chunks are generic liver disease background.\"},{\"gene\":\"PER2\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking PER2 to this cholestatic phenotype; evidence chunks are generic liver disease background.\"},{\"gene\":\"MRAP2\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking MRAP2 to this cholestatic phenotype; evidence chunks are generic liver disease background.\"},{\"gene\":\"SPRR1A\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking SPRR1A to this cholestatic phenotype; evidence chunks are generic liver disease background.\"},{\"gene\":\"PTBP2\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking PTBP2 to this cholestatic phenotype; evidence chunks are generic jaundice/liver disease background.\"},{\"gene\":\"TPRN\",\"confidence\":0.04,\"rationale\":\"No specific evidence linking TPRN to this cholestatic phenotype; evidence chunks are generic liver injury literature.\"},{\"gene\":\"PKIG\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking PKIG to this cholestatic phenotype; evidence chunks are generic liver injury literature with no direct relevance.\"}]",
+  "parsed_top5": [
+    "DPY19L3",
+    "FCSK",
+    "CUX2",
+    "AK6",
+    "AHR"
+  ]
+}

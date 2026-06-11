@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_39",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19668,
+  "tokens_out": 186,
+  "finish_reason": "stop",
+  "latency_s": 3.9250314235687256,
+  "cost_usd": 0.00162552,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"CYP21A2\": 0.95, \"SELENOS\": 0.15, \"GLT1D1\": 0.15, \"SH3BGRL2\": 0.15, \"FGA\": 0.15, \"TSTD3\": 0.15, \"RPS15\": 0.15, \"IL12A\": 0.15, \"B3GNT5\": 0.15, \"OR7G1\": 0.15, \"TBC1D17\": 0.15, \"OR2W3\": 0.15, \"OR4A8\": 0.15, \"ARAP3\": 0.15, \"ANGPTL8\": 0.15}",
+  "parsed_top5": [
+    "CYP21A2",
+    "SELENOS",
+    "GLT1D1",
+    "SH3BGRL2",
+    "FGA"
+  ]
+}

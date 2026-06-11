@@ -1,0 +1,26 @@
+{
+  "case_id": "RFX5:PMID_37584719_P17",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFX5",
+  "orig_qwen3_8b_top1": "CD72",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CD72",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17051,
+  "tokens_out": 614,
+  "finish_reason": "stop",
+  "latency_s": 44.52302026748657,
+  "cost_usd": 0.0038829800000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CD72\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence linking CD72 haploinsufficiency to splenomegaly and B-cell dysfunction, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"IGHMBP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Associated with B-cell lymphocytosis and splenomegaly, but evidence is less direct than CD72.\"\n  },\n  {\n    \"gene\": \"ATP6V0E2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Mentioned in contexts of immunodeficiency but lacks direct phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"RPP40\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Indirectly linked to lymphoproliferation but no strong evidence for causality.\"\n  },\n  {\n    \"gene\": \"C1QTNF9\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to patient's immune phenotypes.\"\n  },\n  {\n    \"gene\": \"SGPP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"SYNDIG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to immune dysfunction or patient symptoms.\"\n  },\n  {\n    \"gene\": \"PHLDA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting a causal role in this context.\"\n  },\n  {\n    \"gene\": \"FAM161B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for immune or hematologic phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF596\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"ZNF136\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence for immune or infectious phenotypes.\"\n  },\n  {\n    \"gene\": \"ARHGAP35\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence supporting a role in immune dysfunction.\"\n  },\n  {\n    \"gene\": \"IGK\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking to the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"TLCD4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence for immune or infectious phenotypes.\"\n  },\n  {\n    \"gene\": \"BOLA1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking to the patient's clinical presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "CD72",
+    "IGHMBP2",
+    "ATP6V0E2",
+    "RPP40",
+    "C1QTNF9"
+  ]
+}

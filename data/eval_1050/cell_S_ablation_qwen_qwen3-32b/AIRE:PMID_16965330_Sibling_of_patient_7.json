@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_16965330_Sibling_of_patient_7",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15701,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 1.8509161472320557,
+  "cost_usd": 0.00127176,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"AIRE\", \"confidence\": 0.95, \"rationale\": \"AIRE gene mutations directly cause APS-1, which includes keratoconjunctivitis, fungal infections, and hypoparathyroidism.\"}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

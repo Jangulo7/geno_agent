@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR24",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18929,
+  "tokens_out": 63,
+  "finish_reason": "stop",
+  "latency_s": 1.9890718460083008,
+  "cost_usd": 0.00153196,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"LMNA mutations cause FPLD2 with limb/trunk fat loss, hypertriglyceridemia, hepatic steatosis, and insulin resistance matching patient's HPO features.\"}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

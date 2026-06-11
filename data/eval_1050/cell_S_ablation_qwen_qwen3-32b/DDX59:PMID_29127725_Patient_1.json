@@ -1,0 +1,26 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "DDX59",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DDX59",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 9198,
+  "tokens_out": 558,
+  "finish_reason": "stop",
+  "latency_s": 18.97782015800476,
+  "cost_usd": 0.0008920800000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DDX59\",\"confidence\":0.92,\"rationale\":\"DDX59 is directly associated with postaxial polydactyly, syndactyly, and other craniofacial and developmental features matching the patient's HPO profile.\"},{\"gene\":\"PKHD1L1\",\"confidence\":0.15,\"rationale\":\"Mentions postaxial polydactyly and syndactyly but lacks direct evidence linking it to the full range of patient phenotypes.\"},{\"gene\":\"RMI2\",\"confidence\":0.14,\"rationale\":\"Reports postaxial polydactyly and syndactyly but no clear connection to other key features like developmental delay or seizures.\"},{\"gene\":\"ANKRD53\",\"confidence\":0.13,\"rationale\":\"Describes limb abnormalities but lacks evidence of broader systemic or developmental features seen in the patient.\"},{\"gene\":\"SOST\",\"confidence\":0.12,\"rationale\":\"Mentions limb abnormalities but no evidence of neurological or craniofacial features in the provided text.\"},{\"gene\":\"STRN4\",\"confidence\":0.11,\"rationale\":\"Reports limb abnormalities but lacks evidence of other key features like seizures or intellectual disability.\"},{\"gene\":\"FYTTD1\",\"confidence\":0.10,\"rationale\":\"Describes limb abnormalities but no evidence of broader systemic or developmental features.\"},{\"gene\":\"KRTAP1-3\",\"confidence\":0.09,\"rationale\":\"Mentions limb abnormalities but no evidence of other key features like seizures or intellectual disability.\"},{\"gene\":\"CA9\",\"confidence\":0.08,\"rationale\":\"Reports limb abnormalities but lacks evidence of broader systemic or developmental features.\"},{\"gene\":\"DUS4L\",\"confidence\":0.07,\"rationale\":\"Describes limb abnormalities but no evidence of other key features like seizures or intellectual disability.\"},{\"gene\":\"DDX24\",\"confidence\":0.06,\"rationale\":\"Mentions limb abnormalities but lacks evidence of broader systemic or developmental features.\"},{\"gene\":\"GPR12\",\"confidence\":0.05,\"rationale\":\"Reports limb abnormalities but no evidence of other key features like seizures or intellectual disability.\"},{\"gene\":\"RTL8B\",\"confidence\":0.04,\"rationale\":\"Describes limb abnormalities but lacks evidence of broader systemic or developmental features.\"},{\"gene\":\"SLC25A44\",\"confidence\":0.03,\"rationale\":\"Mentions limb abnormalities but no evidence of other key features like seizures or intellectual disability.\"},{\"gene\":\"SRRM4\",\"confidence\":0.02,\"rationale\":\"Describes limb abnormalities but lacks evidence of broader systemic or developmental features.\"}]",
+  "parsed_top5": [
+    "DDX59",
+    "PKHD1L1",
+    "RMI2",
+    "ANKRD53",
+    "SOST"
+  ]
+}

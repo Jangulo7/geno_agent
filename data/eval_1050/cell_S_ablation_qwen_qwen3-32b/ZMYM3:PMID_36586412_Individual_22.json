@@ -1,0 +1,22 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_22",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "COL7A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "COL7A1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14875,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 4.739278554916382,
+  "cost_usd": 0.0012054000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"COL7A1\", \"confidence\": 0.95, \"rationale\": \"COL7A1 is directly associated with intellectual disability, single transverse palmar crease, and short stature in multiple case reports and literature mentions.\"}",
+  "parsed_top5": [
+    "COL7A1"
+  ]
+}

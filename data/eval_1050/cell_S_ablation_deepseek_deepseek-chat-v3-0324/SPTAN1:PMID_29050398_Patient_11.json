@@ -1,0 +1,26 @@
+{
+  "case_id": "SPTAN1:PMID_29050398_Patient_11",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPTAN1",
+  "orig_qwen3_8b_top1": "RARS2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RARS2",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 15700,
+  "tokens_out": 635,
+  "finish_reason": "stop",
+  "latency_s": 19.951114892959595,
+  "cost_usd": 0.0036289499999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RARS2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong association with PCH6, including microcephaly, infantile spasms, brain atrophy, and cerebellar/pons atrophy, matching all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SPTAN1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Linked to infantile spasms, hypsarrhythmia, and brain atrophy, but less specific to cerebellar/brainstem atrophy.\"\n  },\n  {\n    \"gene\": \"ABHD11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence tying it directly to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KIF26B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence linking it to the patient's specific neurological and developmental symptoms.\"\n  },\n  {\n    \"gene\": \"CD99\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"GPR42\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"POLR3E\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"CHAF1A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"BRDT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"KLHDC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"OR1D2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"ASMT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"CKMT1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"KLHL25\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  },\n  {\n    \"gene\": \"PCMT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting it to the patient's condition.\"\n  }\n]",
+  "parsed_top5": [
+    "RARS2",
+    "SPTAN1",
+    "ABHD11",
+    "KIF26B",
+    "CD99"
+  ]
+}

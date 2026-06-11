@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_19807739_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16119,
+  "tokens_out": 675,
+  "finish_reason": "stop",
+  "latency_s": 55.93187618255615,
+  "cost_usd": 0.00374355,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AIRE\",\n    \"confidence\": 0.99,\n    \"rationale\": \"AIRE mutations definitively cause APS-1, which perfectly matches the patient's triad of chronic mucocutaneous candidiasis, hypoparathyroidism, and adrenal insufficiency.\"\n  },\n  {\n    \"gene\": \"MISP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MISP to the patient's phenotype; mentions are about APS-1/AIRE.\"\n  },\n  {\n    \"gene\": \"ETFDH\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ETFDH in the context of the patient's autoimmune-endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"PARP9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PARP9 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LAPTM4B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking LAPTM4B to the patient's triad of symptoms.\"\n  },\n  {\n    \"gene\": \"GCNT1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature support for GCNT1 in APS-1 or related phenotypes.\"\n  },\n  {\n    \"gene\": \"PEX5L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating PEX5L with the patient's autoimmune-endocrine features.\"\n  },\n  {\n    \"gene\": \"SAMD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant data connecting SAMD1 to the patient's condition.\"\n  },\n  {\n    \"gene\": \"ARL10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence implicating ARL10 in the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"HEPN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature support for HEPN1 in APS-1 or similar disorders.\"\n  },\n  {\n    \"gene\": \"SORBS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SORBS3 to the patient's clinical triad.\"\n  },\n  {\n    \"gene\": \"TSPAN18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant data associating TSPAN18 with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ZNF358\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZNF358 in the context of APS-1.\"\n  },\n  {\n    \"gene\": \"RHOXF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connecting RHOXF2 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CSRP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence implicating CSRP3 in autoimmune-endocrine disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "AIRE",
+    "MISP",
+    "ETFDH",
+    "PARP9",
+    "LAPTM4B"
+  ]
+}

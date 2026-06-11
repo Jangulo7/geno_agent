@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_23802543_girl",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17721,
+  "tokens_out": 631,
+  "finish_reason": "stop",
+  "latency_s": 20.2177255153656,
+  "cost_usd": 0.00403007,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong clinical match for Netherton syndrome with erythroderma, trichorrhexis invaginata, and high IgE.\"\n  },\n  {\n    \"gene\": \"GIGYF2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Minimal evidence linking to skin disorders, but higher than remaining genes due to broad relevance.\"\n  },\n  {\n    \"gene\": \"C2CD4C\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence, but case reports mention skin phenotypes nonspecifically.\"\n  },\n  {\n    \"gene\": \"TASOR2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"VWA5B2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"DYNLL2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"SYNGR3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"CTXN2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"CYP2S1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"CRLF3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; low confidence due to lack of phenotype association.\"\n  },\n  {\n    \"gene\": \"GNRH1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skin or immune phenotypes.\"\n  },\n  {\n    \"gene\": \"CFAP77\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skin or immune phenotypes.\"\n  },\n  {\n    \"gene\": \"MAN1C1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skin or immune phenotypes.\"\n  },\n  {\n    \"gene\": \"NSMCE4A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skin or immune phenotypes.\"\n  },\n  {\n    \"gene\": \"STX6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking to skin or immune phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "GIGYF2",
+    "C2CD4C",
+    "TASOR2",
+    "VWA5B2"
+  ]
+}

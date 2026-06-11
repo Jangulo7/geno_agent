@@ -1,0 +1,22 @@
+{
+  "case_id": "GAA:PMID_16917947_2",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "WAS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "WAS",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18011,
+  "tokens_out": 48,
+  "finish_reason": "stop",
+  "latency_s": 1.9292848110198975,
+  "cost_usd": 0.0014543200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"WAS\",\"confidence\":0.95,\"rationale\":\"WAS gene mutations are linked to elevated AST/ALT, muscle weakness, and CK in dystrophinopathy cases with family history.\"}",
+  "parsed_top5": [
+    "WAS"
+  ]
+}

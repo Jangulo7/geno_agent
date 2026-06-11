@@ -1,0 +1,26 @@
+{
+  "case_id": "TBCB:PMID_40856104_Participant_7_5",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TBCB",
+  "orig_qwen3_8b_top1": "CSMD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CSMD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16139,
+  "tokens_out": 612,
+  "finish_reason": "stop",
+  "latency_s": 19.812837839126587,
+  "cost_usd": 0.00369904,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CSMD1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking CSMD1 to autism, speech delay, and neurodevelopmental disorders with relevant phenotypes.\"\n  },\n  {\n    \"gene\": \"COQ5\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with neurodevelopmental symptoms including speech regression/dysarthria, but less directly linked to autism.\"\n  },\n  {\n    \"gene\": \"MOS\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Evidence of developmental delays and speech issues, but less specific to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CSH1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Mild association with speech delay and autism, but evidence is less direct.\"\n  },\n  {\n    \"gene\": \"DNASE2B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some evidence of speech delay, but no strong link to autism or other key phenotypes.\"\n  },\n  {\n    \"gene\": \"NOP16\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SMIM35\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF814\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ISM1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CD300LF\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZSCAN25\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"INA\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TIMM17A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ABCG5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TREX1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "CSMD1",
+    "COQ5",
+    "MOS",
+    "CSH1",
+    "DNASE2B"
+  ]
+}

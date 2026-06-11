@@ -1,0 +1,26 @@
+{
+  "case_id": "TMEM63B:PMID_37421948_Individual_5",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TMEM63B",
+  "orig_qwen3_8b_top1": "TMEM63B",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TMEM63B",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13319,
+  "tokens_out": 673,
+  "finish_reason": "stop",
+  "latency_s": 20.041731357574463,
+  "cost_usd": 0.0031820100000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n    {\n        \"gene\": \"TMEM63B\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Strong evidence linking TMEM63B variants to early-onset nystagmus, visual impairment, and epilepsy, matching the patient's phenotype profile.\"\n    },\n    {\n        \"gene\": \"SLC1A1\",\n        \"confidence\": 0.35,\n        \"rationale\": \"Moderate evidence with developmental delay and epilepsy, but less specific to the patient's full phenotype.\"\n    },\n    {\n        \"gene\": \"AMT\",\n        \"confidence\": 0.3,\n        \"rationale\": \"Some evidence of developmental delay and seizures, but not strongly linked to the full spectrum of symptoms.\"\n    },\n    {\n        \"gene\": \"POC1B\",\n        \"confidence\": 0.25,\n        \"rationale\": \"Evidence of developmental delay and seizures, but lacks specificity for the patient's profile.\"\n    },\n    {\n        \"gene\": \"DAP3\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Evidence of developmental delay and seizures, but not uniquely linked to the patient's phenotype.\"\n    },\n    {\n        \"gene\": \"KRT80\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Same as DAP3, with evidence of developmental delay but not specific to the patient's symptoms.\"\n    },\n    {\n        \"gene\": \"RAB27B\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Similar to others, with developmental delay and seizures but no unique evidence.\"\n    },\n    {\n        \"gene\": \"C7orf25\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Evidence of developmental delay and seizures, but lacks specificity.\"\n    },\n    {\n        \"gene\": \"PRDM2\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Same as others, with developmental delay and seizures but no unique evidence.\"\n    },\n    {\n        \"gene\": \"FBH1\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Evidence of developmental delay and seizures, but not specific to this patient.\"\n    },\n    {\n        \"gene\": \"LRP2BP\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Same as others, with developmental delay but no unique evidence.\"\n    },\n    {\n        \"gene\": \"SPMIP8\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Evidence of developmental delay and seizures, but not uniquely linked.\"\n    },\n    {\n        \"gene\": \"MAP2\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Same as others, with developmental delay and seizures but no unique evidence.\"\n    },\n    {\n        \"gene\": \"CTXND1\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Same as others, with developmental delay but no unique evidence.\"\n    },\n    {\n        \"gene\": \"STX8\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Evidence of developmental delay, epilepsy, and microcephaly, but lacks specificity for full phenotype.\"\n    }\n]",
+  "parsed_top5": [
+    "TMEM63B",
+    "SLC1A1",
+    "AMT",
+    "POC1B",
+    "DAP3"
+  ]
+}

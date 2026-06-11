@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_4_1",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18135,
+  "tokens_out": 679,
+  "finish_reason": "stop",
+  "latency_s": 21.588297367095947,
+  "cost_usd": 0.0016409200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy with diabetes, hypertriglyceridemia, and hepatic steatosis.\"}, {\"gene\": \"TFAP4\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"RASL11A\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"LRRIQ3\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"UHRF2\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"SDK1\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"GH2\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"CSE1L\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"PTGR1\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"NLGN3\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"SPDYE13\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"OR2AG1\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"UBN2\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"TMEM38A\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}, {\"gene\": \"PKDREJ\", \"confidence\": 0.15, \"rationale\": \"Mentioned in lipodystrophy context but no direct evidence linking it to the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "TFAP4",
+    "RASL11A",
+    "LRRIQ3",
+    "UHRF2"
+  ]
+}

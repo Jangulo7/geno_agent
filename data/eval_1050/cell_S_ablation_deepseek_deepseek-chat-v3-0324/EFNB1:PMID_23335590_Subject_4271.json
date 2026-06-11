@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4271",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17662,
+  "tokens_out": 732,
+  "finish_reason": "stop",
+  "latency_s": 53.2242488861084,
+  "cost_usd": 0.00409604,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EFNB1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"EFNB1 mutations cause Craniofrontonasal Syndrome (CFNS), matching all key patient phenotypes including coronal craniosynostosis, hypertelorism, and ridged nails.\"\n  },\n  {\n    \"gene\": \"TRIO\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence links TRIO to craniosynostosis, but lacks specificity for the patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"CHD3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking CHD3 to the patient's specific craniosynostosis or other major phenotypes.\"\n  },\n  {\n    \"gene\": \"TP53BP2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting TP53BP2 to the patient's syndromic craniosynostosis or other features.\"\n  },\n  {\n    \"gene\": \"NOS1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence supporting NOS1 as causal for the patient's phenotype combination.\"\n  },\n  {\n    \"gene\": \"SBK2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature evidence ties SBK2 to craniosynostosis or the patient's other features.\"\n  },\n  {\n    \"gene\": \"FAM236C\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking FAM236C to the patient's syndromic presentation.\"\n  },\n  {\n    \"gene\": \"KRTAP19-6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence connecting KRTAP19-6 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"HTR3C\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting HTR3C as causal for the patient's craniosynostosis or other features.\"\n  },\n  {\n    \"gene\": \"PTCH2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking PTCH2 to the patient's specific phenotype combination.\"\n  },\n  {\n    \"gene\": \"HS3ST3A1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature evidence connects HS3ST3A1 to the patient's syndromic presentation.\"\n  },\n  {\n    \"gene\": \"RIMBP2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting RIMBP2 as causal for the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ARG1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence linking ARG1 to craniosynostosis or the patient's other features.\"\n  },\n  {\n    \"gene\": \"PPP1R13L\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence connecting PPP1R13L to the patient's syndromic presentation.\"\n  },\n  {\n    \"gene\": \"GEMIN7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature evidence supporting GEMIN7 as causal for the patient's phenotype combination.\"\n  }\n]",
+  "parsed_top5": [
+    "EFNB1",
+    "TRIO",
+    "CHD3",
+    "TP53BP2",
+    "NOS1"
+  ]
+}

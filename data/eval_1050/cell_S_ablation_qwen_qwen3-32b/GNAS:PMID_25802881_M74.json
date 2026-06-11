@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_M74",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14913,
+  "tokens_out": 644,
+  "finish_reason": "stop",
+  "latency_s": 7.417100191116333,
+  "cost_usd": 0.00137336,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GNAS\": {\"confidence\": 0.95, \"rationale\": \"GNAS mutations directly link to PHP1A with AHO features including obesity, short stature, and short metacarpals.\"}, \"KMT2D\": {\"confidence\": 0.65, \"rationale\": \"KMT2D mutations in Kabuki syndrome include obesity, short stature, and endocrine issues but lack metacarpal shortening.\"}, \"PMM2\": {\"confidence\": 0.55, \"rationale\": \"PMM2-CDG presents with short stature and growth hormone issues but lacks obesity and metacarpal shortening.\"}, \"NIN\": {\"confidence\": 0.45, \"rationale\": \"NIN mutations cause skeletal and growth issues but not obesity or metacarpal shortening typical of AHO.\"}, \"MAS1L\": {\"confidence\": 0.35, \"rationale\": \"MAS1L is associated with AHO features but lacks direct evidence linking to obesity and short stature in this context.\"}, \"ACAP1\": {\"confidence\": 0.3, \"rationale\": \"ACAP1 is linked to AHO features but lacks specific evidence for obesity and short stature in this patient profile.\"}, \"H3C4\": {\"confidence\": 0.25, \"rationale\": \"H3C4 is associated with skeletal anomalies but not the full AHO phenotype including obesity and short stature.\"}, \"AMER2\": {\"confidence\": 0.2, \"rationale\": \"AMER2 is linked to AHO features but lacks direct evidence for obesity and short stature in this context.\"}, \"TAFA5\": {\"confidence\": 0.18, \"rationale\": \"TAFA5 is associated with skeletal anomalies but not the full AHO phenotype including obesity and short stature.\"}, \"ALK\": {\"confidence\": 0.15, \"rationale\": \"ALK is linked to short stature but not the AHO features or obesity seen in this patient.\"}, \"SHISA7\": {\"confidence\": 0.12, \"rationale\": \"SHISA7 is associated with skeletal anomalies but not the full AHO phenotype including obesity and short stature.\"}, \"TMEM156\": {\"confidence\": 0.1, \"rationale\": \"TMEM156 is linked to skeletal issues but lacks evidence for obesity and short stature in this context.\"}, \"SLC49A4\": {\"confidence\": 0.08, \"rationale\": \"SLC49A4 is associated with skeletal anomalies but not the full AHO phenotype including obesity and short stature.\"}, \"ANKMY2\": {\"confidence\": 0.07, \"rationale\": \"ANKMY2 is linked to skeletal anomalies but lacks evidence for obesity and short stature in this context.\"}, \"SPADH\": {\"confidence\": 0.05, \"rationale\": \"SPADH is associated with skeletal anomalies but not the full AHO phenotype including obesity and short stature.\"}}",
+  "parsed_top5": [
+    "GNAS",
+    "KMT2D",
+    "PMM2",
+    "NIN",
+    "MAS1L"
+  ]
+}

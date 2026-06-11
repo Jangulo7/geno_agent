@@ -1,0 +1,22 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_31",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11785,
+  "tokens_out": 69,
+  "finish_reason": "stop",
+  "latency_s": 5.360680341720581,
+  "cost_usd": 0.0009621200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"STXBP1\", \"confidence\": 0.95, \"rationale\": \"STXBP1 mutations are associated with early infantile epileptic encephalopathy, including generalized tonic-clonic, focal impaired awareness, and myoclonic seizures, along with intellectual disability and behavioral issues.\"}",
+  "parsed_top5": [
+    "STXBP1"
+  ]
+}

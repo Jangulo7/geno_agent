@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P19",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20789,
+  "tokens_out": 795,
+  "finish_reason": "stop",
+  "latency_s": 13.388756275177002,
+  "cost_usd": 0.074292,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"GNAS\", \"confidence\": 0.95, \"rationale\": \"GNAS mutations cause pseudohypoparathyroidism type 1a, directly explaining all three HPO features: elevated PTH, short metacarpals (brachydactyly/AHO), and obesity.\"}, {\"gene\": \"CGREF1\", \"confidence\": 0.02, \"rationale\": \"CGREF1 evidence relates to obesity/metabolic phenotype in mice but has no direct link to elevated PTH or short metacarpals.\"}, {\"gene\": \"OR4K14\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking OR4K14 to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"FTCD\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking FTCD to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"APOA5\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking APOA5 to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"CCDC102A\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking CCDC102A to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"MLXIP\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking MLXIP to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"LRRN3\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking LRRN3 to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"HDAC9\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking HDAC9 to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"SPPL3\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking SPPL3 to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"BRDT\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking BRDT to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"LRP8\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking LRP8 to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"KRTAP23-1\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking KRTAP23-1 to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}, {\"gene\": \"AGBL3\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking AGBL3 to elevated PTH, short metacarpals, or obesity in the provided literature.\"}, {\"gene\": \"GJA8\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking GJA8 to the patient's phenotype; evidence chunks describe PHP/AHO without mentioning this gene.\"}]",
+  "parsed_top5": [
+    "GNAS",
+    "CGREF1",
+    "OR4K14",
+    "FTCD",
+    "APOA5"
+  ]
+}

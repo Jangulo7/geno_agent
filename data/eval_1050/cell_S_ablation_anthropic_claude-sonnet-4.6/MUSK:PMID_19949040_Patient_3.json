@@ -1,0 +1,26 @@
+{
+  "case_id": "MUSK:PMID_19949040_Patient_3",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "MUSK",
+  "orig_qwen3_8b_top1": "MUSK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "MUSK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18052,
+  "tokens_out": 742,
+  "finish_reason": "stop",
+  "latency_s": 10.818917751312256,
+  "cost_usd": 0.065286,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"MUSK\", \"confidence\": 0.82, \"rationale\": \"MUSK evidence directly describes CMS with ptosis, ophthalmoplegia, limb-girdle weakness, fatigability, and facial weakness matching all patient HPO terms, with explicit MUSK mutation discussion.\"}, {\"gene\": \"GPR32\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking GPR32 to the patient's phenotype; shared evidence chunks are non-specific and do not mention GPR32.\"}, {\"gene\": \"HPS6\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking HPS6 to the neuromuscular phenotype; evidence chunks are non-specific and unrelated to HPS6 function.\"}, {\"gene\": \"CARD8\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking CARD8 to the patient's neuromuscular phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"GEMIN7\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking GEMIN7 to the patient's phenotype; evidence chunks are non-specific and unrelated.\"}, {\"gene\": \"ALX4\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking ALX4 to the neuromuscular phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"VPS4B\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking VPS4B to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"RPAP2\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking RPAP2 to the neuromuscular phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"TOP6BL\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TOP6BL to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"IPCEF1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking IPCEF1 to the neuromuscular phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"PTBP2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking PTBP2 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"NPNT\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking NPNT to the neuromuscular phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"EPC2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking EPC2 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"MICU1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MICU1 to the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"MSH5\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MSH5 to the neuromuscular phenotype; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "MUSK",
+    "GPR32",
+    "HPS6",
+    "CARD8",
+    "GEMIN7"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_24736735_G099",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14867,
+  "tokens_out": 698,
+  "finish_reason": "stop",
+  "latency_s": 12.88429594039917,
+  "cost_usd": 0.055071,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"GLI3 evidence directly links macrocephaly+syndactyly+preaxial foot polydactyly to Greig cephalopolysyndactyly syndrome caused by GLI3 mutations, matching all three HPO phenotypes.\"},{\"gene\":\"PTTG1IP\",\"confidence\":0.02,\"rationale\":\"No direct gene-phenotype link in evidence; shares only generic polydactyly/syndactyly literature context with no specific PTTG1IP association.\"},{\"gene\":\"ZNF707\",\"confidence\":0.01,\"rationale\":\"No evidence directly implicating ZNF707 in macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"ARHGEF15\",\"confidence\":0.01,\"rationale\":\"No evidence directly implicating ARHGEF15 in the patient's phenotype triad.\"},{\"gene\":\"CDC27\",\"confidence\":0.005,\"rationale\":\"No direct CDC27-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"BAG1\",\"confidence\":0.005,\"rationale\":\"No direct BAG1-specific evidence linking it to the patient's phenotype triad.\"},{\"gene\":\"ANXA11\",\"confidence\":0.005,\"rationale\":\"No direct ANXA11-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"DCPH1\",\"confidence\":0.005,\"rationale\":\"No direct DCPH1-specific evidence for the patient's phenotype triad.\"},{\"gene\":\"RABL6\",\"confidence\":0.005,\"rationale\":\"No direct RABL6-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"C7orf25\",\"confidence\":0.005,\"rationale\":\"No direct C7orf25-specific evidence for the patient's phenotype triad.\"},{\"gene\":\"DTWD2\",\"confidence\":0.005,\"rationale\":\"No direct DTWD2-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"ICA1\",\"confidence\":0.005,\"rationale\":\"No direct ICA1-specific evidence for the patient's phenotype triad.\"},{\"gene\":\"TFB1M\",\"confidence\":0.005,\"rationale\":\"No direct TFB1M-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"},{\"gene\":\"SYCN\",\"confidence\":0.005,\"rationale\":\"No direct SYCN-specific evidence for the patient's phenotype triad.\"},{\"gene\":\"PAXIP1\",\"confidence\":0.005,\"rationale\":\"No direct PAXIP1-specific evidence for macrocephaly, syndactyly, or preaxial foot polydactyly.\"}]",
+  "parsed_top5": [
+    "GLI3",
+    "PTTG1IP",
+    "ZNF707",
+    "ARHGEF15",
+    "CDC27"
+  ]
+}

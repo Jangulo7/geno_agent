@@ -1,0 +1,26 @@
+{
+  "case_id": "ARMC9:PMID_28625504_SA2_3",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ARMC9",
+  "orig_qwen3_8b_top1": "ARMC9",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ARMC9",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17122,
+  "tokens_out": 652,
+  "finish_reason": "stop",
+  "latency_s": 24.46606159210205,
+  "cost_usd": 0.00392644,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ARMC9\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Directly linked to Joubert syndrome with documented cases matching patient's phenotypes including polydactyly and retinal dystrophy.\"\n  },\n  {\n    \"gene\": \"CABCOCO1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentioned in Joubert syndrome context but no direct evidence linking to specific patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TGFB3\",\n    \"confidence\": 0.25,\n    \"rationale\": \"General Joubert syndrome discussion but no specific evidence tying it to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CDC45\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"BRAT1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"NELL2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"TRPV6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"SCAF4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"BRAP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"OSMR\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"SEC61G\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"GNG3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"TCP11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"CDH6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"RIMS3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to Joubert syndrome or patient's specific phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "ARMC9",
+    "CABCOCO1",
+    "TGFB3",
+    "CDC45",
+    "BRAT1"
+  ]
+}

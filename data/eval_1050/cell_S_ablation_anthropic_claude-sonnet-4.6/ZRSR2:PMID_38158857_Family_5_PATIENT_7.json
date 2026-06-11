@@ -1,0 +1,26 @@
+{
+  "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZRSR2",
+  "orig_qwen3_8b_top1": "ZRSR2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZRSR2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17689,
+  "tokens_out": 766,
+  "finish_reason": "stop",
+  "latency_s": 13.98893928527832,
+  "cost_usd": 0.064557,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ZRSR2\",\"confidence\":0.82,\"rationale\":\"ZRSR2 chunk_1 directly reports a patient with PSIS triad (absent pituitary stalk, anterior pituitary hypoplasia, ectopic posterior pituitary), bilateral postaxial polydactyly, neonatal hypoglycemia, and pan-hypopituitarism matching all patient HPO terms, with a ZRSR2 frameshift variant identified by WES.\"},{\"gene\":\"HCFC1R1\",\"confidence\":0.03,\"rationale\":\"Only generic PSIS background literature; HCFC1R1 not directly implicated in any evidence chunk for this phenotype.\"},{\"gene\":\"FBXO11\",\"confidence\":0.02,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking FBXO11 to this phenotype profile.\"},{\"gene\":\"GPATCH4\",\"confidence\":0.02,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking GPATCH4 to this phenotype profile.\"},{\"gene\":\"SPINK9\",\"confidence\":0.02,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking SPINK9 to this phenotype profile.\"},{\"gene\":\"KATNAL2\",\"confidence\":0.02,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking KATNAL2 to this phenotype profile.\"},{\"gene\":\"NRG4\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking NRG4 to this phenotype profile.\"},{\"gene\":\"UTP20\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking UTP20 to this phenotype profile.\"},{\"gene\":\"PIAS2\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking PIAS2 to this phenotype profile.\"},{\"gene\":\"THAP6\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking THAP6 to this phenotype profile.\"},{\"gene\":\"DDX56\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking DDX56 to this phenotype profile.\"},{\"gene\":\"SYCP2\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking SYCP2 to this phenotype profile.\"},{\"gene\":\"ZNF260\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking ZNF260 to this phenotype profile.\"},{\"gene\":\"EIF2B3\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking EIF2B3 to this phenotype profile.\"},{\"gene\":\"ABHD18\",\"confidence\":0.01,\"rationale\":\"Only generic PSIS/CPHD background literature; no direct evidence linking ABHD18 to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "ZRSR2",
+    "HCFC1R1",
+    "FBXO11",
+    "GPATCH4",
+    "SPINK9"
+  ]
+}

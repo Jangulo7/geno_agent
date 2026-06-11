@@ -1,0 +1,22 @@
+{
+  "case_id": "FBXO11:PMID_38740982_Family_1_Individual_1_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBXO11",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AHDC1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14312,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 3.5162408351898193,
+  "cost_usd": 0.0011598,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"AHDC1\", \"confidence\": 0.95, \"rationale\": \"AHDC1 mutations directly cause Xia-Gibbs syndrome with global developmental delay, intellectual disability, seizures, short stature, and other overlapping features.\"}",
+  "parsed_top5": [
+    "AHDC1"
+  ]
+}

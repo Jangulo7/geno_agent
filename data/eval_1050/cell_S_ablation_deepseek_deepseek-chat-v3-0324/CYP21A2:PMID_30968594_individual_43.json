@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_43",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15969,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 33.86990237236023,
+  "cost_usd": 0.0037058500000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking CYP21A2 mutations to nonclassic CAH with hirsutism, clitoral hypertrophy, and elevated testosterone/ACTH.\"\n  },\n  {\n    \"gene\": \"UTS2R\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence of adrenal involvement but no direct link to hyperandrogenism phenotypes.\"\n  },\n  {\n    \"gene\": \"GIMAP6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting GIMAP6 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"VRK3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting VRK3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"JRKL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting JRKL to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SH2D3C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SH2D3C to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RAMACL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting RAMACL to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MRPL39\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting MRPL39 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CSAG3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting CSAG3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"NDUFS8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting NDUFS8 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"BOK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting BOK to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"OVOL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting OVOL2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"IL1RN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting IL1RN to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SH2B3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting SH2B3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"OR13A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting OR13A1 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "UTS2R",
+    "GIMAP6",
+    "VRK3",
+    "JRKL"
+  ]
+}

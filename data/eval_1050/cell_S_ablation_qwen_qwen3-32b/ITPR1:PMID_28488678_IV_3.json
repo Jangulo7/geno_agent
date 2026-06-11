@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_28488678_IV_3",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16750,
+  "tokens_out": 65,
+  "finish_reason": "stop",
+  "latency_s": 4.501785755157471,
+  "cost_usd": 0.0013582,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"ITPR1 mutations are directly linked to SCA15, a condition matching truncal ataxia, nystagmus, dysarthria, and cerebellar atrophy in the patient's phenotype.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

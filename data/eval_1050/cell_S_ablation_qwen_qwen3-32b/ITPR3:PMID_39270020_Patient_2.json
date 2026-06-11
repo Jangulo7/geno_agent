@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17786,
+  "tokens_out": 558,
+  "finish_reason": "stop",
+  "latency_s": 19.64834237098694,
+  "cost_usd": 0.00157912,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR3\",\"confidence\":0.95,\"rationale\":\"ITPR3 mutations directly impair T-cell Ca2+ influx and proliferation, aligning with the patient's T-cell dysfunction and immunological profile.\"},{\"gene\":\"BAG3\",\"confidence\":0.15,\"rationale\":\"Mildly relevant to lymphocyte proliferation but lacks direct evidence linking it to the patient's specific immunological defects.\"},{\"gene\":\"COX11\",\"confidence\":0.15,\"rationale\":\"Mentions of T-cell proliferation but no direct evidence of causation for the patient's specific immunological profile.\"},{\"gene\":\"SMIM24\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"SMG8\",\"confidence\":0.15,\"rationale\":\"Mentions of T-cell proliferation but no direct evidence of causation for the patient's specific immunological defects.\"},{\"gene\":\"B3GNT4\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"GPIHBP1\",\"confidence\":0.15,\"rationale\":\"Mentions of T-cell proliferation but no direct evidence of causation for the patient's specific immunological defects.\"},{\"gene\":\"HSFX2\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"FOXB1\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"ABHD11\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"EPB41L5\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"GPX2\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"CLEC14A\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"},{\"gene\":\"GPBAR1\",\"confidence\":0.15,\"rationale\":\"General lymphocyte proliferation data without specific evidence of causation for the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "ITPR3",
+    "BAG3",
+    "COX11",
+    "SMIM24",
+    "SMG8"
+  ]
+}

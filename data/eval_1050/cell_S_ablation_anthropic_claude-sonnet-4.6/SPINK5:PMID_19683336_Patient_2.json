@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_19683336_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20797,
+  "tokens_out": 774,
+  "finish_reason": "stop",
+  "latency_s": 13.81041145324707,
+  "cost_usd": 0.074001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly matching all patient HPO terms: congenital exfoliative erythroderma, hypernatremic dehydration, failure to thrive, recurrent respiratory infections, skin infections, eczematoid dermatitis, sepsis, and gastroenteritis.\"}, {\"gene\": \"NSUN5\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking NSUN5 to this phenotype; evidence chunks only reference SPINK5/Netherton syndrome context.\"}, {\"gene\": \"CITED2\", \"confidence\": 0.01, \"rationale\": \"No evidence directly linking CITED2 to congenital exfoliative erythroderma or Netherton-like phenotype.\"}, {\"gene\": \"CA8\", \"confidence\": 0.005, \"rationale\": \"CA8 is associated with cerebellar ataxia, not skin barrier disorders; no relevant evidence provided.\"}, {\"gene\": \"PKN1\", \"confidence\": 0.005, \"rationale\": \"No evidence linking PKN1 to congenital erythroderma or recurrent infections phenotype.\"}, {\"gene\": \"HNRNPDL\", \"confidence\": 0.005, \"rationale\": \"HNRNPDL is associated with limb-girdle muscular dystrophy, not relevant to this phenotype.\"}, {\"gene\": \"INF2\", \"confidence\": 0.005, \"rationale\": \"INF2 is associated with focal segmental glomerulosclerosis, not relevant to this skin/infection phenotype.\"}, {\"gene\": \"RAB39B\", \"confidence\": 0.005, \"rationale\": \"RAB39B is associated with intellectual disability/Parkinson, not relevant to this phenotype.\"}, {\"gene\": \"THOC7\", \"confidence\": 0.005, \"rationale\": \"No evidence linking THOC7 to congenital erythroderma or recurrent infections.\"}, {\"gene\": \"CHRNA7\", \"confidence\": 0.005, \"rationale\": \"CHRNA7 is associated with neurodevelopmental disorders, not relevant to this skin/infection phenotype.\"}, {\"gene\": \"RBPJL\", \"confidence\": 0.005, \"rationale\": \"No evidence linking RBPJL to congenital exfoliative erythroderma or recurrent infections.\"}, {\"gene\": \"AMBN\", \"confidence\": 0.005, \"rationale\": \"AMBN is associated with amelogenesis imperfecta, not relevant to this phenotype.\"}, {\"gene\": \"WDR11\", \"confidence\": 0.005, \"rationale\": \"WDR11 is associated with hypogonadotropic hypogonadism, not relevant to this phenotype.\"}, {\"gene\": \"DYNC1I2\", \"confidence\": 0.005, \"rationale\": \"No evidence linking DYNC1I2 to congenital erythroderma or recurrent infections phenotype.\"}, {\"gene\": \"MLLT1\", \"confidence\": 0.005, \"rationale\": \"MLLT1 is associated with leukemia/Wilms tumor, not relevant to this skin barrier/infection phenotype.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "NSUN5",
+    "CITED2",
+    "CA8",
+    "PKN1"
+  ]
+}

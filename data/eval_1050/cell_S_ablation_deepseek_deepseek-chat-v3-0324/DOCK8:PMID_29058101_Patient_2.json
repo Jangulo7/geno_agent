@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_29058101_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17771,
+  "tokens_out": 677,
+  "finish_reason": "stop",
+  "latency_s": 28.000499963760376,
+  "cost_usd": 0.00407549,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DOCK8\",\n    \"confidence\": 0.95,\n    \"rationale\": \"DOCK8 deficiency strongly matches the patient's phenotypes including Hyper-IgE, eczema, recurrent infections, and protracted diarrhea.\"\n  },\n  {\n    \"gene\": \"JAK1\",\n    \"confidence\": 0.45,\n    \"rationale\": \"JAK1 mutations can cause severe atopic disease and IBD, but evidence is less specific than DOCK8 for this phenotype combination.\"\n  },\n  {\n    \"gene\": \"STPG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking STPG1 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"YIPF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking YIPF2 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SLC25A35\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC25A35 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"GATAD2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GATAD2B to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CA10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CA10 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LRRC41\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRC41 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"OR4S1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR4S1 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"ZBTB7A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZBTB7A to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"KIF2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KIF2A to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CRYGS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CRYGS to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"IFT38\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IFT38 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SPAG6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPAG6 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"RPL7L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RPL7L1 to the patient's clinical presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "DOCK8",
+    "JAK1",
+    "STPG1",
+    "YIPF2",
+    "SLC25A35"
+  ]
+}

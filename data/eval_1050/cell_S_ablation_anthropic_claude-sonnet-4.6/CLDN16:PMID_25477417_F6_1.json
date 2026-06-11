@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F6_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18037,
+  "tokens_out": 888,
+  "finish_reason": "stop",
+  "latency_s": 12.96242880821228,
+  "cost_usd": 0.067431,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.95,\"rationale\":\"CLDN16 evidence chunks directly and explicitly link mutations in this gene to FHHNC, matching all patient HPO features: nephrocalcinosis, renal insufficiency, nephrolithiasis, hypercalciuria, renal Mg wasting, sterile pyuria, hematuria, recurrent UTIs, polyuria, polydipsia, and rickets.\"},{\"gene\":\"EFHC2\",\"confidence\":0.02,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention EFHC2 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"LCN9\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention LCN9 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"SYDE2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention SYDE2 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"FAM47C\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention FAM47C as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"PRG2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention PRG2 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"RAD17\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention RAD17 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"TECTA\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention TECTA as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"SMG1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention SMG1 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"IWS1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention IWS1 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"FGD5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention FGD5 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"ZFAND2A\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention ZFAND2A as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"NXPE4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention NXPE4 as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"HSF2BP\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention HSF2BP as causal; no direct gene-phenotype link for this candidate.\"},{\"gene\":\"SPACA5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 but do not mention SPACA5 as causal; no direct gene-phenotype link for this candidate.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "EFHC2",
+    "LCN9",
+    "SYDE2",
+    "FAM47C"
+  ]
+}

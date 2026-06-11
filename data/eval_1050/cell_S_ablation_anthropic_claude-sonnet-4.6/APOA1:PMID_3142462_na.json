@@ -1,0 +1,26 @@
+{
+  "case_id": "APOA1:PMID_3142462_na",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "APOA1",
+  "orig_qwen3_8b_top1": "DGKE",
+  "orig_qwen3_8b_correct": false,
+  "top1": "APOA1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21327,
+  "tokens_out": 736,
+  "finish_reason": "stop",
+  "latency_s": 11.6520516872406,
+  "cost_usd": 0.075021,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"APOA1\",\"confidence\":0.72,\"rationale\":\"APOA1 mutations directly cause hereditary systemic amyloidosis with preferential hepatic involvement, and are associated with hypertension, thrombocytopenia, and bruising via amyloid-related coagulopathy.\"},{\"gene\":\"DGKE\",\"confidence\":0.15,\"rationale\":\"DGKE-aHUS presents with thrombocytopenia and hypertension but lacks hepatic amyloidosis; evidence covers TMA/aHUS not amyloidosis phenotype.\"},{\"gene\":\"KIR3DL2\",\"confidence\":0.03,\"rationale\":\"KIR3DL2 is associated with ITP/thrombocytopenia and bruising but has no link to hepatic amyloidosis or hypertension as a primary cause.\"},{\"gene\":\"ENSA\",\"confidence\":0.02,\"rationale\":\"ENSA has a suggested role in platelet aggregation/thrombocytopenia but no evidence linking it to hepatic amyloidosis or hypertension.\"},{\"gene\":\"GJA10\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking GJA10 to any of the patient's phenotypes; evidence chunks are non-specific background literature.\"},{\"gene\":\"ORC6\",\"confidence\":0.01,\"rationale\":\"No evidence linking ORC6 to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising susceptibility.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ATP5MC1 to the patient's phenotype profile.\"},{\"gene\":\"SLC26A2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC26A2 to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising.\"},{\"gene\":\"C2CD4D\",\"confidence\":0.01,\"rationale\":\"No evidence linking C2CD4D to any of the patient's phenotypes.\"},{\"gene\":\"CHCHD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CHCHD1 to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising.\"},{\"gene\":\"CDPF1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CDPF1 to the patient's phenotype profile.\"},{\"gene\":\"H3-4\",\"confidence\":0.01,\"rationale\":\"No evidence linking H3-4 to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising.\"},{\"gene\":\"SCOC\",\"confidence\":0.01,\"rationale\":\"No evidence linking SCOC to the patient's phenotype profile.\"},{\"gene\":\"GYPB\",\"confidence\":0.01,\"rationale\":\"No evidence linking GYPB to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising.\"},{\"gene\":\"TMEM63B\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM63B to hepatic amyloidosis, hypertension, thrombocytopenia, or bruising susceptibility.\"}]",
+  "parsed_top5": [
+    "APOA1",
+    "DGKE",
+    "KIR3DL2",
+    "ENSA",
+    "GJA10"
+  ]
+}

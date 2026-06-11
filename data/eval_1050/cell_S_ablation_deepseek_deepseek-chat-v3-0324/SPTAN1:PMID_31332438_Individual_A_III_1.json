@@ -1,0 +1,26 @@
+{
+  "case_id": "SPTAN1:PMID_31332438_Individual_A_III_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPTAN1",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HINT1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13524,
+  "tokens_out": 638,
+  "finish_reason": "stop",
+  "latency_s": 21.136974334716797,
+  "cost_usd": 0.0031960600000000006,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HINT1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking HINT1 mutations to axonal neuropathy with neuromyotonia, matching patient's motor axonal neuropathy and lower limb symptoms.\"\n  },\n  {\n    \"gene\": \"HYAL4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Moderate evidence for sensorimotor axonal PNP with distal amyotrophy, but less specific than HINT1.\"\n  },\n  {\n    \"gene\": \"TRABD2B\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Some overlap with sensorimotor axonal neuropathy, but evidence is less direct and specific.\"\n  },\n  {\n    \"gene\": \"ZNF93\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Sensory-dominant axonal neuropathy mentioned, but clinical match is weaker.\"\n  },\n  {\n    \"gene\": \"JAM2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Non-specific axonal neuropathy described, with less phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"TMF1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Generic axonal sensorimotor neuropathy, no strong phenotypic alignment.\"\n  },\n  {\n    \"gene\": \"C1GALT1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Non-specific neuropathy details provided, no clear match to patient's profile.\"\n  },\n  {\n    \"gene\": \"PIGO\",\n    \"confidence\": 0.15,\n    \"rationale\": \"General neuropathy description, lacking specific phenotypic correlation.\"\n  },\n  {\n    \"gene\": \"COQ3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Mitochondrial dysfunction noted, but neuropathy details are less relevant.\"\n  },\n  {\n    \"gene\": \"RRM2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Sensorimotor axonal neuropathy mentioned, but evidence is indirect.\"\n  },\n  {\n    \"gene\": \"BICC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Limited evidence, non-specific neuropathy details.\"\n  },\n  {\n    \"gene\": \"WAC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No strong evidence linking to patient's specific neuropathy phenotype.\"\n  },\n  {\n    \"gene\": \"KIAA0232\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Minimal evidence, non-specific axonal neuropathy described.\"\n  },\n  {\n    \"gene\": \"CDC20\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence supporting causal role in neuropathy.\"\n  },\n  {\n    \"gene\": \"OTOP3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to patient's neurological symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "HINT1",
+    "HYAL4",
+    "TRABD2B",
+    "ZNF93",
+    "JAM2"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_9b",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "PTGFR",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PTGFR",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17305,
+  "tokens_out": 63,
+  "finish_reason": "stop",
+  "latency_s": 8.114349842071533,
+  "cost_usd": 0.0014020400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"PTGFR\", \"confidence\": 0.95, \"rationale\": \"PTGFR is associated with a long philtrum, thin upper lip vermilion, high anterior hairline, and deep-set eyes, aligning with the patient's HPO features.\"}",
+  "parsed_top5": [
+    "PTGFR"
+  ]
+}

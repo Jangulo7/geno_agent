@@ -1,0 +1,20 @@
+{
+  "case_id": "NCF2:PMID_7795241_patient_KA",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NCF2",
+  "orig_qwen3_8b_top1": "NCF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16129,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 4.458980560302734,
+  "cost_usd": 0.0012967599999999999,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

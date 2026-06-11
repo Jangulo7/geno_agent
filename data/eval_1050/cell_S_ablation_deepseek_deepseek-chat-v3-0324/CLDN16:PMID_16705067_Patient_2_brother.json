@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15088,
+  "tokens_out": 714,
+  "finish_reason": "stop",
+  "latency_s": 23.369328260421753,
+  "cost_usd": 0.00356738,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLDN16\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking CLDN16 to familial hypomagnesemia with hypercalciuria and nephrocalcinosis, matching all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"ATP6V0A4\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with distal renal tubular acidosis and nephrocalcinosis, but less directly matches the patient's magnesium and calcium handling abnormalities.\"\n  },\n  {\n    \"gene\": \"WNT11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking WNT11 to the patient's phenotype cluster; only generic mentions of nephrocalcinosis.\"\n  },\n  {\n    \"gene\": \"NAP1L2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No specific evidence connecting NAP1L2 to the patient's phenotype; only repetitive generic text.\"\n  },\n  {\n    \"gene\": \"FUOM\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting FUOM as causal for the patient's phenotype; repetitive generic mentions.\"\n  },\n  {\n    \"gene\": \"MKNK1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence linking MKNK1 to the patient's phenotype; only generic descriptions.\"\n  },\n  {\n    \"gene\": \"VSTM1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence for VSTM1; repetitive generic text unrelated to the phenotype.\"\n  },\n  {\n    \"gene\": \"TMEM209\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence connecting TMEM209 to the phenotype; only generic mentions.\"\n  },\n  {\n    \"gene\": \"HMGCS2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence for HMGCS2; only repetitive generic descriptions of other conditions.\"\n  },\n  {\n    \"gene\": \"CSAG2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking CSAG2 to the phenotype; only generic mentions unrelated to the case.\"\n  },\n  {\n    \"gene\": \"FAM171B\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting FAM171B; only generic mentions of renal conditions.\"\n  },\n  {\n    \"gene\": \"PPP4R4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking PPP4R4 to the phenotype; only generic mentions unrelated to the case.\"\n  },\n  {\n    \"gene\": \"MTERF2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence for MTERF2; only repetitive generic mentions of renal conditions.\"\n  },\n  {\n    \"gene\": \"ZNF695\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence connecting ZNF695 to the phenotype; only generic descriptions.\"\n  },\n  {\n    \"gene\": \"UAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for UAP1; only generic mentions of unrelated renal conditions.\"\n  }\n]",
+  "parsed_top5": [
+    "CLDN16",
+    "ATP6V0A4",
+    "WNT11",
+    "NAP1L2",
+    "FUOM"
+  ]
+}

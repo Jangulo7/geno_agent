@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_33855675_girl",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11364,
+  "tokens_out": 622,
+  "finish_reason": "stop",
+  "latency_s": 55.35183644294739,
+  "cost_usd": 0.0027517400000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links IKZF1 mutations to B cell development defects, low IgG, and reduced class-switched memory B cells.\"\n  },\n  {\n    \"gene\": \"MSH6\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Weak association with immunodeficiency via DNA repair defects, but no direct B cell phenotype match.\"\n  },\n  {\n    \"gene\": \"ATG13\",\n    \"confidence\": 0.2,\n    \"rationale\": \"GWAS association with IgA deficiency, but no direct evidence for B cell or IgG defects.\"\n  },\n  {\n    \"gene\": \"HBD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Mentioned in B cell studies but no causal link to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"PLSCR3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"USP39\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"POLG2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"PHETA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"TFDP2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"RASGEF1B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"TTF1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"REG4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"PABPC4L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"H3Y1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  },\n  {\n    \"gene\": \"KLHL38\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to B cell or immunoglobulin phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "MSH6",
+    "ATG13",
+    "HBD",
+    "PLSCR3"
+  ]
+}

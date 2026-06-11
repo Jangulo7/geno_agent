@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_27939403_A_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21849,
+  "tokens_out": 636,
+  "finish_reason": "stop",
+  "latency_s": 10.027151823043823,
+  "cost_usd": 0.075087,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.92,\"rationale\":\"IKZF1 evidence directly describes patients with ITP, reduced B cells, inverted CD4/CD8 ratio, reduced IgA/IgM, matching all patient HPO phenotypes; IKAROS regulates B/T cell development.\"},{\"gene\":\"PRG2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking PRG2 to the patient's immune phenotype; evidence chunks describe unrelated conditions.\"},{\"gene\":\"MECOM\",\"confidence\":0.01,\"rationale\":\"No evidence linking MECOM to the specific immune phenotype profile; evidence is non-specific.\"},{\"gene\":\"PIGM\",\"confidence\":0.01,\"rationale\":\"No evidence linking PIGM to inverted CD4:CD8, ITP, low B cells, or reduced IgA/IgM.\"},{\"gene\":\"H3C7\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking H3C7 to the patient's immune phenotype.\"},{\"gene\":\"ANO3\",\"confidence\":0.01,\"rationale\":\"No evidence linking ANO3 to the described immune deficiency phenotype.\"},{\"gene\":\"ABCG2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ABCG2 to the patient's combined immune deficiency phenotype.\"},{\"gene\":\"OR10J4\",\"confidence\":0.005,\"rationale\":\"OR10J4 is an olfactory receptor gene with no plausible link to immune deficiency phenotypes.\"},{\"gene\":\"CNPY2\",\"confidence\":0.005,\"rationale\":\"No evidence linking CNPY2 to the immune phenotype; evidence chunk references IKZF1 variant, not CNPY2.\"},{\"gene\":\"B4GALT2\",\"confidence\":0.005,\"rationale\":\"No evidence linking B4GALT2 to the described immune deficiency phenotype.\"},{\"gene\":\"C17orf78\",\"confidence\":0.005,\"rationale\":\"No evidence linking C17orf78 to the immune phenotype; referenced IKZF1 case is not attributable to this gene.\"},{\"gene\":\"C1QTNF5\",\"confidence\":0.005,\"rationale\":\"No evidence linking C1QTNF5 to the described immune deficiency phenotype.\"},{\"gene\":\"DACH2\",\"confidence\":0.005,\"rationale\":\"No evidence linking DACH2 to the described immune deficiency phenotype.\"},{\"gene\":\"STS\",\"confidence\":0.005,\"rationale\":\"No evidence linking STS to the described immune deficiency phenotype.\"},{\"gene\":\"TOMM22\",\"confidence\":0.005,\"rationale\":\"No evidence linking TOMM22 to the described immune deficiency phenotype.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "PRG2",
+    "MECOM",
+    "PIGM",
+    "H3C7"
+  ]
+}

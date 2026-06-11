@@ -1,0 +1,26 @@
+{
+  "case_id": "UGGT1:PMID_40267907_Family_3_2",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UGGT1",
+  "orig_qwen3_8b_top1": "TBXT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TXNDC5",
+  "top1_correct": false,
+  "causal_rank": 11,
+  "tokens_in": 19976,
+  "tokens_out": 789,
+  "finish_reason": "stop",
+  "latency_s": 15.639525413513184,
+  "cost_usd": 0.071763,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"TXNDC5\", \"confidence\": 0.12, \"rationale\": \"No gene-specific evidence links any candidate directly to this complex CHD phenotype; TXNDC5 has weak prior association with cardiac defects but evidence chunks are generic.\"},\n  {\"gene\": \"KIF13B\", \"confidence\": 0.09, \"rationale\": \"Evidence chunk mentions duplicated SVC and laterality defects overlapping bilateral SVC/common atrium in patient, but not gene-specific.\"},\n  {\"gene\": \"ESYT2\", \"confidence\": 0.08, \"rationale\": \"Same duplicated SVC/laterality chunk as KIF13B; no direct gene-to-phenotype link established in evidence.\"},\n  {\"gene\": \"TPD52L1\", \"confidence\": 0.08, \"rationale\": \"Shares the duplicated SVC/laterality evidence chunk but no direct mechanistic link to the complex CHD phenotype profile.\"},\n  {\"gene\": \"AKR1C2\", \"confidence\": 0.07, \"rationale\": \"Evidence mentions laterality defects and duplicated SVC but no specific AKR1C2-cardiac developmental link is provided.\"},\n  {\"gene\": \"CHD2\", \"confidence\": 0.07, \"rationale\": \"CHD2 is a chromatin remodeler with some cardiac relevance but evidence chunks are entirely generic with no gene-specific support.\"},\n  {\"gene\": \"TBXT\", \"confidence\": 0.07, \"rationale\": \"TBXT (Brachyury) has known roles in mesoderm/cardiac development but provided evidence chunks are generic and non-specific.\"},\n  {\"gene\": \"SDHAF4\", \"confidence\": 0.06, \"rationale\": \"No evidence links SDHAF4 to congenital heart defects; evidence chunks are entirely generic screening literature.\"},\n  {\"gene\": \"KCNAB3\", \"confidence\": 0.06, \"rationale\": \"No gene-specific evidence connecting KCNAB3 to the complex CHD phenotype; all chunks are generic.\"},\n  {\"gene\": \"GADL1\", \"confidence\": 0.06, \"rationale\": \"No gene-specific evidence connecting GADL1 to congenital heart disease or the observed phenotype profile.\"},\n  {\"gene\": \"UGGT1\", \"confidence\": 0.06, \"rationale\": \"No gene-specific evidence linking UGGT1 to the complex CHD phenotype; evidence chunks are entirely generic.\"},\n  {\"gene\": \"SERPINB12\", \"confidence\": 0.05, \"rationale\": \"No evidence links SERPINB12 to congenital heart defects; all provided chunks are generic screening literature.\"},\n  {\"gene\": \"FAM43B\", \"confidence\": 0.05, \"rationale\": \"No gene-specific evidence connecting FAM43B to the complex CHD phenotype observed in this patient.\"},\n  {\"gene\": \"CPD\", \"confidence\": 0.05, \"rationale\": \"No gene-specific evidence linking CPD to congenital heart disease or the observed phenotype profile.\"},\n  {\"gene\": \"NUDT3\", \"confidence\": 0.03, \"rationale\": \"No evidence links NUDT3 to congenital heart defects; all provided chunks are entirely generic with no relevant connection.\"}\n]",
+  "parsed_top5": [
+    "TXNDC5",
+    "KIF13B",
+    "ESYT2",
+    "TPD52L1",
+    "AKR1C2"
+  ]
+}

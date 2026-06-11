@@ -1,0 +1,26 @@
+{
+  "case_id": "ZMYM3:PMID_36586412_Individual_22",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZMYM3",
+  "orig_qwen3_8b_top1": "COL7A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "COL7A1",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 14105,
+  "tokens_out": 564,
+  "finish_reason": "stop",
+  "latency_s": 14.59822154045105,
+  "cost_usd": 0.00325528,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"COL7A1\", \"confidence\": 0.9, \"rationale\": \"Strong association with intellectual disability, single transverse palmar crease, and short stature, matching patient's HPO phenotypes.\"},\n  {\"gene\": \"GPD1L\", \"confidence\": 0.7, \"rationale\": \"Relevant association with intellectual disability and single transverse palmar crease, but less specific than COL7A1.\"},\n  {\"gene\": \"ZMYM3\", \"confidence\": 0.5, \"rationale\": \"Some overlap with patient's features, but evidence is less compelling than top candidates.\"},\n  {\"gene\": \"TCEA3\", \"confidence\": 0.45, \"rationale\": \"Limited direct evidence linking to the patient's specific phenotypes.\"},\n  {\"gene\": \"FGG\", \"confidence\": 0.4, \"rationale\": \"Minimal direct evidence supporting causality for the patient's profile.\"},\n  {\"gene\": \"ANGPTL7\", \"confidence\": 0.35, \"rationale\": \"No strong evidence directly linking to the patient's HPO terms.\"},\n  {\"gene\": \"MTREX\", \"confidence\": 0.3, \"rationale\": \"Lack of specific evidence connecting to the patient's phenotypes.\"},\n  {\"gene\": \"GCFC2\", \"confidence\": 0.25, \"rationale\": \"No clear evidence supporting a causal role in the patient's condition.\"},\n  {\"gene\": \"SERPINB8\", \"confidence\": 0.2, \"rationale\": \"No significant evidence for relevance to the patient's HPO terms.\"},\n  {\"gene\": \"CFD\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking to the patient's specific phenotypes.\"},\n  {\"gene\": \"INPP1\", \"confidence\": 0.1, \"rationale\": \"Lacks convincing evidence to support causality for this case.\"},\n  {\"gene\": \"SLC30A3\", \"confidence\": 0.09, \"rationale\": \"No relevant evidence connecting to the patient's symptoms.\"},\n  {\"gene\": \"SPDYE4\", \"confidence\": 0.08, \"rationale\": \"Minimal to no evidence supporting a role in the patient's phenotypes.\"},\n  {\"gene\": \"AP1M2\", \"confidence\": 0.07, \"rationale\": \"No substantial evidence linking to the patient's HPO terms.\"},\n  {\"gene\": \"GAGE7\", \"confidence\": 0.05, \"rationale\": \"No relevant evidence supporting a causal role in this case.\"}\n]",
+  "parsed_top5": [
+    "COL7A1",
+    "GPD1L",
+    "ZMYM3",
+    "TCEA3",
+    "FGG"
+  ]
+}

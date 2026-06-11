@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_19807739_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17106,
+  "tokens_out": 64,
+  "finish_reason": "stop",
+  "latency_s": 9.714082717895508,
+  "cost_usd": 0.0013864,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"AIRE\", \"confidence\": 0.95, \"rationale\": \"AIRE gene mutations directly cause APS-1, which presents with the exact triad of chronic mucocutaneous candidiasis, hypoparathyroidism, and adrenal insufficiency.\"}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

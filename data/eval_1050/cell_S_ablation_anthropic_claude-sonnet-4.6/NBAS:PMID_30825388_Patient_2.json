@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13301,
+  "tokens_out": 987,
+  "finish_reason": "stop",
+  "latency_s": 15.563536882400513,
+  "cost_usd": 0.054708,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NBAS\",\n    \"confidence\": 0.91,\n    \"rationale\": \"NBAS chunk_1 directly describes a patient with elevated ALT/AST, hypotelorism, facial anomalies, short stature, and reduced NK cells; chunk_2 describes hypogammaglobulinemia (IgG/IgA/IgM low), SGA, and dysmorphic features matching the patient's full HPO profile.\"\n  },\n  {\n    \"gene\": \"EFHD1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"EFHD1 evidence links it to hepatic injury markers (AST/ALT) in mice but has no connection to immunodeficiency, facial dysmorphia, or other patient HPO features.\"\n  },\n  {\n    \"gene\": \"TNF\",\n    \"confidence\": 0.02,\n    \"rationale\": \"TNF evidence only measures TNF-\u03b1 alongside IgG/IgA/AST/ALT as biomarkers in unrelated studies; no causal link to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"TPO\",\n    \"confidence\": 0.01,\n    \"rationale\": \"TPO evidence is incidental; anti-TPO antibodies appear in an unrelated autoimmune context with no match to the patient's dysmorphic or immunodeficiency features.\"\n  },\n  {\n    \"gene\": \"YLPM1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct YLPM1-specific evidence; shared boilerplate chunks with no gene-specific phenotype association.\"\n  },\n  {\n    \"gene\": \"MS4A6A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No MS4A6A-specific evidence; only generic immunoglobulin/liver enzyme measurement chunks unrelated to this gene.\"\n  },\n  {\n    \"gene\": \"TRADD\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No TRADD-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"GLB1L3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No GLB1L3-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"KANK2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No KANK2-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"DGCR6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No DGCR6-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"MBD3L4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No MBD3L4-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"DRAP1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No DRAP1-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"MIB2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No MIB2-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"ANAPC4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No ANAPC4-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  },\n  {\n    \"gene\": \"MYORG\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No MYORG-specific evidence; only generic boilerplate chunks with no phenotype-gene connection.\"\n  }\n]",
+  "parsed_top5": [
+    "NBAS",
+    "EFHD1",
+    "TNF",
+    "TPO",
+    "YLPM1"
+  ]
+}

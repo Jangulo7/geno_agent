@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_20513137_individual_N849_GSM_GSM492747",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12193,
+  "tokens_out": 758,
+  "finish_reason": "stop",
+  "latency_s": 9.148571014404297,
+  "cost_usd": 0.047949,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NF1\",\"confidence\":0.97,\"rationale\":\"NF1 is the established causal gene for neurofibromatosis type 1, directly causing neurofibroma, freckling, and scoliosis as core diagnostic features with high-relevance direct evidence.\"},{\"gene\":\"LRRFIP2\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; LRRFIP2 has no direct association with the patient's phenotype profile.\"},{\"gene\":\"RASD2\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; RASD2 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"PPP2R5A\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; PPP2R5A has no direct association with the patient's phenotype profile.\"},{\"gene\":\"MPPE1\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; MPPE1 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"IL7\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; IL7 has no direct association with the patient's phenotype profile.\"},{\"gene\":\"LRRN4\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; LRRN4 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"PDXDC1\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; PDXDC1 has no direct association with the patient's phenotype profile.\"},{\"gene\":\"PIDD1\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; PIDD1 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"C6orf120\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; C6orf120 has no direct association with the patient's phenotype profile.\"},{\"gene\":\"FBXO43\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; FBXO43 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"PDCD2L\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; PDCD2L has no direct association with the patient's phenotype profile.\"},{\"gene\":\"CDH24\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; CDH24 has no direct association with neurofibroma, freckling, or scoliosis.\"},{\"gene\":\"IGFBP2\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; IGFBP2 has no direct association with the patient's phenotype profile.\"},{\"gene\":\"KCP\",\"confidence\":0.003,\"rationale\":\"Evidence chunks describe NF1 patients only; KCP has no direct association with neurofibroma, freckling, or scoliosis.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "LRRFIP2",
+    "RASD2",
+    "PPP2R5A",
+    "MPPE1"
+  ]
+}

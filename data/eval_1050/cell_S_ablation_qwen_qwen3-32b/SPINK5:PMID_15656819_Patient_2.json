@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_15656819_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16509,
+  "tokens_out": 820,
+  "finish_reason": "stop",
+  "latency_s": 19.292388677597046,
+  "cost_usd": 0.0015503200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SPINK5\": {\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching trichorrhexis invaginata, erythroderma, and atopic features in the patient.\"}, \"KRT8\": {\"gene\": \"KRT8\", \"confidence\": 0.15, \"rationale\": \"KRT8 is associated with hair shaft abnormalities but lacks direct evidence linking it to the patient's full phenotype.\"}, \"MT1E\": {\"gene\": \"MT1E\", \"confidence\": 0.1, \"rationale\": \"MT1E is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"TTF2\": {\"gene\": \"TTF2\", \"confidence\": 0.08, \"rationale\": \"TTF2 is associated with sparse hair but not the complex skin and immune features of the patient's phenotype.\"}, \"TBCE\": {\"gene\": \"TBCE\", \"confidence\": 0.08, \"rationale\": \"TBCE is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"ALDH1B1\": {\"gene\": \"ALDH1B1\", \"confidence\": 0.07, \"rationale\": \"ALDH1B1 is associated with ichthyosis but lacks direct evidence for the patient's trichorrhexis invaginata and immune features.\"}, \"L3MBTL3\": {\"gene\": \"L3MBTL3\", \"confidence\": 0.07, \"rationale\": \"L3MBTL3 is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"KLF3\": {\"gene\": \"KLF3\", \"confidence\": 0.07, \"rationale\": \"KLF3 is associated with sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"MORF4L1\": {\"gene\": \"MORF4L1\", \"confidence\": 0.07, \"rationale\": \"MORF4L1 is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"ZNF732\": {\"gene\": \"ZNF732\", \"confidence\": 0.07, \"rationale\": \"ZNF732 is associated with sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"C14orf39\": {\"gene\": \"C14orf39\", \"confidence\": 0.07, \"rationale\": \"C14orf39 is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"TSPY8\": {\"gene\": \"TSPY8\", \"confidence\": 0.07, \"rationale\": \"TSPY8 is associated with sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"LCOR\": {\"gene\": \"LCOR\", \"confidence\": 0.07, \"rationale\": \"LCOR is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"HTR3A\": {\"gene\": \"HTR3A\", \"confidence\": 0.07, \"rationale\": \"HTR3A is associated with sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}, \"MCM3\": {\"gene\": \"MCM3\", \"confidence\": 0.07, \"rationale\": \"MCM3 is linked to sparse hair but not the full range of skin and immune symptoms seen in the patient.\"}}",
+  "parsed_top5": [
+    "SPINK5",
+    "KRT8",
+    "MT1E",
+    "TTF2",
+    "TBCE"
+  ]
+}

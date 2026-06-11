@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_22428873_P6",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16759,
+  "tokens_out": 865,
+  "finish_reason": "stop",
+  "latency_s": 16.450592041015625,
+  "cost_usd": 0.063252,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GLI3\",\"confidence\":0.92,\"rationale\":\"GLI3 evidence directly and explicitly links pathogenic variants to postaxial polydactyly, broad thumb, broad hallux, and cutaneous syndactyly of fingers/toes (GCPS spectrum), matching all patient HPO terms.\"},{\"gene\":\"SOHLH2\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe GLI3-associated GCPS phenotypes; SOHLH2 is not mentioned as causal and has no known association with this limb malformation phenotype.\"},{\"gene\":\"MEGF11\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MEGF11 to polydactyly-syndactyly phenotype; all relevant chunks describe GLI3/GCPS without mentioning MEGF11.\"},{\"gene\":\"AGMO\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AGMO to this phenotype; evidence chunks describe GLI3-associated GCPS without implicating AGMO.\"},{\"gene\":\"FSCN3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking FSCN3 to polydactyly or syndactyly; all relevant chunks describe GLI3/GCPS without mentioning FSCN3.\"},{\"gene\":\"RAI2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RAI2 to this limb malformation phenotype; evidence chunks describe GLI3/GCPS without implicating RAI2.\"},{\"gene\":\"LIPI\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LIPI to polydactyly or syndactyly; evidence chunks describe GLI3/GCPS without mentioning LIPI.\"},{\"gene\":\"CFAP144\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CFAP144 to this phenotype; evidence chunks describe GLI3/GCPS without implicating CFAP144.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PIP5KL1 to polydactyly-syndactyly; evidence chunks describe GLI3/GCPS without mentioning PIP5KL1.\"},{\"gene\":\"CXXC1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CXXC1 to this limb malformation phenotype; evidence chunks describe GLI3/GCPS without implicating CXXC1.\"},{\"gene\":\"FKBP14\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking FKBP14 to polydactyly or syndactyly; evidence chunks describe GLI3/GCPS without mentioning FKBP14.\"},{\"gene\":\"FAM209B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking FAM209B to this phenotype; evidence chunks describe GLI3/GCPS without implicating FAM209B.\"},{\"gene\":\"MMGT1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MMGT1 to polydactyly-syndactyly; evidence chunks describe GLI3/GCPS without mentioning MMGT1.\"},{\"gene\":\"SPATS2L\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SPATS2L to this limb malformation phenotype; evidence chunks describe GLI3/GCPS without implicating SPATS2L.\"},{\"gene\":\"STAG1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking STAG1 to polydactyly or syndactyly; evidence chunks describe GLI3/GCPS without mentioning STAG1.\"}]",
+  "parsed_top5": [
+    "GLI3",
+    "SOHLH2",
+    "MEGF11",
+    "AGMO",
+    "FSCN3"
+  ]
+}

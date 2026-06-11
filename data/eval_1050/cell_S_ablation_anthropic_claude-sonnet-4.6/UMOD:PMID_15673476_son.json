@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15673476_son",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16576,
+  "tokens_out": 755,
+  "finish_reason": "stop",
+  "latency_s": 11.283507108688354,
+  "cost_usd": 0.061053,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.92,\"rationale\":\"UMOD mutations directly cause ADTKD-UMOD, characterized by hyperuricemia, gout, CKD, renal cysts, and elevated creatinine\u2014matching all 5 patient HPO phenotypes with high-quality direct evidence.\"},{\"gene\":\"RREB1\",\"confidence\":0.03,\"rationale\":\"RREB1 is a GWAS locus for gout/urate but lacks direct causal evidence for the full phenotype profile of CKD, renal cysts, and elevated creatinine seen in this patient.\"},{\"gene\":\"TRPM6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TRPM6 to this phenotype combination; evidence chunks are generic gout/hyperuricemia background not specific to TRPM6.\"},{\"gene\":\"YBX1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking YBX1 to CKD, renal cysts, gout, or hyperuricemia as a causal gene.\"},{\"gene\":\"LRRTM1\",\"confidence\":0.01,\"rationale\":\"No evidence linking LRRTM1 to the patient's phenotype; evidence chunks describe ADTKD generally without implicating LRRTM1.\"},{\"gene\":\"SLC30A10\",\"confidence\":0.01,\"rationale\":\"SLC30A10 is a manganese transporter with no established role in the CKD/gout/hyperuricemia/renal cyst phenotype cluster.\"},{\"gene\":\"PXMP2\",\"confidence\":0.01,\"rationale\":\"No evidence linking PXMP2 to CKD, renal cysts, gout, or hyperuricemia as a causal gene.\"},{\"gene\":\"LCP1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking LCP1 to the patient's phenotype combination.\"},{\"gene\":\"MBD2\",\"confidence\":0.01,\"rationale\":\"No evidence linking MBD2 to CKD, renal cysts, gout, or hyperuricemia as a causal gene.\"},{\"gene\":\"RTL8B\",\"confidence\":0.01,\"rationale\":\"No evidence linking RTL8B to the patient's phenotype combination.\"},{\"gene\":\"SLC16A13\",\"confidence\":0.01,\"rationale\":\"SLC16A13 has no established causal role in the CKD/gout/hyperuricemia/renal cyst phenotype cluster.\"},{\"gene\":\"MRPS31\",\"confidence\":0.01,\"rationale\":\"No evidence linking MRPS31 to CKD, renal cysts, gout, or hyperuricemia as a causal gene.\"},{\"gene\":\"HSD17B7\",\"confidence\":0.01,\"rationale\":\"No evidence linking HSD17B7 to the patient's phenotype combination.\"},{\"gene\":\"BLOC1S5\",\"confidence\":0.01,\"rationale\":\"No evidence linking BLOC1S5 to CKD, renal cysts, gout, or hyperuricemia as a causal gene.\"},{\"gene\":\"HSF5\",\"confidence\":0.01,\"rationale\":\"No evidence linking HSF5 to the patient's phenotype combination.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "RREB1",
+    "TRPM6",
+    "YBX1",
+    "LRRTM1"
+  ]
+}

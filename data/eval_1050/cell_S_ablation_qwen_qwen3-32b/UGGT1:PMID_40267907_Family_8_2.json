@@ -1,0 +1,22 @@
+{
+  "case_id": "UGGT1:PMID_40267907_Family_8_2",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UGGT1",
+  "orig_qwen3_8b_top1": "DOHH",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DOHH",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15060,
+  "tokens_out": 54,
+  "finish_reason": "stop",
+  "latency_s": 7.309386968612671,
+  "cost_usd": 0.0012199199999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"DOHH\", \"confidence\": 0.95, \"rationale\": \"DOHH-related NDD with microcephaly, epilepsy, hypotonia, visual impairment, and absent speech aligns with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "DOHH"
+  ]
+}

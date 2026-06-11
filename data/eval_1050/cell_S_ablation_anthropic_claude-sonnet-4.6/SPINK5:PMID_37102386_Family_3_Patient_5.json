@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_37102386_Family_3_Patient_5",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20462,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 12.655256032943726,
+  "cost_usd": 0.072306,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.97,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: congenital exfoliative erythroderma, ichthyosis linearis circumflexa, elevated IgE, sparse/brittle hair, pruritus, failure to thrive, premature birth, and short stature.\"},{\"gene\":\"DLD\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DLD to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"},{\"gene\":\"STEAP3\",\"confidence\":0.01,\"rationale\":\"No evidence linking STEAP3 to this ichthyosis/atopic phenotype; all relevant evidence points to SPINK5/Netherton syndrome.\"},{\"gene\":\"RBPMS\",\"confidence\":0.01,\"rationale\":\"No evidence linking RBPMS to this phenotype; evidence chunks exclusively describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"KDM6B\",\"confidence\":0.01,\"rationale\":\"No evidence linking KDM6B to this phenotype; all evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"YPEL1\",\"confidence\":0.01,\"rationale\":\"No evidence linking YPEL1 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"ANXA13\",\"confidence\":0.01,\"rationale\":\"No evidence linking ANXA13 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"PCP2\",\"confidence\":0.01,\"rationale\":\"No evidence linking PCP2 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"CACNB4\",\"confidence\":0.01,\"rationale\":\"No evidence linking CACNB4 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"TMEM31\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM31 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"AQP11\",\"confidence\":0.01,\"rationale\":\"No evidence linking AQP11 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"ABCC9\",\"confidence\":0.01,\"rationale\":\"No evidence linking ABCC9 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"ROM1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ROM1 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"VGLL1\",\"confidence\":0.01,\"rationale\":\"No evidence linking VGLL1 to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"},{\"gene\":\"TESC\",\"confidence\":0.01,\"rationale\":\"No evidence linking TESC to this phenotype; evidence chunks describe SPINK5-related Netherton syndrome.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "DLD",
+    "STEAP3",
+    "RBPMS",
+    "KDM6B"
+  ]
+}

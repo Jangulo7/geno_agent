@@ -1,0 +1,22 @@
+{
+  "case_id": "TAP2:PMID_10560675_P1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "TAP2",
+  "orig_qwen3_8b_top1": "RFX6",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CCDC160",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16468,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 4.7698445320129395,
+  "cost_usd": 0.0033359500000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CCDC160\",\n  \"confidence\": 0.7,\n  \"rationale\": \"Evidence links CCDC160 to primary ciliary dyskinesia, which matches the patient's bronchiectasis and chronic sinusitis phenotype.\"\n}",
+  "parsed_top5": [
+    "CCDC160"
+  ]
+}

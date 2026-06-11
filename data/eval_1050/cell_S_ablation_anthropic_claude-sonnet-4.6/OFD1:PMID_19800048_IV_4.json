@@ -1,0 +1,26 @@
+{
+  "case_id": "OFD1:PMID_19800048_IV_4",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OFD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15109,
+  "tokens_out": 710,
+  "finish_reason": "stop",
+  "latency_s": 11.142717361450195,
+  "cost_usd": 0.055977,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"OFD1\",\"confidence\":0.72,\"rationale\":\"OFD1 evidence directly describes patients with postaxial polydactyly of hands/feet, severe intellectual disability, and recurrent infections, matching all four patient HPO phenotypes.\"},{\"gene\":\"TYW1\",\"confidence\":0.04,\"rationale\":\"Evidence mentions recurrent infections and foot polydactyly in siblings but no direct gene-phenotype link to severe ID or postaxial hand+foot polydactyly together.\"},{\"gene\":\"MUSTN1\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking MUSTN1 to the patient's phenotype; shared generic polydactyly literature only.\"},{\"gene\":\"NMRK1\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking NMRK1 to severe ID, postaxial polydactyly, or recurrent infections; only generic shared literature.\"},{\"gene\":\"OMD\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking OMD to the patient's phenotype combination; only generic shared polydactyly literature.\"},{\"gene\":\"PLN\",\"confidence\":0.03,\"rationale\":\"No direct evidence linking PLN to severe ID or postaxial polydactyly; shared literature is non-specific.\"},{\"gene\":\"SACK1C\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SACK1C to any of the patient's HPO phenotypes; only generic shared literature.\"},{\"gene\":\"LAMTOR1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking LAMTOR1 to severe ID, postaxial polydactyly, or recurrent infections.\"},{\"gene\":\"ASB9\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ASB9 to the patient's phenotype; only generic shared polydactyly literature.\"},{\"gene\":\"SMIM17\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SMIM17 to severe ID, postaxial polydactyly, or recurrent infections.\"},{\"gene\":\"LHFPL7\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking LHFPL7 to the patient's phenotype combination; only generic shared literature.\"},{\"gene\":\"ADAM8\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ADAM8 to severe ID or postaxial polydactyly; only generic shared literature.\"},{\"gene\":\"ESPL1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ESPL1 to the patient's phenotype; only generic shared polydactyly literature.\"},{\"gene\":\"HCFC2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking HCFC2 to severe ID, postaxial polydactyly, or recurrent infections.\"},{\"gene\":\"TSC22D3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TSC22D3 to the patient's phenotype; shared literature references OFD/C2CD3, not TSC22D3.\"}]",
+  "parsed_top5": [
+    "OFD1",
+    "TYW1",
+    "MUSTN1",
+    "NMRK1",
+    "OMD"
+  ]
+}

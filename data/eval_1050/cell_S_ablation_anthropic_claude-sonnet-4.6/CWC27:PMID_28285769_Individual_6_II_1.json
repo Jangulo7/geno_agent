@@ -1,0 +1,26 @@
+{
+  "case_id": "CWC27:PMID_28285769_Individual_6_II_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CWC27",
+  "orig_qwen3_8b_top1": "DBNDD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CWC27",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18369,
+  "tokens_out": 1002,
+  "finish_reason": "stop",
+  "latency_s": 17.34463405609131,
+  "cost_usd": 0.070137,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are essentially the same across all genes (all rated critic_relevance=2/5, none directly implicating the specific gene). The patient's phenotype \u2014 craniosynostosis, brachydactyly, frontal bossing, downslanted palpebral fissures, micrognathia, underdeveloped nasal alae, bilateral SVC, VSD, horseshoe kidney, short stature, low-set ears, macrotia \u2014 is highly reminiscent of a craniosynostosis syndrome. CWC27 is known to cause a syndrome with craniosynostosis, brachydactyly, retinal dystrophy, and other anomalies (OMIM #617376), which best fits this complex phenotype among the candidates. The other genes have no established link to this phenotype profile based on available evidence or known disease associations.\n\n[{\"gene\":\"CWC27\",\"confidence\":0.35,\"rationale\":\"CWC27 mutations cause a craniosynostosis syndrome with brachydactyly, short stature, and dysmorphic features, best matching the patient's craniosynostosis+brachydactyly+VSD+renal anomaly profile.\"},{\"gene\":\"CFAP100\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CFAP100 to this craniosynostosis/brachydactyly/cardiac/renal phenotype; evidence chunks are non-specific.\"},{\"gene\":\"DBNDD1\",\"confidence\":0.05,\"rationale\":\"No established association between DBNDD1 and craniosynostosis, brachydactyly, or the complex multi-system phenotype described.\"},{\"gene\":\"ALDH16A1\",\"confidence\":0.05,\"rationale\":\"ALDH16A1 is linked to gout/hyperuricemia, not craniosynostosis or the multi-system congenital anomaly profile seen here.\"},{\"gene\":\"PDE8A\",\"confidence\":0.04,\"rationale\":\"No known association between PDE8A and craniosynostosis, brachydactyly, or congenital heart/renal defects.\"},{\"gene\":\"ATP9B\",\"confidence\":0.04,\"rationale\":\"ATP9B has no established link to craniosynostosis, brachydactyly, or the complex congenital syndrome described.\"},{\"gene\":\"CTPS1\",\"confidence\":0.04,\"rationale\":\"CTPS1 deficiency causes immunodeficiency, not craniosynostosis or the multi-system congenital anomaly profile.\"},{\"gene\":\"NFE2\",\"confidence\":0.04,\"rationale\":\"NFE2 is associated with myeloproliferative neoplasms, not congenital craniosynostosis or the described phenotype.\"},{\"gene\":\"BTC\",\"confidence\":0.04,\"rationale\":\"BTC encodes betacellulin with no established link to craniosynostosis, brachydactyly, or congenital heart/renal defects.\"},{\"gene\":\"ZNF780B\",\"confidence\":0.04,\"rationale\":\"ZNF780B has no known disease association matching craniosynostosis, brachydactyly, or the complex congenital phenotype.\"},{\"gene\":\"TDRD1\",\"confidence\":0.04,\"rationale\":\"TDRD1 is involved in spermatogenesis/piRNA pathway, not craniosynostosis or the multi-system congenital anomaly profile.\"},{\"gene\":\"DENND1B\",\"confidence\":0.04,\"rationale\":\"DENND1B has no established link to craniosynostosis, brachydactyly, or the complex congenital syndrome described.\"},{\"gene\":\"CADM2\",\"confidence\":0.04,\"rationale\":\"CADM2 is associated with neurodevelopmental traits but not craniosynostosis, brachydactyly, or congenital heart/renal defects.\"},{\"gene\":\"MRPS28\",\"confidence\":0.04,\"rationale\":\"MRPS28 has no known association with craniosynostosis, brachydactyly, or the multi-system congenital anomaly profile.\"},{\"gene\":\"OR5L1\",\"confidence\":0.04,\"rationale\":\"OR5L1 is an olfactory receptor gene with no established link to craniosynostosis or the complex congenital phenotype described.\"}]",
+  "parsed_top5": [
+    "CWC27",
+    "CFAP100",
+    "DBNDD1",
+    "ALDH16A1",
+    "PDE8A"
+  ]
+}

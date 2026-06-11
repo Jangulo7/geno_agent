@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_26",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "SLC33A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC33A1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 17178,
+  "tokens_out": 742,
+  "finish_reason": "stop",
+  "latency_s": 13.183988094329834,
+  "cost_usd": 0.062664,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SLC33A1\", \"confidence\": 0.62, \"rationale\": \"SLC33A1 duplications are directly linked to autistic-like features, intellectual disability, and developmental delay in patients, matching global developmental delay and autistic behavior HPOs.\"},{\"gene\": \"UBR5\", \"confidence\": 0.12, \"rationale\": \"UBR5 de novo variants cause global developmental delay and autistic features including social/communication impairments, partially matching the phenotype profile.\"},{\"gene\": \"SDHA\", \"confidence\": 0.05, \"rationale\": \"SDHA appears in a CNV context associated with autism and global developmental delay but evidence is indirect and not gene-specific.\"},{\"gene\": \"KRTAP9-4\", \"confidence\": 0.03, \"rationale\": \"Evidence chunk describes Pierre Robin sequence with autism and GDD but in context of COL2A1/Stickler syndrome, not KRTAP9-4 specifically.\"},{\"gene\": \"IP6K1\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking IP6K1 to the patient's phenotype; evidence chunks are generic PRS/GDD background literature.\"},{\"gene\": \"GFRA3\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking GFRA3 to global developmental delay, autism, or Pierre Robin sequence in provided chunks.\"},{\"gene\": \"TEKT3\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking TEKT3 to the patient's phenotype profile; chunks are generic background literature.\"},{\"gene\": \"FAT2\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking FAT2 to global developmental delay, autistic behavior, or Pierre Robin sequence.\"},{\"gene\": \"SLC25A15\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking SLC25A15 to the patient's phenotype; evidence is generic background literature only.\"},{\"gene\": \"RSPH4A\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking RSPH4A to global developmental delay, autism, or Pierre Robin sequence in provided chunks.\"},{\"gene\": \"FAM174B\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking FAM174B to the patient's phenotype profile in provided literature chunks.\"},{\"gene\": \"POLD3\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking POLD3 to global developmental delay, autistic behavior, or Pierre Robin sequence.\"},{\"gene\": \"UGT2B11\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking UGT2B11 to the patient's phenotype profile in provided literature chunks.\"},{\"gene\": \"RRM2\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking RRM2 to global developmental delay, autistic behavior, or Pierre Robin sequence.\"},{\"gene\": \"FAT3\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking FAT3 to the patient's phenotype profile in provided literature chunks.\"}]",
+  "parsed_top5": [
+    "SLC33A1",
+    "UBR5",
+    "SDHA",
+    "KRTAP9-4",
+    "IP6K1"
+  ]
+}

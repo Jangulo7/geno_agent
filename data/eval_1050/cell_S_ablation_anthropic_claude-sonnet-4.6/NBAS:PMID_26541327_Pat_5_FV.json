@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_5_FV",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20469,
+  "tokens_out": 721,
+  "finish_reason": "stop",
+  "latency_s": 10.76424789428711,
+  "cost_usd": 0.072222,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NBAS\",\"confidence\":0.92,\"rationale\":\"NBAS mutations directly cause infantile liver failure syndrome type 2 (ILFS2) with recurrent acute hepatic failure, elevated ALT/AST/ALP, hyperammonemia, hypoglycemia, jaundice, and coagulopathy\u2014matching all patient HPO phenotypes.\"},{\"gene\":\"RETN\",\"confidence\":0.02,\"rationale\":\"Only indirect evidence linking RETN to hypoglycemia via LPS model; no direct causal link to acute hepatic failure or the full phenotype profile.\"},{\"gene\":\"UTRN\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking UTRN to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"NMS\",\"confidence\":0.01,\"rationale\":\"No evidence linking NMS to acute hepatic failure or the patient's phenotype profile; shared chunks are non-specific.\"},{\"gene\":\"CDKL4\",\"confidence\":0.01,\"rationale\":\"No evidence linking CDKL4 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"HEXB\",\"confidence\":0.01,\"rationale\":\"No evidence linking HEXB to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"UMOD\",\"confidence\":0.01,\"rationale\":\"No evidence linking UMOD to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"STAP2\",\"confidence\":0.01,\"rationale\":\"No evidence linking STAP2 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"RBM8A\",\"confidence\":0.01,\"rationale\":\"No evidence linking RBM8A to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"SLC71A1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC71A1 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"PLIN2\",\"confidence\":0.01,\"rationale\":\"No evidence linking PLIN2 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"KCTD9\",\"confidence\":0.01,\"rationale\":\"No evidence linking KCTD9 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"RSAD2\",\"confidence\":0.01,\"rationale\":\"No evidence linking RSAD2 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"ADGB\",\"confidence\":0.01,\"rationale\":\"No evidence linking ADGB to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"},{\"gene\":\"DEPDC5\",\"confidence\":0.01,\"rationale\":\"No evidence linking DEPDC5 to acute hepatic failure or the patient's phenotype; shared chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "NBAS",
+    "RETN",
+    "UTRN",
+    "NMS",
+    "CDKL4"
+  ]
+}

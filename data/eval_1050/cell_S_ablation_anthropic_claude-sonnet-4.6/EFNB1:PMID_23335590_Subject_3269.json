@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_3269",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16413,
+  "tokens_out": 745,
+  "finish_reason": "stop",
+  "latency_s": 10.006130456924438,
+  "cost_usd": 0.060414,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"EFNB1\",\"confidence\":0.97,\"rationale\":\"EFNB1 causes craniofrontonasal syndrome with coronal craniosynostosis, hypertelorism, downslanted palpebral fissures, syndactyly, ridged nails, Sprengel anomaly, and axillary pterygium\u2014matching nearly all patient HPO terms directly.\"},{\"gene\":\"ZFP62\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"ZNF319\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"C4orf51\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"PRAMEF20\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"MAP3K15\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"NCOA5\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"BSPRY\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"FOXL1\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"OR8U3\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"LBX1\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"PRORP\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"GOLGA8T\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"RGPD5\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"},{\"gene\":\"EIF3J\",\"confidence\":0.01,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks describe unrelated syndromes with only partial phenotypic overlap.\"}]",
+  "parsed_top5": [
+    "EFNB1",
+    "ZFP62",
+    "ZNF319",
+    "C4orf51",
+    "PRAMEF20"
+  ]
+}

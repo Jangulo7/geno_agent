@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39270020_Patient_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "FHL2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HMGN5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18785,
+  "tokens_out": 510,
+  "finish_reason": "stop",
+  "latency_s": 19.9111111164093,
+  "cost_usd": 0.0041497,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"HMGN5\", \"confidence\": 0.2, \"rationale\": \"No direct evidence linking HMGN5 to immune dysfunction, but minor relevance noted.\"},\n  {\"gene\": \"OSER1\", \"confidence\": 0.2, \"rationale\": \"No direct immune-related evidence found in provided chunks.\"},\n  {\"gene\": \"HSPA8\", \"confidence\": 0.2, \"rationale\": \"No clear link to immune phenotypes in the evidence.\"},\n  {\"gene\": \"GNPTAB\", \"confidence\": 0.2, \"rationale\": \"No direct evidence connecting this gene to immune deficiencies.\"},\n  {\"gene\": \"DBI\", \"confidence\": 0.2, \"rationale\": \"Lacks direct evidence for involvement in immune system disorders.\"},\n  {\"gene\": \"USP2\", \"confidence\": 0.2, \"rationale\": \"No clear association with immune dysfunction in provided data.\"},\n  {\"gene\": \"SAMD4A\", \"confidence\": 0.2, \"rationale\": \"No direct evidence linking to immune-related phenotypes.\"},\n  {\"gene\": \"PADI1\", \"confidence\": 0.2, \"rationale\": \"No significant evidence supporting immune system involvement.\"},\n  {\"gene\": \"ME1\", \"confidence\": 0.2, \"rationale\": \"No direct immune-related findings in the literature chunks.\"},\n  {\"gene\": \"ATG101\", \"confidence\": 0.2, \"rationale\": \"No clear link to immune dysfunction in the evidence.\"},\n  {\"gene\": \"MRPS11\", \"confidence\": 0.2, \"rationale\": \"No evidence connecting mitochondrial genes to immune deficiencies.\"},\n  {\"gene\": \"TTC12\", \"confidence\": 0.2, \"rationale\": \"No direct evidence for immune-related phenotypes in chunks.\"},\n  {\"gene\": \"CIMAP1A\", \"confidence\": 0.25, \"rationale\": \"Marginally higher due to vague immune-related context but no direct link.\"},\n  {\"gene\": \"PRSS1\", \"confidence\": 0.25, \"rationale\": \"Some immune-related context but no direct causal evidence.\"},\n  {\"gene\": \"FHL2\", \"confidence\": 0.3, \"rationale\": \"Slightly higher due to indirect immune-related mentions, though still weak.\"}\n]",
+  "parsed_top5": [
+    "HMGN5",
+    "OSER1",
+    "HSPA8",
+    "GNPTAB",
+    "DBI"
+  ]
+}

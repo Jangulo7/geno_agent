@@ -1,0 +1,26 @@
+{
+  "case_id": "UGGT1:PMID_40267907_Family_3_2",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UGGT1",
+  "orig_qwen3_8b_top1": "TBXT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CHD2",
+  "top1_correct": false,
+  "causal_rank": 5,
+  "tokens_in": 16876,
+  "tokens_out": 550,
+  "finish_reason": "stop",
+  "latency_s": 21.500073432922363,
+  "cost_usd": 0.0037987000000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"CHD2\", \"confidence\": 0.7, \"rationale\": \"Associated with complex cardiac malformations including VSD and outflow tract anomalies matching patient phenotypes.\"},\n  {\"gene\": \"TBXT\", \"confidence\": 0.6, \"rationale\": \"Linked to congenital heart defects and left-right asymmetry disorders, relevant to patient's cardiac anomalies.\"},\n  {\"gene\": \"KIF13B\", \"confidence\": 0.55, \"rationale\": \"Implicated in laterality defects and duplicated SVC, aligning with bilateral SVC phenotype.\"},\n  {\"gene\": \"ESYT2\", \"confidence\": 0.5, \"rationale\": \"Involvement in cardiac development, though evidence is less direct than top candidates.\"},\n  {\"gene\": \"UGGT1\", \"confidence\": 0.45, \"rationale\": \"General association with congenital anomalies but no strong cardiac-specific evidence.\"},\n  {\"gene\": \"SDHAF4\", \"confidence\": 0.4, \"rationale\": \"Weak links to mitochondrial dysfunction, indirectly related to cardiac defects.\"},\n  {\"gene\": \"AKR1C2\", \"confidence\": 0.35, \"rationale\": \"No direct cardiac phenotype associations found in literature chunks.\"},\n  {\"gene\": \"KCNAB3\", \"confidence\": 0.3, \"rationale\": \"Primarily neuronal function; no clear cardiac phenotype relevance.\"},\n  {\"gene\": \"GADL1\", \"confidence\": 0.25, \"rationale\": \"No relevant cardiac or structural anomaly associations.\"},\n  {\"gene\": \"TXNDC5\", \"confidence\": 0.2, \"rationale\": \"Insufficient evidence linking to congenital heart defects or listed HPOs.\"},\n  {\"gene\": \"SERPINB12\", \"confidence\": 0.15, \"rationale\": \"No direct phenotypic overlaps with patient's cardiac/structural anomalies.\"},\n  {\"gene\": \"FAM43B\", \"confidence\": 0.1, \"rationale\": \"No known associations with congenital anomalies or cardiac defects.\"},\n  {\"gene\": \"CPD\", \"confidence\": 0.05, \"rationale\": \"Unrelated to cardiovascular development or patient HPOs.\"},\n  {\"gene\": \"NUDT3\", \"confidence\": 0.05, \"rationale\": \"No evidence supporting involvement in cardiac or structural malformations.\"},\n  {\"gene\": \"TPD52L1\", \"confidence\": 0.05, \"rationale\": \"No relevant literature linking to patient's phenotype profile.\"}\n]",
+  "parsed_top5": [
+    "CHD2",
+    "TBXT",
+    "KIF13B",
+    "ESYT2",
+    "UGGT1"
+  ]
+}

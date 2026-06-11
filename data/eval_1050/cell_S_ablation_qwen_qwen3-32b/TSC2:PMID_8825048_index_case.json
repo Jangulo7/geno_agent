@@ -1,0 +1,26 @@
+{
+  "case_id": "TSC2:PMID_8825048_index_case",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TSC2",
+  "orig_qwen3_8b_top1": "TSC2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TSC2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18063,
+  "tokens_out": 772,
+  "finish_reason": "stop",
+  "latency_s": 26.130878925323486,
+  "cost_usd": 0.0016612,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"TSC2\", \"confidence\": 0.95, \"rationale\": \"TSC2 mutations are directly linked to Tuberous Sclerosis Complex, which includes hypomelanotic macules, cardiac rhabdomyomas, and bradycardia as key features.\"}, {\"gene\": \"TSC1\", \"confidence\": 0.85, \"rationale\": \"TSC1 mutations also cause Tuberous Sclerosis Complex, with overlapping clinical features including hypomelanotic macules and cardiac rhabdomyomas.\"}, {\"gene\": \"GNA12\", \"confidence\": 0.15, \"rationale\": \"Mentions of TSC and cardiac rhabdomyoma are present, but no direct evidence linking GNA12 to the patient's phenotype.\"}, {\"gene\": \"ENKD1\", \"confidence\": 0.1, \"rationale\": \"Some TSC-related features are mentioned, but no direct evidence of ENKD1 involvement in the patient's condition.\"}, {\"gene\": \"SLCO6A1\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to SLCO6A1 is established.\"}, {\"gene\": \"MORN4\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of MORN4 involvement in the patient's condition.\"}, {\"gene\": \"CFAP54\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to CFAP54 is established.\"}, {\"gene\": \"RABGAP1L\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of RABGAP1L involvement in the patient's condition.\"}, {\"gene\": \"ZNF71\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to ZNF71 is established.\"}, {\"gene\": \"PCDH18\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of PCDH18 involvement in the patient's condition.\"}, {\"gene\": \"CCDC42\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to CCDC42 is established.\"}, {\"gene\": \"GPX3\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of GPX3 involvement in the patient's condition.\"}, {\"gene\": \"RNF182\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to RNF182 is established.\"}, {\"gene\": \"ZFC3H1\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of ZFC3H1 involvement in the patient's condition.\"}, {\"gene\": \"KLF8\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are present in the evidence, but no direct link to KLF8 is established.\"}, {\"gene\": \"COL22A1\", \"confidence\": 0.1, \"rationale\": \"TSC-related features are mentioned, but no direct evidence of COL22A1 involvement in the patient's condition.\"}]",
+  "parsed_top5": [
+    "TSC2",
+    "TSC1",
+    "GNA12",
+    "ENKD1",
+    "SLCO6A1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "EMILIN1:PMID_36351433_F3_III_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EMILIN1",
+  "orig_qwen3_8b_top1": "ROBO2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SRRM5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19228,
+  "tokens_out": 513,
+  "finish_reason": "stop",
+  "latency_s": 20.15970015525818,
+  "cost_usd": 0.0016818800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SRRM5\",\"confidence\":0.95,\"rationale\":\"Strong facial phenotype overlap including long philtrum, thin upper lip, high palate, and hypotonia.\"},{\"gene\":\"JMJD6\",\"confidence\":0.85,\"rationale\":\"Reports include long philtrum, thin upper lip, and high palate, but less specific to the full phenotype.\"},{\"gene\":\"ROBO2\",\"confidence\":0.8,\"rationale\":\"Mentions facial features but lacks specificity for blue sclerae and recurrent fractures.\"},{\"gene\":\"CLDN7\",\"confidence\":0.75,\"rationale\":\"Includes some facial features but lacks evidence for blue sclerae or skeletal issues.\"},{\"gene\":\"DDIT3\",\"confidence\":0.7,\"rationale\":\"Describes facial features but no direct mention of blue sclerae or bone fragility.\"},{\"gene\":\"BLTP2\",\"confidence\":0.65,\"rationale\":\"Includes some facial features but lacks evidence for blue sclerae or hypotonia.\"},{\"gene\":\"KCTD1\",\"confidence\":0.6,\"rationale\":\"Mentions facial features and hypotonia but not blue sclerae or fractures.\"},{\"gene\":\"JADE1\",\"confidence\":0.55,\"rationale\":\"Includes some facial features but lacks evidence for blue sclerae or skeletal issues.\"},{\"gene\":\"PRAMEF6\",\"confidence\":0.5,\"rationale\":\"Reports facial features but no direct evidence for blue sclerae or bone fragility.\"},{\"gene\":\"CNTFR\",\"confidence\":0.45,\"rationale\":\"Mentions facial features but lacks evidence for blue sclerae or skeletal issues.\"},{\"gene\":\"SH3GL1\",\"confidence\":0.4,\"rationale\":\"Includes some facial features but lacks evidence for blue sclerae or fractures.\"},{\"gene\":\"SPANXC\",\"confidence\":0.35,\"rationale\":\"Describes facial features but no direct evidence for blue sclerae or bone issues.\"},{\"gene\":\"PRSS27\",\"confidence\":0.3,\"rationale\":\"Mentions facial features but lacks evidence for blue sclerae or skeletal issues.\"},{\"gene\":\"JPH4\",\"confidence\":0.25,\"rationale\":\"Includes some facial features but lacks evidence for blue sclerae or bone fragility.\"},{\"gene\":\"SYN1\",\"confidence\":0.2,\"rationale\":\"Mentions facial features but no direct evidence for blue sclerae or skeletal issues.\"}]",
+  "parsed_top5": [
+    "SRRM5",
+    "JMJD6",
+    "ROBO2",
+    "CLDN7",
+    "DDIT3"
+  ]
+}

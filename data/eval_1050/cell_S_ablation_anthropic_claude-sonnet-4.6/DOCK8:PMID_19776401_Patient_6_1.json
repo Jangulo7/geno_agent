@@ -1,0 +1,26 @@
+{
+  "case_id": "DOCK8:PMID_19776401_Patient_6_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DOCK8",
+  "orig_qwen3_8b_top1": "DOCK8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DOCK8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19525,
+  "tokens_out": 664,
+  "finish_reason": "stop",
+  "latency_s": 13.337376594543457,
+  "cost_usd": 0.068535,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"DOCK8\",\"confidence\":0.72,\"rationale\":\"DOCK8 deficiency (AR-HIES) directly causes eczema, recurrent sinusitis/otitis/bronchitis/bronchiectasis, osteomyelitis, and skin infections\u2014matching nearly all patient HPO terms including atopic dermatitis and allergies.\"},{\"gene\":\"DNAAF11\",\"confidence\":0.12,\"rationale\":\"DNAAF11 is a PCD gene associated with recurrent respiratory infections, sinusitis, bronchiectasis, and otitis media, but lacks the atopic/allergic and skin infection features seen here.\"},{\"gene\":\"SHANK3\",\"confidence\":0.03,\"rationale\":\"SHANK3 evidence chunks discuss PCD and neurodevelopmental features; no direct link to this combined immunodeficiency/atopic phenotype profile.\"},{\"gene\":\"FIS1\",\"confidence\":0.02,\"rationale\":\"FIS1 evidence is generic CVID/PCD background with no specific gene-phenotype link to this patient's profile.\"},{\"gene\":\"OR2M4\",\"confidence\":0.02,\"rationale\":\"OR2M4 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"SLFNL1\",\"confidence\":0.02,\"rationale\":\"SLFNL1 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"KCNU1\",\"confidence\":0.01,\"rationale\":\"KCNU1 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"BIN3\",\"confidence\":0.01,\"rationale\":\"BIN3 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"FGG\",\"confidence\":0.01,\"rationale\":\"FGG evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"BOK\",\"confidence\":0.01,\"rationale\":\"BOK evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"TSTD1\",\"confidence\":0.01,\"rationale\":\"TSTD1 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"ELOVL6\",\"confidence\":0.01,\"rationale\":\"ELOVL6 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"DDX28\",\"confidence\":0.01,\"rationale\":\"DDX28 evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"MEIOC\",\"confidence\":0.01,\"rationale\":\"MEIOC evidence is generic background only; no established disease association matching this phenotype.\"},{\"gene\":\"OSER1\",\"confidence\":0.01,\"rationale\":\"OSER1 evidence is generic background only; no established disease association matching this phenotype.\"}]",
+  "parsed_top5": [
+    "DOCK8",
+    "DNAAF11",
+    "SHANK3",
+    "FIS1",
+    "OR2M4"
+  ]
+}

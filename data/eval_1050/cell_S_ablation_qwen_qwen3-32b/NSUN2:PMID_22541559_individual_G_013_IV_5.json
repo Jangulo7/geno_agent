@@ -1,0 +1,22 @@
+{
+  "case_id": "NSUN2:PMID_22541559_individual_G_013_IV_5",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NSUN2",
+  "orig_qwen3_8b_top1": "NSUN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NSUN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15244,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 1.546051263809204,
+  "cost_usd": 0.00123492,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"NSUN2\", \"confidence\": 0.95, \"rationale\": \"NSUN2 mutations directly cause intellectual disability, microcephaly, short stature, and strabismus in autosomal recessive inheritance.\"}",
+  "parsed_top5": [
+    "NSUN2"
+  ]
+}

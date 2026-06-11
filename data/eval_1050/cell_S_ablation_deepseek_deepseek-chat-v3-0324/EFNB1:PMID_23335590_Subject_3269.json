@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_3269",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14271,
+  "tokens_out": 722,
+  "finish_reason": "stop",
+  "latency_s": 36.697874546051025,
+  "cost_usd": 0.0034101400000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EFNB1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"EFNB1 mutations cause craniofrontonasal dysplasia, matching all key patient phenotypes including coronal craniosynostosis, hypertelorism, and syndactyly.\"\n  },\n  {\n    \"gene\": \"ZFP62\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking ZFP62 to craniofacial dysmorphism, with only partial phenotype overlap.\"\n  },\n  {\n    \"gene\": \"ZNF319\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence connecting ZNF319 to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"C4orf51\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence supporting C4orf51's role in craniofacial or limb anomalies.\"\n  },\n  {\n    \"gene\": \"PRAMEF20\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking PRAMEF20 to the observed syndromic features.\"\n  },\n  {\n    \"gene\": \"MAP3K15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No documented association between MAP3K15 and the patient's craniosynostosis or limb anomalies.\"\n  },\n  {\n    \"gene\": \"NCOA5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting NCOA5's involvement in craniofacial or skeletal dysplasias.\"\n  },\n  {\n    \"gene\": \"BSPRY\",\n    \"confidence\": 0.2,\n    \"rationale\": \"BSPRY lacks established connections to the patient's syndromic features.\"\n  },\n  {\n    \"gene\": \"FOXL1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence implicating FOXL1 in craniosynostosis or limb malformations.\"\n  },\n  {\n    \"gene\": \"OR8U3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"OR8U3 is an olfactory receptor gene with no known role in developmental disorders.\"\n  },\n  {\n    \"gene\": \"LBX1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"LBX1 is associated with scoliosis but not with the patient's craniofacial or limb anomalies.\"\n  },\n  {\n    \"gene\": \"PRORP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence linking PRORP to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"GOLGA8T\",\n    \"confidence\": 0.2,\n    \"rationale\": \"GOLGA8T has no documented association with craniofacial or limb dysplasias.\"\n  },\n  {\n    \"gene\": \"RGPD5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting RGPD5's role in developmental disorders matching the patient's features.\"\n  },\n  {\n    \"gene\": \"EIF3J\",\n    \"confidence\": 0.2,\n    \"rationale\": \"EIF3J is not implicated in craniosynostosis or the patient's other syndromic features.\"\n  }\n]",
+  "parsed_top5": [
+    "EFNB1",
+    "ZFP62",
+    "ZNF319",
+    "C4orf51",
+    "PRAMEF20"
+  ]
+}

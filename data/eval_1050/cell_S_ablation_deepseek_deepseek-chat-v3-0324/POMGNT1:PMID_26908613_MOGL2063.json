@@ -1,0 +1,26 @@
+{
+  "case_id": "POMGNT1:PMID_26908613_MOGL2063",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "POMGNT1",
+  "orig_qwen3_8b_top1": "SRGAP2C",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PMEL",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12614,
+  "tokens_out": 631,
+  "finish_reason": "stop",
+  "latency_s": 24.316325664520264,
+  "cost_usd": 0.00300867,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PMEL\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Evidence directly links PMEL to retinal pigmentation and RP phenotypes, closely matching the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"PTPRS\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Some evidence suggests PTPRS involvement in retinal degeneration, but less specific than PMEL.\"\n  },\n  {\n    \"gene\": \"ARHGDIG\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Limited evidence connects ARHGDIG to retinal phenotypes, but lacks specificity for RP.\"\n  },\n  {\n    \"gene\": \"ZNF197\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Weak association with retinal pathologies; lacks direct evidence for RP.\"\n  },\n  {\n    \"gene\": \"LRRC14\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No strong evidence linking LRRC14 to retinal diseases or RP specifically.\"\n  },\n  {\n    \"gene\": \"BTN3A2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Minimal evidence for retinal involvement; no direct RP association.\"\n  },\n  {\n    \"gene\": \"OTUB2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No clear evidence linking OTUB2 to retinal degeneration or RP.\"\n  },\n  {\n    \"gene\": \"SH2B1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No known role in retinal pathology; evidence unrelated to RP.\"\n  },\n  {\n    \"gene\": \"NOTCH2NLR\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No documented association with retinal diseases or RP.\"\n  },\n  {\n    \"gene\": \"ZNF738\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking ZNF738 to retinal phenotypes or RP.\"\n  },\n  {\n    \"gene\": \"SRGAP2C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for retinal or RP involvement.\"\n  },\n  {\n    \"gene\": \"KRTAP22-2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting KRTAP22-2 to retinal diseases.\"\n  },\n  {\n    \"gene\": \"PDHX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PDHX in retinal degeneration or RP.\"\n  },\n  {\n    \"gene\": \"CCL14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known role in retinal pathologies; unrelated to RP.\"\n  },\n  {\n    \"gene\": \"MCTP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking MCTP1 to retinal diseases or RP.\"\n  }\n]",
+  "parsed_top5": [
+    "PMEL",
+    "PTPRS",
+    "ARHGDIG",
+    "ZNF197",
+    "LRRC14"
+  ]
+}

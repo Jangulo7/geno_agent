@@ -1,0 +1,26 @@
+{
+  "case_id": "SNF8:PMID_38423010_individual_E1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNF8",
+  "orig_qwen3_8b_top1": "SNF8",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SNF8",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19550,
+  "tokens_out": 591,
+  "finish_reason": "stop",
+  "latency_s": 9.822998285293579,
+  "cost_usd": 0.067515,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SNF8\",\"confidence\":0.82,\"rationale\":\"SNF8 chunk_1 directly reports bi-allelic variants causing intellectual disability, childhood-onset optic atrophy, global developmental delay, microcephaly, nystagmus, cerebellar/brain atrophy, and abnormal visual evoked potentials\u2014matching nearly all patient HPOs.\"},{\"gene\":\"SP140L\",\"confidence\":0.04,\"rationale\":\"Only non-specific background evidence; no direct link to SNF8-like phenotype profile.\"},{\"gene\":\"ZNF124\",\"confidence\":0.03,\"rationale\":\"Evidence chunks are non-specific background literature with no direct ZNF124-disease association matching the patient phenotype.\"},{\"gene\":\"NGB\",\"confidence\":0.03,\"rationale\":\"No direct NGB-disease evidence; background chunks describe unrelated conditions.\"},{\"gene\":\"ANGPT4\",\"confidence\":0.02,\"rationale\":\"No direct ANGPT4 neurodevelopmental disease evidence; background chunks are non-specific.\"},{\"gene\":\"NDUFA9\",\"confidence\":0.01,\"rationale\":\"No direct NDUFA9 evidence linking it to this phenotype; background chunks are non-specific.\"},{\"gene\":\"MAP7D1\",\"confidence\":0.01,\"rationale\":\"No direct MAP7D1 evidence; background chunks describe unrelated conditions.\"},{\"gene\":\"ACOT12\",\"confidence\":0.01,\"rationale\":\"No direct ACOT12 evidence; background chunks are non-specific.\"},{\"gene\":\"RBM25\",\"confidence\":0.01,\"rationale\":\"No direct RBM25 evidence; background chunks are non-specific.\"},{\"gene\":\"MRPL34\",\"confidence\":0.01,\"rationale\":\"No direct MRPL34 evidence; background chunks are non-specific.\"},{\"gene\":\"CALN1\",\"confidence\":0.01,\"rationale\":\"No direct CALN1 evidence matching this phenotype; background chunks are non-specific.\"},{\"gene\":\"CDH11\",\"confidence\":0.01,\"rationale\":\"No direct CDH11 evidence; background chunks are non-specific.\"},{\"gene\":\"FCN1\",\"confidence\":0.01,\"rationale\":\"No direct FCN1 evidence; background chunks are non-specific.\"},{\"gene\":\"ZSCAN5B\",\"confidence\":0.01,\"rationale\":\"No direct ZSCAN5B evidence; background chunks are non-specific.\"},{\"gene\":\"AKR1E2\",\"confidence\":0.01,\"rationale\":\"No direct AKR1E2 evidence; background chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "SNF8",
+    "SP140L",
+    "ZNF124",
+    "NGB",
+    "ANGPT4"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_26365906_case",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17982,
+  "tokens_out": 869,
+  "finish_reason": "stop",
+  "latency_s": 14.461553573608398,
+  "cost_usd": 0.066981,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 evidence directly and explicitly links it to Netherton syndrome with congenital exfoliative erythroderma, hypernatremia, recurrent sepsis, failure to thrive, asthma, pruritus, and palmoplantar/eyebrow scaling\u2014matching nearly all patient HPO terms.\"},{\"gene\":\"CCL27\",\"confidence\":0.02,\"rationale\":\"CCL27 evidence chunks describe Netherton syndrome phenotypes but only in context of SPINK5; CCL27 itself has no direct causal link to this phenotype profile.\"},{\"gene\":\"MT1B\",\"confidence\":0.005,\"rationale\":\"MT1B evidence chunks are generic NS/ichthyosis case reports with no mention of MT1B as causal; no biological link to this phenotype profile.\"},{\"gene\":\"CFHR5\",\"confidence\":0.005,\"rationale\":\"CFHR5 evidence is entirely non-specific NS/ichthyosis literature with no mention of CFHR5 as causal for any of the patient's phenotypes.\"},{\"gene\":\"PARVG\",\"confidence\":0.005,\"rationale\":\"PARVG evidence chunks are generic ichthyosis/NS case reports with no mention of PARVG as causal; no established link to this phenotype profile.\"},{\"gene\":\"CHRNA10\",\"confidence\":0.005,\"rationale\":\"CHRNA10 evidence is non-specific ichthyosis literature with no mention of CHRNA10 as causal for any of the patient's phenotypes.\"},{\"gene\":\"NR1I2\",\"confidence\":0.005,\"rationale\":\"NR1I2 evidence chunks are generic ichthyosis/NS case reports with no mention of NR1I2 as causal; no established link to this phenotype profile.\"},{\"gene\":\"SOX13\",\"confidence\":0.005,\"rationale\":\"SOX13 evidence chunks are generic NS/ichthyosis case reports with no mention of SOX13 as causal; no established link to this phenotype profile.\"},{\"gene\":\"PRR36\",\"confidence\":0.005,\"rationale\":\"PRR36 evidence is non-specific ichthyosis literature with no mention of PRR36 as causal for any of the patient's phenotypes.\"},{\"gene\":\"GLIS1\",\"confidence\":0.005,\"rationale\":\"GLIS1 evidence chunks are generic NS/ichthyosis case reports with no mention of GLIS1 as causal; no established link to this phenotype profile.\"},{\"gene\":\"NDOR1\",\"confidence\":0.005,\"rationale\":\"NDOR1 evidence is non-specific ichthyosis literature with no mention of NDOR1 as causal for any of the patient's phenotypes.\"},{\"gene\":\"POLE3\",\"confidence\":0.005,\"rationale\":\"POLE3 evidence chunks are generic ichthyosis/NS case reports with no mention of POLE3 as causal; no established link to this phenotype profile.\"},{\"gene\":\"GGTLC3\",\"confidence\":0.005,\"rationale\":\"GGTLC3 evidence is non-specific ichthyosis literature with no mention of GGTLC3 as causal for any of the patient's phenotypes.\"},{\"gene\":\"NFILZ\",\"confidence\":0.005,\"rationale\":\"NFILZ evidence chunks are generic NS/ichthyosis case reports with no mention of NFILZ as causal; no established link to this phenotype profile.\"},{\"gene\":\"OR10D3\",\"confidence\":0.005,\"rationale\":\"OR10D3 evidence is non-specific ichthyosis literature with no mention of OR10D3 as causal for any of the patient's phenotypes.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "CCL27",
+    "MT1B",
+    "CFHR5",
+    "PARVG"
+  ]
+}

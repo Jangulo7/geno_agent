@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R3618_M_individual_F",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10098,
+  "tokens_out": 556,
+  "finish_reason": "stop",
+  "latency_s": 15.134666442871094,
+  "cost_usd": 0.0009635199999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NF1\",\"confidence\":0.95,\"rationale\":\"Strong evidence directly links NF1 to caf\u00e9-au-lait spots, freckling, and neurofibromas, which are core diagnostic features of NF1.\"},{\"gene\":\"VSIG2\",\"confidence\":0.15,\"rationale\":\"Mentions overlapping features with NF1, including caf\u00e9-au-lait spots and freckling, but lacks direct causality.\"},{\"gene\":\"CTBS\",\"confidence\":0.12,\"rationale\":\"Reports cases with caf\u00e9-au-lait spots and neurofibromas, but no direct genetic causality is established.\"},{\"gene\":\"ZBTB39\",\"confidence\":0.11,\"rationale\":\"Includes general NF1 diagnostic criteria but does not directly associate the gene with the patient's phenotype.\"},{\"gene\":\"MFAP1\",\"confidence\":0.10,\"rationale\":\"Mentions caf\u00e9-au-lait spots and neurofibromas but lacks specific causative evidence for the gene.\"},{\"gene\":\"C6orf52\",\"confidence\":0.09,\"rationale\":\"Reports NF1-related features but does not establish a direct link to the gene.\"},{\"gene\":\"RNASEH2B\",\"confidence\":0.08,\"rationale\":\"Includes general NF1 descriptions but does not directly associate the gene with the patient's features.\"},{\"gene\":\"ZNF140\",\"confidence\":0.07,\"rationale\":\"Mentions NF1-related features but lacks direct causality for the gene.\"},{\"gene\":\"CEP89\",\"confidence\":0.06,\"rationale\":\"Includes general NF1 descriptions but does not establish a direct link to the gene.\"},{\"gene\":\"TMSB15B\",\"confidence\":0.05,\"rationale\":\"Reports NF1-related features but does not establish a direct link to the gene.\"},{\"gene\":\"CCDC196\",\"confidence\":0.04,\"rationale\":\"Mentions NF1 but does not establish a direct link to the gene or the patient's features.\"},{\"gene\":\"CLDN2\",\"confidence\":0.03,\"rationale\":\"Includes general NF1 descriptions but does not establish a direct link to the gene.\"},{\"gene\":\"MCHR2\",\"confidence\":0.02,\"rationale\":\"Mentions NF1-related features but lacks direct causality for the gene.\"},{\"gene\":\"CDRT4\",\"confidence\":0.01,\"rationale\":\"Includes general NF1 descriptions but does not establish a direct link to the gene.\"},{\"gene\":\"C6orf52\",\"confidence\":0.01,\"rationale\":\"Includes general NF1 descriptions but does not establish a direct link to the gene.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "VSIG2",
+    "CTBS",
+    "ZBTB39",
+    "MFAP1"
+  ]
+}

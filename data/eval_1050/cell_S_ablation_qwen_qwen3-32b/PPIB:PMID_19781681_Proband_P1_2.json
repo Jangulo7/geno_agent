@@ -1,0 +1,26 @@
+{
+  "case_id": "PPIB:PMID_19781681_Proband_P1_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PPIB",
+  "orig_qwen3_8b_top1": "PPIB",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PPIB",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15370,
+  "tokens_out": 183,
+  "finish_reason": "stop",
+  "latency_s": 12.650169372558594,
+  "cost_usd": 0.00128084,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"PPIB\": 0.95, \"SLC44A1\": 0.7, \"VAMP5\": 0.65, \"C17orf99\": 0.6, \"ZNF362\": 0.55, \"ZNF830\": 0.5, \"BCL11A\": 0.45, \"CDC23\": 0.4, \"GJB2\": 0.35, \"SERPINB10\": 0.3, \"SIM2\": 0.25, \"OR2L13\": 0.2, \"PEX10\": 0.15, \"ATP7B\": 0.1, \"SLC25A18\": 0.05}",
+  "parsed_top5": [
+    "PPIB",
+    "SLC44A1",
+    "VAMP5",
+    "C17orf99",
+    "ZNF362"
+  ]
+}

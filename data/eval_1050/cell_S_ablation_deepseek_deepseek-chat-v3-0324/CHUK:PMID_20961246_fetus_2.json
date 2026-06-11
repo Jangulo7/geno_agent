@@ -1,0 +1,26 @@
+{
+  "case_id": "CHUK:PMID_20961246_fetus_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CHUK",
+  "orig_qwen3_8b_top1": "CHUK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CHUK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17292,
+  "tokens_out": 672,
+  "finish_reason": "stop",
+  "latency_s": 17.01345205307007,
+  "cost_usd": 0.0039758400000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CHUK\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Pathogenic variants in CHUK are strongly linked to phenotypes including omphalocele, microphthalmia, and limb undergrowth, matching the patient's profile.\"\n  },\n  {\n    \"gene\": \"MBD5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"MBD5 mutations are associated with neurological features but lack clear overlap with the patient's severe structural anomalies.\"\n  },\n  {\n    \"gene\": \"CYP7B1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"CYP7B1 variants are linked to adult-onset neurological disorders, not congenital structural defects.\"\n  },\n  {\n    \"gene\": \"GET3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking GET3 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"EPHX4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking EPHX4 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"PLEKHD1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking PLEKHD1 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"CCDC124\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking CCDC124 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"TMEM139\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking TMEM139 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"NACA\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking NACA to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"PDE8B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking PDE8B to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"YWHAG\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking YWHAG to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"SLC30A5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking SLC30A5 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"NAF1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking NAF1 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"LRRC24\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking LRRC24 to the patient's phenotypic spectrum.\"\n  },\n  {\n    \"gene\": \"OR10H2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking OR10H2 to the patient's phenotypic spectrum.\"\n  }\n]",
+  "parsed_top5": [
+    "CHUK",
+    "MBD5",
+    "CYP7B1",
+    "GET3",
+    "EPHX4"
+  ]
+}

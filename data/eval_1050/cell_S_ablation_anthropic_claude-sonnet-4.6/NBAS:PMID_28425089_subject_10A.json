@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_28425089_subject_10A",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18002,
+  "tokens_out": 725,
+  "finish_reason": "stop",
+  "latency_s": 16.801173210144043,
+  "cost_usd": 0.064881,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NBAS\",\"confidence\":0.93,\"rationale\":\"NBAS mutations directly cause recurrent acute liver failure with short stature, skeletal defects, immune dysregulation (decreased IgG), and multisystemic features matching the full HPO profile.\"},{\"gene\":\"GATA1\",\"confidence\":0.02,\"rationale\":\"GATA1 is linked to hematopoietic disorders in Down syndrome context; no evidence matching this multisystemic skeletal/hepatic phenotype.\"},{\"gene\":\"WBP11\",\"confidence\":0.01,\"rationale\":\"WBP11 evidence relates to centriole duplication; no direct link to the patient's hepatic, skeletal, or immune phenotype.\"},{\"gene\":\"ABCB4\",\"confidence\":0.01,\"rationale\":\"ABCB4 relates to alcohol-associated liver disease models; no evidence supporting this multisystemic pediatric syndrome.\"},{\"gene\":\"RETN\",\"confidence\":0.01,\"rationale\":\"RETN/resistin evidence concerns sepsis neutrophil function; no connection to the described multisystemic genetic syndrome.\"},{\"gene\":\"FERMT2\",\"confidence\":0.005,\"rationale\":\"FERMT2 evidence is limited to placental trophoblast biology with no relevance to the patient's phenotype.\"},{\"gene\":\"TREM1\",\"confidence\":0.005,\"rationale\":\"TREM1 evidence involves inflammatory pathways in surgical trauma; no link to this pediatric multisystemic disorder.\"},{\"gene\":\"PROK1\",\"confidence\":0.005,\"rationale\":\"PROK1 evidence relates to uterine contractility; no relevance to the hepatic/skeletal/immune phenotype described.\"},{\"gene\":\"TLX1\",\"confidence\":0.005,\"rationale\":\"TLX1 evidence is restricted to placental syncytiotrophoblast expression with no connection to the patient's phenotype.\"},{\"gene\":\"GNRH1\",\"confidence\":0.005,\"rationale\":\"GNRH1 is a reproductive hormone gene with no evidence linking it to acute hepatic failure or skeletal dysplasia.\"},{\"gene\":\"RPGR\",\"confidence\":0.005,\"rationale\":\"RPGR is associated with retinal dystrophy; evidence provided does not support this multisystemic hepatic/skeletal syndrome.\"},{\"gene\":\"MAGEB2\",\"confidence\":0.005,\"rationale\":\"MAGEB2 is a cancer-testis antigen gene with no evidence supporting causality for this phenotype.\"},{\"gene\":\"COX17\",\"confidence\":0.005,\"rationale\":\"COX17 is a mitochondrial copper chaperone; no evidence provided linking it to this specific multisystemic syndrome.\"},{\"gene\":\"HDAC6\",\"confidence\":0.005,\"rationale\":\"HDAC6 is a deacetylase with no evidence in the provided chunks supporting this pediatric multisystemic phenotype.\"},{\"gene\":\"C16orf87\",\"confidence\":0.005,\"rationale\":\"C16orf87 is an uncharacterized gene with no evidence linking it to the described hepatic, skeletal, or immune phenotype.\"}]",
+  "parsed_top5": [
+    "NBAS",
+    "GATA1",
+    "WBP11",
+    "ABCB4",
+    "RETN"
+  ]
+}

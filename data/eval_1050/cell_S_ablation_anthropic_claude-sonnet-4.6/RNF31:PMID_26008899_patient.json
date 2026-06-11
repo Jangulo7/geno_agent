@@ -1,0 +1,26 @@
+{
+  "case_id": "RNF31:PMID_26008899_patient",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RNF31",
+  "orig_qwen3_8b_top1": "RNF31",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RNF31",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19051,
+  "tokens_out": 1077,
+  "finish_reason": "stop",
+  "latency_s": 17.229947805404663,
+  "cost_usd": 0.073308,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RNF31\",\n    \"confidence\": 0.72,\n    \"rationale\": \"RNF31/HOIP deficiency (LUBAC component) is explicitly linked to splenomegaly, lymphangiectasia, decreased B/T cell function, bacterial infections, and poor polysaccharide vaccine responses\u2014matching nearly all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"DOCK8\",\n    \"confidence\": 0.10,\n    \"rationale\": \"DOCK8 deficiency causes lymphopenia, reduced T cell proliferation, decreased IgG, and recurrent infections including verrucae, partially matching the phenotype but lacks lymphangiectasia association.\"\n  },\n  {\n    \"gene\": \"HBZ\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunk describes intestinal lymphangiectasia with T cell loss and hypogammaglobulinemia but HBZ is not directly implicated as a causal immunodeficiency gene in the literature provided.\"\n  },\n  {\n    \"gene\": \"ADA\",\n    \"confidence\": 0.02,\n    \"rationale\": \"ADA deficiency causes SCID with lymphopenia and immunodeficiency but evidence chunks do not directly link ADA to this specific phenotype profile including lymphangiectasia.\"\n  },\n  {\n    \"gene\": \"SLC39A8\",\n    \"confidence\": 0.02,\n    \"rationale\": \"SLC39A8 deficiency causes manganese transport defects with multi-organ involvement but no direct evidence linking it to lymphangiectasia or the specific immune phenotype described.\"\n  },\n  {\n    \"gene\": \"EVX1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking EVX1 to the patient's immunodeficiency phenotype; evidence chunks reference HOIP/LUBAC pathway but not EVX1 specifically.\"\n  },\n  {\n    \"gene\": \"ZNF207\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking ZNF207 to the described immunodeficiency, lymphangiectasia, or related phenotypes in the provided literature.\"\n  },\n  {\n    \"gene\": \"RNF187\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking RNF187 to the patient's phenotype; evidence chunks reference HOIP/LUBAC but not RNF187 as a causal gene.\"\n  },\n  {\n    \"gene\": \"TCOF1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"TCOF1 is associated with Treacher Collins syndrome (craniofacial), not with the immunodeficiency/lymphangiectasia phenotype described.\"\n  },\n  {\n    \"gene\": \"GNA12\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking GNA12 to the described combined immunodeficiency with lymphangiectasia phenotype.\"\n  },\n  {\n    \"gene\": \"REPS2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking REPS2 to the patient's immunodeficiency, lymphangiectasia, or related phenotypes.\"\n  },\n  {\n    \"gene\": \"CLCF1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"CLCF1 evidence describes autoinflammatory features but not the specific combined immunodeficiency with lymphangiectasia profile seen in this patient.\"\n  },\n  {\n    \"gene\": \"MYO7B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking MYO7B to the described immunodeficiency with lymphangiectasia; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"SLC34A2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"SLC34A2 is associated with pulmonary alveolar microlithiasis, not with the immunodeficiency/lymphangiectasia phenotype described.\"\n  },\n  {\n    \"gene\": \"TMEM278\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking TMEM278 to the patient's immunodeficiency or lymphangiectasia phenotype in the provided literature.\"\n  }\n]",
+  "parsed_top5": [
+    "RNF31",
+    "DOCK8",
+    "HBZ",
+    "ADA",
+    "SLC39A8"
+  ]
+}

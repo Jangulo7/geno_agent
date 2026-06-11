@@ -1,0 +1,26 @@
+{
+  "case_id": "CBS:PMID_8755636_patient",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CBS",
+  "orig_qwen3_8b_top1": "CBS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CBS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18827,
+  "tokens_out": 937,
+  "finish_reason": "stop",
+  "latency_s": 10.023375272750854,
+  "cost_usd": 0.070536,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CBS\",\n    \"confidence\": 0.82,\n    \"rationale\": \"CBS deficiency (homocystinuria) directly causes all four HPO features: arachnodactyly, intellectual disability, hyperhomocystinemia, and disproportionate tall stature with marfanoid habitus.\"\n  },\n  {\n    \"gene\": \"CHD8\",\n    \"confidence\": 0.10,\n    \"rationale\": \"CHD8 variants cause tall stature, intellectual disability, and arachnodactyly but do not explain hyperhomocystinemia, a key metabolic feature of this patient.\"\n  },\n  {\n    \"gene\": \"MYORG\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking MYORG to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"NASP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking NASP to arachnodactyly, hyperhomocystinemia, or tall stature; only generic background evidence provided.\"\n  },\n  {\n    \"gene\": \"CSF3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CSF3 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"MAMDC4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking MAMDC4 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"SIGLEC14\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking SIGLEC14 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"SPESP1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking SPESP1 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"CKAP4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CKAP4 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"ZNF697\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking ZNF697 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"PNLIPRP2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking PNLIPRP2 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"NMNAT1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking NMNAT1 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"KIAA0930\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking KIAA0930 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"GMNC\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking GMNC to this phenotype profile; evidence chunks are non-specific background literature.\"\n  },\n  {\n    \"gene\": \"NCAPG2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking NCAPG2 to this phenotype profile; evidence chunks are non-specific background literature.\"\n  }\n]",
+  "parsed_top5": [
+    "CBS",
+    "CHD8",
+    "MYORG",
+    "NASP",
+    "CSF3"
+  ]
+}

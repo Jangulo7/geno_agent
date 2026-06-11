@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_II_3",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17323,
+  "tokens_out": 566,
+  "finish_reason": "stop",
+  "latency_s": 23.89912700653076,
+  "cost_usd": 0.0039004200000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n    {\"gene\": \"CCN2\", \"confidence\": 0.9, \"rationale\": \"Strong evidence linking CCN2 to joint swelling, short stature, and arthralgia with high relevance in literature.\"},\n    {\"gene\": \"LMF1\", \"confidence\": 0.7, \"rationale\": \"Commonly associated with short stature and joint issues, though less directly linked to waddling gait.\"},\n    {\"gene\": \"PODN\", \"confidence\": 0.6, \"rationale\": \"Linked to waddling gait and skeletal abnormalities, but evidence is less specific to joint swelling.\"},\n    {\"gene\": \"CTNNBIP1\", \"confidence\": 0.5, \"rationale\": \"Some evidence of involvement in skeletal development but lacks strong phenotype correlation.\"},\n    {\"gene\": \"SNX10\", \"confidence\": 0.4, \"rationale\": \"Indirect links to bone density issues but no strong evidence for joint or gait problems.\"},\n    {\"gene\": \"GPX1\", \"confidence\": 0.3, \"rationale\": \"Minimal evidence connecting GPX1 to the patient's specific phenotypes.\"},\n    {\"gene\": \"SYNPR\", \"confidence\": 0.25, \"rationale\": \"No clear evidence supporting a role in the observed clinical features.\"},\n    {\"gene\": \"XXYLT1\", \"confidence\": 0.2, \"rationale\": \"Limited data linking XXYLT1 to musculoskeletal or joint disorders.\"},\n    {\"gene\": \"PACRGL\", \"confidence\": 0.15, \"rationale\": \"No relevant literature found connecting PACRGL to the patient's symptoms.\"},\n    {\"gene\": \"C11orf58\", \"confidence\": 0.1, \"rationale\": \"No documented associations with the reported phenotypes.\"},\n    {\"gene\": \"RGS11\", \"confidence\": 0.05, \"rationale\": \"Unrelated to the clinical presentation based on current literature.\"},\n    {\"gene\": \"HMGN1\", \"confidence\": 0.03, \"rationale\": \"No known involvement in musculoskeletal or joint disorders.\"},\n    {\"gene\": \"ZNF730\", \"confidence\": 0.02, \"rationale\": \"No evidence linking ZNF730 to the patient's condition.\"},\n    {\"gene\": \"ELAVL4\", \"confidence\": 0.01, \"rationale\": \"Primarily associated with neural functions, not skeletal or joint issues.\"},\n    {\"gene\": \"SLC6A3\", \"confidence\": 0.005, \"rationale\": \"Irrelevant to the patient's musculoskeletal phenotype.\"}\n]\n```",
+  "parsed_top5": [
+    "CCN2",
+    "LMF1",
+    "PODN",
+    "CTNNBIP1",
+    "SNX10"
+  ]
+}

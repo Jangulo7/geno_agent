@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_23802543_girl",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19242,
+  "tokens_out": 751,
+  "finish_reason": "stop",
+  "latency_s": 18.879433393478394,
+  "cost_usd": 0.00174964,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SPINK5\": {\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching the patient's congenital erythroderma, trichorrhexis invaginata, and atopic diathesis.\"}, \"C2CD4C\": {\"gene\": \"C2CD4C\", \"confidence\": 0.15, \"rationale\": \"C2CD4C is associated with ichthyosis, but lacks direct evidence linking it to the patient's specific symptoms.\"}, \"TASOR2\": {\"gene\": \"TASOR2\", \"confidence\": 0.15, \"rationale\": \"TASOR2 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"VWA5B2\": {\"gene\": \"VWA5B2\", \"confidence\": 0.15, \"rationale\": \"VWA5B2 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"DYNLL2\": {\"gene\": \"DYNLL2\", \"confidence\": 0.15, \"rationale\": \"DYNLL2 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"SYNGR3\": {\"gene\": \"SYNGR3\", \"confidence\": 0.15, \"rationale\": \"SYNGR3 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"CTXN2\": {\"gene\": \"CTXN2\", \"confidence\": 0.15, \"rationale\": \"CTXN2 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"CYP2S1\": {\"gene\": \"CYP2S1\", \"confidence\": 0.15, \"rationale\": \"CYP2S1 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"CRLF3\": {\"gene\": \"CRLF3\", \"confidence\": 0.15, \"rationale\": \"CRLF3 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"GNRH1\": {\"gene\": \"GNRH1\", \"confidence\": 0.15, \"rationale\": \"GNRH1 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"GIGYF2\": {\"gene\": \"GIGYF2\", \"confidence\": 0.15, \"rationale\": \"GIGYF2 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"CFAP77\": {\"gene\": \"CFAP77\", \"confidence\": 0.15, \"rationale\": \"CFAP77 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"MAN1C1\": {\"gene\": \"MAN1C1\", \"confidence\": 0.15, \"rationale\": \"MAN1C1 is not directly linked to the patient's symptoms in the provided evidence.\"}, \"NSMCE4A\": {\"gene\": \"NSMCE4A\", \"confidence\": 0.15, \"rationale\": \"NSMCE4A is not directly linked to the patient's symptoms in the provided evidence.\"}, \"STX6\": {\"gene\": \"STX6\", \"confidence\": 0.15, \"rationale\": \"STX6 is not directly linked to the patient's symptoms in the provided evidence.\"}}",
+  "parsed_top5": [
+    "SPINK5",
+    "C2CD4C",
+    "TASOR2",
+    "VWA5B2",
+    "DYNLL2"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "OFD1:PMID_19800048_IV_4",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13785,
+  "tokens_out": 45,
+  "finish_reason": "stop",
+  "latency_s": 4.902521371841431,
+  "cost_usd": 0.0011154,
+  "parse_error": "model_self_error:{\"error\": \"The input data is incomplete. The evidence chunks for most of the genes are identical or missing, making it impossible to accurately rank the candidate genes. Please provide complete and di",
+  "error": null,
+  "raw_text": "{\"error\": \"The input data is incomplete. The evidence chunks for most of the genes are identical or missing, making it impossible to accurately rank the candidate genes. Please provide complete and distinct evidence for each gene.\"}",
+  "parsed_top5": []
+}

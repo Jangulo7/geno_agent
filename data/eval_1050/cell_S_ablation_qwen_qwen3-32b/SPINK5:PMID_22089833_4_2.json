@@ -1,0 +1,22 @@
+{
+  "case_id": "SPINK5:PMID_22089833_4_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17468,
+  "tokens_out": 68,
+  "finish_reason": "stop",
+  "latency_s": 3.6456336975097656,
+  "cost_usd": 0.0014164800000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, which presents with ichthyosis linearis circumflexa, elevated IgE, eczematoid dermatitis, and hair abnormalities matching the patient's HPO features.\"}",
+  "parsed_top5": [
+    "SPINK5"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "AEBP1:PMID_29606302_C_IV_6",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "AEBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AEBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17550,
+  "tokens_out": 625,
+  "finish_reason": "stop",
+  "latency_s": 39.68187189102173,
+  "cost_usd": 0.00399125,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AEBP1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking AEBP1 to classical-like EDS type 2 with matching phenotypes including joint hypermobility, skin hyperextensibility, and bone involvement.\"\n  },\n  {\n    \"gene\": \"CD44\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Relevant evidence but less specific to the patient's phenotype profile compared to AEBP1.\"\n  },\n  {\n    \"gene\": \"TNFSF14\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some phenotypic overlap but no direct evidence linking to EDS or similar disorders.\"\n  },\n  {\n    \"gene\": \"COL15A1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence supporting causality for the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PMVK\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"WHRN\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"FDXR\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"ZMYM6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CHST5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"TRMT11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"STON2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"C1D\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"PPT1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CEP85L\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CDH23\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to the patient's clinical presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "AEBP1",
+    "CD44",
+    "TNFSF14",
+    "COL15A1",
+    "PMVK"
+  ]
+}

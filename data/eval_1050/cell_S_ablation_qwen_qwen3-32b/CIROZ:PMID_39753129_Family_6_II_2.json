@@ -1,0 +1,22 @@
+{
+  "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CIROZ",
+  "orig_qwen3_8b_top1": "MOSMO",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MOSMO",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15335,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 4.43772554397583,
+  "cost_usd": 0.0012441599999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"MOSMO\", \"confidence\": 0.9, \"rationale\": \"Mouse model shows vismodegib improves CHD phenotypes in Mosmo\u2212/\u2212 embryos, including double outlet right ventricle and hypoplastic left ventricle.\"}",
+  "parsed_top5": [
+    "MOSMO"
+  ]
+}

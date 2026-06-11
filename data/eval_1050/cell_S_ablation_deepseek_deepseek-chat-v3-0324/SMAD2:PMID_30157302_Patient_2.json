@@ -1,0 +1,26 @@
+{
+  "case_id": "SMAD2:PMID_30157302_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SMAD2",
+  "orig_qwen3_8b_top1": "H3-3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "H3-3A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17816,
+  "tokens_out": 649,
+  "finish_reason": "stop",
+  "latency_s": 38.24426317214966,
+  "cost_usd": 0.00406293,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"H3-3A\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Directly linked to developmental delay, seizures, cardiac defects, and facial dysmorphisms matching the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CNOT1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with GDD, behavioral disorders, short stature, and cardiac anomalies, partially matching the patient's features.\"\n  },\n  {\n    \"gene\": \"ACTA1\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Linked to cardiac defects and severe congenital myopathy, but lacks evidence for multi-organ involvement seen in the patient.\"\n  },\n  {\n    \"gene\": \"ATP1A1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Associated with ASD and developmental delay, but evidence is less comprehensive for the full phenotype.\"\n  },\n  {\n    \"gene\": \"C19orf81\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Mentioned in craniosynostosis with midface retrusion, but no direct evidence for cardiac or neurological features.\"\n  },\n  {\n    \"gene\": \"SEM1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"LRP11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CYP2D6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"AKAP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"UMAD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"LRRTM3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"C1orf115\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PBRM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DDX46\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CKB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "H3-3A",
+    "CNOT1",
+    "ACTA1",
+    "ATP1A1",
+    "C19orf81"
+  ]
+}

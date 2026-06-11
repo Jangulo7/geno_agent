@@ -1,0 +1,26 @@
+{
+  "case_id": "PPIB:PMID_19781681_Proband_P1_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PPIB",
+  "orig_qwen3_8b_top1": "PPIB",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PPIB",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17031,
+  "tokens_out": 762,
+  "finish_reason": "stop",
+  "latency_s": 13.152832984924316,
+  "cost_usd": 0.062523,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"PPIB\",\"confidence\":0.82,\"rationale\":\"PPIB evidence directly mentions PPIB as an OI-causing gene with prenatal fractures, limb bowing, and osteopenia; chunks explicitly name PPIB in OI pathogenesis context with 4/5 relevance scores.\"},{\"gene\":\"SLC44A1\",\"confidence\":0.03,\"rationale\":\"Evidence chunks describe OI phenotypes but do not mention SLC44A1 as causal; gene has no known role in bone fragility disorders.\"},{\"gene\":\"VAMP5\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe OI phenotypes generically but VAMP5 has no established link to osteogenesis imperfecta or bone fragility.\"},{\"gene\":\"C17orf99\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe OI phenotypes but C17orf99 is an uncharacterized gene with no known role in bone disease.\"},{\"gene\":\"ZNF362\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe OI phenotypes but ZNF362 has no established connection to osteogenesis imperfecta or skeletal fragility.\"},{\"gene\":\"ZNF830\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe OI phenotypes but ZNF830 has no known role in bone metabolism or osteogenesis imperfecta.\"},{\"gene\":\"BCL11A\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but BCL11A is a transcription factor associated with hematologic disorders, not bone fragility.\"},{\"gene\":\"CDC23\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but CDC23 is a cell cycle regulator with no established role in osteogenesis imperfecta.\"},{\"gene\":\"GJB2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but GJB2 is associated with hearing loss/skin disorders, not prenatal fractures or OI.\"},{\"gene\":\"SERPINB10\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but SERPINB10 is a serine protease inhibitor with no known role in bone fragility.\"},{\"gene\":\"SIM2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but SIM2 is a transcription factor with no established link to osteogenesis imperfecta.\"},{\"gene\":\"OR2L13\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but OR2L13 is an olfactory receptor gene with no known role in bone disease.\"},{\"gene\":\"PEX10\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but PEX10 is a peroxisome biogenesis gene associated with Zellweger spectrum, not OI.\"},{\"gene\":\"ATP7B\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but ATP7B causes Wilson disease (copper metabolism), not osteogenesis imperfecta.\"},{\"gene\":\"SLC25A18\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe OI phenotypes but SLC25A18 is a mitochondrial glutamate carrier with no known role in bone fragility.\"}]",
+  "parsed_top5": [
+    "PPIB",
+    "SLC44A1",
+    "VAMP5",
+    "C17orf99",
+    "ZNF362"
+  ]
+}

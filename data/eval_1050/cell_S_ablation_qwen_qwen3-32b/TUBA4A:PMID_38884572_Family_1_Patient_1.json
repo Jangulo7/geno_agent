@@ -1,0 +1,26 @@
+{
+  "case_id": "TUBA4A:PMID_38884572_Family_1_Patient_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TUBA4A",
+  "orig_qwen3_8b_top1": "ELAVL2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ELAVL2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15230,
+  "tokens_out": 739,
+  "finish_reason": "stop",
+  "latency_s": 2.0259273052215576,
+  "cost_usd": 0.00142532,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"ELAVL2\",\n    \"confidence\": 0.92,\n    \"rationale\": \"Strong evidence of cerebellar ataxia, dysmetria, dysdiadochokinesis, and dysarthria with MRI showing cerebellar atrophy.\"\n  },\n  {\n    \"gene\": \"SAXO6\",\n    \"confidence\": 0.78,\n    \"rationale\": \"Evidence of dysmetria, dysarthria, and cerebellar dysfunction, but less specific than ELAVL2.\"\n  },\n  {\n    \"gene\": \"CENPVL2\",\n    \"confidence\": 0.72,\n    \"rationale\": \"Shows dysmetria and dysarthria, but lacks strong MRI or genetic confirmation.\"\n  },\n  {\n    \"gene\": \"OST4\",\n    \"confidence\": 0.68,\n    \"rationale\": \"Includes dysmetria and dysarthria, but no clear genetic or MRI evidence.\"\n  },\n  {\n    \"gene\": \"TMEM175\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Shows dystonia, dysmetria, and dysarthria, but less specific to cerebellar ataxia.\"\n  },\n  {\n    \"gene\": \"ABCC4\",\n    \"confidence\": 0.62,\n    \"rationale\": \"Includes dysmetria and dysarthria, but lacks strong MRI or genetic evidence.\"\n  },\n  {\n    \"gene\": \"SAMD4B\",\n    \"confidence\": 0.60,\n    \"rationale\": \"Shows progressive ataxia and dysmetria, but no clear genetic or MRI evidence.\"\n  },\n  {\n    \"gene\": \"PRRG2\",\n    \"confidence\": 0.58,\n    \"rationale\": \"Includes dysmetria and dysarthria, but lacks strong MRI or genetic evidence.\"\n  },\n  {\n    \"gene\": \"RGS10\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Shows dysmetria and dysarthria, but no clear genetic or MRI evidence.\"\n  },\n  {\n    \"gene\": \"ITPR3\",\n    \"confidence\": 0.53,\n    \"rationale\": \"Includes dysmetria and dysarthria, but lacks strong MRI or genetic evidence.\"\n  },\n  {\n    \"gene\": \"MOGAT3\",\n    \"confidence\": 0.50,\n    \"rationale\": \"Shows dysmetria and dysarthria, but no clear genetic or MRI evidence.\"\n  },\n  {\n    \"gene\": \"CNST\",\n    \"confidence\": 0.48,\n    \"rationale\": \"Includes dysmetria and dysarthria, but lacks strong MRI or genetic evidence.\"\n  },\n  {\n    \"gene\": \"RPE\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Shows dysmetria and dysarthria, but no clear genetic or MRI evidence.\"\n  },\n  {\n    \"gene\": \"PKLR\",\n    \"confidence\": 0.42,\n    \"rationale\": \"Includes dysmetria and dysarthria, but lacks strong MRI or genetic evidence.\"\n  },\n  {\n    \"gene\": \"IFI35\",\n    \"confidence\": 0.40,\n    \"rationale\": \"Shows dysmetria and dysarthria, but no clear genetic or MRI evidence.\"\n  }\n]",
+  "parsed_top5": [
+    "ELAVL2",
+    "SAXO6",
+    "CENPVL2",
+    "OST4",
+    "TMEM175"
+  ]
+}

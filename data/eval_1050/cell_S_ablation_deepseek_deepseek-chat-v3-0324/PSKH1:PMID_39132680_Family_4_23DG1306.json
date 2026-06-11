@@ -1,0 +1,26 @@
+{
+  "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "PSKH1",
+  "orig_qwen3_8b_top1": "PNLIP",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NBPF3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15586,
+  "tokens_out": 534,
+  "finish_reason": "stop",
+  "latency_s": 21.466196060180664,
+  "cost_usd": 0.0035283800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"NBPF3\", \"confidence\": 0.5, \"rationale\": \"Direct mention of ALP elevation and liver involvement, aligning with cholestasis and cirrhosis.\"},\n  {\"gene\": \"HDAC1\", \"confidence\": 0.4, \"rationale\": \"Discusses hepatic amyloidosis and cholestasis, matching multiple patient phenotypes.\"},\n  {\"gene\": \"ATF6\", \"confidence\": 0.35, \"rationale\": \"Links to hepatic failure and portal hypertension, relevant but less specific.\"},\n  {\"gene\": \"ZNF346\", \"confidence\": 0.3, \"rationale\": \"Mentions hepatic amyloidosis and cholestasis, but less direct evidence.\"},\n  {\"gene\": \"EDEM3\", \"confidence\": 0.25, \"rationale\": \"General liver disease context, no specific gene-pathway link.\"},\n  {\"gene\": \"PNLIP\", \"confidence\": 0.2, \"rationale\": \"No direct link to cholestasis or cirrhosis, only general liver abnormalities.\"},\n  {\"gene\": \"CUTC\", \"confidence\": 0.18, \"rationale\": \"Minor relevance to liver enzymes, lacks specificity for cholestasis.\"},\n  {\"gene\": \"ADCY2\", \"confidence\": 0.15, \"rationale\": \"General liver disease notes, no clear causal relationship.\"},\n  {\"gene\": \"AMER1\", \"confidence\": 0.1, \"rationale\": \"Minimal evidence linking to liver phenotypes.\"},\n  {\"gene\": \"NUPR1\", \"confidence\": 0.08, \"rationale\": \"No clear association with the patient's liver pathology.\"},\n  {\"gene\": \"RNF150\", \"confidence\": 0.06, \"rationale\": \"No substantive evidence supporting hepatic involvement.\"},\n  {\"gene\": \"ASH2L\", \"confidence\": 0.05, \"rationale\": \"Irrelevant to the observed liver and cholestasis phenotypes.\"},\n  {\"gene\": \"CASTOR2\", \"confidence\": 0.04, \"rationale\": \"No relevant evidence for liver or biliary disease.\"},\n  {\"gene\": \"OR5H2\", \"confidence\": 0.03, \"rationale\": \"Olfactory receptor gene\u2014no plausible link to liver disease.\"},\n  {\"gene\": \"OR51B2\", \"confidence\": 0.02, \"rationale\": \"Olfactory receptor gene\u2014unrelated to the clinical presentation.\"}\n]",
+  "parsed_top5": [
+    "NBPF3",
+    "HDAC1",
+    "ATF6",
+    "ZNF346",
+    "EDEM3"
+  ]
+}

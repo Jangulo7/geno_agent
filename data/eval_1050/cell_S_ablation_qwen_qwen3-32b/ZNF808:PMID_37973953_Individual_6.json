@@ -1,0 +1,26 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_6",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13819,
+  "tokens_out": 180,
+  "finish_reason": "stop",
+  "latency_s": 6.223447322845459,
+  "cost_usd": 0.0011559200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"ZNF808\": 0.95, \"SLC40A1\": 0.7, \"CALCOCO2\": 0.65, \"TIGAR\": 0.6, \"YY1AP1\": 0.55, \"MICALL2\": 0.5, \"AKR7A2\": 0.45, \"MCAT\": 0.4, \"NME3\": 0.35, \"TNNT3\": 0.3, \"SLC35E2B\": 0.25, \"TCEAL1\": 0.2, \"TEK\": 0.15, \"OR10K1\": 0.1, \"CCDC144A\": 0.05}",
+  "parsed_top5": [
+    "ZNF808",
+    "SLC40A1",
+    "CALCOCO2",
+    "TIGAR",
+    "YY1AP1"
+  ]
+}

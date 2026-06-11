@@ -1,0 +1,20 @@
+{
+  "case_id": "PIEZO2:PMID_27843126_A_III_5",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "PIEZO2",
+  "orig_qwen3_8b_top1": "AMH",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16986,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 3.4735984802246094,
+  "cost_usd": 0.0013647600000000002,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "parsed_top5": []
+}

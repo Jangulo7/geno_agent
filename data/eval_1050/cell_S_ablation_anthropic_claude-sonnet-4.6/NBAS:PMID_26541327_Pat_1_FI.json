@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_1_FI",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "MMP10",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EIF3B",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 4322,
+  "tokens_out": 985,
+  "finish_reason": "stop",
+  "latency_s": 17.27928066253662,
+  "cost_usd": 0.027741,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EIF3B\",\n    \"confidence\": 0.12,\n    \"rationale\": \"EIF3B encodes a translation initiation factor; variants can cause multisystem disease including liver failure, but evidence chunks are equally uninformative across all candidates.\"\n  },\n  {\n    \"gene\": \"DCHS1\",\n    \"confidence\": 0.09,\n    \"rationale\": \"DCHS1 mutations cause Van Maldergem syndrome with short stature and facial features including hypotelorism, partially matching the non-hepatic phenotypes.\"\n  },\n  {\n    \"gene\": \"TCF12\",\n    \"confidence\": 0.08,\n    \"rationale\": \"TCF12 is associated with craniosynostosis syndromes that can include facial dysmorphism; no direct liver disease link but slightly broader phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"WDR6\",\n    \"confidence\": 0.07,\n    \"rationale\": \"WDR6 has been linked to short stature phenotypes; evidence chunks are generic and do not specifically support hepatic failure causality.\"\n  },\n  {\n    \"gene\": \"MMP10\",\n    \"confidence\": 0.07,\n    \"rationale\": \"MMP10 is involved in extracellular matrix remodeling relevant to liver fibrosis, but evidence chunks are non-specific and equally low quality.\"\n  },\n  {\n    \"gene\": \"GSTO1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"GSTO1 encodes glutathione S-transferase omega involved in oxidative stress; plausible hepatic role but no direct disease-specific evidence provided.\"\n  },\n  {\n    \"gene\": \"KIAA0825\",\n    \"confidence\": 0.06,\n    \"rationale\": \"KIAA0825 is poorly characterized; evidence chunks are generic liver enzyme data with no specific disease association.\"\n  },\n  {\n    \"gene\": \"SCAMP2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"SCAMP2 is involved in vesicular trafficking; no established link to acute hepatic failure or the described phenotype cluster.\"\n  },\n  {\n    \"gene\": \"ITGB1BP2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ITGB1BP2 (melusin) is a muscle-specific integrin binding protein; no known association with hepatic failure or the described phenotype.\"\n  },\n  {\n    \"gene\": \"FAM169A\",\n    \"confidence\": 0.06,\n    \"rationale\": \"FAM169A is poorly characterized with no established disease link; evidence chunks are entirely non-specific.\"\n  },\n  {\n    \"gene\": \"FAM170A\",\n    \"confidence\": 0.06,\n    \"rationale\": \"FAM170A is poorly characterized with no established disease link; evidence chunks are entirely non-specific.\"\n  },\n  {\n    \"gene\": \"FLT3LG\",\n    \"confidence\": 0.06,\n    \"rationale\": \"FLT3LG encodes a cytokine ligand; no established link to acute hepatic failure or the described metabolic phenotype.\"\n  },\n  {\n    \"gene\": \"ARMH1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ARMH1 is poorly characterized; no known association with hepatic failure, hyperammonemia, or the described phenotype cluster.\"\n  },\n  {\n    \"gene\": \"ZBTB43\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ZBTB43 is a transcription factor with no established link to acute hepatic failure or the described metabolic phenotype.\"\n  },\n  {\n    \"gene\": \"KCNH8\",\n    \"confidence\": 0.06,\n    \"rationale\": \"KCNH8 encodes a potassium channel; no established association with hepatic failure, hyperammonemia, or conjugated hyperbilirubinemia.\"\n  }\n]",
+  "parsed_top5": [
+    "EIF3B",
+    "DCHS1",
+    "TCF12",
+    "WDR6",
+    "MMP10"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "USB1:PMID_27247962_USB1_patient",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "USB1",
+  "orig_qwen3_8b_top1": "USB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "USB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14827,
+  "tokens_out": 795,
+  "finish_reason": "stop",
+  "latency_s": 11.466378211975098,
+  "cost_usd": 0.056406,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"USB1\", \"confidence\": 0.97, \"rationale\": \"USB1 mutations directly cause Poikiloderma with Neutropenia (PN), with evidence explicitly matching all 6 patient HPO terms including bronchiectasis, interstitial lung disease, neutropenia, poikiloderma, short stature, and hypogonadotropic hypogonadism.\"}, {\"gene\": \"TNFSF13B\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks reference PN/USB1 disease context only; no direct link between TNFSF13B mutations and this phenotype profile.\"}, {\"gene\": \"PLPP7\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking PLPP7 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"AGRP\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking AGRP to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"PPP4R4\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking PPP4R4 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"USP35\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking USP35 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"MS4A3\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking MS4A3 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"KBTBD2\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking KBTBD2 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"APOC3\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking APOC3 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"LSG1\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking LSG1 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"PHYHIP\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking PHYHIP to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"C8orf74\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking C8orf74 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"GPATCH1\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking GPATCH1 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"NANOGP8\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking NANOGP8 to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}, {\"gene\": \"NFKBIB\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking NFKBIB to this phenotype; evidence chunks only reference PN disease context describing USB1.\"}]",
+  "parsed_top5": [
+    "USB1",
+    "TNFSF13B",
+    "PLPP7",
+    "AGRP",
+    "PPP4R4"
+  ]
+}

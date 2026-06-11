@@ -1,0 +1,891 @@
+"""Render publication-grade tables and figures for the Q1 manuscript.
+
+Produces:
+  reports/tables/  table1_wallclock_cost.{md,csv}, table2_overall.{md,csv},
+                   table3_fair_paired_delta.{md,csv}, table4_llm_ablation.{md,csv},
+                   supp_table1_tripod_llm.md (placeholder pointer)
+  reports/figures/ fig1_consort_flow.png, fig2_architecture.png,
+                   fig3_per_mondo_top1.png, fig4_faithfulness_vs_correctness.png,
+                   supp_fig1_lirical_recency_paradox.png,
+                   supp_fig2_llm_family_ablation.png
+
+All PNGs at 300 dpi; all tables in pipe-separated Markdown + CSV.
+"""
+
+from __future__ import annotations
+
+import csv
+import json
+import pathlib
+from typing import Any
+
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import numpy as np
+
+REPO = pathlib.Path("/home/hana77/ia_jo/uax_tfm/geno_agent")
+DATA_EVAL = REPO / "data/eval_1050"
+FIG_DIR = REPO / "reports/figures"
+TBL_DIR = REPO / "reports/tables"
+FIG_DIR.mkdir(parents=True, exist_ok=True)
+TBL_DIR.mkdir(parents=True, exist_ok=True)
+
+CELL_DISPLAY = {
+    "K": "Exomiser (HPO-only)",
+    "M": "LIRICAL (HPO-only)",
+    "D": "Multi-agent baseline",
+    "L": "+ CE-rerank (inside)",
+    "S": "geno_agent (Cell S)",
+    "N": "RRF ensemble (M+S)",
+}
+CELL_ORDER = ["K", "M", "D", "L", "S", "N"]
+
+# Publication-grade plot style
+plt.rcParams.update(
+    {
+        "figure.dpi": 300,
+        "savefig.dpi": 300,
+        "savefig.bbox": "tight",
+        "font.size": 10,
+        "font.family": "DejaVu Sans",
+        "axes.titlesize": 11,
+        "axes.labelsize": 10,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "legend.fontsize": 9,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+    }
+)
+
+
+def write_md_table(path: pathlib.Path, headers: list[str], rows: list[list[str]]) -> None:
+    """Render a Markdown pipe table to disk."""
+    lines = [
+        "| " + " | ".join(headers) + " |",
+        "|" + "|".join(["---"] * len(headers)) + "|",
+    ]
+    for row in rows:
+        lines.append("| " + " | ".join(row) + " |")
+    path.write_text("\n".join(lines) + "\n")
+
+
+def write_csv_table(path: pathlib.Path, headers: list[str], rows: list[list[Any]]) -> None:
+    """Render a CSV table to disk."""
+    with path.open("w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(headers)
+        w.writerows(rows)
+
+
+# =============================================================================
+# Table 1 -- per-cell wallclock + cost
+# =============================================================================
+def render_table1() -> None:
+    """Per-cell operational profile (wallclock + cost). Source: reports/wallclock_cost_table.md."""
+    headers = [
+        "Cell",
+        "System",
+        "n",
+        "Wallclock (h)",
+        "Mean s/case",
+        "Hardware",
+        "Cost (USD)",
+        "Local",
+    ]
+    rows = [
+        ["D", "Multi-agent baseline", "1,047", "4.8", "16.5", "1 GPU + Qdrant", "$0.00", "✓"],
+        ["K", "Exomiser HPO-only", "1,047", "0.8", "2.7", "CPU only", "$0.00", "✓"],
+        ["L", "+ CE-rerank (inside)", "1,047", "6.2", "21.3", "1 GPU + Qdrant", "$0.00", "✓"],
+        ["M", "LIRICAL HPO-only", "1,047", "1.4", "4.8", "CPU only", "$0.00", "✓"],
+        ["S", "geno_agent (Cell S)", "1,047", "7.6", "26.1", "1 GPU + Qdrant + vLLM", "$0.00", "✓"],
+        ["N", "RRF ensemble (M+S)", "1,047", "<0.1", "<0.1", "post-hoc", "$0.00", "✓"],
+        ["—", "RAGAS (GPT-4o judge)", "600", "—", "—", "OpenAI API", "$95.00", "✗"],
+        ["—", "DeepEval (GPT-4o judge)", "100", "—", "—", "OpenAI API", "$1.40", "✗"],
+        ["—", "LLM-family ablation", "300x3", "—", "—", "OpenRouter API", "$21.42", "✗"],
+    ]
+    write_md_table(TBL_DIR / "table1_wallclock_cost.md", headers, rows)
+    write_csv_table(TBL_DIR / "table1_wallclock_cost.csv", headers, rows)
+    print(f"  ✓ Table 1 ({len(rows)} rows)")
+
+
+# =============================================================================
+# Table 2 -- overall 5-cell metrics
+# =============================================================================
+def render_table2() -> None:
+    """Overall 5-cell metrics with paired-bootstrap 95 % CIs."""
+    summary = json.loads((DATA_EVAL / "_results_summary.json").read_text())
+    by_cell = {row["cell"]: row for row in summary["overall"]}
+    headers = [
+        "Cell",
+        "System",
+        "n",
+        "Top-1 (95 % CI)",
+        "Top-5",
+        "Top-10",
+        "MRR",
+        "NDCG@10",
+    ]
+    rows = []
+    for cell in CELL_ORDER:
+        if cell not in by_cell:
+            continue
+        r = by_cell[cell]
+        rows.append(
+            [
+                cell,
+                CELL_DISPLAY[cell],
+                f"{r['n_cases']}",
+                f"{r['top1_point']:.3f} ({r['top1_ci_lo']:.3f}-{r['top1_ci_hi']:.3f})",
+                f"{r['top5_point']:.3f}",
+                f"{r['top10_point']:.3f}",
+                f"{r['mrr_point']:.3f}",
+                f"{r['ndcg10_point']:.3f}",
+            ]
+        )
+    write_md_table(TBL_DIR / "table2_overall.md", headers, rows)
+    write_csv_table(TBL_DIR / "table2_overall.csv", headers, rows)
+    print(f"  ✓ Table 2 ({len(rows)} cells)")
+
+
+# =============================================================================
+# Table 3 -- paired delta on fair cohort
+# =============================================================================
+def render_table3() -> None:
+    """Paired Δ on overlap-absent fair cohort (n=282) for S vs each comparator."""
+    strat = json.loads((DATA_EVAL / "_results_stratified.json").read_text())
+    fair_n = strat["subsets"]["overlap_absent"]
+    fair = strat["per_cell"]["overlap_absent"]
+    paired_all = strat.get("paired", {})
+    paired_fair = paired_all.get("overlap_absent", {})
+
+    headers = [
+        "Comparator",
+        "Comp. Top-1",
+        "geno_agent Top-1",
+        "Δ (S - comp)",
+        "95 % CI",
+        "McNemar p",
+        "Result",
+    ]
+    rows = []
+    s_top1 = fair["S"]["top1"][0]
+    # Schema: paired_fair["A_vs_B"]["metrics"]["top1"] with point, ci_lo, ci_hi, mcnemar_p, significant
+    # Only include pairs with a paired-bootstrap + McNemar entry (excludes D — covered in §Results).
+    for cell in ["K", "M", "L"]:
+        if cell not in fair:
+            continue
+        comp_top1 = fair[cell]["top1"][0]
+        entry = paired_fair.get(f"S_vs_{cell}")
+        if entry is None:
+            rev = paired_fair.get(f"{cell}_vs_S")
+            if rev is None:
+                continue
+            m = rev["metrics"]["top1"]
+            delta_pt = -m["point"]
+            ci_lo = -m["ci_hi"]
+            ci_hi = -m["ci_lo"]
+            mc_p = m.get("mcnemar_p")
+            sig = m.get("significant", False)
+        else:
+            m = entry["metrics"]["top1"]
+            delta_pt = m["point"]
+            ci_lo = m["ci_lo"]
+            ci_hi = m["ci_hi"]
+            mc_p = m.get("mcnemar_p")
+            sig = m.get("significant", False)
+
+        ci_str = f"({ci_lo:+.3f}, {ci_hi:+.3f})" if ci_lo is not None else "—"
+        mc_str = f"{mc_p:.3f}" if mc_p is not None else "—"
+        if delta_pt > 0 and sig:
+            result = "S > comparator ★"
+        elif delta_pt > 0:
+            result = "S > comparator (NS)"
+        elif abs(delta_pt) < 0.01:
+            result = "tied"
+        else:
+            result = "S < comparator"
+
+        rows.append(
+            [
+                f"{cell} — {CELL_DISPLAY[cell]}",
+                f"{comp_top1:.3f}",
+                f"{s_top1:.3f}",
+                f"{delta_pt:+.3f}",
+                ci_str,
+                mc_str,
+                result,
+            ]
+        )
+    write_md_table(TBL_DIR / "table3_fair_paired_delta.md", headers, rows)
+    write_csv_table(TBL_DIR / "table3_fair_paired_delta.csv", headers, rows)
+    # Append caption note
+    cap = (
+        f"\n*Paired-bootstrap 95 % CI over {fair_n} matched cases; "
+        "McNemar exact two-sided test. ★ indicates significant Δ "
+        "(95 % CI excludes zero). Comparison against the deterministic "
+        "multi-agent baseline (Cell D) is reported in §Results.*\n"
+    )
+    md_path = TBL_DIR / "table3_fair_paired_delta.md"
+    md_path.write_text(md_path.read_text() + cap)
+    print(f"  ✓ Table 3 ({len(rows)} pairs; fair cohort n={fair_n})")
+
+
+# =============================================================================
+# Table 4 -- LLM-family ablation
+# =============================================================================
+def render_table4() -> None:
+    """LLM-family ablation results (n=300)."""
+    abl = json.loads((DATA_EVAL / "_results_lea_ablation.json").read_text())
+    models_display = {
+        "qwen3-8b (production)": "Qwen3-8B (production)",
+        "anthropic_claude-sonnet-4.6": "Claude Sonnet 4.6",
+        "deepseek_deepseek-chat-v3-0324": "DeepSeek-V3-0324",
+        "qwen_qwen3-32b": "Qwen3-32B-Instruct",
+    }
+    overall = abl["per_cell"]["__all__"]
+    fair = abl["per_cell"]["overlap_absent"]
+    cost = abl["cost_summary"]
+    fair_n = abl["subsets"]["overlap_absent"]
+    headers = [
+        "Model",
+        f"Overall Top-1 (n={abl['cohort_size']})",
+        f"Fair-cohort Top-1 (n={fair_n})",
+        "Mean latency (s)",
+        "Cost (USD)",
+        "Parse/API errors",
+    ]
+    rows = []
+    for k, label in models_display.items():
+        o = overall.get(k, {}).get("top1", [None] * 3)
+        f = fair.get(k, {}).get("top1", [None] * 3)
+        if k == "qwen3-8b (production)":
+            c_cost = "$0.00 (local)"
+            c_lat = "26.1 (local)"
+            c_err = "—"
+        else:
+            cs = cost.get(k, {})
+            c_cost = f"${cs.get('total_cost_usd', 0):.2f}"
+            c_lat = f"{cs.get('mean_latency_s', float('nan')):.2f}"
+            c_err = str(cs.get("n_with_parse_or_api_error", "—"))
+        rows.append(
+            [
+                label,
+                f"{o[0]:.3f} ({o[1]:.3f}-{o[2]:.3f})" if o[0] is not None else "—",
+                f"{f[0]:.3f} ({f[1]:.3f}-{f[2]:.3f})" if f[0] is not None else "—",
+                c_lat,
+                c_cost,
+                c_err,
+            ]
+        )
+    write_md_table(TBL_DIR / "table4_llm_ablation.md", headers, rows)
+    write_csv_table(TBL_DIR / "table4_llm_ablation.csv", headers, rows)
+    print(f"  ✓ Table 4 ({len(rows)} models)")
+
+
+# =============================================================================
+# Supp Table 1 -- TRIPOD-LLM pointer
+# =============================================================================
+def render_supp_table1() -> None:
+    """Pointer to the TRIPOD-LLM compliance checklist."""
+    body = (
+        "# Supplementary Table 1 — TRIPOD-LLM compliance checklist\n\n"
+        "Full 52-item TRIPOD-LLM mapping is maintained in:\n\n"
+        "`reports/tripod_llm_compliance.md`\n\n"
+        "Status summary: 23 items fully addressed, 16 partially addressed, "
+        "5 pending. See the linked report for per-item paragraph evidence "
+        "with manuscript section pointers.\n"
+    )
+    (TBL_DIR / "supp_table1_tripod_llm.md").write_text(body)
+    print("  ✓ Supp Table 1 (pointer)")
+
+
+# =============================================================================
+# Figure 1 -- CONSORT-style cohort flow
+# =============================================================================
+def render_figure1() -> None:
+    """CONSORT-style cohort flow diagram (filtering from PS v0.1.26 to n=1,047)."""
+    fig, ax = plt.subplots(figsize=(7.5, 8.5))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 14)
+    ax.axis("off")
+
+    box_kw = {"boxstyle": "round,pad=0.5", "facecolor": "#f0f4f8", "edgecolor": "#2b6cb0"}
+    excl_kw = {"boxstyle": "round,pad=0.4", "facecolor": "#fef5e7", "edgecolor": "#dd6b20"}
+
+    def text_box(x: float, y: float, txt: str, style: dict, w: float = 5.0) -> None:
+        ax.text(
+            x,
+            y,
+            txt,
+            ha="center",
+            va="center",
+            fontsize=9.5,
+            bbox=style,
+            wrap=True,
+        )
+
+    def arrow(x: float, y1: float, y2: float) -> None:
+        ax.annotate(
+            "",
+            xy=(x, y2),
+            xytext=(x, y1),
+            arrowprops={"arrowstyle": "->", "color": "#2b6cb0", "lw": 1.4},
+        )
+
+    # Main flow
+    text_box(
+        3.5,
+        13.4,
+        "GA4GH Phenopacket Store v0.1.26 release\n(public, all categories)\nN = 7,036 patient cases",
+        box_kw,
+        6.0,
+    )
+    arrow(3.5, 12.9, 12.2)
+    text_box(
+        3.5,
+        11.6,
+        "Restrict to 4 MONDO supercategories\n(developmental, immunological,\nmetabolic, neurological)\nN = 4,892 eligible cases",
+        box_kw,
+        6.0,
+    )
+    arrow(3.5, 10.95, 10.25)
+    text_box(
+        3.5,
+        9.6,
+        "Keep cases with SOLVED interpretation\n+ ≥3 HPO terms + causal gene\nin HGNC + ≥10 candidate genes\nN = 3,718 retained",
+        box_kw,
+        6.0,
+    )
+    arrow(3.5, 8.9, 8.0)
+    text_box(
+        3.5,
+        7.3,
+        "Disproportionate stratified sampling\n(seed 42, target 250 dev / 300 imm /\n250 met / 250 neu)\nDrawn N = 1,050; 3 dropped on\ndedupe → final analytic set",
+        box_kw,
+        6.0,
+    )
+    arrow(3.5, 6.45, 5.5)
+    text_box(
+        3.5,
+        4.8,
+        "ANALYTIC COHORT: n = 1,047\n(250 dev / 300 imm / 250 met / 247 neu)",
+        {
+            "boxstyle": "round,pad=0.6",
+            "facecolor": "#c6f6d5",
+            "edgecolor": "#2f855a",
+            "linewidth": 1.5,
+        },
+        6.0,
+    )
+    arrow(3.5, 4.0, 3.2)
+    text_box(
+        3.5,
+        2.5,
+        "Annotation-overlap stratification\n(per-PMID lookup against\nphenotype.hpoa)\nOverlap-present: n=765 (73.1 %)\nOverlap-absent (FAIR COHORT): n=282 (26.9 %)",
+        {
+            "boxstyle": "round,pad=0.6",
+            "facecolor": "#fffaf0",
+            "edgecolor": "#c05621",
+            "linewidth": 1.5,
+        },
+        6.5,
+    )
+
+    # Exclusion boxes on the right
+    ax.annotate(
+        "",
+        xy=(6.8, 12.25),
+        xytext=(5.0, 12.25),
+        arrowprops={"arrowstyle": "->", "color": "#dd6b20", "lw": 1.2},
+    )
+    text_box(7.85, 12.25, "Excluded:\nother MONDO\ncategories\n(N=2,144)", excl_kw, 2.5)
+    ax.annotate(
+        "",
+        xy=(6.8, 10.6),
+        xytext=(5.0, 10.6),
+        arrowprops={"arrowstyle": "->", "color": "#dd6b20", "lw": 1.2},
+    )
+    text_box(7.85, 10.6, "Excluded:\nUNSOLVED /\nincomplete\n(N=1,174)", excl_kw, 2.5)
+    ax.annotate(
+        "",
+        xy=(6.8, 8.4),
+        xytext=(5.0, 8.4),
+        arrowprops={"arrowstyle": "->", "color": "#dd6b20", "lw": 1.2},
+    )
+    text_box(7.85, 8.4, "Not sampled\n(N=2,668)", excl_kw, 2.5)
+
+    ax.set_title(
+        "Figure 1 — CONSORT-style cohort flow diagram", pad=14, fontsize=12, fontweight="bold"
+    )
+    fig.savefig(FIG_DIR / "fig1_consort_flow.png")
+    plt.close(fig)
+    print("  ✓ Figure 1 (CONSORT flow)")
+
+
+# =============================================================================
+# Figure 2 -- Multi-agent architecture
+# =============================================================================
+def render_figure2() -> None:
+    """Multi-agent architecture diagram (pipeline view)."""
+    fig, ax = plt.subplots(figsize=(11, 5))
+    ax.set_xlim(0, 12)
+    ax.set_ylim(0, 5)
+    ax.axis("off")
+
+    stages = [
+        ("HPO\nterms\n(input)", 0.7, "#edf2f7", "#2d3748"),
+        ("Planner\n(rewrite query\n+ MONDO\ncontext)", 2.3, "#bee3f8", "#2b6cb0"),
+        ("Retriever\n(Qdrant\nhybrid:\ndense + BM25)", 4.0, "#bee3f8", "#2b6cb0"),
+        ("Critic\n(filter,\ndedup, rank\nchunks)", 5.7, "#bee3f8", "#2b6cb0"),
+        ("CE-rerank\n(MedCPT-CE,\ntop-45)", 7.4, "#fed7e2", "#b83280"),
+        ("Synthesiser\n(LEA over\nQwen3-8B,\nvLLM local)", 9.1, "#c6f6d5", "#2f855a"),
+        ("Ranked\ngenes +\nrationale +\nPMC cites", 10.85, "#edf2f7", "#2d3748"),
+    ]
+    y = 2.6
+    box_h = 1.4
+    for label, x, fc, ec in stages:
+        ax.add_patch(
+            mpatches.FancyBboxPatch(
+                (x - 0.65, y - box_h / 2),
+                1.3,
+                box_h,
+                boxstyle="round,pad=0.1",
+                facecolor=fc,
+                edgecolor=ec,
+                linewidth=1.5,
+            )
+        )
+        ax.text(x, y, label, ha="center", va="center", fontsize=9)
+
+    # Arrows
+    for i in range(len(stages) - 1):
+        x1 = stages[i][1] + 0.65
+        x2 = stages[i + 1][1] - 0.65
+        ax.annotate(
+            "",
+            xy=(x2, y),
+            xytext=(x1, y),
+            arrowprops={"arrowstyle": "->", "color": "#4a5568", "lw": 1.3},
+        )
+
+    # Group legend at bottom
+    legend_handles = [
+        mpatches.Patch(color="#bee3f8", label="LangGraph agents (deterministic)"),
+        mpatches.Patch(color="#fed7e2", label="Neural reranking"),
+        mpatches.Patch(color="#c6f6d5", label="LLM-as-Evidence-Aggregator (LEA)"),
+        mpatches.Patch(color="#edf2f7", label="I/O"),
+    ]
+    ax.legend(
+        handles=legend_handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, -0.06),
+        ncol=4,
+        frameon=False,
+        fontsize=9,
+    )
+
+    # Indicate the geno_agent (Cell S) span
+    ax.annotate(
+        "",
+        xy=(9.75, 0.6),
+        xytext=(1.65, 0.6),
+        arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.5},
+    )
+    ax.text(
+        5.7,
+        0.3,
+        "geno_agent (Cell S) — 26.1 s/case mean, 1 RTX 5090, $0 cloud",
+        ha="center",
+        va="center",
+        fontsize=9.5,
+        color="#2f855a",
+        style="italic",
+    )
+
+    ax.set_title(
+        "Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
+        pad=12,
+        fontsize=12,
+        fontweight="bold",
+    )
+    fig.savefig(FIG_DIR / "fig2_architecture.png")
+    plt.close(fig)
+    print("  ✓ Figure 2 (architecture)")
+
+
+# =============================================================================
+# Figure 3 -- Per-MONDO top-1 grouped bar (5 cells)
+# =============================================================================
+def render_figure3() -> None:
+    """Per-MONDO top-1 grouped bar (5 cells: K, M, D, L, S)."""
+    summary = json.loads((DATA_EVAL / "_results_summary.json").read_text())
+    # Build {cell: {category: top1_point}} ignoring N (ensemble) for clarity
+    cats = ["developmental", "immunological", "metabolic", "neurological"]
+    cells = ["K", "M", "D", "L", "S"]
+    by_cell_cat = {c: {} for c in cells}
+    for row in summary["by_category"]:
+        if row["cell"] in cells and row["category"] in cats:
+            by_cell_cat[row["cell"]][row["category"]] = row["top1_point"]
+
+    cell_colors = {
+        "K": "#718096",  # Exomiser - grey
+        "M": "#d69e2e",  # LIRICAL - amber
+        "D": "#3182ce",  # multi-agent baseline - blue
+        "L": "#805ad5",  # +rerank - purple
+        "S": "#2f855a",  # geno_agent - green
+    }
+    cell_labels = {c: CELL_DISPLAY[c] for c in cells}
+
+    fig, ax = plt.subplots(figsize=(9.5, 5.2))
+    x = np.arange(len(cats))
+    w = 0.16
+    for i, c in enumerate(cells):
+        vals = [by_cell_cat[c].get(cat, 0) for cat in cats]
+        bars = ax.bar(x + (i - 2) * w, vals, w, label=cell_labels[c], color=cell_colors[c])
+        for b, v in zip(bars, vals, strict=False):
+            ax.text(
+                b.get_x() + b.get_width() / 2,
+                v + 0.012,
+                f"{v:.2f}",
+                ha="center",
+                va="bottom",
+                fontsize=7.5,
+            )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([c.capitalize() for c in cats])
+    ax.set_ylabel("Top-1 accuracy")
+    ax.set_ylim(0, 1.05)
+    ax.set_title(
+        "Figure 3 — Top-1 accuracy by MONDO supercategory and cell (full cohort n=1,047)",
+        pad=10,
+        fontsize=12,
+        fontweight="bold",
+    )
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.22), ncol=5, frameon=False)
+    ax.grid(axis="y", alpha=0.3)
+    fig.savefig(FIG_DIR / "fig3_per_mondo_top1.png")
+    plt.close(fig)
+    print("  ✓ Figure 3 (per-MONDO top-1)")
+
+
+# =============================================================================
+# Figure 4 -- Faithfulness vs top-1 correctness
+# =============================================================================
+def render_figure4() -> None:
+    """RAGAS + DeepEval faithfulness distributions split by top-1 correctness."""
+    # Load RAGAS top1-only (n=100) per-case + DeepEval per-case
+    ragas = json.loads((DATA_EVAL / "ragas_top1only_cell_S_n100_summary.json").read_text())
+    deval = json.loads((DATA_EVAL / "deepeval_cell_S_n100.json").read_text())
+
+    # Build a case_id -> top-1-correct map from cell_S sidecars
+    cell_s_dir = DATA_EVAL / "cell_S_rerank_inside_plus_lea"
+    tc_jsonl = (REPO / "data/test_cases_1050/test_cases.jsonl").read_text().splitlines()
+    causal_by_case = {}
+    for line in tc_jsonl:
+        if not line.strip():
+            continue
+        j = json.loads(line)
+        causal_by_case[j["case_id"]] = j.get("causal_gene")
+
+    top1_correct = {}
+    for p in cell_s_dir.glob("*.json"):
+        try:
+            entries = json.loads(p.read_text())
+            if not isinstance(entries, list) or not entries:
+                continue
+            top_entry = min(entries, key=lambda e: e.get("final_rank", 999))
+            case_id = p.stem
+            case_id_match = case_id
+            top_sym = top_entry.get("symbol")
+            causal = causal_by_case.get(case_id_match)
+            if causal is not None and top_sym is not None:
+                top1_correct[case_id_match] = top_sym.upper() == causal.upper()
+        except Exception:
+            continue
+
+    # Map per-case scores; some sidecar case_ids may have prefix variations
+    ragas_pc = {c["case_id"]: c["faithfulness"] for c in ragas["per_case_scores"]}
+    deval_pc = {c["case_id"]: c["hallucination_score"] for c in deval["per_case"]}
+
+    ragas_correct, ragas_wrong = [], []
+    for cid, score in ragas_pc.items():
+        ok = top1_correct.get(cid)
+        if ok is True:
+            ragas_correct.append(score)
+        elif ok is False:
+            ragas_wrong.append(score)
+
+    de_correct, de_wrong = [], []
+    for cid, score in deval_pc.items():
+        ok = top1_correct.get(cid)
+        if ok is True:
+            de_correct.append(score)
+        elif ok is False:
+            de_wrong.append(score)
+
+    fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.5))
+
+    # Left: RAGAS faithfulness boxplot
+    ax = axes[0]
+    bp = ax.boxplot(
+        [ragas_correct, ragas_wrong],
+        patch_artist=True,
+        tick_labels=[
+            f"Top-1 correct\n(n={len(ragas_correct)})",
+            f"Top-1 wrong\n(n={len(ragas_wrong)})",
+        ],
+        widths=0.55,
+        medianprops={"color": "black", "linewidth": 1.5},
+    )
+    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+        patch.set_facecolor(color)
+        patch.set_edgecolor("#2d3748")
+    ax.set_ylabel("RAGAS faithfulness (top-1-only)")
+    mean_c = np.mean(ragas_correct) if ragas_correct else float("nan")
+    mean_w = np.mean(ragas_wrong) if ragas_wrong else float("nan")
+    gap = (mean_c - mean_w) * 100 if ragas_correct and ragas_wrong else float("nan")
+    ax.set_title(f"(a) RAGAS — mean Δ = {gap:+.1f} pp", fontsize=11)
+    ax.set_ylim(-0.05, 1.05)
+    ax.grid(axis="y", alpha=0.3)
+
+    # Right: DeepEval groundedness (1 - hallucination_rate) boxplot
+    ax = axes[1]
+    bp = ax.boxplot(
+        [de_correct, de_wrong],
+        patch_artist=True,
+        tick_labels=[f"Top-1 correct\n(n={len(de_correct)})", f"Top-1 wrong\n(n={len(de_wrong)})"],
+        widths=0.55,
+        medianprops={"color": "black", "linewidth": 1.5},
+    )
+    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+        patch.set_facecolor(color)
+        patch.set_edgecolor("#2d3748")
+    ax.set_ylabel("DeepEval groundedness")
+    mean_c2 = np.mean(de_correct) if de_correct else float("nan")
+    mean_w2 = np.mean(de_wrong) if de_wrong else float("nan")
+    gap2 = (mean_c2 - mean_w2) * 100 if de_correct and de_wrong else float("nan")
+    ax.set_title(f"(b) DeepEval — mean Δ = {gap2:+.1f} pp", fontsize=11)
+    ax.set_ylim(-0.05, 1.05)
+    ax.grid(axis="y", alpha=0.3)
+
+    fig.suptitle(
+        "Figure 4 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
+        fontsize=12,
+        fontweight="bold",
+        y=1.02,
+    )
+    fig.savefig(FIG_DIR / "fig4_faithfulness_vs_correctness.png")
+    plt.close(fig)
+    print(f"  ✓ Figure 4 (faithfulness gaps: RAGAS={gap:+.1f}pp, DeepEval={gap2:+.1f}pp)")
+
+
+# =============================================================================
+# Supp Fig 1 -- LIRICAL recency paradox bar chart
+# =============================================================================
+def render_supp_fig1() -> None:
+    """Pre/post-2020 top-1 by cell (the LIRICAL recency paradox visualisation)."""
+    rec = json.loads((DATA_EVAL / "_results_recency.json").read_text())
+    cells = ["K", "M", "D", "L", "S"]
+    pre = {c: rec["per_cell"]["pre_2020"][c]["top1"][0] for c in cells}
+    post = {c: rec["per_cell"]["post_2020"][c]["top1"][0] for c in cells}
+
+    cell_colors = {
+        "K": "#718096",
+        "M": "#d69e2e",
+        "D": "#3182ce",
+        "L": "#805ad5",
+        "S": "#2f855a",
+    }
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    x = np.arange(len(cells))
+    w = 0.36
+    bars_pre = ax.bar(
+        x - w / 2,
+        [pre[c] for c in cells],
+        w,
+        label=f"Pre-2020 (n={rec['subsets']['pre_2020']})",
+        color=[cell_colors[c] for c in cells],
+        alpha=0.55,
+        edgecolor="black",
+        linewidth=0.7,
+    )
+    bars_post = ax.bar(
+        x + w / 2,
+        [post[c] for c in cells],
+        w,
+        label=f"Post-2020 (n={rec['subsets']['post_2020']})",
+        color=[cell_colors[c] for c in cells],
+        edgecolor="black",
+        linewidth=0.7,
+    )
+
+    for b, v in zip(bars_pre, [pre[c] for c in cells], strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + 0.015,
+            f"{v:.2f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+    for b, v in zip(bars_post, [post[c] for c in cells], strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + 0.015,
+            f"{v:.2f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+
+    # Annotate the Exomiser collapse
+    drop_k = (pre["K"] - post["K"]) * 100
+    ax.annotate(
+        f"Exomiser collapse:\n-{drop_k:.0f} pp on post-2020",
+        xy=(0 + w / 2, post["K"]),
+        xytext=(0.6, 0.35),
+        fontsize=9,
+        color="#c53030",
+        arrowprops={"arrowstyle": "->", "color": "#c53030", "lw": 1.1},
+    )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([CELL_DISPLAY[c] for c in cells], rotation=12, ha="right")
+    ax.set_ylabel("Top-1 accuracy")
+    ax.set_ylim(0, 1.05)
+    ax.set_title(
+        "Supp Fig 1 — Top-1 accuracy by source-publication year cohort (cut-off 2020-01-01)",
+        pad=10,
+        fontsize=11,
+        fontweight="bold",
+    )
+    ax.legend(loc="lower left", frameon=True)
+    ax.grid(axis="y", alpha=0.3)
+    fig.savefig(FIG_DIR / "supp_fig1_lirical_recency_paradox.png")
+    plt.close(fig)
+    print(f"  ✓ Supp Fig 1 (Exomiser collapse {drop_k:+.0f}pp)")
+
+
+# =============================================================================
+# Supp Fig 2 -- LLM-family ablation comparison
+# =============================================================================
+def render_supp_fig2() -> None:
+    """LLM-family ablation: per-model top-1 on overall vs fair cohort."""
+    abl = json.loads((DATA_EVAL / "_results_lea_ablation.json").read_text())
+    models = [
+        "qwen3-8b (production)",
+        "anthropic_claude-sonnet-4.6",
+        "deepseek_deepseek-chat-v3-0324",
+        "qwen_qwen3-32b",
+    ]
+    labels = [
+        "Qwen3-8B\n(production)",
+        "Claude\nSonnet 4.6",
+        "DeepSeek-V3\n(0324)",
+        "Qwen3-32B\n(Instruct)",
+    ]
+    overall = abl["per_cell"]["__all__"]
+    fair = abl["per_cell"]["overlap_absent"]
+    o_top1 = [overall[m]["top1"][0] for m in models]
+    o_lo = [overall[m]["top1"][1] for m in models]
+    o_hi = [overall[m]["top1"][2] for m in models]
+    f_top1 = [fair[m]["top1"][0] for m in models]
+    f_lo = [fair[m]["top1"][1] for m in models]
+    f_hi = [fair[m]["top1"][2] for m in models]
+
+    fig, ax = plt.subplots(figsize=(9, 5.2))
+    x = np.arange(len(models))
+    w = 0.36
+    bars1 = ax.bar(
+        x - w / 2,
+        o_top1,
+        w,
+        label=f"Overall (n={abl['cohort_size']})",
+        color="#3182ce",
+        edgecolor="black",
+        linewidth=0.7,
+        yerr=[np.array(o_top1) - np.array(o_lo), np.array(o_hi) - np.array(o_top1)],
+        capsize=4,
+        error_kw={"elinewidth": 1, "ecolor": "#1a365d"},
+    )
+    bars2 = ax.bar(
+        x + w / 2,
+        f_top1,
+        w,
+        label=f"Fair cohort (n={abl['subsets']['overlap_absent']})",
+        color="#2f855a",
+        edgecolor="black",
+        linewidth=0.7,
+        yerr=[np.array(f_top1) - np.array(f_lo), np.array(f_hi) - np.array(f_top1)],
+        capsize=4,
+        error_kw={"elinewidth": 1, "ecolor": "#22543d"},
+    )
+
+    for b, v in zip(bars1, o_top1, strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + 0.022,
+            f"{v:.2f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+    for b, v in zip(bars2, f_top1, strict=False):
+        ax.text(
+            b.get_x() + b.get_width() / 2,
+            v + 0.022,
+            f"{v:.2f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+        )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("Top-1 accuracy (95 % CI)")
+    ax.set_ylim(0, 1.05)
+    ax.axhline(o_top1[0], color="#3182ce", linestyle="--", linewidth=0.8, alpha=0.5)
+    ax.axhline(f_top1[0], color="#2f855a", linestyle="--", linewidth=0.8, alpha=0.5)
+    ax.set_title(
+        "Supp Fig 2 — LLM-family ablation: top-1 by overall vs fair cohort (n=300)",
+        pad=10,
+        fontsize=11,
+        fontweight="bold",
+    )
+    ax.legend(loc="upper right", frameon=True)
+    ax.grid(axis="y", alpha=0.3)
+    fig.savefig(FIG_DIR / "supp_fig2_llm_family_ablation.png")
+    plt.close(fig)
+
+    spread = (max(f_top1[:3]) - min(f_top1[:3])) * 100  # exclude Qwen3-32B outlier
+    print(f"  ✓ Supp Fig 2 (3-frontier fair-cohort spread {spread:.1f}pp)")
+
+
+def main() -> None:
+    print("Rendering Q1 manuscript artifacts...")
+    print(f"Tables → {TBL_DIR}")
+    print(f"Figures → {FIG_DIR}")
+    print()
+    print("Tables:")
+    render_table1()
+    render_table2()
+    render_table3()
+    render_table4()
+    render_supp_table1()
+    print()
+    print("Figures:")
+    render_figure1()
+    render_figure2()
+    render_figure3()
+    render_figure4()
+    render_supp_fig1()
+    render_supp_fig2()
+    print()
+    print("Done.")
+
+
+if __name__ == "__main__":
+    main()

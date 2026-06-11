@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_1_2",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20238,
+  "tokens_out": 653,
+  "finish_reason": "stop",
+  "latency_s": 9.390137910842896,
+  "cost_usd": 0.070509,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.92,\"rationale\":\"LMNA evidence directly describes FPLD2 with loss of subcutaneous fat in limbs, reduced HDL, hepatic steatosis, diabetes, and dyslipidemia matching all patient HPO terms.\"},{\"gene\":\"CAMK4\",\"confidence\":0.02,\"rationale\":\"No direct CAMK4-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"DIAPH1\",\"confidence\":0.02,\"rationale\":\"No direct DIAPH1-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"ATP10A\",\"confidence\":0.02,\"rationale\":\"No direct ATP10A-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"PPP1R3E\",\"confidence\":0.02,\"rationale\":\"No direct PPP1R3E-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"SLC43A3\",\"confidence\":0.02,\"rationale\":\"No direct SLC43A3-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"TCP1\",\"confidence\":0.02,\"rationale\":\"No direct TCP1-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"ZNF280C\",\"confidence\":0.02,\"rationale\":\"No direct ZNF280C-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"ACOT2\",\"confidence\":0.02,\"rationale\":\"No direct ACOT2-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"RAPGEF2\",\"confidence\":0.02,\"rationale\":\"No direct RAPGEF2-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"OR51B4\",\"confidence\":0.02,\"rationale\":\"No direct OR51B4-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"DDHD1\",\"confidence\":0.02,\"rationale\":\"No direct DDHD1-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"RNGTT\",\"confidence\":0.02,\"rationale\":\"No direct RNGTT-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"SHISA5\",\"confidence\":0.02,\"rationale\":\"No direct SHISA5-specific evidence; only generic lipodystrophy background literature shared across candidates.\"},{\"gene\":\"TMEM258\",\"confidence\":0.02,\"rationale\":\"No direct TMEM258-specific evidence; only generic lipodystrophy background literature shared across candidates.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CAMK4",
+    "DIAPH1",
+    "ATP10A",
+    "PPP1R3E"
+  ]
+}

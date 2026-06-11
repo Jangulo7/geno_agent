@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_P_09",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19615,
+  "tokens_out": 790,
+  "finish_reason": "stop",
+  "latency_s": 13.636656999588013,
+  "cost_usd": 0.070695,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.82, \"rationale\": \"STXBP1 evidence directly describes burst suppression, epileptic spasms, focal seizures, hypotonia, global developmental delay, and spike-wave complexes matching all patient HPO terms.\"}, {\"gene\": \"CYFIP2\", \"confidence\": 0.08, \"rationale\": \"CYFIP2 evidence shows early-onset epileptic encephalopathy with suppression-burst, epileptic spasms, profound DD, and hypotonia, partially matching the phenotype.\"}, {\"gene\": \"AKR1C2\", \"confidence\": 0.02, \"rationale\": \"No direct AKR1C2-specific evidence; only generic epileptic encephalopathy literature shared across candidates.\"}, {\"gene\": \"BEND7\", \"confidence\": 0.01, \"rationale\": \"No BEND7-specific neurological disease evidence; chunks describe unrelated epilepsy cases without gene-specific association.\"}, {\"gene\": \"OR2W3\", \"confidence\": 0.01, \"rationale\": \"No OR2W3-specific evidence linking it to epileptic encephalopathy or the patient's phenotype profile.\"}, {\"gene\": \"S100A8\", \"confidence\": 0.01, \"rationale\": \"No S100A8-specific evidence; shared chunks describe unrelated epilepsy encephalopathy cases.\"}, {\"gene\": \"SLC16A5\", \"confidence\": 0.01, \"rationale\": \"No SLC16A5-specific evidence for this phenotype; evidence describes GLUT1 deficiency unrelated to this profile.\"}, {\"gene\": \"DYNC1LI2\", \"confidence\": 0.01, \"rationale\": \"No DYNC1LI2-specific evidence linking it to epileptic encephalopathy with burst suppression or spasms.\"}, {\"gene\": \"MRPS10\", \"confidence\": 0.01, \"rationale\": \"No MRPS10-specific neurological disease evidence; only generic epilepsy encephalopathy literature shared.\"}, {\"gene\": \"MRPL16\", \"confidence\": 0.01, \"rationale\": \"No MRPL16-specific evidence; shared chunks do not implicate this mitochondrial ribosomal gene in the phenotype.\"}, {\"gene\": \"LRRC37A2\", \"confidence\": 0.01, \"rationale\": \"No LRRC37A2-specific evidence linking it to epileptic encephalopathy or the patient's HPO terms.\"}, {\"gene\": \"ENOX1\", \"confidence\": 0.01, \"rationale\": \"No ENOX1-specific evidence; only generic epilepsy encephalopathy literature without gene-specific association.\"}, {\"gene\": \"TTK\", \"confidence\": 0.01, \"rationale\": \"No TTK-specific neurological disease evidence; shared chunks describe unrelated epilepsy cases.\"}, {\"gene\": \"MTSS2\", \"confidence\": 0.01, \"rationale\": \"No MTSS2-specific evidence linking it to epileptic encephalopathy with burst suppression or spasms.\"}, {\"gene\": \"TRIM65\", \"confidence\": 0.01, \"rationale\": \"No TRIM65-specific evidence; shared chunks do not implicate this gene in the patient's epileptic encephalopathy phenotype.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "CYFIP2",
+    "AKR1C2",
+    "BEND7",
+    "OR2W3"
+  ]
+}

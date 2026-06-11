@@ -1,0 +1,26 @@
+{
+  "case_id": "CHUK:PMID_20961246_fetus_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CHUK",
+  "orig_qwen3_8b_top1": "CHUK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CHUK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20214,
+  "tokens_out": 640,
+  "finish_reason": "stop",
+  "latency_s": 9.35835862159729,
+  "cost_usd": 0.070242,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CHUK\",\"confidence\":0.88,\"rationale\":\"CHUK loss-of-function causes cocoon syndrome with omphalocele, hypoplastic/immotile limbs, cranial cysts, microphthalmia, cleft lip/palate, abnormal skin, and lung/bone anomalies\u2014directly matching the patient's full HPO profile.\"},{\"gene\":\"MBD5\",\"confidence\":0.03,\"rationale\":\"MBD5 evidence relates to neurodevelopmental features; no direct match to this severe fetal malformation syndrome.\"},{\"gene\":\"CYP7B1\",\"confidence\":0.02,\"rationale\":\"CYP7B1 variants cause SPG5 spastic paraplegia in adults; no relevance to this lethal fetal malformation phenotype.\"},{\"gene\":\"GET3\",\"confidence\":0.01,\"rationale\":\"No specific GET3 disease evidence provided; background chunks only, no phenotype match.\"},{\"gene\":\"EPHX4\",\"confidence\":0.01,\"rationale\":\"No specific EPHX4 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"PLEKHD1\",\"confidence\":0.01,\"rationale\":\"No specific PLEKHD1 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"CCDC124\",\"confidence\":0.01,\"rationale\":\"No specific CCDC124 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"TMEM139\",\"confidence\":0.01,\"rationale\":\"No specific TMEM139 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"NACA\",\"confidence\":0.01,\"rationale\":\"No specific NACA disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"PDE8B\",\"confidence\":0.01,\"rationale\":\"No specific PDE8B disease evidence relevant to this fetal malformation syndrome.\"},{\"gene\":\"YWHAG\",\"confidence\":0.01,\"rationale\":\"No specific YWHAG disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"SLC30A5\",\"confidence\":0.01,\"rationale\":\"No specific SLC30A5 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"NAF1\",\"confidence\":0.01,\"rationale\":\"No specific NAF1 disease evidence relevant to this fetal malformation syndrome.\"},{\"gene\":\"LRRC24\",\"confidence\":0.01,\"rationale\":\"No specific LRRC24 disease evidence; background literature chunks only with no phenotype match.\"},{\"gene\":\"OR10H2\",\"confidence\":0.01,\"rationale\":\"OR10H2 is an olfactory receptor gene with no known disease association relevant to this phenotype.\"}]",
+  "parsed_top5": [
+    "CHUK",
+    "MBD5",
+    "CYP7B1",
+    "GET3",
+    "EPHX4"
+  ]
+}

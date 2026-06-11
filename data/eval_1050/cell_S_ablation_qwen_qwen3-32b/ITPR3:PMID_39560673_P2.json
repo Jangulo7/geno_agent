@@ -1,0 +1,20 @@
+{
+  "case_id": "ITPR3:PMID_39560673_P2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18015,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 4.290239334106445,
+  "cost_usd": 0.0014470800000000001,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "parsed_top5": []
+}

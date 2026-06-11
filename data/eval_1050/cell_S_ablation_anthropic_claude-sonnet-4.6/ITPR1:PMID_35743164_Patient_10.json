@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_35743164_Patient_10",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17388,
+  "tokens_out": 671,
+  "finish_reason": "stop",
+  "latency_s": 12.261968851089478,
+  "cost_usd": 0.062229,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.93,\"rationale\":\"All three ITPR1 chunks directly describe SCA29 with early-onset ataxia, hypotonia, motor delay, moderate intellectual disability, cerebellar atrophy, and nystagmus\u2014matching every patient HPO term.\"},{\"gene\":\"TEP1\",\"confidence\":0.02,\"rationale\":\"No direct TEP1 disease association; evidence chunks describe unrelated genes with only partial phenotype overlap.\"},{\"gene\":\"FOXD4L5\",\"confidence\":0.01,\"rationale\":\"No relevant FOXD4L5 evidence; chunks describe unrelated conditions with no direct gene-phenotype link.\"},{\"gene\":\"ZNF146\",\"confidence\":0.01,\"rationale\":\"No relevant ZNF146 evidence; chunks describe unrelated neurological conditions not linked to this gene.\"},{\"gene\":\"STRC\",\"confidence\":0.01,\"rationale\":\"STRC is associated with hearing loss, not ataxia/cerebellar atrophy; evidence chunks are non-specific.\"},{\"gene\":\"IDH2\",\"confidence\":0.01,\"rationale\":\"IDH2 evidence chunks describe unrelated conditions; no direct link to the patient's cerebellar ataxia phenotype.\"},{\"gene\":\"GUCY1A1\",\"confidence\":0.01,\"rationale\":\"No relevant GUCY1A1 neurological disease evidence; chunks describe unrelated disorders.\"},{\"gene\":\"OAS1\",\"confidence\":0.01,\"rationale\":\"OAS1 is an innate immunity gene; no evidence linking it to cerebellar ataxia or the patient's phenotype.\"},{\"gene\":\"ZNF711\",\"confidence\":0.01,\"rationale\":\"ZNF711 evidence chunks are non-specific and describe unrelated conditions without direct gene mention.\"},{\"gene\":\"OR52K2\",\"confidence\":0.01,\"rationale\":\"OR52K2 is an olfactory receptor gene with no known neurological disease association matching this phenotype.\"},{\"gene\":\"ZNF724\",\"confidence\":0.01,\"rationale\":\"No relevant ZNF724 evidence; chunks describe unrelated neurological conditions.\"},{\"gene\":\"C19orf18\",\"confidence\":0.01,\"rationale\":\"No relevant C19orf18 evidence; chunks describe unrelated conditions without direct gene-phenotype link.\"},{\"gene\":\"TSPY2\",\"confidence\":0.01,\"rationale\":\"TSPY2 is a testis-specific gene with no known association to cerebellar ataxia or the patient's phenotype.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.01,\"rationale\":\"ATP6V0B evidence is non-specific; no direct link to cerebellar ataxia phenotype for this gene.\"},{\"gene\":\"GABRR3\",\"confidence\":0.01,\"rationale\":\"GABRR3 evidence chunks are non-specific and describe unrelated conditions without direct gene-phenotype association.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "TEP1",
+    "FOXD4L5",
+    "ZNF146",
+    "STRC"
+  ]
+}

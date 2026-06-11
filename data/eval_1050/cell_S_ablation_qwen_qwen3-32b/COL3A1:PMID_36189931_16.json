@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_16",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19508,
+  "tokens_out": 705,
+  "finish_reason": "stop",
+  "latency_s": 16.39936065673828,
+  "cost_usd": 0.0017580400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"COL3A1\": {\"gene\": \"COL3A1\", \"confidence\": 0.95, \"rationale\": \"COL3A1 mutations cause vascular EDS with thin skin, bruising, arterial dissection/rupture, and characteristic facial features matching the patient's phenotype.\"}, \"HMBOX1\": {\"gene\": \"HMBOX1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking HMBOX1 to vascular EDS or the patient's specific phenotype.\"}, \"ZNF583\": {\"gene\": \"ZNF583\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting ZNF583 to vascular EDS or the described clinical features.\"}, \"XCL1\": {\"gene\": \"XCL1\", \"confidence\": 0.1, \"rationale\": \"No evidence linking XCL1 to vascular EDS or the patient's phenotype.\"}, \"ZBTB2\": {\"gene\": \"ZBTB2\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting ZBTB2 to vascular EDS or the described clinical features.\"}, \"CHCHD1\": {\"gene\": \"CHCHD1\", \"confidence\": 0.1, \"rationale\": \"No evidence linking CHCHD1 to vascular EDS or the patient's phenotype.\"}, \"MTF1\": {\"gene\": \"MTF1\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting MTF1 to vascular EDS or the described clinical features.\"}, \"PTPN22\": {\"gene\": \"PTPN22\", \"confidence\": 0.1, \"rationale\": \"No evidence linking PTPN22 to vascular EDS or the patient's phenotype.\"}, \"ATP8B1\": {\"gene\": \"ATP8B1\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting ATP8B1 to vascular EDS or the described clinical features.\"}, \"OR4C46\": {\"gene\": \"OR4C46\", \"confidence\": 0.1, \"rationale\": \"No evidence linking OR4C46 to vascular EDS or the patient's phenotype.\"}, \"SELENBP1\": {\"gene\": \"SELENBP1\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting SELENBP1 to vascular EDS or the described clinical features.\"}, \"FXR1\": {\"gene\": \"FXR1\", \"confidence\": 0.1, \"rationale\": \"No evidence linking FXR1 to vascular EDS or the patient's phenotype.\"}, \"WASF2\": {\"gene\": \"WASF2\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting WASF2 to vascular EDS or the described clinical features.\"}, \"DPF2\": {\"gene\": \"DPF2\", \"confidence\": 0.1, \"rationale\": \"No evidence linking DPF2 to vascular EDS or the patient's phenotype.\"}, \"P3H1\": {\"gene\": \"P3H1\", \"confidence\": 0.1, \"rationale\": \"No evidence connecting P3H1 to vascular EDS or the described clinical features.\"}}",
+  "parsed_top5": [
+    "COL3A1",
+    "HMBOX1",
+    "ZNF583",
+    "XCL1",
+    "ZBTB2"
+  ]
+}

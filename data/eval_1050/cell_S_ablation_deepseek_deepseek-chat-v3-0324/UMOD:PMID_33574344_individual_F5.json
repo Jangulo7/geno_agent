@@ -1,0 +1,22 @@
+{
+  "case_id": "UMOD:PMID_33574344_individual_F5",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16370,
+  "tokens_out": 47,
+  "finish_reason": "stop",
+  "latency_s": 3.836277723312378,
+  "cost_usd": 0.00331019,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"UMOD\",\n  \"confidence\": 0.95,\n  \"rationale\": \"UMOD is strongly linked to ADTKD with renal cysts and elevated creatinine, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "UMOD"
+  ]
+}

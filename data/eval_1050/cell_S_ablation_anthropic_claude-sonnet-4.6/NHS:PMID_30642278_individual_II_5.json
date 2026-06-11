@@ -1,0 +1,26 @@
+{
+  "case_id": "NHS:PMID_30642278_individual_II_5",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16948,
+  "tokens_out": 699,
+  "finish_reason": "stop",
+  "latency_s": 10.26112961769104,
+  "cost_usd": 0.061329,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NHS\",\"confidence\":0.97,\"rationale\":\"NHS gene evidence directly and explicitly describes Nance-Horan syndrome with nuclear cataracts, screwdriver incisors, mulberry molars, narrow face, anteverted ears, nystagmus, and malocclusion\u2014matching all patient HPO terms.\"},{\"gene\":\"COX19\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe NHS syndrome/gene, not COX19; no direct link between COX19 and this phenotype profile.\"},{\"gene\":\"GNG5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not GNG5; no evidence linking GNG5 to this phenotype.\"},{\"gene\":\"GPR39\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not GPR39; no evidence linking GPR39 to this phenotype.\"},{\"gene\":\"CXXC4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not CXXC4; no evidence linking CXXC4 to this phenotype.\"},{\"gene\":\"GSAP\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not GSAP; no evidence linking GSAP to this phenotype.\"},{\"gene\":\"SIX4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not SIX4; no evidence linking SIX4 to this phenotype.\"},{\"gene\":\"LRRK2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not LRRK2; no evidence linking LRRK2 to this phenotype.\"},{\"gene\":\"ACTR3C\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not ACTR3C; no evidence linking ACTR3C to this phenotype.\"},{\"gene\":\"SPNS3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not SPNS3; no evidence linking SPNS3 to this phenotype.\"},{\"gene\":\"STON1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not STON1; no evidence linking STON1 to this phenotype.\"},{\"gene\":\"GFRA2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not GFRA2; no evidence linking GFRA2 to this phenotype.\"},{\"gene\":\"HABP4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not HABP4; no evidence linking HABP4 to this phenotype.\"},{\"gene\":\"ADGRG7\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not ADGRG7; no evidence linking ADGRG7 to this phenotype.\"},{\"gene\":\"ZNF98\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference NHS gene mutations, not ZNF98; no evidence linking ZNF98 to this phenotype.\"}]",
+  "parsed_top5": [
+    "NHS",
+    "COX19",
+    "GNG5",
+    "GPR39",
+    "CXXC4"
+  ]
+}

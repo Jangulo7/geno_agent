@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826260_Patient_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "IKZF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21634,
+  "tokens_out": 1051,
+  "finish_reason": "stop",
+  "latency_s": 14.630387544631958,
+  "cost_usd": 0.080667,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF2\",\n    \"confidence\": 0.52,\n    \"rationale\": \"IKZF2 (Helios) is directly mentioned in T cell subset regulation including memory CD8/CD4 and naive T cell populations, most consistent with the complex immune phenotype including candidiasis and recurrent infections.\"\n  },\n  {\n    \"gene\": \"FAM13B\",\n    \"confidence\": 0.12,\n    \"rationale\": \"FAM13B shows direct correlation with effector memory CD4 T cell proportion and appears in hypothyroidism immune context, partially matching patient phenotype but without mechanistic disease link.\"\n  },\n  {\n    \"gene\": \"MTDH\",\n    \"confidence\": 0.05,\n    \"rationale\": \"MTDH evidence mentions central memory CD8 and effector memory CD4 T cells in cancer context, but no direct link to immunodeficiency, candidiasis, or hypothyroidism phenotype.\"\n  },\n  {\n    \"gene\": \"DEPTOR\",\n    \"confidence\": 0.04,\n    \"rationale\": \"DEPTOR evidence only shows generic immune cell proportion data from hypothyroidism studies with no specific gene-level mechanistic link to the patient phenotype.\"\n  },\n  {\n    \"gene\": \"BMI1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"BMI1 evidence only contains generic immune cell proportion data with no direct mechanistic connection to the complex immunodeficiency and endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"SMTN\",\n    \"confidence\": 0.03,\n    \"rationale\": \"SMTN evidence is entirely non-specific, showing only generic T cell subset data with no direct gene-level relevance to the patient phenotype.\"\n  },\n  {\n    \"gene\": \"FIGLA\",\n    \"confidence\": 0.03,\n    \"rationale\": \"FIGLA evidence is entirely non-specific with no direct mechanistic link to immunodeficiency, candidiasis, or the observed immune cell subset abnormalities.\"\n  },\n  {\n    \"gene\": \"PTK6\",\n    \"confidence\": 0.03,\n    \"rationale\": \"PTK6 evidence is entirely non-specific with no direct mechanistic link to the patient's complex immune and endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"KCNS1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"KCNS1 evidence is entirely non-specific with no direct mechanistic link to immunodeficiency, candidiasis, or the observed immune cell subset abnormalities.\"\n  },\n  {\n    \"gene\": \"DSCAML1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"DSCAML1 evidence is entirely non-specific with no direct mechanistic link to the patient's complex immune and endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"TFDP1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"TFDP1 evidence is entirely non-specific with no direct mechanistic link to immunodeficiency, candidiasis, or the observed immune cell subset abnormalities.\"\n  },\n  {\n    \"gene\": \"OR2G6\",\n    \"confidence\": 0.02,\n    \"rationale\": \"OR2G6 evidence is entirely non-specific with no direct mechanistic link to the patient's complex immune and endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"DPPA4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"DPPA4 evidence is entirely non-specific with no direct mechanistic link to immunodeficiency, candidiasis, or the observed immune cell subset abnormalities.\"\n  },\n  {\n    \"gene\": \"DHPS\",\n    \"confidence\": 0.02,\n    \"rationale\": \"DHPS evidence is entirely non-specific with no direct mechanistic link to the patient's complex immune and endocrine phenotype.\"\n  },\n  {\n    \"gene\": \"FAM90A12\",\n    \"confidence\": 0.01,\n    \"rationale\": \"FAM90A12 evidence is entirely non-specific with no direct mechanistic link to immunodeficiency, candidiasis, or the observed immune cell subset abnormalities.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF2",
+    "FAM13B",
+    "MTDH",
+    "DEPTOR",
+    "BMI1"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "primary": [
+    {
+      "comparison": "geno_agent (S) vs Exomiser (K), top-1, FAIR cohort",
+      "raw_p": 0.01544,
+      "holm_p": 0.028,
+      "bh_p": 0.01544,
+      "survives_holm_0.05": true
+    },
+    {
+      "comparison": "geno_agent (S) vs LIRICAL (M), top-1, FAIR cohort",
+      "raw_p": 0.014,
+      "holm_p": 0.028,
+      "bh_p": 0.01544,
+      "survives_holm_0.05": true
+    }
+  ],
+  "supportive": [
+    {
+      "comparison": "geno_agent (S) vs Exomiser (K), top-1, full cohort",
+      "raw_p": 0.01866,
+      "holm_p": 0.01866,
+      "bh_p": 0.01866,
+      "survives_holm_0.05": true
+    },
+    {
+      "comparison": "geno_agent (S) vs Exomiser (K), top-1, post-2020",
+      "raw_p": 7e-05,
+      "holm_p": 0.00014,
+      "bh_p": 0.00014,
+      "survives_holm_0.05": true
+    }
+  ],
+  "all_primary_survive_holm": true
+}

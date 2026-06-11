@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15099,
+  "tokens_out": 658,
+  "finish_reason": "stop",
+  "latency_s": 56.6127073764801,
+  "cost_usd": 0.00352646,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA mutations cause atypical progeroid syndromes with lipodystrophy, short stature, alopecia, and micrognathia, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC17A9\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking SLC17A9 to failure to thrive and short stature, but no direct match to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"FOXI1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FOXI1 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"GNAQ\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GNAQ to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SCOC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SCOC to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SPANXC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SPANXC to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF274\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF274 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"H1-4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking H1-4 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ITK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ITK to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZCCHC18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZCCHC18 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DUSP22\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DUSP22 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TRA2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRA2A to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"AGPAT3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AGPAT3 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"IDNK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IDNK to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"COL6A6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking COL6A6 to the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "SLC17A9",
+    "FOXI1",
+    "GNAQ",
+    "SCOC"
+  ]
+}

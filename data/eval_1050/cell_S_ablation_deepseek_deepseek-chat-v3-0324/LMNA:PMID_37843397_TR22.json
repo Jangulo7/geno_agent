@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR22",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17213,
+  "tokens_out": 691,
+  "finish_reason": "stop",
+  "latency_s": 20.021608114242554,
+  "cost_usd": 0.0039746700000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence links LMNA mutations to familial partial lipodystrophy with limb and truncal fat loss, diabetes, and hypertriglyceridemia.\"\n  },\n  {\n    \"gene\": \"FAM236B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM236B to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"B3GALT4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting B3GALT4 in lipodystrophy or related metabolic disorders.\"\n  },\n  {\n    \"gene\": \"ATP2C2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking ATP2C2 to lipodystrophy or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ITGB7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting ITGB7 to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"ULK1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence tying ULK1 to the observed lipodystrophy phenotype.\"\n  },\n  {\n    \"gene\": \"NIPBL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"NIPBL is unrelated to lipodystrophy; no supporting evidence found.\"\n  },\n  {\n    \"gene\": \"CSDC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No association between CSDC2 and lipodystrophy or metabolic syndrome.\"\n  },\n  {\n    \"gene\": \"REC114\",\n    \"confidence\": 0.1,\n    \"rationale\": \"REC114 has no known role in lipodystrophy or related conditions.\"\n  },\n  {\n    \"gene\": \"FNTB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking FNTB to the patient's lipodystrophy or metabolic profile.\"\n  },\n  {\n    \"gene\": \"SYDE1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"SYDE1 is not implicated in lipodystrophy or the described metabolic features.\"\n  },\n  {\n    \"gene\": \"INPPL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting INPPL1 in lipodystrophy or analogous metabolic disorders.\"\n  },\n  {\n    \"gene\": \"TEX38\",\n    \"confidence\": 0.1,\n    \"rationale\": \"TEX38 has no known association with lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"IL36RN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"IL36RN is unrelated to lipodystrophy; no supporting evidence found.\"\n  },\n  {\n    \"gene\": \"OR2A14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"OR2A14 has no known role in lipodystrophy or metabolic syndromes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "FAM236B",
+    "B3GALT4",
+    "ATP2C2",
+    "ITGB7"
+  ]
+}

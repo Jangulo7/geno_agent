@@ -1,0 +1,26 @@
+{
+  "case_id": "NHS:PMID_30642278_individual_II_5",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15026,
+  "tokens_out": 618,
+  "finish_reason": "stop",
+  "latency_s": 19.490660190582275,
+  "cost_usd": 0.0034810600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NHS\",\n    \"confidence\": 1.0,\n    \"rationale\": \"Direct evidence links NHS to all patient phenotypes (nuclear cataracts, dental anomalies, facial dysmorphism), with high relevance in multiple chunks.\"\n  },\n  {\n    \"gene\": \"COX19\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Mentions NHS-related phenotypes but no direct link to COX19; evidence chunks are NHS-focused.\"\n  },\n  {\n    \"gene\": \"GNG5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking GNG5 to the phenotypes; chunks discuss NHS instead.\"\n  },\n  {\n    \"gene\": \"GPR39\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Evidence chunks describe NHS phenotypes, with no relevance to GPR39.\"\n  },\n  {\n    \"gene\": \"CXXC4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No connection to phenotypes; all evidence refers to NHS.\"\n  },\n  {\n    \"gene\": \"GSAP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Unrelated to phenotypes; evidence discusses NHS exclusively.\"\n  },\n  {\n    \"gene\": \"SIX4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence; chunks describe NHS-associated features instead.\"\n  },\n  {\n    \"gene\": \"LRRK2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No association with patient symptoms; all chunks reference NHS.\"\n  },\n  {\n    \"gene\": \"ACTR3C\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Irrelevant to phenotypes; evidence focuses on NHS.\"\n  },\n  {\n    \"gene\": \"SPNS3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No phenotypic link; evidence describes NHS exclusively.\"\n  },\n  {\n    \"gene\": \"STON1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No supporting evidence; chunks discuss NHS phenotypes.\"\n  },\n  {\n    \"gene\": \"GFRA2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No connection to symptoms; evidence is NHS-related.\"\n  },\n  {\n    \"gene\": \"HABP4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Unrelated to case; all chunks reference NHS.\"\n  },\n  {\n    \"gene\": \"ADGRG7\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence; phenotypes described are NHS-specific.\"\n  },\n  {\n    \"gene\": \"ZNF98\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No link to phenotypes; evidence refers to NHS-associated features.\"\n  }\n]",
+  "parsed_top5": [
+    "NHS",
+    "COX19",
+    "GNG5",
+    "GPR39",
+    "CXXC4"
+  ]
+}

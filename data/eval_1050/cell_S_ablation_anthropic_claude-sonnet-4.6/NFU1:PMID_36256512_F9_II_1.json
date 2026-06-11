@@ -1,0 +1,26 @@
+{
+  "case_id": "NFU1:PMID_36256512_F9_II_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NFU1",
+  "orig_qwen3_8b_top1": "SYT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NFU1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17628,
+  "tokens_out": 994,
+  "finish_reason": "stop",
+  "latency_s": 14.774534940719604,
+  "cost_usd": 0.067794,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NFU1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"NFU1 mutations cause encephalopathy with regression, peripheral neuropathy, and leukodystrophy; evidence directly links NFU1 to developmental regression and mixed sensory-motor neuropathy matching all three HPO terms.\"\n  },\n  {\n    \"gene\": \"GTPBP2\",\n    \"confidence\": 0.22,\n    \"rationale\": \"GTPBP2 variants cause neurodegeneration with developmental regression, chronic motor neuronopathy/peripheral neuropathy, and variable autonomic dysfunction, covering multiple patient HPO features.\"\n  },\n  {\n    \"gene\": \"SYT1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"SYT1/SYT2 mutations cause developmental neuropathies and neuromuscular dysfunction; evidence links C2B domain mutations to peripheral neuropathy phenotypes though ptosis and regression are less directly supported.\"\n  },\n  {\n    \"gene\": \"GCLM\",\n    \"confidence\": 0.08,\n    \"rationale\": \"GCLC/GCLM deficiency causes peripheral neuropathy, spinocerebellar degeneration, and neurological regression, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"KCTD3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"KCTD3 mutations cause global developmental delay and cerebellar hypoplasia but evidence for peripheral neuropathy and ptosis is lacking.\"\n  },\n  {\n    \"gene\": \"CHRFAM7A\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence mentions ptosis and peripheral neuropathy only as rare features in a broad syndrome; no direct causal link to all three HPO terms.\"\n  },\n  {\n    \"gene\": \"RIPOR1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence linking RIPOR1 to developmental regression, ptosis, or peripheral neuropathy in the provided chunks.\"\n  },\n  {\n    \"gene\": \"MRPS11\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking MRPS11 to the patient's phenotype triad; only generic mitochondrial disease context provided.\"\n  },\n  {\n    \"gene\": \"SMC5\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence linking SMC5 to developmental regression, ptosis, or peripheral neuropathy in the provided literature.\"\n  },\n  {\n    \"gene\": \"EML2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking EML2 to the patient's phenotype; only generic mitochondrial disease context provided.\"\n  },\n  {\n    \"gene\": \"TM4SF1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence linking TM4SF1 to developmental regression, ptosis, or peripheral neuropathy in the provided chunks.\"\n  },\n  {\n    \"gene\": \"NBPF8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking NBPF8 to the patient's phenotype triad in the provided literature.\"\n  },\n  {\n    \"gene\": \"CHRM3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CHRM3 to developmental regression, ptosis, or peripheral neuropathy in the provided chunks.\"\n  },\n  {\n    \"gene\": \"ZXDA\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking ZXDA to the patient's phenotype triad in the provided literature.\"\n  },\n  {\n    \"gene\": \"NWD2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking NWD2 to developmental regression, ptosis, or peripheral neuropathy in the provided chunks.\"\n  }\n]",
+  "parsed_top5": [
+    "NFU1",
+    "GTPBP2",
+    "SYT1",
+    "GCLM",
+    "KCTD3"
+  ]
+}

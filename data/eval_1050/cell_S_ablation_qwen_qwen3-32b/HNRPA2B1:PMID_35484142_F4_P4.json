@@ -1,0 +1,20 @@
+{
+  "case_id": "HNRPA2B1:PMID_35484142_F4_P4",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "HNRNPA2B1",
+  "orig_qwen3_8b_top1": "HNRNPA2B1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16461,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.71519136428833,
+  "cost_usd": 0.0013233200000000002,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

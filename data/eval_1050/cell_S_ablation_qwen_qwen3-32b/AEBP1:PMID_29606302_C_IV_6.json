@@ -1,0 +1,26 @@
+{
+  "case_id": "AEBP1:PMID_29606302_C_IV_6",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "AEBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AEBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18362,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 26.26505136489868,
+  "cost_usd": 0.0016728000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"AEBP1\", \"confidence\": 0.95, \"rationale\": \"AEBP1-related EDS matches the patient's phenotype including hallux valgus, hammertoe, hypotonia, joint hypermobility, and atrophic scars.\"}, {\"gene\": \"CD44\", \"confidence\": 0.85, \"rationale\": \"CD44 is associated with EDS-like features including foot deformities, joint hypermobility, and skin abnormalities.\"}, {\"gene\": \"TNFSF14\", \"confidence\": 0.7, \"rationale\": \"TNFSF14-related EDS presents with kyphoscoliosis, joint hypermobility, and foot deformities, partially overlapping the patient's phenotype.\"}, {\"gene\": \"COL15A1\", \"confidence\": 0.6, \"rationale\": \"COL15A1 is linked to collagen-related disorders with joint and bone abnormalities, but evidence is less specific to the patient's features.\"}, {\"gene\": \"PMVK\", \"confidence\": 0.55, \"rationale\": \"PMVK is associated with EDS-like features, but evidence is limited and less specific to the patient's full phenotype.\"}, {\"gene\": \"WHRN\", \"confidence\": 0.5, \"rationale\": \"WHRN is linked to connective tissue disorders, but evidence is sparse and not directly supporting the patient's features.\"}, {\"gene\": \"FDXR\", \"confidence\": 0.45, \"rationale\": \"FDXR is involved in metabolic pathways, but evidence linking it to the patient's phenotype is minimal.\"}, {\"gene\": \"ZMYM6\", \"confidence\": 0.4, \"rationale\": \"ZMYM6 is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"CHST5\", \"confidence\": 0.35, \"rationale\": \"CHST5 is involved in glycosaminoglycan synthesis, but evidence is not specific to the patient's phenotype.\"}, {\"gene\": \"TRMT11\", \"confidence\": 0.3, \"rationale\": \"TRMT11 is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"STON2\", \"confidence\": 0.25, \"rationale\": \"STON2 is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"C1D\", \"confidence\": 0.2, \"rationale\": \"C1D is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"PPT1\", \"confidence\": 0.15, \"rationale\": \"PPT1 is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"CEP85L\", \"confidence\": 0.1, \"rationale\": \"CEP85L is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}, {\"gene\": \"CDH23\", \"confidence\": 0.05, \"rationale\": \"CDH23 is not well-characterized in EDS and evidence is not directly supportive of the patient's features.\"}]",
+  "parsed_top5": [
+    "AEBP1",
+    "CD44",
+    "TNFSF14",
+    "COL15A1",
+    "PMVK"
+  ]
+}

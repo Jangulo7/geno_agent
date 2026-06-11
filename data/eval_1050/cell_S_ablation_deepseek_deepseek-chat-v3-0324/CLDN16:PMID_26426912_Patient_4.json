@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_26426912_Patient_4",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14787,
+  "tokens_out": 635,
+  "finish_reason": "stop",
+  "latency_s": 39.251930236816406,
+  "cost_usd": 0.00344635,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLDN16\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to FHHNC with matching phenotypes including nephrocalcinosis, hypomagnesemia, and hypercalciuria.\"\n  },\n  {\n    \"gene\": \"SMCO1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SMCO1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LRP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRP1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ARIH1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ARIH1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ITGA7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ITGA7 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"HOXB6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HOXB6 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"MC4R\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MC4R to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CHIC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CHIC1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PGA4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PGA4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"DNAJA4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DNAJA4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ASB8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ASB8 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ITPKB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ITPKB to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CYP4V2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CYP4V2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GSTA3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GSTA3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"VRK1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VRK1 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "CLDN16",
+    "SMCO1",
+    "LRP1",
+    "ARIH1",
+    "ITGA7"
+  ]
+}

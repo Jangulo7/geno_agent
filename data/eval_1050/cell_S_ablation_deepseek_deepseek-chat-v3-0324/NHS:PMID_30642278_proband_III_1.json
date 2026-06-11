@@ -1,0 +1,22 @@
+{
+  "case_id": "NHS:PMID_30642278_proband_III_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15280,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 5.687690019607544,
+  "cost_usd": 0.0030983499999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"NHS\",\n  \"confidence\": 0.95,\n  \"rationale\": \"NHS is strongly associated with Nance-Horan syndrome, matching all patient phenotypes including nuclear cataracts, dental anomalies, and facial dysmorphism.\"\n}",
+  "parsed_top5": [
+    "NHS"
+  ]
+}

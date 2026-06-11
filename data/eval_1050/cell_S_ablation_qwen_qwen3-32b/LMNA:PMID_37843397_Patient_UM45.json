@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM45",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18153,
+  "tokens_out": 745,
+  "finish_reason": "stop",
+  "latency_s": 12.193828821182251,
+  "cost_usd": 0.0016608400000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"LMNA\": {\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"LMNA mutations are well-established in FPLD2, aligning with the patient's lipodystrophy, diabetes, and hepatic steatosis.\"}, \"ZSCAN5C\": {\"gene\": \"ZSCAN5C\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking ZSCAN5C to the patient's lipodystrophy or metabolic phenotype.\"}, \"ANO9\": {\"gene\": \"ANO9\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking ANO9 to the patient's lipodystrophy or metabolic phenotype.\"}, \"CHD3\": {\"gene\": \"CHD3\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking CHD3 to the patient's lipodystrophy or metabolic phenotype.\"}, \"IFITM10\": {\"gene\": \"IFITM10\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking IFITM10 to the patient's lipodystrophy or metabolic phenotype.\"}, \"DNAAF4\": {\"gene\": \"DNAAF4\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking DNAAF4 to the patient's lipodystrophy or metabolic phenotype.\"}, \"HRG\": {\"gene\": \"HRG\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking HRG to the patient's lipodystrophy or metabolic phenotype.\"}, \"FAM91A1\": {\"gene\": \"FAM91A1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking FAM91A1 to the patient's lipodystrophy or metabolic phenotype.\"}, \"STARD9\": {\"gene\": \"STARD9\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking STARD9 to the patient's lipodystrophy or metabolic phenotype.\"}, \"NFKBID\": {\"gene\": \"NFKBID\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking NFKBID to the patient's lipodystrophy or metabolic phenotype.\"}, \"FAM43A\": {\"gene\": \"FAM43A\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking FAM43A to the patient's lipodystrophy or metabolic phenotype.\"}, \"SDSL\": {\"gene\": \"SDSL\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking SDSL to the patient's lipodystrophy or metabolic phenotype.\"}, \"PDAP1\": {\"gene\": \"PDAP1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking PDAP1 to the patient's lipodystrophy or metabolic phenotype.\"}, \"TRAT1\": {\"gene\": \"TRAT1\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking TRAT1 to the patient's lipodystrophy or metabolic phenotype.\"}, \"DDX19A\": {\"gene\": \"DDX19A\", \"confidence\": 0.15, \"rationale\": \"No direct evidence linking DDX19A to the patient's lipodystrophy or metabolic phenotype.\"}}",
+  "parsed_top5": [
+    "LMNA",
+    "ZSCAN5C",
+    "ANO9",
+    "CHD3",
+    "IFITM10"
+  ]
+}

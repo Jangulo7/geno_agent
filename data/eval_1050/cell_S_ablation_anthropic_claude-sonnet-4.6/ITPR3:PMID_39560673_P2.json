@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39560673_P2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19349,
+  "tokens_out": 655,
+  "finish_reason": "stop",
+  "latency_s": 10.585932970046997,
+  "cost_usd": 0.067872,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR3\",\"confidence\":0.82,\"rationale\":\"ITPR3 evidence directly describes patients with chronic constipation, feeding difficulties, low TRECs, impaired PHA proliferation, reduced naive CD4+/CD8+ T cells, low IgG/IgM, abnormal TCR repertoire, and panlymphopenia\u2014matching all patient HPO terms.\"},{\"gene\":\"LYPD2\",\"confidence\":0.03,\"rationale\":\"No direct gene-specific immune deficiency evidence; shared generic chunks only.\"},{\"gene\":\"FKBP2\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking FKBP2 to this immunodeficiency phenotype; only generic shared chunks.\"},{\"gene\":\"ZPLD1\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence; only generic shared literature chunks with no direct relevance.\"},{\"gene\":\"OGFRL1\",\"confidence\":0.02,\"rationale\":\"No gene-specific immunodeficiency evidence; only generic shared chunks unrelated to this phenotype.\"},{\"gene\":\"KCNJ1\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence linking KCNJ1 to T cell immunodeficiency; only generic shared chunks.\"},{\"gene\":\"ILRUN\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; generic shared chunks only, no link to T cell deficiency phenotype.\"},{\"gene\":\"DDX17\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking DDX17 to this combined immunodeficiency phenotype.\"},{\"gene\":\"ZNF595\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; only generic shared chunks with no relevance to this phenotype.\"},{\"gene\":\"FOXA2\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking FOXA2 to T cell immunodeficiency in provided chunks.\"},{\"gene\":\"SLC35C1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking SLC35C1 to this T cell deficiency phenotype in provided chunks.\"},{\"gene\":\"EXOC6B\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; only generic shared chunks unrelated to this immunodeficiency.\"},{\"gene\":\"SCARA3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking SCARA3 to T cell immunodeficiency in provided chunks.\"},{\"gene\":\"PRXL2C\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking PRXL2C to this combined immunodeficiency phenotype.\"},{\"gene\":\"POLA2\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking POLA2 to this T cell immunodeficiency phenotype in provided chunks.\"}]",
+  "parsed_top5": [
+    "ITPR3",
+    "LYPD2",
+    "FKBP2",
+    "ZPLD1",
+    "OGFRL1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "BAG3:PMID_31853710_III_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "BAG3",
+  "orig_qwen3_8b_top1": "GPANK1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CDRT4",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16193,
+  "tokens_out": 945,
+  "finish_reason": "stop",
+  "latency_s": 16.433295249938965,
+  "cost_usd": 0.062754,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"CDRT4\", \"confidence\": 0.18, \"rationale\": \"CDRT4 is located in the CMT1A duplication region (17p12) and is directly implicated in Charcot-Marie-Tooth neuropathy matching the full peripheral neuropathy phenotype.\"},\n  {\"gene\": \"GPANK1\", \"confidence\": 0.12, \"rationale\": \"Evidence chunk describes a patient with pes cavus, Achilles tendon contracture, distal weakness, and sensory neuropathy closely matching the HPO profile, though gene-disease link is not explicitly stated.\"},\n  {\"gene\": \"APOA1\", \"confidence\": 0.08, \"rationale\": \"APOA1 amyloidosis can cause peripheral neuropathy with sensory and motor features; evidence chunks describe CMT-like phenotypes but no direct gene-specific link is established.\"},\n  {\"gene\": \"PLCG2\", \"confidence\": 0.07, \"rationale\": \"Evidence includes a case with pes cavus, areflexia, vibration loss, hip flexion weakness matching HPO, but no direct mechanistic link between PLCG2 and peripheral neuropathy is provided.\"},\n  {\"gene\": \"NFYB\", \"confidence\": 0.06, \"rationale\": \"Evidence chunks describe CMT2-like neuropathy phenotypes but no established connection between NFYB and peripheral neuropathy exists in the literature provided.\"},\n  {\"gene\": \"RASIP1\", \"confidence\": 0.06, \"rationale\": \"Evidence includes CMT2 case with pes cavus, areflexia, vibration loss, and hip flexion weakness, but RASIP1 has no known role in peripheral neuropathy.\"},\n  {\"gene\": \"CALCOCO2\", \"confidence\": 0.06, \"rationale\": \"Evidence describes CMT2-like phenotype with areflexia and vibration loss but no established link between CALCOCO2 and peripheral neuropathy is documented.\"},\n  {\"gene\": \"ITPRIP\", \"confidence\": 0.06, \"rationale\": \"Evidence chunks describe peripheral neuropathy phenotypes matching HPO but no direct causal link between ITPRIP and hereditary neuropathy is established.\"},\n  {\"gene\": \"MRPS25\", \"confidence\": 0.05, \"rationale\": \"Mitochondrial ribosomal protein; evidence describes neuropathy phenotypes but no direct link between MRPS25 and the described peripheral neuropathy phenotype.\"},\n  {\"gene\": \"GALNT11\", \"confidence\": 0.05, \"rationale\": \"Evidence describes CMT-like neuropathy cases but GALNT11 has no established role in hereditary peripheral neuropathy.\"},\n  {\"gene\": \"FLT1\", \"confidence\": 0.04, \"rationale\": \"Evidence chunks describe CMT-like phenotypes but FLT1 (VEGFR1) has no established causal role in hereditary peripheral neuropathy.\"},\n  {\"gene\": \"NXPE3\", \"confidence\": 0.04, \"rationale\": \"Evidence describes axonal polyneuropathy and pes cavus but no direct link between NXPE3 and hereditary peripheral neuropathy is established.\"},\n  {\"gene\": \"PPDPFL\", \"confidence\": 0.04, \"rationale\": \"Evidence describes CMT-like neuropathy phenotypes but PPDPFL has no known established role in hereditary peripheral neuropathy.\"},\n  {\"gene\": \"SEC61B\", \"confidence\": 0.04, \"rationale\": \"Evidence describes a myopathic rather than neuropathic phenotype with pes cavus; SEC61B has no established link to peripheral neuropathy.\"},\n  {\"gene\": \"RAD21\", \"confidence\": 0.03, \"rationale\": \"RAD21 is a cohesin complex component with no established role in peripheral neuropathy; evidence chunks are generic CMT descriptions not specific to this gene.\"}\n]",
+  "parsed_top5": [
+    "CDRT4",
+    "GPANK1",
+    "APOA1",
+    "PLCG2",
+    "NFYB"
+  ]
+}

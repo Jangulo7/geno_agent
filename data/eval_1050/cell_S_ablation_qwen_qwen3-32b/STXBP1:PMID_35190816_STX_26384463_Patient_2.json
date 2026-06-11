@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26384463_Patient_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17571,
+  "tokens_out": 727,
+  "finish_reason": "stop",
+  "latency_s": 26.276406288146973,
+  "cost_usd": 0.00160924,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.95, \"rationale\": \"STXBP1 is strongly associated with early-onset epileptic encephalopathies, including Ohtahara syndrome, with burst suppression EEG, global developmental delay, and cerebral atrophy.\"}, {\"gene\": \"HPCA\", \"confidence\": 0.65, \"rationale\": \"HPCA is linked to developmental delay and seizures, but evidence is less specific compared to STXBP1 for this phenotype profile.\"}, {\"gene\": \"GDF5\", \"confidence\": 0.5, \"rationale\": \"GDF5 is associated with developmental delay and seizures, but lacks direct evidence for burst suppression EEG or cerebral atrophy.\"}, {\"gene\": \"GOLGA8S\", \"confidence\": 0.45, \"rationale\": \"GOLGA8S is linked to developmental delay and seizures, but evidence is limited and not specific to the described phenotype.\"}, {\"gene\": \"IFNA14\", \"confidence\": 0.4, \"rationale\": \"IFNA14 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"KIAA0825\", \"confidence\": 0.35, \"rationale\": \"KIAA0825 is associated with developmental delay and seizures, but lacks strong evidence for the specific EEG and brain imaging features.\"}, {\"gene\": \"GSDMA\", \"confidence\": 0.3, \"rationale\": \"GSDMA is linked to developmental delay and seizures, but evidence is sparse and not specific to the described phenotype.\"}, {\"gene\": \"ADI1\", \"confidence\": 0.25, \"rationale\": \"ADI1 is associated with developmental delay and seizures, but lacks strong evidence for the specific EEG and brain imaging features.\"}, {\"gene\": \"FAM181A\", \"confidence\": 0.2, \"rationale\": \"FAM181A is linked to developmental delay and seizures, but evidence is limited and not specific to the described phenotype.\"}, {\"gene\": \"GPR149\", \"confidence\": 0.15, \"rationale\": \"GPR149 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"ZNF439\", \"confidence\": 0.1, \"rationale\": \"ZNF439 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"OR5L1\", \"confidence\": 0.08, \"rationale\": \"OR5L1 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"PARP16\", \"confidence\": 0.07, \"rationale\": \"PARP16 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"AGPS\", \"confidence\": 0.05, \"rationale\": \"AGPS is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}, {\"gene\": \"OR4K13\", \"confidence\": 0.03, \"rationale\": \"OR4K13 is not well-established in the literature for the described phenotype, with limited evidence of relevance.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "HPCA",
+    "GDF5",
+    "GOLGA8S",
+    "IFNA14"
+  ]
+}

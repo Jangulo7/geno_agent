@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F12",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15618,
+  "tokens_out": 765,
+  "finish_reason": "stop",
+  "latency_s": 14.157883167266846,
+  "cost_usd": 0.058329,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.92,\"rationale\":\"IKZF1 germline LOF mutations directly cause B-ALL, recurrent infections, decreased memory B cells, and abnormal CD4+ T cell proportions, matching all patient HPO phenotypes.\"},{\"gene\":\"TCL1B\",\"confidence\":0.03,\"rationale\":\"TCL1B/TCL1A fusions identified in B-ALL cases, providing partial relevance to B-ALL phenotype but no evidence for immunodeficiency features.\"},{\"gene\":\"ARHGAP15\",\"confidence\":0.01,\"rationale\":\"ARHGAP15 expressed in CD4+ memory T cells in GCA context but no direct link to B-ALL or primary immunodeficiency phenotypes.\"},{\"gene\":\"BCL2L11\",\"confidence\":0.01,\"rationale\":\"BCL2L11 evidence relates to apoptosis in leukemia treatment context only, no direct causal link to patient phenotype profile.\"},{\"gene\":\"TOX3\",\"confidence\":0.01,\"rationale\":\"TOX3 evidence only tangentially related to immune differentiation with no direct connection to B-ALL or immunodeficiency.\"},{\"gene\":\"ERCC6\",\"confidence\":0.005,\"rationale\":\"ERCC6 linked to DNA repair and Cockayne syndrome, no direct evidence for B-ALL or the specific immunophenotype observed.\"},{\"gene\":\"ARHGAP11A\",\"confidence\":0.005,\"rationale\":\"ARHGAP11A correlates with immune infiltration in lung cancer TME but has no established role in B-ALL or primary immunodeficiency.\"},{\"gene\":\"PIK3R3\",\"confidence\":0.005,\"rationale\":\"No specific PIK3R3 evidence provided; shared chunks mention PIK3CD GOF but not PIK3R3 in relation to patient phenotypes.\"},{\"gene\":\"LY6L\",\"confidence\":0.004,\"rationale\":\"LY6L expression associated with cancer prognosis but no mechanistic link to B-ALL or the described immunodeficiency phenotype.\"},{\"gene\":\"GTF2A2\",\"confidence\":0.004,\"rationale\":\"GTF2A2 correlated with macrophage changes in AD/IS, no relevance to B-ALL or primary immunodeficiency.\"},{\"gene\":\"FAM110B\",\"confidence\":0.004,\"rationale\":\"FAM110B linked to immune microenvironment in otitis media but no connection to B-ALL or the patient's immunophenotype.\"},{\"gene\":\"TICAM1\",\"confidence\":0.003,\"rationale\":\"TICAM1 evidence only from generic immunodeficiency chunks with no specific mechanistic link to B-ALL or patient phenotype.\"},{\"gene\":\"SULT1A4\",\"confidence\":0.003,\"rationale\":\"SULT1A4 has no relevant evidence connecting it to B-ALL, recurrent infections, or abnormal lymphocyte subsets.\"},{\"gene\":\"SCYGR3\",\"confidence\":0.003,\"rationale\":\"SCYGR3 has no specific evidence linking it to B-ALL or the described immunodeficiency phenotype.\"},{\"gene\":\"DYSF\",\"confidence\":0.003,\"rationale\":\"DYSF is a muscle repair protein with no established role in B-ALL or lymphocyte subset abnormalities.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "TCL1B",
+    "ARHGAP15",
+    "BCL2L11",
+    "TOX3"
+  ]
+}

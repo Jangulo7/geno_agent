@@ -1,0 +1,26 @@
+{
+  "case_id": "SPOUT1:PMID_39962046_L_II_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPOUT1",
+  "orig_qwen3_8b_top1": "EIF2S3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SPOUT1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20735,
+  "tokens_out": 163,
+  "finish_reason": "stop",
+  "latency_s": 3.3616256713867188,
+  "cost_usd": 0.00170444,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SPOUT1\": 0.95, \"RANGAP1\": 0.85, \"CTF1\": 0.75, \"TMEM151B\": 0.7, \"TUBGCP2\": 0.65, \"CLIC3\": 0.6, \"CA6\": 0.55, \"SSTR3\": 0.5, \"PDLIM4\": 0.45, \"NIFK\": 0.4, \"LRRC37A3\": 0.35, \"PIANP\": 0.3, \"MAGEB6B\": 0.25, \"SPDEF\": 0.2}",
+  "parsed_top5": [
+    "SPOUT1",
+    "RANGAP1",
+    "CTF1",
+    "TMEM151B",
+    "TUBGCP2"
+  ]
+}

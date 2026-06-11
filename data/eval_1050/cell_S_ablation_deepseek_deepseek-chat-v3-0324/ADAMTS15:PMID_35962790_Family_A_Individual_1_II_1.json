@@ -1,0 +1,22 @@
+{
+  "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ADAMTS15",
+  "orig_qwen3_8b_top1": "PIERCE1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PIERCE1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14277,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 5.0554282665252686,
+  "cost_usd": 0.00289621,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"PIERCE1\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Strong evidence linking PIERCE1 to distal arthrogryposis, matching patient's contractures and absent flexion creases.\"\n}",
+  "parsed_top5": [
+    "PIERCE1"
+  ]
+}

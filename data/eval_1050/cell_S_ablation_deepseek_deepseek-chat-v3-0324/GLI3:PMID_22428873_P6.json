@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_22428873_P6",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14824,
+  "tokens_out": 588,
+  "finish_reason": "stop",
+  "latency_s": 23.997122526168823,
+  "cost_usd": 0.0034175600000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GLI3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking GLI3 to polydactyly and syndactyly syndromes, matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SOHLH2\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Limited evidence of association with polydactyly/syndactyly, relevance uncertain.\"\n  },\n  {\n    \"gene\": \"MEGF11\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"AGMO\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FSCN3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"RAI2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LIPI\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CFAP144\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PIP5KL1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CXXC1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FKBP14\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM209B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"MMGT1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SPATS2L\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"STAG1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GLI3",
+    "SOHLH2",
+    "MEGF11",
+    "AGMO",
+    "FSCN3"
+  ]
+}

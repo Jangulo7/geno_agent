@@ -1,0 +1,22 @@
+{
+  "case_id": "NF1:PMID_20513137_individual_N849_GSM_GSM492747",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "PPP2R5A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11045,
+  "tokens_out": 560,
+  "finish_reason": "stop",
+  "latency_s": 11.31669306755066,
+  "cost_usd": 0.0010404000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"NF1\", \"confidence\": 0.95, \"rationale\": \"NF1 directly links to neurofibromatosis with scoliosis, freckling, and caf\u00e9-au-lait spots as core features.\", \"gene\": \"RASD2\", \"confidence\": 0.75, \"rationale\": \"Mentions NF1-related scoliosis and skin manifestations but lacks direct gene-specific evidence.\", \"gene\": \"LRRFIP2\", \"confidence\": 0.65, \"rationale\": \"References NF1 symptoms but does not specifically associate with the gene.\", \"gene\": \"PDXDC1\", \"confidence\": 0.6, \"rationale\": \"Cites NF1 diagnostic criteria but lacks direct gene-phenotype linkage.\", \"gene\": \"CDH24\", \"confidence\": 0.55, \"rationale\": \"Discusses NF1-related scoliosis but no direct gene-phenotype evidence.\", \"gene\": \"MPPE1\", \"confidence\": 0.5, \"rationale\": \"Mentions NF1 symptoms but no specific gene-phenotype connection.\", \"gene\": \"IL7\", \"confidence\": 0.45, \"rationale\": \"General NF1 symptom references without gene-specific evidence.\", \"gene\": \"LRRN4\", \"confidence\": 0.4, \"rationale\": \"Cites NF1 diagnostic criteria but lacks direct gene-phenotype evidence.\", \"gene\": \"PIDD1\", \"confidence\": 0.35, \"rationale\": \"Mentions NF1 symptoms but no specific gene-phenotype connection.\", \"gene\": \"C6orf120\", \"confidence\": 0.3, \"rationale\": \"References NF1 diagnostic criteria but lacks direct gene-phenotype evidence.\", \"gene\": \"PDCD2L\", \"confidence\": 0.25, \"rationale\": \"General NF1 symptom references without gene-specific evidence.\", \"gene\": \"IGFBP2\", \"confidence\": 0.2, \"rationale\": \"Mentions NF1 symptoms but no specific gene-phenotype connection.\", \"gene\": \"KCP\", \"confidence\": 0.15, \"rationale\": \"General NF1 symptom references without gene-specific evidence.\", \"gene\": \"FBXO43\", \"confidence\": 0.1, \"rationale\": \"Cites NF1 diagnostic criteria but lacks direct gene-phenotype evidence.\", \"gene\": \"PPP2R5A\", \"confidence\": 0.05, \"rationale\": \"General NF1 symptom references without gene-specific evidence.\"}",
+  "parsed_top5": [
+    "PPP2R5A"
+  ]
+}

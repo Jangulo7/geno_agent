@@ -1,0 +1,22 @@
+{
+  "case_id": "SAMD7:PMID_38272031_Individual_2_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SAMD7",
+  "orig_qwen3_8b_top1": "MAP1LC3C",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MAP1LC3C",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12423,
+  "tokens_out": 46,
+  "finish_reason": "stop",
+  "latency_s": 3.6151604652404785,
+  "cost_usd": 0.0025200200000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"MAP1LC3C\",\n  \"confidence\": 0.7,\n  \"rationale\": \"Evidence describes optic atrophy and cone dysfunction matching patient's macular dystrophy and reduced visual acuity.\"\n}",
+  "parsed_top5": [
+    "MAP1LC3C"
+  ]
+}

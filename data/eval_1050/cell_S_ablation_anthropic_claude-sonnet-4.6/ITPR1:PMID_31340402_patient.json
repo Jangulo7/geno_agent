@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_31340402_patient",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18413,
+  "tokens_out": 702,
+  "finish_reason": "stop",
+  "latency_s": 12.724681377410889,
+  "cost_usd": 0.065769,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.92,\"rationale\":\"ITPR1 causes Gillespie syndrome (aniridia+cerebellar ataxia+cerebellar vermis atrophy+delayed walking+intention tremor) and SCA29, directly matching all patient HPO features including the distinctive aniridia/iris hypoplasia.\"},{\"gene\":\"SMPDL3A\",\"confidence\":0.02,\"rationale\":\"Evidence chunks show cerebellar ataxia/brisk reflexes but no specific SMPDL3A gene mention or iris/aniridia phenotype matching this patient.\"},{\"gene\":\"NRIP1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NRIP1 to this phenotype profile; evidence chunks are generic ataxia cases without iris abnormalities.\"},{\"gene\":\"RNF223\",\"confidence\":0.01,\"rationale\":\"No specific RNF223 evidence; shared generic ataxia literature chunks with no iris/aniridia features.\"},{\"gene\":\"ALPL\",\"confidence\":0.01,\"rationale\":\"ALPL associated with hypophosphatasia, not cerebellar ataxia with aniridia; evidence chunks are non-specific.\"},{\"gene\":\"HOXC9\",\"confidence\":0.01,\"rationale\":\"No evidence linking HOXC9 to cerebellar ataxia with aniridia; generic ataxia chunks only.\"},{\"gene\":\"LRRC8B\",\"confidence\":0.01,\"rationale\":\"No specific LRRC8B-aniridia association; evidence chunks are generic ataxia cases.\"},{\"gene\":\"TRIM51G\",\"confidence\":0.01,\"rationale\":\"No known association with this phenotype; evidence chunks are non-specific ataxia cases.\"},{\"gene\":\"ARID1B\",\"confidence\":0.01,\"rationale\":\"ARID1B linked to Coffin-Siris syndrome, not cerebellar ataxia with aniridia; evidence non-specific.\"},{\"gene\":\"A2ML1\",\"confidence\":0.01,\"rationale\":\"No known link to cerebellar ataxia with aniridia; evidence chunks are generic.\"},{\"gene\":\"UBE2H\",\"confidence\":0.01,\"rationale\":\"No established association with this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"CTDNEP1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CTDNEP1 to cerebellar ataxia with aniridia.\"},{\"gene\":\"MAGED4B\",\"confidence\":0.01,\"rationale\":\"No known association with this phenotype; evidence chunks are generic ataxia cases.\"},{\"gene\":\"TNNC1\",\"confidence\":0.01,\"rationale\":\"TNNC1 encodes cardiac troponin C; no link to cerebellar ataxia or aniridia.\"},{\"gene\":\"MCAM\",\"confidence\":0.01,\"rationale\":\"MCAM is a cell adhesion molecule with no established link to cerebellar ataxia with aniridia.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "SMPDL3A",
+    "NRIP1",
+    "RNF223",
+    "ALPL"
+  ]
+}

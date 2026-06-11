@@ -1,0 +1,26 @@
+{
+  "case_id": "CD28:PMID_34214472_patient_P2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CD28",
+  "orig_qwen3_8b_top1": "CD28",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CD28",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18217,
+  "tokens_out": 654,
+  "finish_reason": "stop",
+  "latency_s": 20.73520302772522,
+  "cost_usd": 0.004146980000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CD28\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence links CD28 deficiency to recurrent HPV infections, warts, and EBV/CMV viremia, matching patient phenotypes precisely.\"\n  },\n  {\n    \"gene\": \"ZNF474\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Some overlap with recurrent infections and EBV but lacks specific links to the patient's key phenotypes like warts.\"\n  },\n  {\n    \"gene\": \"IFT57\",\n    \"confidence\": 0.4,\n    \"rationale\": \"General immune deficiency patterns but no direct evidence linking to EBV/CMV persistence or warts.\"\n  },\n  {\n    \"gene\": \"SHISA3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Limited evidence; mentions recurrent infections but not specific to the patient's viral persistence or warts.\"\n  },\n  {\n    \"gene\": \"VDAC2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No direct evidence supporting a role in the observed immune deficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"ADAP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No specific evidence linking to recurrent otitis media, viral persistence, or warts.\"\n  },\n  {\n    \"gene\": \"CREBL2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Lacks direct evidence connecting to the patient's specific clinical manifestations.\"\n  },\n  {\n    \"gene\": \"ZNF517\",\n    \"confidence\": 0.3,\n    \"rationale\": \"General mentions of immune deficiency but no specific ties to key patient symptoms.\"\n  },\n  {\n    \"gene\": \"TRH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking to immune deficiency or the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NOTCH2NLA\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct connections to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SORBS3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks specific evidence supporting a causal role in the observed symptoms.\"\n  },\n  {\n    \"gene\": \"CEACAM18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to immune deficiencies or viral persistence.\"\n  },\n  {\n    \"gene\": \"CCDC89\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CPSF7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence supporting involvement in immune-related phenotypes.\"\n  },\n  {\n    \"gene\": \"AP3M2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks any evidence suggesting a role in the observed clinical symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "CD28",
+    "ZNF474",
+    "IFT57",
+    "SHISA3",
+    "VDAC2"
+  ]
+}

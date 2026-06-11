@@ -1,0 +1,26 @@
+{
+  "case_id": "SUOX:PMID_36303223_Proband_15_from_PMID_12001203",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SUOX",
+  "orig_qwen3_8b_top1": "SUOX",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SUOX",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18716,
+  "tokens_out": 849,
+  "finish_reason": "stop",
+  "latency_s": 15.824973821640015,
+  "cost_usd": 0.068883,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SUOX\", \"confidence\": 0.95, \"rationale\": \"SUOX encodes sulfite oxidase; its deficiency directly causes isolated sulfite oxidase deficiency with seizures, microcephaly, sulfocysteinuria, and elevated urinary taurine\u2014matching all 4 HPO phenotypes exactly.\"}, {\"gene\": \"SPARC\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe SUOX/MoCD biology but SPARC itself has no established link to sulfite metabolism or the patient's phenotype profile.\"}, {\"gene\": \"PDSS2\", \"confidence\": 0.01, \"rationale\": \"Evidence mentions CoQ biosynthesis and SUOX pathway context but PDSS2 mutations cause nephropathy/Leigh syndrome, not sulfocysteinuria or isolated sulfite oxidase deficiency.\"}, {\"gene\": \"DCDC2C\", \"confidence\": 0.005, \"rationale\": \"No direct evidence linking DCDC2C to sulfite metabolism, sulfocysteinuria, or the patient's phenotype; evidence chunks are generic SUOX/MoCD background.\"}, {\"gene\": \"E2F5\", \"confidence\": 0.005, \"rationale\": \"No evidence linking E2F5 to sulfur metabolism or the patient's phenotype; chunks are generic MoCD/SUOX background unrelated to E2F5.\"}, {\"gene\": \"H3C4\", \"confidence\": 0.005, \"rationale\": \"No evidence linking H3C4 to sulfite oxidase deficiency or the patient's metabolic phenotype; evidence is generic background.\"}, {\"gene\": \"CXCL13\", \"confidence\": 0.005, \"rationale\": \"CXCL13 is a chemokine with no known role in sulfur metabolism; evidence chunks are generic MoCD/SUOX background.\"}, {\"gene\": \"DUSP18\", \"confidence\": 0.005, \"rationale\": \"No established link between DUSP18 and sulfite oxidase deficiency or the patient's phenotype; evidence is non-specific.\"}, {\"gene\": \"SORBS3\", \"confidence\": 0.005, \"rationale\": \"No evidence connecting SORBS3 to sulfur metabolism or sulfocysteinuria; evidence chunks are generic background.\"}, {\"gene\": \"SMIM28\", \"confidence\": 0.005, \"rationale\": \"No known role for SMIM28 in sulfite metabolism; evidence chunks are generic MoCD/SUOX background unrelated to this gene.\"}, {\"gene\": \"SPATA18\", \"confidence\": 0.005, \"rationale\": \"No evidence linking SPATA18 to sulfite oxidase deficiency or the patient's phenotype; evidence is generic background.\"}, {\"gene\": \"RTN4R\", \"confidence\": 0.005, \"rationale\": \"RTN4R is a myelin-associated glycoprotein receptor with no known role in sulfur metabolism or sulfocysteinuria.\"}, {\"gene\": \"NFIX\", \"confidence\": 0.005, \"rationale\": \"NFIX is a transcription factor associated with Malan/Marshall-Smith syndrome, not sulfite oxidase deficiency or sulfocysteinuria.\"}, {\"gene\": \"KIFC1\", \"confidence\": 0.005, \"rationale\": \"No evidence linking KIFC1 to sulfite metabolism or the patient's phenotype; evidence chunks are generic background.\"}, {\"gene\": \"HAPLN3\", \"confidence\": 0.005, \"rationale\": \"No known association between HAPLN3 and sulfite oxidase deficiency or the patient's metabolic phenotype.\"}]",
+  "parsed_top5": [
+    "SUOX",
+    "SPARC",
+    "PDSS2",
+    "DCDC2C",
+    "E2F5"
+  ]
+}

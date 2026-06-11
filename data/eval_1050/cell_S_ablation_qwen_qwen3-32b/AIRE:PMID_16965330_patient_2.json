@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_16965330_patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17252,
+  "tokens_out": 77,
+  "finish_reason": "stop",
+  "latency_s": 1.9544212818145752,
+  "cost_usd": 0.00140172,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"AIRE gene is directly linked to Autoimmune Polyendocrinopathy Syndrome Type 1 (APS-1), which matches the patient's HPO phenotypes of alopecia, keratoconjunctivitis, hypoparathyroidism, and primary adrenal insufficiency.\"}",
+  "parsed_top5": [
+    "AIRE"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "TANGO2:PMID_26805782_F2_II_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TANGO2",
+  "orig_qwen3_8b_top1": "TANGO2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "TANGO2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15078,
+  "tokens_out": 857,
+  "finish_reason": "stop",
+  "latency_s": 16.382413387298584,
+  "cost_usd": 0.058089,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"TANGO2\", \"confidence\": 0.95, \"rationale\": \"TANGO2 evidence directly and specifically describes developmental delay, rhabdomyolysis, hypoglycemia, lactic acidosis, coma/encephalopathy, and elevated acylcarnitines (C14:1) matching all patient HPO phenotypes.\"}, {\"gene\": \"EVPL\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe TANGO2-related patients; EVPL has no direct mechanistic link to this metabolic phenotype profile.\"}, {\"gene\": \"ZNF346\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks are generic metabolic disease descriptions unrelated to ZNF346 function; no specific link to this phenotype.\"}, {\"gene\": \"LIPJ\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks are generic and not specific to LIPJ; no established connection to rhabdomyolysis or acylcarnitine abnormalities.\"}, {\"gene\": \"NIPSNAP1\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks are non-specific; NIPSNAP1 has no established link to this combination of metabolic crises and acylcarnitine elevation.\"}, {\"gene\": \"PET100\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks are generic metabolic disease descriptions; PET100 is a COX assembly factor not linked to this specific phenotype profile.\"}, {\"gene\": \"UTRN\", \"confidence\": 0.005, \"rationale\": \"UTRN encodes utrophin; no evidence linking it to metabolic crises, hypoglycemia, lactic acidosis, or elevated tetradecenoylcarnitine.\"}, {\"gene\": \"TMEM258\", \"confidence\": 0.005, \"rationale\": \"Evidence chunks are non-specific; TMEM258 has no established association with this metabolic phenotype cluster.\"}, {\"gene\": \"FAM181B\", \"confidence\": 0.005, \"rationale\": \"Evidence chunks are generic; FAM181B has no known role in fatty acid oxidation or metabolic crisis disorders.\"}, {\"gene\": \"FGFR1\", \"confidence\": 0.005, \"rationale\": \"FGFR1 is a growth factor receptor; no mechanistic link to rhabdomyolysis, lactic acidosis, or elevated acylcarnitines.\"}, {\"gene\": \"FARSA\", \"confidence\": 0.005, \"rationale\": \"FARSA encodes phenylalanyl-tRNA synthetase; evidence chunks are non-specific and do not link it to this phenotype.\"}, {\"gene\": \"TPM3\", \"confidence\": 0.005, \"rationale\": \"TPM3 causes congenital myopathy; evidence chunks are non-specific and lack connection to metabolic crises or acylcarnitine elevation.\"}, {\"gene\": \"SMURF1\", \"confidence\": 0.005, \"rationale\": \"SMURF1 is a ubiquitin ligase; no established link to fatty acid oxidation defects or this metabolic phenotype cluster.\"}, {\"gene\": \"RBP2\", \"confidence\": 0.005, \"rationale\": \"RBP2 encodes retinol binding protein; no mechanistic connection to rhabdomyolysis, lactic acidosis, or tetradecenoylcarnitine elevation.\"}, {\"gene\": \"GNRH1\", \"confidence\": 0.005, \"rationale\": \"GNRH1 encodes gonadotropin-releasing hormone; entirely unrelated to the metabolic and neurological phenotype profile presented.\"}]",
+  "parsed_top5": [
+    "TANGO2",
+    "EVPL",
+    "ZNF346",
+    "LIPJ",
+    "NIPSNAP1"
+  ]
+}

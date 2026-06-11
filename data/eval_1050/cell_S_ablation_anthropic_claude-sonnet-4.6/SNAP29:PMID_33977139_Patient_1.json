@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "NDUFV3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NDUFV3",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 19102,
+  "tokens_out": 991,
+  "finish_reason": "stop",
+  "latency_s": 16.718629837036133,
+  "cost_usd": 0.072171,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NDUFV3\",\n    \"confidence\": 0.82,\n    \"rationale\": \"NDUFV3 chunk_2 describes the exact patient with truncal hypotonia, lower extremity hypertonia/clonus, scoliosis, premature thelarche, round face, hypotelorism, deep-set eyes, ichthyosis, palmoplantar keratoderma, strabismus, and seizures.\"\n  },\n  {\n    \"gene\": \"COG1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"COG1 evidence covers CDG-related hypotonia/scoliosis but lacks the specific dermatologic and facial features matching this patient; same generic patient description shared across candidates.\"\n  },\n  {\n    \"gene\": \"SNAP29\",\n    \"confidence\": 0.03,\n    \"rationale\": \"SNAP29 causes CEDNIK syndrome with ichthyosis and neurological features, but evidence chunks do not specifically link it to this patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"LARS1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"LARS1 evidence shows axial hypotonia with spastic hypertonia and scoliosis but lacks the dermatologic and endocrine features specific to this patient.\"\n  },\n  {\n    \"gene\": \"TBC1D3L\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking TBC1D3L to this phenotype combination; only generic shared patient description present.\"\n  },\n  {\n    \"gene\": \"HOXA10\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking HOXA10 to this phenotype combination; only generic shared patient description present.\"\n  },\n  {\n    \"gene\": \"FKBP10\",\n    \"confidence\": 0.01,\n    \"rationale\": \"FKBP10 is associated with Bruck syndrome/osteogenesis imperfecta; no specific evidence matching this patient's neurological and dermatologic profile.\"\n  },\n  {\n    \"gene\": \"PLA2G4A\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking PLA2G4A to this phenotype combination; only generic shared patient description present.\"\n  },\n  {\n    \"gene\": \"ADGRG2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ADGRG2 evidence shows scoliosis and hypotonia but not the dermatologic or endocrine features of this patient.\"\n  },\n  {\n    \"gene\": \"KCNQ3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KCNQ3 is primarily associated with epilepsy; no specific evidence matching the full phenotype including skin and endocrine features.\"\n  },\n  {\n    \"gene\": \"ESPN\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ESPN is associated with hearing loss; no specific evidence matching this patient's neurological and dermatologic phenotype.\"\n  },\n  {\n    \"gene\": \"OR14A16\",\n    \"confidence\": 0.01,\n    \"rationale\": \"OR14A16 is an olfactory receptor gene with no established disease association matching this phenotype.\"\n  },\n  {\n    \"gene\": \"SYAP1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking SYAP1 to this phenotype combination; only generic shared patient description present.\"\n  },\n  {\n    \"gene\": \"RPL34\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking RPL34 to this phenotype combination; only generic shared patient description present.\"\n  },\n  {\n    \"gene\": \"TYW3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking TYW3 to this phenotype combination; only generic shared patient description present.\"\n  }\n]",
+  "parsed_top5": [
+    "NDUFV3",
+    "COG1",
+    "SNAP29",
+    "LARS1",
+    "TBC1D3L"
+  ]
+}

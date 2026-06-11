@@ -1,0 +1,26 @@
+{
+  "case_id": "RFX5:PMID_30170160_P7",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFX5",
+  "orig_qwen3_8b_top1": "EXOSC9",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EXOSC9",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17806,
+  "tokens_out": 1068,
+  "finish_reason": "stop",
+  "latency_s": 13.328556776046753,
+  "cost_usd": 0.069438,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EXOSC9\",\n    \"confidence\": 0.82,\n    \"rationale\": \"EXOSC9 evidence directly mentions patients with oral thrush, failure to thrive, recurrent otitis media, recurrent pneumonia, sepsis, and reduced T cells\u2014matching all patient HPO phenotypes with high specificity.\"\n  },\n  {\n    \"gene\": \"HTATIP2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence describes DOCK8 deficiency and a LIG4 patient with otitis/candidiasis/pneumonia but HTATIP2 is not directly implicated; only generic immunodeficiency context.\"\n  },\n  {\n    \"gene\": \"ZNF14\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and LIG4 cases; ZNF14 has no direct link to the patient's immunodeficiency phenotype in the provided chunks.\"\n  },\n  {\n    \"gene\": \"SLC25A45\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and LIG4 cases; SLC25A45 has no direct immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"TESMIN\",\n    \"confidence\": 0.02,\n    \"rationale\": \"Evidence describes generic SCID and DOCK8 deficiency; TESMIN has no direct link to the patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"ST8SIA2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; ST8SIA2 has no established role in the patient's combined immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"CDH22\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; CDH22 has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"HIRA\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; HIRA has no direct link to the patient's immunodeficiency phenotype in provided chunks.\"\n  },\n  {\n    \"gene\": \"YBEY\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; YBEY has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"WWC1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence mentions CMCC and recurrent AOM but no T-cell deficiency, low IgM, or sepsis; incomplete phenotype match and no direct gene-disease link.\"\n  },\n  {\n    \"gene\": \"TIGD2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; TIGD2 has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"RNF122\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; RNF122 has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"ADAM12\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; ADAM12 has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"TBC1D32\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; TBC1D32 has no established immunodeficiency association in the provided evidence.\"\n  },\n  {\n    \"gene\": \"WDR70\",\n    \"confidence\": 0.01,\n    \"rationale\": \"Evidence only describes DOCK8 deficiency and SCID generically; WDR70 has no established immunodeficiency association in the provided evidence.\"\n  }\n]",
+  "parsed_top5": [
+    "EXOSC9",
+    "HTATIP2",
+    "ZNF14",
+    "SLC25A45",
+    "TESMIN"
+  ]
+}

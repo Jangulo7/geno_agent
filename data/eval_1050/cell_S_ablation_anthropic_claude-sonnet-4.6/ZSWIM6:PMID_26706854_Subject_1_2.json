@@ -1,0 +1,26 @@
+{
+  "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ZSWIM6",
+  "orig_qwen3_8b_top1": "PROP1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EVX1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17992,
+  "tokens_out": 1147,
+  "finish_reason": "stop",
+  "latency_s": 19.019930362701416,
+  "cost_usd": 0.071181,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks provided are essentially the same recycled literature snippets across all genes, with no gene-specific direct evidence linking any particular gene to the patient's phenotype profile. I must therefore rely on prior knowledge about which gene is known to cause a syndrome matching: wide nasal bridge, U-shaped upper lip vermilion, downslanted palpebral fissures, hypertelorism, parietal foramina, global developmental delay, midline CNS lipomas, and talipes equinovarus.\n\nThis combination \u2014 particularly parietal foramina + midline CNS lipomas + hypertelorism + downslanted palpebral fissures + developmental delay + talipes equinovarus \u2014 is characteristic of a midline defect syndrome. Parietal foramina combined with midline CNS lipomas and the facial features strongly suggest a condition related to midline development. EVX1 is located near HOXD cluster and has been implicated in midline defects. However, the combination of parietal foramina + CNS lipomas + hypertelorism + developmental delay most closely matches variants in genes involved in midline patterning. SNTG2 has been associated with parietal foramina. Given the specific combination including parietal foramina and midline CNS lipomas, this phenotype profile resembles what has been described with chromosome 4p or midline defect genes. Among the candidates, EVX1 (near HOXD) relates to limb/midline development, and SNTG2 maps to 2p where parietal foramina loci exist.\n\n[{\"gene\":\"EVX1\",\"confidence\":0.18,\"rationale\":\"EVX1 near HOXD cluster involved in midline/limb patterning; talipes equinovarus and midline CNS lipomas with parietal foramina suggest midline developmental gene, but evidence is indirect.\"},{\"gene\":\"SNTG2\",\"confidence\":0.15,\"rationale\":\"SNTG2 maps to chromosome 2p region associated with parietal foramina; partial phenotypic overlap with developmental delay and facial features noted in evidence.\"},{\"gene\":\"NTAN1\",\"confidence\":0.09,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks show only generic dysmorphic features not specific to NTAN1.\"},{\"gene\":\"DSN1\",\"confidence\":0.07,\"rationale\":\"DSN1 evidence mentions parietal foramina and developmental delay in a case but no direct causal link established for this phenotype combination.\"},{\"gene\":\"C12orf75\",\"confidence\":0.07,\"rationale\":\"No established disease association matching parietal foramina plus midline CNS lipomas; evidence is non-specific.\"},{\"gene\":\"TMEM11\",\"confidence\":0.07,\"rationale\":\"TMEM11 evidence chunk mentions downslanted palpebral fissures and developmental delay but no specific link to parietal foramina or CNS lipomas.\"},{\"gene\":\"UHRF1\",\"confidence\":0.06,\"rationale\":\"UHRF1 has no established link to parietal foramina or midline CNS lipomas; evidence is generic and non-specific.\"},{\"gene\":\"TARS1\",\"confidence\":0.05,\"rationale\":\"TARS1 causes interstitial lung disease/neurological phenotypes but not the specific combination of parietal foramina and midline CNS lipomas.\"},{\"gene\":\"CWF19L1\",\"confidence\":0.05,\"rationale\":\"CWF19L1 associated with cerebellar ataxia; does not match the specific phenotype of parietal foramina and midline CNS lipomas.\"},{\"gene\":\"PROP1\",\"confidence\":0.04,\"rationale\":\"PROP1 causes combined pituitary hormone deficiency; no established link to parietal foramina, CNS lipomas, or talipes equinovarus.\"},{\"gene\":\"SPINK5\",\"confidence\":0.04,\"rationale\":\"SPINK5 causes Netherton syndrome (skin/hair); no established link to parietal foramina or midline CNS lipomas.\"},{\"gene\":\"HNRNPLL\",\"confidence\":0.04,\"rationale\":\"HNRNPLL has no established disease association matching this phenotype profile; evidence is non-specific.\"},{\"gene\":\"VWA2\",\"confidence\":0.04,\"rationale\":\"VWA2 has no established link to parietal foramina, midline CNS lipomas, or talipes equinovarus.\"},{\"gene\":\"TFAM\",\"confidence\":0.03,\"rationale\":\"TFAM causes mitochondrial cardiomyopathy/hepatopathy; does not match parietal foramina or midline CNS lipoma phenotype.\"},{\"gene\":\"APOO\",\"confidence\":0.03,\"rationale\":\"APOO has no established disease association matching this specific combination of craniofacial, CNS, and limb anomalies.\"}]",
+  "parsed_top5": [
+    "EVX1",
+    "SNTG2",
+    "NTAN1",
+    "DSN1",
+    "C12orf75"
+  ]
+}

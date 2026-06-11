@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM43",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17237,
+  "tokens_out": 685,
+  "finish_reason": "stop",
+  "latency_s": 52.235352993011475,
+  "cost_usd": 0.00397485,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking LMNA mutations to familial partial lipodystrophy (FPLD) with matching metabolic derangements.\"\n  },\n  {\n    \"gene\": \"SCGB1D2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence; mentions novel partial lipodystrophy but no direct gene-phenotype link.\"\n  },\n  {\n    \"gene\": \"TNRC18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TNRC18 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CHRD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting CHRD to lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"CEACAM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CEACAM4's role in lipodystrophy or metabolic disorders.\"\n  },\n  {\n    \"gene\": \"OR13A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking OR13A1 to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"NAALADL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting NAALADL1 to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"MYD88\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting MYD88's involvement in lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"ARID3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking ARID3A to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"GTF3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting GTF3A to lipodystrophy or metabolic disorders.\"\n  },\n  {\n    \"gene\": \"ELF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ELF2's role in lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"PPP2R2A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking PPP2R2A to lipodystrophy or metabolic phenotypes.\"\n  },\n  {\n    \"gene\": \"CTXND2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting CTXND2 to lipodystrophy or metabolic derangements.\"\n  },\n  {\n    \"gene\": \"CDC73\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CDC73's involvement in lipodystrophy or diabetes.\"\n  },\n  {\n    \"gene\": \"ZBTB24\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking ZBTB24 to lipodystrophy or metabolic phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "SCGB1D2",
+    "TNRC18",
+    "CHRD",
+    "CEACAM4"
+  ]
+}

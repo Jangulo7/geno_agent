@@ -1,0 +1,26 @@
+{
+  "case_id": "COPZ1:PMID_39642330_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COPZ1",
+  "orig_qwen3_8b_top1": "KIT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HOXA7",
+  "top1_correct": false,
+  "causal_rank": 4,
+  "tokens_in": 18277,
+  "tokens_out": 685,
+  "finish_reason": "stop",
+  "latency_s": 26.284974336624146,
+  "cost_usd": 0.00418285,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HOXA7\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence links HOXA7 to thrombocytopenia and megakaryocytic/erythroid progenitor defects, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"KIT\",\n    \"confidence\": 0.8,\n    \"rationale\": \"KIT mutations are associated with cytopenias and hematopoietic defects, supported by case reports of anemia and thrombocytopenia.\"\n  },\n  {\n    \"gene\": \"RAD50\",\n    \"confidence\": 0.7,\n    \"rationale\": \"RAD50 mutations cause bone marrow failure and immunodeficiency, aligning with the patient's cytopenias and immune deficits.\"\n  },\n  {\n    \"gene\": \"COPZ1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"COPZ1 mutations are linked to neutropenia and lymphopenia, consistent with the patient's leukocyte and lymphocyte deficiencies.\"\n  },\n  {\n    \"gene\": \"SON\",\n    \"confidence\": 0.5,\n    \"rationale\": \"SON haploinsufficiency causes leukopenia and thrombocytopenia, overlapping with the patient's hematopoietic abnormalities.\"\n  },\n  {\n    \"gene\": \"KIFC3\",\n    \"confidence\": 0.4,\n    \"rationale\": \"KIFC3 is implicated in megakaryocyte differentiation, but evidence is less direct for pan-cytopenias.\"\n  },\n  {\n    \"gene\": \"FAM47B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking FAM47B to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"LINGO3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence tying LINGO3 to hematopoietic or immune defects.\"\n  },\n  {\n    \"gene\": \"STRC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting STRC as causal for the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"LYPD5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature connects LYPD5 to the observed phenotype.\"\n  },\n  {\n    \"gene\": \"ADCK2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence implicating ADCK2 in hematologic or immunologic disorders.\"\n  },\n  {\n    \"gene\": \"SLC22A5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No support for SLC22A5's role in cytopenias or immune dysfunction.\"\n  },\n  {\n    \"gene\": \"AGBL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented association with the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"CCDC57\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence links CCDC57 to hematologic or immune phenotypes.\"\n  },\n  {\n    \"gene\": \"CDH20\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature associates CDH20 with the observed symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "HOXA7",
+    "KIT",
+    "RAD50",
+    "COPZ1",
+    "SON"
+  ]
+}

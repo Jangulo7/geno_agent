@@ -1,0 +1,26 @@
+{
+  "case_id": "AHDC1:PMID_34950897_Patient_5",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AHDC1",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AHDC1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17880,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 21.765182495117188,
+  "cost_usd": 0.0016210800000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"AHDC1\", \"confidence\": 0.95, \"rationale\": \"AHDC1 mutations cause Xia-Gibbs syndrome with delayed speech, thin upper lip, and broad forehead as key features.\"}, {\"gene\": \"MESP2\", \"confidence\": 0.2, \"rationale\": \"MESP2 is associated with facial dysmorphism and delayed speech, but evidence is limited and not specific to this phenotype.\"}, {\"gene\": \"CHORDC1\", \"confidence\": 0.18, \"rationale\": \"CHORDC1 is linked to facial features and developmental delay, but no direct evidence for this specific phenotype.\"}, {\"gene\": \"OR10P1\", \"confidence\": 0.17, \"rationale\": \"OR10P1 is associated with facial dysmorphism but lacks strong evidence for speech delay or broad forehead.\"}, {\"gene\": \"ANHX\", \"confidence\": 0.16, \"rationale\": \"ANHX is linked to facial features and developmental delay, but not specifically to thin upper lip or broad forehead.\"}, {\"gene\": \"PTPRCAP\", \"confidence\": 0.15, \"rationale\": \"PTPRCAP is associated with facial dysmorphism and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"ZNF114\", \"confidence\": 0.14, \"rationale\": \"ZNF114 is linked to facial features and developmental delay, but not specifically to thin upper lip or broad forehead.\"}, {\"gene\": \"PTPN11\", \"confidence\": 0.13, \"rationale\": \"PTPN11 is associated with developmental delay and facial features, but not specifically to this phenotype.\"}, {\"gene\": \"PCCB\", \"confidence\": 0.12, \"rationale\": \"PCCB is linked to facial features and developmental delay, but not specifically to thin upper lip or broad forehead.\"}, {\"gene\": \"ATP13A1\", \"confidence\": 0.11, \"rationale\": \"ATP13A1 is associated with facial features and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"SERPINB10\", \"confidence\": 0.1, \"rationale\": \"SERPINB10 is linked to facial features and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"CASZ1\", \"confidence\": 0.09, \"rationale\": \"CASZ1 is associated with facial features and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"NFKB1\", \"confidence\": 0.08, \"rationale\": \"NFKB1 is linked to facial features and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"POLR2G\", \"confidence\": 0.07, \"rationale\": \"POLR2G is associated with facial features and developmental delay, but not specifically to this phenotype.\"}, {\"gene\": \"SPIB\", \"confidence\": 0.06, \"rationale\": \"SPIB is linked to facial features and developmental delay, but not specifically to this phenotype.\"}]",
+  "parsed_top5": [
+    "AHDC1",
+    "MESP2",
+    "CHORDC1",
+    "OR10P1",
+    "ANHX"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_Syrbe_26",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19388,
+  "tokens_out": 793,
+  "finish_reason": "stop",
+  "latency_s": 12.337128400802612,
+  "cost_usd": 0.070059,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.92, \"rationale\": \"STXBP1 evidence directly describes infantile spasms, focal epilepsy, dystonia, ataxia, hypotonia, stereotyped movements, absent speech, and severe intellectual disability\u2014matching all patient HPO terms.\"}, {\"gene\": \"LSG1\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks are generic/non-specific to LSG1; no direct gene-phenotype link established for this patient's profile.\"}, {\"gene\": \"KIR3DL1\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to KIR3DL1 and describes other genes; no established neurological disease association.\"}, {\"gene\": \"USP35\", \"confidence\": 0.01, \"rationale\": \"Evidence chunks are generic and not specific to USP35; no established link to epileptic encephalopathy phenotype.\"}, {\"gene\": \"PRY\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to PRY; no known neurological disease association for this gene.\"}, {\"gene\": \"MYBPHL\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to MYBPHL; this gene encodes a cardiac protein with no established epileptic encephalopathy link.\"}, {\"gene\": \"LRRC63\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to LRRC63; no established neurological disease association for this gene.\"}, {\"gene\": \"PRKCQ\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to PRKCQ; PRKCG (not PRKCQ) is associated with ataxia, and evidence does not match patient profile.\"}, {\"gene\": \"KRT5\", \"confidence\": 0.01, \"rationale\": \"KRT5 encodes a keratin protein associated with skin disorders, not epileptic encephalopathy; evidence is non-specific.\"}, {\"gene\": \"SMC5\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to SMC5; no established link to infantile epileptic encephalopathy with movement disorder.\"}, {\"gene\": \"KCTD8\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to KCTD8; no well-established causal link to this severe epileptic encephalopathy phenotype.\"}, {\"gene\": \"KDM5A\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to KDM5A; while KDM5C is linked to intellectual disability, evidence here does not support causality.\"}, {\"gene\": \"FADS1\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to FADS1; this fatty acid desaturase gene has no established link to epileptic encephalopathy.\"}, {\"gene\": \"WDR59\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to WDR59; no established neurological disease association matching this phenotype.\"}, {\"gene\": \"ZNF548\", \"confidence\": 0.01, \"rationale\": \"Evidence is non-specific to ZNF548; no established link to epileptic encephalopathy or movement disorder phenotype.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "LSG1",
+    "KIR3DL1",
+    "USP35",
+    "PRY"
+  ]
+}

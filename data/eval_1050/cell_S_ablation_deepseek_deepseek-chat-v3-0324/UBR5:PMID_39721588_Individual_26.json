@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_26",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "SLC33A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC33A1",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 14971,
+  "tokens_out": 717,
+  "finish_reason": "stop",
+  "latency_s": 26.452900171279907,
+  "cost_usd": 0.0035462900000000006,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"SLC33A1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking SLC33A1 mutations to developmental delay and autistic-like behavior, with specific mentions of synaptic plasticity and dendritic spine aberrations.\"\n  },\n  {\n    \"gene\": \"SDHA\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Evidence suggests SDHA involvement in developmental delay and epilepsy, though less directly linked to autistic behavior compared to SLC33A1.\"\n  },\n  {\n    \"gene\": \"UBR5\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Some evidence of UBR5 variants in developmental delay and behavioral issues, but lacks specific phenotypic overlap with the patient's profile.\"\n  },\n  {\n    \"gene\": \"KRTAP9-4\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minimal direct evidence linking KRTAP9-4 to the phenotypes of interest; mostly peripheral mentions in broader genomic contexts.\"\n  },\n  {\n    \"gene\": \"IP6K1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence; no strong direct association with developmental delay or autistic behavior found in provided chunks.\"\n  },\n  {\n    \"gene\": \"GFRA3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking GFRA3 to the patient's phenotypes; minimal relevance in provided literature.\"\n  },\n  {\n    \"gene\": \"TEKT3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No significant evidence connecting TEKT3 to developmental delay or autistic behavior in the provided data.\"\n  },\n  {\n    \"gene\": \"FAT2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct phenotypic overlap; mentioned in passing without substantive evidence linking to the patient's conditions.\"\n  },\n  {\n    \"gene\": \"SLC25A15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence; mentioned peripherally in genomic discussions without specific relevance.\"\n  },\n  {\n    \"gene\": \"RSPH4A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks direct evidence; not prominently associated with developmental delay or autistic behavior.\"\n  },\n  {\n    \"gene\": \"FAM174B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No substantive evidence linking FAM174B to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"POLD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Minimal relevance; no direct evidence tying POLD3 to the phenotypes of interest.\"\n  },\n  {\n    \"gene\": \"UGT2B11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence; referenced in unrelated contexts without phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"RRM2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence; mentioned peripherally without relevance to developmental delay or autism.\"\n  },\n  {\n    \"gene\": \"FAT3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence; lacks association with the patient's specific phenotypes.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "SLC33A1",
+    "SDHA",
+    "UBR5",
+    "KRTAP9-4",
+    "IP6K1"
+  ]
+}

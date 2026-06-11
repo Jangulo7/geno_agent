@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC19A1:PMID_36517554_patient_2",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC19A1",
+  "orig_qwen3_8b_top1": "WIPF1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "WIPF1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 15294,
+  "tokens_out": 875,
+  "finish_reason": "stop",
+  "latency_s": 12.357329845428467,
+  "cost_usd": 0.059007,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"WIPF1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"WIPF1 chunk_1 directly mentions immunodeficiency with skin/mucosal involvement and sinopulmonary infections in immune synapse/cytoskeleton disorders, most relevant to this combined neuro-immune phenotype.\"\n  },\n  {\n    \"gene\": \"SLC19A1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"SLC19A1 (folate transporter) deficiency can cause cerebral/cerebellar atrophy, delayed myelination, and immunodeficiency, fitting the phenotype, but no direct evidence in provided chunks.\"\n  },\n  {\n    \"gene\": \"TAF11L11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"CEACAM18\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"MAL\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"OLA1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"ADGRA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"OR56A4\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; olfactory receptor gene with no known link to this phenotype.\"\n  },\n  {\n    \"gene\": \"UBE2NL\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"TRUB2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"C16orf86\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; uncharacterized gene with no known link to this phenotype.\"\n  },\n  {\n    \"gene\": \"SEMA3F\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"FPR3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"RPS6KA4\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  },\n  {\n    \"gene\": \"MYO7B\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence; shares background literature chunks with other candidates, no distinguishing support.\"\n  }\n]",
+  "parsed_top5": [
+    "WIPF1",
+    "SLC19A1",
+    "TAF11L11",
+    "CEACAM18",
+    "MAL"
+  ]
+}

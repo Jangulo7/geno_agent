@@ -1,0 +1,26 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_14",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "IRF2BL",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SPTAN1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13869,
+  "tokens_out": 579,
+  "finish_reason": "stop",
+  "latency_s": 20.23663902282715,
+  "cost_usd": 0.0032196300000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPTAN1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strongest association with developmental delay and seizure phenotypes, critical for neurodevelopment.\"\n  },\n  {\n    \"gene\": \"NLRC4\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Evidence links to immune dysregulation with some overlapping facial features.\"\n  },\n  {\n    \"gene\": \"NLRP12\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Associated with autosomal dominant familial cold autoinflammatory syndrome, some phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"ZNF287\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Limited evidence but some reports of developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"MFSD12\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Very weak phenotypic correlation, mainly pigmentation-related.\"\n  },\n  {\n    \"gene\": \"ATP11B\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No strong evidence linking to observed phenotypes.\"\n  },\n  {\n    \"gene\": \"ATP6V1G2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No convincing evidence for developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"TP53I11\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No relevant phenotypic associations found.\"\n  },\n  {\n    \"gene\": \"NFKBIE\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Immunodeficiency gene, no clear link to these phenotypes.\"\n  },\n  {\n    \"gene\": \"PCARE\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Retinal-specific gene, no developmental phenotype association.\"\n  },\n  {\n    \"gene\": \"ZNF385C\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No substantial evidence for causal relationship.\"\n  },\n  {\n    \"gene\": \"WDFY2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence supporting role in these phenotypes.\"\n  },\n  {\n    \"gene\": \"HTR6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Serotonin receptor gene, no developmental phenotype link.\"\n  },\n  {\n    \"gene\": \"SIRPB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Immunoglobulin superfamily member, no relevant associations.\"\n  },\n  {\n    \"gene\": \"ZMYND12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to observed phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SPTAN1",
+    "NLRC4",
+    "NLRP12",
+    "ZNF287",
+    "MFSD12"
+  ]
+}

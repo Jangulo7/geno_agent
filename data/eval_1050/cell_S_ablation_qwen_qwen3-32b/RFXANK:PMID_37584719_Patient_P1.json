@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17959,
+  "tokens_out": 177,
+  "finish_reason": "stop",
+  "latency_s": 4.139871835708618,
+  "cost_usd": 0.00148628,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"RFXANK\": 0.9, \"ADAMTSL4\": 0.7, \"TUBB2A\": 0.6, \"EDRF1\": 0.5, \"NPSR1\": 0.4, \"ATG4A\": 0.3, \"FAM162B\": 0.2, \"OR12D2\": 0.1, \"SHLD3\": 0.05, \"AKR1C8\": 0.05, \"PAPOLB\": 0.05, \"PTPRC\": 0.05, \"CCDC63\": 0.05, \"AEBP2\": 0.05, \"CXCL6\": 0.05}",
+  "parsed_top5": [
+    "RFXANK",
+    "ADAMTSL4",
+    "TUBB2A",
+    "EDRF1",
+    "NPSR1"
+  ]
+}

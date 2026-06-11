@@ -1,0 +1,26 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_28_Subject_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RNF183",
+  "orig_qwen3_8b_correct": false,
+  "top1": "H1-3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14357,
+  "tokens_out": 563,
+  "finish_reason": "stop",
+  "latency_s": 19.307950735092163,
+  "cost_usd": 0.00330491,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"H1-3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strongest evidence linking H1-3 to developmental delay and autistic behavior from case report chunk_1.\"\n  },\n  {\n    \"gene\": \"NAA20\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Detailed evidence of neurodevelopmental issues but less specific than H1-3.\"\n  },\n  {\n    \"gene\": \"SMC6\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Some evidence tying to developmental delay and speech issues.\"\n  },\n  {\n    \"gene\": \"PHYHD1\",\n    \"confidence\": 0.5,\n    \"rationale\": \"General evidence of developmental delay but lacking specifics.\"\n  },\n  {\n    \"gene\": \"OTUD6A\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Similar to PHYHD1 with general developmental delay evidence.\"\n  },\n  {\n    \"gene\": \"OR2AT4\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Limited specific evidence for this gene's role.\"\n  },\n  {\n    \"gene\": \"TDRKH\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Minimal direct evidence linking to symptoms.\"\n  },\n  {\n    \"gene\": \"IZUMO2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Little direct evidence for this gene.\"\n  },\n  {\n    \"gene\": \"CBFB\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No strong evidence supporting this gene.\"\n  },\n  {\n    \"gene\": \"DPYSL2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Weak evidence for association with symptoms.\"\n  },\n  {\n    \"gene\": \"TMX3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No gene-specific evidence found.\"\n  },\n  {\n    \"gene\": \"KCNS3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No significant evidence.\"\n  },\n  {\n    \"gene\": \"MAEA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"RNF183\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"CKS2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "H1-3",
+    "NAA20",
+    "SMC6",
+    "PHYHD1",
+    "OTUD6A"
+  ]
+}

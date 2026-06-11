@@ -1,0 +1,26 @@
+{
+  "case_id": "WBP4:PMID_37963460_Family_3_individual_II_2",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "WBP4",
+  "orig_qwen3_8b_top1": "THAP4",
+  "orig_qwen3_8b_correct": false,
+  "top1": "THAP4",
+  "top1_correct": false,
+  "causal_rank": 11,
+  "tokens_in": 13374,
+  "tokens_out": 609,
+  "finish_reason": "stop",
+  "latency_s": 22.2715585231781,
+  "cost_usd": 0.00124044,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"THAP4\",\"confidence\":0.92,\"rationale\":\"Strong evidence of global developmental delay, motor delay, speech delay, and hypotonia in multiple patients with THAP4-related phenotypes.\"},{\"gene\":\"ZWILCH\",\"confidence\":0.85,\"rationale\":\"Multiple cases with global developmental delay, motor and speech delays, and hypotonia consistent with ZWILCH involvement.\"},{\"gene\":\"GAL\",\"confidence\":0.82,\"rationale\":\"Several patients with global developmental delay, motor and speech delays, and hypotonia align with GAL-related phenotypes.\"},{\"gene\":\"GPRIN1\",\"confidence\":0.78,\"rationale\":\"Evidence of global developmental delay, motor and speech delays, and hypotonia in reported GPRIN1 cases.\"},{\"gene\":\"DEFB105A\",\"confidence\":0.75,\"rationale\":\"Reports of global developmental delay, motor and speech delays, and hypotonia in DEFB105A-related cases.\"},{\"gene\":\"C9orf152\",\"confidence\":0.72,\"rationale\":\"Patients with global developmental delay, motor and speech delays, and hypotonia are described in C9orf152 literature.\"},{\"gene\":\"TMEM229A\",\"confidence\":0.70,\"rationale\":\"Cases with global developmental delay, motor and speech delays, and hypotonia are associated with TMEM229A.\"},{\"gene\":\"MAST3\",\"confidence\":0.68,\"rationale\":\"Evidence of global developmental delay, motor and speech delays, and hypotonia in MAST3-related cases.\"},{\"gene\":\"CCDC148\",\"confidence\":0.65,\"rationale\":\"Reports of global developmental delay, motor and speech delays, and hypotonia in CCDC148 literature.\"},{\"gene\":\"CYP2S1\",\"confidence\":0.62,\"rationale\":\"Some cases with global developmental delay and motor/speech delays, but less specific evidence for hypotonia.\"},{\"gene\":\"WBP4\",\"confidence\":0.60,\"rationale\":\"Evidence of global developmental delay and speech delay, but less consistent motor delay and hypotonia.\"},{\"gene\":\"AIM2\",\"confidence\":0.58,\"rationale\":\"Reports of global developmental delay and speech delay, but less specific evidence for motor delay and hypotonia.\"},{\"gene\":\"CFC1\",\"confidence\":0.55,\"rationale\":\"Cases with global developmental delay and speech delay, but less consistent motor delay and hypotonia.\"},{\"gene\":\"BRK1\",\"confidence\":0.50,\"rationale\":\"Generalized developmental delay and speech delay reported, but less specific evidence for motor delay and hypotonia.\"},{\"gene\":\"BDP1\",\"confidence\":0.45,\"rationale\":\"Mild hypotonia and speech delay reported, but less consistent global developmental delay and motor delay.\"}]",
+  "parsed_top5": [
+    "THAP4",
+    "ZWILCH",
+    "GAL",
+    "GPRIN1",
+    "DEFB105A"
+  ]
+}

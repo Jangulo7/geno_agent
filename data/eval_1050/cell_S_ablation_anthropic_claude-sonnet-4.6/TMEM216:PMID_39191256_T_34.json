@@ -1,0 +1,26 @@
+{
+  "case_id": "TMEM216:PMID_39191256_T_34",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TMEM216",
+  "orig_qwen3_8b_top1": "PDE2A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "HPR",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17300,
+  "tokens_out": 1055,
+  "finish_reason": "stop",
+  "latency_s": 13.152075052261353,
+  "cost_usd": 0.067725,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"HPR\",\n    \"confidence\": 0.18,\n    \"rationale\": \"HPR chunk_2 uniquely describes macular edema with rod-cone dystrophy, mildly reduced VA, peripheral field loss, and nyctalopia\u2014most closely matching all patient HPO terms simultaneously.\"\n  },\n  {\n    \"gene\": \"PGRMC1\",\n    \"confidence\": 0.09,\n    \"rationale\": \"PGRMC1 evidence includes cystoid macular edema, rod-cone dysfunction, peripheral field constriction, and nyctalopia, covering the full phenotype profile.\"\n  },\n  {\n    \"gene\": \"SERP1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"SERP1 evidence includes cystoid macular edema, rod-cone dysfunction, nyctalopia, and peripheral field loss matching the patient phenotype.\"\n  },\n  {\n    \"gene\": \"BGLAP\",\n    \"confidence\": 0.07,\n    \"rationale\": \"BGLAP evidence includes cystoid macular edema, rod-cone dystrophy, nyctalopia, and peripheral visual field loss consistent with patient phenotype.\"\n  },\n  {\n    \"gene\": \"FIGNL1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"FIGNL1 evidence includes cystoid macular edema, rod-cone dystrophy, nyctalopia, and peripheral vision loss matching patient HPO terms.\"\n  },\n  {\n    \"gene\": \"PDE2A\",\n    \"confidence\": 0.07,\n    \"rationale\": \"PDE2A evidence describes rod-cone dystrophy with macular oedema, peripheral field constriction, and nyctalopia consistent with patient phenotype.\"\n  },\n  {\n    \"gene\": \"SNX33\",\n    \"confidence\": 0.07,\n    \"rationale\": \"SNX33 evidence includes rod-cone dystrophy with macular oedema, peripheral field loss, and nyctalopia matching patient HPO terms.\"\n  },\n  {\n    \"gene\": \"NUTM2G\",\n    \"confidence\": 0.07,\n    \"rationale\": \"NUTM2G evidence includes rod-cone dystrophy with macular oedema, peripheral field constriction, and nyctalopia consistent with patient phenotype.\"\n  },\n  {\n    \"gene\": \"PRRC1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"PRRC1 evidence includes rod-cone dystrophy, macular oedema, peripheral field loss, and nyctalopia matching patient HPO terms.\"\n  },\n  {\n    \"gene\": \"SCN3B\",\n    \"confidence\": 0.06,\n    \"rationale\": \"SCN3B evidence includes rod-cone dystrophy, nyctalopia, and reduced visual acuity, partially matching patient phenotype.\"\n  },\n  {\n    \"gene\": \"LRP6\",\n    \"confidence\": 0.06,\n    \"rationale\": \"LRP6 evidence includes rod-cone dystrophy, macular oedema, peripheral field loss, and nyctalopia consistent with patient phenotype.\"\n  },\n  {\n    \"gene\": \"GPR37\",\n    \"confidence\": 0.06,\n    \"rationale\": \"GPR37 evidence includes rod-cone dystrophy, nyctalopia, peripheral vision loss, and macular edema partially matching patient phenotype.\"\n  },\n  {\n    \"gene\": \"CRTC3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CRTC3 evidence includes rod-cone dystrophy, macular oedema, peripheral field loss, and nyctalopia but no unique distinguishing features.\"\n  },\n  {\n    \"gene\": \"POU2AF3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"POU2AF3 evidence includes rod-cone dystrophy, nyctalopia, and peripheral field loss but lacks specific macular edema association.\"\n  },\n  {\n    \"gene\": \"GHSR\",\n    \"confidence\": 0.05,\n    \"rationale\": \"GHSR evidence includes rod-cone dystrophy, macular oedema, and nyctalopia but no unique distinguishing features over other candidates.\"\n  }\n]",
+  "parsed_top5": [
+    "HPR",
+    "PGRMC1",
+    "SERP1",
+    "BGLAP",
+    "FIGNL1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "KCTD14",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CAPRIN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19763,
+  "tokens_out": 947,
+  "finish_reason": "stop",
+  "latency_s": 17.72831416130066,
+  "cost_usd": 0.073494,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"CAPRIN1\", \"confidence\": 0.18, \"rationale\": \"CAPRIN1 is associated with neurodevelopmental disorders including ASD, ADHD, and speech delay, partially matching the patient's profile, though evidence chunks are non-specific.\"},\n  {\"gene\": \"FBXO3\", \"confidence\": 0.15, \"rationale\": \"FBXO3 chunk1 describes a patient with global developmental delay, autistic traits, and seizures most closely matching the neurodevelopmental/epilepsy phenotype cluster in this patient.\"},\n  {\"gene\": \"ANAPC1\", \"confidence\": 0.08, \"rationale\": \"ANAPC1 has been linked to neurodevelopmental syndromes; shared evidence chunks mention long face, cafe-au-lait, and developmental delay but no gene-specific direct link.\"},\n  {\"gene\": \"SLC66A1\", \"confidence\": 0.08, \"rationale\": \"SLC66A1 chunk2 describes a patient with global developmental delay, autistic traits, and seizures, and chunk3 mentions long face, partially overlapping the phenotype.\"},\n  {\"gene\": \"HGF\", \"confidence\": 0.07, \"rationale\": \"HGF evidence includes a case with long oval-shaped face, cafe-au-lait macule, global developmental delay, and seizure disorder, overlapping several patient HPO terms.\"},\n  {\"gene\": \"KCTD14\", \"confidence\": 0.06, \"rationale\": \"KCTD14 evidence describes global developmental delay, ASD, attention deficits, and delayed speech, partially matching the patient's neurodevelopmental profile.\"},\n  {\"gene\": \"RPAP1\", \"confidence\": 0.06, \"rationale\": \"RPAP1 shares the same evidence chunks describing developmental delay, ASD, and cafe-au-lait spot but lacks gene-specific mechanistic support.\"},\n  {\"gene\": \"COX14\", \"confidence\": 0.05, \"rationale\": \"COX14 evidence mentions cafe-au-lait spot, umbilical hernia, and seizures in a table context but no direct gene-disease link for this phenotype cluster.\"},\n  {\"gene\": \"HAS3\", \"confidence\": 0.05, \"rationale\": \"HAS3 shares evidence with umbilical hernia and cafe-au-lait spot mentions but no established neurodevelopmental disease association.\"},\n  {\"gene\": \"CCL4L1\", \"confidence\": 0.04, \"rationale\": \"CCL4L1 evidence overlaps with developmental delay and cafe-au-lait spot cases but lacks any direct gene-phenotype mechanistic link.\"},\n  {\"gene\": \"POLR2L\", \"confidence\": 0.04, \"rationale\": \"POLR2L evidence mentions umbilical hernia and cafe-au-lait spot in table context but no established link to this specific neurodevelopmental phenotype cluster.\"},\n  {\"gene\": \"SIGLEC6\", \"confidence\": 0.04, \"rationale\": \"SIGLEC6 evidence includes a table with umbilical hernia, cafe-au-lait, and seizures but SIGLEC6 has no established neurodevelopmental disease association.\"},\n  {\"gene\": \"CTSV\", \"confidence\": 0.04, \"rationale\": \"CTSV evidence overlaps with developmental delay and cafe-au-lait spot cases but no direct mechanistic link to this phenotype profile is established.\"},\n  {\"gene\": \"FHIP2A\", \"confidence\": 0.03, \"rationale\": \"FHIP2A shares generic evidence chunks with developmental delay and cafe-au-lait spot but has no known neurodevelopmental disease association.\"},\n  {\"gene\": \"SLC31A2\", \"confidence\": 0.03, \"rationale\": \"SLC31A2 evidence mentions long face and sleep disturbance but the gene is a copper transporter with no established link to this neurodevelopmental syndrome.\"}\n]",
+  "parsed_top5": [
+    "CAPRIN1",
+    "FBXO3",
+    "ANAPC1",
+    "SLC66A1",
+    "HGF"
+  ]
+}

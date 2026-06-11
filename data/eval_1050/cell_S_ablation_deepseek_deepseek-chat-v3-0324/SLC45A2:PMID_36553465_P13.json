@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P13",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17140,
+  "tokens_out": 713,
+  "finish_reason": "stop",
+  "latency_s": 44.57424592971802,
+  "cost_usd": 0.0039770100000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SLC45A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links SLC45A2 to OCA4 with matching phenotypes including hypopigmentation, blue irides, and ocular features.\"\n  },\n  {\n    \"gene\": \"ZNF546\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF546 to albinism or hypopigmentation phenotypes.\"\n  },\n  {\n    \"gene\": \"STRADB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting STRADB's role in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC27A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SLC27A1 to hypopigmentation or ocular albinism features.\"\n  },\n  {\n    \"gene\": \"SLC12A7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SLC12A7's involvement in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"LURAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking LURAP1 to albinism or hypopigmentation disorders.\"\n  },\n  {\n    \"gene\": \"SLC39A13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SLC39A13's role in albinism or ocular phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC25A39\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SLC25A39 to hypopigmentation or albinism.\"\n  },\n  {\n    \"gene\": \"ZNF383\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZNF383's involvement in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"CHRNB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking CHRNB1 to albinism or hypopigmentation features.\"\n  },\n  {\n    \"gene\": \"PPP1R35\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PPP1R35's role in albinism or ocular phenotypes.\"\n  },\n  {\n    \"gene\": \"C3orf18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking C3orf18 to hypopigmentation or albinism.\"\n  },\n  {\n    \"gene\": \"MDH1B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting MDH1B's involvement in albinism or related phenotypes.\"\n  },\n  {\n    \"gene\": \"MTM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking MTM1 to albinism or hypopigmentation features.\"\n  },\n  {\n    \"gene\": \"PRKAB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting PRKAB1's role in albinism or ocular phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ZNF546",
+    "STRADB",
+    "SLC27A1",
+    "SLC12A7"
+  ]
+}

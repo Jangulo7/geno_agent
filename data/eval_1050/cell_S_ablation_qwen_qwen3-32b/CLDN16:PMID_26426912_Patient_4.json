@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_26426912_Patient_4",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15898,
+  "tokens_out": 157,
+  "finish_reason": "stop",
+  "latency_s": 4.610912084579468,
+  "cost_usd": 0.0013158,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"CLDN16\": 0.95, \"SMCO1\": 0.1, \"LRP1\": 0.1, \"ARIH1\": 0.1, \"ITGA7\": 0.1, \"HOXB6\": 0.1, \"MC4R\": 0.1, \"CHIC1\": 0.1, \"PGA4\": 0.1, \"DNAJA4\": 0.1, \"ASB8\": 0.1, \"ITPKB\": 0.1, \"CYP4V2\": 0.1, \"GSTA3\": 0.1, \"VRK1\": 0.1}",
+  "parsed_top5": [
+    "CLDN16",
+    "SMCO1",
+    "LRP1",
+    "ARIH1",
+    "ITGA7"
+  ]
+}

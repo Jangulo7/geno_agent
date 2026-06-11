@@ -1,0 +1,26 @@
+{
+  "case_id": "NFU1:PMID_36256512_F7_II_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NFU1",
+  "orig_qwen3_8b_top1": "NFU1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NFU1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16775,
+  "tokens_out": 1170,
+  "finish_reason": "stop",
+  "latency_s": 18.0851993560791,
+  "cost_usd": 0.067875,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NFU1\",\n    \"confidence\": 0.18,\n    \"rationale\": \"NFU1 chunk_3 describes a proband with spastic paraplegia, corpus callosum hypoplasia, hypertonia, delayed walking, and motor delay most closely matching the patient's full HPO profile.\"\n  },\n  {\n    \"gene\": \"ZSCAN20\",\n    \"confidence\": 0.12,\n    \"rationale\": \"ZSCAN20 chunk_3 describes hypertonia, brisk reflexes, inability to walk independently, and global developmental delay, partially matching the patient phenotype.\"\n  },\n  {\n    \"gene\": \"GPRIN3\",\n    \"confidence\": 0.08,\n    \"rationale\": \"GPRIN3 chunk_3 describes hypertonia, brisk reflexes, severe motor delay, and inability to walk, overlapping with patient HPO but no specific corpus callosum or cisterna magna link.\"\n  },\n  {\n    \"gene\": \"TGIF2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"TGIF2 chunk_3 describes hypertonia, brisk reflexes, and severe motor delay with inability to walk, overlapping with patient HPO but lacking specific structural brain findings.\"\n  },\n  {\n    \"gene\": \"CDHR3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"CDHR3 chunk_3 describes hypertonia, brisk reflexes, and severe motor delay with inability to walk, overlapping with patient HPO but no specific link to corpus callosum or cisterna magna.\"\n  },\n  {\n    \"gene\": \"TRAPPC12\",\n    \"confidence\": 0.07,\n    \"rationale\": \"TRAPPC12 chunk_3 references thin corpus callosum in spastic paraplegia, and chunk_2 describes spastic paraplegia with corpus callosum hypoplasia, partially matching patient phenotype.\"\n  },\n  {\n    \"gene\": \"RASA4B\",\n    \"confidence\": 0.06,\n    \"rationale\": \"RASA4B chunk_1 describes spastic paraplegia with corpus callosum hypoplasia and motor delay, but evidence is not gene-specific and relevance is low.\"\n  },\n  {\n    \"gene\": \"ATF4\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ATF4 chunk_3 describes spastic paraplegia with corpus callosum thinning and brisk reflexes, but evidence is attributed to KIF1A, not ATF4 specifically.\"\n  },\n  {\n    \"gene\": \"CRNKL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CRNKL1 evidence describes spastic paraplegia and corpus callosum hypoplasia but is non-specific and not directly linked to CRNKL1 as a causal gene.\"\n  },\n  {\n    \"gene\": \"SRP68\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SRP68 evidence describes spastic paraplegia with corpus callosum thinning but is attributed to CYP2U1/SPG56, not SRP68, making gene-specific support absent.\"\n  },\n  {\n    \"gene\": \"MT1A\",\n    \"confidence\": 0.04,\n    \"rationale\": \"MT1A evidence describes spastic paraplegia and corpus callosum thinning but is attributed to other genes (KIF1A, TOE1), with no direct MT1A-specific support.\"\n  },\n  {\n    \"gene\": \"DNAI4\",\n    \"confidence\": 0.04,\n    \"rationale\": \"DNAI4 evidence describes spastic paraplegia and corpus callosum hypoplasia but is non-specific and DNAI4 is primarily associated with ciliary dyskinesia, not this phenotype.\"\n  },\n  {\n    \"gene\": \"C5orf52\",\n    \"confidence\": 0.04,\n    \"rationale\": \"C5orf52 evidence is non-specific, describing spastic paraplegia and corpus callosum hypoplasia in unrelated gene contexts with no direct C5orf52 disease link.\"\n  },\n  {\n    \"gene\": \"CDC50B\",\n    \"confidence\": 0.03,\n    \"rationale\": \"CDC50B evidence is entirely non-specific with no known association to spastic paraplegia, corpus callosum hypoplasia, or the patient's phenotype cluster.\"\n  },\n  {\n    \"gene\": \"ZACN\",\n    \"confidence\": 0.03,\n    \"rationale\": \"ZACN evidence is non-specific and ZACN encodes a zinc-activated ion channel with no established link to spastic paraplegia or the patient's structural brain findings.\"\n  }\n]",
+  "parsed_top5": [
+    "NFU1",
+    "ZSCAN20",
+    "GPRIN3",
+    "TGIF2",
+    "CDHR3"
+  ]
+}

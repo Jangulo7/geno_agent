@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM32",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19843,
+  "tokens_out": 810,
+  "finish_reason": "stop",
+  "latency_s": 11.907211542129517,
+  "cost_usd": 0.071679,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.91,\"rationale\":\"LMNA mutations cause FPLD2 (Dunnigan disease), directly matching all HPO features: loss of limb/truncal subcutaneous fat, lipodystrophy, hepatic steatosis, elevated HbA1c, hypercholesterolemia, low HDL, high LDL.\"},{\"gene\":\"KIDINS220\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking KIDINS220 to lipodystrophy or the metabolic phenotypes; evidence chunks only discuss other lipodystrophy genes.\"},{\"gene\":\"BPY2B\",\"confidence\":0.01,\"rationale\":\"No evidence linking BPY2B to lipodystrophy or any of the patient's metabolic phenotypes; all chunks discuss unrelated lipodystrophy genes.\"},{\"gene\":\"ALG3\",\"confidence\":0.01,\"rationale\":\"No evidence linking ALG3 to lipodystrophy or the metabolic phenotype profile presented; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"OR2L3\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR2L3 to lipodystrophy or metabolic syndrome; evidence chunks are generic background on other lipodystrophy genes.\"},{\"gene\":\"RNF170\",\"confidence\":0.01,\"rationale\":\"No evidence linking RNF170 to lipodystrophy or the patient's metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"UGGT2\",\"confidence\":0.01,\"rationale\":\"No evidence linking UGGT2 to lipodystrophy or metabolic phenotypes; evidence chunks are generic background on other lipodystrophy genes.\"},{\"gene\":\"ELL2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ELL2 to lipodystrophy or the patient's metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"GAGE10\",\"confidence\":0.01,\"rationale\":\"No evidence linking GAGE10 to lipodystrophy or metabolic syndrome; evidence chunks are generic background on other lipodystrophy genes.\"},{\"gene\":\"MRPS14\",\"confidence\":0.01,\"rationale\":\"No evidence linking MRPS14 to lipodystrophy or the patient's metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"ATMIN\",\"confidence\":0.01,\"rationale\":\"No evidence linking ATMIN to lipodystrophy or metabolic syndrome; evidence chunks are generic background on other lipodystrophy genes.\"},{\"gene\":\"MGAT4C\",\"confidence\":0.01,\"rationale\":\"No evidence linking MGAT4C to lipodystrophy or the patient's metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"FTMT\",\"confidence\":0.01,\"rationale\":\"No evidence linking FTMT to lipodystrophy or metabolic syndrome; evidence chunks are generic background on other lipodystrophy genes.\"},{\"gene\":\"CA9\",\"confidence\":0.01,\"rationale\":\"No evidence linking CA9 to lipodystrophy or the patient's metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"POLR1A\",\"confidence\":0.01,\"rationale\":\"No evidence linking POLR1A to lipodystrophy or metabolic syndrome; evidence chunks are generic background on other lipodystrophy genes.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "KIDINS220",
+    "BPY2B",
+    "ALG3",
+    "OR2L3"
+  ]
+}

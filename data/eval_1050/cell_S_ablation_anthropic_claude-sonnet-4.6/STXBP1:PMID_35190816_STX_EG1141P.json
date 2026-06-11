@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_EG1141P",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19377,
+  "tokens_out": 692,
+  "finish_reason": "stop",
+  "latency_s": 10.215057134628296,
+  "cost_usd": 0.068511,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"STXBP1\",\"confidence\":0.92,\"rationale\":\"STXBP1 evidence directly describes epileptic encephalopathy with tonic-clonic/tonic seizures, severe intellectual disability, hypotonia, and global developmental delay\u2014matching all patient HPO terms.\"},{\"gene\":\"AP2A2\",\"confidence\":0.02,\"rationale\":\"No direct AP2A2 evidence; literature chunks are generic epileptic encephalopathy descriptions unrelated to this gene.\"},{\"gene\":\"NOCT\",\"confidence\":0.01,\"rationale\":\"No NOCT-specific evidence; all chunks are generic epilepsy/encephalopathy descriptions not linked to this gene.\"},{\"gene\":\"SHOX\",\"confidence\":0.01,\"rationale\":\"SHOX is a skeletal dysplasia gene; no relevant evidence linking it to epileptic encephalopathy or the patient's phenotype.\"},{\"gene\":\"PTGS2\",\"confidence\":0.01,\"rationale\":\"No PTGS2-specific neurological disease evidence; chunks describe generic epilepsy syndromes unrelated to this gene.\"},{\"gene\":\"LINGO4\",\"confidence\":0.01,\"rationale\":\"No LINGO4-specific evidence; chunks are generic epilepsy descriptions with no direct gene link.\"},{\"gene\":\"RAD9A\",\"confidence\":0.01,\"rationale\":\"RAD9A is a DNA repair gene; no evidence linking it to epileptic encephalopathy or the patient's phenotype.\"},{\"gene\":\"NMUR2\",\"confidence\":0.01,\"rationale\":\"No NMUR2-specific epileptic encephalopathy evidence; chunks are generic and unrelated to this gene.\"},{\"gene\":\"FGF7\",\"confidence\":0.01,\"rationale\":\"FGF7 is a growth factor gene; no evidence linking it to epileptic encephalopathy or the patient's phenotype.\"},{\"gene\":\"DERA\",\"confidence\":0.01,\"rationale\":\"No DERA-specific evidence; chunks are generic epilepsy descriptions unrelated to this gene.\"},{\"gene\":\"PCDH11X\",\"confidence\":0.01,\"rationale\":\"No PCDH11X-specific evidence for this phenotype; chunks are generic epilepsy descriptions.\"},{\"gene\":\"CASTOR1\",\"confidence\":0.01,\"rationale\":\"No CASTOR1-specific neurological disease evidence; chunks describe generic epilepsy syndromes unrelated to this gene.\"},{\"gene\":\"TXN2\",\"confidence\":0.01,\"rationale\":\"No TXN2-specific evidence; chunks are generic epilepsy descriptions unrelated to this gene.\"},{\"gene\":\"MOB3A\",\"confidence\":0.01,\"rationale\":\"No MOB3A-specific evidence; chunks are generic epilepsy descriptions unrelated to this gene.\"},{\"gene\":\"GLRB\",\"confidence\":0.01,\"rationale\":\"GLRB is associated with hyperekplexia, not epileptic encephalopathy; no specific evidence matching the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "AP2A2",
+    "NOCT",
+    "SHOX",
+    "PTGS2"
+  ]
+}

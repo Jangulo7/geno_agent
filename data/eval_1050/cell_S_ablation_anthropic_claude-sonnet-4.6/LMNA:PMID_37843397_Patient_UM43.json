@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM43",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20334,
+  "tokens_out": 837,
+  "finish_reason": "stop",
+  "latency_s": 10.232945680618286,
+  "cost_usd": 0.073557,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.92,\"rationale\":\"LMNA (lamin A/C) directly causes FPLD2 (Dunnigan syndrome), explicitly linked in evidence to lipodystrophy, T2DM, hypertriglyceridemia, hepatic steatosis, elevated HbA1c, and loss of limb/truncal subcutaneous fat\u2014matching all patient HPO terms.\"},{\"gene\":\"SCGB1D2\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning SCGB1D2.\"},{\"gene\":\"TNRC18\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning TNRC18.\"},{\"gene\":\"CHRD\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning CHRD.\"},{\"gene\":\"CEACAM4\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning CEACAM4.\"},{\"gene\":\"OR13A1\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning OR13A1.\"},{\"gene\":\"NAALADL1\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning NAALADL1.\"},{\"gene\":\"MYD88\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning MYD88.\"},{\"gene\":\"ARID3A\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning ARID3A.\"},{\"gene\":\"GTF3A\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning GTF3A.\"},{\"gene\":\"ELF2\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning ELF2.\"},{\"gene\":\"PPP2R2A\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning PPP2R2A.\"},{\"gene\":\"CTXND2\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning CTXND2.\"},{\"gene\":\"CDC73\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning CDC73.\"},{\"gene\":\"ZBTB24\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to lipodystrophy phenotype; evidence chunks only discuss lipodystrophy generally without mentioning ZBTB24.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "SCGB1D2",
+    "TNRC18",
+    "CHRD",
+    "CEACAM4"
+  ]
+}

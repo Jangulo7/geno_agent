@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P21",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15117,
+  "tokens_out": 652,
+  "finish_reason": "stop",
+  "latency_s": 21.139065265655518,
+  "cost_usd": 0.00352544,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SLC45A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking SLC45A2 to oculocutaneous albinism (OCA4) with phenotypes matching the patient's.\"\n  },\n  {\n    \"gene\": \"CARD8\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some evidence of dermatological and ophthalmological phenotypes but less directly linked than SLC45A2.\"\n  },\n  {\n    \"gene\": \"RAB17\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Involvement in melanosome transport but evidence less specific to patient's phenotype.\"\n  },\n  {\n    \"gene\": \"LPP\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Potential involvement in hypopigmentation but evidence primarily from mouse models.\"\n  },\n  {\n    \"gene\": \"ZNF891\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Family reports of hypopigmentation but no direct gene-phenotype link.\"\n  },\n  {\n    \"gene\": \"BRINP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence, only mentions hypopigmentation in families without mechanistic link.\"\n  },\n  {\n    \"gene\": \"SLC8A3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"H2AC18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient's phenotype.\"\n  },\n  {\n    \"gene\": \"WFDC13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"SLC26A9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"C2orf49\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"NDUFA8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"DDX18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to albinism or hypopigmentation.\"\n  },\n  {\n    \"gene\": \"PSAP\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MRPL45\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "SLC45A2",
+    "CARD8",
+    "RAB17",
+    "LPP",
+    "ZNF891"
+  ]
+}

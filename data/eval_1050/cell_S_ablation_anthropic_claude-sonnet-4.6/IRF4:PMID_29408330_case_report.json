@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_29408330_case_report",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 8917,
+  "tokens_out": 1047,
+  "finish_reason": "stop",
+  "latency_s": 17.849048137664795,
+  "cost_usd": 0.042456,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IRF4\",\n    \"confidence\": 0.35,\n    \"rationale\": \"IRF4 is a master transcription factor for plasma cell differentiation regulating immunoglobulin production; its dysfunction could explain pan-hypogammaglobulinemia (IgA, IgG, IgM, IgE) seen in this patient.\"\n  },\n  {\n    \"gene\": \"AP4M1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"AP4M1 mutations cause a neurodevelopmental syndrome; bulging fontanelle could fit but evidence for immunodeficiency and skin phenotypes is lacking.\"\n  },\n  {\n    \"gene\": \"SBNO1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"SBNO1 has roles in developmental signaling but no direct evidence linking it to the combined immunodeficiency and skin phenotype observed here.\"\n  },\n  {\n    \"gene\": \"ATP6V0D1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"V-ATPase subunits affect lysosomal function and could theoretically impact immune cell function, but no direct evidence supports this phenotype cluster.\"\n  },\n  {\n    \"gene\": \"NPR3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"NPR3 is a natriuretic peptide receptor; no strong mechanistic link to combined immunodeficiency, skin inflammation, or bulging fontanelle is established.\"\n  },\n  {\n    \"gene\": \"FGFBP3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"FGFBP3 modulates FGF signaling relevant to skin, but no evidence directly connects it to pan-hypogammaglobulinemia or bulging fontanelle.\"\n  },\n  {\n    \"gene\": \"SLC36A4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"SLC36A4 is an amino acid transporter with no established link to the immunodeficiency or dermatological phenotypes in this patient.\"\n  },\n  {\n    \"gene\": \"H2AJ\",\n    \"confidence\": 0.05,\n    \"rationale\": \"H2AJ is a histone variant; no direct evidence links it to combined immunodeficiency, skin inflammation, or bulging fontanelle.\"\n  },\n  {\n    \"gene\": \"SFMBT2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"SFMBT2 is a Polycomb group protein; no established connection to the observed immunodeficiency or skin phenotype cluster.\"\n  },\n  {\n    \"gene\": \"FIGN\",\n    \"confidence\": 0.04,\n    \"rationale\": \"FIGN encodes a microtubule-severing ATPase with no known role in immunoglobulin production or the dermatological features described.\"\n  },\n  {\n    \"gene\": \"SYCP1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"SYCP1 is a meiotic synaptonemal complex protein with no plausible link to immunodeficiency, skin inflammation, or bulging fontanelle.\"\n  },\n  {\n    \"gene\": \"SMIM3\",\n    \"confidence\": 0.03,\n    \"rationale\": \"SMIM3 is a small integral membrane protein of unknown function with no evidence connecting it to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"OR10C1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"OR10C1 is an olfactory receptor gene with no known role in immune function or the skin/neurological phenotypes observed.\"\n  },\n  {\n    \"gene\": \"OR2T1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"OR2T1 is an olfactory receptor gene with no established connection to immunodeficiency, skin inflammation, or bulging fontanelle.\"\n  },\n  {\n    \"gene\": \"OR6C1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"OR6C1 is an olfactory receptor gene with no plausible mechanistic link to the combined immunodeficiency and skin phenotype cluster.\"\n  }\n]",
+  "parsed_top5": [
+    "IRF4",
+    "AP4M1",
+    "SBNO1",
+    "ATP6V0D1",
+    "NPR3"
+  ]
+}

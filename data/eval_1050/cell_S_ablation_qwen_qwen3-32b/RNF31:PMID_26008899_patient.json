@@ -1,0 +1,26 @@
+{
+  "case_id": "RNF31:PMID_26008899_patient",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "RNF31",
+  "orig_qwen3_8b_top1": "RNF31",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RNF31",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16882,
+  "tokens_out": 788,
+  "finish_reason": "stop",
+  "latency_s": 11.173475742340088,
+  "cost_usd": 0.0015712,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"RNF31\": {\"gene\": \"RNF31\", \"confidence\": 0.95, \"rationale\": \"RNF31 (HOIP) deficiency causes lymphangiectasia, splenomegaly, and immune defects matching the patient's phenotype.\"}, \"DOCK8\": {\"gene\": \"DOCK8\", \"confidence\": 0.75, \"rationale\": \"DOCK8 deficiency presents with immunodeficiency, lymphopenia, and skin manifestations, partially overlapping with the patient's features.\"}, \"SLC39A8\": {\"gene\": \"SLC39A8\", \"confidence\": 0.6, \"rationale\": \"SLC39A8 deficiency leads to immune defects and lymphangiectasia, but less specific to the patient's phenotype.\"}, \"HBZ\": {\"gene\": \"HBZ\", \"confidence\": 0.4, \"rationale\": \"HBZ is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"ADA\": {\"gene\": \"ADA\", \"confidence\": 0.35, \"rationale\": \"ADA deficiency causes severe immunodeficiency, but lacks lymphangiectasia and splenomegaly features.\"}, \"EVX1\": {\"gene\": \"EVX1\", \"confidence\": 0.3, \"rationale\": \"EVX1 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"MYO7B\": {\"gene\": \"MYO7B\", \"confidence\": 0.25, \"rationale\": \"MYO7B is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"ZNF207\": {\"gene\": \"ZNF207\", \"confidence\": 0.2, \"rationale\": \"ZNF207 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"SLC34A2\": {\"gene\": \"SLC34A2\", \"confidence\": 0.18, \"rationale\": \"SLC34A2 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"TMEM278\": {\"gene\": \"TMEM278\", \"confidence\": 0.15, \"rationale\": \"TMEM278 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"TCOF1\": {\"gene\": \"TCOF1\", \"confidence\": 0.14, \"rationale\": \"TCOF1 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"GNA12\": {\"gene\": \"GNA12\", \"confidence\": 0.13, \"rationale\": \"GNA12 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"REPS2\": {\"gene\": \"REPS2\", \"confidence\": 0.12, \"rationale\": \"REPS2 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"RNF187\": {\"gene\": \"RNF187\", \"confidence\": 0.11, \"rationale\": \"RNF187 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}, \"CLCF1\": {\"gene\": \"CLCF1\", \"confidence\": 0.1, \"rationale\": \"CLCF1 is not a known immunodeficiency gene; evidence is limited to general immune phenotyping.\"}}",
+  "parsed_top5": [
+    "RNF31",
+    "DOCK8",
+    "SLC39A8",
+    "HBZ",
+    "ADA"
+  ]
+}

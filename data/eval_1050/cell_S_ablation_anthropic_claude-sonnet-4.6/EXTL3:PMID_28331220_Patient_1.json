@@ -1,0 +1,26 @@
+{
+  "case_id": "EXTL3:PMID_28331220_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19304,
+  "tokens_out": 907,
+  "finish_reason": "stop",
+  "latency_s": -381.81037163734436,
+  "cost_usd": 0.071517,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"EXTL3\", \"confidence\": 0.93, \"rationale\": \"EXTL3 mutations cause immunoskeletal dysplasia with neurodevelopmental abnormalities directly matching: platyspondyly, brachydactyly, hypotonia, developmental delay, spinal cord compression, microcephaly, and facial dysmorphism including depressed nasal bridge and frontal bossing.\"}, {\"gene\": \"MT-ND5\", \"confidence\": 0.02, \"rationale\": \"MT-ND5 evidence only shows incidental co-occurrence with skeletal dysplasia; no direct causal link to this specific phenotype constellation.\"}, {\"gene\": \"TMEM63A\", \"confidence\": 0.01, \"rationale\": \"TMEM63A is associated with transient hypomyelination leukodystrophy; no evidence linking it to the skeletal dysplasia features (platyspondyly, brachydactyly, spinal stenosis) in this patient.\"}, {\"gene\": \"IMMP2L\", \"confidence\": 0.01, \"rationale\": \"IMMP2L deletions are associated with neurodevelopmental disorders but lack evidence for the skeletal dysplasia features central to this phenotype.\"}, {\"gene\": \"PNPLA4\", \"confidence\": 0.01, \"rationale\": \"PNPLA4 duplication reported in healthy individuals and those with variable neurological impairment; no established link to skeletal dysplasia phenotype.\"}, {\"gene\": \"UGP2\", \"confidence\": 0.005, \"rationale\": \"No specific evidence linking UGP2 to this combined skeletal and neurodevelopmental phenotype profile.\"}, {\"gene\": \"C1orf210\", \"confidence\": 0.005, \"rationale\": \"No relevant evidence connecting C1orf210 to the skeletal dysplasia and neurodevelopmental features in this patient.\"}, {\"gene\": \"PSMB4\", \"confidence\": 0.005, \"rationale\": \"No evidence linking PSMB4 to platyspondyly, brachydactyly, spinal cord compression, or the neurodevelopmental features in this patient.\"}, {\"gene\": \"OR10D3\", \"confidence\": 0.005, \"rationale\": \"OR10D3 is an olfactory receptor gene with no established disease association relevant to this phenotype.\"}, {\"gene\": \"SETSIP\", \"confidence\": 0.005, \"rationale\": \"No evidence linking SETSIP to the combined skeletal dysplasia and neurodevelopmental phenotype in this patient.\"}, {\"gene\": \"CYP21A2\", \"confidence\": 0.005, \"rationale\": \"CYP21A2 causes congenital adrenal hyperplasia, not consistent with the skeletal dysplasia and neurodevelopmental phenotype profile presented.\"}, {\"gene\": \"MTBP\", \"confidence\": 0.005, \"rationale\": \"No evidence linking MTBP to platyspondyly, brachydactyly, spinal cord compression, or the neurodevelopmental features in this patient.\"}, {\"gene\": \"HNRNPH3\", \"confidence\": 0.005, \"rationale\": \"No specific evidence connecting HNRNPH3 to the skeletal dysplasia and neurodevelopmental features in this patient.\"}, {\"gene\": \"EFCC1\", \"confidence\": 0.005, \"rationale\": \"No evidence linking EFCC1 to the combined skeletal and neurodevelopmental phenotype profile in this patient.\"}, {\"gene\": \"IQCF6\", \"confidence\": 0.005, \"rationale\": \"IQCF6 evidence shows some overlapping features (brachydactyly, kyphosis, micrognathia) but lacks the specific platyspondyly and spinal stenosis hallmarks of EXTL3 disease.\"}]",
+  "parsed_top5": [
+    "EXTL3",
+    "MT-ND5",
+    "TMEM63A",
+    "IMMP2L",
+    "PNPLA4"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_26031502_proband",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16871,
+  "tokens_out": 756,
+  "finish_reason": "stop",
+  "latency_s": 25.565561294555664,
+  "cost_usd": 0.00395632,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Highly specific evidence linking SPINK5 mutations to Netherton syndrome, which matches the patient's phenotypes including erythroderma, trichorrhexis invaginata, and atopic manifestations.\"\n  },\n  {\n    \"gene\": \"FABP5\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Evidence suggests FABP5 up-regulation in asthmatic patients, but lacks direct correlation with the patient's primary skin and hair abnormalities.\"\n  },\n  {\n    \"gene\": \"TSNAXIP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking TSNAXIP1 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"POLR2M\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking POLR2M to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"CCDC6\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CCDC6 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"SCOC\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking SCOC to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"APMAP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking APMAP to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"XPOT\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking XPOT to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"VRK2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking VRK2 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"FSCN3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking FSCN3 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"CIB1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CIB1 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"RPAIN\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking RPAIN to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"RENBP\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking RENBP to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"COQ4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking COQ4 to the patient's phenotypes; mentions are general and non-specific.\"\n  },\n  {\n    \"gene\": \"LYZ\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking LYZ to the patient's phenotypes; mentions are general and non-specific.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "SPINK5",
+    "FABP5",
+    "TSNAXIP1",
+    "POLR2M",
+    "CCDC6"
+  ]
+}

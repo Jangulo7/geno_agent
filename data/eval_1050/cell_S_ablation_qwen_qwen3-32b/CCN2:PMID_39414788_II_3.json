@@ -1,0 +1,26 @@
+{
+  "case_id": "CCN2:PMID_39414788_II_3",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18641,
+  "tokens_out": 676,
+  "finish_reason": "stop",
+  "latency_s": 26.266031742095947,
+  "cost_usd": 0.00168056,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CCN2\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking CCN2 to joint swelling, arthralgia, waddling gait, and short stature with skeletal abnormalities.\"}, {\"gene\": \"PODN\", \"confidence\": 0.65, \"rationale\": \"Mentions of waddling gait and pelvic pain, but less direct evidence for joint swelling and arthralgia.\"}, {\"gene\": \"SLC6A3\", \"confidence\": 0.55, \"rationale\": \"Some overlap with short stature and joint issues, but less specific to the full phenotype.\"}, {\"gene\": \"RGS11\", \"confidence\": 0.5, \"rationale\": \"Generalized joint and skeletal issues reported, but not specifically linked to the full set of phenotypes.\"}, {\"gene\": \"C11orf58\", \"confidence\": 0.45, \"rationale\": \"Mentions of joint swelling and short stature, but less direct evidence for waddling gait.\"}, {\"gene\": \"LMF1\", \"confidence\": 0.4, \"rationale\": \"Some overlap with joint and skeletal issues, but not strongly linked to the full phenotype.\"}, {\"gene\": \"PACRGL\", \"confidence\": 0.35, \"rationale\": \"Mentions of joint swelling and short stature, but less specific to the full set of phenotypes.\"}, {\"gene\": \"SNX10\", \"confidence\": 0.3, \"rationale\": \"Generalized joint and skeletal issues reported, but not specifically linked to the full set of phenotypes.\"}, {\"gene\": \"CTNNBIP1\", \"confidence\": 0.25, \"rationale\": \"Mentions of waddling gait and pelvic pain, but less direct evidence for joint swelling and arthralgia.\"}, {\"gene\": \"ELAVL4\", \"confidence\": 0.2, \"rationale\": \"Generalized joint and skeletal issues reported, but not specifically linked to the full set of phenotypes.\"}, {\"gene\": \"GPX1\", \"confidence\": 0.15, \"rationale\": \"Mentions of joint swelling and short stature, but less specific to the full set of phenotypes.\"}, {\"gene\": \"SYNPR\", \"confidence\": 0.1, \"rationale\": \"Mentions of waddling gait and pelvic pain, but less direct evidence for joint swelling and arthralgia.\"}, {\"gene\": \"XXYLT1\", \"confidence\": 0.08, \"rationale\": \"Generalized joint and skeletal issues reported, but not specifically linked to the full set of phenotypes.\"}, {\"gene\": \"HMGN1\", \"confidence\": 0.05, \"rationale\": \"Mentions of waddling gait and pelvic pain, but less direct evidence for joint swelling and arthralgia.\"}, {\"gene\": \"ZNF730\", \"confidence\": 0.03, \"rationale\": \"Generalized joint and skeletal issues reported, but not specifically linked to the full set of phenotypes.\"}]",
+  "parsed_top5": [
+    "CCN2",
+    "PODN",
+    "SLC6A3",
+    "RGS11",
+    "C11orf58"
+  ]
+}

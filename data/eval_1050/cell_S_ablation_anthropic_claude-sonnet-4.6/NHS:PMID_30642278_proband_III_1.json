@@ -1,0 +1,26 @@
+{
+  "case_id": "NHS:PMID_30642278_proband_III_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17247,
+  "tokens_out": 784,
+  "finish_reason": "stop",
+  "latency_s": 11.082171201705933,
+  "cost_usd": 0.063501,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"NHS\", \"confidence\": 0.97, \"rationale\": \"NHS gene evidence directly describes Nance-Horan syndrome with nuclear cataracts, prominent nose, screwdriver incisors, mulberry molars, narrow face, and anteverted ears\u2014matching all patient HPO phenotypes exactly.\"}, {\"gene\": \"KCND2\", \"confidence\": 0.02, \"rationale\": \"Evidence chunks describe NHS syndrome but KCND2 is not mentioned as causal; no independent evidence linking KCND2 to this phenotype profile.\"}, {\"gene\": \"PEDS1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PEDS1 to the patient's phenotype; chunks reference NHS syndrome only without mentioning PEDS1.\"}, {\"gene\": \"WDR6\", \"confidence\": 0.01, \"rationale\": \"No evidence linking WDR6 to this phenotype; evidence chunks describe NHS syndrome without implicating WDR6.\"}, {\"gene\": \"MOSPD3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MOSPD3 to cataracts, dental anomalies, or facial dysmorphism characteristic of this phenotype profile.\"}, {\"gene\": \"CD80\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CD80 to Nance-Horan syndrome or any of the patient's HPO phenotypes.\"}, {\"gene\": \"PPP1R21\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PPP1R21 to the patient's phenotype; evidence chunks reference NHS syndrome only.\"}, {\"gene\": \"KRT14\", \"confidence\": 0.01, \"rationale\": \"No evidence linking KRT14 to nuclear cataracts, dental anomalies, or facial features described in this patient.\"}, {\"gene\": \"CYP3A43\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CYP3A43 to this phenotype; evidence chunks describe NHS syndrome without implicating CYP3A43.\"}, {\"gene\": \"PM20D1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PM20D1 to Nance-Horan syndrome or the patient's HPO phenotypes.\"}, {\"gene\": \"HP1BP3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking HP1BP3 to cataracts, dental anomalies, or facial dysmorphism in this patient.\"}, {\"gene\": \"CCL22\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CCL22 to the patient's phenotype profile; evidence chunks reference NHS syndrome only.\"}, {\"gene\": \"RAB37\", \"confidence\": 0.01, \"rationale\": \"No evidence linking RAB37 to Nance-Horan syndrome or any of the patient's HPO phenotypes.\"}, {\"gene\": \"DALRD3\", \"confidence\": 0.01, \"rationale\": \"No evidence linking DALRD3 to the patient's phenotype; evidence chunks describe NHS syndrome without implicating DALRD3.\"}, {\"gene\": \"CFB\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CFB to nuclear cataracts, dental anomalies, or facial features characteristic of this patient's phenotype.\"}]",
+  "parsed_top5": [
+    "NHS",
+    "KCND2",
+    "PEDS1",
+    "WDR6",
+    "MOSPD3"
+  ]
+}

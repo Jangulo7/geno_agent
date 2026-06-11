@@ -1,0 +1,26 @@
+{
+  "case_id": "TBCB:PMID_40856104_Participant_7_5",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TBCB",
+  "orig_qwen3_8b_top1": "CSMD1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CSMD1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18247,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 11.819865226745605,
+  "cost_usd": 0.064956,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CSMD1\",\"confidence\":0.72,\"rationale\":\"Multiple evidence chunks directly link CSMD1 variants/enhancer DNMs to autism, delayed speech and language development, and neurodevelopmental phenotypes matching the patient's profile.\"},{\"gene\":\"CSH1\",\"confidence\":0.06,\"rationale\":\"CSH1 chunk mentions slender fingers and autism family history in a case, but CSH1 itself is a Silver-Russell candidate with no direct neurodevelopmental disease link.\"},{\"gene\":\"COQ5\",\"confidence\":0.05,\"rationale\":\"COQ5 is linked to neurodevelopmental delay and speech regression but not specifically to long face, slender fingers, or autism as core features.\"},{\"gene\":\"MOS\",\"confidence\":0.04,\"rationale\":\"MOS evidence chunk describes a patient with global delays and autism-like features but no direct gene-phenotype link to the patient's specific HPO terms.\"},{\"gene\":\"DNASE2B\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking DNASE2B to the patient's phenotype profile; evidence chunks are generic neurodevelopmental cases.\"},{\"gene\":\"NOP16\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking NOP16 to long face, slender fingers, speech delay, or autism in the provided chunks.\"},{\"gene\":\"SMIM35\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SMIM35 to the patient's phenotype; evidence chunks are non-specific.\"},{\"gene\":\"ZNF814\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ZNF814 to the patient's phenotype profile in the provided literature.\"},{\"gene\":\"ISM1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking ISM1 to long face, slender fingers, speech delay, or autism.\"},{\"gene\":\"CD300LF\",\"confidence\":0.01,\"rationale\":\"No evidence linking CD300LF to the patient's neurodevelopmental or dysmorphic phenotype profile.\"},{\"gene\":\"ZSCAN25\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZSCAN25 to the patient's phenotype in the provided chunks.\"},{\"gene\":\"INA\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking INA to long face, slender fingers, speech delay, or autism.\"},{\"gene\":\"TIMM17A\",\"confidence\":0.01,\"rationale\":\"No evidence linking TIMM17A to the patient's specific phenotype profile.\"},{\"gene\":\"ABCG5\",\"confidence\":0.01,\"rationale\":\"ABCG5 is a sterol transporter with no established link to autism, speech delay, or the dysmorphic features described.\"},{\"gene\":\"TREX1\",\"confidence\":0.01,\"rationale\":\"TREX1 is associated with Aicardi-Gouti\u00e8res syndrome, not matching the patient's phenotype of long face, slender fingers, speech delay, and autism.\"}]",
+  "parsed_top5": [
+    "CSMD1",
+    "CSH1",
+    "COQ5",
+    "MOS",
+    "DNASE2B"
+  ]
+}

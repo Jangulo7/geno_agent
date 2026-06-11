@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_E_individual_E1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17507,
+  "tokens_out": 608,
+  "finish_reason": "stop",
+  "latency_s": 18.872329473495483,
+  "cost_usd": 0.00396956,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking IKZF1 variants to recurrent infections, immune dysregulation, and hypogammaglobulinemia matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MAIP1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some evidence of immune dysfunction but less specific to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"ANO10\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Limited evidence connecting ANO10 to similar immune phenotypes.\"\n  },\n  {\n    \"gene\": \"EPS8L2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking EPS8L2 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"IER5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No clear association with immune deficiencies or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"IGFBP6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence supporting a role in immune dysfunction.\"\n  },\n  {\n    \"gene\": \"FLYWCH2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented connection to immune-related conditions.\"\n  },\n  {\n    \"gene\": \"SMIM10L2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lack of evidence linking SMIM10L2B to immune disorders.\"\n  },\n  {\n    \"gene\": \"MRPL51\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for immune system involvement.\"\n  },\n  {\n    \"gene\": \"TMEFF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No known association with immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"GPR37\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a role in immune deficiencies.\"\n  },\n  {\n    \"gene\": \"CLCN6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant data linking CLCN6 to immune dysfunction.\"\n  },\n  {\n    \"gene\": \"RPP21\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented connection to immune-related conditions.\"\n  },\n  {\n    \"gene\": \"SYNE2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence for involvement in immune system disorders.\"\n  },\n  {\n    \"gene\": \"SEMA3D\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known association with immunodeficiency phenotypes.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "IKZF1",
+    "MAIP1",
+    "ANO10",
+    "EPS8L2",
+    "IER5"
+  ]
+}

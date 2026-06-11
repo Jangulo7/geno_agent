@@ -1,0 +1,26 @@
+{
+  "case_id": "GAA:PMID_16917947_11",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "GAA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GAA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18251,
+  "tokens_out": 753,
+  "finish_reason": "stop",
+  "latency_s": 12.099435329437256,
+  "cost_usd": 0.066048,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"GAA\", \"confidence\": 0.92, \"rationale\": \"GAA evidence directly describes Pompe disease with elevated CK, AST, ALT, generalized muscle weakness, and respiratory distress as cardinal features of the disease caused by GAA deficiency.\"}, {\"gene\": \"BRAF\", \"confidence\": 0.02, \"rationale\": \"BRAF evidence mentions lab abnormalities as drug side effects, not as a primary genetic disease matching this phenotype profile.\"}, {\"gene\": \"AK5\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking AK5 to this phenotype; shared literature chunks are non-specific and not relevant to AK5 function.\"}, {\"gene\": \"TATDN2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TATDN2 to elevated CK/AST/ALT, muscle weakness, or respiratory distress as a primary genetic disorder.\"}, {\"gene\": \"TCEAL7\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TCEAL7 to this phenotype profile; evidence chunks are generic and unrelated to TCEAL7.\"}, {\"gene\": \"MEIKIN\", \"confidence\": 0.01, \"rationale\": \"MEIKIN is a meiosis-related gene with no evidence supporting association with muscle weakness or elevated muscle enzymes.\"}, {\"gene\": \"UNC79\", \"confidence\": 0.01, \"rationale\": \"No evidence linking UNC79 to elevated CK/AST/ALT, generalized muscle weakness, or respiratory distress.\"}, {\"gene\": \"RELCH\", \"confidence\": 0.01, \"rationale\": \"No evidence linking RELCH to this phenotype; shared literature chunks are non-specific.\"}, {\"gene\": \"ARX\", \"confidence\": 0.01, \"rationale\": \"ARX is associated with neurological disorders but evidence provided does not support the specific phenotype of elevated muscle enzymes and respiratory distress.\"}, {\"gene\": \"QKI\", \"confidence\": 0.01, \"rationale\": \"No evidence linking QKI to elevated CK/AST/ALT, generalized muscle weakness, or respiratory distress.\"}, {\"gene\": \"RAET1E\", \"confidence\": 0.01, \"rationale\": \"RAET1E is an immune-related gene with no evidence supporting association with this muscle disease phenotype.\"}, {\"gene\": \"MARCKS\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MARCKS to elevated muscle enzymes, generalized muscle weakness, or respiratory distress.\"}, {\"gene\": \"TMEM121B\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TMEM121B to this phenotype; evidence chunks are non-specific drug trial data.\"}, {\"gene\": \"CPLANE1\", \"confidence\": 0.01, \"rationale\": \"CPLANE1 is associated with ciliopathies; no evidence supports its role in elevated muscle enzymes or generalized muscle weakness.\"}, {\"gene\": \"STARD13\", \"confidence\": 0.01, \"rationale\": \"No evidence linking STARD13 to elevated CK/AST/ALT, generalized muscle weakness, or respiratory distress.\"}]",
+  "parsed_top5": [
+    "GAA",
+    "BRAF",
+    "AK5",
+    "TATDN2",
+    "TCEAL7"
+  ]
+}

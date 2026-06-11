@@ -1,0 +1,22 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_P_09",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17328,
+  "tokens_out": 66,
+  "finish_reason": "stop",
+  "latency_s": 2.172668218612671,
+  "cost_usd": 0.00140472,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"STXBP1\", \"confidence\": 0.95, \"rationale\": \"STXBP1 mutations are strongly associated with neonatal-onset epileptic encephalopathy, including burst suppression EEG, epileptic spasms, focal seizures, and global developmental delay.\"}",
+  "parsed_top5": [
+    "STXBP1"
+  ]
+}

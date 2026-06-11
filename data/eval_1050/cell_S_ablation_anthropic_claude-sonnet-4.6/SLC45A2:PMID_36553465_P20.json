@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P20",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21803,
+  "tokens_out": 706,
+  "finish_reason": "stop",
+  "latency_s": 13.030035972595215,
+  "cost_usd": 0.075999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SLC45A2\",\"confidence\":0.92,\"rationale\":\"SLC45A2 chunk_1 directly describes OCA4 patients with white eyelashes, blue irides, iris transillumination, and hypopigmentation caused by SLC45A2 variants; chunk_3 confirms OCA hallmarks matching all patient HPOs.\"},{\"gene\":\"POP5\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking POP5 to the albinism/OCA phenotype; evidence chunks describe SLC45A2/TYR OCA patients only.\"},{\"gene\":\"PIAS2\",\"confidence\":0.02,\"rationale\":\"No evidence linking PIAS2 to oculocutaneous albinism or any of the patient's HPO features; chunks are about unrelated OCA genes.\"},{\"gene\":\"TRAPPC3L\",\"confidence\":0.02,\"rationale\":\"No evidence linking TRAPPC3L to the albinism phenotype; all evidence chunks reference other OCA genes.\"},{\"gene\":\"ALDH16A1\",\"confidence\":0.02,\"rationale\":\"No evidence linking ALDH16A1 to oculocutaneous albinism or the patient's HPO features.\"},{\"gene\":\"PNPLA2\",\"confidence\":0.02,\"rationale\":\"No evidence linking PNPLA2 to albinism or the patient's ocular/pigmentation phenotype.\"},{\"gene\":\"ZC3H12A\",\"confidence\":0.02,\"rationale\":\"No evidence linking ZC3H12A to oculocutaneous albinism or the patient's HPO features.\"},{\"gene\":\"BRI3\",\"confidence\":0.02,\"rationale\":\"No evidence linking BRI3 to albinism or the patient's HPO features.\"},{\"gene\":\"HSBP1L1\",\"confidence\":0.02,\"rationale\":\"No evidence linking HSBP1L1 to oculocutaneous albinism or the patient's HPO features.\"},{\"gene\":\"ITGA2B\",\"confidence\":0.02,\"rationale\":\"No evidence linking ITGA2B to albinism or the patient's HPO features.\"},{\"gene\":\"OGFOD1\",\"confidence\":0.02,\"rationale\":\"No evidence linking OGFOD1 to oculocutaneous albinism or the patient's HPO features.\"},{\"gene\":\"ADAMTS17\",\"confidence\":0.02,\"rationale\":\"No evidence linking ADAMTS17 to albinism or the patient's HPO features.\"},{\"gene\":\"CDC40\",\"confidence\":0.02,\"rationale\":\"No evidence linking CDC40 to oculocutaneous albinism or the patient's HPO features.\"},{\"gene\":\"HSP90AB1\",\"confidence\":0.02,\"rationale\":\"No evidence linking HSP90AB1 to albinism or the patient's HPO features.\"},{\"gene\":\"H1-5\",\"confidence\":0.02,\"rationale\":\"No evidence linking H1-5 to oculocutaneous albinism or the patient's HPO features.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "POP5",
+    "PIAS2",
+    "TRAPPC3L",
+    "ALDH16A1"
+  ]
+}

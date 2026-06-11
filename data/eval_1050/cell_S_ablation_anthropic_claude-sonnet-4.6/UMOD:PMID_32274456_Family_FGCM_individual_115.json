@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_32274456_Family_FGCM_individual_115",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16822,
+  "tokens_out": 841,
+  "finish_reason": "stop",
+  "latency_s": 14.834970474243164,
+  "cost_usd": 0.063081,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.82,\"rationale\":\"UMOD mutations directly cause ADTKD with CKD stages 3-5/ESRD, and evidence explicitly links UMOD to inherited CKD with proteinuria and hematuria features, making it the strongest candidate.\"},{\"gene\":\"CEP135\",\"confidence\":0.04,\"rationale\":\"No direct evidence linking CEP135 to the patient's phenotype; evidence chunks are generic CKD/hematuria/proteinuria definitions not specific to this gene.\"},{\"gene\":\"DYNAP\",\"confidence\":0.03,\"rationale\":\"No specific evidence linking DYNAP to CKD stage 5, hematuria, or proteinuria; evidence chunks are generic nephrology definitions.\"},{\"gene\":\"FAM171A2\",\"confidence\":0.02,\"rationale\":\"No gene-specific evidence connecting FAM171A2 to the patient's renal phenotype; chunks are generic CKD staging and Alport-related content.\"},{\"gene\":\"SH3PXD2A\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SH3PXD2A to CKD stage 5, hematuria, or proteinuria in the provided literature.\"},{\"gene\":\"ZFAND2B\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence for ZFAND2B in CKD, hematuria, or proteinuria; evidence is generic Alport/CKD staging content.\"},{\"gene\":\"SRGAP2\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking SRGAP2 to the patient's renal phenotype; chunks are generic nephrotic syndrome definitions.\"},{\"gene\":\"ERMP1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence for ERMP1 in CKD stage 5, hematuria, or proteinuria beyond generic CKD staging descriptions.\"},{\"gene\":\"GRK3\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking GRK3 to CKD stage 5, hematuria, or proteinuria; evidence is generic ADPKD/CKD content.\"},{\"gene\":\"ETHE1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence for ETHE1 in CKD stage 5, hematuria, or proteinuria; ETHE1 is known for ethylmalonic encephalopathy, not renal disease.\"},{\"gene\":\"CNIH3\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking CNIH3 to the patient's renal phenotype; evidence chunks are generic CKD staging definitions.\"},{\"gene\":\"USP28\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence for USP28 in CKD stage 5, hematuria, or proteinuria; evidence is generic CKD classification content.\"},{\"gene\":\"RXYLT1\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking RXYLT1 to CKD stage 5, hematuria, or proteinuria; evidence is generic CKD staging content.\"},{\"gene\":\"IL36B\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence for IL36B in CKD stage 5, hematuria, or proteinuria; IL36B is an interleukin not known for primary renal disease.\"},{\"gene\":\"LMAN1L\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking LMAN1L to CKD stage 5, hematuria, or proteinuria; evidence chunks are generic CKD staging definitions.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "CEP135",
+    "DYNAP",
+    "FAM171A2",
+    "SH3PXD2A"
+  ]
+}

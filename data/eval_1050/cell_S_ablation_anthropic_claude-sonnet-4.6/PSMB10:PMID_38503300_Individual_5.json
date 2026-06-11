@@ -1,0 +1,26 @@
+{
+  "case_id": "PSMB10:PMID_38503300_Individual_5",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PSMB10",
+  "orig_qwen3_8b_top1": "NFE2L2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NFE2L2",
+  "top1_correct": false,
+  "causal_rank": 5,
+  "tokens_in": 21154,
+  "tokens_out": 1081,
+  "finish_reason": "stop",
+  "latency_s": 18.028400897979736,
+  "cost_usd": 0.079677,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NFE2L2\",\n    \"confidence\": 0.52,\n    \"rationale\": \"NFE2L2 chunk_1 directly describes patients with recurrent infections, failure to thrive, and immunodeficiency with reduced B cells, matching the phenotype profile most closely among candidates.\"\n  },\n  {\n    \"gene\": \"GUK1\",\n    \"confidence\": 0.18,\n    \"rationale\": \"GUK1 chunk_1 describes ZAP70 deficiency context with CID, recurrent infections, failure to thrive, diarrhea, decreased T cells, and impaired proliferation, partially matching the phenotype.\"\n  },\n  {\n    \"gene\": \"NDRG3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"NDRG3 mouse KO shows reduced CD4+ and CD8+ T cells with decreased naive T cell proportions, partially overlapping the immunological phenotype but no direct human disease link.\"\n  },\n  {\n    \"gene\": \"C10orf143\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence chunks reference ARPC1B deficiency with eczema, recurrent infections, failure to thrive, and low naive CD4+ T cells, but no direct link to C10orf143 itself.\"\n  },\n  {\n    \"gene\": \"PSMB10\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence references ARPC1B deficiency phenotype overlapping with patient features, but no direct mechanistic link to PSMB10 is established in the provided chunks.\"\n  },\n  {\n    \"gene\": \"EVPLL\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking EVPLL to the immunodeficiency phenotype; all chunks are generic SCID/LAT deficiency descriptions unrelated to EVPLL.\"\n  },\n  {\n    \"gene\": \"ZNF76\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking ZNF76 to the immunodeficiency phenotype; chunks describe LAT/SCID unrelated to ZNF76.\"\n  },\n  {\n    \"gene\": \"MSL3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking MSL3 to the immunodeficiency phenotype; all chunks are generic and unrelated to MSL3.\"\n  },\n  {\n    \"gene\": \"REPS1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking REPS1 to the immunodeficiency phenotype; chunks are generic SCID descriptions unrelated to REPS1.\"\n  },\n  {\n    \"gene\": \"TTI1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking TTI1 to the immunodeficiency phenotype; chunks describe unrelated SCID/HIES cases.\"\n  },\n  {\n    \"gene\": \"SDHD\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking SDHD to the immunodeficiency phenotype; chunks reference ARPC1B and SCID unrelated to SDHD.\"\n  },\n  {\n    \"gene\": \"SMIM39\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking SMIM39 to the immunodeficiency phenotype; all chunks are generic and unrelated.\"\n  },\n  {\n    \"gene\": \"MEGF6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking MEGF6 to the immunodeficiency phenotype; all chunks are generic SCID descriptions.\"\n  },\n  {\n    \"gene\": \"SPANXA1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking SPANXA1 to the immunodeficiency phenotype; all chunks are generic and unrelated.\"\n  },\n  {\n    \"gene\": \"CYP27A1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking CYP27A1 to the immunodeficiency phenotype; all chunks are generic SCID/LAT descriptions unrelated to CYP27A1.\"\n  }\n]",
+  "parsed_top5": [
+    "NFE2L2",
+    "GUK1",
+    "NDRG3",
+    "C10orf143",
+    "PSMB10"
+  ]
+}

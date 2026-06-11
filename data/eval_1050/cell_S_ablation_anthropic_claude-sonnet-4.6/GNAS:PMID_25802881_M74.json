@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_M74",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15977,
+  "tokens_out": 714,
+  "finish_reason": "stop",
+  "latency_s": 12.340420007705688,
+  "cost_usd": 0.058641,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GNAS\",\"confidence\":0.82,\"rationale\":\"GNAS mutations cause PHP1a/AHO with the classic triad of short metacarpals, short stature, and obesity, directly matching all three patient HPO phenotypes with high-relevance evidence.\"},{\"gene\":\"KMT2D\",\"confidence\":0.07,\"rationale\":\"KMT2D (Kabuki syndrome) evidence mentions short stature and obesity but lacks short metacarpal as a defining feature, making it a less specific match.\"},{\"gene\":\"PMM2\",\"confidence\":0.03,\"rationale\":\"PMM2-CDG evidence mentions short stature but not the combination of short metacarpals and obesity as characteristic features.\"},{\"gene\":\"NIN\",\"confidence\":0.02,\"rationale\":\"NIN evidence mentions slender metacarpals and short stature in skeletal dysplasia but not obesity, and the phenotype profile differs significantly.\"},{\"gene\":\"MAS1L\",\"confidence\":0.01,\"rationale\":\"Evidence chunks for MAS1L are generic AHO/PHP background text with no direct gene-specific association to the phenotype triad.\"},{\"gene\":\"ACAP1\",\"confidence\":0.01,\"rationale\":\"ACAP1 evidence is non-specific background text about short stature genetics with no direct link to short metacarpals and obesity.\"},{\"gene\":\"H3C4\",\"confidence\":0.01,\"rationale\":\"H3C4 evidence is generic background text with no direct gene-specific association to the patient's phenotype triad.\"},{\"gene\":\"AMER2\",\"confidence\":0.01,\"rationale\":\"AMER2 evidence is non-specific AHO background text with no direct gene-specific link to the phenotype triad.\"},{\"gene\":\"TAFA5\",\"confidence\":0.01,\"rationale\":\"TAFA5 evidence is generic background text with no direct gene-specific association to short metacarpals, short stature, and obesity.\"},{\"gene\":\"ALK\",\"confidence\":0.005,\"rationale\":\"ALK evidence is non-specific background text about short stature with no direct link to short metacarpals and obesity.\"},{\"gene\":\"SHISA7\",\"confidence\":0.005,\"rationale\":\"SHISA7 evidence is generic AHO background text with no direct gene-specific association to the phenotype triad.\"},{\"gene\":\"TMEM156\",\"confidence\":0.005,\"rationale\":\"TMEM156 evidence is non-specific background text with no direct gene-specific link to the patient's phenotype triad.\"},{\"gene\":\"SLC49A4\",\"confidence\":0.005,\"rationale\":\"SLC49A4 evidence is generic background text with no direct gene-specific association to short metacarpals, short stature, and obesity.\"},{\"gene\":\"ANKMY2\",\"confidence\":0.005,\"rationale\":\"ANKMY2 evidence is non-specific background text with no direct gene-specific link to the phenotype triad.\"},{\"gene\":\"SPADH\",\"confidence\":0.005,\"rationale\":\"SPADH evidence is generic background text with no direct gene-specific association to the patient's phenotype triad.\"}]",
+  "parsed_top5": [
+    "GNAS",
+    "KMT2D",
+    "PMM2",
+    "NIN",
+    "MAS1L"
+  ]
+}

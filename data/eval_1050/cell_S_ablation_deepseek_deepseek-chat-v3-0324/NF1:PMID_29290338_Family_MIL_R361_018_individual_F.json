@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_MIL_R361_018_individual_F",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14695,
+  "tokens_out": 693,
+  "finish_reason": "stop",
+  "latency_s": 38.36663269996643,
+  "cost_usd": 0.00347261,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NF1\",\n    \"confidence\": 0.99,\n    \"rationale\": \"NF1 is the definitive causal gene for neurofibromatosis type 1, matching all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"ODF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ODF1 to neurofibromatosis or patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TMEM50A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting TMEM50A in neurofibromatosis or related phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF140\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connects ZNF140 to neurofibromatosis or patient symptoms.\"\n  },\n  {\n    \"gene\": \"HOXB13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"HOXB13 has no known association with neurofibromatosis or cafe-au-lait spots.\"\n  },\n  {\n    \"gene\": \"LYZ\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LYZ is unrelated to neurofibromatosis or the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"C9orf72\",\n    \"confidence\": 0.1,\n    \"rationale\": \"C9orf72 is not implicated in neurofibromatosis or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"PFN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PFN2 lacks evidence for involvement in neurofibromatosis or related features.\"\n  },\n  {\n    \"gene\": \"SH2D3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature links SH2D3A to neurofibromatosis or patient symptoms.\"\n  },\n  {\n    \"gene\": \"ADRA1D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ADRA1D is not associated with neurofibromatosis or cafe-au-lait spots.\"\n  },\n  {\n    \"gene\": \"MAD2L1BP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"MAD2L1BP has no known role in neurofibromatosis or the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LOXL4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LOXL4 is not implicated in neurofibromatosis or the observed clinical features.\"\n  },\n  {\n    \"gene\": \"DNAJB4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"DNAJB4 lacks evidence for involvement in neurofibromatosis or related symptoms.\"\n  },\n  {\n    \"gene\": \"LYPD6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"LYPD6 is unrelated to neurofibromatosis or the patient's presentation.\"\n  },\n  {\n    \"gene\": \"FAM47E\",\n    \"confidence\": 0.1,\n    \"rationale\": \"FAM47E has no known association with neurofibromatosis or cafe-au-lait spots.\"\n  }\n]",
+  "parsed_top5": [
+    "NF1",
+    "ODF1",
+    "TMEM50A",
+    "ZNF140",
+    "HOXB13"
+  ]
+}

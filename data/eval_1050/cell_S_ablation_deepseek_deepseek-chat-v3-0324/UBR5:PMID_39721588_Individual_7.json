@@ -1,0 +1,26 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_7",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "TET3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TET3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12986,
+  "tokens_out": 640,
+  "finish_reason": "stop",
+  "latency_s": 58.71281456947327,
+  "cost_usd": 0.0030900000000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"TET3\",\n    \"confidence\": 0.7,\n    \"rationale\": \"TET3 has direct phenotypic overlap including hypertelorism, motor delay, and facial features.\"\n  },\n  {\n    \"gene\": \"DVL1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"DVL1 is associated with some overlapping features but lacks strong phenotypic specificity.\"\n  },\n  {\n    \"gene\": \"FKBP5\",\n    \"confidence\": 0.2,\n    \"rationale\": \"FKBP5 has weak phenotypic overlap with the patient's features.\"\n  },\n  {\n    \"gene\": \"SDHD\",\n    \"confidence\": 0.2,\n    \"rationale\": \"SDHD evidence lacks direct relevance to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC2A3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"SLC2A3 evidence does not strongly support the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CADPS2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CADPS2 has minimal phenotypic overlap with the patient's features.\"\n  },\n  {\n    \"gene\": \"HAGH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"HAGH evidence does not strongly support the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NBEAL2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"NBEAL2 evidence lacks direct relevance to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SSC4D\",\n    \"confidence\": 0.2,\n    \"rationale\": \"SSC4D evidence does not strongly support the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MYO1G\",\n    \"confidence\": 0.2,\n    \"rationale\": \"MYO1G evidence lacks direct relevance to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"NADSYN1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"NADSYN1 evidence does not strongly support the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"LGALS9\",\n    \"confidence\": 0.2,\n    \"rationale\": \"LGALS9 evidence lacks direct relevance to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"USP31\",\n    \"confidence\": 0.2,\n    \"rationale\": \"USP31 evidence does not strongly support the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"C12orf71\",\n    \"confidence\": 0.2,\n    \"rationale\": \"C12orf71 evidence lacks direct relevance to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CLPTM1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CLPTM1 evidence does not strongly support the patient's phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "TET3",
+    "DVL1",
+    "FKBP5",
+    "SDHD",
+    "SLC2A3"
+  ]
+}

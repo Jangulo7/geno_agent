@@ -1,0 +1,22 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_9",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "DDX42",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FAM240C",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20796,
+  "tokens_out": 486,
+  "finish_reason": "stop",
+  "latency_s": 9.981278657913208,
+  "cost_usd": 0.00179976,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"DDX42\",\"confidence\":0.85,\"rationale\":\"Strong match for strabismus, clinodactyly, developmental delay, and thin upper lip vermilion in patient data.\",\"gene\":\"MCIDAS\",\"confidence\":0.75,\"rationale\":\"Shows partial overlap with caf\u00e9 au lait spots and developmental delays but lacks specific ocular features.\",\"gene\":\"ZPBP\",\"confidence\":0.65,\"rationale\":\"Mildly overlaps with some features like caf\u00e9 au lait spots and developmental delays but lacks specificity.\",\"gene\":\"ITGA11\",\"confidence\":0.55,\"rationale\":\"Some overlap with developmental delays and clinodactyly but lacks direct ocular phenotype match.\",\"gene\":\"OLFM2\",\"confidence\":0.5,\"rationale\":\"General developmental delay overlap but no specific ocular or skin features mentioned.\",\"gene\":\"MGP\",\"confidence\":0.45,\"rationale\":\"Mildly associated with developmental delays but lacks specific ocular or skin features.\",\"gene\":\"TCEAL6\",\"confidence\":0.4,\"rationale\":\"Minimal overlap with developmental delays but no specific ocular or skin features.\",\"gene\":\"CENPVL3\",\"confidence\":0.35,\"rationale\":\"Very limited overlap with general developmental delays but no specific features.\",\"gene\":\"DBH\",\"confidence\":0.3,\"rationale\":\"Mildly associated with developmental delays but no specific ocular or skin features.\",\"gene\":\"KRTAP21-2\",\"confidence\":0.25,\"rationale\":\"Minimal overlap with general developmental delays but no specific features.\",\"gene\":\"RAB22A\",\"confidence\":0.2,\"rationale\":\"Very limited overlap with general developmental delays but no specific features.\",\"gene\":\"UPF3B\",\"confidence\":0.15,\"rationale\":\"Minimal overlap with general developmental delays but no specific features.\",\"gene\":\"CCDC198\",\"confidence\":0.1,\"rationale\":\"Very limited overlap with general developmental delays but no specific features.\",\"gene\":\"CAPRIN1\",\"confidence\":0.05,\"rationale\":\"Minimal overlap with general developmental delays but no specific features.\",\"gene\":\"FAM240C\",\"confidence\":0.01,\"rationale\":\"No direct overlap with specific ocular or skin features mentioned in patient data.\"}",
+  "parsed_top5": [
+    "FAM240C"
+  ]
+}

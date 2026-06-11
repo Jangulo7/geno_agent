@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM17",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20195,
+  "tokens_out": 852,
+  "finish_reason": "stop",
+  "latency_s": 12.126253128051758,
+  "cost_usd": 0.073365,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.82,\"rationale\":\"LMNA (lamin A/C) is directly named as the causal gene for FPLD2 (Dunnigan syndrome), with evidence chunks explicitly mentioning LMNA mutations causing familial partial lipodystrophy with T2DM, hypertriglyceridemia, elevated HbA1c, hepatic steatosis, and limb/truncal fat loss.\"},{\"gene\":\"OR2M7\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking OR2M7 to lipodystrophy or any patient phenotype; evidence chunks are generic lipodystrophy background with no mention of this gene.\"},{\"gene\":\"UBE2G2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking UBE2G2 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background with no mention of this gene.\"},{\"gene\":\"ERICH4\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ERICH4 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background with no mention of this gene.\"},{\"gene\":\"F8A3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking F8A3 to lipodystrophy; evidence chunks describe FPLD phenotypes generically without implicating this gene.\"},{\"gene\":\"PALM2AKAP2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking PALM2AKAP2 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"CEACAM7\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking CEACAM7 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"MBD3L3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking MBD3L3 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"CDKN2AIP\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking CDKN2AIP to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"TEX38\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TEX38 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"EFR3A\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking EFR3A to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"NMD3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking NMD3 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"GABRA1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking GABRA1 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"SERF2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SERF2 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"LZTR1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking LZTR1 to lipodystrophy or metabolic phenotypes; evidence chunks are generic lipodystrophy background.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "OR2M7",
+    "UBE2G2",
+    "ERICH4",
+    "F8A3"
+  ]
+}

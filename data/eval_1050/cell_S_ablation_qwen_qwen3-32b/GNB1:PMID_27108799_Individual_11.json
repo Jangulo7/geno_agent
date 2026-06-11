@@ -1,0 +1,22 @@
+{
+  "case_id": "GNB1:PMID_27108799_Individual_11",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GNB1",
+  "orig_qwen3_8b_top1": "GNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14323,
+  "tokens_out": 60,
+  "finish_reason": "stop",
+  "latency_s": 1.2979795932769775,
+  "cost_usd": 0.00116264,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"GNB1\", \"confidence\": 0.95, \"rationale\": \"Directly links to global developmental delay, hypotonia, seizures, hydronephrosis, and nystagmus in autosomal dominant neurodevelopmental disorder.\"}",
+  "parsed_top5": [
+    "GNB1"
+  ]
+}

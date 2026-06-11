@@ -1,0 +1,26 @@
+{
+  "case_id": "NFU1:PMID_36256512_F9_II_1",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NFU1",
+  "orig_qwen3_8b_top1": "SYT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SYT1",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 14895,
+  "tokens_out": 684,
+  "finish_reason": "stop",
+  "latency_s": 16.57543683052063,
+  "cost_usd": 0.00350568,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SYT1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"SYT1 mutations directly linked to neurological disorders with CNS and PNS effects, matching patient's developmental regression and peripheral neuropathy.\"\n  },\n  {\n    \"gene\": \"GTPBP2\",\n    \"confidence\": 0.7,\n    \"rationale\": \"GTPBP2 variants associated with neurodegeneration and ataxia, overlapping with patient's developmental regression and neuropathy.\"\n  },\n  {\n    \"gene\": \"NFU1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"NFU1 mutations cause leukoencephalopathy and mixed sensory-motor neuropathy, aligning with patient's developmental regression and neuropathy.\"\n  },\n  {\n    \"gene\": \"GCLM\",\n    \"confidence\": 0.5,\n    \"rationale\": \"GCLM deficiency linked to neurological symptoms including peripheral neuropathy, though less specific to ptosis and regression.\"\n  },\n  {\n    \"gene\": \"CHRFAM7A\",\n    \"confidence\": 0.4,\n    \"rationale\": \"CHRFAM7A mentions neuromuscular manifestations including ptosis and neuropathy, but evidence is less direct.\"\n  },\n  {\n    \"gene\": \"KCTD3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"KCTD3 mutations cause developmental delay and seizures, but peripheral neuropathy is not strongly highlighted.\"\n  },\n  {\n    \"gene\": \"TM4SF1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"TM4SF1 evidence mentions neuropathy but lacks strong association with ptosis or developmental regression.\"\n  },\n  {\n    \"gene\": \"RIPOR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RIPOR1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NBPF8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NBPF8 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPS11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MRPS11 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"EML2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking EML2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CHRM3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CHRM3 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SMC5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SMC5 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZXDA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZXDA to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NWD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NWD2 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SYT1",
+    "GTPBP2",
+    "NFU1",
+    "GCLM",
+    "CHRFAM7A"
+  ]
+}

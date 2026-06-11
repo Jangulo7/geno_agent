@@ -42,6 +42,12 @@ class RetrievedChunk:
         score_dense: Cosine similarity from the dense vector channel.
         score_bm25: BM25 score from the sparse vector channel.
         score_rrf: Reciprocal-rank-fusion score in hybrid mode.
+        pmid: Source PubMed ID as a bare digit string (e.g. ``"24573067"``),
+            or ``""`` when the source article has no linked PMID. Surfaced from
+            the Qdrant payload so leave-one-paper-out evaluation can exclude a
+            case's own source publication from retrieval (paper extension,
+            literature-redundancy analysis). Not all PMC OA articles carry a
+            PMID, hence the empty-string default.
     """
 
     chunk_id: str
@@ -51,6 +57,7 @@ class RetrievedChunk:
     score_dense: float | None = None
     score_bm25: float | None = None
     score_rrf: float | None = None
+    pmid: str = ""
 
 
 @dataclass(slots=True)
@@ -128,6 +135,11 @@ class AgentState:
     ranked: list[GeneCandidate] = field(default_factory=list)
     iteration: int = 0
     max_iterations: int = 3
+    # Optional debug/eval payload populated by lea_synthesizer_node when
+    # response logging is enabled (paper extension v3, Thread C). Consumed by
+    # scripts/eval/rerank_inside_d.py --responses-dir to emit per-case
+    # sidecars for RAGAS / DeepEval. Stays None for non-LEA cells.
+    lea_log: dict | None = None
 
     def remaining_iterations(self) -> int:
         """Return how many more Retriever→Critic loops are budgeted."""

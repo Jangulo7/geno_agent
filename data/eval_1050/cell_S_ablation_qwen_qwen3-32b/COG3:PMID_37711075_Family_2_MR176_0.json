@@ -1,0 +1,26 @@
+{
+  "case_id": "COG3:PMID_37711075_Family_2_MR176_0",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "COG3",
+  "orig_qwen3_8b_top1": "ATG16L1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "EFHD2",
+  "top1_correct": false,
+  "causal_rank": 6,
+  "tokens_in": 19057,
+  "tokens_out": 627,
+  "finish_reason": "stop",
+  "latency_s": 20.83699083328247,
+  "cost_usd": 0.0017001199999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"EFHD2\", \"confidence\": 0.95, \"rationale\": \"EFHD2 is directly linked to global developmental delay, intellectual disability, and aggressive behavior in the evidence.\"}, {\"gene\": \"ATG16L1\", \"confidence\": 0.85, \"rationale\": \"ATG16L1 is associated with neurodevelopmental disorders, including intellectual disability and cortical atrophy.\"}, {\"gene\": \"ORAI1\", \"confidence\": 0.75, \"rationale\": \"ORAI1 is linked to developmental delay and seizures, but less directly to aggressive behavior.\"}, {\"gene\": \"PSMC3\", \"confidence\": 0.7, \"rationale\": \"PSMC3 is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"MYLK4\", \"confidence\": 0.65, \"rationale\": \"MYLK4 is linked to global developmental delay and autistic behaviors, but not aggressive behavior.\"}, {\"gene\": \"COG3\", \"confidence\": 0.6, \"rationale\": \"COG3 is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"FGFR4\", \"confidence\": 0.55, \"rationale\": \"FGFR4 is linked to developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"FBL\", \"confidence\": 0.5, \"rationale\": \"FBL is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"NT5DC3\", \"confidence\": 0.45, \"rationale\": \"NT5DC3 is linked to developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"ARMC9\", \"confidence\": 0.4, \"rationale\": \"ARMC9 is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"TMEM143\", \"confidence\": 0.35, \"rationale\": \"TMEM143 is linked to developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"FAM153B\", \"confidence\": 0.3, \"rationale\": \"FAM153B is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"RANBP2\", \"confidence\": 0.25, \"rationale\": \"RANBP2 is linked to developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"C1QTNF4\", \"confidence\": 0.2, \"rationale\": \"C1QTNF4 is associated with developmental delay and intellectual disability, but not aggressive behavior.\"}, {\"gene\": \"STK3\", \"confidence\": 0.15, \"rationale\": \"STK3 is linked to developmental delay and intellectual disability, but not aggressive behavior.\"}]",
+  "parsed_top5": [
+    "EFHD2",
+    "ATG16L1",
+    "ORAI1",
+    "PSMC3",
+    "MYLK4"
+  ]
+}

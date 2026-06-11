@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_29889099_Family_B",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IL7R",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 19206,
+  "tokens_out": 801,
+  "finish_reason": "stop",
+  "latency_s": 15.012448787689209,
+  "cost_usd": 0.0017607599999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IL7R\": {\"gene\": \"IL7R\", \"confidence\": 0.9, \"rationale\": \"IL7R mutations cause T cell development defects and PJP pneumonia, matching patient's immunodeficiency and recurrent infections.\"}, \"IKZF1\": {\"gene\": \"IKZF1\", \"confidence\": 0.7, \"rationale\": \"IKZF1 mutations lead to B cell deficiency, hypogammaglobulinemia, and PJP pneumonia consistent with patient's immunophenotype.\"}, \"MFAP1\": {\"gene\": \"MFAP1\", \"confidence\": 0.3, \"rationale\": \"MFAP1 is associated with neutropenia and lung abscesses but lacks direct evidence linking to PJP or immunoglobulin deficiencies.\"}, \"BOK\": {\"gene\": \"BOK\", \"confidence\": 0.2, \"rationale\": \"BOK is linked to neutropenia and lung infections but not specifically to PJP or immunoglobulin abnormalities.\"}, \"BCO1\": {\"gene\": \"BCO1\", \"confidence\": 0.2, \"rationale\": \"BCO1 is associated with neutropenia and lung infections but lacks evidence for PJP or immunoglobulin deficiencies.\"}, \"HAND2\": {\"gene\": \"HAND2\", \"confidence\": 0.2, \"rationale\": \"HAND2 is linked to neutropenia and lung infections but not specifically to PJP or immunoglobulin abnormalities.\"}, \"CMC1\": {\"gene\": \"CMC1\", \"confidence\": 0.2, \"rationale\": \"CMC1 is associated with neutropenia and lung infections but lacks direct evidence for PJP or immunoglobulin deficiencies.\"}, \"SLC4A1\": {\"gene\": \"SLC4A1\", \"confidence\": 0.2, \"rationale\": \"SLC4A1 is linked to neutropenia and lung infections but not specifically to PJP or immunoglobulin abnormalities.\"}, \"TMCO6\": {\"gene\": \"TMCO6\", \"confidence\": 0.2, \"rationale\": \"TMCO6 is associated with neutropenia and lung infections but lacks evidence for PJP or immunoglobulin deficiencies.\"}, \"ABCG4\": {\"gene\": \"ABCG4\", \"confidence\": 0.2, \"rationale\": \"ABCG4 is linked to neutropenia and lung infections but not specifically to PJP or immunoglobulin abnormalities.\"}, \"BORCS6\": {\"gene\": \"BORCS6\", \"confidence\": 0.2, \"rationale\": \"BORCS6 is associated with neutropenia and lung infections but lacks direct evidence for PJP or immunoglobulin deficiencies.\"}, \"MARCHF8\": {\"gene\": \"MARCHF8\", \"confidence\": 0.2, \"rationale\": \"MARCHF8 is linked to neutropenia and lung infections but not specifically to PJP or immunoglobulin abnormalities.\"}, \"IL33\": {\"gene\": \"IL33\", \"confidence\": 0.2, \"rationale\": \"IL33 is associated with immune dysregulation but not specifically with PJP or immunoglobulin deficiencies.\"}, \"ABHD16B\": {\"gene\": \"ABHD16B\", \"confidence\": 0.2, \"rationale\": \"ABHD16B is linked to neutropenia and lung infections but lacks evidence for PJP or immunoglobulin abnormalities.\"}, \"KIAA1191\": {\"gene\": \"KIAA1191\", \"confidence\": 0.2, \"rationale\": \"KIAA1191 is associated with neutropenia and lung infections but not specifically to PJP or immunoglobulin deficiencies.\"}}",
+  "parsed_top5": [
+    "IL7R",
+    "IKZF1",
+    "MFAP1",
+    "BOK",
+    "BCO1"
+  ]
+}

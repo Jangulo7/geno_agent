@@ -1,0 +1,26 @@
+{
+  "case_id": "FLT3LG:PMID_38701783_P1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FLT3LG",
+  "orig_qwen3_8b_top1": "CTLA4",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ANP32A",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18609,
+  "tokens_out": 1021,
+  "finish_reason": "stop",
+  "latency_s": 12.594373941421509,
+  "cost_usd": 0.071142,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ANP32A\",\n    \"confidence\": 0.18,\n    \"rationale\": \"Evidence chunk mentions sclerosing cholangitis, chronic diarrhea, cytopenias, and recurrent infections in an immunodeficiency cohort, partially matching the patient's broad phenotype.\"\n  },\n  {\n    \"gene\": \"EPHA3\",\n    \"confidence\": 0.14,\n    \"rationale\": \"Evidence includes recurrent pneumonia, otitis media, anemia, and immunodeficiency features matching several patient HPO terms including recurrent infections.\"\n  },\n  {\n    \"gene\": \"RDH10\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence describes TFRC-related combined immunodeficiency with recurrent infections, anemia, leukopenia, matching the patient's immunodeficiency-like phenotype profile.\"\n  },\n  {\n    \"gene\": \"AQP5\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence mentions cholangitis, chronic diarrhea, and cytopenias in an immunodeficiency cohort, but no direct gene-phenotype link is established.\"\n  },\n  {\n    \"gene\": \"TRPC4\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence mentions cholangitis, chronic diarrhea, and cytopenias in an immunodeficiency cohort, but no direct gene-phenotype link is established.\"\n  },\n  {\n    \"gene\": \"RRP1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence describes immunodeficiency with recurrent respiratory infections, anemia, and immune dysregulation, partially overlapping the patient phenotype.\"\n  },\n  {\n    \"gene\": \"COX17\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to COX17 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"IRX5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to IRX5 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"DPPA4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to DPPA4 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"MYH6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to MYH6 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"NRDE2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to NRDE2 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF189\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to ZNF189 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"ENO4\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to ENO4 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"BMP3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to BMP3 or the patient's immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"CDH11\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence only covers generic diarrhea and anemia cases with no specific link to CDH11 or the patient's immunodeficiency phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "ANP32A",
+    "EPHA3",
+    "RDH10",
+    "AQP5",
+    "TRPC4"
+  ]
+}

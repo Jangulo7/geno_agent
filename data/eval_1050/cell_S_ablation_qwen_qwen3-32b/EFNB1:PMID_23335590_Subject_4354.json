@@ -1,0 +1,22 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4354",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14755,
+  "tokens_out": 78,
+  "finish_reason": "stop",
+  "latency_s": 3.5209038257598877,
+  "cost_usd": 0.00120224,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"EFNB1\", \"confidence\": 0.95, \"rationale\": \"EFNB1 mutations are directly linked to craniofrontonasal syndrome, which matches the patient's craniosynostosis, hypertelorism, downslanted palpebral fissures, webbed neck, clinodactyly, and global developmental delay.\"}",
+  "parsed_top5": [
+    "EFNB1"
+  ]
+}

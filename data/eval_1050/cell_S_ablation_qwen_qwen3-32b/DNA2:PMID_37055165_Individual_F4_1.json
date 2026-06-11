@@ -1,0 +1,20 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F4_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "PPOX",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17390,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 2.4877939224243164,
+  "cost_usd": 0.0013970800000000002,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'gene' field in the JSON data.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'gene' field in the JSON data.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_25477417_F17_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19083,
+  "tokens_out": 895,
+  "finish_reason": "stop",
+  "latency_s": 16.39503765106201,
+  "cost_usd": 0.070674,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.95,\"rationale\":\"All three CLDN16 evidence chunks directly name CLDN16 mutations as the cause of FHHNC, matching every patient HPO: nephrocalcinosis, hypercalciuria, Mg wasting, UTIs, polyuria, polydipsia, FTT, elevated PTH.\"},{\"gene\":\"CTCF\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease but do not mention CTCF as causally relevant; no biological link to this phenotype profile.\"},{\"gene\":\"SLC38A11\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; SLC38A11 has no established link to nephrocalcinosis or Mg/Ca wasting tubulopathy.\"},{\"gene\":\"LAMTOR3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; LAMTOR3 has no established link to this renal electrolyte wasting phenotype.\"},{\"gene\":\"GHRH\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; GHRH is unrelated to renal Mg/Ca handling or nephrocalcinosis.\"},{\"gene\":\"PPP4R3A\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC context only; PPP4R3A has no known role in renal tubular Mg/Ca transport or nephrocalcinosis.\"},{\"gene\":\"ADAM32\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; ADAM32 has no established link to this tubulopathy phenotype.\"},{\"gene\":\"ATP2A2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC context only; ATP2A2 encodes SERCA2 involved in skin/cardiac disease, not renal Mg/Ca wasting.\"},{\"gene\":\"SPECC1L\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; SPECC1L is associated with craniofacial disorders, not nephrocalcinosis.\"},{\"gene\":\"CFDP1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC context only; CFDP1 has no known role in renal electrolyte transport or nephrocalcinosis.\"},{\"gene\":\"ZNF490\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; ZNF490 has no established link to this renal tubulopathy phenotype.\"},{\"gene\":\"NIBAN3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; NIBAN3 has no known role in renal Mg/Ca wasting or nephrocalcinosis.\"},{\"gene\":\"TAF13\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC context only; TAF13 is a transcription factor with no established link to this tubulopathy.\"},{\"gene\":\"ABCC2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; ABCC2 is linked to Dubin-Johnson syndrome, not nephrocalcinosis or Mg wasting.\"},{\"gene\":\"CCDC141\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe FHHNC/CLDN16 disease context only; CCDC141 has no established link to renal Mg/Ca wasting tubulopathy.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "CTCF",
+    "SLC38A11",
+    "LAMTOR3",
+    "GHRH"
+  ]
+}

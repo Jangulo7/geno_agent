@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_24506793_Case_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17658,
+  "tokens_out": 758,
+  "finish_reason": "stop",
+  "latency_s": 27.098034143447876,
+  "cost_usd": 0.00411526,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking SPINK5 mutations to Netherton syndrome, matching all patient phenotypes including congenital erythroderma, hair abnormalities, and recurrent infections.\"\n  },\n  {\n    \"gene\": \"C11orf16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C11orf16 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"C12orf76\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking C12orf76 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"FBXO36\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FBXO36 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"ZNF639\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZNF639 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"LRRC46\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LRRC46 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"DPF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DPF2 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"TRIB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TRIB3 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"TMEM63A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TMEM63A to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"MAGEA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MAGEA1 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"HMGN4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HMGN4 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"CBFA2T3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CBFA2T3 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"YY1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking YY1 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"POP7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POP7 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  },\n  {\n    \"gene\": \"ZMYM5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZMYM5 to the patient's phenotypes; relevance inferred only from general case reports.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "C11orf16",
+    "C12orf76",
+    "FBXO36",
+    "ZNF639"
+  ]
+}

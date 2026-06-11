@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P24",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20681,
+  "tokens_out": 680,
+  "finish_reason": "stop",
+  "latency_s": 23.817291259765625,
+  "cost_usd": 0.0018448800000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SLC45A2\", \"confidence\": 0.95, \"rationale\": \"Strong evidence directly links SLC45A2 to OCA4 with hypopigmentation, blue irides, nystagmus, and iris transillumination.\"}, {\"gene\": \"ZKSCAN8\", \"confidence\": 0.65, \"rationale\": \"Mentions OCA8 with hypopigmentation and ophthalmological features, but less specific evidence.\"}, {\"gene\": \"HLCS\", \"confidence\": 0.55, \"rationale\": \"Associated with hypopigmentation and ophthalmological features, but not directly linked to the patient's phenotype.\"}, {\"gene\": \"OR6Q1\", \"confidence\": 0.5, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"MTM1\", \"confidence\": 0.45, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"PTGES3L\", \"confidence\": 0.4, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"DCP1A\", \"confidence\": 0.35, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"BST1\", \"confidence\": 0.3, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"SHISA4\", \"confidence\": 0.25, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"OR1P1\", \"confidence\": 0.2, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"OR52E6\", \"confidence\": 0.15, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"IL23A\", \"confidence\": 0.1, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"PPP1R8\", \"confidence\": 0.08, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"BSN\", \"confidence\": 0.05, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}, {\"gene\": \"WSCD1\", \"confidence\": 0.03, \"rationale\": \"Mentions hypopigmentation and ophthalmological features, but no direct gene-phenotype link.\"}]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ZKSCAN8",
+    "HLCS",
+    "OR6Q1",
+    "MTM1"
+  ]
+}

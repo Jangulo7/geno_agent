@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXANK:PMID_37584719_Patient_P4",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "RFXANK",
+  "orig_qwen3_8b_top1": "RFXANK",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXANK",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13014,
+  "tokens_out": 664,
+  "finish_reason": "stop",
+  "latency_s": 23.07326579093933,
+  "cost_usd": 0.0031140800000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"RFXANK\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links RFXANK mutations to MHC II deficiency, presenting with recurrent infections, chronic diarrhea, and failure to thrive.\"\n  },\n  {\n    \"gene\": \"DTNA\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking DTNA to the patient's phenotypes; mentions similar symptoms without genetic confirmation.\"\n  },\n  {\n    \"gene\": \"CENPO\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting CENPO to failure to thrive, chronic diarrhea, or recurrent pneumonia.\"\n  },\n  {\n    \"gene\": \"MYLK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence directly associates MYLK with the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"PTGR3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks direct evidence linking PTGR3 to the described phenotypes.\"\n  },\n  {\n    \"gene\": \"GRHL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct association found between GRHL3 and the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ZBED5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence directly ties ZBED5 to failure to thrive, chronic diarrhea, or recurrent pneumonia.\"\n  },\n  {\n    \"gene\": \"ADRB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct genetic or phenotypic link to the patient's condition found.\"\n  },\n  {\n    \"gene\": \"COPB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supports COPB2 as causal for the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SNX3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks direct evidence connecting SNX3 to the described clinical features.\"\n  },\n  {\n    \"gene\": \"DPY19L1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct genetic or phenotypic evidence linking DPY19L1 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"RNF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence associates RNF4 with failure to thrive, chronic diarrhea, or recurrent pneumonia.\"\n  },\n  {\n    \"gene\": \"KCTD5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence directly links KCTD5 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LETM2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct genetic or phenotypic connection to the patient's condition.\"\n  },\n  {\n    \"gene\": \"PRRX1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence directly ties PRRX1 to the described phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "RFXANK",
+    "DTNA",
+    "CENPO",
+    "MYLK",
+    "PTGR3"
+  ]
+}

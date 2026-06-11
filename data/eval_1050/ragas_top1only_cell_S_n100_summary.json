@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "judge_model": "gpt-4o-2024-08-06",
+    "judge_temperature": 0.0,
+    "metrics": [
+      "faithfulness"
+    ],
+    "n_cases_total": 100,
+    "n_cases_evaluated": 100,
+    "n_cases_skipped": 0,
+    "elapsed_seconds": 233.22034001350403,
+    "elapsed_minutes": 3.9,
+    "estimated_cost_usd": 2,
+    "config": {
+      "top1_only": true,
+      "reorder_contexts_by_lea_rank": true,
+      "max_contexts_per_case": 20,
+      "stratified_n_per_cat": 25
+    },
+    "source": "data/eval_1050/ragas_top1only_cell_S_n100.json (full, 2.9 MB, gitignored)",
+    "subset": "Cell S, n=100 stratified (25 per MONDO category, seed 42 - subset of RAGAS n=600 and DeepEval n=100 cohorts)"
+  },
+  "aggregate": {
+    "faithfulness": {
+      "n_scored": 100,
+      "mean": 0.47945238095238096,
+      "median": 0.5,
+      "min": 0.0,
+      "max": 0.8571428571428571,
+      "distribution": {
+        "0.00": 16,
+        "(0.25,0.5]": 32,
+        "(0.5,0.75]": 21,
+        "(0,0.25]": 11,
+        "(0.75,1.0)": 20
+      }
+    }
+  },
+  "per_case_scores": [
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "AEBP1:PMID_29606302_C_IV_6",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "NHS:PMID_30642278_proband_III_1",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4271",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "EDA:PMID_18702659_proband",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_26",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "NHS:PMID_30642278_individual_II_5",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "NBAS:PMID_28425089_subject_10A",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_1",
+      "faithfulness": 0.7142857142857143
+    },
+    {
+      "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+      "faithfulness": 0.8571428571428571
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_I_2",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_11",
+      "faithfulness": 0.3333333333333333
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_A017",
+      "faithfulness": 0.6
+    },
+    {
+      "case_id": "ARMC9:PMID_28625504_SA2_3",
+      "faithfulness": 0.6
+    },
+    {
+      "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "CHUK:PMID_20961246_fetus_2",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "DDX59:PMID_29127725_Patient_1",
+      "faithfulness": 0.2
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108797_F3_II1",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_2",
+      "faithfulness": 0.75
+    },
+    {
+      "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "TAP2:PMID_10560675_P1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_D_individual_D_II_2",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_7_Patient_9",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "SEC61A1:PMID_32325141_index_patient",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_33855675_girl",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_21_2",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "MAP3K14:PMID_25406581_P2",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_patient_11",
+      "faithfulness": 0.75
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_A_1",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_5",
+      "faithfulness": 0.4
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F7",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "IKZF1:PMID_33097959_boy",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_2",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_5_1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "COPZ1:PMID_39642330_Patient_3",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P16",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_2_1",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "PSMB9:PMID_34819510_Patient_1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_2",
+      "faithfulness": 0.75
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_11",
+      "faithfulness": 0.75
+    },
+    {
+      "case_id": "SPINK5:PMID_16670861_twin_1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "VMA12:PMID_26833330_F3_II1",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "UMOD:PMID_29513881_III_11",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P59",
+      "faithfulness": 0.75
+    },
+    {
+      "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM45",
+      "faithfulness": 0.4
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_5_individual_10Y11M",
+      "faithfulness": 0.16666666666666666
+    },
+    {
+      "case_id": "UGGT1:PMID_40267907_Family_8_2",
+      "faithfulness": 0.3333333333333333
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR31",
+      "faithfulness": 0.4
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR27",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "UMOD:PMID_17245395_Family_K8_individual_II_2",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F6_individual_1",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P49",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM53",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_18",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "PYCR1:PMID_21487760_Patient_2",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "B3GALT6:PMID_23664117_family_F8_subject_P9",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "MMADHC:PMID_18385497_Patient_4",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_44",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P4",
+      "faithfulness": 0.8333333333333334
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_3_individual_12Y",
+      "faithfulness": 0.2
+    },
+    {
+      "case_id": "UMOD:PMID_37487849_patient",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F1_individual_3",
+      "faithfulness": 0.6
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_56",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "UMOD:PMID_15575003_daughter_IV_2",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "CAPRIN1:PMID_35979925_Case_9",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "LRP5:PMID_20034086_Patient_2",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "KCNH5:PMID_36307226_Proband_16",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F1_II_1",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "SNAPIN:PMID_40930097_Family_B_II_3",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "TANGO2:PMID_26805781_Family_2_Subject2_II_1",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD6_IV_7",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "EEFSEC:PMID_39753114_F3_II_1",
+      "faithfulness": 0.6
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_Spo1",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_7",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "GNB1:PMID_27108799_Individual_1",
+      "faithfulness": 0.25
+    },
+    {
+      "case_id": "SPTAN1:PMID_29050398_Patient_11",
+      "faithfulness": 0.8571428571428571
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_T267A_2",
+      "faithfulness": 0.3333333333333333
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_25951140_Case_2",
+      "faithfulness": 0.8333333333333334
+    },
+    {
+      "case_id": "SPTAN1:PMID_35150594_G_II_1",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "SNF8:PMID_38423010_individual_E1",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "BAG3:PMID_31853710_III_2",
+      "faithfulness": 0.0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_97",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_22",
+      "faithfulness": 0.6666666666666666
+    },
+    {
+      "case_id": "ESAM:PMID_36996813_Individual_11",
+      "faithfulness": 0.8333333333333334
+    },
+    {
+      "case_id": "RGS9BP:PMID_14702087_Guatemalan_patient",
+      "faithfulness": 0.8
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+      "faithfulness": 0.6
+    },
+    {
+      "case_id": "ITPR1:PMID_28488678_IV_3",
+      "faithfulness": 0.5
+    },
+    {
+      "case_id": "ZFX:PMID_38325380_Patient_9",
+      "faithfulness": 0.3333333333333333
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F7_II_1",
+      "faithfulness": 0.6666666666666666
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "PDE1B",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PDE1B",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14744,
+  "tokens_out": 608,
+  "finish_reason": "stop",
+  "latency_s": 35.18120360374451,
+  "cost_usd": 0.00341696,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PDE1B\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence of hypotonia, dysarthria, hyperreflexia, and dermatologic findings matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"DGCR8\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some overlap with hypotonia and dysarthria, but less specific to the full phenotype.\"\n  },\n  {\n    \"gene\": \"NDUFA7\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Neurological features overlap but lack specific dermatologic or dysmorphic evidence.\"\n  },\n  {\n    \"gene\": \"RP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking to neurological or dermatologic features.\"\n  },\n  {\n    \"gene\": \"RAB5IF\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minimal evidence supporting a match to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ZNF280C\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence linking to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"NTF3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supporting a causal role for the phenotype.\"\n  },\n  {\n    \"gene\": \"YAF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"ACTR5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No strong evidence supporting a match to the phenotype.\"\n  },\n  {\n    \"gene\": \"APC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the observed neurological or dermatologic features.\"\n  },\n  {\n    \"gene\": \"KRTAP19-6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence supporting a causal role.\"\n  },\n  {\n    \"gene\": \"SUSD3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"C1orf115\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a match to the observed features.\"\n  },\n  {\n    \"gene\": \"TEDC1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking to the phenotype.\"\n  },\n  {\n    \"gene\": \"GGA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting a causal role for the observed features.\"\n  }\n]",
+  "parsed_top5": [
+    "PDE1B",
+    "DGCR8",
+    "NDUFA7",
+    "RP1",
+    "RAB5IF"
+  ]
+}

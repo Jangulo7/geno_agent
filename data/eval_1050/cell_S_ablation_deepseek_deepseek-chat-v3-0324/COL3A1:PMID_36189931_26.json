@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_26",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16776,
+  "tokens_out": 725,
+  "finish_reason": "stop",
+  "latency_s": 27.58947491645813,
+  "cost_usd": 0.003913450000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"genes\": [\n    {\n      \"gene\": \"COL3A1\",\n      \"confidence\": 0.95,\n      \"rationale\": \"Strong evidence linking COL3A1 mutations to vascular EDS, matching all patient phenotypes including thin vermilion border, bruising susceptibility, and spontaneous pneumothorax.\"\n    },\n    {\n      \"gene\": \"ZNF396\",\n      \"confidence\": 0.2,\n      \"rationale\": \"Minimal direct evidence linking ZNF396 to the patient's phenotypes; mentions are incidental and not causative.\"\n    },\n    {\n      \"gene\": \"COX8C\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking COX8C to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"MSL3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking MSL3 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"MAB21L3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking MAB21L3 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"HFM1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking HFM1 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"C1QTNF3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking C1QTNF3 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"MAPK8IP3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking MAPK8IP3 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"TPPP3\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking TPPP3 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"FER1L6\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking FER1L6 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"LYSET\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking LYSET to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"PAGR1\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking PAGR1 to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"AATF\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking AATF to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"CNTNAP3B\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking CNTNAP3B to the patient's phenotypes; mentions are incidental.\"\n    },\n    {\n      \"gene\": \"ARL2\",\n      \"confidence\": 0.1,\n      \"rationale\": \"No direct evidence linking ARL2 to the patient's phenotypes; mentions are incidental.\"\n    }\n  ]\n}",
+  "parsed_top5": [
+    "COL3A1",
+    "ZNF396",
+    "COX8C",
+    "MSL3",
+    "MAB21L3"
+  ]
+}

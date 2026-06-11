@@ -1,0 +1,20 @@
+{
+  "case_id": "KDM6B:PMID_37196654_Individual_8",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "KDM6B",
+  "orig_qwen3_8b_top1": "BMPR1B",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15893,
+  "tokens_out": 39,
+  "finish_reason": "stop",
+  "latency_s": 2.65236496925354,
+  "cost_usd": 0.0012823600000000002,
+  "parse_error": "model_self_error:{\"error\": \"I need more information to provide a ranking of the candidate genes. Please provide the specific evidence chunks for each gene that relate to the patient's HPO phenotypes.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"I need more information to provide a ranking of the candidate genes. Please provide the specific evidence chunks for each gene that relate to the patient's HPO phenotypes.\"}",
+  "parsed_top5": []
+}

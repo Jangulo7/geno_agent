@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_21669885_F3_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17321,
+  "tokens_out": 896,
+  "finish_reason": "stop",
+  "latency_s": 19.615119457244873,
+  "cost_usd": 0.065403,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.97,\"rationale\":\"All three evidence chunks directly name CLDN16 mutations as the cause of FHHNC, perfectly matching every patient HPO: nephrocalcinosis, renal insufficiency, hypercalciuria, hypomagnesemia, renal Mg/Ca wasting, and hypocalcemic seizures.\"},{\"gene\":\"ACE\",\"confidence\":0.01,\"rationale\":\"ACE evidence only mentions ACE inhibitors as adjunct therapy for Mg wasting; no direct causal link to this phenotype profile.\"},{\"gene\":\"LGSN\",\"confidence\":0.005,\"rationale\":\"No evidence linking LGSN to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning LGSN.\"},{\"gene\":\"EYA2\",\"confidence\":0.005,\"rationale\":\"No evidence linking EYA2 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning EYA2.\"},{\"gene\":\"COL11A1\",\"confidence\":0.005,\"rationale\":\"No evidence linking COL11A1 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning COL11A1.\"},{\"gene\":\"ADPRHL1\",\"confidence\":0.005,\"rationale\":\"No evidence linking ADPRHL1 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning ADPRHL1.\"},{\"gene\":\"PLK1\",\"confidence\":0.005,\"rationale\":\"No evidence linking PLK1 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning PLK1.\"},{\"gene\":\"TBL1X\",\"confidence\":0.005,\"rationale\":\"No evidence linking TBL1X to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning TBL1X.\"},{\"gene\":\"SEC11C\",\"confidence\":0.005,\"rationale\":\"No evidence linking SEC11C to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning SEC11C.\"},{\"gene\":\"REN\",\"confidence\":0.005,\"rationale\":\"No evidence linking REN to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning REN.\"},{\"gene\":\"RANBP3\",\"confidence\":0.005,\"rationale\":\"No evidence linking RANBP3 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning RANBP3.\"},{\"gene\":\"TNFSF11\",\"confidence\":0.005,\"rationale\":\"No evidence linking TNFSF11 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning TNFSF11.\"},{\"gene\":\"GATD3\",\"confidence\":0.005,\"rationale\":\"No evidence linking GATD3 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning GATD3.\"},{\"gene\":\"DCAF5\",\"confidence\":0.005,\"rationale\":\"No evidence linking DCAF5 to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning DCAF5.\"},{\"gene\":\"RUNDC3A\",\"confidence\":0.005,\"rationale\":\"No evidence linking RUNDC3A to this phenotype; chunks only describe CLDN16/CLDN19-related FHHNC without mentioning RUNDC3A.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "ACE",
+    "LGSN",
+    "EYA2",
+    "COL11A1"
+  ]
+}

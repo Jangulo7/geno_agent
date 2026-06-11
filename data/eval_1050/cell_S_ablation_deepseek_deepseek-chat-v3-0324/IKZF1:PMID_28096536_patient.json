@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_28096536_patient",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15219,
+  "tokens_out": 658,
+  "finish_reason": "stop",
+  "latency_s": 22.34339737892151,
+  "cost_usd": 0.00355046,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"IKZF1 is central to lymphoid development and directly linked to T-ALL and immunodeficiency phenotypes matching the patient.\"\n  },\n  {\n    \"gene\": \"MTNAP1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence linking MTNAP1 to the patient's immune phenotypes found in provided chunks.\"\n  },\n  {\n    \"gene\": \"DSCAM\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting DSCAM to hematologic or immune deficiencies in the provided data.\"\n  },\n  {\n    \"gene\": \"FAT2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence associating FAT2 with immunodeficiency or lymphoid malignancies.\"\n  },\n  {\n    \"gene\": \"DHX36\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence in chunks supports DHX36's role in immune dysfunction or leukemia.\"\n  },\n  {\n    \"gene\": \"FAM217A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence tying FAM217A to the patient's immune or hematologic phenotypes.\"\n  },\n  {\n    \"gene\": \"RAF1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence in chunks links RAF1 to immunodeficiency or lymphoid cancers.\"\n  },\n  {\n    \"gene\": \"DSG2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No clear association between DSG2 and the patient's immune or lymphoid phenotypes in chunks.\"\n  },\n  {\n    \"gene\": \"TMEM63A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence connecting TMEM63A to lymphoid malignancies or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"SELL\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence ties SELL to the patient's specific immune deficiencies.\"\n  },\n  {\n    \"gene\": \"DSC2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence supports DSC2's role in immune dysfunction or leukemia.\"\n  },\n  {\n    \"gene\": \"STK40\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant chunks link STK40 to immunodeficiency or lymphoid malignancies.\"\n  },\n  {\n    \"gene\": \"RPL10A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence connects RPL10A to the patient's immune or lymphoid pathologies.\"\n  },\n  {\n    \"gene\": \"ATXN1L\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No literature evidence associates ATXN1L with immune deficiencies or lymphoid cancers.\"\n  },\n  {\n    \"gene\": \"ISLR\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No chunks support ISLR's involvement in immunodeficiency or lymphoid malignancies.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "MTNAP1",
+    "DSCAM",
+    "FAT2",
+    "DHX36"
+  ]
+}

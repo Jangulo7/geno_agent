@@ -28,6 +28,23 @@
 # Hardware: Qwen3-8B in FP16 needs ~16 GB VRAM + KV cache (~8 GB).
 # Fits in the host's RTX 5090 (32 GB) with headroom for PubMedBERT
 # embedding + Qdrant queries (master plan §11.4 budget).
+#
+# VRAM budget (2026-05-16 paper extension, third iteration). Thesis ran
+# at --gpu-memory-utilization 0.85 + --max-model-len 32768, which left
+# only ~4.3 GB free for CE+dense — tight. First paper attempt at 0.55
+# failed engine init (KV cache 0.88 GiB). 0.70 + max-len 16384 booted
+# fine but vLLM returned HTTP 400 on ~78 % of LEA requests because
+# real LEA prompts (15 genes × ~12 chunks × ~1.6k chars) exceed 16k
+# tokens; the rerank_inside_d driver silently fell back to deterministic
+# synth so those cases were Cell L in disguise. Restoring max-len to
+# the thesis value and dropping concurrency to 1 (LEA is serial):
+#   --gpu-memory-utilization 0.75  → vLLM ~24.4 GB (14.3 weights + 3 overhead + 7 KV)
+#   --max-model-len        32768  → matches thesis; full LEA prompts fit
+#   --max-num-seqs            1   → LEA only ever sends 1 request at a time
+# Leaves ~8 GB free for MedCPT-CE + PubMedBERT-dense + activations
+# (~2x the headroom of the thesis run).
+# (--swap-space removed: vLLM 0.20.1 no longer accepts it as a top-level
+# CLI flag; the V1 engine handles this through scheduler-config.)
 
 set -euo pipefail
 
@@ -59,18 +76,23 @@ EOF
     exit 1
 fi
 
-if ! command -v python &> /dev/null; then
-    echo "ERROR: python not on PATH. Activate pytorch-env first." >&2
+# vLLM lives in its own venv (separate from pytorch-env which holds torch+cu128
+# for the eval scripts). The vllm-env pins torch 2.11+cu130 per the master
+# plan §10 driver note. Use VLLM_PYTHON to override.
+VLLM_PYTHON="${VLLM_PYTHON:-${HOME}/vllm-env/bin/python}"
+
+if [[ ! -x "$VLLM_PYTHON" ]]; then
+    echo "ERROR: VLLM_PYTHON ($VLLM_PYTHON) not found or not executable." >&2
+    echo "       Expected the vllm-env at $HOME/vllm-env/." >&2
     exit 1
 fi
 
-# Verify vllm is importable
-if ! python -c "import vllm" 2>/dev/null; then
+# Verify vllm is importable in that env
+if ! "$VLLM_PYTHON" -c "import vllm" 2>/dev/null; then
     cat >&2 <<EOF
-ERROR: vllm not installed in current Python env.
+ERROR: vllm not installed in ${VLLM_PYTHON}.
 Install with:
-    source /home/hana77/pytorch-env/bin/activate
-    pip install vllm
+    ${VLLM_PYTHON} -m pip install vllm
 EOF
     exit 1
 fi
@@ -94,14 +116,15 @@ echo
 # so caching reduces per-batch prefill cost dramatically. Empirically
 # Cell H smoke without caching took ~13 min/case; expected ~2-4 min
 # with caching, making the full LLM-Critic ablation overnight-feasible.
-exec python -m vllm.entrypoints.openai.api_server \
+exec "$VLLM_PYTHON" -m vllm.entrypoints.openai.api_server \
     --model "${MODEL_DIR}" \
     --served-model-name "Qwen/Qwen3-8B" \
     --host "${HOST}" \
     --port "${PORT}" \
     --dtype float16 \
-    --max-model-len 32768 \
-    --gpu-memory-utilization 0.85 \
+    --max-model-len "${VLLM_MAX_MODEL_LEN:-32768}" \
+    --max-num-seqs "${VLLM_MAX_NUM_SEQS:-1}" \
+    --gpu-memory-utilization "${VLLM_GPU_MEM_UTIL:-0.75}" \
     --reasoning-parser qwen3 \
     --enable-prefix-caching \
     2>&1 | tee "${LOG}"

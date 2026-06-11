@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_EG1414P",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16503,
+  "tokens_out": 737,
+  "finish_reason": "stop",
+  "latency_s": 13.603118896484375,
+  "cost_usd": 0.060564,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"STXBP1\", \"confidence\": 0.92, \"rationale\": \"STXBP1 evidence directly describes infantile spasms, hypsarrhythmia, dystonia, hypotonia, severe global developmental delay, and epileptic encephalopathy matching the patient's full phenotype profile.\"}, {\"gene\": \"NOS1\", \"confidence\": 0.03, \"rationale\": \"NOS1 evidence mentions infantile spasms and global DD in one patient but lacks direct gene-disease association for this phenotype cluster.\"}, {\"gene\": \"CHDH\", \"confidence\": 0.01, \"rationale\": \"No direct CHDH-specific evidence; shared generic chunks about infantile spasms/DD not linked to CHDH.\"}, {\"gene\": \"ZNF705A\", \"confidence\": 0.01, \"rationale\": \"No ZNF705A-specific neurological disease evidence; only generic shared chunks unrelated to this gene.\"}, {\"gene\": \"EPN1\", \"confidence\": 0.01, \"rationale\": \"No EPN1-specific epileptic encephalopathy evidence; shared generic chunks not attributable to EPN1.\"}, {\"gene\": \"FBXO44\", \"confidence\": 0.01, \"rationale\": \"No FBXO44-specific evidence for this phenotype; shared generic chunks only.\"}, {\"gene\": \"FOXN1\", \"confidence\": 0.01, \"rationale\": \"FOXN1 is known for nude/SCID phenotype, not epileptic encephalopathy; no relevant specific evidence.\"}, {\"gene\": \"MGME1\", \"confidence\": 0.01, \"rationale\": \"MGME1 associated with mitochondrial myopathy, not infantile spasms/epileptic encephalopathy; no specific evidence.\"}, {\"gene\": \"NAPSA\", \"confidence\": 0.01, \"rationale\": \"No NAPSA-specific neurological disease evidence; only generic shared chunks.\"}, {\"gene\": \"RNF8\", \"confidence\": 0.01, \"rationale\": \"No RNF8-specific epileptic encephalopathy evidence; only generic shared chunks.\"}, {\"gene\": \"DUS2\", \"confidence\": 0.01, \"rationale\": \"No DUS2-specific evidence for this phenotype; only generic shared chunks.\"}, {\"gene\": \"PPP1R35\", \"confidence\": 0.01, \"rationale\": \"No PPP1R35-specific epileptic encephalopathy evidence; only generic shared chunks.\"}, {\"gene\": \"PINLYP\", \"confidence\": 0.01, \"rationale\": \"No PINLYP-specific neurological disease evidence; only generic shared chunks.\"}, {\"gene\": \"GDF15\", \"confidence\": 0.01, \"rationale\": \"GDF15 not associated with epileptic encephalopathy; no specific supporting evidence.\"}, {\"gene\": \"ARSB\", \"confidence\": 0.01, \"rationale\": \"ARSB causes mucopolysaccharidosis VI, not infantile spasms/epileptic encephalopathy; no specific evidence.\"}]",
+  "parsed_top5": [
+    "STXBP1",
+    "NOS1",
+    "CHDH",
+    "ZNF705A",
+    "EPN1"
+  ]
+}

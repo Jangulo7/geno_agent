@@ -1,0 +1,26 @@
+{
+  "case_id": "NCF2:PMID_10498624_Case_4_IP",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NCF2",
+  "orig_qwen3_8b_top1": "NCF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NCF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16708,
+  "tokens_out": 655,
+  "finish_reason": "stop",
+  "latency_s": 36.12307786941528,
+  "cost_usd": 0.0038459500000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NCF2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"NCF2 mutations cause chronic granulomatous disease, directly explaining decreased neutrophil oxidative burst and recurrent bacterial infections.\"\n  },\n  {\n    \"gene\": \"NOD2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"NOD2 is involved in neutrophil recruitment but lacks direct evidence linking it to oxidative burst defects.\"\n  },\n  {\n    \"gene\": \"USB1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"USB1 mutations cause poikiloderma with neutropenia, but neutropenia wasn't reported in this patient.\"\n  },\n  {\n    \"gene\": \"GPI\",\n    \"confidence\": 0.15,\n    \"rationale\": \"GPI inhibition affects respiratory burst kinetics but no disease association matches the phenotype.\"\n  },\n  {\n    \"gene\": \"IMMP2L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IMMP2L to neutrophil function or recurrent infections.\"\n  },\n  {\n    \"gene\": \"CMTM3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting CMTM3 to the patient's immunological phenotype.\"\n  },\n  {\n    \"gene\": \"ZBTB18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ZBTB18 in neutrophil dysfunction or recurrent infections.\"\n  },\n  {\n    \"gene\": \"DNAJB13\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking DNAJB13 to neutrophil oxidative burst or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"ADGRG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting ADGRG2 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LRWD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence associating LRWD1 with neutrophil function defects.\"\n  },\n  {\n    \"gene\": \"ST6GAL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting ST6GAL2 in neutrophil oxidative burst or recurrent infections.\"\n  },\n  {\n    \"gene\": \"CACNG8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking CACNG8 to immunodeficiency or neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"CBLC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting CBLC to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ACADS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence associating ACADS with neutrophil function or recurrent infections.\"\n  },\n  {\n    \"gene\": \"GORASP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting GORASP1 in neutrophil oxidative burst or immunodeficiency.\"\n  }\n]",
+  "parsed_top5": [
+    "NCF2",
+    "NOD2",
+    "USB1",
+    "GPI",
+    "IMMP2L"
+  ]
+}

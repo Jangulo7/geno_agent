@@ -1,0 +1,52 @@
+{
+  "stratified_n_per_cat": 75,
+  "n_cases_total": 300,
+  "seed": 42,
+  "models": [
+    "qwen/qwen3-32b",
+    "anthropic/claude-sonnet-4.6",
+    "deepseek/deepseek-chat-v3-0324"
+  ],
+  "per_model": {
+    "qwen/qwen3-32b": {
+      "model": "qwen/qwen3-32b",
+      "n_total": 300,
+      "n_scored": 234,
+      "n_skipped": 66,
+      "top1_correct_count": 169,
+      "top1_accuracy": 0.7222222222222222,
+      "orig_qwen3_8b_top1_accuracy_on_same_subset": 0.7166666666666667,
+      "elapsed_seconds": 663.367838382721,
+      "elapsed_minutes": 11.1,
+      "total_cost_usd": 0.4163632,
+      "mean_latency_s": 10.010720289670504
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "model": "anthropic/claude-sonnet-4.6",
+      "n_total": 300,
+      "n_scored": 299,
+      "n_skipped": 1,
+      "top1_correct_count": 230,
+      "top1_accuracy": 0.7692307692307693,
+      "orig_qwen3_8b_top1_accuracy_on_same_subset": 0.7166666666666667,
+      "elapsed_seconds": 1046.0536947250366,
+      "elapsed_minutes": 17.4,
+      "total_cost_usd": 19.946511,
+      "mean_latency_s": 13.827286477870366
+    },
+    "deepseek/deepseek-chat-v3-0324": {
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "n_total": 300,
+      "n_scored": 298,
+      "n_skipped": 2,
+      "top1_correct_count": 221,
+      "top1_accuracy": 0.7416107382550335,
+      "orig_qwen3_8b_top1_accuracy_on_same_subset": 0.7166666666666667,
+      "elapsed_seconds": 1896.3244178295135,
+      "elapsed_minutes": 31.6,
+      "total_cost_usd": 1.04710411,
+      "mean_latency_s": 25.239381053303713
+    }
+  },
+  "total_cost_usd": 21.40997831
+}

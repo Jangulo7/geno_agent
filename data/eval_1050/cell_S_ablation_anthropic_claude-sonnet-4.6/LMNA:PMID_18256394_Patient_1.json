@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_1",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18192,
+  "tokens_out": 774,
+  "finish_reason": "stop",
+  "latency_s": 11.799192190170288,
+  "cost_usd": 0.066186,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.92,\"rationale\":\"LMNA mutations cause Hutchinson-Gilford Progeria/mandibuloacral dysplasia, directly matching proptosis, lipodystrophy, alopecia, short stature, delayed tooth eruption, reduced subcutaneous fat, prominent vessels, and reduced bone density.\"},{\"gene\":\"CCDC157\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe CCD (RUNX2) features; CCDC157 itself has no direct link to the patient's progeroid/lipodystrophy phenotype.\"},{\"gene\":\"HECW2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking HECW2 to this progeroid/lipodystrophy phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"SPAG11A\",\"confidence\":0.01,\"rationale\":\"No evidence linking SPAG11A to lipodystrophy, proptosis, or progeroid features; chunks are non-specific CCD descriptions.\"},{\"gene\":\"CLHC1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CLHC1 to this phenotype; evidence chunks are generic progeroid syndrome descriptions unrelated to CLHC1.\"},{\"gene\":\"MVB12A\",\"confidence\":0.01,\"rationale\":\"No evidence linking MVB12A to lipodystrophy or progeroid features; evidence chunks are non-specific.\"},{\"gene\":\"MAP3K7CL\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MAP3K7CL to this progeroid/lipodystrophy phenotype; evidence chunks are non-specific.\"},{\"gene\":\"KCNIP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking KCNIP1 to lipodystrophy, proptosis, or progeroid features; evidence chunks are non-specific.\"},{\"gene\":\"TTC13\",\"confidence\":0.01,\"rationale\":\"No evidence linking TTC13 to this phenotype profile; evidence chunks are non-specific.\"},{\"gene\":\"PIK3C2G\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking PIK3C2G to lipodystrophy or progeroid features; evidence chunks are non-specific.\"},{\"gene\":\"OR10V1\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR10V1 to this phenotype; evidence chunks reference LMNA/HGPS but not OR10V1 itself.\"},{\"gene\":\"C12orf54\",\"confidence\":0.01,\"rationale\":\"No evidence linking C12orf54 to lipodystrophy or progeroid features; evidence chunks are non-specific.\"},{\"gene\":\"FAM90A1\",\"confidence\":0.01,\"rationale\":\"No evidence linking FAM90A1 to this progeroid/lipodystrophy phenotype; evidence chunks are non-specific.\"},{\"gene\":\"DDX49\",\"confidence\":0.01,\"rationale\":\"No evidence linking DDX49 to lipodystrophy or progeroid features; evidence chunks are non-specific.\"},{\"gene\":\"RCOR3\",\"confidence\":0.01,\"rationale\":\"No evidence linking RCOR3 to this progeroid/lipodystrophy phenotype; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CCDC157",
+    "HECW2",
+    "SPAG11A",
+    "CLHC1"
+  ]
+}

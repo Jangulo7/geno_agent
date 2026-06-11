@@ -1,0 +1,26 @@
+{
+  "case_id": "ZNF808:PMID_37973953_Individual_6",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZNF808",
+  "orig_qwen3_8b_top1": "ZNF808",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ZNF808",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12946,
+  "tokens_out": 746,
+  "finish_reason": "stop",
+  "latency_s": 20.88499140739441,
+  "cost_usd": 0.0031636200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ZNF808\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence links ZNF808 mutations to neonatal diabetes, pancreatic agenesis, and small birth weight, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC40A1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Indirect association with diabetes mellitus via iron metabolism, but no evidence for pancreatic aplasia or growth restriction.\"\n  },\n  {\n    \"gene\": \"AKR7A2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking AKR7A2 to the patient's specific pancreatic or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"CALCOCO2\",\n    \"rationale\": \"No direct evidence linking CALCOCO2 to diabetes, pancreatic aplasia, or small for gestational age.\",\n    \"confidence\": 0.1\n  },\n  {\n    \"gene\": \"TIGAR\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Mentioned in pancreatitis context but no direct link to the patient's pancreatic or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"YY1AP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking YY1AP1 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"MICALL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MICALL2 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"MCAT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MCAT to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"NME3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NME3 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"TNNT3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TNNT3 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"SLC35E2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLC35E2B to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"TCEAL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TCEAL1 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"TEK\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking TEK to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"OR10K1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking OR10K1 to diabetes, pancreatic aplasia, or small for gestational age.\"\n  },\n  {\n    \"gene\": \"CCDC144A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CCDC144A to diabetes, pancreatic aplasia, or small for gestational age.\"\n  }\n]",
+  "parsed_top5": [
+    "ZNF808",
+    "SLC40A1",
+    "AKR7A2",
+    "CALCOCO2",
+    "TIGAR"
+  ]
+}

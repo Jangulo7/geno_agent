@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_29169895_proband",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16493,
+  "tokens_out": 720,
+  "finish_reason": "stop",
+  "latency_s": 411.8545730113983,
+  "cost_usd": 0.060279,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.82,\"rationale\":\"ITPR1 evidence directly describes SCA29 with early-onset hypotonia, cerebellar atrophy, nystagmus, gross motor/cognitive delay, and ataxia\u2014matching nearly all patient HPO terms including iris/ocular features noted in Gillespie syndrome (ITPR1-related).\"},{\"gene\":\"RIT1\",\"confidence\":0.05,\"rationale\":\"RIT1 causes Noonan syndrome with pulmonic stenosis, but evidence chunks are non-specific and do not directly support the cerebellar/myelination phenotype profile.\"},{\"gene\":\"EVC2\",\"confidence\":0.03,\"rationale\":\"EVC2 evidence includes a case with truncal titubation, nystagmus, hypotonia, and cerebellar atrophy but the gene is not directly mentioned as causal in those chunks.\"},{\"gene\":\"CDCA7\",\"confidence\":0.02,\"rationale\":\"No direct gene-specific evidence linking CDCA7 to this cerebellar/myelination phenotype; evidence chunks are non-specific.\"},{\"gene\":\"TMEM25\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking TMEM25 to this phenotype; evidence chunk describes TMEM106B-related hypomyelinating leukodystrophy, not TMEM25.\"},{\"gene\":\"NOB1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence; all evidence chunks are non-specific background literature.\"},{\"gene\":\"OR6C1\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no plausible disease mechanism; evidence chunks are non-specific.\"},{\"gene\":\"KRTCAP2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking KRTCAP2 to this neurological phenotype; evidence chunks are non-specific.\"},{\"gene\":\"COL16A1\",\"confidence\":0.01,\"rationale\":\"Collagen gene with no direct evidence supporting this cerebellar/myelination phenotype profile.\"},{\"gene\":\"GAS2L3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking GAS2L3 to this phenotype; evidence chunks are non-specific.\"},{\"gene\":\"EN1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking EN1 variants to this clinical phenotype in the provided chunks.\"},{\"gene\":\"POC1A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking POC1A to this cerebellar/myelination phenotype; evidence chunks are non-specific.\"},{\"gene\":\"NSMCE1\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence supporting NSMCE1 as causal for this phenotype profile.\"},{\"gene\":\"OR2A1\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no plausible disease mechanism for this neurological phenotype.\"},{\"gene\":\"OR1L8\",\"confidence\":0.01,\"rationale\":\"Olfactory receptor gene with no plausible disease mechanism for this neurological/cardiac phenotype profile.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "RIT1",
+    "EVC2",
+    "CDCA7",
+    "TMEM25"
+  ]
+}

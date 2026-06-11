@@ -1,0 +1,26 @@
+{
+  "case_id": "BAG3:PMID_28754666_75553_0110",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "BAG3",
+  "orig_qwen3_8b_top1": "RPN2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "RPN2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16170,
+  "tokens_out": 935,
+  "finish_reason": "stop",
+  "latency_s": 14.791611909866333,
+  "cost_usd": 0.062535,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"RPN2\", \"confidence\": 0.18, \"rationale\": \"RPN2 chunk_1 has critic_relevance 2/5 and directly describes decreased CMAP amplitude, slowed NCV, decreased vibration/joint position sensation matching all 4 HPO terms.\"},\n  {\"gene\": \"OR51T1\", \"confidence\": 0.08, \"rationale\": \"OR51T1 chunk_3 describes AR-CMT2 with severe vibration loss, sensorimotor neuropathy on NCS, matching the phenotype profile reasonably well.\"},\n  {\"gene\": \"ARL17A\", \"confidence\": 0.07, \"rationale\": \"ARL17A chunk_3 describes CMT2 with vibration/proprioception loss and diffuse sensorimotor peripheral neuropathy on NCS, consistent with HPO terms.\"},\n  {\"gene\": \"IVL\", \"confidence\": 0.07, \"rationale\": \"IVL chunk_2 describes CMT with slowed NCV, decreased CMAP, and sensorimotor features, partially matching the phenotype.\"},\n  {\"gene\": \"SMARCE1\", \"confidence\": 0.06, \"rationale\": \"SMARCE1 chunk_2 describes NCV/CMAP measurements in a neuropathy context but lacks direct gene-phenotype linkage beyond generic CMT description.\"},\n  {\"gene\": \"LNPK\", \"confidence\": 0.06, \"rationale\": \"LNPK evidence describes sensorimotor axonal polyneuropathy with vibration/touch impairment and NCV/CMAP measurements but no specific gene-disease link.\"},\n  {\"gene\": \"MTAP\", \"confidence\": 0.06, \"rationale\": \"MTAP evidence describes CMT2 phenotype with decreased CMAP and vibration impairment but evidence is generic with no direct gene-disease association.\"},\n  {\"gene\": \"AKNAD1\", \"confidence\": 0.06, \"rationale\": \"AKNAD1 evidence describes sensorimotor axonal polyneuropathy with vibration/touch impairment but lacks specific gene-disease linkage.\"},\n  {\"gene\": \"ARHGEF2\", \"confidence\": 0.06, \"rationale\": \"ARHGEF2 evidence describes CMT2 with sensory loss and NCV/CMAP findings but is generic without direct gene-phenotype association.\"},\n  {\"gene\": \"RGPD1\", \"confidence\": 0.05, \"rationale\": \"RGPD1 evidence describes sensorimotor polyneuropathy with vibration/touch impairment but evidence is non-specific and lacks direct gene linkage.\"},\n  {\"gene\": \"ESR1\", \"confidence\": 0.05, \"rationale\": \"ESR1 evidence describes CMT2 and myopathy phenotypes but no established link between ESR1 and peripheral neuropathy with decreased NCV/CMAP.\"},\n  {\"gene\": \"CALY\", \"confidence\": 0.05, \"rationale\": \"CALY evidence describes CMT2 and myopathy but no known association with peripheral neuropathy causing decreased NCV and CMAP.\"},\n  {\"gene\": \"TACC1\", \"confidence\": 0.05, \"rationale\": \"TACC1 evidence mentions sensory-motor axonal neuropathy in one patient but TACC1 has no established neuropathy gene role.\"},\n  {\"gene\": \"QTRT2\", \"confidence\": 0.05, \"rationale\": \"QTRT2 evidence mentions sensory-motor axonal neuropathy on NCS but QTRT2 has no established link to peripheral neuropathy.\"},\n  {\"gene\": \"F13B\", \"confidence\": 0.05, \"rationale\": \"F13B evidence describes CMT with reduced vibration sense and NCS findings but F13B is a coagulation gene with no known neuropathy association.\"}\n]",
+  "parsed_top5": [
+    "RPN2",
+    "OR51T1",
+    "ARL17A",
+    "IVL",
+    "SMARCE1"
+  ]
+}

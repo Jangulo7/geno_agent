@@ -1,0 +1,20 @@
+{
+  "case_id": "GAA:PMID_16917947_11",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "GAA",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16365,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 3.957819938659668,
+  "cost_usd": 0.00131564,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

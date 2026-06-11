@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_27764983_Family_1_individual_J",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16658,
+  "tokens_out": 714,
+  "finish_reason": "stop",
+  "latency_s": 10.82478642463684,
+  "cost_usd": 0.060684,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"UMOD\",\"confidence\":0.92,\"rationale\":\"UMOD mutations directly cause ADTKD-UMOD with hyperuricemia, renal interstitial fibrosis, elevated creatinine, and renal failure, matching all four patient HPO phenotypes.\"},{\"gene\":\"KLK8\",\"confidence\":0.02,\"rationale\":\"No direct gene-disease link to this phenotype profile; evidence chunks are non-specific background literature.\"},{\"gene\":\"DBP\",\"confidence\":0.02,\"rationale\":\"DBP evidence relates to vitamin D binding protein and blood pressure measurements, not a causal gene for this renal phenotype.\"},{\"gene\":\"OR5AC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking OR5AC1 to hyperuricemia, renal fibrosis, or renal hypoplasia; evidence is non-specific background.\"},{\"gene\":\"SLC5A12\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SLC5A12 to this phenotype cluster; evidence chunks are generic background literature.\"},{\"gene\":\"HEATR4\",\"confidence\":0.01,\"rationale\":\"No evidence linking HEATR4 to hyperuricemia, renal fibrosis, or renal hypoplasia; evidence is non-specific.\"},{\"gene\":\"HYOU1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking HYOU1 to this phenotype profile; evidence chunks are non-specific background.\"},{\"gene\":\"PACS1\",\"confidence\":0.01,\"rationale\":\"No evidence linking PACS1 to hyperuricemia, renal interstitial fibrosis, or renal hypoplasia in the provided chunks.\"},{\"gene\":\"SLC25A34\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC25A34 to this renal phenotype cluster; evidence is non-specific background literature.\"},{\"gene\":\"ACBD4\",\"confidence\":0.01,\"rationale\":\"No evidence linking ACBD4 to hyperuricemia, renal fibrosis, or renal hypoplasia; evidence is non-specific.\"},{\"gene\":\"SLC9A5\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC9A5 to this phenotype profile; evidence chunks are non-specific background literature.\"},{\"gene\":\"DORIP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking DORIP1 to hyperuricemia, renal fibrosis, or renal hypoplasia; evidence is non-specific.\"},{\"gene\":\"CEP295\",\"confidence\":0.01,\"rationale\":\"No evidence linking CEP295 to this renal phenotype cluster; evidence is non-specific background literature.\"},{\"gene\":\"A4GNT\",\"confidence\":0.01,\"rationale\":\"No evidence linking A4GNT to hyperuricemia, renal interstitial fibrosis, or renal hypoplasia in the provided chunks.\"},{\"gene\":\"GCNT1\",\"confidence\":0.01,\"rationale\":\"No evidence linking GCNT1 to this phenotype profile; evidence chunks are non-specific background literature.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "KLK8",
+    "DBP",
+    "OR5AC1",
+    "SLC5A12"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "NBAS:PMID_26541327_Pat_5_FV",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19175,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.7262895107269287,
+  "cost_usd": 0.0015404400000000001,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

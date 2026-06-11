@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P49",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19968,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 12.757120609283447,
+  "cost_usd": 0.070119,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GNAS\",\"confidence\":0.92,\"rationale\":\"GNAS is the classic causal gene for pseudohypoparathyroidism/AHO, directly explaining all HPO features: elevated PTH, hypocalcemia, hyperphosphatemia, short metacarpals, intellectual disability, and obesity.\"},{\"gene\":\"UFSP1\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking UFSP1 to the patient's phenotype; evidence chunks are about PHP/GNAS context only.\"},{\"gene\":\"WNT16\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking WNT16 to pseudohypoparathyroidism or the patient's phenotype profile.\"},{\"gene\":\"ZPBP\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking ZPBP to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"CDH6\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking CDH6 to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"DNAJB2\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking DNAJB2 to pseudohypoparathyroidism or the patient's phenotype profile.\"},{\"gene\":\"SLC44A5\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking SLC44A5 to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"ATL3\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking ATL3 to pseudohypoparathyroidism or the patient's phenotype profile.\"},{\"gene\":\"TNFSF13B\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking TNFSF13B to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"SIGLEC10\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking SIGLEC10 to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"RNF14\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking RNF14 to pseudohypoparathyroidism or the patient's phenotype profile.\"},{\"gene\":\"SPRR2B\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking SPRR2B to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"DOCK5\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking DOCK5 to pseudohypoparathyroidism or the patient's phenotype profile.\"},{\"gene\":\"DENND2C\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking DENND2C to the patient's phenotype; evidence is generic PHP background.\"},{\"gene\":\"CDS2\",\"confidence\":0.006,\"rationale\":\"No direct evidence linking CDS2 to pseudohypoparathyroidism or the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "GNAS",
+    "UFSP1",
+    "WNT16",
+    "ZPBP",
+    "CDH6"
+  ]
+}

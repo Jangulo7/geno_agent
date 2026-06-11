@@ -1,0 +1,26 @@
+{
+  "case_id": "MOCS3:PMID_33897766_Case_Description",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "MOCS3",
+  "orig_qwen3_8b_top1": "SLC27A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MOCS3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15488,
+  "tokens_out": 1171,
+  "finish_reason": "stop",
+  "latency_s": 23.350995302200317,
+  "cost_usd": 0.064029,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are essentially identical across all genes (all rated critic_relevance=2/5 and section=other mention=no), meaning none of the provided literature directly links any specific gene to the patient's phenotype. I must rely on prior knowledge of gene-disease associations.\n\nThe patient has: microcephaly, bilateral tonic-clonic seizures, severe global developmental delay, delayed rolling, persistent head lag, hyperreflexia, encephalomalacia, hypotonia, feeding difficulties.\n\nKey distinguishing feature: **encephalomalacia** + hypotonia + hyperreflexia + severe early-onset neurodevelopmental syndrome.\n\n- **MOCS3**: Molybdenum cofactor synthesis; MOCS3 variants cause MoCoD, which presents with neonatal/early-onset severe encephalopathy, intractable seizures, encephalomalacia (sulfite oxidase deficiency leads to brain destruction), microcephaly, hypotonia, feeding difficulties - this matches extremely well.\n- **SLC27A1**: Fatty acid transport; not well-established neurodevelopmental disease gene.\n- **KLK6**: Serine protease; not established as a Mendelian neurodevelopmental gene.\n- **LRP8**: Reelin receptor; some neurodevelopmental associations but not this specific syndrome.\n- **CTSF**: Cathepsin F; associated with Kufs disease (adult NCL), not infantile encephalomalacia.\n- Others: No strong established links to this phenotype.\n\n[{\"gene\":\"MOCS3\",\"confidence\":0.35,\"rationale\":\"MOCS3 causes molybdenum cofactor deficiency, presenting with early-onset encephalomalacia, intractable seizures, microcephaly, hypotonia, and severe developmental delay matching this patient.\"},{\"gene\":\"SLC27A1\",\"confidence\":0.1,\"rationale\":\"SLC27A1 evidence chunk mentions early seizures, GDD, microcephaly, and feeding difficulties, but gene is not well-established as a Mendelian neurodevelopmental disease cause.\"},{\"gene\":\"LRP8\",\"confidence\":0.07,\"rationale\":\"LRP8 encodes an apolipoprotein E receptor involved in brain development; some neurodevelopmental associations but not specifically this severe infantile encephalopathy syndrome.\"},{\"gene\":\"CTSF\",\"confidence\":0.06,\"rationale\":\"CTSF causes Kufs disease (adult NCL) with neurodegeneration, but onset is typically adult and encephalomalacia pattern differs from this infantile presentation.\"},{\"gene\":\"KLK6\",\"confidence\":0.05,\"rationale\":\"KLK6 is a serine protease with no well-established Mendelian link to infantile encephalomalacia or this neurodevelopmental syndrome.\"},{\"gene\":\"MPV17L2\",\"confidence\":0.05,\"rationale\":\"MPV17L2 has mitochondrial associations; evidence chunk matches phenotype superficially but no direct established link to this specific syndrome.\"},{\"gene\":\"ANP32A\",\"confidence\":0.04,\"rationale\":\"ANP32A is involved in neuronal development but lacks established Mendelian disease association matching this infantile encephalopathy phenotype.\"},{\"gene\":\"FZD9\",\"confidence\":0.04,\"rationale\":\"FZD9 is a Wnt receptor deleted in Williams syndrome region; not established as standalone cause of this severe infantile encephalopathy.\"},{\"gene\":\"SBNO2\",\"confidence\":0.04,\"rationale\":\"SBNO2 has no well-established Mendelian neurodevelopmental disease association matching this phenotype profile.\"},{\"gene\":\"LRRC46\",\"confidence\":0.03,\"rationale\":\"LRRC46 is a ciliary gene with no established link to infantile encephalomalacia or this neurodevelopmental syndrome.\"},{\"gene\":\"LY96\",\"confidence\":0.03,\"rationale\":\"LY96 (MD-2) is an innate immunity gene with no established Mendelian link to infantile encephalomalacia or neurodevelopmental disease.\"},{\"gene\":\"RNF146\",\"confidence\":0.03,\"rationale\":\"RNF146 is a ubiquitin E3 ligase with no established Mendelian link to this infantile encephalopathy phenotype.\"},{\"gene\":\"SLC7A6OS\",\"confidence\":0.03,\"rationale\":\"SLC7A6OS has no established Mendelian neurodevelopmental disease association matching this severe infantile encephalopathy.\"},{\"gene\":\"PNMA6F\",\"confidence\":0.03,\"rationale\":\"PNMA6F is a paraneoplastic antigen family member with no established Mendelian link to infantile encephalomalacia or this syndrome.\"},{\"gene\":\"CBLB\",\"confidence\":0.03,\"rationale\":\"CBLB is an E3 ubiquitin ligase involved in immune signaling with no established Mendelian link to infantile encephalomalacia or neurodevelopmental disease.\"}]",
+  "parsed_top5": [
+    "MOCS3",
+    "SLC27A1",
+    "LRP8",
+    "CTSF",
+    "KLK6"
+  ]
+}

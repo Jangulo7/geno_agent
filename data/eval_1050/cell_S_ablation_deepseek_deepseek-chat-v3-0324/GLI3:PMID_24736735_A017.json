@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_24736735_A017",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18718,
+  "tokens_out": 678,
+  "finish_reason": "stop",
+  "latency_s": 42.18581676483154,
+  "cost_usd": 0.004265660000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GLI3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking GLI3 mutations to macrocephaly, polydactyly, and corpus callosum hypoplasia in multiple syndromes.\"\n  },\n  {\n    \"gene\": \"IZUMO2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking IZUMO2 to the patient's phenotypes; mentions are incidental.\"\n  },\n  {\n    \"gene\": \"ZNF114\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ZNF114 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"C6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting C6 as causal for the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NRM\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking NRM to macrocephaly, polydactyly, or corpus callosum hypoplasia.\"\n  },\n  {\n    \"gene\": \"ITIH1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting ITIH1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CD101\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CD101 as causal for the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"TEX10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking TEX10 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"ACAA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting ACAA2 to macrocephaly, polydactyly, or corpus callosum hypoplasia.\"\n  },\n  {\n    \"gene\": \"GANAB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting GANAB as causal for the phenotypes.\"\n  },\n  {\n    \"gene\": \"MRPL41\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking MRPL41 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"PAGE4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PAGE4 to the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"FADS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting FADS3 as causal for the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FAM236B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking FAM236B to macrocephaly, polydactyly, or corpus callosum hypoplasia.\"\n  },\n  {\n    \"gene\": \"TMEM9B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting TMEM9B to the patient's clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "GLI3",
+    "IZUMO2",
+    "ZNF114",
+    "C6",
+    "NRM"
+  ]
+}

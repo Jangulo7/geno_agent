@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P75",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15980,
+  "tokens_out": 667,
+  "finish_reason": "stop",
+  "latency_s": 10.252923250198364,
+  "cost_usd": 0.057945,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GNAS\",\"confidence\":0.92,\"rationale\":\"GNAS mutations directly cause PHP1a/AHO with short metacarpals, short stature, and obesity as cardinal features, with multiple high-relevance evidence chunks explicitly linking GNAS to all three HPO phenotypes.\"},{\"gene\":\"WNT16\",\"confidence\":0.03,\"rationale\":\"WNT16 duplication associated with a CSS-like syndrome including short stature and obesity, but evidence is indirect and gene-specific relevance is limited.\"},{\"gene\":\"BTBD18\",\"confidence\":0.01,\"rationale\":\"Evidence mentions brachydactyly with short metacarpals and short stature but no obesity link and no direct BTBD18 gene-specific association.\"},{\"gene\":\"PZP\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe AHO/PHP phenotypes but PZP is not mentioned as causally linked to short metacarpal, short stature, or obesity.\"},{\"gene\":\"DPYD\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking DPYD to the patient's phenotype triad; evidence chunks are about AHO/PHP context only.\"},{\"gene\":\"OR8J3\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking OR8J3 to short metacarpal, short stature, or obesity.\"},{\"gene\":\"ULBP3\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking ULBP3 to the patient's phenotype triad.\"},{\"gene\":\"POLG\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking POLG to short metacarpal, short stature, or obesity.\"},{\"gene\":\"UNC80\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking UNC80 to the patient's phenotype triad.\"},{\"gene\":\"MED26\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking MED26 to short metacarpal, short stature, or obesity.\"},{\"gene\":\"IFNG\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking IFNG to the patient's phenotype triad.\"},{\"gene\":\"ASIC3\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking ASIC3 to short metacarpal, short stature, or obesity.\"},{\"gene\":\"ZBP1\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking ZBP1 to the patient's phenotype triad.\"},{\"gene\":\"KHDRBS2\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking KHDRBS2 to the patient's phenotype triad.\"},{\"gene\":\"TCEAL2\",\"confidence\":0.005,\"rationale\":\"No gene-specific evidence linking TCEAL2 to short metacarpal, short stature, or obesity.\"}]",
+  "parsed_top5": [
+    "GNAS",
+    "WNT16",
+    "BTBD18",
+    "PZP",
+    "DPYD"
+  ]
+}

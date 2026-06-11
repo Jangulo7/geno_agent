@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_1",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20911,
+  "tokens_out": 842,
+  "finish_reason": "stop",
+  "latency_s": 40.23336148262024,
+  "cost_usd": 0.00190864,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"NBAS\": {\"gene\": \"NBAS\", \"confidence\": 0.95, \"rationale\": \"NBAS mutations cause episodic liver failure with elevated aminotransferases, short stature, immunodeficiency, and facial dysmorphism matching the patient's phenotype.\"}, \"CHST4\": {\"gene\": \"CHST4\", \"confidence\": 0.6, \"rationale\": \"CHST4 deficiency is associated with immunodeficiency and mucin abnormalities, partially overlapping with patient's immune and liver features.\"}, \"CCDC158\": {\"gene\": \"CCDC158\", \"confidence\": 0.5, \"rationale\": \"CCDC158-related disorders include short stature and immunodeficiency, but liver enzyme elevation is less prominent in the literature.\"}, \"SSR4\": {\"gene\": \"SSR4\", \"confidence\": 0.45, \"rationale\": \"SSR4 mutations are linked to short stature and immunodeficiency, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"TANK\": {\"gene\": \"TANK\", \"confidence\": 0.4, \"rationale\": \"TANK mutations are associated with immunodeficiency and developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"GNAT3\": {\"gene\": \"GNAT3\", \"confidence\": 0.35, \"rationale\": \"GNAT3 mutations are linked to immunodeficiency and metabolic issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"PRR23A\": {\"gene\": \"PRR23A\", \"confidence\": 0.3, \"rationale\": \"PRR23A mutations are associated with immunodeficiency and developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"LRRC39\": {\"gene\": \"LRRC39\", \"confidence\": 0.25, \"rationale\": \"LRRC39 mutations are linked to immunodeficiency and developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"C4orf50\": {\"gene\": \"C4orf50\", \"confidence\": 0.2, \"rationale\": \"C4orf50 mutations are associated with immunodeficiency and metabolic issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"CCDC141\": {\"gene\": \"CCDC141\", \"confidence\": 0.15, \"rationale\": \"CCDC141 mutations are linked to immunodeficiency and developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"GPSM2\": {\"gene\": \"GPSM2\", \"confidence\": 0.1, \"rationale\": \"GPSM2 mutations are associated with immunodeficiency and developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"BARHL1\": {\"gene\": \"BARHL1\", \"confidence\": 0.05, \"rationale\": \"BARHL1 mutations are linked to craniofacial anomalies, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"RP1L1\": {\"gene\": \"RP1L1\", \"confidence\": 0.05, \"rationale\": \"RP1L1 mutations are associated with retinal dystrophy, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"IDNK\": {\"gene\": \"IDNK\", \"confidence\": 0.05, \"rationale\": \"IDNK mutations are linked to developmental issues, but liver enzyme elevation is not a primary feature in reported cases.\"}, \"C1QL2\": {\"gene\": \"C1QL2\", \"confidence\": 0.05, \"rationale\": \"C1QL2 mutations are associated with coagulation disorders, but liver enzyme elevation is not a primary feature in reported cases.\"}}",
+  "parsed_top5": [
+    "NBAS",
+    "CHST4",
+    "CCDC158",
+    "SSR4",
+    "TANK"
+  ]
+}

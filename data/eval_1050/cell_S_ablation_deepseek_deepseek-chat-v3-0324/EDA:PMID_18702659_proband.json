@@ -1,0 +1,22 @@
+{
+  "case_id": "EDA:PMID_18702659_proband",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EDA",
+  "orig_qwen3_8b_top1": "EDA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EDA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14040,
+  "tokens_out": 60,
+  "finish_reason": "stop",
+  "latency_s": 4.45451807975769,
+  "cost_usd": 0.0028542,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"EDA\",\n  \"confidence\": 0.95,\n  \"rationale\": \"EDA is strongly linked to hypohidrotic ectodermal dysplasia, matching all key patient phenotypes including anodontia, hypohidrosis, and facial dysmorphisms.\"\n}",
+  "parsed_top5": [
+    "EDA"
+  ]
+}

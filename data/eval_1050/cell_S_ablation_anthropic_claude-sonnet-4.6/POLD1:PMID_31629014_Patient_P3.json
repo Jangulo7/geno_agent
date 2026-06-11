@@ -1,0 +1,26 @@
+{
+  "case_id": "POLD1:PMID_31629014_Patient_P3",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "POLD1",
+  "orig_qwen3_8b_top1": "GATA2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ARL6IP6",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 20172,
+  "tokens_out": 1140,
+  "finish_reason": "stop",
+  "latency_s": 18.237447500228882,
+  "cost_usd": 0.077616,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ARL6IP6\",\n    \"confidence\": 0.35,\n    \"rationale\": \"ARL6IP6 evidence mentions ICOS deficiency/CVID-like disease with decreased IgG/IgA/IgM, recurrent respiratory infections, herpes simplex, reduced CD4+ T cells, and impaired vaccine antibody responses, best matching the patient's combined immunodeficiency phenotype.\"\n  },\n  {\n    \"gene\": \"POLD1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence mentions hypogammaglobulinemia, recurrent upper respiratory tract infections, lymphopenia, CD4+/CD8+ ratio inversion, and decreased vaccine antibody responses, partially matching the phenotype.\"\n  },\n  {\n    \"gene\": \"PPP3CB\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Same evidence as POLD1 regarding hypogammaglobulinemia and recurrent URTIs; PPP3CB (calcineurin) has known roles in T cell activation that could explain combined immunodeficiency features.\"\n  },\n  {\n    \"gene\": \"NDFIP1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence includes CVID-like cases with decreased IgG/IgA/IgM, sensorineural hearing loss, recurrent infections, and inverted CD4/CD8 ratio, partially overlapping the phenotype.\"\n  },\n  {\n    \"gene\": \"CHL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence shows CVID-like features with decreased immunoglobulins, hearing loss, and recurrent infections; CHL1 is a neural adhesion molecule with possible neurodevelopmental links to intellectual disability.\"\n  },\n  {\n    \"gene\": \"STAP1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"STAP1 is linked to CVID with hypogammaglobulinemia; evidence mentions recurrent URTIs and low B cells, partially matching the antibody deficiency phenotype.\"\n  },\n  {\n    \"gene\": \"SPATA31A7\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Shares evidence chunks describing hypogammaglobulinemia and recurrent URTIs but no specific gene-phenotype link to the full patient profile.\"\n  },\n  {\n    \"gene\": \"BCDIN3D\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence overlaps with immunodeficiency features but no direct mechanistic link to the combined immunodeficiency and hearing impairment phenotype.\"\n  },\n  {\n    \"gene\": \"LTBP3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence shows CVID-like features with decreased immunoglobulins and hearing loss but no specific LTBP3-immunodeficiency association in the literature provided.\"\n  },\n  {\n    \"gene\": \"SNX4\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence mentions decreased IgG/IgA/IgM and hearing loss in CVID cases but no direct SNX4-specific immunodeficiency link is established.\"\n  },\n  {\n    \"gene\": \"BMAL1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence only shows generic immunodeficiency features; BMAL1 circadian clock function has indirect immune modulation but no direct link to this phenotype.\"\n  },\n  {\n    \"gene\": \"H4C3\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence is generic immunodeficiency literature; no specific H4C3 link to combined immunodeficiency with hearing impairment and intellectual disability.\"\n  },\n  {\n    \"gene\": \"DPH2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence shows CVID-like features but DPH2 (diphthamide biosynthesis) has no established direct role in the combined immunodeficiency phenotype described.\"\n  },\n  {\n    \"gene\": \"CYP8B1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence is generic immunodeficiency; CYP8B1 is a bile acid enzyme with no known direct role in combined immunodeficiency or hearing impairment.\"\n  },\n  {\n    \"gene\": \"TMC2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"TMC2 is associated with hereditary hearing loss but evidence shows no link to the immunodeficiency features; hearing impairment alone is insufficient.\"\n  }\n]",
+  "parsed_top5": [
+    "ARL6IP6",
+    "POLD1",
+    "PPP3CB",
+    "NDFIP1",
+    "CHL1"
+  ]
+}

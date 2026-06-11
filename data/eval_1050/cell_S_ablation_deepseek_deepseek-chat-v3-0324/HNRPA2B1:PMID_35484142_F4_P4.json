@@ -1,0 +1,22 @@
+{
+  "case_id": "HNRPA2B1:PMID_35484142_F4_P4",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "HNRNPA2B1",
+  "orig_qwen3_8b_top1": "HNRNPA2B1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "HNRNPA2B1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15495,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 5.22166109085083,
+  "cost_usd": 0.0031459699999999997,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"HNRNPA2B1\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Strong evidence linking HNRNPA2B1 to early-onset myopathy with ophthalmoplegia, ptosis, and respiratory insufficiency, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "HNRNPA2B1"
+  ]
+}

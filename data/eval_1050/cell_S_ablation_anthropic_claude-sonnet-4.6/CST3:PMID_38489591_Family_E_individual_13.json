@@ -1,0 +1,26 @@
+{
+  "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CST3",
+  "orig_qwen3_8b_top1": "SRD5A3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SRD5A3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17962,
+  "tokens_out": 991,
+  "finish_reason": "stop",
+  "latency_s": 14.30981707572937,
+  "cost_usd": 0.068751,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SRD5A3\",\n    \"confidence\": 0.45,\n    \"rationale\": \"SRD5A3-CDG evidence directly mentions neurological disorder with cerebellar atrophy, psychomotor retardation, and truncating mutations causing variable neurological phenotypes matching the patient profile.\"\n  },\n  {\n    \"gene\": \"SUFU\",\n    \"confidence\": 0.12,\n    \"rationale\": \"SUFU evidence mentions cerebellar peduncle abnormalities (molar tooth sign) and cerebellar/brainstem atrophy in Joubert syndrome, partially overlapping with patient phenotype.\"\n  },\n  {\n    \"gene\": \"MACROH2A2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence chunk mentions corpus callosum atrophy, cerebellar peduncle involvement, and cerebral atrophy in leukodystrophy context, partially overlapping with patient HPO terms.\"\n  },\n  {\n    \"gene\": \"SLC35F6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence mentions corpus callosum atrophy and cerebellar peduncle involvement in leukodystrophy, but no direct gene-specific link to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"SLC52A1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Shared evidence chunk describes corpus callosum and cerebellar peduncle pathology, but no direct SLC52A1-specific neurological disease link established in provided evidence.\"\n  },\n  {\n    \"gene\": \"TBATA\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence discusses cerebellar peduncle damage in spinocerebellar degeneration with gait disturbance, but TBATA is not directly implicated as causal gene.\"\n  },\n  {\n    \"gene\": \"NAXD\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence linking NAXD to the patient phenotype; shared generic neurological evidence chunks only.\"\n  },\n  {\n    \"gene\": \"TECPR2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No gene-specific evidence linking TECPR2 to this phenotype; only generic neurological case report chunks shared across candidates.\"\n  },\n  {\n    \"gene\": \"ETV7\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific neurological disease evidence; only generic shared chunks with no direct ETV7 phenotype connection.\"\n  },\n  {\n    \"gene\": \"SLC16A14\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking SLC16A14 to the patient phenotype; only generic shared neurological evidence.\"\n  },\n  {\n    \"gene\": \"MAGIX\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No gene-specific evidence linking MAGIX to this neurological phenotype profile; only generic shared chunks.\"\n  },\n  {\n    \"gene\": \"NUDT2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking NUDT2 to the patient phenotype; only generic shared neurological evidence chunks.\"\n  },\n  {\n    \"gene\": \"SFT2D1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking SFT2D1 to this phenotype; only generic shared neurological evidence chunks.\"\n  },\n  {\n    \"gene\": \"POTEA\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking POTEA to this neurological phenotype; only generic shared evidence chunks.\"\n  },\n  {\n    \"gene\": \"SUCLG2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence linking SUCLG2 to this phenotype profile; only generic shared neurological evidence chunks.\"\n  }\n]",
+  "parsed_top5": [
+    "SRD5A3",
+    "SUFU",
+    "MACROH2A2",
+    "SLC35F6",
+    "SLC52A1"
+  ]
+}

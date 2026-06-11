@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_14628289_Family_A_individual_3",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16692,
+  "tokens_out": 630,
+  "finish_reason": "stop",
+  "latency_s": 23.777172327041626,
+  "cost_usd": 0.0038235,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLDN16\",\n    \"confidence\": 1.0,\n    \"rationale\": \"Directly linked to FHHNC with hypercalciuria, hypermagnesuria, nephrocalcinosis, and enuresis nocturna.\"\n  },\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Associated with hypercalciuria but lacks direct evidence for nephrocalcinosis and enuresis.\"\n  },\n  {\n    \"gene\": \"ITGA2B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Indirectly mentioned in a case with hypercalciuria but not clearly linked to nephrocalcinosis.\"\n  },\n  {\n    \"gene\": \"TRABD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CMKLR1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZCCHC7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RHBDF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CGN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RMP24\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KCNK3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SDHA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PHF24\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"STYXL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MAGEB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DNA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "CLDN16",
+    "UMOD",
+    "ITGA2B",
+    "TRABD",
+    "CMKLR1"
+  ]
+}

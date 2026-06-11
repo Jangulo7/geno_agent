@@ -1,0 +1,26 @@
+{
+  "case_id": "IRF4:PMID_36662884_P4",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "Pik3r1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15106,
+  "tokens_out": 1091,
+  "finish_reason": "stop",
+  "latency_s": 17.78894281387329,
+  "cost_usd": 0.061683,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks provided are all rated critic_relevance=1/5 and none are specifically linked to any of the candidate genes by name. All genes share the same generic immunology background literature. However, the clinical phenotype \u2014 BCGitis, Pneumocystis jirovecii pneumonia, hypogammaglobulinemia (low IgG, IgA, IgM), decreased class-switched memory B cells, increased transitional B cells, recurrent respiratory infections, chronic diarrhea \u2014 is classic for a combined immunodeficiency with prominent B cell defect. BCGitis specifically points to a severe combined or innate immune defect.\n\nAmong the candidates, IRF4 is a well-established transcription factor critical for B cell differentiation, class-switch recombination, and plasma cell development. IRF4 deficiency causes combined immunodeficiency with hypogammaglobulinemia, recurrent infections including opportunistic infections. ZFX has roles in hematopoietic stem cell maintenance. NLRP6 is involved in gut immunity. None of the others have strong known immunodeficiency associations.\n\nGiven the phenotype profile most consistent with IRF4 deficiency (hypogammaglobulinemia, decreased switched memory B cells, increased transitional B cells, opportunistic infections including PCP and BCGitis), IRF4 ranks highest.\n\n[{\"gene\":\"IRF4\",\"confidence\":0.35,\"rationale\":\"IRF4 is a master transcription factor for B cell class-switching and plasma cell differentiation; deficiency causes hypogammaglobulinemia, decreased switched memory B cells, increased transitional B cells, and susceptibility to opportunistic infections matching this phenotype.\"},{\"gene\":\"ZFX\",\"confidence\":0.12,\"rationale\":\"ZFX regulates hematopoietic stem cell self-renewal and could contribute to combined immunodeficiency, but direct evidence linking it to this specific phenotype profile is limited.\"},{\"gene\":\"NLRP6\",\"confidence\":0.07,\"rationale\":\"NLRP6 is involved in intestinal immunity and could contribute to chronic diarrhea, but does not explain the B cell and antibody deficiency phenotypes.\"},{\"gene\":\"SNX5\",\"confidence\":0.06,\"rationale\":\"SNX5 has roles in endosomal sorting; indirect connection to immune cell function but no strong evidence for this immunodeficiency phenotype.\"},{\"gene\":\"ADSS1\",\"confidence\":0.06,\"rationale\":\"ADSS1 (adenylosuccinate synthase) involved in purine synthesis; purine pathway defects can cause immunodeficiency but specific evidence for this phenotype is lacking.\"},{\"gene\":\"CDCA3\",\"confidence\":0.05,\"rationale\":\"CDCA3 is a cell cycle regulator with no established direct role in B cell differentiation or immunodeficiency matching this phenotype.\"},{\"gene\":\"VPS50\",\"confidence\":0.05,\"rationale\":\"VPS50 is involved in vesicle trafficking; no established direct link to the described combined immunodeficiency phenotype.\"},{\"gene\":\"LRRC19\",\"confidence\":0.05,\"rationale\":\"LRRC19 has limited characterized immune function and no established association with this immunodeficiency phenotype profile.\"},{\"gene\":\"SMAD9\",\"confidence\":0.04,\"rationale\":\"SMAD9 is a TGF-beta signaling mediator; no strong established link to combined immunodeficiency with hypogammaglobulinemia and opportunistic infections.\"},{\"gene\":\"BAIAP3\",\"confidence\":0.04,\"rationale\":\"BAIAP3 is involved in membrane dynamics; no established role in B cell development or the described immunodeficiency phenotype.\"},{\"gene\":\"VPS72\",\"confidence\":0.03,\"rationale\":\"VPS72 is a chromatin remodeling factor with no established direct role in B cell immunodeficiency or opportunistic infection susceptibility.\"},{\"gene\":\"KSR1\",\"confidence\":0.03,\"rationale\":\"KSR1 is a scaffold for RAS-MAPK signaling; no established direct link to the described combined immunodeficiency phenotype.\"},{\"gene\":\"SYPL1\",\"confidence\":0.02,\"rationale\":\"SYPL1 is a synaptophysin-like protein with no known role in B cell development or immunodeficiency.\"},{\"gene\":\"TMEM214\",\"confidence\":0.02,\"rationale\":\"TMEM214 is an ER membrane protein with no established role in B cell differentiation or the described immunodeficiency phenotype.\"},{\"gene\":\"PNISR\",\"confidence\":0.01,\"rationale\":\"PNISR is an RNA splicing factor with no established direct link to B cell immunodeficiency or opportunistic infection susceptibility.\"}]",
+  "parsed_top5": [
+    "IRF4",
+    "ZFX",
+    "NLRP6",
+    "SNX5",
+    "ADSS1"
+  ]
+}

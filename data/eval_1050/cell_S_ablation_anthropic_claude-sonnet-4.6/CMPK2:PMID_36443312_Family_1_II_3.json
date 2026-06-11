@@ -1,0 +1,26 @@
+{
+  "case_id": "CMPK2:PMID_36443312_Family_1_II_3",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CMPK2",
+  "orig_qwen3_8b_top1": "CMPK2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CMPK2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14281,
+  "tokens_out": 798,
+  "finish_reason": "stop",
+  "latency_s": 13.524019718170166,
+  "cost_usd": 0.054813,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CMPK2\",\"confidence\":0.82,\"rationale\":\"CMPK2 evidence directly describes affected siblings with calcifications in bilateral globus pallidus, thalamus, and cerebellum\u2014exactly matching the patient's HPO phenotypes\u2014in a PFBC family with identified CMPK2 variants.\"},{\"gene\":\"HIVEP1\",\"confidence\":0.03,\"rationale\":\"Evidence chunks describe brain calcifications in general PFBC/PDGFRB context with no specific mention of HIVEP1 as a causal gene for this phenotype.\"},{\"gene\":\"MPP4\",\"confidence\":0.02,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to MPP4 as a causative gene for globus pallidus, thalamic, or cerebellar calcifications.\"},{\"gene\":\"GML\",\"confidence\":0.02,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to GML as a causative gene for this calcification phenotype.\"},{\"gene\":\"AZI2\",\"confidence\":0.02,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to AZI2 as a causative gene for this calcification phenotype.\"},{\"gene\":\"TEKT4\",\"confidence\":0.02,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to TEKT4 as a causative gene for this calcification phenotype.\"},{\"gene\":\"CANT1\",\"confidence\":0.02,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to CANT1 as a causative gene for this calcification phenotype.\"},{\"gene\":\"UTP3\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to UTP3 as a causative gene for this calcification phenotype.\"},{\"gene\":\"DQX1\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to DQX1 as a causative gene for this calcification phenotype.\"},{\"gene\":\"GPN2\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to GPN2 as a causative gene for this calcification phenotype.\"},{\"gene\":\"CCHCR1\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to CCHCR1 as a causative gene for this calcification phenotype.\"},{\"gene\":\"POLE4\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to POLE4 as a causative gene for this calcification phenotype.\"},{\"gene\":\"TADA2B\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to TADA2B as a causative gene for this calcification phenotype.\"},{\"gene\":\"AKAP5\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to AKAP5 as a causative gene for this calcification phenotype.\"},{\"gene\":\"PRR20G\",\"confidence\":0.01,\"rationale\":\"Evidence is generic PFBC/brain calcification literature with no direct link to PRR20G as a causative gene for this calcification phenotype.\"}]",
+  "parsed_top5": [
+    "CMPK2",
+    "HIVEP1",
+    "MPP4",
+    "GML",
+    "AZI2"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "ANKH:PMID_22647861_41_year_old_woman",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ANKH",
+  "orig_qwen3_8b_top1": "ANKH",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ANKH",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12068,
+  "tokens_out": 66,
+  "finish_reason": "stop",
+  "latency_s": 7.223890066146851,
+  "cost_usd": 0.00098392,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ANKH\", \"confidence\": 0.95, \"rationale\": \"ANKH mutations directly link to chondrocalcinosis and joint issues, including ankle pain and swelling, aligning with the patient's polyarticular chondrocalcinosis and low back pain.\"}",
+  "parsed_top5": [
+    "ANKH"
+  ]
+}

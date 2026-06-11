@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_34138484_male_newborn",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21208,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 14.809482336044312,
+  "cost_usd": 0.074544,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining trichorrhexis invaginata, congenital exfoliative erythroderma, elevated IgE, sparse hair/eyebrows, recurrent infections, parakeratosis, and malnutrition\u2014all present in this patient.\"},{\"gene\":\"SLC4A1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SLC4A1 to this phenotype profile; evidence chunks are generic Netherton/erythroderma cases unrelated to SLC4A1.\"},{\"gene\":\"MTERF4\",\"confidence\":0.01,\"rationale\":\"No evidence linking MTERF4 to the observed skin, hair, or immunological phenotypes in this patient.\"},{\"gene\":\"IL1A\",\"confidence\":0.01,\"rationale\":\"No specific evidence linking IL1A mutations to this constellation of Netherton-like features.\"},{\"gene\":\"TRERF1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting TRERF1 to congenital erythroderma, trichorrhexis invaginata, or elevated IgE.\"},{\"gene\":\"WFDC8\",\"confidence\":0.01,\"rationale\":\"No evidence linking WFDC8 to this phenotype; it is a WAP domain protein without established association to Netherton syndrome features.\"},{\"gene\":\"DMRTA2\",\"confidence\":0.01,\"rationale\":\"No evidence connecting DMRTA2 to skin barrier defects, trichorrhexis invaginata, or atopic diathesis.\"},{\"gene\":\"PANX1\",\"confidence\":0.01,\"rationale\":\"No evidence linking PANX1 to congenital exfoliative erythroderma or the other features in this patient.\"},{\"gene\":\"PACSIN3\",\"confidence\":0.01,\"rationale\":\"No evidence connecting PACSIN3 to the observed dermatological or immunological phenotypes.\"},{\"gene\":\"ELF3\",\"confidence\":0.01,\"rationale\":\"No evidence linking ELF3 to Netherton syndrome or its characteristic features.\"},{\"gene\":\"ACACB\",\"confidence\":0.01,\"rationale\":\"No evidence connecting ACACB to congenital erythroderma, trichorrhexis invaginata, or elevated IgE.\"},{\"gene\":\"HNRNPA1L2\",\"confidence\":0.01,\"rationale\":\"No evidence linking HNRNPA1L2 to the skin barrier or immunological phenotypes observed.\"},{\"gene\":\"FAM90A11\",\"confidence\":0.01,\"rationale\":\"No evidence connecting FAM90A11 to this phenotype profile.\"},{\"gene\":\"DYNC2I1\",\"confidence\":0.01,\"rationale\":\"No evidence linking DYNC2I1 to congenital erythroderma, trichorrhexis invaginata, or atopic features.\"},{\"gene\":\"CWF19L1\",\"confidence\":0.01,\"rationale\":\"No evidence connecting CWF19L1 to the dermatological or immunological features in this patient.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "SLC4A1",
+    "MTERF4",
+    "IL1A",
+    "TRERF1"
+  ]
+}

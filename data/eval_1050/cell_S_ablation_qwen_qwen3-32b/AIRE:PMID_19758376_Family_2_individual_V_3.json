@@ -1,0 +1,22 @@
+{
+  "case_id": "AIRE:PMID_19758376_Family_2_individual_V_3",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NTN3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16404,
+  "tokens_out": 633,
+  "finish_reason": "stop",
+  "latency_s": 14.96775197982788,
+  "cost_usd": 0.00148956,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"AIRE gene mutations are directly linked to Autoimmune Polyglandular Syndrome Type 1 (APS-1), which presents with hypoparathyroidism, hypothyroidism, and other endocrine features matching the patient's phenotype.\",\"gene\":\"EXD3\",\"confidence\":0.05,\"rationale\":\"EXD3 is not directly associated with hypoparathyroidism or hypothyroidism in the provided evidence.\",\"gene\":\"KLHL29\",\"confidence\":0.05,\"rationale\":\"KLHL29 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"LCN6\",\"confidence\":0.05,\"rationale\":\"LCN6 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"COL3A1\",\"confidence\":0.05,\"rationale\":\"COL3A1 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"SLC30A6\",\"confidence\":0.05,\"rationale\":\"SLC30A6 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"DNAJB12\",\"confidence\":0.05,\"rationale\":\"DNAJB12 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"PGK1\",\"confidence\":0.05,\"rationale\":\"PGK1 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"ERBB2\",\"confidence\":0.05,\"rationale\":\"ERBB2 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"DTWD2\",\"confidence\":0.05,\"rationale\":\"DTWD2 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"CASP8\",\"confidence\":0.05,\"rationale\":\"CASP8 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"MRPL42\",\"confidence\":0.05,\"rationale\":\"MRPL42 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"KLF16\",\"confidence\":0.05,\"rationale\":\"KLF16 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"TUT4\",\"confidence\":0.05,\"rationale\":\"TUT4 is not directly associated with hypoparathyroidism or hypothyroidism in the evidence.\",\"gene\":\"NTN3\",\"confidence\":0.05,\"rationale\":\"NTN3 is not directly linked to hypoparathyroidism or hypothyroidism in the evidence.\"}",
+  "parsed_top5": [
+    "NTN3"
+  ]
+}

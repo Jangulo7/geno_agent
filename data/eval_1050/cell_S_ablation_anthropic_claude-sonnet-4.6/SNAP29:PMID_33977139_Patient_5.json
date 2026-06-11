@@ -1,0 +1,26 @@
+{
+  "case_id": "SNAP29:PMID_33977139_Patient_5",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNAP29",
+  "orig_qwen3_8b_top1": "FRMD7",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CLASRP",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19839,
+  "tokens_out": 1157,
+  "finish_reason": "stop",
+  "latency_s": 16.856730222702026,
+  "cost_usd": 0.076872,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CLASRP\",\n    \"confidence\": 0.72,\n    \"rationale\": \"CLASRP chunk_3 describes Patient 5 with microcephaly, microphthalmia, epicanthal folds, anteverted nares, short philtrum, micrognathia, high-arched palate, hypotonia, scoliosis, horizontal nystagmus, and convergent strabismus\u2014matching all 12 patient HPO terms directly.\"\n  },\n  {\n    \"gene\": \"NRM\",\n    \"confidence\": 0.06,\n    \"rationale\": \"NRM chunk_1 contains the same Patient 5 description matching the phenotype profile, but NRM has no established disease gene link; evidence is shared/non-specific.\"\n  },\n  {\n    \"gene\": \"FRMPD3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"FRMPD3 chunk_1 contains the same Patient 5 description, but FRMPD3 is not a recognized disease gene for this phenotype cluster.\"\n  },\n  {\n    \"gene\": \"DHX38\",\n    \"confidence\": 0.04,\n    \"rationale\": \"DHX38 chunk_2 contains the Patient 5 description; DHX38 has some neurodevelopmental disease links but evidence here is non-specific shared text.\"\n  },\n  {\n    \"gene\": \"EQTN\",\n    \"confidence\": 0.03,\n    \"rationale\": \"EQTN chunk_1 contains the Patient 5 description but EQTN is a sperm-related gene with no established link to this syndromic phenotype.\"\n  },\n  {\n    \"gene\": \"FRMD7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"FRMD7 is associated with X-linked nystagmus; chunk_2 contains Patient 5 description but the full syndrome including microcephaly and scoliosis is not characteristic of FRMD7.\"\n  },\n  {\n    \"gene\": \"MYNN\",\n    \"confidence\": 0.02,\n    \"rationale\": \"MYNN chunk_3 contains the Patient 5 description but MYNN has no established causal role in this syndromic phenotype cluster.\"\n  },\n  {\n    \"gene\": \"KIAA0825\",\n    \"confidence\": 0.01,\n    \"rationale\": \"KIAA0825 chunk_3 contains Patient 5 description; chunk_2 describes an X-linked syndrome with overlapping features but not a precise match.\"\n  },\n  {\n    \"gene\": \"NUF2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"NUF2 chunk_3 contains Patient 5 description but NUF2 is a kinetochore gene with no established link to this dysmorphic syndrome.\"\n  },\n  {\n    \"gene\": \"RHD\",\n    \"confidence\": 0.01,\n    \"rationale\": \"RHD chunk_3 contains Patient 5 description but RHD encodes a blood group antigen with no plausible causal role in this neurodevelopmental syndrome.\"\n  },\n  {\n    \"gene\": \"UHRF2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"UHRF2 evidence describes overlapping features (microcephaly, micrognathia, hypotonia, scoliosis) but lacks the specific ocular findings and is non-specific shared text.\"\n  },\n  {\n    \"gene\": \"EFNA1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"EFNA1 evidence includes microcephaly and scoliosis but lacks the full ocular phenotype cluster; no direct gene-disease link for this syndrome.\"\n  },\n  {\n    \"gene\": \"ZBTB43\",\n    \"confidence\": 0.01,\n    \"rationale\": \"ZBTB43 chunk_2 mentions microcephaly, narrow forehead, micrognathia, and scoliosis but in context of a different syndrome; no direct causal evidence.\"\n  },\n  {\n    \"gene\": \"TIMMDC1\",\n    \"confidence\": 0.005,\n    \"rationale\": \"TIMMDC1 evidence shows microcephaly, hypotonia, scoliosis overlap but is associated with mitochondrial complex I deficiency, not matching the full ocular phenotype profile.\"\n  },\n  {\n    \"gene\": \"VCAN\",\n    \"confidence\": 0.005,\n    \"rationale\": \"VCAN is associated with vitreoretinopathy; evidence chunks are non-specific shared text with no direct match to this full syndromic phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "CLASRP",
+    "NRM",
+    "FRMPD3",
+    "DHX38",
+    "EQTN"
+  ]
+}

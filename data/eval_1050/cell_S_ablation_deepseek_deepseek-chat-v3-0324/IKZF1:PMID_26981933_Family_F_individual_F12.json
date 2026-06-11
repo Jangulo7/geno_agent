@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F12",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13451,
+  "tokens_out": 663,
+  "finish_reason": "stop",
+  "latency_s": 46.014771938323975,
+  "cost_usd": 0.00320071,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking IKZF1 to B-ALL, recurrent infections, and B/T cell abnormalities.\"\n  },\n  {\n    \"gene\": \"TCL1B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"TCL1B implicated in B-ALL via TCR fusions, but less direct evidence for immune phenotypes.\"\n  },\n  {\n    \"gene\": \"LY6L\",\n    \"confidence\": 0.25,\n    \"rationale\": \"LY6L associated with poor outcomes in CD4+ memory T cells, but no direct leukemia link.\"\n  },\n  {\n    \"gene\": \"ARHGAP15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Involved in CD4+ memory T cell regulation, but no direct evidence for leukemia or B cell defects.\"\n  },\n  {\n    \"gene\": \"TOX3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"TOX family regulates T cell differentiation, but no direct link to B-ALL or immune deficiencies.\"\n  },\n  {\n    \"gene\": \"ERCC6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"DNA repair gene with cancer associations, but no direct link to lymphoid malignancies.\"\n  },\n  {\n    \"gene\": \"ARHGAP11A\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Correlated with immune cell infiltration, but no direct disease associations.\"\n  },\n  {\n    \"gene\": \"GTF2A2\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Linked to immune cell proportions, but no clear disease mechanism.\"\n  },\n  {\n    \"gene\": \"FAM110B\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Modulates immune microenvironment, but no direct link to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"BCL2L11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Apoptosis-related, but evidence is indirect and not specific to B-ALL.\"\n  },\n  {\n    \"gene\": \"PIK3R3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No direct evidence linking to patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SULT1A4\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No relevant evidence for immune or leukemia phenotypes.\"\n  },\n  {\n    \"gene\": \"TICAM1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence supporting causality for this patient's profile.\"\n  },\n  {\n    \"gene\": \"SCYGR3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No relevant evidence for immune or hematologic disorders.\"\n  },\n  {\n    \"gene\": \"DYSF\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No evidence linking to lymphoid malignancies or immune deficiencies.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "TCL1B",
+    "LY6L",
+    "ARHGAP15",
+    "TOX3"
+  ]
+}

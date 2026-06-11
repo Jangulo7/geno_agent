@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_28096536_patient",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17958,
+  "tokens_out": 710,
+  "finish_reason": "stop",
+  "latency_s": 11.347655773162842,
+  "cost_usd": 0.064524,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.92,\"rationale\":\"IKZF1 evidence directly links germline loss-of-function variants to T-ALL, PJP, candidiasis, profound B-lymphopenia, NK cell defects, hypogammaglobulinemia, and combined immunodeficiency matching the patient's full phenotype.\"},{\"gene\":\"ISLR\",\"confidence\":0.006,\"rationale\":\"No direct gene-disease link in evidence; chunks describe generic SCID/PJP cases unrelated to ISLR function.\"},{\"gene\":\"ATXN1L\",\"confidence\":0.006,\"rationale\":\"Evidence chunks are generic immunosuppression/PJP contexts with no mechanistic link to ATXN1L.\"},{\"gene\":\"RPL10A\",\"confidence\":0.006,\"rationale\":\"Evidence chunks describe SCID and drug toxicity contexts unrelated to RPL10A-specific immunodeficiency.\"},{\"gene\":\"STK40\",\"confidence\":0.006,\"rationale\":\"No gene-specific immunodeficiency evidence; chunks are generic SCID/PJP descriptions.\"},{\"gene\":\"DSC2\",\"confidence\":0.006,\"rationale\":\"DSC2 is a desmosomal cadherin; evidence chunks are generic SCID/PJP with no link to this phenotype.\"},{\"gene\":\"SELL\",\"confidence\":0.006,\"rationale\":\"SELL encodes L-selectin; evidence chunks are generic PJP/SCID with no specific immunodeficiency link.\"},{\"gene\":\"TMEM63A\",\"confidence\":0.006,\"rationale\":\"No relevant gene-specific evidence; chunks describe generic PJP and drug toxicity contexts.\"},{\"gene\":\"DSG2\",\"confidence\":0.006,\"rationale\":\"DSG2 is a desmosomal protein; evidence chunks are generic SCID/PJP with no mechanistic relevance.\"},{\"gene\":\"MTNAP1\",\"confidence\":0.006,\"rationale\":\"No gene-specific immunodeficiency evidence; chunks are generic PJP/drug toxicity descriptions.\"},{\"gene\":\"RAF1\",\"confidence\":0.006,\"rationale\":\"RAF1 is a MAP kinase; evidence chunks are generic PJP/drug toxicity with no specific immunodeficiency link.\"},{\"gene\":\"FAM217A\",\"confidence\":0.006,\"rationale\":\"No gene-specific evidence; chunks describe generic SCID/PJP and drug toxicity unrelated to FAM217A.\"},{\"gene\":\"DHX36\",\"confidence\":0.006,\"rationale\":\"No gene-specific immunodeficiency evidence; chunks are generic SCID/PJP descriptions.\"},{\"gene\":\"FAT2\",\"confidence\":0.006,\"rationale\":\"FAT2 is a cadherin; evidence chunks are generic PJP/SCID with no mechanistic link to this phenotype.\"},{\"gene\":\"DSCAM\",\"confidence\":0.006,\"rationale\":\"DSCAM is a cell adhesion molecule; evidence chunks are generic PJP/drug toxicity with no specific immunodeficiency link.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "ISLR",
+    "ATXN1L",
+    "RPL10A",
+    "STK40"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "SAMD7:PMID_38272031_Individual_2_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SAMD7",
+  "orig_qwen3_8b_top1": "MAP1LC3C",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TRHDE",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13174,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 4.674079179763794,
+  "cost_usd": 0.00106988,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"TRHDE\", \"confidence\": 0.95, \"rationale\": \"TRHDE is strongly associated with macular dystrophy, central hypoautofluorescence, and optic disc pallor as seen in the patient's phenotype.\"}",
+  "parsed_top5": [
+    "TRHDE"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "POMGNT1:PMID_26908613_MOGL2063",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "POMGNT1",
+  "orig_qwen3_8b_top1": "SRGAP2C",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13603,
+  "tokens_out": 31,
+  "finish_reason": "stop",
+  "latency_s": 2.472382068634033,
+  "cost_usd": 0.0010969200000000001,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the 'gene' field for the candidate genes. Please provide the gene names along with their evidence chunks.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the 'gene' field for the candidate genes. Please provide the gene names along with their evidence chunks.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SNUPN:PMID_38413582_Family_9_individual_II_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SNUPN",
+  "orig_qwen3_8b_top1": "ALS2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "POMK",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 12230,
+  "tokens_out": 983,
+  "finish_reason": "stop",
+  "latency_s": 19.70317316055298,
+  "cost_usd": 0.051435,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are essentially identical across all genes (all rated critic_relevance=2/5, all \"mention=no\"), meaning none of the provided literature directly links any specific gene to the patient's phenotype. I must rely on prior biological knowledge.\n\nThe patient's phenotype: proximal+distal limb weakness, highly elevated CK, increased endomysial connective tissue, Gowers sign, joint contractures, respiratory insufficiency, areflexia \u2014 this is a muscular dystrophy/congenital myopathy picture. POMK (protein-O-mannose kinase) causes a congenital muscular dystrophy with elevated CK, muscle weakness, contractures, and respiratory involvement. None of the other candidates (LALBA=milk protein, FOXJ1=cilia, ACOT2=acyl-CoA thioesterase, OR13C9=olfactory receptor, MSANTD3=unknown, ALS2=motor neuron disease, ZNF610=zinc finger, FOXA2=transcription factor, ATP8A2=phospholipid flippase, HECW2=ubiquitin ligase, NKX2-6=transcription factor, MAGOH=splicing, PPP1CC=phosphatase, MMP16=matrix metalloproteinase) have established links to this specific muscular dystrophy phenotype profile as strongly as POMK.\n\n[{\"gene\":\"POMK\",\"confidence\":0.35,\"rationale\":\"POMK causes congenital muscular dystrophy with elevated CK, proximal/distal weakness, contractures, and respiratory insufficiency, best matching the patient's myopathic phenotype profile.\"},{\"gene\":\"LALBA\",\"confidence\":0.05,\"rationale\":\"No established link to muscular dystrophy; evidence chunks are generic and not gene-specific.\"},{\"gene\":\"FOXJ1\",\"confidence\":0.05,\"rationale\":\"FOXJ1 is a cilia transcription factor with no known association to muscular dystrophy or elevated CK phenotype.\"},{\"gene\":\"ACOT2\",\"confidence\":0.05,\"rationale\":\"Mitochondrial acyl-CoA thioesterase; no established link to the described muscular dystrophy phenotype.\"},{\"gene\":\"OR13C9\",\"confidence\":0.04,\"rationale\":\"Olfactory receptor gene with no known neuromuscular disease association.\"},{\"gene\":\"MSANTD3\",\"confidence\":0.04,\"rationale\":\"Unknown function; no established link to muscular dystrophy or elevated CK.\"},{\"gene\":\"ALS2\",\"confidence\":0.05,\"rationale\":\"ALS2 causes juvenile ALS/motor neuron disease, not the myopathic/dystrophic picture with elevated CK and endomysial fibrosis.\"},{\"gene\":\"ZNF610\",\"confidence\":0.04,\"rationale\":\"Zinc finger protein with no known association to muscular dystrophy or the described phenotype.\"},{\"gene\":\"FOXA2\",\"confidence\":0.04,\"rationale\":\"Transcription factor involved in development; no established link to muscular dystrophy phenotype.\"},{\"gene\":\"ATP8A2\",\"confidence\":0.06,\"rationale\":\"ATP8A2 causes cerebellar ataxia and intellectual disability; some overlap with weakness but not the full myopathic profile.\"},{\"gene\":\"HECW2\",\"confidence\":0.04,\"rationale\":\"E3 ubiquitin ligase associated with neurodevelopmental disorders, not muscular dystrophy with elevated CK.\"},{\"gene\":\"NKX2-6\",\"confidence\":0.04,\"rationale\":\"Cardiac transcription factor with no established link to skeletal muscle dystrophy or elevated CK.\"},{\"gene\":\"MAGOH\",\"confidence\":0.04,\"rationale\":\"mRNA splicing factor; no known direct association with muscular dystrophy phenotype.\"},{\"gene\":\"PPP1CC\",\"confidence\":0.05,\"rationale\":\"Protein phosphatase with roles in muscle but no established link to this specific dystrophy phenotype profile.\"},{\"gene\":\"MMP16\",\"confidence\":0.06,\"rationale\":\"Matrix metalloproteinase involved in ECM remodeling; increased endomysial connective tissue is plausible but no direct disease link established.\"}]",
+  "parsed_top5": [
+    "POMK",
+    "LALBA",
+    "FOXJ1",
+    "ACOT2",
+    "OR13C9"
+  ]
+}

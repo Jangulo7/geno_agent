@@ -1,0 +1,26 @@
+{
+  "case_id": "SPOUT1:PMID_39962046_L_II_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPOUT1",
+  "orig_qwen3_8b_top1": "EIF2S3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SPOUT1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21941,
+  "tokens_out": 970,
+  "finish_reason": "stop",
+  "latency_s": 13.460341215133667,
+  "cost_usd": 0.080373,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPOUT1\",\n    \"confidence\": 0.72,\n    \"rationale\": \"SPOUT1 chunk_1 directly reports a cohort with 86% microcephaly, 100% developmental delay, 83% short stature, 79% poor weight gain, and 50% hypertonia/spasticity\u2014matching all 5 patient HPO terms.\"\n  },\n  {\n    \"gene\": \"EIF2S3\",\n    \"confidence\": 0.12,\n    \"rationale\": \"EIF2S3 introduction explicitly links variants to microcephaly, short stature, ID, and spasticity/hypertonus, covering most patient HPO features, but evidence is less cohort-level specific.\"\n  },\n  {\n    \"gene\": \"RANGAP1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"RANGAP1 chunk_1 describes patients with GDD, failure to thrive, microcephaly, appendicular spasticity, but evidence is marked as gene-specific and partially matches the phenotype.\"\n  },\n  {\n    \"gene\": \"TUBGCP2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No gene-specific evidence linking TUBGCP2 to this phenotype; all supporting chunks are generic/shared background literature.\"\n  },\n  {\n    \"gene\": \"TMEM151B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background with no direct mention of TMEM151B causing this phenotype.\"\n  },\n  {\n    \"gene\": \"CLIC3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking CLIC3 to this phenotype.\"\n  },\n  {\n    \"gene\": \"CPA6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking CPA6 to this phenotype.\"\n  },\n  {\n    \"gene\": \"CTF1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking CTF1 to this phenotype.\"\n  },\n  {\n    \"gene\": \"SSTR3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking SSTR3 to this phenotype.\"\n  },\n  {\n    \"gene\": \"PDLIM4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking PDLIM4 to this phenotype.\"\n  },\n  {\n    \"gene\": \"NIFK\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking NIFK to this phenotype.\"\n  },\n  {\n    \"gene\": \"LRRC37A3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking LRRC37A3 to this phenotype.\"\n  },\n  {\n    \"gene\": \"PIANP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking PIANP to this phenotype.\"\n  },\n  {\n    \"gene\": \"MAGEB6B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; shared background chunks only, no direct link to MAGEB6B causing this phenotype.\"\n  },\n  {\n    \"gene\": \"SPDEF\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No gene-specific evidence; all chunks are shared background literature not linking SPDEF to this phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "SPOUT1",
+    "EIF2S3",
+    "RANGAP1",
+    "TUBGCP2",
+    "TMEM151B"
+  ]
+}

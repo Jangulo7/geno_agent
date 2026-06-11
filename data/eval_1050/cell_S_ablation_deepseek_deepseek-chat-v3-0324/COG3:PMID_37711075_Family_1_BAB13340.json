@@ -1,0 +1,26 @@
+{
+  "case_id": "COG3:PMID_37711075_Family_1_BAB13340",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COG3",
+  "orig_qwen3_8b_top1": "DNAJC15",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DGKQ",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14268,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 20.787526845932007,
+  "cost_usd": 0.0033787400000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DGKQ\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Evidence mentions microcephaly, long philtrum, thin vermilion border, and intellectual disability, closely matching the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"UBL5\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Describes facial dysmorphism including long philtrum, thin vermilion, and microcephaly, but less specific to the patient's profile.\"\n  },\n  {\n    \"gene\": \"DNAJC15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Evidence includes microcephaly, developmental delay, and facial dysmorphisms, overlapping with some patient features.\"\n  },\n  {\n    \"gene\": \"IQANK1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Mentions intellectual disability and facial features, but lacks specificity for the patient's exact phenotype combination.\"\n  },\n  {\n    \"gene\": \"TNFSF12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Evidence describes some facial dysmorphisms and hypotonia, but relevance to the patient's symptoms is limited.\"\n  },\n  {\n    \"gene\": \"GPR160\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Overlaps with microcephaly and developmental delay, but evidence is not highly specific.\"\n  },\n  {\n    \"gene\": \"FOXRED2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Some phenotypic overlap, but evidence lacks strong alignment with the patient's profile.\"\n  },\n  {\n    \"gene\": \"TFPI\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Case mentions microcephaly and hypotonia, but no strong match to other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"HEMK1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Minimal evidence linking gene to patient's specific phenotype profile.\"\n  },\n  {\n    \"gene\": \"SCN10A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Limited evidence relevant to the patient's neurological and dysmorphic features.\"\n  },\n  {\n    \"gene\": \"SLC10A4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence lacks specificity for the patient's combination of symptoms.\"\n  },\n  {\n    \"gene\": \"F10\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No direct evidence connecting gene to patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MCRIP1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Minimal phenotypic overlap with patient's symptoms.\"\n  },\n  {\n    \"gene\": \"PRRG2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Weak evidence linking gene to relevant phenotypes.\"\n  },\n  {\n    \"gene\": \"SIAH2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No strong evidence supporting causal role for patient's symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "DGKQ",
+    "UBL5",
+    "DNAJC15",
+    "IQANK1",
+    "TNFSF12"
+  ]
+}

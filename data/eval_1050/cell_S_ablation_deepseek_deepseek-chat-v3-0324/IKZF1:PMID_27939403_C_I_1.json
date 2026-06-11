@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_27939403_C_I_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18381,
+  "tokens_out": 687,
+  "finish_reason": "stop",
+  "latency_s": 45.568721771240234,
+  "cost_usd": 0.00420519,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence linking IKZF1 mutations to B/T cell dysregulation, hypogammaglobulinemia, and inverted CD4:CD8 ratio matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TIGIT\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence of immune dysregulation but no direct match to patient's B cell or IgG deficits.\"\n  },\n  {\n    \"gene\": \"RBFOX2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking RBFOX2 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"CCDC88B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking CCDC88B to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"NOMO3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking NOMO3 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"SLC43A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking SLC43A1 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"CYP4A11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking CYP4A11 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"FAM20A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking FAM20A to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"GNAT3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking GNAT3 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"KCNMB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking KCNMB1 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"MACO1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking MACO1 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"MDH1B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking MDH1B to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"XRN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking XRN1 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"CGREF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking CGREF1 to immune phenotypes observed in the patient.\"\n  },\n  {\n    \"gene\": \"ASB16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking ASB16 to immune phenotypes observed in the patient.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "TIGIT",
+    "RBFOX2",
+    "CCDC88B",
+    "NOMO3"
+  ]
+}

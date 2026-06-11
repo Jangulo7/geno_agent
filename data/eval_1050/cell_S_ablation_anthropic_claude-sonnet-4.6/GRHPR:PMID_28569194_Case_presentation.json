@@ -1,0 +1,26 @@
+{
+  "case_id": "GRHPR:PMID_28569194_Case_presentation",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GRHPR",
+  "orig_qwen3_8b_top1": "GRHPR",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GRHPR",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18407,
+  "tokens_out": 883,
+  "finish_reason": "stop",
+  "latency_s": 12.498280048370361,
+  "cost_usd": 0.068466,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"GRHPR\", \"confidence\": 0.95, \"rationale\": \"GRHPR encodes glyoxylate reductase/hydroxypyruvate reductase; its deficiency causes PH2, directly explaining all three HPO features: calcium oxalate nephrolithiasis, hyperoxaluria, and elevated urinary L-glycerate.\"}, {\"gene\": \"GEMIN4\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking GEMIN4 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"PPIAL4F\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking PPIAL4F to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"UBL4A\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking UBL4A to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"ADAM22\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking ADAM22 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"TESPA1\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking TESPA1 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"RFC2\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking RFC2 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"MAPK8\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking MAPK8 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"ZDHHC4\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking ZDHHC4 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"PPCS\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking PPCS to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"REEP6\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking REEP6 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"TUBGCP2\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking TUBGCP2 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"SHLD1\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking SHLD1 to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"ESRRG\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking ESRRG to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}, {\"gene\": \"DROSHA\", \"confidence\": 0.007, \"rationale\": \"No direct evidence linking DROSHA to oxalate metabolism or the patient's phenotype; evidence chunks are generic PH background not specific to this gene.\"}]",
+  "parsed_top5": [
+    "GRHPR",
+    "GEMIN4",
+    "PPIAL4F",
+    "UBL4A",
+    "ADAM22"
+  ]
+}

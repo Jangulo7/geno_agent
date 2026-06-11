@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826260_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "IKZF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20877,
+  "tokens_out": 168,
+  "finish_reason": "stop",
+  "latency_s": 7.064305067062378,
+  "cost_usd": 0.0017172,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IKZF2\": 0.85, \"FAM13B\": 0.65, \"MTDH\": 0.6, \"SMTN\": 0.55, \"FIGLA\": 0.5, \"PTK6\": 0.45, \"DEPTOR\": 0.4, \"KCNS1\": 0.35, \"BMI1\": 0.3, \"DSCAML1\": 0.25, \"TFDP1\": 0.2, \"OR2G6\": 0.15, \"DPPA4\": 0.1, \"DHPS\": 0.05, \"FAM90A12\": 0.01}",
+  "parsed_top5": [
+    "IKZF2",
+    "FAM13B",
+    "MTDH",
+    "SMTN",
+    "FIGLA"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_63",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17435,
+  "tokens_out": 794,
+  "finish_reason": "stop",
+  "latency_s": 14.509876489639282,
+  "cost_usd": 0.064215,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CYP21A2\",\"confidence\":0.93,\"rationale\":\"CYP21A2 evidence directly describes patients with clitoral hypertrophy, decreased cortisol, increased ACTH, and skin hyperpigmentation due to 21-hydroxylase deficiency CAH, matching all four HPO phenotypes.\"},{\"gene\":\"IQCF1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks reference CAH/CYP21A2 context with clitoral hypertrophy and hyperpigmentation but IQCF1 itself is not mentioned as causal; likely noise.\"},{\"gene\":\"UFL1\",\"confidence\":0.01,\"rationale\":\"Evidence only references CAH background literature; UFL1 has no direct link to the patient's adrenal/androgen phenotype.\"},{\"gene\":\"CIMAP2\",\"confidence\":0.01,\"rationale\":\"Evidence references CAH and hyperpigmentation context but CIMAP2 is not implicated as causal for this phenotype profile.\"},{\"gene\":\"KPTN\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe adrenal insufficiency phenotypes but KPTN is not mentioned as causally related to any of the HPO terms.\"},{\"gene\":\"ACAD8\",\"confidence\":0.01,\"rationale\":\"Evidence references CAH background but ACAD8 has no established role in cortisol/ACTH/androgen pathways matching this phenotype.\"},{\"gene\":\"DTL\",\"confidence\":0.01,\"rationale\":\"Evidence references CAH context only; DTL has no known role in steroidogenesis or the described phenotype cluster.\"},{\"gene\":\"MRLN\",\"confidence\":0.01,\"rationale\":\"Evidence references adrenal insufficiency phenotypes but MRLN is not implicated in 21-hydroxylase deficiency or clitoral hypertrophy.\"},{\"gene\":\"ARAF\",\"confidence\":0.01,\"rationale\":\"Evidence references adrenal insufficiency context but ARAF has no established link to the CAH/cortisol/ACTH/clitoral hypertrophy phenotype.\"},{\"gene\":\"F2RL2\",\"confidence\":0.01,\"rationale\":\"Evidence references CAH and hyperpigmentation background; F2RL2 has no known causal role in this adrenal steroidogenesis phenotype.\"},{\"gene\":\"TM2D3\",\"confidence\":0.005,\"rationale\":\"Evidence only references CAH background literature; TM2D3 has no established connection to the described phenotype cluster.\"},{\"gene\":\"RPTOR\",\"confidence\":0.005,\"rationale\":\"Evidence references adrenal insufficiency context but RPTOR has no direct link to 21-hydroxylase deficiency or clitoral hypertrophy.\"},{\"gene\":\"MYO1B\",\"confidence\":0.005,\"rationale\":\"Evidence references adrenal/ACTH context only; MYO1B has no known role in steroidogenesis or the described HPO phenotypes.\"},{\"gene\":\"RAPSN\",\"confidence\":0.005,\"rationale\":\"Evidence references CAH background; RAPSN is a neuromuscular junction protein with no established link to adrenal steroidogenesis phenotypes.\"},{\"gene\":\"RAB39A\",\"confidence\":0.005,\"rationale\":\"Evidence references adrenal insufficiency context but RAB39A has no established causal role in cortisol deficiency or clitoral hypertrophy.\"}]",
+  "parsed_top5": [
+    "CYP21A2",
+    "IQCF1",
+    "UFL1",
+    "CIMAP2",
+    "KPTN"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_13",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "MSL3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "MSL3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13891,
+  "tokens_out": 670,
+  "finish_reason": "stop",
+  "latency_s": 43.64891743659973,
+  "cost_usd": 0.0032941000000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"MSL3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"MSL3 mutations cause Basilicata-Akhtar syndrome, which matches all patient phenotypes including developmental delay, hypotonia, seizures, and low-set ears.\"\n  },\n  {\n    \"gene\": \"VAMP7\",\n    \"confidence\": 0.3,\n    \"rationale\": \"VAMP7 is weakly linked to neurological features and seizures, but lacks direct phenotypic overlap.\"\n  },\n  {\n    \"gene\": \"MLX\",\n    \"confidence\": 0.25,\n    \"rationale\": \"MLX has minimal evidence linking it to developmental delay or seizures.\"\n  },\n  {\n    \"gene\": \"HDAC3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"HDAC3 mutations are associated with developmental delay but lack strong phenotypic specificity.\"\n  },\n  {\n    \"gene\": \"ZIC5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ZIC5 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"LMNTD1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"LMNTD1 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF12\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ZNF12 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZSWIM5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ZSWIM5 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GSE1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"GSE1 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"GGH\",\n    \"confidence\": 0.15,\n    \"rationale\": \"GGH has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF330\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ZNF330 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"RPL11\",\n    \"confidence\": 0.15,\n    \"rationale\": \"RPL11 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CBX5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"CBX5 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ACER2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ACER2 has no direct evidence linking it to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NANOGP8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"NANOGP8 has no relevant evidence linking it to neurodevelopmental disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "MSL3",
+    "VAMP7",
+    "MLX",
+    "HDAC3",
+    "ZIC5"
+  ]
+}

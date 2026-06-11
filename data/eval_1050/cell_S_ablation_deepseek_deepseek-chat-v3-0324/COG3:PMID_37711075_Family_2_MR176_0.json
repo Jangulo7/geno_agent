@@ -1,0 +1,22 @@
+{
+  "case_id": "COG3:PMID_37711075_Family_2_MR176_0",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COG3",
+  "orig_qwen3_8b_top1": "ATG16L1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ATG16L1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17837,
+  "tokens_out": 50,
+  "finish_reason": "stop",
+  "latency_s": 3.7388689517974854,
+  "cost_usd": 0.0036059,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"ATG16L1\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Strong evidence linking ATG16L1 to neurodevelopmental disorders with intellectual disability, seizures, and aggressive behavior.\"\n  }",
+  "parsed_top5": [
+    "ATG16L1"
+  ]
+}

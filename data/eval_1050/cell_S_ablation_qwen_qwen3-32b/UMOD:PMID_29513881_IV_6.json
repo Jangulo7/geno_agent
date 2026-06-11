@@ -1,0 +1,22 @@
+{
+  "case_id": "UMOD:PMID_29513881_IV_6",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16911,
+  "tokens_out": 67,
+  "finish_reason": "stop",
+  "latency_s": 11.6691153049469,
+  "cost_usd": 0.0013716400000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"UMOD\", \"confidence\": 0.95, \"rationale\": \"UMOD variants directly cause autosomal dominant tubulointerstitial kidney disease, characterized by chronic kidney disease and hyperuricemia, aligning with the patient's elevated creatinine and CKD stage 3.\"}",
+  "parsed_top5": [
+    "UMOD"
+  ]
+}

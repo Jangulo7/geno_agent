@@ -1,0 +1,22 @@
+{
+  "case_id": "IRF4:PMID_36662884_P1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IRF4",
+  "orig_qwen3_8b_top1": "IRF4",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IRF4",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 13894,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 1.682260274887085,
+  "cost_usd": 0.0011286,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"IRF4\",\"confidence\":0.85,\"rationale\":\"IRF4 mutations are directly linked to decreased CD4+ T cells, memory B cells, and increased transitional B cells, aligning with the patient's immunophenotype and recurrent infections.\"}",
+  "parsed_top5": [
+    "IRF4"
+  ]
+}

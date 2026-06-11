@@ -1,0 +1,20 @@
+{
+  "case_id": "CHUK:PMID_20961246_fetus_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CHUK",
+  "orig_qwen3_8b_top1": "CHUK",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18506,
+  "tokens_out": 744,
+  "finish_reason": "stop",
+  "latency_s": 9.793297290802002,
+  "cost_usd": 0.0016887999999999998,
+  "parse_error": "; unknown_shape:dict:CHUK",
+  "error": null,
+  "raw_text": "{\"CHUK\": [{\"gene\": \"CHUK\", \"confidence\": 0.95, \"rationale\": \"CHUK mutations are directly linked to Cocoon syndrome with features matching the patient's phenotype including omphalocele, limb undergrowth, and cranial cystic lesions.\"}, {\"gene\": \"MBD5\", \"confidence\": 0.65, \"rationale\": \"MBD5 is associated with developmental delays and limb anomalies, but less specific to the full range of patient's features.\"}, {\"gene\": \"CCDC124\", \"confidence\": 0.55, \"rationale\": \"CCDC124 mutations cause skeletal dysplasia and limb defects, but lack cranial and skin features seen in the patient.\"}, {\"gene\": \"NAF1\", \"confidence\": 0.5, \"rationale\": \"NAF1 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"PDE8B\", \"confidence\": 0.45, \"rationale\": \"PDE8B mutations are associated with limb and chest defects, but not the cranial or skin features seen in the patient.\"}, {\"gene\": \"LRRC24\", \"confidence\": 0.4, \"rationale\": \"LRRC24 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"YWHAG\", \"confidence\": 0.35, \"rationale\": \"YWHAG is associated with limb and chest defects, but not the cranial or skin features seen in the patient.\"}, {\"gene\": \"SLC30A5\", \"confidence\": 0.3, \"rationale\": \"SLC30A5 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"NACA\", \"confidence\": 0.25, \"rationale\": \"NACA is associated with limb and chest defects, but not the cranial or skin features seen in the patient.\"}, {\"gene\": \"TMEM139\", \"confidence\": 0.2, \"rationale\": \"TMEM139 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"CYP7B1\", \"confidence\": 0.15, \"rationale\": \"CYP7B1 is associated with neurological and limb defects, but not the cranial or skin features seen in the patient.\"}, {\"gene\": \"GET3\", \"confidence\": 0.1, \"rationale\": \"GET3 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"EPHX4\", \"confidence\": 0.05, \"rationale\": \"EPHX4 is associated with limb and chest defects, but not the cranial or skin features seen in the patient.\"}, {\"gene\": \"OR10H2\", \"confidence\": 0.05, \"rationale\": \"OR10H2 is linked to limb and chest abnormalities, but not the cranial or skin features present in the patient.\"}, {\"gene\": \"PLEKHD1\", \"confidence\": 0.05, \"rationale\": \"PLEKHD1 is associated with limb and chest defects, but not the cranial or skin features seen in the patient.\"}]}",
+  "parsed_top5": []
+}

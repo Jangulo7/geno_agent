@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_28096536_patient",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16425,
+  "tokens_out": 164,
+  "finish_reason": "stop",
+  "latency_s": 3.117051601409912,
+  "cost_usd": 0.0013599200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"IKZF1\": 0.95, \"ISLR\": 0.1, \"ATXN1L\": 0.1, \"RPL10A\": 0.1, \"STK40\": 0.1, \"DSC2\": 0.1, \"SELL\": 0.1, \"TMEM63A\": 0.1, \"DSG2\": 0.1, \"MTNAP1\": 0.1, \"RAF1\": 0.1, \"FAM217A\": 0.1, \"DHX36\": 0.1, \"FAT2\": 0.1, \"DSCAM\": 0.1}",
+  "parsed_top5": [
+    "IKZF1",
+    "ISLR",
+    "ATXN1L",
+    "RPL10A",
+    "STK40"
+  ]
+}

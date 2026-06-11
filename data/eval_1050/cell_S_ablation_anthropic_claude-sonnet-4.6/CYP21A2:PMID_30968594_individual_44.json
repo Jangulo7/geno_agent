@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_44",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18082,
+  "tokens_out": 985,
+  "finish_reason": "stop",
+  "latency_s": 15.392952919006348,
+  "cost_usd": 0.069021,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.72,\n    \"rationale\": \"CYP21A2 deficiency directly causes elevated ACTH and testosterone (adrenal androgen excess) due to impaired cortisol synthesis; evidence chunks explicitly describe elevated ACTH, testosterone, and associated GI symptoms in affected patients.\"\n  },\n  {\n    \"gene\": \"RFX6\",\n    \"confidence\": 0.10,\n    \"rationale\": \"RFX6 autoantibodies are linked to APS1-associated intestinal dysfunction/diarrhea and enteroendocrine cell targeting, providing some mechanistic link to diarrhea but not directly to elevated ACTH/testosterone.\"\n  },\n  {\n    \"gene\": \"SPRR2A\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No direct evidence linking SPRR2A to the patient's phenotype of diarrhea, elevated ACTH, or elevated testosterone; evidence is gastric cancer-related.\"\n  },\n  {\n    \"gene\": \"PLSCR5\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking PLSCR5 to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"CPED1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking CPED1 to the patient's phenotype; shared background chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"VCPKMT\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking VCPKMT to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"DPY19L4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking DPY19L4 to the patient's phenotype; shared background chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"MAP7D3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking MAP7D3 to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"MTF2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking MTF2 to the patient's phenotype; background chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"CIROP\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking CIROP to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"DYNC1LI1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking DYNC1LI1 to the patient's phenotype; shared background chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"ARRB1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking ARRB1 to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"MICU3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking MICU3 to the patient's phenotype; shared background chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"JAGN1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking JAGN1 to diarrhea, elevated ACTH, or elevated testosterone in the provided literature.\"\n  },\n  {\n    \"gene\": \"DESI1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking DESI1 to the patient's phenotype; shared background chunks are non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "RFX6",
+    "SPRR2A",
+    "PLSCR5",
+    "CPED1"
+  ]
+}

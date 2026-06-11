@@ -1,0 +1,22 @@
+{
+  "case_id": "FBXO7:PMID_18513678_individual_5039",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBXO7",
+  "orig_qwen3_8b_top1": "FBXO7",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBXO7",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10911,
+  "tokens_out": 70,
+  "finish_reason": "stop",
+  "latency_s": 1.7019507884979248,
+  "cost_usd": 0.00089248,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"FBXO7\", \"confidence\": 0.95, \"rationale\": \"FBXO7 mutations are directly linked to PARK15, a disorder with Babinski sign, hyperreflexia, scissor gait, and pyramidal tract signs matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "FBXO7"
+  ]
+}

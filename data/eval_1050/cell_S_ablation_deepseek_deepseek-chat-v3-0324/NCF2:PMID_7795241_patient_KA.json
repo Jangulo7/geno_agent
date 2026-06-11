@@ -1,0 +1,26 @@
+{
+  "case_id": "NCF2:PMID_7795241_patient_KA",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NCF2",
+  "orig_qwen3_8b_top1": "NCF2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NCF2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14582,
+  "tokens_out": 661,
+  "finish_reason": "stop",
+  "latency_s": 27.064445972442627,
+  "cost_usd": 0.00342537,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"NCF2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking NCF2 mutations to CGD, which matches the patient's phenotype of recurrent infections, abscesses, and neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"LCT\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Limited direct relevance to CGD or neutrophil dysfunction; evidence focuses on lipid metabolism and inflammation.\"\n  },\n  {\n    \"gene\": \"RBPJL\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking RBPJL to CGD or similar immunodeficiency phenotypes.\"\n  },\n  {\n    \"gene\": \"OR11G2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking this gene to CGD or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"GJA5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking GJA5 to CGD or neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"CCNB1IP1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking this gene to CGD or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PRMT5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking PRMT5 to CGD or neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"PSG4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking PSG4 to CGD or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"MEOX2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking MEOX2 to CGD or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"CHST6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking CHST6 to CGD or neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"SLC24A5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking SLC24A5 to CGD or similar phenotypes.\"\n  },\n  {\n    \"gene\": \"DDIAS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking DDIAS to CGD or immunodeficiency.\"\n  },\n  {\n    \"gene\": \"AKR7L\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking AKR7L to CGD or neutrophil dysfunction.\"\n  },\n  {\n    \"gene\": \"TRMT10B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking TRMT10B to CGD or the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"LHX3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence linking LHX3 to CGD or neutrophil dysfunction.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "NCF2",
+    "LCT",
+    "RBPJL",
+    "OR11G2",
+    "GJA5"
+  ]
+}

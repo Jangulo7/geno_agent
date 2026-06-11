@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_39036217_Case_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18811,
+  "tokens_out": 670,
+  "finish_reason": "stop",
+  "latency_s": 30.084752559661865,
+  "cost_usd": 0.0042781,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking SPINK5 mutations to Netherton syndrome, matching all clinical features including erythroderma, sparse hair, elevated IgE, and recurrent infections.\"\n  },\n  {\n    \"gene\": \"GBA1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Some overlap with skin and infection phenotypes but lacks direct genetic evidence linking to patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"AKAP5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking AKAP5 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"STX12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking STX12 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KIF27\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KIF27 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ERVFRD-1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ERVFRD-1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"LSG1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LSG1 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MAP1LC3B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MAP1LC3B to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CDK3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CDK3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ABCA3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ABCA3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DBP to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SH3BGRL2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SH3BGRL2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ODAD3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ODAD3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"IRX4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IRX4 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"POLD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POLD2 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "GBA1",
+    "AKAP5",
+    "STX12",
+    "KIF27"
+  ]
+}

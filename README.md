@@ -2,7 +2,14 @@
 
 **An Agentic Multi-Agent RAG System for Gene Prioritization in Rare Mendelian Disease**
 
-> Research prototype accompanying a Master's thesis (TFM) at Universidad UAX. A peer-reviewed manuscript derived from this work is in preparation for submission to a bioinformatics venue (target: *Bioinformatics Advances* / ISMB proceedings).
+> Research prototype: Master's thesis (TFM, Universidad Alfonso X, defended 2026) +
+> ongoing paper extension (target: *Genome Medicine* / *Bioinformatics* / *JAMIA*).
+> **Headline result (paper extension v2, n=1,047):** Cell S statistically outperforms
+> Exomiser HPO-only on overall top-1 (Δ = +0.034, paired-bootstrap 95 % CI
+> [+0.006, +0.064]), wins on metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO
+> subgroups, and is the strongest **literature-only** rare-disease gene prioritization
+> system (no curated phenotype-gene tables). Annotation-overlap-aware comparison
+> against LIRICAL and RAGAS/DeepEval evaluation in progress (v3).
 
 ---
 
@@ -90,41 +97,64 @@ Ontologies (HPO, MONDO, GO, HGNC) are accessed at runtime as structured graph an
 
 ## Evaluation design
 
-The 2×2+1 factorial design produces five experimental conditions:
+The thesis defined a 16-cell factorial (architecture × retrieval × Critic
+type × Synthesizer type) over n=75 cases (cells A–J + P, Q, R, K). The
+paper-extension scaled the most informative cells to n=1,047 and added a
+second curated baseline:
 
-| Condition | Architecture | Retrieval |
-|-----------|--------------|-----------|
-| C1 | Single-agent RAG | Dense only |
-| C2 | Single-agent RAG | Hybrid (dense + BM25) |
-| C3 | Multi-agent RAG  | Dense only |
-| C4 | Multi-agent RAG  | Hybrid (dense + BM25) |
-| C5 | Exomiser (external baseline) | Phenotype-driven |
+| Cell | Configuration | Role |
+|---|---|---|
+| **D** | Multi-agent + hybrid retrieval (deterministic) | Inside-system baseline; isolates pre-rerank performance |
+| **L** | D + MedCPT cross-encoder rerank inside the agent loop | Isolates rerank contribution |
+| **S** | L + LEA (LLM-as-Evidence-Aggregator, Qwen3-8B) | Full agentic stack — primary contribution |
+| **K** | Exomiser CLI 14.0.2 HPO-only, hiPhive prioritiser | External curated baseline |
+| **M** | LIRICAL CLI 2.4.0 HPO-only (likelihood-ratio framework) | Second curated baseline (added v3) |
 
-Test cases (50–100, configurable) are sampled deterministically from the GA4GH Phenopacket-store, stratified across MONDO disease categories, with inclusion criteria requiring ≥3 HPO terms and a single-gene pathogenic variant.
+Test cases (n=1,047) are sampled from GA4GH Phenopacket Store **v0.1.26**
+using disproportionate stratified sampling (250 dev + **300 imm** + 250 met +
+247 neuro; immunological oversampled for subgroup statistical power). The
+n=75 thesis sample and n=459 paper-v1 sample remain in the repo for the audit
+trail.
 
-**Metrics**:
-- **Ranking quality**: Recall@1, Recall@5, Recall@10, Mean Reciprocal Rank (MRR)
-- **Faithfulness**: factual grounding of synthesized claims to retrieved chunks (MIRAGE-style; [Xiong et al., 2024](https://arxiv.org/abs/2402.13178))
-- **Retrieval precision**: relevance of top-k retrieved chunks (PhEval-aligned; [Bridges et al., 2025](https://doi.org/10.1093/bioadv/vbaf005))
-- **End-to-end latency**: wall-clock time per case
+**Headline results at n=1,047 (v2 final, tagged `paper-v2-final`):**
 
-Statistical tests follow the Reform guidelines for ML evaluations ([Kapoor & Narayanan, 2023](https://reforms.cs.princeton.edu)).
+| Cell | top-1 | top-5 | top-10 | MRR | Notes |
+|---|---:|---:|---:|---:|---|
+| K (Exomiser HPO-only) | 0.691 | 0.821 | 0.859 | 0.754 | curated baseline |
+| M (LIRICAL HPO-only) | 0.924 | 0.989 | 0.999 | 0.953 | likely annotation overlap; see v3 Thread D |
+| D (multi+hybrid) | 0.460 | 0.581 | 0.628 | 0.529 | inside-system baseline |
+| L (D + CE-rerank) | 0.698 | 0.791 | 0.814 | 0.745 | +23.8 pp rerank contribution |
+| **S (L + LEA)** | **0.725** | 0.798 | 0.816 | **0.766** | **+3.4 pp over K (★ paired bootstrap)** |
+
+**Metrics:** top-1 / top-5 / top-10 (Recall@k), MRR, NDCG@10. Paired
+bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
+(leave-one-out, leave-N-out, permutation, McNemar) on load-bearing claims.
+
+**New evaluation axes (v3, in progress):**
+- **RAGAS** — faithfulness, context precision/recall, answer relevance (GPT-4o judge)
+- **DeepEval** — hallucination rate (GPT-4o judge)
 
 ## Project status
 
 | Phase | Description | Status |
-|-------|-------------|--------|
-| 1A (scripts) | PMC OA pipeline scripts validated on demo corpus | ✅ Complete |
-| 1A (production) | Full 150 GB / 5–9 day production corpus build | ⏳ Not started |
-| 1B  | Phenopacket-based test-case curation (master plan §6) | ⏳ Blocked on full Phase 1A |
-| 2a  | LangGraph 4-agent state graph + Qwen3-8B/vLLM (master plan §11.1) | ⏳ Planned (~1 week) |
-| 2b  | FastAPI + `copilotkit-sdk-python` endpoint (master plan §11.2) | ⏳ Planned (~2 days) |
-| 2c  | CopilotKit React UI + custom geno_agent components (master plan §11.3) | ⏳ Planned (~3-5 days) |
-| Eval | 2×2+1 factorial experiment vs Exomiser baseline (master plan §11.5) | ⏳ Planned (~3 days) |
-| Manuscript | Thesis writeup + reproducibility package | ⏳ Planned |
+|---|---|---|
+| 1A (scripts) | PMC OA pipeline scripts validated | ✅ Complete |
+| 1A (production) | 52.78 M chunks indexed in Qdrant `geno_agent_pmc_oa_v1` | ✅ Complete |
+| 1B (test set v1) | n=75 thesis cohort (v0.1.19, seed 42) | ✅ Complete |
+| 1B (test set v2) | n=459 paper v1 (v0.1.19, seed 4242) | ✅ Complete |
+| **1B (test set v3)** | **n=1,047 paper extension (v0.1.26, seed 42, disproportionate 250+300+250+250)** | ✅ Complete |
+| 2a | LangGraph 4-agent state graph + Qwen3-8B/vLLM | ✅ Complete |
+| 2c | CopilotKit React UI | ⏳ Deferred to post-paper |
+| Eval (thesis) | 16-cell factorial at n=75 | ✅ Complete; PR #36, tag `paper-v2-final` |
+| **Eval (paper v2)** | **5 cells × n=1,047, bootstrap CIs, per-MONDO breakdown, LIRICAL** | ✅ Complete |
+| **Eval (paper v3)** | **LEA response logging + RAGAS + DeepEval + annotation-overlap analysis** | 🟢 In progress (Cell S re-run ~58 %, RAGAS pending OPENAI_API_KEY) |
+| Manuscript | Target: *Genome Medicine* | ⏳ Drafting after v3 evaluation completes (~10-12 weeks) |
 
-Latest demo evidence: [`reports/visual_report.html`](reports/visual_report.html) ·
-Status snapshot: [`reports/progress_report_09052026.html`](reports/progress_report_09052026.html)
+Key reports:
+- [`reports/methodology.md`](reports/methodology.md) — **consolidated authoritative methodology**
+- [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — current execution plan (LIRICAL + RAGAS + DeepEval + Threads D-G)
+- [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + [`.html`](reports/paper_extension_results.html) — v2 final results
+- [`reports/thesis_final_report.md`](reports/thesis_final_report.md) + [`.html`](reports/thesis_final_report.html) — thesis n=75 baseline
 
 ### Phase 2 UI — CopilotKit
 
@@ -145,24 +175,35 @@ This project is built reproducibility-first. Every external dataset is pinned to
 |---|---|
 | Human Phenotype Ontology (HPO) | `v2026-02-16` |
 | Mondo Disease Ontology (MONDO) | `v2026-03-03` |
-| Gene Ontology (GO)             | `2026-03-25`  |
+| Gene Ontology (GO)             | `2026-03-25` |
 | HGNC complete set              | `2026-04-07` quarterly |
-| Phenopacket-store              | `v0.1.19` |
+| **Phenopacket Store**           | **`v0.1.26`** (paper extension; thesis used `v0.1.19`) |
+| MedCPT Cross-Encoder           | `ncbi/MedCPT-Cross-Encoder` (HuggingFace, cached) |
+| PubMedBERT dense embedder      | `NeuML/pubmedbert-base-embeddings` (HuggingFace, cached) |
+| Qdrant server / client         | `v1.14.1` / `1.14.3` |
+| Qwen3-8B Instruct              | HuggingFace default, FP16 weights, local `~/rare-disease-rag/models/` |
+| vLLM                            | `0.20.1` (dedicated venv `~/vllm-env/`) |
+| Exomiser CLI                    | `14.0.2` (phenotype data `2402`) |
+| **LIRICAL CLI** (paper v3)      | **`2.4.0`** |
 
 In addition:
 - All chunk identifiers are deterministic UUIDv5 hashes of content, not random UUIDs
-- Random seeding is fixed and documented (`PYTHONHASHSEED=42`, explicit `torch` / `numpy` / `random` seeds in embedding generation)
+- Random seeding is fixed and documented (`PYTHONHASHSEED=42`, explicit `torch` / `numpy` / `random` seeds in embedding generation; `RANDOM_SEED=42` in `.env` for cohort sampling)
 - Qdrant runs in Docker at a pinned image version (`qdrant/qdrant:v1.14.1`)
 - Dependencies are pinned in `pyproject.toml` with exact versions
 - Distractor gene sampling uses a per-case derived seed (`blake2b(global_seed, case_id)`), so individual cases can be regenerated without disturbing others
+- All cohort sample sizes (n=75, n=459, n=1,047) regenerable from `RANDOM_SEED` + pinned ontology versions + Phenopacket Store version
+- vLLM at `temperature=0.0` is mostly deterministic (~98 % per-case rank stability between runs; **top-1 metric is bit-identical** across two independent v2 and v3 runs)
 
-The full reproducibility specification is documented in `MASTER_PROJECT_v2.1.md` §4.1.3.
+The full reproducibility specification is documented in
+[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md) §4.1.3 and consolidated in
+[`reports/methodology.md`](reports/methodology.md).
 
 ## Repository layout
 
 ```
 geno_agent/
-├── MASTER_PROJECT_v2.1.md            # Authoritative project spec (Phases 1A, 1B, 2)
+├── MASTER_PROJECT_v2.2.md            # Authoritative project spec (Phases 1A, 1B, 2, 3)
 ├── CLAUDE.md                          # Project rules + memory pointers
 ├── pyproject.toml                     # Pinned Python dependencies
 ├── docker-compose.yml                 # Qdrant v1.14.1 on :6533/:6534
@@ -172,19 +213,43 @@ geno_agent/
 │   ├── ontology/                      # Ontology download + verify (§3, §5)
 │   ├── embedding/                     # PubMedBERT embedding (§4 step 4)
 │   ├── indexing/                      # Qdrant create + validate (§4 steps 5-6)
-│   ├── cases/                         # Phenopacket pipeline (Phase 1B §6) — planned
-│   ├── eval/                          # 2x2+1 factorial harness (Phase 2 §11.5) — planned
-│   ├── demo/                          # End-to-end orchestrator + viz (run_pipeline.sh)
-│   └── utils/                         # seed.py + manifest helpers
-├── src/                               # Phase 2 application code (planned)
-│   ├── agents/                        # LangGraph state graph + 4 agent nodes (§11.1)
-│   ├── api/                           # FastAPI + copilotkit-sdk-python (§11.2)
-│   └── tools/                         # Shared tool functions (HPO/MeSH/HGNC/Qdrant)
-├── frontend/                          # Phase 2c CopilotKit React UI (planned, separate npm project)
+│   ├── cases/                         # Phenopacket pipeline (Phase 1B §6)
+│   │                                  # Stage 16 patched with --per-category-target (v3)
+│   │                                  # Stage 17 patched to honour TEST_CASES_DIR (v3)
+│   └── eval/                          # Phase 2 + Phase 3 evaluation
+│       ├── run_factorial.py           # 16-cell thesis factorial driver
+│       ├── run_cell_k.py              # Cell K (Exomiser HPO-only)
+│       ├── run_cell_m.py              # Cell M (LIRICAL HPO-only, v3, 8-worker pool)
+│       ├── rerank_inside_d.py         # Cell L / S driver (CE-rerank-inside-D + optional LEA)
+│       ├── run_paper_extension.sh     # Sequenced D → L → vLLM → S launcher
+│       ├── run_paper_extension_LS_responses.sh  # v3 re-run with --responses-dir
+│       ├── start_vllm.sh              # vLLM 0.20.1 with v3 VRAM caps
+│       ├── aggregate_metrics.py       # Per-case → overall + per-MONDO bootstrap CIs
+│       ├── run_ragas.py               # RAGAS faithfulness/precision/recall/relevance (GPT-4o)
+│       └── run_deepeval.py            # DeepEval hallucination (GPT-4o)
+├── src/
+│   ├── agents/                        # LangGraph state + 4 agent nodes + synthesizer_lea
+│   ├── baselines/                     # exomiser_runner.py + lirical_runner.py (v3)
+│   ├── api/                           # FastAPI (Phase 2b, deferred)
+│   └── tools/                         # Qdrant search, HGNC, LLM wrapper
+├── frontend/                          # Phase 2c CopilotKit React UI (deferred to post-paper)
 ├── tests/                             # Unit + integration
 ├── config/                            # Prompt templates, agent configs
-├── reports/                           # Demo + status reports (HTML + MD)
+├── reports/                           # All planning + results documents
+│   ├── methodology.md                 # v3 consolidated technical methodology (authoritative)
+│   ├── paper_extension_plan.md        # v1 plan (n=460, v0.1.19)
+│   ├── paper_extension_plan_v2.md     # v2 plan (n=1,047, v0.1.26)
+│   ├── paper_extension_plan_v3.md     # v3 plan (LIRICAL + RAGAS + Threads D-G)
+│   ├── paper_extension_results.md     # v2 final results
+│   ├── thesis_final_report.md         # n=75 thesis baseline
+│   └── (each above also has a .html counterpart)
 └── data/                              # Manifests + ontologies (large files .gitignored)
+    ├── test_cases/                    # n=75 thesis cohort (v0.1.19)
+    ├── test_cases_500/                # n=459 paper v1 cohort (v0.1.19, seed 4242)
+    ├── test_cases_1050/               # n=1,047 paper v2/v3 cohort (v0.1.26, seed 42)
+    ├── eval/                          # n=75 thesis results (16 cells)
+    ├── eval_500/                      # n=459 v1 results (4 cells K/D/L/S)
+    └── eval_1050/                     # n=1,047 v2/v3 results (5 cells K/D/L/S/M + sidecars)
 ```
 
 Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean. The `frontend/` directory will hold a standalone Next.js + CopilotKit project; the upstream CopilotKit framework lives at the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) and is consumed via npm rather than vendored.
@@ -213,7 +278,11 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
-Detailed Phase 1A and 1B execution instructions are in `MASTER_PROJECT_v2.1.md`.
+Detailed Phase 1A and 1B execution instructions are in
+[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md). The full paper-extension
+methodology is consolidated in
+[`reports/methodology.md`](reports/methodology.md); per-version plans live in
+[`reports/paper_extension_plan{,_v2,_v3}.md`](reports/).
 
 ## Hardware
 
@@ -227,7 +296,9 @@ The architecture should run on any GPU with ≥24 GB VRAM and is GPU-required fo
 
 ## Citation
 
-A peer-reviewed manuscript is in preparation. In the interim, please cite this repository:
+A peer-reviewed manuscript derived from this work is in preparation for
+submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
+*Briefings in Bioinformatics*). In the interim, please cite this repository:
 
 ```bibtex
 @misc{angulo2026geno_agent,
@@ -236,9 +307,13 @@ A peer-reviewed manuscript is in preparation. In the interim, please cite this r
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Master's thesis project, Universidad UAX}
+  note         = {Master's thesis project, Universidad Alfonso X; paper extension in progress (target: Genome Medicine).}
 }
 ```
+
+Headline finding to cite (paper extension v2 final):
+
+> At n=1,047 cases from Phenopacket Store v0.1.26 (250 developmental + 300 immunological + 250 metabolic + 247 neurological, disproportionate stratified sampling, seed 42), Cell S (multi-agent + MedCPT cross-encoder rerank + Qwen3-8B LEA) statistically outperforms Exomiser HPO-only on overall top-1 (Δ = +0.034, paired-bootstrap 95 % CI [+0.006, +0.064]) and on the metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO subgroups. The immunological lead claim survives 100 % leave-one-out at n=300 (McNemar exact p = 0.008). LIRICAL HPO-only achieves the highest raw top-1 (0.924) but with significant annotation overlap with the Phenopacket Store source publications; stratified deconfounded numbers are reported in the paper.
 
 ## License
 
@@ -246,7 +321,15 @@ The code in this repository is released under the MIT License (see [`LICENSE`](L
 
 ## Acknowledgments
 
-This work is a Master's thesis (TFM) at Universidad UAX, supervised by [advisor name to be added]. It builds on the open ecosystem of biomedical NLP and bioinformatics — particularly the Monarch Initiative, the Human Phenotype Ontology Consortium, the GA4GH community, and the maintainers of PMC Open Access — without which a project of this scope would not be possible from a single workstation.
+This work is a Master's thesis (TFM) at Universidad Alfonso X, supervised by
+[advisor name to be added]. It builds on the open ecosystem of biomedical NLP
+and bioinformatics — particularly the Monarch Initiative (Phenopacket Store,
+HPO, MONDO), the [LIRICAL](https://github.com/TheJacksonLaboratory/LIRICAL) and
+[Exomiser](https://exomiser.readthedocs.io/) teams, the
+[NCBI MedCPT](https://github.com/ncbi/MedCPT) authors, the
+[Qwen team](https://huggingface.co/Qwen), and the maintainers of PMC Open Access
+and Qdrant — without which a project of this scope would not be possible from a
+single workstation.
 
 ## Contact
 

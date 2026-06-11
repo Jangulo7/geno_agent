@@ -1,0 +1,26 @@
+{
+  "case_id": "TUBA4A:PMID_38884572_Family_1_Patient_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TUBA4A",
+  "orig_qwen3_8b_top1": "ELAVL2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ELAVL2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16659,
+  "tokens_out": 965,
+  "finish_reason": "stop",
+  "latency_s": 19.38375234603882,
+  "cost_usd": 0.064452,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The key distinguishing features of this patient are: elevated CK, myopathic EMG, cerebellar atrophy, saccadic smooth pursuit, dysdiadochokinesis, dysmetria, dysarthria, gait disturbance, and difficulty standing. The combination of myopathy (elevated CK + myopathic EMG) with cerebellar features is the critical discriminator.\n\nELAVL2's chunk_1 describes patients with ataxia, dysdiadochokinesis, dysmetria, dysarthria, cerebellar atrophy, jerky pursuit, AND muscle cramps with calf wasting \u2014 the closest match to the combined myopathic + cerebellar phenotype. The other genes share the same generic cerebellar/ataxia evidence chunks with no specific myopathy connection.\n\n[\n  {\"gene\": \"ELAVL2\", \"confidence\": 0.38, \"rationale\": \"Evidence describes patients with cerebellar atrophy, dysdiadochokinesis, dysmetria, dysarthria, jerky pursuit, AND muscle cramps/wasting suggesting myopathic involvement, best matching the combined phenotype.\"},\n  {\"gene\": \"TMEM175\", \"confidence\": 0.08, \"rationale\": \"Chunk describes saccadic smooth pursuits, dysmetria, dysarthria matching several HPO terms but lacks myopathy/elevated CK evidence.\"},\n  {\"gene\": \"ABCC4\", \"confidence\": 0.07, \"rationale\": \"Evidence mentions saccadic smooth pursuit interruptions, dysmetria, dysdiadochokinesis, and difficulty standing, but no myopathic features.\"},\n  {\"gene\": \"SAMD4B\", \"confidence\": 0.06, \"rationale\": \"Evidence covers cerebellar ataxia features but lacks myopathy/elevated CK correlation; no gene-specific association.\"},\n  {\"gene\": \"SAXO6\", \"confidence\": 0.06, \"rationale\": \"Generic cerebellar ataxia evidence without myopathic features; no specific gene-disease link to this phenotype.\"},\n  {\"gene\": \"CENPVL2\", \"confidence\": 0.05, \"rationale\": \"Shares generic cerebellar evidence chunks; no specific myopathy or elevated CK association documented.\"},\n  {\"gene\": \"OST4\", \"confidence\": 0.05, \"rationale\": \"Generic cerebellar/ataxia evidence only; no myopathic features or elevated CK mentioned.\"},\n  {\"gene\": \"IFI35\", \"confidence\": 0.05, \"rationale\": \"Generic cerebellar ataxia evidence; no myopathy or elevated CK association.\"},\n  {\"gene\": \"PKLR\", \"confidence\": 0.04, \"rationale\": \"Generic cerebellar evidence; PKLR is known for hemolytic anemia, not this neuromuscular phenotype.\"},\n  {\"gene\": \"PRRG2\", \"confidence\": 0.04, \"rationale\": \"Generic cerebellar evidence only; no specific link to myopathy or elevated CK.\"},\n  {\"gene\": \"RPE\", \"confidence\": 0.04, \"rationale\": \"Generic cerebellar evidence; RPE encodes ribulose-5-phosphate epimerase with no clear link to this phenotype.\"},\n  {\"gene\": \"CNST\", \"confidence\": 0.03, \"rationale\": \"Generic cerebellar evidence only; no specific myopathic or elevated CK association.\"},\n  {\"gene\": \"RGS10\", \"confidence\": 0.03, \"rationale\": \"Generic cerebellar evidence; RGS10 not established in myopathy-cerebellar combined phenotype.\"},\n  {\"gene\": \"ITPR3\", \"confidence\": 0.03, \"rationale\": \"Generic cerebellar evidence; no specific myopathic features documented.\"},\n  {\"gene\": \"MOGAT3\", \"confidence\": 0.03, \"rationale\": \"Generic cerebellar evidence only; MOGAT3 is a lipid metabolism gene with no established link to this phenotype.\"}\n]",
+  "parsed_top5": [
+    "ELAVL2",
+    "TMEM175",
+    "ABCC4",
+    "SAMD4B",
+    "SAXO6"
+  ]
+}

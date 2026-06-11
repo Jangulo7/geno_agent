@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15983957_F1_individual_II_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20626,
+  "tokens_out": 830,
+  "finish_reason": "stop",
+  "latency_s": 19.082208156585693,
+  "cost_usd": 0.074328,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"UMOD\", \"confidence\": 0.92, \"rationale\": \"UMOD evidence directly links mutations to ADTKD with CKD, hyperuricemia, gout, renal cysts, and hypertension\u2014matching all 5 patient HPO phenotypes with critic_relevance 5/5.\"}, {\"gene\": \"AKR1B10\", \"confidence\": 0.03, \"rationale\": \"Evidence chunks describe ADTKD family phenotypes but do not specifically implicate AKR1B10; gene mentioned only in non-specific CKD context.\"}, {\"gene\": \"LCE3C\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking LCE3C to the patient's phenotype; evidence chunks are generic CKD/hyperuricemia descriptions unrelated to this gene.\"}, {\"gene\": \"OR6C2\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking OR6C2 to CKD, gout, or hyperuricemia; evidence is generic background on CKD and ADTKD.\"}, {\"gene\": \"C1orf115\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating C1orf115.\"}, {\"gene\": \"GBP5\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking GBP5 to the patient's renal/uric acid phenotype; evidence is non-specific CKD background.\"}, {\"gene\": \"INTS2\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating INTS2.\"}, {\"gene\": \"TMEM275\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking TMEM275 to the patient's phenotype; evidence is generic CKD/ADTKD background.\"}, {\"gene\": \"ERLIN1\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating ERLIN1.\"}, {\"gene\": \"SPRR2F\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking SPRR2F to the patient's renal/uric acid phenotype; evidence is non-specific.\"}, {\"gene\": \"OR51A4\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating OR51A4.\"}, {\"gene\": \"STRBP\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking STRBP to the patient's phenotype; evidence is generic CKD/ADTKD background.\"}, {\"gene\": \"DCAKD\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating DCAKD.\"}, {\"gene\": \"FGF7\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking FGF7 to the patient's renal/uric acid phenotype; evidence is non-specific CKD background.\"}, {\"gene\": \"DNAAF3\", \"confidence\": 0.01, \"rationale\": \"No gene-specific evidence; chunks are generic ADTKD/CKD background not implicating DNAAF3.\"}]",
+  "parsed_top5": [
+    "UMOD",
+    "AKR1B10",
+    "LCE3C",
+    "OR6C2",
+    "C1orf115"
+  ]
+}

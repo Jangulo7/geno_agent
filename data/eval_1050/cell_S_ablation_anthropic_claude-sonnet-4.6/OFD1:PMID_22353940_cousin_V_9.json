@@ -1,0 +1,26 @@
+{
+  "case_id": "OFD1:PMID_22353940_cousin_V_9",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "OFD1",
+  "orig_qwen3_8b_top1": "OFD1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "OFD1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17283,
+  "tokens_out": 719,
+  "finish_reason": "stop",
+  "latency_s": 13.186549186706543,
+  "cost_usd": 0.062634,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"OFD1\", \"confidence\": 0.91, \"rationale\": \"OFD1 mutations directly cause Joubert syndrome (JBTS10) with molar tooth sign, enlarged cisterna magna, intellectual disability, motor delay, macrocephaly, and renal involvement, matching all key patient HPO terms.\"}, {\"gene\": \"H4C1\", \"confidence\": 0.02, \"rationale\": \"No direct evidence linking H4C1 to this phenotype profile; evidence chunks are generic and not specific to this gene.\"}, {\"gene\": \"LSS\", \"confidence\": 0.01, \"rationale\": \"No evidence linking LSS to Joubert syndrome or the patient's phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"PLPP2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking PLPP2 to this phenotype; evidence chunks are generic and unrelated to this gene.\"}, {\"gene\": \"AADAC\", \"confidence\": 0.01, \"rationale\": \"No evidence linking AADAC to Joubert syndrome or the patient's phenotype profile.\"}, {\"gene\": \"CHMP4B\", \"confidence\": 0.01, \"rationale\": \"No evidence linking CHMP4B to this phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"BPIFB6\", \"confidence\": 0.01, \"rationale\": \"No evidence linking BPIFB6 to this phenotype; evidence chunks are generic.\"}, {\"gene\": \"RNF126\", \"confidence\": 0.01, \"rationale\": \"No evidence linking RNF126 to Joubert syndrome or the patient's phenotype profile.\"}, {\"gene\": \"SIRAL2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking SIRAL2 to this phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"KRTAP5-3\", \"confidence\": 0.0, \"rationale\": \"Keratin-associated protein gene with no plausible link to Joubert syndrome or the patient's phenotype.\"}, {\"gene\": \"CTAG1A\", \"confidence\": 0.0, \"rationale\": \"Cancer-testis antigen gene with no plausible link to the patient's neurodevelopmental/ciliopathy phenotype.\"}, {\"gene\": \"RIPOR3\", \"confidence\": 0.0, \"rationale\": \"No evidence linking RIPOR3 to this phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"PPIAL4H\", \"confidence\": 0.0, \"rationale\": \"No evidence linking PPIAL4H to Joubert syndrome or the patient's phenotype profile.\"}, {\"gene\": \"INKA2\", \"confidence\": 0.0, \"rationale\": \"No evidence linking INKA2 to this phenotype; evidence chunks are non-specific.\"}, {\"gene\": \"KRABD5\", \"confidence\": 0.0, \"rationale\": \"No evidence linking KRABD5 to this phenotype; evidence chunks are non-specific.\"}]",
+  "parsed_top5": [
+    "OFD1",
+    "H4C1",
+    "LSS",
+    "PLPP2",
+    "AADAC"
+  ]
+}

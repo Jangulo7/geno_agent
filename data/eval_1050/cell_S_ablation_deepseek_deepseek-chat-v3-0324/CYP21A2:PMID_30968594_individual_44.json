@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_44",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15369,
+  "tokens_out": 621,
+  "finish_reason": "stop",
+  "latency_s": 33.76127338409424,
+  "cost_usd": 0.00355197,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Directly linked to elevated ACTH and testosterone levels, consistent with 21-hydroxylase deficiency.\"\n  },\n  {\n    \"gene\": \"RFX6\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Associated with intestinal dysfunction and diarrhea, but lacks direct hormonal evidence.\"\n  },\n  {\n    \"gene\": \"SPRR2A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No clear link to the patient's endocrine or gastrointestinal phenotypes.\"\n  },\n  {\n    \"gene\": \"PLSCR5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CPED1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"VCPKMT\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DPY19L4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MAP7D3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MTF2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CIROP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DYNC1LI1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ARRB1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MICU3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"JAGN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DESI1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence supporting a role in the patient's symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "RFX6",
+    "SPRR2A",
+    "PLSCR5",
+    "CPED1"
+  ]
+}

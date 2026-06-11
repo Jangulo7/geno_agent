@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_16",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16922,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 20.64758324623108,
+  "cost_usd": 0.0039095399999999995,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"COL3A1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple high-relevance chunks directly link COL3A1 mutations to vascular EDS with all patient phenotypes.\"\n  },\n  {\n    \"gene\": \"P3H1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking P3H1 to vascular phenotypes or connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"HMBOX1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No relevant evidence connecting HMBOX1 to the patient's vascular or connective tissue symptoms.\"\n  },\n  {\n    \"gene\": \"ZNF583\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No evidence supports ZNF583's involvement in vascular or connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"XCL1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No literature connects XCL1 to any of the patient's phenotypic features.\"\n  },\n  {\n    \"gene\": \"ZBTB2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No evidence relates ZBTB2 to vascular fragility or connective tissue abnormalities.\"\n  },\n  {\n    \"gene\": \"CHCHD1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No literature links CHCHD1 to vascular EDS or similar connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"MTF1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No evidence associates MTF1 with any of the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"PTPN22\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No relevant data connects PTPN22 to arterial fragility or EDS-like phenotypes.\"\n  },\n  {\n    \"gene\": \"ATP8B1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No literature supports ATP8B1's involvement in the patient's vascular or connective tissue symptoms.\"\n  },\n  {\n    \"gene\": \"OR4C46\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No evidence links OR4C46 to vascular phenotypes or connective tissue disorders.\"\n  },\n  {\n    \"gene\": \"SELENBP1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No literature associates SELENBP1 with vascular EDS or similar connective tissue conditions.\"\n  },\n  {\n    \"gene\": \"FXR1\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No relevant evidence connects FXR1 to the patient's vascular or connective tissue symptoms.\"\n  },\n  {\n    \"gene\": \"WASF2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No data supports WASF2's involvement in vascular fragility or EDS-like phenotypes.\"\n  },\n  {\n    \"gene\": \"DPF2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No evidence links DPF2 to the patient's vascular or connective tissue features.\"\n  }\n]",
+  "parsed_top5": [
+    "COL3A1",
+    "P3H1",
+    "HMBOX1",
+    "ZNF583",
+    "XCL1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P57",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16911,
+  "tokens_out": 611,
+  "finish_reason": "stop",
+  "latency_s": 32.41652584075928,
+  "cost_usd": 0.00385267,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GNAS mutations directly cause pseudohypoparathyroidism with all observed phenotypes (short metacarpal, hypocalcemia, hyperphosphatemia, short stature, obesity).\"\n  },\n  {\n    \"gene\": \"GNAO1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Indirectly mentioned in PHP context but lacks direct phenotypic association.\"\n  },\n  {\n    \"gene\": \"ADORA3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"VRK3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KRT71\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TALDO1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CFAP52\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"RTP4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SEPTIN7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF467\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"TMEM240\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ATAD3A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"DUSP5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF75A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SIGLEC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "GNAS",
+    "GNAO1",
+    "ADORA3",
+    "VRK3",
+    "KRT71"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "UBR5:PMID_39721588_Individual_7",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "UBR5",
+  "orig_qwen3_8b_top1": "TET3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TET3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13646,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 2.197047233581543,
+  "cost_usd": 0.00110792,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"TET3\", \"confidence\": 0.85, \"rationale\": \"TET3 is strongly associated with hypertelorism, cafe-au-lait spots, motor delay, and obsessive-compulsive traits in the provided case reports.\"}",
+  "parsed_top5": [
+    "TET3"
+  ]
+}

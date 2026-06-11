@@ -1,0 +1,22 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_23",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16374,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 5.317893981933594,
+  "cost_usd": 0.0033179200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CYP21A2\",\n  \"confidence\": 0.95,\n  \"rationale\": \"Multiple case reports link CYP21A2 mutations to hyperpigmentation, elevated ACTH, and adrenal insufficiency, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "CYP21A2"
+  ]
+}

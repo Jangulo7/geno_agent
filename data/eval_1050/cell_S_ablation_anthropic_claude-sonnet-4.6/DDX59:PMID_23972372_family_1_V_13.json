@@ -1,0 +1,26 @@
+{
+  "case_id": "DDX59:PMID_23972372_family_1_V_13",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "DDX59",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DDX59",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17755,
+  "tokens_out": 813,
+  "finish_reason": "stop",
+  "latency_s": 13.79700231552124,
+  "cost_usd": 0.06546,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"DDX59\", \"confidence\": 0.91, \"rationale\": \"DDX59 chunks directly cite homozygous mutations causing OFD with tongue lobulation, cleft palate, frontal bossing, polydactyly, hypertelorism, and intellectual disability\u2014matching all patient HPO terms.\"}, {\"gene\": \"CDKL1\", \"confidence\": 0.03, \"rationale\": \"No direct gene-disease link in evidence; shared case report chunks describe OFD phenotype but CDKL1 is not implicated as causal.\"}, {\"gene\": \"SFXN5\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking SFXN5 to this OFD-like phenotype; evidence chunks are generic OFD case descriptions not mentioning SFXN5.\"}, {\"gene\": \"H4C11\", \"confidence\": 0.01, \"rationale\": \"No evidence linking H4C11 to OFD or any of the patient's HPO features; chunks are non-specific case reports.\"}, {\"gene\": \"GPR87\", \"confidence\": 0.01, \"rationale\": \"No evidence linking GPR87 to this phenotype; shared chunks describe CPLANE2 variants, not GPR87.\"}, {\"gene\": \"C8G\", \"confidence\": 0.01, \"rationale\": \"No evidence linking C8G to OFD or the patient's phenotype; chunks are generic case descriptions.\"}, {\"gene\": \"ABCB11\", \"confidence\": 0.01, \"rationale\": \"No evidence linking ABCB11 to OFD or polydactyly/cleft palate phenotype; chunks are non-specific.\"}, {\"gene\": \"IFT43\", \"confidence\": 0.01, \"rationale\": \"No direct IFT43-disease link in evidence; chunks reference DDX59 and C2CD3 OFD genes, not IFT43.\"}, {\"gene\": \"LIME1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking LIME1 to this OFD-like phenotype; chunks are generic case descriptions.\"}, {\"gene\": \"TRAF1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TRAF1 to OFD or the patient's HPO features; chunks are non-specific.\"}, {\"gene\": \"UNC5CL\", \"confidence\": 0.01, \"rationale\": \"No evidence linking UNC5CL to OFD or polydactyly/cleft palate; chunks are generic.\"}, {\"gene\": \"FBXO22\", \"confidence\": 0.01, \"rationale\": \"No evidence linking FBXO22 to this phenotype; chunks are non-specific OFD case descriptions.\"}, {\"gene\": \"MKNK1\", \"confidence\": 0.01, \"rationale\": \"No evidence linking MKNK1 to OFD or the patient's HPO features; chunks are generic.\"}, {\"gene\": \"NDUFV2\", \"confidence\": 0.01, \"rationale\": \"No evidence linking NDUFV2 to OFD or polydactyly/cleft palate phenotype; chunks are non-specific.\"}, {\"gene\": \"TBX6\", \"confidence\": 0.01, \"rationale\": \"No evidence linking TBX6 to OFD or the patient's HPO features; chunks are generic case descriptions.\"}]",
+  "parsed_top5": [
+    "DDX59",
+    "CDKL1",
+    "SFXN5",
+    "H4C11",
+    "GPR87"
+  ]
+}

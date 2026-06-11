@@ -1,0 +1,26 @@
+{
+  "case_id": "CAPRIN1:PMID_35979925_Case_12",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CAPRIN1",
+  "orig_qwen3_8b_top1": "CAPRIN1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CAPRIN1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15449,
+  "tokens_out": 701,
+  "finish_reason": "stop",
+  "latency_s": 20.579545259475708,
+  "cost_usd": 0.0036295700000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CAPRIN1\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Direct evidence links CAPRIN1 mutations to seizures, ADHD, speech delay, and autistic behavior, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"PTBP1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some evidence suggests PTBP1 variants may cause neurodevelopmental disorders, but links to the specific phenotype are weaker.\"\n  },\n  {\n    \"gene\": \"GPR37\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence associates GPR37 with neurodevelopmental issues, but no direct match to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ZACN\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence links ZACN to the patient's phenotype; only general neurodevelopmental disorder mentions.\"\n  },\n  {\n    \"gene\": \"PEX12\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Weak association with neurodevelopmental disorders; no specific overlap with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"LY6G5C\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence linking LY6G5C to the patient's phenotype; only generic mentions of epilepsy.\"\n  },\n  {\n    \"gene\": \"NUDCD1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence supports NUDCD1 as causal for the phenotype; generic neurodevelopmental mentions.\"\n  },\n  {\n    \"gene\": \"ZNF799\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence connects ZNF799 to the patient's symptoms; only tangential epilepsy references.\"\n  },\n  {\n    \"gene\": \"TMEM101\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No meaningful evidence links TMEM101 to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"LRRC28\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence associates LRRC28 with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MTF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence links MTF1 to the patient's neurodevelopmental or epilepsy symptoms.\"\n  },\n  {\n    \"gene\": \"SERPINI2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supports SERPINI2's role in the phenotype; only unrelated neurological mentions.\"\n  },\n  {\n    \"gene\": \"DAPL1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connects DAPL1 to the patient's symptoms; irrelevant literature chunks.\"\n  },\n  {\n    \"gene\": \"GFRA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence ties GFRA2 to the phenotype; only generic neurodevelopmental references.\"\n  },\n  {\n    \"gene\": \"FOXD4L6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence links FOXD4L6 to the patient's symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "CAPRIN1",
+    "PTBP1",
+    "GPR37",
+    "ZACN",
+    "PEX12"
+  ]
+}

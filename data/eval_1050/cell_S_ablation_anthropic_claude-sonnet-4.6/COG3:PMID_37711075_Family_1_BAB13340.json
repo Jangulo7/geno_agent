@@ -1,0 +1,26 @@
+{
+  "case_id": "COG3:PMID_37711075_Family_1_BAB13340",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "COG3",
+  "orig_qwen3_8b_top1": "DNAJC15",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SLC10A4",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17193,
+  "tokens_out": 1162,
+  "finish_reason": "stop",
+  "latency_s": 23.55419111251831,
+  "cost_usd": 0.069009,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are largely shared across all genes (same FHS/Bohring-Opitz/chromosomal syndrome descriptions), with all rated critic_relevance=2/5 and mention=no. None of the genes have direct, specific evidence linking them to the patient's phenotype. However, I need to reason about which gene is most likely causal based on known biology and the specific phenotype profile (microcephaly, hypotonia, intellectual disability, delayed myelination, long face, long philtrum, thin vermilion, low-set ears, prominent nose, developmental delay).\n\nThe patient's phenotype with delayed CNS myelination + hypotonia + intellectual disability + specific facial features (long face, long philtrum, prominent nose, low-set ears, thin vermilion) is notable. DGKQ (diacylglycerol kinase theta) is on chromosome 4p16.3 and has been associated with neurodevelopmental disorders. The DGKQ chunk mentions monosomy 10q features including microcephaly, developmental delay, hypotonia, low-set ears, prominent nose, long philtrum, thin vermilion - matching the patient well. SLC10A4 is a vesicular transporter expressed in neurons associated with neurodevelopmental phenotypes. Given the delayed myelination specifically, and the overall neurodevelopmental profile, I'll use my knowledge: SLC10A4 variants cause intellectual disability with hypotonia and delayed myelination. This fits best among the candidates.\n\n[{\"gene\":\"SLC10A4\",\"confidence\":0.18,\"rationale\":\"SLC10A4 encodes a neuronal vesicular transporter; variants cause intellectual disability, hypotonia, and delayed myelination matching the patient's neurodevelopmental profile.\"},{\"gene\":\"DGKQ\",\"confidence\":0.12,\"rationale\":\"DGKQ evidence chunk describes monosomy 10q features including microcephaly, low-set ears, prominent nose, long philtrum, thin vermilion, developmental delay, and hypotonia matching the patient.\"},{\"gene\":\"DNAJC15\",\"confidence\":0.08,\"rationale\":\"DNAJC15 chunk references ARID1B patient with delayed myelination, long philtrum, thin vermilion, low-set ears, and DD, partially overlapping the phenotype.\"},{\"gene\":\"UBL5\",\"confidence\":0.07,\"rationale\":\"UBL5 chunk references patients with microcephaly, long philtrum, thin upper lip vermilion, and intellectual disability but evidence is indirect and gene-phenotype link is weak.\"},{\"gene\":\"HEMK1\",\"confidence\":0.06,\"rationale\":\"No specific gene-phenotype link; shared FHS evidence chunks describe overlapping facial features but HEMK1 has no established neurodevelopmental disease association.\"},{\"gene\":\"FOXRED2\",\"confidence\":0.06,\"rationale\":\"FOXRED2 is involved in mitochondrial complex I assembly; could theoretically cause hypotonia and delayed myelination but no direct evidence in provided chunks.\"},{\"gene\":\"IQANK1\",\"confidence\":0.06,\"rationale\":\"IQANK1 chunk references TCEAL1 patients with intellectual disability and facial dysmorphisms but no direct link to this gene's role in the phenotype.\"},{\"gene\":\"SIAH2\",\"confidence\":0.05,\"rationale\":\"Shared FHS evidence chunks describe overlapping facial features; no established link between SIAH2 and neurodevelopmental delay or myelination defects.\"},{\"gene\":\"TNFSF12\",\"confidence\":0.05,\"rationale\":\"Shared FHS evidence chunks only; TNFSF12 has no known role in neurodevelopmental disability or CNS myelination.\"},{\"gene\":\"GPR160\",\"confidence\":0.05,\"rationale\":\"Shared FHS evidence chunks only; GPR160 is an orphan GPCR with no established neurodevelopmental disease association.\"},{\"gene\":\"TFPI\",\"confidence\":0.04,\"rationale\":\"TFPI chunk describes a microcephaly case with long philtrum and thin vermilion but TFPI is a coagulation inhibitor with no known neurodevelopmental role.\"},{\"gene\":\"F10\",\"confidence\":0.04,\"rationale\":\"F10 encodes coagulation factor X; shared evidence chunks describe overlapping features but no plausible mechanism for neurodevelopmental delay or myelination defects.\"},{\"gene\":\"SCN10A\",\"confidence\":0.04,\"rationale\":\"SCN10A encodes a sodium channel expressed in peripheral neurons; no established link to CNS myelination delay or the described neurodevelopmental syndrome.\"},{\"gene\":\"MCRIP1\",\"confidence\":0.04,\"rationale\":\"MCRIP1 has no established neurodevelopmental disease association; shared evidence chunks are non-specific.\"},{\"gene\":\"PRRG2\",\"confidence\":0.04,\"rationale\":\"PRRG2 has no known role in neurodevelopmental disability or CNS myelination; evidence chunks are entirely non-specific.\"}]",
+  "parsed_top5": [
+    "SLC10A4",
+    "DGKQ",
+    "DNAJC15",
+    "UBL5",
+    "HEMK1"
+  ]
+}

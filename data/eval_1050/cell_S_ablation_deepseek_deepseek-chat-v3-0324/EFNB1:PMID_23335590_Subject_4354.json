@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4354",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14233,
+  "tokens_out": 704,
+  "finish_reason": "stop",
+  "latency_s": 19.202432870864868,
+  "cost_usd": 0.0033886800000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"EFNB1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"EFNB1 is strongly linked to craniofrontonasal syndrome (CFNS), matching hypertelorism, coronal craniosynostosis, and downslanting palpebral fissures.\"\n  },\n  {\n    \"gene\": \"AMY1B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minor phenotypic overlap but no direct evidence linking AMY1B to the patient's specific features.\"\n  },\n  {\n    \"gene\": \"IFT27\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No specific evidence connecting IFT27 to the patient's craniofacial or developmental phenotypes.\"\n  },\n  {\n    \"gene\": \"PTGES3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant literature linking PTGES3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TAF7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting TAF7's role in the observed craniosynostosis or developmental delay.\"\n  },\n  {\n    \"gene\": \"RECK\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature associating RECK with the patient's craniofacial or limb anomalies.\"\n  },\n  {\n    \"gene\": \"DYNLT2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No documented connection between DYNLT2 and the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"STARD3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking STARD3 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ESRP1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant literature associating ESRP1 with the observed craniosynostosis or developmental delay.\"\n  },\n  {\n    \"gene\": \"NUB1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence supporting NUB1's involvement in the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MPHOSPH10\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No documented association between MPHOSPH10 and the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"SCAMP1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence linking SCAMP1 to the patient's craniofacial anomalies or developmental delay.\"\n  },\n  {\n    \"gene\": \"GPR87\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature supporting GPR87's role in the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MUTYH\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant association between MUTYH and the patient's craniosynostosis or nail/limb anomalies.\"\n  },\n  {\n    \"gene\": \"ZNF225\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting ZNF225 to the patient's phenotypic profile.\"\n  }\n]",
+  "parsed_top5": [
+    "EFNB1",
+    "AMY1B",
+    "IFT27",
+    "PTGES3",
+    "TAF7"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_UAB_R1928_individual_RS",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16934,
+  "tokens_out": 695,
+  "finish_reason": "stop",
+  "latency_s": 52.68980360031128,
+  "cost_usd": 0.0039219500000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NF1\",\n    \"confidence\": 0.99,\n    \"rationale\": \"NF1 is the definitive causal gene for neurofibromatosis type 1, matching all patient phenotypes per NIH criteria.\"\n  },\n  {\n    \"gene\": \"MICAL3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MICAL3 to neurofibromatosis or related phenotypes.\"\n  },\n  {\n    \"gene\": \"CHRNB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting CHRNB2's role in neurofibromatosis or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"TIAL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connects TIAL1 to neurofibromatosis or the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"TPRN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence implicating TPRN in neurofibromatosis or associated symptoms.\"\n  },\n  {\n    \"gene\": \"SMYD2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence ties SMYD2 to neurofibromatosis or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"KAZALD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supports KAZALD1's involvement in neurofibromatosis or related traits.\"\n  },\n  {\n    \"gene\": \"PMEL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PMEL is unrelated to neurofibromatosis; no evidence matches patient phenotypes.\"\n  },\n  {\n    \"gene\": \"PYHIN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence links PYHIN1 to neurofibromatosis or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"ZNF713\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ZNF713 has no known association with neurofibromatosis or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"KAT2B\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connects KAT2B to neurofibromatosis or the described phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF138\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ZNF138 is not implicated in neurofibromatosis or related clinical features.\"\n  },\n  {\n    \"gene\": \"GALNT15\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature supports GALNT15's role in neurofibromatosis or caf\u00e9-au-lait spots.\"\n  },\n  {\n    \"gene\": \"PHB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"PHB2 lacks evidence linking it to neurofibromatosis or the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"ACTMAP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"ACTMAP has no known association with neurofibromatosis or the observed symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "NF1",
+    "MICAL3",
+    "CHRNB2",
+    "TIAL1",
+    "TPRN"
+  ]
+}

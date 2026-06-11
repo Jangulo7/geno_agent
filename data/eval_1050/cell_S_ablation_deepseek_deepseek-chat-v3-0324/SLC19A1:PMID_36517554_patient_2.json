@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC19A1:PMID_36517554_patient_2",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SLC19A1",
+  "orig_qwen3_8b_top1": "WIPF1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "WIPF1",
+  "top1_correct": false,
+  "causal_rank": 3,
+  "tokens_in": 12992,
+  "tokens_out": 609,
+  "finish_reason": "stop",
+  "latency_s": 17.516541242599487,
+  "cost_usd": 0.00306733,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"WIPF1\",\n    \"confidence\": 0.8,\n    \"rationale\": \"WIPF1's link to immune dysregulation and recurrent infections strongly aligns with the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"MYO7B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited direct evidence, but some neurological involvement aligns with patient's cerebral features.\"\n  },\n  {\n    \"gene\": \"SLC19A1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Weak association with immunodeficiency; no direct neurological correlation.\"\n  },\n  {\n    \"gene\": \"RPS6KA4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No specific evidence linking to patient phenotypes; general neurological mentions.\"\n  },\n  {\n    \"gene\": \"FPR3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence; incidental mentions of immunological features.\"\n  },\n  {\n    \"gene\": \"SEMA3F\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to patient's symptoms; general neurological disorder snippets.\"\n  },\n  {\n    \"gene\": \"C16orf86\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence; generic mentions of neurological and immune dysfunction.\"\n  },\n  {\n    \"gene\": \"TRUB2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No relevant evidence; generic neurological mentions.\"\n  },\n  {\n    \"gene\": \"UBE2NL\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence; generic neurological and immune snippets.\"\n  },\n  {\n    \"gene\": \"OR56A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant phenotypic overlap; olfactory receptor unrelated to symptoms.\"\n  },\n  {\n    \"gene\": \"ADGRA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking to patient's phenotypes; unrelated functions.\"\n  },\n  {\n    \"gene\": \"OLA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence; incidental mentions of recessive disorders.\"\n  },\n  {\n    \"gene\": \"MAL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence; generic mentions of immune and neurological dysfunction.\"\n  },\n  {\n    \"gene\": \"CEACAM18\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence; unrelated to symptoms.\"\n  },\n  {\n    \"gene\": \"TAF11L11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence; transcription factor unrelated to symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "WIPF1",
+    "MYO7B",
+    "SLC19A1",
+    "RPS6KA4",
+    "FPR3"
+  ]
+}

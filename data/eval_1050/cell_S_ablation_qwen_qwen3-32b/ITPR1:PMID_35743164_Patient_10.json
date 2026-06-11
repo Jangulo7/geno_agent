@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_35743164_Patient_10",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15739,
+  "tokens_out": 69,
+  "finish_reason": "stop",
+  "latency_s": 5.94000768661499,
+  "cost_usd": 0.00127844,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"ITPR1 mutations are directly linked to SCA29 with ataxia, hypotonia, motor delay, intellectual disability, cerebellar atrophy, nystagmus, and ptosis as key features.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

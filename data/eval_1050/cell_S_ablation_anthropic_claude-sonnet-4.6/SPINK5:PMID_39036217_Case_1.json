@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_39036217_Case_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 22011,
+  "tokens_out": 687,
+  "finish_reason": "stop",
+  "latency_s": 10.996702909469604,
+  "cost_usd": 0.076338,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly explaining erythroderma, sparse hair/eyebrows, elevated IgE, atopic dermatitis, food allergy, recurrent infections, sepsis, failure to thrive, parakeratosis, and acanthosis.\"},{\"gene\":\"GBA1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking GBA1 to this phenotype profile; evidence chunks describe Netherton syndrome cases unrelated to GBA1.\"},{\"gene\":\"AKAP5\",\"confidence\":0.01,\"rationale\":\"No evidence linking AKAP5 to this dermatologic/immunologic phenotype; evidence chunks are generic Netherton syndrome case reports.\"},{\"gene\":\"STX12\",\"confidence\":0.01,\"rationale\":\"No evidence linking STX12 to this phenotype; associated evidence chunks describe unrelated conditions.\"},{\"gene\":\"KIF27\",\"confidence\":0.01,\"rationale\":\"No evidence linking KIF27 to erythroderma, atopic diathesis, or recurrent infections in the provided literature.\"},{\"gene\":\"ERVFRD-1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ERVFRD-1 to this phenotype profile; evidence chunks are unrelated.\"},{\"gene\":\"LSG1\",\"confidence\":0.01,\"rationale\":\"No evidence linking LSG1 to this dermatologic/immunologic phenotype in the provided literature.\"},{\"gene\":\"MAP1LC3B\",\"confidence\":0.01,\"rationale\":\"No evidence linking MAP1LC3B to Netherton-like phenotype; evidence chunks are unrelated.\"},{\"gene\":\"CDK3\",\"confidence\":0.01,\"rationale\":\"No evidence linking CDK3 to erythroderma, sparse hair, elevated IgE, or recurrent infections.\"},{\"gene\":\"ABCA3\",\"confidence\":0.01,\"rationale\":\"ABCA3 is associated with surfactant deficiency/lung disease, not this dermatologic/atopic phenotype profile.\"},{\"gene\":\"DBP\",\"confidence\":0.01,\"rationale\":\"No evidence linking DBP to this phenotype; evidence chunks describe unrelated conditions.\"},{\"gene\":\"SH3BGRL2\",\"confidence\":0.01,\"rationale\":\"No evidence linking SH3BGRL2 to erythroderma, atopic diathesis, or recurrent infections.\"},{\"gene\":\"ODAD3\",\"confidence\":0.01,\"rationale\":\"ODAD3 is associated with primary ciliary dyskinesia, not this dermatologic/immunologic phenotype.\"},{\"gene\":\"IRX4\",\"confidence\":0.01,\"rationale\":\"No evidence linking IRX4 to this phenotype profile; evidence chunks are unrelated.\"},{\"gene\":\"POLD2\",\"confidence\":0.01,\"rationale\":\"No evidence linking POLD2 to erythroderma, sparse hair, elevated IgE, or recurrent infections.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "GBA1",
+    "AKAP5",
+    "STX12",
+    "KIF27"
+  ]
+}

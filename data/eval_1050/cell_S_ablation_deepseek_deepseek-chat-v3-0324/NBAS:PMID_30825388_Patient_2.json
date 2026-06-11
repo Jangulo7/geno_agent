@@ -1,0 +1,22 @@
+{
+  "case_id": "NBAS:PMID_30825388_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "NBAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 10956,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 5.587357521057129,
+  "cost_usd": 0.0022366300000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"NBAS\",\n  \"confidence\": 0.95,\n  \"rationale\": \"NBAS variants directly cause recurrent ALF with elevated ALT/AST, hypogammaglobulinemia, and facial dysmorphism matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "NBAS"
+  ]
+}

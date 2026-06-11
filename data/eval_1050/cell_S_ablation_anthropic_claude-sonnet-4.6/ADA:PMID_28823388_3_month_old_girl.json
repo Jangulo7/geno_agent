@@ -1,0 +1,26 @@
+{
+  "case_id": "ADA:PMID_28823388_3_month_old_girl",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ADA",
+  "orig_qwen3_8b_top1": "ADA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ADA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16700,
+  "tokens_out": 1030,
+  "finish_reason": "stop",
+  "latency_s": 13.836883306503296,
+  "cost_usd": 0.06555,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ADA\",\n    \"confidence\": 0.92,\n    \"rationale\": \"ADA deficiency is a well-established cause of SCID with lymphopenia, low immunoglobulins, thymic aplasia, recurrent infections, candidiasis, failure to thrive, and the pathognomonic reduced red cell adenosine deaminase level.\"\n  },\n  {\n    \"gene\": \"CARMIL2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"CARMIL2 causes combined immunodeficiency but typically with normal Ig levels and without thymic aplasia or reduced red cell ADA, making it a poor fit for this phenotype.\"\n  },\n  {\n    \"gene\": \"NLRP3\",\n    \"confidence\": 0.01,\n    \"rationale\": \"NLRP3 is associated with autoinflammatory syndromes, not SCID or thymic aplasia; evidence chunks show no direct link to this phenotype profile.\"\n  },\n  {\n    \"gene\": \"CRACD\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No direct evidence linking CRACD to SCID, thymic aplasia, or reduced red cell ADA; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"IGH\",\n    \"confidence\": 0.01,\n    \"rationale\": \"IGH variants cause antibody deficiencies but not SCID with thymic aplasia or reduced red cell ADA; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"CCDC88B\",\n    \"confidence\": 0.005,\n    \"rationale\": \"No evidence linking CCDC88B to SCID, thymic aplasia, or reduced red cell ADA in the provided chunks.\"\n  },\n  {\n    \"gene\": \"BCORL1\",\n    \"confidence\": 0.005,\n    \"rationale\": \"BCORL1 is associated with X-linked intellectual disability syndromes, not SCID or thymic aplasia; no relevant evidence provided.\"\n  },\n  {\n    \"gene\": \"SCRN3\",\n    \"confidence\": 0.005,\n    \"rationale\": \"No known association with SCID, thymic aplasia, or reduced red cell ADA; evidence chunks are entirely non-specific.\"\n  },\n  {\n    \"gene\": \"SYNGR3\",\n    \"confidence\": 0.005,\n    \"rationale\": \"SYNGR3 is a synaptogyrin with no established role in immunodeficiency; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"ATP5MC1\",\n    \"confidence\": 0.005,\n    \"rationale\": \"ATP5MC1 encodes a mitochondrial ATP synthase subunit with no established link to SCID or thymic aplasia.\"\n  },\n  {\n    \"gene\": \"THAP5\",\n    \"confidence\": 0.005,\n    \"rationale\": \"No known association with SCID, thymic aplasia, or reduced red cell ADA; evidence is entirely non-specific.\"\n  },\n  {\n    \"gene\": \"KCNJ6\",\n    \"confidence\": 0.005,\n    \"rationale\": \"KCNJ6 encodes a potassium channel with no established role in SCID or thymic aplasia; evidence is non-specific.\"\n  },\n  {\n    \"gene\": \"NTM\",\n    \"confidence\": 0.005,\n    \"rationale\": \"NTM (Neurotrimin) has no established role in SCID or thymic aplasia; evidence chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"COQ5\",\n    \"confidence\": 0.005,\n    \"rationale\": \"COQ5 is involved in coenzyme Q biosynthesis with no established link to SCID, thymic aplasia, or reduced red cell ADA.\"\n  },\n  {\n    \"gene\": \"ANKRD66\",\n    \"confidence\": 0.005,\n    \"rationale\": \"ANKRD66 has no known association with SCID, thymic aplasia, or reduced red cell ADA; evidence is entirely non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "ADA",
+    "CARMIL2",
+    "NLRP3",
+    "CRACD",
+    "IGH"
+  ]
+}

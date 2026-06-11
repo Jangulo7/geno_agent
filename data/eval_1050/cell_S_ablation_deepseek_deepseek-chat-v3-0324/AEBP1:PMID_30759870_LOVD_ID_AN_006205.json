@@ -1,0 +1,22 @@
+{
+  "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AEBP1",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FBLN5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15817,
+  "tokens_out": 57,
+  "finish_reason": "stop",
+  "latency_s": 6.639847278594971,
+  "cost_usd": 0.00320729,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"FBLN5\",\n  \"confidence\": 0.8,\n  \"rationale\": \"FBLN5 is associated with cutis laxa and connective tissue disorders, matching hyperextensible skin, redundant skin, and bruising susceptibility.\"\n}",
+  "parsed_top5": [
+    "FBLN5"
+  ]
+}

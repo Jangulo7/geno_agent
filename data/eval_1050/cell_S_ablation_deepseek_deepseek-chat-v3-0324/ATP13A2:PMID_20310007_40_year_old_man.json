@@ -1,0 +1,26 @@
+{
+  "case_id": "ATP13A2:PMID_20310007_40_year_old_man",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ATP13A2",
+  "orig_qwen3_8b_top1": "ATP13A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ATP13A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16017,
+  "tokens_out": 654,
+  "finish_reason": "stop",
+  "latency_s": 19.729926109313965,
+  "cost_usd": 0.00370698,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ATP13A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking ATP13A2 to Kufor-Rakeb syndrome, matching patient's parkinsonism, supranuclear gaze palsy, and visual hallucinations.\"\n  },\n  {\n    \"gene\": \"CHMP4C\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking CHMP4C to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PYCR2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking PYCR2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TGM6\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking TGM6 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"GNG12\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking GNG12 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"MATN2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking MATN2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"KLB\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking KLB to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"PXK\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking PXK to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"HHIPL2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking HHIPL2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"TTLL6\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking TTLL6 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SPNS2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking SPNS2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"DPH7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking DPH7 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SHC2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking SHC2 to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RIC8A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking RIC8A to the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"RNFT2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking RNFT2 to the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "ATP13A2",
+    "CHMP4C",
+    "PYCR2",
+    "TGM6",
+    "GNG12"
+  ]
+}

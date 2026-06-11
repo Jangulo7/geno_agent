@@ -1,0 +1,26 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_67",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18711,
+  "tokens_out": 633,
+  "finish_reason": "stop",
+  "latency_s": 34.158387184143066,
+  "cost_usd": 0.004229610000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"CYP21A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple case reports directly link CYP21A2 mutations to adrenal hyperplasia with hyperpigmentation, low cortisol, and high ACTH.\"\n  },\n  {\n    \"gene\": \"KRTAP9-4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence; hyperpigmentation mentioned but no direct link to hormonal abnormalities.\"\n  },\n  {\n    \"gene\": \"FGF22\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking FGF22 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"FBXO34\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking FBXO34 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"TMEM174\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking TMEM174 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"KRT222\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking KRT222 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"TST\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking TST to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"AFTPH\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking AFTPH to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"USP32\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking USP32 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"SPAG16\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking SPAG16 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"BCAP31\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking BCAP31 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"CDHR4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking CDHR4 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"MAPK1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking MAPK1 to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"CDON\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking CDON to adrenal or hormonal dysfunction.\"\n  },\n  {\n    \"gene\": \"EPHA3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking EPHA3 to adrenal or hormonal dysfunction.\"\n  }\n]",
+  "parsed_top5": [
+    "CYP21A2",
+    "KRTAP9-4",
+    "FGF22",
+    "FBXO34",
+    "TMEM174"
+  ]
+}

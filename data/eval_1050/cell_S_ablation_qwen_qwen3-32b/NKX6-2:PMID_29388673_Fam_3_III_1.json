@@ -1,0 +1,22 @@
+{
+  "case_id": "NKX6-2:PMID_29388673_Fam_3_III_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NKX6-2",
+  "orig_qwen3_8b_top1": "POLR3D",
+  "orig_qwen3_8b_correct": false,
+  "top1": "POLR3D",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13951,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 1.3266856670379639,
+  "cost_usd": 0.0011309199999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"POLR3D\",\"confidence\":0.95,\"rationale\":\"POLR3D variants are linked to hypomyelination, spasticity, and corpus callosum thinning matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "POLR3D"
+  ]
+}

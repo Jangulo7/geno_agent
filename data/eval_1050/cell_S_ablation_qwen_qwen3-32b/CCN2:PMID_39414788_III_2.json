@@ -1,0 +1,22 @@
+{
+  "case_id": "CCN2:PMID_39414788_III_2",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CCN2",
+  "orig_qwen3_8b_top1": "CCN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CCN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18566,
+  "tokens_out": 65,
+  "finish_reason": "stop",
+  "latency_s": 8.604462385177612,
+  "cost_usd": 0.00150348,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CCN2\", \"confidence\": 0.95, \"rationale\": \"CCN2 variants directly correlate with short stature, genu valgum, broad femoral neck, joint swelling, and platyspondyly as described in the patient's HPO phenotypes.\"}",
+  "parsed_top5": [
+    "CCN2"
+  ]
+}

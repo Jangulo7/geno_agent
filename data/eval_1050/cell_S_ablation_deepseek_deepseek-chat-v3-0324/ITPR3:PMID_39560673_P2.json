@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR3:PMID_39560673_P2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ITPR3",
+  "orig_qwen3_8b_top1": "ITPR3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16835,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 28.863818645477295,
+  "cost_usd": 0.00387905,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"ITPR3\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strong evidence linking ITPR3 mutations to impaired T-cell function and Ca2+ influx, matching the patient's immunodeficiency profile.\"\n  },\n  {\n    \"gene\": \"LYPD2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some evidence of immune dysregulation but less specific to the patient's T-cell defects and constipation.\"\n  },\n  {\n    \"gene\": \"FKBP2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minimal direct evidence linking FKBP2 to the patient's phenotypes, mostly generic immune mentions.\"\n  },\n  {\n    \"gene\": \"ZPLD1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No significant evidence tying ZPLD1 to the patient's symptoms; literature is irrelevant.\"\n  },\n  {\n    \"gene\": \"OGFRL1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Weak association with immune parameters but no direct link to T-cell defects or constipation.\"\n  },\n  {\n    \"gene\": \"KCNJ1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No relevant evidence connecting KCNJ1 to the patient's immunological or gastrointestinal issues.\"\n  },\n  {\n    \"gene\": \"ILRUN\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Indirect immune mentions but lacks concrete support for causality in this case.\"\n  },\n  {\n    \"gene\": \"DDX17\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No meaningful evidence for DDX17's role in the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF595\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature support for ZNF595 in this context.\"\n  },\n  {\n    \"gene\": \"FOXA2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Irrelevant literature; no connection to immune or GI dysfunction.\"\n  },\n  {\n    \"gene\": \"SLC35C1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minor immune mentions but no direct match to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"EXOC6B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No evidence tying EXOC6B to immunodeficiency or chronic constipation.\"\n  },\n  {\n    \"gene\": \"SCARA3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Lacks specific evidence for SCARA3's involvement in the observed symptoms.\"\n  },\n  {\n    \"gene\": \"PRXL2C\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature connecting PRXL2C to the patient's condition.\"\n  },\n  {\n    \"gene\": \"POLA2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Irrelevant to the patient's immune or gastrointestinal presentation.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "ITPR3",
+    "LYPD2",
+    "FKBP2",
+    "ZPLD1",
+    "OGFRL1"
+  ]
+}

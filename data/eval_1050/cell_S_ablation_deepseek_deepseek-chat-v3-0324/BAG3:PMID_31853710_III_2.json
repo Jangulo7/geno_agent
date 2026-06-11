@@ -1,0 +1,22 @@
+{
+  "case_id": "BAG3:PMID_31853710_III_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "BAG3",
+  "orig_qwen3_8b_top1": "GPANK1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PLCG2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13952,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 15.206346988677979,
+  "cost_usd": 0.00283044,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"PLCG2\",\n  \"confidence\": 0.8,\n  \"rationale\": \"Case report describes CMT2 with pes cavus, areflexia, and axonal neuropathy, closely matching patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "PLCG2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "FBN2:PMID_9714438_Park_p253",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBN2",
+  "orig_qwen3_8b_top1": "FBN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16679,
+  "tokens_out": 779,
+  "finish_reason": "stop",
+  "latency_s": 12.011016607284546,
+  "cost_usd": 0.061722,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"FBN2\",\"confidence\":0.92,\"rationale\":\"FBN2 is the established causal gene for congenital contractural arachnodactyly, directly explaining crumpled ears, arachnodactyly, camptodactyly, elbow contractures, and scoliosis; evidence chunks explicitly link FBN2 mutations to all these phenotypes.\"},{\"gene\":\"KLHDC10\",\"confidence\":0.02,\"rationale\":\"Evidence chunks discuss CCA phenotypes but KLHDC10 is not directly implicated; no specific gene-disease link to this patient's phenotype profile.\"},{\"gene\":\"MNAT1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe CCA pedigrees but MNAT1 is not mentioned as causative; no relevant gene-phenotype association.\"},{\"gene\":\"TCEA3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference CCA/FBN2 literature but TCEA3 has no direct link to the patient's connective tissue phenotype.\"},{\"gene\":\"MS4A5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe CCA pedigrees generically; MS4A5 has no established role in connective tissue or contractural arachnodactyly.\"},{\"gene\":\"MIEF1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks describe CCA pedigrees but MIEF1 is not implicated in any of the patient's phenotypes.\"},{\"gene\":\"PAFAH1B1\",\"confidence\":0.01,\"rationale\":\"PAFAH1B1 is associated with lissencephaly, not connective tissue disorders; evidence chunks are generic CCA descriptions.\"},{\"gene\":\"PRDX6\",\"confidence\":0.01,\"rationale\":\"PRDX6 is an antioxidant enzyme with no established link to contractural arachnodactyly or the patient's phenotype profile.\"},{\"gene\":\"SLC29A4\",\"confidence\":0.01,\"rationale\":\"SLC29A4 is a nucleoside transporter with no known association to the patient's connective tissue phenotype.\"},{\"gene\":\"SDHAF2\",\"confidence\":0.01,\"rationale\":\"SDHAF2 is associated with paraganglioma, not connective tissue or skeletal phenotypes seen in this patient.\"},{\"gene\":\"CCNC\",\"confidence\":0.01,\"rationale\":\"CCNC encodes cyclin C with no established link to arachnodactyly, contractures, or cardiovascular features in this patient.\"},{\"gene\":\"LYPD8\",\"confidence\":0.01,\"rationale\":\"LYPD8 has no known association with connective tissue disorders or the patient's phenotype profile.\"},{\"gene\":\"SEMA6A\",\"confidence\":0.01,\"rationale\":\"SEMA6A is involved in neural development with no established link to contractural arachnodactyly or cardiovascular features.\"},{\"gene\":\"PLA2G7\",\"confidence\":0.01,\"rationale\":\"PLA2G7 encodes a phospholipase with no known role in connective tissue disorders matching this patient's phenotype.\"},{\"gene\":\"ELFN1\",\"confidence\":0.01,\"rationale\":\"ELFN1 is a synaptic protein with no established association to the patient's skeletal or cardiovascular phenotype profile.\"}]",
+  "parsed_top5": [
+    "FBN2",
+    "KLHDC10",
+    "MNAT1",
+    "TCEA3",
+    "MS4A5"
+  ]
+}

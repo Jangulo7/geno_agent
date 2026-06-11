@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15719,
+  "tokens_out": 776,
+  "finish_reason": "stop",
+  "latency_s": 26.22834324836731,
+  "cost_usd": 0.0037413200000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA directly links to progeria, lipodystrophy, alopecia, and delayed tooth eruption matching the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"CCDC157\",\n    \"confidence\": 0.3,\n    \"rationale\": \"CCDC157 is mentioned in contexts of short stature and delayed tooth eruption but lacks direct evidence linking to lipodystrophy or proptosis.\"\n  },\n  {\n    \"gene\": \"HECW2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"HECW2 is weakly associated with some overlapping features like short stature but lacks strong evidence for most patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SPAG11A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"SPAG11A is mentioned in contexts of delayed tooth eruption but without strong links to the broader phenotype profile.\"\n  },\n  {\n    \"gene\": \"CLHC1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"CLHC1 is mentioned in CCD discussions but lacks direct relevance to lipodystrophy or other key patient features.\"\n  },\n  {\n    \"gene\": \"MVB12A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"MVB12A is mentioned in CCD contexts but lacks evidence linking to the patient's core phenotypes.\"\n  },\n  {\n    \"gene\": \"MAP3K7CL\",\n    \"confidence\": 0.2,\n    \"rationale\": \"MAP3K7CL is mentioned in short stature contexts but lacks direct evidence for most patient phenotypes.\"\n  },\n  {\n    \"gene\": \"KCNIP1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"KCNIP1 is mentioned in short stature discussions but without strong links to the patient's broader phenotype profile.\"\n  },\n  {\n    \"gene\": \"TTC13\",\n    \"confidence\": 0.2,\n    \"rationale\": \"TTC13 is mentioned in short stature contexts but lacks evidence for lipodystrophy or other key patient features.\"\n  },\n  {\n    \"gene\": \"PIK3C2G\",\n    \"confidence\": 0.2,\n    \"rationale\": \"PIK3C2G is mentioned in short stature discussions but without direct links to the patient's core phenotypes.\"\n  },\n  {\n    \"gene\": \"OR10V1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"OR10V1 is mentioned in contexts of delayed tooth eruption but lacks strong evidence for most patient phenotypes.\"\n  },\n  {\n    \"gene\": \"C12orf54\",\n    \"confidence\": 0.2,\n    \"rationale\": \"C12orf54 is mentioned in CCD contexts but lacks direct relevance to lipodystrophy or other key patient features.\"\n  },\n  {\n    \"gene\": \"FAM90A1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"FAM90A1 is mentioned in progeroid syndrome discussions but lacks strong evidence for the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"DDX49\",\n    \"confidence\": 0.2,\n    \"rationale\": \"DDX49 is mentioned in CCD contexts but lacks direct links to the patient's core phenotypes.\"\n  },\n  {\n    \"gene\": \"RCOR3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"RCOR3 is mentioned in delayed tooth eruption contexts but lacks strong evidence for most patient phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "CCDC157",
+    "HECW2",
+    "SPAG11A",
+    "CLHC1"
+  ]
+}

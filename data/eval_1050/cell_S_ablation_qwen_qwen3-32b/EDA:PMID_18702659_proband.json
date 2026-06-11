@@ -1,0 +1,22 @@
+{
+  "case_id": "EDA:PMID_18702659_proband",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EDA",
+  "orig_qwen3_8b_top1": "EDA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EDA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15249,
+  "tokens_out": 66,
+  "finish_reason": "stop",
+  "latency_s": 5.0133867263793945,
+  "cost_usd": 0.0012384000000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"EDA\", \"confidence\": 0.95, \"rationale\": \"Hypohidrotic ectodermal dysplasia caused by EDA mutations matches the patient's anodontia, hypohidrosis, sparse hair, and facial features like depressed nasal bridge and prominent forehead.\"}",
+  "parsed_top5": [
+    "EDA"
+  ]
+}

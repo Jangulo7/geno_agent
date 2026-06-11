@@ -1,0 +1,26 @@
+{
+  "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PSKH1",
+  "orig_qwen3_8b_top1": "PNLIP",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ATF6",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 18781,
+  "tokens_out": 1081,
+  "finish_reason": "stop",
+  "latency_s": 16.879245281219482,
+  "cost_usd": 0.072558,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ATF6\",\n    \"confidence\": 0.12,\n    \"rationale\": \"ATF6 is an ER stress sensor with known links to liver disease; evidence chunks are generic but ATF6 has biological plausibility for cholestatic liver phenotype via ER stress-mediated hepatocyte injury.\"\n  },\n  {\n    \"gene\": \"EDEM3\",\n    \"confidence\": 0.10,\n    \"rationale\": \"EDEM3 is involved in ER-associated glycoprotein degradation; the CASTOR2/EDEM3 chunk mentions d-galactose correcting glycosylation, suggesting a glycosylation disorder causing cholestatic liver disease.\"\n  },\n  {\n    \"gene\": \"CASTOR2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No gene-specific evidence linking CASTOR2 to biliary cirrhosis or cholestasis; evidence chunks are generic liver disease descriptions shared across candidates.\"\n  },\n  {\n    \"gene\": \"ASH2L\",\n    \"confidence\": 0.07,\n    \"rationale\": \"ASH2L is a chromatin regulator with no direct evidence for cholestatic liver disease; ranked slightly above others due to epigenetic regulation of hepatic gene expression.\"\n  },\n  {\n    \"gene\": \"HDAC1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"HDAC1 regulates gene expression broadly; no specific evidence linking it to biliary cirrhosis or cholestasis in the provided chunks.\"\n  },\n  {\n    \"gene\": \"NUPR1\",\n    \"confidence\": 0.07,\n    \"rationale\": \"NUPR1 is a stress-response transcription factor expressed in liver; no direct evidence for the specific cholestatic/biliary cirrhosis phenotype provided.\"\n  },\n  {\n    \"gene\": \"AMER1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"AMER1 is a Wnt signaling regulator; no specific evidence linking it to biliary cirrhosis or cholestasis in the provided literature chunks.\"\n  },\n  {\n    \"gene\": \"ADCY2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"ADCY2 encodes adenylyl cyclase 2; no specific evidence linking it to cholestatic liver disease or biliary cirrhosis in the provided chunks.\"\n  },\n  {\n    \"gene\": \"NBPF3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"NBPF3 chunk mentions ALP in context of liver/bone disease but no direct causal link to biliary cirrhosis or cholestasis is established.\"\n  },\n  {\n    \"gene\": \"CUTC\",\n    \"confidence\": 0.05,\n    \"rationale\": \"CUTC is a copper homeostasis gene; copper metabolism disorders can cause cholestatic liver disease, but no direct evidence provided in chunks.\"\n  },\n  {\n    \"gene\": \"ZNF346\",\n    \"confidence\": 0.05,\n    \"rationale\": \"ZNF346 is an RNA-binding zinc finger protein with no established link to cholestatic liver disease or biliary cirrhosis in the evidence provided.\"\n  },\n  {\n    \"gene\": \"PNLIP\",\n    \"confidence\": 0.05,\n    \"rationale\": \"PNLIP encodes pancreatic lipase; no plausible mechanism for biliary cirrhosis or cholestasis, and no specific evidence in provided chunks.\"\n  },\n  {\n    \"gene\": \"RNF150\",\n    \"confidence\": 0.05,\n    \"rationale\": \"RNF150 is an E3 ubiquitin ligase with no known association with cholestatic liver disease or biliary cirrhosis in the provided evidence.\"\n  },\n  {\n    \"gene\": \"OR5H2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"OR5H2 is an olfactory receptor gene with no plausible biological link to biliary cirrhosis, cholestasis, or hepatic phenotypes.\"\n  },\n  {\n    \"gene\": \"OR51B2\",\n    \"confidence\": 0.04,\n    \"rationale\": \"OR51B2 is an olfactory receptor gene with no plausible biological link to biliary cirrhosis, cholestasis, or any hepatic phenotype.\"\n  }\n]",
+  "parsed_top5": [
+    "ATF6",
+    "EDEM3",
+    "CASTOR2",
+    "ASH2L",
+    "HDAC1"
+  ]
+}

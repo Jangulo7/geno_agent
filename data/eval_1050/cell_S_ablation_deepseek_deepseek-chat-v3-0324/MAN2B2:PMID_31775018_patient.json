@@ -1,0 +1,26 @@
+{
+  "case_id": "MAN2B2:PMID_31775018_patient",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "MAN2B2",
+  "orig_qwen3_8b_top1": "IL17F",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IL17F",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 15287,
+  "tokens_out": 618,
+  "finish_reason": "stop",
+  "latency_s": 17.078022956848145,
+  "cost_usd": 0.0035332600000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IL17F\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Strongly linked to chronic oral candidiasis and vasculitis, key patient phenotypes, with direct genetic evidence.\"\n  },\n  {\n    \"gene\": \"MAN2B2\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Associations with vasculitis, chronic diarrhea, and developmental delay closely match patient symptoms.\"\n  },\n  {\n    \"gene\": \"CNTNAP2\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Linked to global developmental delay and strabismus, but lacks direct evidence for other patient phenotypes.\"\n  },\n  {\n    \"gene\": \"VIPAS39\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Mild phenotype overlaps with microcephaly and developmental delay, but lacks strong specific evidence.\"\n  },\n  {\n    \"gene\": \"SPTBN1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some overlap with developmental delay and strabismus, but evidence is less specific.\"\n  },\n  {\n    \"gene\": \"BCL7A\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Minimal evidence linking to patient phenotypes like thrombocytopenia and developmental delay.\"\n  },\n  {\n    \"gene\": \"SLC37A4\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence linking to the patient's specific phenotypes.\"\n  },\n  {\n    \"gene\": \"ALDH18A1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"CCDC107\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"SLC24A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"C12orf76\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"COL19A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TLR4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF429\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"GH2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking to patient phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "IL17F",
+    "MAN2B2",
+    "CNTNAP2",
+    "VIPAS39",
+    "SPTBN1"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "DDX59:PMID_29127725_Patient_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DDX59",
+  "orig_qwen3_8b_top1": "CDKL5",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CDKL5",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 10945,
+  "tokens_out": 52,
+  "finish_reason": "stop",
+  "latency_s": 3.6747965812683105,
+  "cost_usd": 0.00222904,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"CDKL5\",\n  \"confidence\": 0.9,\n  \"rationale\": \"Strong evidence linking CDKL5 to infantile-onset refractory epilepsy, developmental delay, and intellectual disability, matching the patient's phenotype.\"\n}",
+  "parsed_top5": [
+    "CDKL5"
+  ]
+}

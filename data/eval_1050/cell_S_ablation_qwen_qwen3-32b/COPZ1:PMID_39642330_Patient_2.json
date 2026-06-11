@@ -1,0 +1,22 @@
+{
+  "case_id": "COPZ1:PMID_39642330_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "COPZ1",
+  "orig_qwen3_8b_top1": "KIT",
+  "orig_qwen3_8b_correct": false,
+  "top1": "KIT",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20141,
+  "tokens_out": 54,
+  "finish_reason": "stop",
+  "latency_s": 11.101147890090942,
+  "cost_usd": 0.0016263999999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"KIT\", \"confidence\": 0.95, \"rationale\": \"KIT mutations are directly linked to hematologic abnormalities including anemia, thrombocytopenia, and neutropenia, with specific treatment response data.\"}",
+  "parsed_top5": [
+    "KIT"
+  ]
+}

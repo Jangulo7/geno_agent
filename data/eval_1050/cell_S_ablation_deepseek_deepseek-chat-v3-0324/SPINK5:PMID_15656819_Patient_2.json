@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_15656819_Patient_2",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15526,
+  "tokens_out": 707,
+  "finish_reason": "stop",
+  "latency_s": 22.102187156677246,
+  "cost_usd": 0.0036495900000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching the patient's erythroderma, bamboo hair, sepsis, atopy, and growth delay.\"\n  },\n  {\n    \"gene\": \"TBCE\",\n    \"confidence\": 0.25,\n    \"rationale\": \"TBCE is linked to ectodermal dysplasia but lacks direct evidence for the patient's specific phenotype cluster.\"\n  },\n  {\n    \"gene\": \"MT1E\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No strong evidence ties MT1E to the observed trichorrhexis invaginata or systemic features.\"\n  },\n  {\n    \"gene\": \"TTF2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"TTF2 has no reported associations with erythroderma, bamboo hair, or atopic diathesis.\"\n  },\n  {\n    \"gene\": \"KRT8\",\n    \"confidence\": 0.18,\n    \"rationale\": \"Keratin mutations typically cause skin fragility but not the systemic or hair abnormalities seen here.\"\n  },\n  {\n    \"gene\": \"ALDH1B1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ALDH1B1 is unrelated to the triad of erythroderma, trichorrhexis invaginata, and atopy.\"\n  },\n  {\n    \"gene\": \"L3MBTL3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No literature links L3MBTL3 to congenital erythroderma or bamboo hair.\"\n  },\n  {\n    \"gene\": \"KLF3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"KLF3 has no known role in dermatologic or hair shaft disorders.\"\n  },\n  {\n    \"gene\": \"MORF4L1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"MORF4L1 is not associated with the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"ZNF732\",\n    \"confidence\": 0.15,\n    \"rationale\": \"ZNF732 lacks evidence for involvement in erythroderma or hair anomalies.\"\n  },\n  {\n    \"gene\": \"C14orf39\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No evidence connects C14orf39 to the observed clinical features.\"\n  },\n  {\n    \"gene\": \"TSPY8\",\n    \"confidence\": 0.15,\n    \"rationale\": \"TSPY8 is unrelated to the patient's dermatologic and systemic manifestations.\"\n  },\n  {\n    \"gene\": \"LCOR\",\n    \"confidence\": 0.15,\n    \"rationale\": \"LCOR has no documented role in Netherton-like syndromes.\"\n  },\n  {\n    \"gene\": \"HTR3A\",\n    \"confidence\": 0.15,\n    \"rationale\": \"HTR3A is implicated in psychiatric disorders, not skin/hair phenotypes.\"\n  },\n  {\n    \"gene\": \"MCM3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"MCM3 is involved in DNA replication, not dermatologic or hair disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "TBCE",
+    "MT1E",
+    "TTF2",
+    "KRT8"
+  ]
+}

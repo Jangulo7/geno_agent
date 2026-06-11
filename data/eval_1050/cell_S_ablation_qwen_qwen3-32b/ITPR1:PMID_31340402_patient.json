@@ -1,0 +1,22 @@
+{
+  "case_id": "ITPR1:PMID_31340402_patient",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16803,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 2.700805425643921,
+  "cost_usd": 0.0013599200000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"ITPR1 mutations are directly linked to cerebellar ataxia, vermis atrophy, and developmental delays matching the patient's phenotype.\"}",
+  "parsed_top5": [
+    "ITPR1"
+  ]
+}

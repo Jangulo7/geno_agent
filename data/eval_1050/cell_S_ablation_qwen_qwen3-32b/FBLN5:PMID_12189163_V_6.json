@@ -1,0 +1,20 @@
+{
+  "case_id": "FBLN5:PMID_12189163_V_6",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBLN5",
+  "orig_qwen3_8b_top1": "FBLN5",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 17309,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 2.9621829986572266,
+  "cost_usd": 0.00139116,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

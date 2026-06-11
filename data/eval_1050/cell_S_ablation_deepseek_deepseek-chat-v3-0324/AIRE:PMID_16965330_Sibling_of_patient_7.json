@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_16965330_Sibling_of_patient_7",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14697,
+  "tokens_out": 681,
+  "finish_reason": "stop",
+  "latency_s": 31.31868314743042,
+  "cost_usd": 0.00346377,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AIRE\",\n    \"confidence\": 0.95,\n    \"rationale\": \"AIRE is strongly linked to APS-1, which includes all patient phenotypes (keratoconjunctivitis, recurrent fungal infections, hypoparathyroidism).\"\n  },\n  {\n    \"gene\": \"FKBP3\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking FKBP3 to hypoparathyroidism or immune dysfunction, but relevance unclear.\"\n  },\n  {\n    \"gene\": \"AMT\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence connecting AMT to the patient's phenotypes; relevance is speculative.\"\n  },\n  {\n    \"gene\": \"EGR2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting EGR2's role in the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"CAPN14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking CAPN14 to keratoconjunctivitis, fungal infections, or hypoparathyroidism.\"\n  },\n  {\n    \"gene\": \"RHOF\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting RHOF to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"BCAT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting BCAT2's involvement in the observed conditions.\"\n  },\n  {\n    \"gene\": \"SLC2A6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature evidence linking SLC2A6 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"WFDC11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting WFDC11 to the patient's clinical profile.\"\n  },\n  {\n    \"gene\": \"OR52B2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for OR52B2's role in the described phenotypes.\"\n  },\n  {\n    \"gene\": \"COX4I1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting COX4I1's association with the patient's conditions.\"\n  },\n  {\n    \"gene\": \"RPS17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature linking RPS17 to keratoconjunctivitis, fungal infections, or hypoparathyroidism.\"\n  },\n  {\n    \"gene\": \"ZFYVE27\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting ZFYVE27 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FKRP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for FKRP's involvement in the observed conditions.\"\n  },\n  {\n    \"gene\": \"MAP3K4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting MAP3K4's role in the patient's clinical presentation.\"\n  }\n]",
+  "parsed_top5": [
+    "AIRE",
+    "FKBP3",
+    "AMT",
+    "EGR2",
+    "CAPN14"
+  ]
+}

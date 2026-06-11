@@ -1,0 +1,22 @@
+{
+  "case_id": "CYP21A2:PMID_30968594_individual_23",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CYP21A2",
+  "orig_qwen3_8b_top1": "CYP21A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CYP21A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17634,
+  "tokens_out": 59,
+  "finish_reason": "stop",
+  "latency_s": 13.766514539718628,
+  "cost_usd": 0.00142724,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"CYP21A2\", \"confidence\": 0.95, \"rationale\": \"CYP21A2 mutations cause CAH with hyperpigmentation, elevated ACTH, and low cortisol, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "CYP21A2"
+  ]
+}

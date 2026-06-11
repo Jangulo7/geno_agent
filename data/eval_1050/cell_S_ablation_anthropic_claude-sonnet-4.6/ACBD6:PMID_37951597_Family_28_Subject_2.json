@@ -1,0 +1,26 @@
+{
+  "case_id": "ACBD6:PMID_37951597_Family_28_Subject_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ACBD6",
+  "orig_qwen3_8b_top1": "RNF183",
+  "orig_qwen3_8b_correct": false,
+  "top1": "DPYSL2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16027,
+  "tokens_out": 1007,
+  "finish_reason": "stop",
+  "latency_s": 20.219972610473633,
+  "cost_usd": 0.063186,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The evidence chunks are essentially identical across all genes (all rated critic_relevance=2/5, none specifically mentioning the candidate gene). I need to rely on external knowledge about which gene is most associated with the patient's phenotype profile: global developmental delay, speech delay, autistic behavior, aggressive behavior, frequent temper tantrums, coarse facial features, depressed nasal bridge, wide nose, everted lower lip vermilion, ataxia, upslanted palpebral fissure, deeply set eyes.\n\nThe combination of intellectual disability/GDD, autism, behavioral issues (aggression, temper tantrums), coarse facial features, and ataxia points toward DPYSL2 (associated with neurodevelopmental disorder with or without intellectual disability, autism, and movement abnormalities) or CBFB. However, the facial features (coarse, depressed nasal bridge, wide nose, everted lower lip, upslanted palpebral fissures, deeply set eyes) combined with GDD, autism, ataxia, and behavioral issues strongly suggest a syndrome. DPYSL2 variants cause a syndrome with GDD, ASD, coarse facial features, and ataxia. NAA20 is associated with intellectual disability with coarse facies. CBFB haploinsufficiency causes a syndrome with facial dysmorphisms and developmental delay.\n\nGiven the full phenotype including coarse facial features + ataxia + autism + GDD, DPYSL2 is the best match among these candidates.\n\n[{\"gene\": \"DPYSL2\", \"confidence\": 0.35, \"rationale\": \"DPYSL2 variants cause neurodevelopmental disorder with GDD, ASD, behavioral issues, ataxia, and dysmorphic facial features matching the patient's profile.\"}, {\"gene\": \"NAA20\", \"confidence\": 0.12, \"rationale\": \"NAA20 associated with intellectual disability and coarse facial features, partially matching the phenotype.\"}, {\"gene\": \"CBFB\", \"confidence\": 0.10, \"rationale\": \"CBFB haploinsufficiency linked to developmental delay and facial dysmorphisms, partially consistent with phenotype.\"}, {\"gene\": \"SMC6\", \"confidence\": 0.07, \"rationale\": \"SMC6 associated with neurodevelopmental syndrome with some overlapping features but less specific match.\"}, {\"gene\": \"H1-3\", \"confidence\": 0.06, \"rationale\": \"H1-3 variants linked to Rahman syndrome with GDD, autism, and facial features, partial overlap.\"}, {\"gene\": \"MAEA\", \"confidence\": 0.05, \"rationale\": \"Limited evidence linking MAEA to this specific phenotype combination.\"}, {\"gene\": \"RNF183\", \"confidence\": 0.04, \"rationale\": \"No strong evidence linking RNF183 to this neurodevelopmental/dysmorphic phenotype.\"}, {\"gene\": \"KCNS3\", \"confidence\": 0.04, \"rationale\": \"KCNS3 not well established as cause of this phenotype profile.\"}, {\"gene\": \"TMX3\", \"confidence\": 0.04, \"rationale\": \"TMX3 not well established as cause of this phenotype profile.\"}, {\"gene\": \"CKS2\", \"confidence\": 0.03, \"rationale\": \"CKS2 not known to cause this neurodevelopmental/dysmorphic syndrome.\"}, {\"gene\": \"IZUMO2\", \"confidence\": 0.03, \"rationale\": \"IZUMO2 primarily involved in fertilization, not associated with this phenotype.\"}, {\"gene\": \"TDRKH\", \"confidence\": 0.03, \"rationale\": \"TDRKH involved in piRNA pathway, not associated with this neurodevelopmental phenotype.\"}, {\"gene\": \"OR2AT4\", \"confidence\": 0.02, \"rationale\": \"OR2AT4 is an olfactory receptor gene, not associated with this phenotype.\"}, {\"gene\": \"OTUD6A\", \"confidence\": 0.02, \"rationale\": \"OTUD6A not well established as cause of this specific phenotype combination.\"}, {\"gene\": \"PHYHD1\", \"confidence\": 0.02, \"rationale\": \"PHYHD1 not known to cause this neurodevelopmental/dysmorphic syndrome.\"}]",
+  "parsed_top5": [
+    "DPYSL2",
+    "NAA20",
+    "CBFB",
+    "SMC6",
+    "H1-3"
+  ]
+}

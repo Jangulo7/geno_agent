@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_19807739_Patient_9",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18593,
+  "tokens_out": 678,
+  "finish_reason": "stop",
+  "latency_s": 9.447682619094849,
+  "cost_usd": 0.065949,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AIRE\",\"confidence\":0.97,\"rationale\":\"AIRE is the established causal gene for APS-1, directly explaining all patient features: CMC, hypoparathyroidism, primary adrenal insufficiency, and autoantibodies against parietal cells, TPO, and 21-hydroxylase.\"},{\"gene\":\"STPG1\",\"confidence\":0.002,\"rationale\":\"No evidence linking STPG1 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"TMEM276\",\"confidence\":0.002,\"rationale\":\"No evidence linking TMEM276 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"ARPIN\",\"confidence\":0.002,\"rationale\":\"No evidence linking ARPIN to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"CNBD1\",\"confidence\":0.002,\"rationale\":\"No evidence linking CNBD1 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"CAMK1D\",\"confidence\":0.002,\"rationale\":\"No evidence linking CAMK1D to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"PDE9A\",\"confidence\":0.002,\"rationale\":\"No evidence linking PDE9A to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"GPR12\",\"confidence\":0.002,\"rationale\":\"No evidence linking GPR12 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"APOL5\",\"confidence\":0.002,\"rationale\":\"No evidence linking APOL5 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"GLS\",\"confidence\":0.002,\"rationale\":\"No evidence linking GLS to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"RNASE11\",\"confidence\":0.002,\"rationale\":\"No evidence linking RNASE11 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"TUBGCP5\",\"confidence\":0.002,\"rationale\":\"No evidence linking TUBGCP5 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"PORCN\",\"confidence\":0.002,\"rationale\":\"No evidence linking PORCN to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"GNAI2\",\"confidence\":0.002,\"rationale\":\"No evidence linking GNAI2 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"},{\"gene\":\"SNIP1\",\"confidence\":0.002,\"rationale\":\"No evidence linking SNIP1 to this phenotype; evidence chunks only discuss AIRE/APS-1.\"}]",
+  "parsed_top5": [
+    "AIRE",
+    "STPG1",
+    "TMEM276",
+    "ARPIN",
+    "CNBD1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR31",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19938,
+  "tokens_out": 806,
+  "finish_reason": "stop",
+  "latency_s": 13.70067048072815,
+  "cost_usd": 0.071904,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.72,\"rationale\":\"LMNA mutations cause FPLD2, directly characterized by loss of truncal and limb subcutaneous fat, T2DM, elevated HbA1c, low HDL, and overweight\u2014matching all patient HPO terms with explicit gene-level evidence.\"},{\"gene\":\"ALMS1\",\"confidence\":0.12,\"rationale\":\"ALMS1 mutations cause Alstr\u00f6m syndrome with obesity, T2DM, low HDL, and insulin resistance resembling lipodystrophy, but typically lacks limb/truncal fat loss and includes deafness/retinal degeneration not present here.\"},{\"gene\":\"HMCN1\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking HMCN1 to lipodystrophy or the metabolic phenotype; evidence chunks are generic lipodystrophy background with no HMCN1-specific mention.\"},{\"gene\":\"GK3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking GK3 to lipodystrophy; evidence chunks describe FPLD background without GK3-specific association.\"},{\"gene\":\"PRR15\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking PRR15 to lipodystrophy or metabolic syndrome; all evidence chunks are generic lipodystrophy background.\"},{\"gene\":\"ASPHD2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ASPHD2 to lipodystrophy; evidence chunks are generic lipodystrophy/PLL background without ASPHD2-specific mention.\"},{\"gene\":\"MYO15A\",\"confidence\":0.01,\"rationale\":\"MYO15A is associated with deafness, not lipodystrophy; no relevant evidence linking it to the patient's metabolic phenotype.\"},{\"gene\":\"ZSCAN21\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZSCAN21 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"APOBEC4\",\"confidence\":0.01,\"rationale\":\"No evidence linking APOBEC4 to lipodystrophy or the patient's metabolic phenotype; evidence chunks are generic background.\"},{\"gene\":\"CAPN6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CAPN6 to lipodystrophy or metabolic syndrome in the provided evidence chunks.\"},{\"gene\":\"ABCD3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ABCD3 to lipodystrophy; evidence chunks are generic lipodystrophy background without ABCD3-specific mention.\"},{\"gene\":\"RASGEF1C\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RASGEF1C to lipodystrophy or the patient's metabolic phenotype; evidence chunks are generic background.\"},{\"gene\":\"STIM1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking STIM1 to lipodystrophy or metabolic syndrome in the provided evidence chunks.\"},{\"gene\":\"LINGO4\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking LINGO4 to lipodystrophy or metabolic syndrome; evidence chunks are generic background only.\"},{\"gene\":\"ERICH3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ERICH3 to lipodystrophy; evidence chunks describe FPLD background without ERICH3-specific association.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "ALMS1",
+    "HMCN1",
+    "GK3",
+    "PRR15"
+  ]
+}

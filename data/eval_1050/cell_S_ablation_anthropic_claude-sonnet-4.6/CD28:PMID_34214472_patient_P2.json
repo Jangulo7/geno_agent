@@ -1,0 +1,26 @@
+{
+  "case_id": "CD28:PMID_34214472_patient_P2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CD28",
+  "orig_qwen3_8b_top1": "CD28",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CD28",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21650,
+  "tokens_out": 737,
+  "finish_reason": "stop",
+  "latency_s": 12.484084844589233,
+  "cost_usd": 0.076005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CD28\",\"confidence\":0.82,\"rationale\":\"CD28 deficiency directly causes recurrent HPV warts, persistent EBV/CMV viremia, and recurrent otitis media, matching all four patient HPO phenotypes with direct gene-level evidence.\"},{\"gene\":\"CCDC89\",\"confidence\":0.04,\"rationale\":\"Evidence chunk mentions PIK3CD-related EBV/CMV viremia but no direct link to CCDC89 or the full phenotype profile.\"},{\"gene\":\"ZNF474\",\"confidence\":0.03,\"rationale\":\"Evidence describes GATA2 deficiency features (warts, EBV/CMV viremia) but no direct mention of ZNF474 causality.\"},{\"gene\":\"IFT57\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking IFT57 to the patient's immune phenotype; evidence chunks reference other genes entirely.\"},{\"gene\":\"SHISA3\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SHISA3 to recurrent otitis media, CMV/EBV viremia, or cutaneous warts.\"},{\"gene\":\"VDAC2\",\"confidence\":0.01,\"rationale\":\"Evidence references GATA2/DOCK2 deficiency phenotypes; no direct link to VDAC2 and the patient's phenotype.\"},{\"gene\":\"ADAP2\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting ADAP2 to the described immunodeficiency phenotype with warts and viral viremia.\"},{\"gene\":\"CREBL2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference CD28/CARMIL2 and GATA2 deficiency but no direct CREBL2 association with this phenotype.\"},{\"gene\":\"ZNF517\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF517 to recurrent otitis media, persistent viral viremia, or cutaneous warts.\"},{\"gene\":\"TRH\",\"confidence\":0.01,\"rationale\":\"TRH encodes thyrotropin-releasing hormone; no plausible immunological link to the described phenotype.\"},{\"gene\":\"NOTCH2NLA\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NOTCH2NLA to the immunodeficiency phenotype with EBV/CMV viremia and warts.\"},{\"gene\":\"SORBS3\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting SORBS3 to recurrent otitis media, persistent viral viremia, or disseminated warts.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CEACAM18 to the patient's immune phenotype; evidence chunks reference unrelated genes.\"},{\"gene\":\"CPSF7\",\"confidence\":0.01,\"rationale\":\"No direct evidence connecting CPSF7 to the described immunodeficiency with viral viremia and cutaneous warts.\"},{\"gene\":\"AP3M2\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking AP3M2 to recurrent otitis media, persistent EBV/CMV viremia, or disseminated warts.\"}]",
+  "parsed_top5": [
+    "CD28",
+    "CCDC89",
+    "ZNF474",
+    "IFT57",
+    "SHISA3"
+  ]
+}

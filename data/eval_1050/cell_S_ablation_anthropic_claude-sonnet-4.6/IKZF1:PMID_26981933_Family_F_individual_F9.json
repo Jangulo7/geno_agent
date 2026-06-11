@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_26981933_Family_F_individual_F9",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19646,
+  "tokens_out": 794,
+  "finish_reason": "stop",
+  "latency_s": 15.421897649765015,
+  "cost_usd": 0.070848,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"IKZF1\",\"confidence\":0.82,\"rationale\":\"IKZF1/IKAROS directly regulates B cell development, CD4/CD8 lineage differentiation, and Ig class switching; haploinsufficiency causes low memory B cells, decreased IgA/IgM, and inverted CD4:CD8 ratio\u2014matching all four HPO phenotypes.\"},{\"gene\":\"TH\",\"confidence\":0.04,\"rationale\":\"Evidence mentions inverted CD4:CD8 ratio and reduced IgA/IgM in a CID context but TH has no established immunological role linking it to this phenotype profile.\"},{\"gene\":\"C3AR1\",\"confidence\":0.03,\"rationale\":\"C3AR1 expression correlates with immune cell infiltration patterns but no direct causal link to memory B cell loss, low IgA/IgM, or inverted CD4:CD8 ratio is established.\"},{\"gene\":\"SIN3B\",\"confidence\":0.02,\"rationale\":\"No specific evidence linking SIN3B to the patient's combined B cell and T cell immunodeficiency phenotype; evidence chunks are generic CID descriptions.\"},{\"gene\":\"USP17L27\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe general B/T cell phenotypes in unrelated conditions; no mechanistic link to USP17L27 and this immune phenotype.\"},{\"gene\":\"ZNF530\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF530 to inverted CD4:CD8 ratio, decreased memory B cells, or reduced immunoglobulins.\"},{\"gene\":\"ZCCHC17\",\"confidence\":0.01,\"rationale\":\"No specific immunological role for ZCCHC17 supported by evidence; chunks are generic CID descriptions unrelated to this gene.\"},{\"gene\":\"AOX1\",\"confidence\":0.01,\"rationale\":\"AOX1 is a metabolic enzyme with no established role in lymphocyte development or immunoglobulin production.\"},{\"gene\":\"DVL1\",\"confidence\":0.01,\"rationale\":\"DVL1 is a Wnt signaling component; no direct evidence linking it to the described combined immunodeficiency phenotype.\"},{\"gene\":\"AP5M1\",\"confidence\":0.01,\"rationale\":\"AP5M1 is involved in vesicle trafficking; no evidence connecting it to B cell memory, immunoglobulin levels, or CD4:CD8 ratio.\"},{\"gene\":\"SLX4\",\"confidence\":0.01,\"rationale\":\"SLX4 is a DNA repair scaffold protein with no established link to the lymphocyte or immunoglobulin phenotypes described.\"},{\"gene\":\"CCDC181\",\"confidence\":0.01,\"rationale\":\"CCDC181 has no known immune function; evidence chunks are generic and not specific to this gene.\"},{\"gene\":\"CCDC34\",\"confidence\":0.01,\"rationale\":\"CCDC34 has no established immunological role relevant to the patient's phenotype profile.\"},{\"gene\":\"INTS6L\",\"confidence\":0.01,\"rationale\":\"INTS6L is part of the Integrator complex; no evidence links it to B cell memory deficiency or immunoglobulin reduction.\"},{\"gene\":\"GNAQ\",\"confidence\":0.01,\"rationale\":\"GNAQ encodes a G-protein alpha subunit; no specific evidence connects it to the combined B/T cell immunodeficiency phenotype described.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "TH",
+    "C3AR1",
+    "SIN3B",
+    "USP17L27"
+  ]
+}

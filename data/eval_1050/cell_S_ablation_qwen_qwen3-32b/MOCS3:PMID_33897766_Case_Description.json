@@ -1,0 +1,22 @@
+{
+  "case_id": "MOCS3:PMID_33897766_Case_Description",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "MOCS3",
+  "orig_qwen3_8b_top1": "SLC27A1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SBNO2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 13763,
+  "tokens_out": 53,
+  "finish_reason": "stop",
+  "latency_s": 1.5081548690795898,
+  "cost_usd": 0.0011158799999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"SBNO2\",\"confidence\":0.95,\"rationale\":\"Severe global developmental delays, generalized tonic-clonic seizures, microcephaly, and hypotonia align with SBNO2-related neurodevelopmental disorder.\"}",
+  "parsed_top5": [
+    "SBNO2"
+  ]
+}

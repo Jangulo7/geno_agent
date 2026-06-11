@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18017,
+  "tokens_out": 735,
+  "finish_reason": "stop",
+  "latency_s": 22.510366439819336,
+  "cost_usd": 0.0016471600000000002,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"CLDN16\", \"confidence\": 0.95, \"rationale\": \"CLDN16 mutations directly cause FHHNC, a condition with nephrocalcinosis, hypercalciuria, UTIs, and electrolyte abnormalities matching the patient's phenotype.\"}, {\"gene\": \"AMZ1\", \"confidence\": 0.15, \"rationale\": \"AMZ1 is not directly linked to the patient's renal phenotype; evidence is indirect and not specific to the observed features.\"}, {\"gene\": \"LRRK2\", \"confidence\": 0.15, \"rationale\": \"LRRK2 is primarily associated with Parkinson's disease; no direct evidence links it to the patient's renal and electrolyte abnormalities.\"}, {\"gene\": \"POLR1B\", \"confidence\": 0.15, \"rationale\": \"POLR1B is involved in RNA polymerase function; no direct evidence supports its role in the patient's renal phenotype.\"}, {\"gene\": \"PSMB9\", \"confidence\": 0.15, \"rationale\": \"PSMB9 is part of the proteasome; no direct evidence links it to the patient's nephrocalcinosis or electrolyte abnormalities.\"}, {\"gene\": \"TSNAX\", \"confidence\": 0.15, \"rationale\": \"TSNAX is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}, {\"gene\": \"EEF2\", \"confidence\": 0.15, \"rationale\": \"EEF2 is involved in protein synthesis; no direct evidence supports its role in the patient's renal and electrolyte abnormalities.\"}, {\"gene\": \"PDE6B\", \"confidence\": 0.15, \"rationale\": \"PDE6B is associated with retinal disorders; no direct evidence links it to the patient's renal phenotype.\"}, {\"gene\": \"FRA10AC1\", \"confidence\": 0.15, \"rationale\": \"FRA10AC1 is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}, {\"gene\": \"ADSL\", \"confidence\": 0.15, \"rationale\": \"ADSL is involved in purine metabolism; no direct evidence supports its role in the patient's renal and electrolyte abnormalities.\"}, {\"gene\": \"ATP9A\", \"confidence\": 0.15, \"rationale\": \"ATP9A is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}, {\"gene\": \"SMIM35\", \"confidence\": 0.15, \"rationale\": \"SMIM35 is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}, {\"gene\": \"TMEM144\", \"confidence\": 0.15, \"rationale\": \"TMEM144 is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}, {\"gene\": \"CCNL2\", \"confidence\": 0.15, \"rationale\": \"CCNL2 is involved in cell cycle regulation; no direct evidence supports its role in the patient's renal and electrolyte abnormalities.\"}, {\"gene\": \"SELENOO\", \"confidence\": 0.15, \"rationale\": \"SELENOO is not directly associated with the patient's renal phenotype; evidence is indirect and not specific.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "AMZ1",
+    "LRRK2",
+    "POLR1B",
+    "PSMB9"
+  ]
+}

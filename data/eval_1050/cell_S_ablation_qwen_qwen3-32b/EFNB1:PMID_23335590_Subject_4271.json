@@ -1,0 +1,22 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4271",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18754,
+  "tokens_out": 77,
+  "finish_reason": "stop",
+  "latency_s": 2.509488344192505,
+  "cost_usd": 0.00152188,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"EFNB1 mutations cause Craniofrontonasal Syndrome (CFNS) with coronal craniosynostosis, hypertelorism, downslanting palpebral fissures, ptosis, and agenesis of corpus callosum matching patient's phenotype.\"}",
+  "parsed_top5": [
+    "EFNB1"
+  ]
+}

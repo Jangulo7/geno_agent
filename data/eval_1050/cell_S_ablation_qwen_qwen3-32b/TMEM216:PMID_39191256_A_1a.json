@@ -1,0 +1,22 @@
+{
+  "case_id": "TMEM216:PMID_39191256_A_1a",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TMEM216",
+  "orig_qwen3_8b_top1": "USP43",
+  "orig_qwen3_8b_correct": false,
+  "top1": "USP43",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 10708,
+  "tokens_out": 62,
+  "finish_reason": "stop",
+  "latency_s": 3.333254098892212,
+  "cost_usd": 0.000874,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"USP43\", \"confidence\": 0.92, \"rationale\": \"Strongest evidence linking USP43 to rod-cone dystrophy, nyctalopia, and peripheral visual field loss with spicule deposits and ERG findings.\"}",
+  "parsed_top5": [
+    "USP43"
+  ]
+}

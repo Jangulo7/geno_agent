@@ -1,0 +1,22 @@
+{
+  "case_id": "POLR1A:PMID_37075751_Individual_14",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "POLR1A",
+  "orig_qwen3_8b_top1": "IRF2BL",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ZNF287",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14457,
+  "tokens_out": 61,
+  "finish_reason": "stop",
+  "latency_s": 1.9316890239715576,
+  "cost_usd": 0.0011736399999999999,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"ZNF287\", \"confidence\": 0.85, \"rationale\": \"ZNF287 is strongly associated with global developmental delay, hypertelorism, and epicanthus, aligning with the patient's HPO features.\"}",
+  "parsed_top5": [
+    "ZNF287"
+  ]
+}

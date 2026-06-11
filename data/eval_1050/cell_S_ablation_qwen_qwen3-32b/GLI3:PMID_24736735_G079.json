@@ -1,0 +1,26 @@
+{
+  "case_id": "GLI3:PMID_24736735_G079",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GLI3",
+  "orig_qwen3_8b_top1": "GLI3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GLI3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16916,
+  "tokens_out": 716,
+  "finish_reason": "stop",
+  "latency_s": 13.562826156616211,
+  "cost_usd": 0.00155376,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"GLI3\": {\"gene\": \"GLI3\", \"confidence\": 0.95, \"rationale\": \"GLI3 mutations are well-established causes of polydactyly syndromes with macrocephaly and hypertelorism.\"}, \"SLC18A2\": {\"gene\": \"SLC18A2\", \"confidence\": 0.15, \"rationale\": \"Mentions of macrocephaly and polydactyly in a family member suggest possible linkage.\"}, \"TBCC\": {\"gene\": \"TBCC\", \"confidence\": 0.1, \"rationale\": \"Recurring mentions of polydactyly in literature, but no direct link to other phenotypes.\"}, \"THOC1\": {\"gene\": \"THOC1\", \"confidence\": 0.08, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"EXOSC6\": {\"gene\": \"EXOSC6\", \"confidence\": 0.07, \"rationale\": \"Polydactyly and cardiac defects mentioned, but no craniofacial features.\"}, \"PARVG\": {\"gene\": \"PARVG\", \"confidence\": 0.06, \"rationale\": \"Postaxial polydactyly and cardiac defects mentioned, but no craniofacial features.\"}, \"SMAD2\": {\"gene\": \"SMAD2\", \"confidence\": 0.05, \"rationale\": \"Cardiac defects and polydactyly mentioned, but no craniofacial features.\"}, \"FEAR1\": {\"gene\": \"FEAR1\", \"confidence\": 0.05, \"rationale\": \"Polydactyly and cardiac defects mentioned, but no craniofacial features.\"}, \"TFE3\": {\"gene\": \"TFE3\", \"confidence\": 0.04, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"S100A3\": {\"gene\": \"S100A3\", \"confidence\": 0.03, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"SLFN12L\": {\"gene\": \"SLFN12L\", \"confidence\": 0.02, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"CCDC88C\": {\"gene\": \"CCDC88C\", \"confidence\": 0.01, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"SERPINC1\": {\"gene\": \"SERPINC1\", \"confidence\": 0.01, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"OR4X2\": {\"gene\": \"OR4X2\", \"confidence\": 0.01, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}, \"SMYD4\": {\"gene\": \"SMYD4\", \"confidence\": 0.01, \"rationale\": \"Polydactyly mentions without craniofacial or cardiac phenotype associations.\"}}",
+  "parsed_top5": [
+    "GLI3",
+    "SLC18A2",
+    "TBCC",
+    "THOC1",
+    "EXOSC6"
+  ]
+}

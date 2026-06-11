@@ -1,0 +1,22 @@
+{
+  "case_id": "FERMT3:PMID_31068971_proband",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "FERMT3",
+  "orig_qwen3_8b_top1": "FERMT3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FERMT3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 12741,
+  "tokens_out": 49,
+  "finish_reason": "stop",
+  "latency_s": 3.430739641189575,
+  "cost_usd": 0.00258593,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"FERMT3\",\n  \"confidence\": 0.95,\n  \"rationale\": \"FERMT3 mutations cause LAD-III, matching the patient's immune dysfunction, bleeding, and hematologic abnormalities.\"\n}",
+  "parsed_top5": [
+    "FERMT3"
+  ]
+}

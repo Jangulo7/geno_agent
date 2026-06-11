@@ -1,0 +1,22 @@
+{
+  "case_id": "EIF4A2:PMID_40610405_Individual_14",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "EIF4A2",
+  "orig_qwen3_8b_top1": "PLP1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PLP1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16525,
+  "tokens_out": 64,
+  "finish_reason": "stop",
+  "latency_s": 10.147871971130371,
+  "cost_usd": 0.00133992,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"PLP1\", \"confidence\": 0.9, \"rationale\": \"PLP1 mutations cause Pelizaeus-Merzbacher disease with hypomyelination, global developmental delay, dysphagia, and seizures, aligning with the patient's phenotype.\"}",
+  "parsed_top5": [
+    "PLP1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR18",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18285,
+  "tokens_out": 169,
+  "finish_reason": "stop",
+  "latency_s": 4.5082948207855225,
+  "cost_usd": 0.00151012,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"LMNA\": 0.95, \"SHE\": 0.8, \"LETM1\": 0.65, \"TFPI2\": 0.6, \"SEPTIN9\": 0.55, \"PUS10\": 0.5, \"LCORL\": 0.45, \"CLDN18\": 0.4, \"BBS4\": 0.35, \"UPK3B\": 0.3, \"SLC25A4\": 0.25, \"UMPS\": 0.2, \"PLGRKT\": 0.15, \"SEL1L3\": 0.1, \"FBXO10\": 0.05}",
+  "parsed_top5": [
+    "LMNA",
+    "SHE",
+    "LETM1",
+    "TFPI2",
+    "SEPTIN9"
+  ]
+}

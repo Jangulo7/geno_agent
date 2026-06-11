@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17378,
+  "tokens_out": 569,
+  "finish_reason": "stop",
+  "latency_s": 17.155115842819214,
+  "cost_usd": 0.00154956,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"SPINK5 mutations directly cause Netherton syndrome, which matches the patient's HPO features including ichthyosis linearis circumflexa, elevated IgE, and hair abnormalities.\"},{\"gene\":\"DUS1L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking DUS1L to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"ATP6V0A4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ATP6V0A4 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"MMP16\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking MMP16 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"TMEM72\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TMEM72 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"DNAH3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking DNAH3 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"CALHM4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CALHM4 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"GAGE2D\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking GAGE2D to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"SENP5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SENP5 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"KBTBD12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking KBTBD12 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"CFH\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CFH to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"UQCR10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking UQCR10 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"ZNF541\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ZNF541 to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"ELL\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ELL to the patient's phenotype or Netherton syndrome.\"},{\"gene\":\"LRRC10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking LRRC10 to the patient's phenotype or Netherton syndrome.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "DUS1L",
+    "ATP6V0A4",
+    "MMP16",
+    "TMEM72"
+  ]
+}

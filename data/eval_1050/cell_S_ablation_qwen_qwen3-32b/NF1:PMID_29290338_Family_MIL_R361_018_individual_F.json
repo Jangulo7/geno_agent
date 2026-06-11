@@ -1,0 +1,22 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_MIL_R361_018_individual_F",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15354,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 1.7643086910247803,
+  "cost_usd": 0.00124456,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\":\"NF1\",\"confidence\":0.95,\"rationale\":\"NF1 is directly associated with spinal neurofibroma, axillary/inguinal freckling, cafe-au-lait spots, and optic glioma, matching all patient phenotypes.\"}",
+  "parsed_top5": [
+    "NF1"
+  ]
+}

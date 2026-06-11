@@ -1,0 +1,20 @@
+{
+  "case_id": "SPTAN1:PMID_31332438_Individual_A_III_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPTAN1",
+  "orig_qwen3_8b_top1": "HINT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14477,
+  "tokens_out": 56,
+  "finish_reason": "stop",
+  "latency_s": 5.01819372177124,
+  "cost_usd": 0.0011738400000000002,
+  "parse_error": "; unknown_shape:dict:name,confidence,rationale",
+  "error": null,
+  "raw_text": "{\"name\": \"HINT1\", \"confidence\": 0.95, \"rationale\": \"HINT1 mutations are strongly associated with axonal neuropathy, lower limb weakness, and unsteady gait, matching the patient's HPO phenotypes.\"}",
+  "parsed_top5": []
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM4",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18157,
+  "tokens_out": 635,
+  "finish_reason": "stop",
+  "latency_s": 23.55533528327942,
+  "cost_usd": 0.00163036,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"LMNA\", \"confidence\": 0.95, \"rationale\": \"Strong evidence linking LMNA mutations to lipodystrophy, diabetes, hypertriglyceridemia, and hepatic steatosis.\"}, {\"gene\": \"PTPRR\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"BRD10\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"SF3B3\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"AADACL3\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"TCF23\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"GPC5\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"RNF214\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"RND2\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"GPR35\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"KISS1R\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"XKRX\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"P2RY6\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"PWWP2B\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}, {\"gene\": \"NUP42\", \"confidence\": 0.15, \"rationale\": \"Mildly relevant to lipodystrophy and metabolic features but lacks direct genetic evidence.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "PTPRR",
+    "BRD10",
+    "SF3B3",
+    "AADACL3"
+  ]
+}

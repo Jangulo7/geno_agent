@@ -1,0 +1,231 @@
+{
+  "a": "S",
+  "b": "L",
+  "comparisons": [
+    {
+      "n": 1047,
+      "category": "__all__",
+      "metrics": {
+        "top1": {
+          "point": 0.0277,
+          "ci_lo": 0.0162,
+          "ci_hi": 0.0401,
+          "significant": true,
+          "a_wins": 32,
+          "b_wins": 3,
+          "mcnemar_p": 0.0
+        },
+        "top5": {
+          "point": 0.0076,
+          "ci_lo": 0.0019,
+          "ci_hi": 0.0143,
+          "significant": true,
+          "a_wins": 10,
+          "b_wins": 2,
+          "mcnemar_p": 0.03857
+        },
+        "top10": {
+          "point": 0.0029,
+          "ci_lo": -0.0029,
+          "ci_hi": 0.0086,
+          "significant": false,
+          "a_wins": 6,
+          "b_wins": 3,
+          "mcnemar_p": 0.50781
+        },
+        "mrr": {
+          "point": 0.0211,
+          "ci_lo": 0.0145,
+          "ci_hi": 0.0284,
+          "significant": true
+        },
+        "ndcg10": {
+          "point": 0.017,
+          "ci_lo": 0.0114,
+          "ci_hi": 0.0228,
+          "significant": true
+        }
+      }
+    },
+    {
+      "n": 250,
+      "category": "developmental",
+      "metrics": {
+        "top1": {
+          "point": 0.032,
+          "ci_lo": 0.008,
+          "ci_hi": 0.056,
+          "significant": true,
+          "a_wins": 9,
+          "b_wins": 1,
+          "mcnemar_p": 0.02148
+        },
+        "top5": {
+          "point": 0.0,
+          "ci_lo": -0.012,
+          "ci_hi": 0.012,
+          "significant": false,
+          "a_wins": 1,
+          "b_wins": 1,
+          "mcnemar_p": 1.0
+        },
+        "top10": {
+          "point": 0.0,
+          "ci_lo": -0.012,
+          "ci_hi": 0.012,
+          "significant": false,
+          "a_wins": 1,
+          "b_wins": 1,
+          "mcnemar_p": 1.0
+        },
+        "mrr": {
+          "point": 0.0201,
+          "ci_lo": 0.0064,
+          "ci_hi": 0.0343,
+          "significant": true
+        },
+        "ndcg10": {
+          "point": 0.0153,
+          "ci_lo": 0.0038,
+          "ci_hi": 0.0282,
+          "significant": true
+        }
+      }
+    },
+    {
+      "n": 300,
+      "category": "immunological",
+      "metrics": {
+        "top1": {
+          "point": 0.0333,
+          "ci_lo": 0.0133,
+          "ci_hi": 0.0533,
+          "significant": true,
+          "a_wins": 10,
+          "b_wins": 0,
+          "mcnemar_p": 0.00195
+        },
+        "top5": {
+          "point": 0.0133,
+          "ci_lo": 0.0033,
+          "ci_hi": 0.0267,
+          "significant": true,
+          "a_wins": 4,
+          "b_wins": 0,
+          "mcnemar_p": 0.125
+        },
+        "top10": {
+          "point": 0.0033,
+          "ci_lo": -0.0067,
+          "ci_hi": 0.0167,
+          "significant": false,
+          "a_wins": 2,
+          "b_wins": 1,
+          "mcnemar_p": 1.0
+        },
+        "mrr": {
+          "point": 0.0242,
+          "ci_lo": 0.0123,
+          "ci_hi": 0.038,
+          "significant": true
+        },
+        "ndcg10": {
+          "point": 0.0194,
+          "ci_lo": 0.0093,
+          "ci_hi": 0.0316,
+          "significant": true
+        }
+      }
+    },
+    {
+      "n": 250,
+      "category": "metabolic",
+      "metrics": {
+        "top1": {
+          "point": 0.028,
+          "ci_lo": 0.008,
+          "ci_hi": 0.052,
+          "significant": true,
+          "a_wins": 7,
+          "b_wins": 0,
+          "mcnemar_p": 0.01562
+        },
+        "top5": {
+          "point": 0.0,
+          "ci_lo": -0.012,
+          "ci_hi": 0.012,
+          "significant": false,
+          "a_wins": 1,
+          "b_wins": 1,
+          "mcnemar_p": 1.0
+        },
+        "top10": {
+          "point": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "significant": false,
+          "a_wins": 0,
+          "b_wins": 0,
+          "mcnemar_p": 1.0
+        },
+        "mrr": {
+          "point": 0.0209,
+          "ci_lo": 0.0096,
+          "ci_hi": 0.0342,
+          "significant": true
+        },
+        "ndcg10": {
+          "point": 0.0159,
+          "ci_lo": 0.0073,
+          "ci_hi": 0.026,
+          "significant": true
+        }
+      }
+    },
+    {
+      "n": 247,
+      "category": "neurological",
+      "metrics": {
+        "top1": {
+          "point": 0.0162,
+          "ci_lo": -0.0081,
+          "ci_hi": 0.0364,
+          "significant": false,
+          "a_wins": 6,
+          "b_wins": 2,
+          "mcnemar_p": 0.28906
+        },
+        "top5": {
+          "point": 0.0162,
+          "ci_lo": 0.004,
+          "ci_hi": 0.0324,
+          "significant": true,
+          "a_wins": 4,
+          "b_wins": 0,
+          "mcnemar_p": 0.125
+        },
+        "top10": {
+          "point": 0.0081,
+          "ci_lo": -0.0081,
+          "ci_hi": 0.0243,
+          "significant": false,
+          "a_wins": 3,
+          "b_wins": 1,
+          "mcnemar_p": 0.625
+        },
+        "mrr": {
+          "point": 0.0186,
+          "ci_lo": 0.0058,
+          "ci_hi": 0.0341,
+          "significant": true
+        },
+        "ndcg10": {
+          "point": 0.0168,
+          "ci_lo": 0.0049,
+          "ci_hi": 0.0306,
+          "significant": true
+        }
+      }
+    }
+  ]
+}

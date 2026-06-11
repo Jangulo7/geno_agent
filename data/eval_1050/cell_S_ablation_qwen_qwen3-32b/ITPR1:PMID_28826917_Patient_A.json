@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_28826917_Patient_A",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18228,
+  "tokens_out": 884,
+  "finish_reason": "stop",
+  "latency_s": 30.467374563217163,
+  "cost_usd": 0.00170576,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"ITPR1\", \"confidence\": 0.95, \"rationale\": \"ITPR1 mutations are directly linked to SCA15, a condition with gait and limb ataxia, dysarthria, slow saccades, and cerebellar atrophy matching the patient's phenotype.\"}, {\"gene\": \"EML5\", \"confidence\": 0.65, \"rationale\": \"EML5 is associated with SCA38, which includes limb ataxia, dysarthria, and saccadic eye movements, but lacks strong evidence of cerebellar vermis atrophy.\"}, {\"gene\": \"CYLC2\", \"confidence\": 0.55, \"rationale\": \"CYLC2 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"B3GNT8\", \"confidence\": 0.5, \"rationale\": \"B3GNT8 is associated with a broad range of neurological features, including ataxia and dysarthria, but lacks specific evidence for the patient's saccadic eye movements and cerebellar atrophy.\"}, {\"gene\": \"CPLX1\", \"confidence\": 0.45, \"rationale\": \"CPLX1 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"GTF3C4\", \"confidence\": 0.4, \"rationale\": \"GTF3C4 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"TRIT1\", \"confidence\": 0.35, \"rationale\": \"TRIT1 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"KLF1\", \"confidence\": 0.3, \"rationale\": \"KLF1 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"PPME1\", \"confidence\": 0.25, \"rationale\": \"PPME1 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"NDUFB1\", \"confidence\": 0.2, \"rationale\": \"NDUFB1 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"ZNF407\", \"confidence\": 0.15, \"rationale\": \"ZNF407 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"CASQ2\", \"confidence\": 0.1, \"rationale\": \"CASQ2 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"NABP2\", \"confidence\": 0.08, \"rationale\": \"NABP2 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"STOX2\", \"confidence\": 0.05, \"rationale\": \"STOX2 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}, {\"gene\": \"SUCLA2\", \"confidence\": 0.03, \"rationale\": \"SUCLA2 is not directly linked to a known ataxia syndrome, but some general descriptions of cerebellar ataxia overlap with the patient's features.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "EML5",
+    "CYLC2",
+    "B3GNT8",
+    "CPLX1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "COL3A1:PMID_36189931_35",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "COL3A1",
+  "orig_qwen3_8b_top1": "COL3A1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "COL3A1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18548,
+  "tokens_out": 741,
+  "finish_reason": "stop",
+  "latency_s": 27.09281897544861,
+  "cost_usd": 0.0016913199999999998,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"COL3A1\": {\"gene\": \"COL3A1\", \"confidence\": 0.95, \"rationale\": \"COL3A1 mutations cause vascular EDS with thin skin, bruising, pneumothorax, and facial features matching the patient's phenotype.\"}, \"PRMT7\": {\"gene\": \"PRMT7\", \"confidence\": 0.15, \"rationale\": \"PRMT7-related syndrome includes facial features but lacks vascular fragility and joint issues seen in the patient.\"}, \"CORO1B\": {\"gene\": \"CORO1B\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking CORO1B to vascular EDS or the patient's specific phenotypes.\"}, \"BCDIN3D\": {\"gene\": \"BCDIN3D\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking BCDIN3D to vascular EDS or the patient's specific phenotypes.\"}, \"ATP5PB\": {\"gene\": \"ATP5PB\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking ATP5PB to vascular EDS or the patient's specific phenotypes.\"}, \"IL9\": {\"gene\": \"IL9\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking IL9 to vascular EDS or the patient's specific phenotypes.\"}, \"SLC38A8\": {\"gene\": \"SLC38A8\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking SLC38A8 to vascular EDS or the patient's specific phenotypes.\"}, \"SOWAHB\": {\"gene\": \"SOWAHB\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking SOWAHB to vascular EDS or the patient's specific phenotypes.\"}, \"ADGRL3\": {\"gene\": \"ADGRL3\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking ADGRL3 to vascular EDS or the patient's specific phenotypes.\"}, \"SRC\": {\"gene\": \"SRC\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking SRC to vascular EDS or the patient's specific phenotypes.\"}, \"ALG6\": {\"gene\": \"ALG6\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking ALG6 to vascular EDS or the patient's specific phenotypes.\"}, \"NGDN\": {\"gene\": \"NGDN\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking NGDN to vascular EDS or the patient's specific phenotypes.\"}, \"NMD3\": {\"gene\": \"NMD3\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking NMD3 to vascular EDS or the patient's specific phenotypes.\"}, \"DPYSL5\": {\"gene\": \"DPYSL5\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking DPYSL5 to vascular EDS or the patient's specific phenotypes.\"}, \"AZIN2\": {\"gene\": \"AZIN2\", \"confidence\": 0.05, \"rationale\": \"No direct evidence linking AZIN2 to vascular EDS or the patient's specific phenotypes.\"}}",
+  "parsed_top5": [
+    "COL3A1",
+    "PRMT7",
+    "CORO1B",
+    "BCDIN3D",
+    "ATP5PB"
+  ]
+}

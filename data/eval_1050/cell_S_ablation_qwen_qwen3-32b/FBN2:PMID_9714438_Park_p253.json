@@ -1,0 +1,22 @@
+{
+  "case_id": "FBN2:PMID_9714438_Park_p253",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "FBN2",
+  "orig_qwen3_8b_top1": "FBN2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "FBN2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15488,
+  "tokens_out": 74,
+  "finish_reason": "stop",
+  "latency_s": 7.178966283798218,
+  "cost_usd": 0.00125976,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"gene\": \"FBN2\", \"confidence\": 0.95, \"rationale\": \"FBN2 mutations are directly linked to CCA, with crumpled ears, arachnodactyly, camptodactyly, elbow contractures, scoliosis, and aortic/mitral issues reported in literature.\"}",
+  "parsed_top5": [
+    "FBN2"
+  ]
+}

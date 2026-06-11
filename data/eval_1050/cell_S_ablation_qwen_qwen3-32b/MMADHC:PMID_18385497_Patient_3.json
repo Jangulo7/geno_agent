@@ -1,0 +1,20 @@
+{
+  "case_id": "MMADHC:PMID_18385497_Patient_3",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "MMADHC",
+  "orig_qwen3_8b_top1": "MMADHC",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15584,
+  "tokens_out": 21,
+  "finish_reason": "stop",
+  "latency_s": 3.9565303325653076,
+  "cost_usd": 0.0012526000000000002,
+  "parse_error": "model_self_error:{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The input is missing the required 'patient' and 'genes' fields.\"}",
+  "parsed_top5": []
+}

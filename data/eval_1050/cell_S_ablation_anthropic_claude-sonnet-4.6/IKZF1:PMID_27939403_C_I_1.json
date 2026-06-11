@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_27939403_C_I_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 21051,
+  "tokens_out": 814,
+  "finish_reason": "stop",
+  "latency_s": 13.469808578491211,
+  "cost_usd": 0.075363,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"IKZF1\", \"confidence\": 0.82, \"rationale\": \"IKZF1 evidence directly shows reduced B cells, inverted CD4/CD8 ratio, hypogammaglobulinemia (low IgG), and recurrent sinopulmonary infections matching all 4 patient HPO phenotypes.\"}, {\"gene\": \"TIGIT\", \"confidence\": 0.04, \"rationale\": \"No direct TIGIT-specific evidence; shared case report chunks describe immunodeficiency phenotypes not attributed to TIGIT.\"}, {\"gene\": \"RBFOX2\", \"confidence\": 0.02, \"rationale\": \"No immune function role for RBFOX2; evidence chunks are generic immunodeficiency cases not linked to this gene.\"}, {\"gene\": \"CCDC88B\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking CCDC88B to the patient's combined B-cell/T-cell/IgG phenotype.\"}, {\"gene\": \"NOMO3\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking NOMO3 to immunodeficiency with inverted CD4:CD8, low B cells, or low IgG.\"}, {\"gene\": \"SLC43A1\", \"confidence\": 0.02, \"rationale\": \"No specific evidence linking SLC43A1 to the immune phenotype; shared chunks are non-specific.\"}, {\"gene\": \"CYP4A11\", \"confidence\": 0.01, \"rationale\": \"CYP4A11 is a cytochrome P450 enzyme with no known role in lymphocyte development or immunoglobulin production.\"}, {\"gene\": \"FAM20A\", \"confidence\": 0.01, \"rationale\": \"FAM20A is associated with enamel defects, not immunodeficiency; no relevant evidence provided.\"}, {\"gene\": \"GNAT3\", \"confidence\": 0.01, \"rationale\": \"GNAT3 encodes a taste receptor G-protein subunit with no established immune function relevant to this phenotype.\"}, {\"gene\": \"KCNMB1\", \"confidence\": 0.01, \"rationale\": \"KCNMB1 is a potassium channel subunit with no known role in B-cell development or immunoglobulin production.\"}, {\"gene\": \"MACO1\", \"confidence\": 0.01, \"rationale\": \"No specific evidence linking MACO1 to the combined immunodeficiency phenotype observed in this patient.\"}, {\"gene\": \"MDH1B\", \"confidence\": 0.01, \"rationale\": \"MDH1B is a metabolic enzyme; no direct evidence linking it to B-cell deficiency or inverted CD4:CD8 ratio.\"}, {\"gene\": \"XRN1\", \"confidence\": 0.01, \"rationale\": \"XRN1 is an RNA exonuclease with no established primary immunodeficiency association matching this phenotype.\"}, {\"gene\": \"CGREF1\", \"confidence\": 0.01, \"rationale\": \"CGREF1 has no known role in lymphocyte development or immunoglobulin class switching relevant to this phenotype.\"}, {\"gene\": \"ASB16\", \"confidence\": 0.01, \"rationale\": \"ASB16 encodes an ankyrin repeat/SOCS box protein with no established link to B-cell deficiency or hypogammaglobulinemia.\"}]",
+  "parsed_top5": [
+    "IKZF1",
+    "TIGIT",
+    "RBFOX2",
+    "CCDC88B",
+    "NOMO3"
+  ]
+}

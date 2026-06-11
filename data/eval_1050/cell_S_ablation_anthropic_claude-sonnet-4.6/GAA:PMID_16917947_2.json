@@ -1,0 +1,26 @@
+{
+  "case_id": "GAA:PMID_16917947_2",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GAA",
+  "orig_qwen3_8b_top1": "WAS",
+  "orig_qwen3_8b_correct": false,
+  "top1": "GAA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20253,
+  "tokens_out": 866,
+  "finish_reason": "stop",
+  "latency_s": 14.608618974685669,
+  "cost_usd": 0.073749,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\"gene\": \"GAA\", \"confidence\": 0.52, \"rationale\": \"GAA (Pompe disease) directly causes proximal lower limb muscle weakness, fatigue, and elevated CK/AST/ALT as a lysosomal storage myopathy, with evidence explicitly mentioning GAA and these biomarkers.\"},\n  {\"gene\": \"SGCD\", \"confidence\": 0.18, \"rationale\": \"SGCD encodes delta-sarcoglycan, a DAPC component causing limb-girdle muscular dystrophy with elevated CK and muscle weakness; evidence mentions DAPC-associated myopathy with elevated CK.\"},\n  {\"gene\": \"WAS\", \"confidence\": 0.08, \"rationale\": \"WAS evidence mentions elevated AST/ALT/CK with fatigue and lower limb muscle weakness in a muscle disease context, but WAS is primarily an immune disorder not a myopathy gene.\"},\n  {\"gene\": \"OSTC\", \"confidence\": 0.03, \"rationale\": \"No direct gene-specific evidence linking OSTC to this phenotype profile; evidence chunks are generic muscle disease cases not mentioning OSTC.\"},\n  {\"gene\": \"STAT1\", \"confidence\": 0.03, \"rationale\": \"No direct evidence linking STAT1 to myopathy with elevated CK/AST/ALT and lower limb weakness; evidence is non-specific.\"},\n  {\"gene\": \"MCOLN1\", \"confidence\": 0.03, \"rationale\": \"MCOLN1 causes mucolipidosis IV, a lysosomal disorder, but evidence provided does not specifically link it to this muscle phenotype profile.\"},\n  {\"gene\": \"SLC25A46\", \"confidence\": 0.03, \"rationale\": \"SLC25A46 is associated with mitochondrial neuropathy; no specific evidence linking it to elevated CK/AST/ALT with lower limb weakness in provided chunks.\"},\n  {\"gene\": \"SPG11\", \"confidence\": 0.02, \"rationale\": \"SPG11 causes hereditary spastic paraplegia; lower limb weakness is possible but elevated CK/AST/ALT pattern is not characteristic; no specific evidence provided.\"},\n  {\"gene\": \"PNMA8B\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or this phenotype profile; evidence chunks are non-specific.\"},\n  {\"gene\": \"ZNF596\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or elevated muscle enzymes; evidence is entirely non-specific.\"},\n  {\"gene\": \"TYW3\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or this phenotype profile; evidence chunks are non-specific.\"},\n  {\"gene\": \"MAN2A2\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or elevated CK/AST/ALT with lower limb weakness; evidence is non-specific.\"},\n  {\"gene\": \"ARHGAP5\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or this phenotype profile; evidence chunks are non-specific.\"},\n  {\"gene\": \"FBLN5\", \"confidence\": 0.01, \"rationale\": \"FBLN5 is associated with connective tissue disorders; no specific evidence linking it to myopathy with elevated muscle enzymes.\"},\n  {\"gene\": \"ZNF718\", \"confidence\": 0.01, \"rationale\": \"No known association with myopathy or this phenotype profile; evidence chunks are entirely non-specific.\"}\n]",
+  "parsed_top5": [
+    "GAA",
+    "SGCD",
+    "WAS",
+    "OSTC",
+    "STAT1"
+  ]
+}

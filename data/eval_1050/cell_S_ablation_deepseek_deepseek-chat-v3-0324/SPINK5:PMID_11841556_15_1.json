@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_15_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16746,
+  "tokens_out": 647,
+  "finish_reason": "stop",
+  "latency_s": 25.505335330963135,
+  "cost_usd": 0.0038473900000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"SPINK5 mutations cause Netherton syndrome, matching all key phenotypes including erythroderma, trichorrhexis invaginata, and elevated IgE.\"\n  },\n  {\n    \"gene\": \"SAMD4B\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking SAMD4B to skin barrier disorders or IgE elevation.\"\n  },\n  {\n    \"gene\": \"NME5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence connecting NME5 to dermatologic or immunologic phenotypes.\"\n  },\n  {\n    \"gene\": \"ACTR1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence for ACTR1A in skin barrier or allergic disorders.\"\n  },\n  {\n    \"gene\": \"ZNF546\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature support for ZNF546 in this phenotype profile.\"\n  },\n  {\n    \"gene\": \"MPZL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking MPZL1 to erythroderma or IgE dysregulation.\"\n  },\n  {\n    \"gene\": \"RAB9A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented association with dermatologic or immunologic phenotypes.\"\n  },\n  {\n    \"gene\": \"TAF6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting TAF6 to skin barrier defects or atopy.\"\n  },\n  {\n    \"gene\": \"SPEM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant literature linking SPEM1 to this clinical presentation.\"\n  },\n  {\n    \"gene\": \"SCX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting SCX in dermatologic or allergic disorders.\"\n  },\n  {\n    \"gene\": \"TUBB6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No association found between TUBB6 and the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"NPY5R\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No literature connecting NPY5R to skin barrier or IgE-related conditions.\"\n  },\n  {\n    \"gene\": \"CYB5A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence for CYB5A in dermatologic or immunologic disorders.\"\n  },\n  {\n    \"gene\": \"SPRR3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No documented role in skin barrier dysfunction or atopy.\"\n  },\n  {\n    \"gene\": \"DAAM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence linking DAAM1 to this phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "SAMD4B",
+    "NME5",
+    "ACTR1A",
+    "ZNF546"
+  ]
+}

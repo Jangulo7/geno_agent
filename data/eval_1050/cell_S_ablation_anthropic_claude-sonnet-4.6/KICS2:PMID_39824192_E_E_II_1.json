@@ -1,0 +1,26 @@
+{
+  "case_id": "KICS2:PMID_39824192_E_E_II_1",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "KICS2",
+  "orig_qwen3_8b_top1": "DNMT3A",
+  "orig_qwen3_8b_correct": false,
+  "top1": "ZYG11B",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14171,
+  "tokens_out": 1036,
+  "finish_reason": "stop",
+  "latency_s": 19.25026273727417,
+  "cost_usd": 0.058053,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"ZYG11B\",\n    \"confidence\": 0.35,\n    \"rationale\": \"ZYG11B evidence includes a detailed table showing impaired receptive language, motor developmental delay, muscular hypotonia, gait abnormalities, and SGA-compatible features, best matching the full HPO profile.\"\n  },\n  {\n    \"gene\": \"DNMT3A\",\n    \"confidence\": 0.12,\n    \"rationale\": \"DNMT3A evidence describes infantile hypotonia, delayed walking, moderate ID, poor speech, and cortical malformation-associated gliosis, covering several key HPO terms.\"\n  },\n  {\n    \"gene\": \"TLCD2\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence includes MSL3-related disorder description with hypotonia, movement disorders, moderate ID, and delayed ambulation, partially matching the phenotype profile.\"\n  },\n  {\n    \"gene\": \"RRAS2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence covers moderate ID, hypotonia, movement disorders, and developmental delay but lacks specificity for gliosis or SGA.\"\n  },\n  {\n    \"gene\": \"GTF2E2\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence includes hypotonia, movement disorders, moderate ID, and delayed walking from MSL3-related disorder description, partially matching HPO terms.\"\n  },\n  {\n    \"gene\": \"XKR9\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence covers moderate-severe ID, motor and language delay, and movement abnormalities but lacks direct gene-specific association with gliosis or SGA.\"\n  },\n  {\n    \"gene\": \"NIPA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence shows hypotonia, delayed walking, language delay, and moderate ID but evidence is non-specific and lacks gliosis or SGA linkage.\"\n  },\n  {\n    \"gene\": \"SLC5A8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence includes SGA (birth weight <3rd percentile), delayed walking, language delay, and ID, but evidence is non-specific to SLC5A8 function.\"\n  },\n  {\n    \"gene\": \"PRMT3\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence shows moderate ID and language delay but is non-specific and lacks direct PRMT3-phenotype linkage for gliosis, hypotonia, or SGA.\"\n  },\n  {\n    \"gene\": \"KRTAP1-5\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence covers moderate-severe ID, motor and language delay, and hypotonia but KRTAP1-5 is a keratin-associated protein gene with no known neurological disease link.\"\n  },\n  {\n    \"gene\": \"H1-1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence shows hypotonia, delayed walking, and moderate ID but H1-1 is a histone gene with limited direct neurological disease evidence.\"\n  },\n  {\n    \"gene\": \"CBLB\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence shows only mild developmental delays and no intellectual disability; poor match for moderate ID, gliosis, and SGA in this patient.\"\n  },\n  {\n    \"gene\": \"TOMM40\",\n    \"confidence\": 0.03,\n    \"rationale\": \"Evidence shows mild developmental delays without intellectual disability; TOMM40 is primarily associated with Alzheimer's risk, not pediatric neurodevelopmental disease.\"\n  },\n  {\n    \"gene\": \"CYP4F3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"CYP4F3 is a cytochrome P450 enzyme with no established link to neurodevelopmental phenotypes; evidence is entirely non-specific.\"\n  },\n  {\n    \"gene\": \"CSN2\",\n    \"confidence\": 0.02,\n    \"rationale\": \"CSN2 encodes milk beta-casein with no known neurological disease association; evidence is entirely non-specific to this gene.\"\n  }\n]",
+  "parsed_top5": [
+    "ZYG11B",
+    "DNMT3A",
+    "TLCD2",
+    "RRAS2",
+    "GTF2E2"
+  ]
+}

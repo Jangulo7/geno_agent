@@ -1,0 +1,26 @@
+{
+  "case_id": "SLC45A2:PMID_36553465_P24",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SLC45A2",
+  "orig_qwen3_8b_top1": "SLC45A2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SLC45A2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19611,
+  "tokens_out": 699,
+  "finish_reason": "stop",
+  "latency_s": 33.12868595123291,
+  "cost_usd": 0.0044604300000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SLC45A2\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct evidence links SLC45A2 to OCA4 with matching patient phenotypes including white eyelashes, blue irides, and iris transillumination.\"\n  },\n  {\n    \"gene\": \"ZKSCAN8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZKSCAN8 to albinism or the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"PPP1R8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence connecting PPP1R8 to the patient's albinism phenotypes.\"\n  },\n  {\n    \"gene\": \"IL23A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting IL23A's role in albinism or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"HLCS\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking HLCS to albinism or the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"DCP1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating DCP1A with albinism or the described phenotypes.\"\n  },\n  {\n    \"gene\": \"OR6Q1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting OR6Q1 to albinism or the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"MTM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting MTM1's involvement in albinism or the observed symptoms.\"\n  },\n  {\n    \"gene\": \"PTGES3L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking PTGES3L to albinism or the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"WSCD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating WSCD1 with albinism or the described clinical features.\"\n  },\n  {\n    \"gene\": \"OR52E6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting OR52E6 to albinism or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"BST1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence supporting BST1's role in albinism or the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"SHISA4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence linking SHISA4 to albinism or the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"OR1P1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence associating OR1P1 with albinism or the described symptoms.\"\n  },\n  {\n    \"gene\": \"BSN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No evidence connecting BSN to albinism or the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "SLC45A2",
+    "ZKSCAN8",
+    "PPP1R8",
+    "IL23A",
+    "HLCS"
+  ]
+}

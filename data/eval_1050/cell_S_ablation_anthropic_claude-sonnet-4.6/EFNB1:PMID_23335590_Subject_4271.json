@@ -1,0 +1,26 @@
+{
+  "case_id": "EFNB1:PMID_23335590_Subject_4271",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EFNB1",
+  "orig_qwen3_8b_top1": "EFNB1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EFNB1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20295,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 10.584603071212769,
+  "cost_usd": 0.071115,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"EFNB1\",\"confidence\":0.88,\"rationale\":\"EFNB1 causes craniofrontonasal syndrome with coronal craniosynostosis, hypertelorism, downslanted palpebral fissures, ridged nails, agenesis of corpus callosum, and ptosis\u2014matching nearly all patient HPO terms directly.\"},{\"gene\":\"PPP1R13L\",\"confidence\":0.03,\"rationale\":\"Evidence chunk describes CFNS features (coronal craniosynostosis, hypertelorism, ptosis, high palate, downslanted palpebral fissures) but not linked to PPP1R13L specifically.\"},{\"gene\":\"GEMIN7\",\"confidence\":0.02,\"rationale\":\"Evidence mentions Muenke/CFNS-like features but no direct link between GEMIN7 and the patient's phenotype profile.\"},{\"gene\":\"TRIO\",\"confidence\":0.01,\"rationale\":\"Evidence mentions craniosynostosis and hypertelorism in general context but no specific TRIO-disease link matching this phenotype.\"},{\"gene\":\"CHD3\",\"confidence\":0.01,\"rationale\":\"No specific CHD3-disease evidence matching this phenotype profile; evidence is generic craniosynostosis background.\"},{\"gene\":\"TP53BP2\",\"confidence\":0.01,\"rationale\":\"Evidence describes SGS/Marfan overlap syndromes with some overlapping features but TP53BP2 is not causally linked to this phenotype.\"},{\"gene\":\"NOS1\",\"confidence\":0.01,\"rationale\":\"No specific NOS1-disease association with this phenotype; evidence is generic craniosynostosis background.\"},{\"gene\":\"SBK2\",\"confidence\":0.01,\"rationale\":\"No specific SBK2-disease association; evidence is generic craniosynostosis background only.\"},{\"gene\":\"FAM236C\",\"confidence\":0.01,\"rationale\":\"No specific FAM236C-disease association matching this phenotype profile.\"},{\"gene\":\"KRTAP19-6\",\"confidence\":0.01,\"rationale\":\"No specific KRTAP19-6-disease association matching this phenotype profile.\"},{\"gene\":\"HTR3C\",\"confidence\":0.01,\"rationale\":\"No specific HTR3C-disease association matching this phenotype profile.\"},{\"gene\":\"PTCH2\",\"confidence\":0.01,\"rationale\":\"No specific PTCH2-disease association matching this phenotype profile.\"},{\"gene\":\"HS3ST3A1\",\"confidence\":0.01,\"rationale\":\"No specific HS3ST3A1-disease association matching this phenotype profile.\"},{\"gene\":\"RIMBP2\",\"confidence\":0.01,\"rationale\":\"No specific RIMBP2-disease association matching this phenotype profile.\"},{\"gene\":\"ARG1\",\"confidence\":0.01,\"rationale\":\"No specific ARG1-disease association matching this phenotype profile; evidence is generic craniosynostosis background.\"}]",
+  "parsed_top5": [
+    "EFNB1",
+    "PPP1R13L",
+    "GEMIN7",
+    "TRIO",
+    "CHD3"
+  ]
+}

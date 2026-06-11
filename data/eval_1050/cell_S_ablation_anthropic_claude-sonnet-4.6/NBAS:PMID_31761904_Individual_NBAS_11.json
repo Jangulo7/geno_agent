@@ -1,0 +1,26 @@
+{
+  "case_id": "NBAS:PMID_31761904_Individual_NBAS_11",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NBAS",
+  "orig_qwen3_8b_top1": "TONSL",
+  "orig_qwen3_8b_correct": false,
+  "top1": "NBAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11018,
+  "tokens_out": 1080,
+  "finish_reason": "stop",
+  "latency_s": 15.943613052368164,
+  "cost_usd": 0.049254,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"NBAS\",\n    \"confidence\": 0.82,\n    \"rationale\": \"NBAS mutations cause SOPH syndrome, directly characterized by short stature, optic atrophy, Pelger-Hu\u00ebt anomaly (hyposegmentation of neutrophil nuclei), hypogammaglobulinemia, skeletal dysplasia, and facial dysmorphism\u2014matching nearly all patient HPO terms.\"\n  },\n  {\n    \"gene\": \"TONSL\",\n    \"confidence\": 0.10,\n    \"rationale\": \"TONSL biallelic variants cause sponastrime dysplasia with short stature, midface hypoplasia, hypogammaglobulinemia, and neutropenia, overlapping several features but lacking optic atrophy and Pelger-Hu\u00ebt anomaly as hallmarks.\"\n  },\n  {\n    \"gene\": \"TTI2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"TTI2 variants cause syndromic intellectual disability with short stature and developmental delay but lack the immunological and optic atrophy features central to this patient's phenotype.\"\n  },\n  {\n    \"gene\": \"TFRC\",\n    \"confidence\": 0.02,\n    \"rationale\": \"TFRC hypomorphic mutations cause combined immunodeficiency with decreased IgG and neutropenia but do not explain optic atrophy, Pelger-Hu\u00ebt anomaly, or skeletal maturation delay.\"\n  },\n  {\n    \"gene\": \"SLC39A8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"SLC39A8 variants show extreme pleiotropy including short stature and developmental delay but lack specific association with Pelger-Hu\u00ebt anomaly, optic atrophy, or hypogammaglobulinemia.\"\n  },\n  {\n    \"gene\": \"COL11A2\",\n    \"confidence\": 0.005,\n    \"rationale\": \"COL11A2 variants cause short stature with skeletal dysfunction but do not account for immunological abnormalities, optic atrophy, or neutrophil hyposegmentation.\"\n  },\n  {\n    \"gene\": \"ERCC1\",\n    \"confidence\": 0.004,\n    \"rationale\": \"ERCC1 is a DNA repair gene with some skeletal and immune phenotypes in mouse models but lacks direct human evidence matching this patient's full phenotype profile.\"\n  },\n  {\n    \"gene\": \"MID1\",\n    \"confidence\": 0.003,\n    \"rationale\": \"MID1 evidence provided is non-specific and does not directly support the combination of Pelger-Hu\u00ebt anomaly, optic atrophy, and hypogammaglobulinemia seen in this patient.\"\n  },\n  {\n    \"gene\": \"CINP\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking CINP to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"REEP6\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking REEP6 to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"VDAC1\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking VDAC1 to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"KLK4\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking KLK4 to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"HLA-DRA\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking HLA-DRA to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"PSEN2\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking PSEN2 to this patient's phenotype profile; provided chunks are non-specific.\"\n  },\n  {\n    \"gene\": \"DSCAM\",\n    \"confidence\": 0.002,\n    \"rationale\": \"No direct evidence linking DSCAM to this patient's phenotype profile; provided chunks are non-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "NBAS",
+    "TONSL",
+    "TTI2",
+    "TFRC",
+    "SLC39A8"
+  ]
+}

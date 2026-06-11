@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_24506793_Case_2",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20374,
+  "tokens_out": 827,
+  "finish_reason": "stop",
+  "latency_s": 10.145639419555664,
+  "cost_usd": 0.073527,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SPINK5\", \"confidence\": 0.97, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, directly explaining all HPO features: congenital exfoliative erythroderma, sparse hair, trichorrhexis nodosa, scaling, parakeratosis, acanthosis, recurrent infections, sepsis, asthma, and seborrheic dermatitis.\"}, {\"gene\": \"C11orf16\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking C11orf16 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"C12orf76\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking C12orf76 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"FBXO36\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking FBXO36 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"ZNF639\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ZNF639 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"LRRC46\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking LRRC46 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"DPF2\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking DPF2 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"TRIB3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TRIB3 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"TMEM63A\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking TMEM63A to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"MAGEA1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking MAGEA1 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"HMGN4\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking HMGN4 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"CBFA2T3\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking CBFA2T3 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"YY1\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking YY1 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"POP7\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking POP7 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}, {\"gene\": \"ZMYM5\", \"confidence\": 0.01, \"rationale\": \"No direct evidence linking ZMYM5 to this phenotype; evidence chunks describe Netherton syndrome caused by SPINK5.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "C11orf16",
+    "C12orf76",
+    "FBXO36",
+    "ZNF639"
+  ]
+}

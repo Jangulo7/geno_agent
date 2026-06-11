@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_31",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 11274,
+  "tokens_out": 641,
+  "finish_reason": "stop",
+  "latency_s": 41.354859352111816,
+  "cost_usd": 0.0027483700000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"STXBP1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking STXBP1 mutations to epileptic encephalopathy with matching seizure types and neurodevelopmental delay.\"\n  },\n  {\n    \"gene\": \"ATP7B\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Wilson disease can cause seizures but lacks direct evidence for this phenotype profile.\"\n  },\n  {\n    \"gene\": \"CENPO\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CENPO to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"IL22\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IL22 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"ARHGAP18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ARHGAP18 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"WDR18\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking WDR18 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"IFT140\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IFT140 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"LGR5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking LGR5 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"PCDH20\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking PCDH20 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"FBRSL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FBRSL1 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"GK3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GK3 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"SLBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SLBP to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"ZZZ3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ZZZ3 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"SOX4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SOX4 to epilepsy or neurodevelopmental disorders.\"\n  },\n  {\n    \"gene\": \"SNX11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SNX11 to epilepsy or neurodevelopmental disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "STXBP1",
+    "ATP7B",
+    "CENPO",
+    "IL22",
+    "ARHGAP18"
+  ]
+}

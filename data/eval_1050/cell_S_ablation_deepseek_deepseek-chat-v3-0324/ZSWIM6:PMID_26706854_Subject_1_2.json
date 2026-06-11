@@ -1,0 +1,26 @@
+{
+  "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "ZSWIM6",
+  "orig_qwen3_8b_top1": "PROP1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "UHRF1",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15739,
+  "tokens_out": 596,
+  "finish_reason": "stop",
+  "latency_s": 20.1697199344635,
+  "cost_usd": 0.0036067200000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n    {\n        \"gene\": \"UHRF1\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Facial features and developmental delay strongly correlate with patient's HPO phenotypes.\"\n    },\n    {\n        \"gene\": \"HNRNPLL\",\n        \"confidence\": 0.5,\n        \"rationale\": \"Evidence includes hypertelorism and downslanted palpebral fissures, consistent with some patient features.\"\n    },\n    {\n        \"gene\": \"SNTG2\",\n        \"confidence\": 0.4,\n        \"rationale\": \"Patient's developmental delay and facial features are partially supported by evidence.\"\n    },\n    {\n        \"gene\": \"PROP1\",\n        \"confidence\": 0.3,\n        \"rationale\": \"Some craniofacial and developmental evidence, but less specific to patient's phenotype.\"\n    },\n    {\n        \"gene\": \"SPINK5\",\n        \"confidence\": 0.25,\n        \"rationale\": \"Limited evidence linking to hypertelorism and developmental delay.\"\n    },\n    {\n        \"gene\": \"DSN1\",\n        \"confidence\": 0.2,\n        \"rationale\": \"Minimal evidence relevant to patient's specific phenotypes.\"\n    },\n    {\n        \"gene\": \"TARS1\",\n        \"confidence\": 0.15,\n        \"rationale\": \"Weak evidence, few overlapping features with patient.\"\n    },\n    {\n        \"gene\": \"CWF19L1\",\n        \"confidence\": 0.1,\n        \"rationale\": \"Evidence does not strongly support causality for patient's phenotype.\"\n    },\n    {\n        \"gene\": \"C12orf75\",\n        \"confidence\": 0.1,\n        \"rationale\": \"No strong evidence linking to patient's phenotypes.\"\n    },\n    {\n        \"gene\": \"TFAM\",\n        \"confidence\": 0.1,\n        \"rationale\": \"Evidence lacks specificity for patient's HPO profile.\"\n    },\n    {\n        \"gene\": \"TMEM11\",\n        \"confidence\": 0.1,\n        \"rationale\": \"Minimal relevant evidence for patient's condition.\"\n    },\n    {\n        \"gene\": \"VWA2\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No significant evidence supporting causality.\"\n    },\n    {\n        \"gene\": \"APOO\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No direct evidence linking to patient's HPO terms.\"\n    },\n    {\n        \"gene\": \"EVX1\",\n        \"confidence\": 0.05,\n        \"rationale\": \"Irrelevant evidence for patient's phenotypic presentation.\"\n    },\n    {\n        \"gene\": \"NTAN1\",\n        \"confidence\": 0.05,\n        \"rationale\": \"No supportive evidence found for patient's phenotypes.\"\n    }\n]",
+  "parsed_top5": [
+    "UHRF1",
+    "HNRNPLL",
+    "SNTG2",
+    "PROP1",
+    "SPINK5"
+  ]
+}

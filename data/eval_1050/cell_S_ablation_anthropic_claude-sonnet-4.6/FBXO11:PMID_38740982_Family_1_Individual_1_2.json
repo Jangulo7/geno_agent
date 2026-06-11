@@ -1,0 +1,26 @@
+{
+  "case_id": "FBXO11:PMID_38740982_Family_1_Individual_1_2",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "FBXO11",
+  "orig_qwen3_8b_top1": "AHDC1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AHDC1",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 15525,
+  "tokens_out": 708,
+  "finish_reason": "stop",
+  "latency_s": 14.255425930023193,
+  "cost_usd": 0.057195,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AHDC1\",\"confidence\":0.82,\"rationale\":\"AHDC1/Xia-Gibbs syndrome directly causes global developmental delay, intellectual disability, seizures, short stature matching all core patient HPO phenotypes, with high-relevance evidence chunks.\"},{\"gene\":\"FBXO11\",\"confidence\":0.07,\"rationale\":\"FBXO11 causes neurodevelopmental disorder with ID, DD, seizures, short stature, and vision anomalies, partially matching the phenotype but evidence is less direct.\"},{\"gene\":\"MARK4\",\"confidence\":0.04,\"rationale\":\"MARK4 variants cause developmental delay, intellectual disability, and short stature in reported siblings, but evidence is limited to a single family report.\"},{\"gene\":\"SERPINI1\",\"confidence\":0.01,\"rationale\":\"No direct SERPINI1-specific evidence linking it to this phenotype profile; all chunks are low-relevance background.\"},{\"gene\":\"MUC21\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence connecting MUC21 to the patient's phenotype; all evidence chunks are non-specific background.\"},{\"gene\":\"MAX\",\"confidence\":0.01,\"rationale\":\"No direct MAX-specific evidence for this neurodevelopmental phenotype profile; all chunks are low-relevance background.\"},{\"gene\":\"GPR151\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking GPR151 to global developmental delay, ID, seizures, or short stature in the provided chunks.\"},{\"gene\":\"CRB3\",\"confidence\":0.01,\"rationale\":\"No direct CRB3-specific evidence for this phenotype; all evidence chunks are non-specific background literature.\"},{\"gene\":\"NODAL\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence connecting NODAL to the patient's neurodevelopmental phenotype profile in the provided chunks.\"},{\"gene\":\"FAR1\",\"confidence\":0.01,\"rationale\":\"No direct FAR1-specific evidence for this phenotype combination; all chunks are low-relevance background.\"},{\"gene\":\"NKAIN3\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking NKAIN3 to global developmental delay, ID, seizures, or short stature in the provided chunks.\"},{\"gene\":\"AKIRIN2\",\"confidence\":0.01,\"rationale\":\"No direct AKIRIN2-specific evidence for this phenotype profile; all evidence chunks are non-specific background.\"},{\"gene\":\"NCAPD2\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence connecting NCAPD2 to the patient's phenotype; all chunks are low-relevance background.\"},{\"gene\":\"VTCN1\",\"confidence\":0.01,\"rationale\":\"No direct VTCN1-specific evidence for this neurodevelopmental phenotype profile; all chunks are non-specific background.\"},{\"gene\":\"ZNF225\",\"confidence\":0.01,\"rationale\":\"No gene-specific evidence linking ZNF225 to global developmental delay, ID, seizures, or short stature in the provided chunks.\"}]",
+  "parsed_top5": [
+    "AHDC1",
+    "FBXO11",
+    "MARK4",
+    "SERPINI1",
+    "MUC21"
+  ]
+}

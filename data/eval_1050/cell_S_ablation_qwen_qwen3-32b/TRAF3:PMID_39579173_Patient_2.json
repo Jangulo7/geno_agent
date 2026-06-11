@@ -1,0 +1,26 @@
+{
+  "case_id": "TRAF3:PMID_39579173_Patient_2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "TRAF3",
+  "orig_qwen3_8b_top1": "FYN",
+  "orig_qwen3_8b_correct": false,
+  "top1": "FYN",
+  "top1_correct": false,
+  "causal_rank": 2,
+  "tokens_in": 20625,
+  "tokens_out": 728,
+  "finish_reason": "stop",
+  "latency_s": 28.001351356506348,
+  "cost_usd": 0.00185384,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"FYN\", \"confidence\": 0.95, \"rationale\": \"FYN mutations disrupt TCR signaling, leading to lymphopenia, recurrent infections, and hypogammaglobulinemia, aligning with the patient's phenotype.\"}, {\"gene\": \"TRAF3\", \"confidence\": 0.75, \"rationale\": \"TRAF3 haploinsufficiency causes immune dysregulation, including lymphadenopathy, hypogammaglobulinemia, and IBD, matching the patient's features.\"}, {\"gene\": \"TRIM28\", \"confidence\": 0.6, \"rationale\": \"TRIM28 is linked to immune dysfunction and lymphoid hyperplasia, but evidence is less specific to the patient's clinical profile.\"}, {\"gene\": \"ARID3C\", \"confidence\": 0.55, \"rationale\": \"ARID3C is associated with immunodeficiency, but evidence is limited and not directly tied to the patient's symptoms.\"}, {\"gene\": \"ADGRE3\", \"confidence\": 0.5, \"rationale\": \"ADGRE3 is linked to immune dysfunction, but evidence is not specific to the patient's clinical features.\"}, {\"gene\": \"G3BP1\", \"confidence\": 0.45, \"rationale\": \"G3BP1 is involved in stress granule formation, but evidence is not directly linked to the patient's immunological profile.\"}, {\"gene\": \"GTGLC1\", \"confidence\": 0.4, \"rationale\": \"GTGLC1 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"FAM228A\", \"confidence\": 0.35, \"rationale\": \"FAM228A is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"NFS1\", \"confidence\": 0.3, \"rationale\": \"NFS1 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"AURKA\", \"confidence\": 0.25, \"rationale\": \"AURKA is primarily linked to cancer, with limited evidence for immunodeficiency.\"}, {\"gene\": \"RECQL\", \"confidence\": 0.2, \"rationale\": \"RECQL is associated with DNA repair, but not directly with the patient's immunological features.\"}, {\"gene\": \"CLPSL1\", \"confidence\": 0.15, \"rationale\": \"CLPSL1 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"DNAJC3\", \"confidence\": 0.1, \"rationale\": \"DNAJC3 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"TRIB1\", \"confidence\": 0.05, \"rationale\": \"TRIB1 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}, {\"gene\": \"LRRC51\", \"confidence\": 0.05, \"rationale\": \"LRRC51 is not well-characterized in immunodeficiency, and evidence is not specific to the patient's symptoms.\"}]",
+  "parsed_top5": [
+    "FYN",
+    "TRAF3",
+    "TRIM28",
+    "ARID3C",
+    "ADGRE3"
+  ]
+}

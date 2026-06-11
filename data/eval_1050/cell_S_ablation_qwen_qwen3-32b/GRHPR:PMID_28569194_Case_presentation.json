@@ -1,0 +1,26 @@
+{
+  "case_id": "GRHPR:PMID_28569194_Case_presentation",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "GRHPR",
+  "orig_qwen3_8b_top1": "GRHPR",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GRHPR",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16425,
+  "tokens_out": 795,
+  "finish_reason": "stop",
+  "latency_s": 2.173600673675537,
+  "cost_usd": 0.0015366,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"GRHPR\",\n    \"confidence\": 0.95,\n    \"rationale\": \"GRHPR deficiency causes PH2, characterized by hyperoxaluria and elevated L-glycerate, directly matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"AGXT\",\n    \"confidence\": 0.75,\n    \"rationale\": \"AGXT mutations cause PH1, associated with hyperoxaluria and glycolate, but L-glycerate is not a hallmark.\"\n  },\n  {\n    \"gene\": \"HOGA1\",\n    \"confidence\": 0.65,\n    \"rationale\": \"HOGA1 mutations cause PH3, with hyperoxaluria and elevated hydroxyglutaric acid, but not L-glycerate.\"\n  },\n  {\n    \"gene\": \"GEMIN4\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Mentioned in PH context but lacks direct linkage to the specific metabolic profile of the patient.\"\n  },\n  {\n    \"gene\": \"PPIAL4F\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Relevant to PH diagnosis but not directly linked to the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"UBL4A\",\n    \"confidence\": 0.30,\n    \"rationale\": \"Mentioned in PH context but lacks direct evidence linking it to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"ADAM22\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TESPA1\",\n    \"confidence\": 0.20,\n    \"rationale\": \"Mentioned in PH context but not directly associated with the patient's specific symptoms.\"\n  },\n  {\n    \"gene\": \"RFC2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MAPK8\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ZDHHC4\",\n    \"confidence\": 0.14,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"PPCS\",\n    \"confidence\": 0.13,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"REEP6\",\n    \"confidence\": 0.12,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"TUBGCP2\",\n    \"confidence\": 0.11,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"SHLD1\",\n    \"confidence\": 0.10,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"ESRRG\",\n    \"confidence\": 0.09,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"DROSHA\",\n    \"confidence\": 0.08,\n    \"rationale\": \"No direct evidence linking it to PH or the patient's symptoms.\"\n  }\n]",
+  "parsed_top5": [
+    "GRHPR",
+    "AGXT",
+    "HOGA1",
+    "GEMIN4",
+    "PPIAL4F"
+  ]
+}

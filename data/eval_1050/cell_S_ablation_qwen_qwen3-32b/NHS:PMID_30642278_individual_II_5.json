@@ -1,0 +1,26 @@
+{
+  "case_id": "NHS:PMID_30642278_individual_II_5",
+  "category": "developmental",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NHS",
+  "orig_qwen3_8b_top1": "NHS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NHS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 15519,
+  "tokens_out": 770,
+  "finish_reason": "stop",
+  "latency_s": 26.268075466156006,
+  "cost_usd": 0.00145712,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"NHS\", \"confidence\": 0.95, \"rationale\": \"NHS gene is directly associated with the patient's phenotypes including cataracts, dental anomalies, and facial dysmorphisms as shown in multiple evidence chunks.\"}, {\"gene\": \"COX19\", \"confidence\": 0.15, \"rationale\": \"COX19 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"GNG5\", \"confidence\": 0.1, \"rationale\": \"GNG5 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"GPR39\", \"confidence\": 0.1, \"rationale\": \"GPR39 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"CXXC4\", \"confidence\": 0.1, \"rationale\": \"CXXC4 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"GSAP\", \"confidence\": 0.1, \"rationale\": \"GSAP is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"SIX4\", \"confidence\": 0.1, \"rationale\": \"SIX4 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"LRRK2\", \"confidence\": 0.1, \"rationale\": \"LRRK2 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"ACTR3C\", \"confidence\": 0.1, \"rationale\": \"ACTR3C is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"SPNS3\", \"confidence\": 0.1, \"rationale\": \"SPNS3 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"STON1\", \"confidence\": 0.1, \"rationale\": \"STON1 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"GFRA2\", \"confidence\": 0.1, \"rationale\": \"GFRA2 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"HABP4\", \"confidence\": 0.1, \"rationale\": \"HABP4 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"ADGRG7\", \"confidence\": 0.1, \"rationale\": \"ADGRG7 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}, {\"gene\": \"ZNF98\", \"confidence\": 0.1, \"rationale\": \"ZNF98 is not directly linked to the patient's phenotypes and is mentioned in the context of NHS, not as a causal gene.\"}]",
+  "parsed_top5": [
+    "NHS",
+    "COX19",
+    "GNG5",
+    "GPR39",
+    "CXXC4"
+  ]
+}

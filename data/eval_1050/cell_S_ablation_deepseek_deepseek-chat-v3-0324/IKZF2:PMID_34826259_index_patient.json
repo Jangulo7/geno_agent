@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826259_index_patient",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "TANC2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "TANC2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 14052,
+  "tokens_out": 675,
+  "finish_reason": "stop",
+  "latency_s": 29.299800157546997,
+  "cost_usd": 0.00333015,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"TANC2\",\n    \"confidence\": 0.8,\n    \"rationale\": \"Strong evidence linking TANC2 to decreased body weight, short stature, and immune dysregulation matching patient phenotypes.\"\n  },\n  {\n    \"gene\": \"TREM2\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Moderate relevance due to associations with inverted CD4:CD8 ratio and immune cell dysregulation.\"\n  },\n  {\n    \"gene\": \"GPR171\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some evidence suggests a role in immune regulation but less directly linked to patient phenotypes.\"\n  },\n  {\n    \"gene\": \"KLF1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Minimal direct evidence connecting KLF1 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"IGHMBP2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Limited evidence linking IGHMBP2 to hypothyroidism but lacks connection to other phenotypes.\"\n  },\n  {\n    \"gene\": \"ZNF706\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting ZNF706 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"GABRR2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking GABRR2 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"PRADC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting PRADC1 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"SPRY2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking SPRY2 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"ABI1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting ABI1 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"RPL38\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking RPL38 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"KCNK4\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting KCNK4 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"SPDYE17\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking SPDYE17 to the patient's clinical features.\"\n  },\n  {\n    \"gene\": \"SH3GL3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No strong evidence connecting SH3GL3 to the patient's immune or growth phenotypes.\"\n  },\n  {\n    \"gene\": \"NOL7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking NOL7 to the patient's clinical features.\"\n  }\n]",
+  "parsed_top5": [
+    "TANC2",
+    "TREM2",
+    "GPR171",
+    "KLF1",
+    "IGHMBP2"
+  ]
+}

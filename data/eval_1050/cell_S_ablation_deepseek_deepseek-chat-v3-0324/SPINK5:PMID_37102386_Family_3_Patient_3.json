@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_37102386_Family_3_Patient_3",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17734,
+  "tokens_out": 689,
+  "finish_reason": "stop",
+  "latency_s": 29.463594675064087,
+  "cost_usd": 0.00407733,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Multiple evidence chunks directly link SPINK5 mutations to Netherton syndrome, matching the patient's phenotypes including congenital exfoliative erythroderma, recurrent infections, and elevated IgE.\"\n  },\n  {\n    \"gene\": \"POLGARF\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking POLGARF to the patient's phenotypes; relevance is minimal.\"\n  },\n  {\n    \"gene\": \"LHFPL6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting LHFPL6 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"SLC28A1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence associating SLC28A1 with the observed phenotypes.\"\n  },\n  {\n    \"gene\": \"UQCC4\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documentation linking UQCC4 to congenital skin disorders or immune dysregulation.\"\n  },\n  {\n    \"gene\": \"TPR\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Absence of evidence connecting TPR to the patient's dermatologic or immunologic symptoms.\"\n  },\n  {\n    \"gene\": \"DLX2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No substantive association found between DLX2 and the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"SLFN11\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No pertinent literature linking SLFN11 to the described clinical features.\"\n  },\n  {\n    \"gene\": \"ARHGEF5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Lack of evidence supporting ARHGEF5 as a causal gene for the patient's condition.\"\n  },\n  {\n    \"gene\": \"LACTB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No known role of LACTB in disorders matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"MAGEE1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No documented relevance of MAGEE1 to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"BMP6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No association identified between BMP6 and the patient's dermatologic or immunologic issues.\"\n  },\n  {\n    \"gene\": \"LCN15\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence suggesting LCN15 involvement in the patient's disease presentation.\"\n  },\n  {\n    \"gene\": \"SHISAL2B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No supporting data for SHISAL2B in context of the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC37A3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No established link between SLC37A3 and the patient's clinical manifestations.\"\n  }\n]",
+  "parsed_top5": [
+    "SPINK5",
+    "POLGARF",
+    "LHFPL6",
+    "SLC28A1",
+    "UQCC4"
+  ]
+}

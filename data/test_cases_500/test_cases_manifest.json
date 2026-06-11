@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-05-16T08:45:37.419149+00:00",
+  "phenopacket_store_version": "0.1.19",
+  "mondo_version": "v2026-03-03",
+  "hgnc_snapshot": "2026-04-07",
+  "random_seed": 42,
+  "n_cases": 459,
+  "category_distribution": {
+    "developmental": 125,
+    "immunological": 85,
+    "metabolic": 124,
+    "neurological": 125
+  },
+  "min_hpo_terms": 3,
+  "min_pmc_articles_per_gene": 5,
+  "n_distractors_per_case": 49,
+  "n_cases_with_pmc_coverage": 459,
+  "pmc_coverage_validated": true,
+  "output_path": "data/test_cases_500/test_cases.jsonl",
+  "sha256": "6769d67a4d8f6bf45b60000b077e7ec3ad889c50075e21cf296f891bc096c404",
+  "bytes": 451262
+}

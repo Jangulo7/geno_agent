@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_18256394_Patient_9",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17520,
+  "tokens_out": 695,
+  "finish_reason": "stop",
+  "latency_s": 31.658243417739868,
+  "cost_usd": 0.00403915,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA mutations cause Hutchinson-Gilford Progeria Syndrome, matching multiple patient phenotypes including lipodystrophy, alopecia, failure to thrive, and micrognathia.\"\n  },\n  {\n    \"gene\": \"PROSER1\",\n    \"confidence\": 0.3,\n    \"rationale\": \"PROSER1 mutations are linked to neurodevelopmental disorders with some overlapping features like failure to thrive, but lack specific phenotypic matches.\"\n  },\n  {\n    \"gene\": \"FGR\",\n    \"confidence\": 0.25,\n    \"rationale\": \"FGR is associated with fetal growth restriction and some craniofacial dysmorphisms, but evidence is less specific to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"WNT9A\",\n    \"confidence\": 0.2,\n    \"rationale\": \"WNT9A has a role in craniofacial development in zebrafish, but relevance to human phenotypes like high palate is unclear.\"\n  },\n  {\n    \"gene\": \"VTI1B\",\n    \"confidence\": 0.15,\n    \"rationale\": \"VTI1B mutations in mice show skeletal abnormalities, but human phenotypic overlap is minimal.\"\n  },\n  {\n    \"gene\": \"MYL9\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking MYL9 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"FCAR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FCAR to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"E2F4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking E2F4 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CAMTA2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CAMTA2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CHD6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CHD6 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CACNG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CACNG2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"CBX8\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CBX8 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"SCYL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SCYL1 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"KCNC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking KCNC2 to the patient's phenotypes.\"\n  },\n  {\n    \"gene\": \"VAMP3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking VAMP3 to the patient's phenotypes.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "PROSER1",
+    "FGR",
+    "WNT9A",
+    "VTI1B"
+  ]
+}

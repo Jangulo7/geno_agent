@@ -1,0 +1,26 @@
+{
+  "case_id": "PIEZO2:PMID_27843126_A_III_5",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PIEZO2",
+  "orig_qwen3_8b_top1": "AMH",
+  "orig_qwen3_8b_correct": false,
+  "top1": "PIEZO2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18714,
+  "tokens_out": 1104,
+  "finish_reason": "stop",
+  "latency_s": 18.63271474838257,
+  "cost_usd": 0.072702,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"PIEZO2\",\n    \"confidence\": 0.18,\n    \"rationale\": \"PIEZO2 causes congenital myopathy/ataxia with hypotonia, motor delay, areflexia, scoliosis, and foot deformities; evidence chunk mentions hypotonia, areflexia, motor delay, spine rigidity matching patient profile.\"\n  },\n  {\n    \"gene\": \"DYNC2LI1\",\n    \"confidence\": 0.12,\n    \"rationale\": \"Evidence shows hypotonia, motor delay, areflexia, distal/proximal limb weakness, spine rigidity overlapping patient HPOs, though no specific gene-disease link is explicitly stated.\"\n  },\n  {\n    \"gene\": \"ASB9\",\n    \"confidence\": 0.08,\n    \"rationale\": \"Evidence chunk describes hypotonia, areflexia, motor delay, limb weakness, spine rigidity similar to patient, but no direct gene-disease association established.\"\n  },\n  {\n    \"gene\": \"SLC25A3\",\n    \"confidence\": 0.07,\n    \"rationale\": \"Evidence includes short stature, hypotonia, motor delay, dysarthria, scoliosis, and elevated CK in a congenital myopathy case partially matching patient phenotype.\"\n  },\n  {\n    \"gene\": \"KRTAP9-1\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence describes hypotonia, motor delay, elevated CK, short stature, and dysarthria in myopathy cases, partially overlapping patient HPOs.\"\n  },\n  {\n    \"gene\": \"FRMD6\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence shows hypotonia, motor delay, elevated CK, distal lower limb weakness overlapping patient features, but no strong gene-disease link.\"\n  },\n  {\n    \"gene\": \"SRSF3\",\n    \"confidence\": 0.06,\n    \"rationale\": \"Evidence includes dysarthria, distal limb weakness, elevated CK, and reduced reflexes partially matching patient, but no direct causal link established.\"\n  },\n  {\n    \"gene\": \"AMH\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence mentions dysarthria, elevated CK, distal lower limb weakness, and areflexia in some cases, but AMH is not a known neuromuscular disease gene.\"\n  },\n  {\n    \"gene\": \"SELL\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence shows dysarthria, distal limb weakness, elevated CK, reduced reflexes overlapping patient, but SELL has no established neuromuscular disease association.\"\n  },\n  {\n    \"gene\": \"TLR7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence includes dysarthria, elevated CK, reduced tendon reflexes, distal weakness partially matching patient, but TLR7 is not a known neuromuscular gene.\"\n  },\n  {\n    \"gene\": \"ZHX2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence shows hypotonia, motor delay, elevated CK, muscle weakness overlapping patient HPOs, but ZHX2 has no established neuromuscular disease link.\"\n  },\n  {\n    \"gene\": \"SLX1A\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence includes hypotonia, motor delay, elevated CK, muscle weakness partially matching patient, but SLX1A has no known neuromuscular disease association.\"\n  },\n  {\n    \"gene\": \"SLC22A9\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence shows hypotonia, motor delay, elevated CK, muscle weakness overlapping patient HPOs, but SLC22A9 has no established neuromuscular disease link.\"\n  },\n  {\n    \"gene\": \"SLC39A10\",\n    \"confidence\": 0.04,\n    \"rationale\": \"Evidence includes hypotonia, motor delay, elevated CK, muscle weakness partially matching patient, but SLC39A10 has no known neuromuscular disease association.\"\n  },\n  {\n    \"gene\": \"ABCC10\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Evidence shows scoliosis, distal lower limb weakness, elevated CK, neurogenic EMG partially matching patient, but ABCC10 has no established neuromuscular disease link.\"\n  }\n]",
+  "parsed_top5": [
+    "PIEZO2",
+    "DYNC2LI1",
+    "ASB9",
+    "SLC25A3",
+    "KRTAP9-1"
+  ]
+}

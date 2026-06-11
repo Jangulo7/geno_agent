@@ -1,0 +1,26 @@
+{
+  "case_id": "UMOD:PMID_15673476_son",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "UMOD",
+  "orig_qwen3_8b_top1": "UMOD",
+  "orig_qwen3_8b_correct": true,
+  "top1": "UMOD",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 14077,
+  "tokens_out": 737,
+  "finish_reason": "stop",
+  "latency_s": 20.22031831741333,
+  "cost_usd": 0.0033828900000000004,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "```json\n[\n  {\n    \"gene\": \"UMOD\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking UMOD mutations to ADTKD with hyperuricemia, gout, and renal cysts, matching the patient's phenotype precisely.\"\n  },\n  {\n    \"gene\": \"SLC16A13\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Involved in urate transport and gout pathogenesis, but lacks direct evidence linking to renal cysts or chronic kidney disease progression.\"\n  },\n  {\n    \"gene\": \"RREB1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"GWAS association with gout, but no specific ties to chronic kidney disease or renal cysts as seen in the patient.\"\n  },\n  {\n    \"gene\": \"BLOC1S5\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Minimal direct evidence connecting BLOC1S5 to the patient's renal and hyperuricemia phenotype.\"\n  },\n  {\n    \"gene\": \"TRPM6\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No clear evidence linking TRPM6 to the patient's specific symptoms of hyperuricemia or gout with renal cysts.\"\n  },\n  {\n    \"gene\": \"YBX1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No substantive evidence connecting YBX1 to hyperuricemia, gout, or chronic kidney disease.\"\n  },\n  {\n    \"gene\": \"LRRTM1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence relating LRRTM1 to the renal or hyperuricemia symptoms observed in the patient.\"\n  },\n  {\n    \"gene\": \"SLC30A10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Lacks strong evidence for a role in chronic kidney disease or hyperuricemia as seen in the patient.\"\n  },\n  {\n    \"gene\": \"PXMP2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence linking PXMP2 to the patient's clinical presentation.\"\n  },\n  {\n    \"gene\": \"LCP1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No significant evidence connecting LCP1 to renal cysts, gout, or chronic kidney disease.\"\n  },\n  {\n    \"gene\": \"MBD2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence tying MBD2 to the patient's hyperuricemia or renal phenotype.\"\n  },\n  {\n    \"gene\": \"RTL8B\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature evidence connecting RTL8B to the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MRPS31\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No substantive evidence linking MRPS31 to chronic kidney disease or hyperuricemia.\"\n  },\n  {\n    \"gene\": \"HSD17B7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting HSD17B7 to the patient's gout, hyperuricemia, or renal cysts.\"\n  },\n  {\n    \"gene\": \"HSF5\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence suggesting HSF5's involvement in the patient's phenotype.\"\n  }\n]\n```",
+  "parsed_top5": [
+    "UMOD",
+    "SLC16A13",
+    "RREB1",
+    "BLOC1S5",
+    "TRPM6"
+  ]
+}

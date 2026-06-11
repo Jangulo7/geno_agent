@@ -1,0 +1,26 @@
+{
+  "case_id": "CD28:PMID_34214472_patient_P2",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CD28",
+  "orig_qwen3_8b_top1": "CD28",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CD28",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19586,
+  "tokens_out": 621,
+  "finish_reason": "stop",
+  "latency_s": 22.06435251235962,
+  "cost_usd": 0.0017407600000000003,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CD28\",\"confidence\":0.95,\"rationale\":\"CD28 deficiency directly links to recurrent HPV infections, warts, and persistent EBV/CMV viremia, aligning with the patient's phenotype.\"},{\"gene\":\"CARMIL2\",\"confidence\":0.75,\"rationale\":\"CARMIL2 deficiency causes EBV-related tumors, warts, and persistent EBV/CMV, but less specific than CD28.\"},{\"gene\":\"ZNF474\",\"confidence\":0.55,\"rationale\":\"Associated with EBV and CMV infections, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"IFT57\",\"confidence\":0.5,\"rationale\":\"Linked to EBV and CMV, but no direct evidence for warts or otitis media.\"},{\"gene\":\"SHISA3\",\"confidence\":0.5,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"VDAC2\",\"confidence\":0.5,\"rationale\":\"Linked to EBV and CMV, but no direct evidence for warts or otitis media.\"},{\"gene\":\"ADAP2\",\"confidence\":0.5,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"CREBL2\",\"confidence\":0.5,\"rationale\":\"Linked to EBV and CMV, but no direct evidence for warts or otitis media.\"},{\"gene\":\"ZNF517\",\"confidence\":0.5,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"TRH\",\"confidence\":0.5,\"rationale\":\"Linked to EBV and CMV, but no direct evidence for warts or otitis media.\"},{\"gene\":\"NOTCH2NLA\",\"confidence\":0.5,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"SORBS3\",\"confidence\":0.45,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.45,\"rationale\":\"Linked to EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"CCDC89\",\"confidence\":0.45,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"CPSF7\",\"confidence\":0.45,\"rationale\":\"Linked to EBV and CMV, but lacks direct evidence for warts or otitis media.\"},{\"gene\":\"AP3M2\",\"confidence\":0.45,\"rationale\":\"Mentions EBV and CMV, but lacks direct evidence for warts or otitis media.\"}]",
+  "parsed_top5": [
+    "CD28",
+    "CARMIL2",
+    "ZNF474",
+    "IFT57",
+    "SHISA3"
+  ]
+}

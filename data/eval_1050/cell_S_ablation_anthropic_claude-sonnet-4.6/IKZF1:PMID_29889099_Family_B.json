@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF1:PMID_29889099_Family_B",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20469,
+  "tokens_out": 996,
+  "finish_reason": "stop",
+  "latency_s": 13.461010217666626,
+  "cost_usd": 0.076347,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IKZF1\",\n    \"confidence\": 0.52,\n    \"rationale\": \"IKZF1 DN mutations cause profound hypogammaglobulinemia, near-absent B cells, T cell skewing, and recurrent PJP infections, matching the patient's decreased IgG/IgA/IgM, decreased B cells, and PJP pneumonia.\"\n  },\n  {\n    \"gene\": \"IL7R\",\n    \"confidence\": 0.32,\n    \"rationale\": \"IL7R deficiency causes leaky SCID with PJP pneumonia, impaired T cell development, and hypogammaglobulinemia, directly matching the patient's PJP, recurrent pneumonia, and low immunoglobulins.\"\n  },\n  {\n    \"gene\": \"MFAP1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking MFAP1 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"BOK\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking BOK to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"BCO1\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No specific evidence linking BCO1 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"HAND2\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking HAND2 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"CMC1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking CMC1 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"SLC4A1\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking SLC4A1 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"TMCO6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking TMCO6 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ABCG4\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking ABCG4 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"BORCS6\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking BORCS6 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"MARCHF8\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking MARCHF8 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"IL33\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking IL33 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"ABHD16B\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking ABHD16B to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  },\n  {\n    \"gene\": \"KIAA1191\",\n    \"confidence\": 0.01,\n    \"rationale\": \"No specific evidence linking KIAA1191 to this immunodeficiency phenotype; evidence chunks are generic and not gene-specific.\"\n  }\n]",
+  "parsed_top5": [
+    "IKZF1",
+    "IL7R",
+    "MFAP1",
+    "BOK",
+    "BCO1"
+  ]
+}

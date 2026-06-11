@@ -1,0 +1,20 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_EG0519P",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 11062,
+  "tokens_out": 23,
+  "finish_reason": "stop",
+  "latency_s": 10.782308578491211,
+  "cost_usd": 0.0008914000000000001,
+  "parse_error": "model_self_error:{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "error": null,
+  "raw_text": "{\"error\": \"The JSON response is missing. Please provide the JSON array as specified in the instructions.\"}",
+  "parsed_top5": []
+}

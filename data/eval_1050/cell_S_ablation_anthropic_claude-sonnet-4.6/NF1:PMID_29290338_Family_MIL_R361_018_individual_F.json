@@ -1,0 +1,26 @@
+{
+  "case_id": "NF1:PMID_29290338_Family_MIL_R361_018_individual_F",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "NF1",
+  "orig_qwen3_8b_top1": "NF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "NF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17071,
+  "tokens_out": 765,
+  "finish_reason": "stop",
+  "latency_s": 9.645607948303223,
+  "cost_usd": 0.062688,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"NF1\",\"confidence\":0.97,\"rationale\":\"NF1 evidence directly and explicitly mentions all patient HPO features: spinal neurofibroma, axillary/inguinal freckling, caf\u00e9-au-lait spots, and optic glioma as hallmark diagnostic criteria.\"},{\"gene\":\"ODF1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ODF1 to this phenotype; evidence chunks describe NF1 disease without mentioning ODF1.\"},{\"gene\":\"TMEM50A\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM50A to neurofibromatosis phenotype; all evidence chunks describe NF1 disease only.\"},{\"gene\":\"ZNF140\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZNF140 to this phenotype; evidence chunks describe NF1 disease without mentioning ZNF140.\"},{\"gene\":\"HOXB13\",\"confidence\":0.01,\"rationale\":\"No evidence linking HOXB13 to neurofibromatosis; evidence chunks describe NF1 disease without mentioning HOXB13.\"},{\"gene\":\"LYZ\",\"confidence\":0.01,\"rationale\":\"No evidence linking LYZ to this phenotype; evidence chunks describe NF1 disease without mentioning LYZ.\"},{\"gene\":\"C9orf72\",\"confidence\":0.01,\"rationale\":\"No evidence linking C9orf72 to neurofibromatosis phenotype; evidence chunks describe NF1 disease only.\"},{\"gene\":\"PFN2\",\"confidence\":0.01,\"rationale\":\"No evidence linking PFN2 to this phenotype; evidence chunks describe NF1 disease without mentioning PFN2.\"},{\"gene\":\"SH2D3A\",\"confidence\":0.01,\"rationale\":\"No evidence linking SH2D3A to neurofibromatosis; evidence chunks describe NF1 disease without mentioning SH2D3A.\"},{\"gene\":\"ADRA1D\",\"confidence\":0.01,\"rationale\":\"No evidence linking ADRA1D to this phenotype; evidence chunks describe NF1 disease without mentioning ADRA1D.\"},{\"gene\":\"MAD2L1BP\",\"confidence\":0.01,\"rationale\":\"No evidence linking MAD2L1BP to neurofibromatosis; evidence chunks describe NF1 disease without mentioning MAD2L1BP.\"},{\"gene\":\"LOXL4\",\"confidence\":0.01,\"rationale\":\"No evidence linking LOXL4 to this phenotype; evidence chunks describe NF1 disease without mentioning LOXL4.\"},{\"gene\":\"DNAJB4\",\"confidence\":0.01,\"rationale\":\"No evidence linking DNAJB4 to neurofibromatosis; evidence chunks describe NF1 disease without mentioning DNAJB4.\"},{\"gene\":\"LYPD6\",\"confidence\":0.01,\"rationale\":\"No evidence linking LYPD6 to this phenotype; evidence chunks describe NF1 disease without mentioning LYPD6.\"},{\"gene\":\"FAM47E\",\"confidence\":0.01,\"rationale\":\"No evidence linking FAM47E to neurofibromatosis; evidence chunks describe NF1 disease without mentioning FAM47E.\"}]",
+  "parsed_top5": [
+    "NF1",
+    "ODF1",
+    "TMEM50A",
+    "ZNF140",
+    "HOXB13"
+  ]
+}

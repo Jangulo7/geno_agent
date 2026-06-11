@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR24",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17184,
+  "tokens_out": 743,
+  "finish_reason": "stop",
+  "latency_s": 47.31834268569946,
+  "cost_usd": 0.00400891,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"LMNA\",\n    \"confidence\": 0.95,\n    \"rationale\": \"LMNA is strongly associated with familial partial lipodystrophy, matching all patient phenotypes including fat loss and metabolic abnormalities.\"\n  },\n  {\n    \"gene\": \"SMPDL3A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SMPDL3A to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"SGIP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SGIP1 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"ADGRG6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking ADGRG6 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"BMX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking BMX to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"FAM237A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking FAM237A to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"RABGAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RABGAP1 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"NGFR\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking NGFR to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"CLGN\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking CLGN to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"RANBP17\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RANBP17 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"HMGXB3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking HMGXB3 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"RPLP0\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking RPLP0 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"SEL1L2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking SEL1L2 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"IGSF11\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IGSF11 to lipodystrophy or metabolic phenotypes seen in the patient.\"\n  },\n  {\n    \"gene\": \"OR6K2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"OR6K2 is an olfactory receptor gene with no known role in lipodystrophy or metabolic disorders.\"\n  }\n]",
+  "parsed_top5": [
+    "LMNA",
+    "SMPDL3A",
+    "SGIP1",
+    "ADGRG6",
+    "BMX"
+  ]
+}

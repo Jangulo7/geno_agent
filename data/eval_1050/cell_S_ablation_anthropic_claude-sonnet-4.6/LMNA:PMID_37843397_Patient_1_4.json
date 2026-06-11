@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_1_4",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19297,
+  "tokens_out": 767,
+  "finish_reason": "stop",
+  "latency_s": 11.764904022216797,
+  "cost_usd": 0.069396,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.88,\"rationale\":\"LMNA p.R482W directly causes FPLD2 with loss of subcutaneous fat in limbs, lipodystrophy, dyslipidemia, elevated HbA1c, and increased LDL/cholesterol\u2014matching all patient HPO phenotypes.\"},{\"gene\":\"CAD\",\"confidence\":0.04,\"rationale\":\"CAD evidence chunks discuss FPLD clinical criteria and lipid/glycemic risk factors but CAD itself is a disease acronym, not a lipodystrophy gene; no direct causal link to this phenotype.\"},{\"gene\":\"SOAT2\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking SOAT2 to lipodystrophy or the patient's specific metabolic phenotype; evidence chunks are generic background.\"},{\"gene\":\"ZFPM2\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZFPM2 to lipodystrophy or metabolic syndrome; evidence is generic lipodystrophy background unrelated to this gene.\"},{\"gene\":\"ANHX\",\"confidence\":0.01,\"rationale\":\"No evidence linking ANHX to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"},{\"gene\":\"CLEC3A\",\"confidence\":0.01,\"rationale\":\"No evidence linking CLEC3A to lipodystrophy or metabolic phenotype; evidence is generic background unrelated to this gene.\"},{\"gene\":\"DNAJC25\",\"confidence\":0.01,\"rationale\":\"No evidence linking DNAJC25 to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"},{\"gene\":\"LDOC1\",\"confidence\":0.01,\"rationale\":\"No evidence linking LDOC1 to lipodystrophy or metabolic syndrome; evidence is generic background unrelated to this gene.\"},{\"gene\":\"SPICE1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SPICE1 to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"},{\"gene\":\"C2orf15\",\"confidence\":0.01,\"rationale\":\"No evidence linking C2orf15 to lipodystrophy or metabolic phenotype; evidence is generic background unrelated to this gene.\"},{\"gene\":\"ASB5\",\"confidence\":0.01,\"rationale\":\"No evidence linking ASB5 to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"},{\"gene\":\"ZRANB1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZRANB1 to lipodystrophy or metabolic syndrome; evidence is generic background unrelated to this gene.\"},{\"gene\":\"GEMIN4\",\"confidence\":0.01,\"rationale\":\"No evidence linking GEMIN4 to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"},{\"gene\":\"ZUP1\",\"confidence\":0.01,\"rationale\":\"No evidence linking ZUP1 to lipodystrophy or metabolic phenotype; evidence is generic background unrelated to this gene.\"},{\"gene\":\"CDY2B\",\"confidence\":0.01,\"rationale\":\"No evidence linking CDY2B to lipodystrophy or the patient's phenotype; evidence chunks are generic background only.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "CAD",
+    "SOAT2",
+    "ZFPM2",
+    "ANHX"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "SPINK5:PMID_39036217_Case_1",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": null,
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 20453,
+  "tokens_out": 55,
+  "finish_reason": "stop",
+  "latency_s": 3.596541166305542,
+  "cost_usd": 0.00165164,
+  "parse_error": "; unknown_shape:dict:name,confidence,rationale",
+  "error": null,
+  "raw_text": "{\"name\": \"SPINK5\", \"confidence\": 0.95, \"rationale\": \"SPINK5 mutations cause Netherton syndrome, characterized by erythroderma, sparse hair, and increased IgE, matching the patient's phenotype.\"}",
+  "parsed_top5": []
+}

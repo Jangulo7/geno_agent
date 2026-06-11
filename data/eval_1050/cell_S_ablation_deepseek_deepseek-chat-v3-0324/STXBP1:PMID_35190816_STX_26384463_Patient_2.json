@@ -1,0 +1,26 @@
+{
+  "case_id": "STXBP1:PMID_35190816_STX_26384463_Patient_2",
+  "category": "neurological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "STXBP1",
+  "orig_qwen3_8b_top1": "STXBP1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "STXBP1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16697,
+  "tokens_out": 662,
+  "finish_reason": "stop",
+  "latency_s": 21.419514894485474,
+  "cost_usd": 0.0038491400000000005,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"STXBP1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Strong evidence linking STXBP1 mutations to early-onset epileptic encephalopathy with burst-suppression EEG and severe developmental delay.\"\n  },\n  {\n    \"gene\": \"HPCA\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Some evidence connects HPCA variants to developmental delay and epilepsy, but less specific and less robust than STXBP1.\"\n  },\n  {\n    \"gene\": \"GOLGA8S\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GOLGA8S to the patient's phenotypes in the provided literature.\"\n  },\n  {\n    \"gene\": \"IFNA14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking IFNA14 to the patient's phenotypes in the provided literature.\"\n  },\n  {\n    \"gene\": \"GDF5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking GDF5 to the patient's phenotypes in the provided literature.\"\n  },\n  {\n    \"gene\": \"OR4K13\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting OR4K13 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"KIAA0825\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting KIAA0825 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"GSDMA\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting GSDMA to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"ADI1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting ADI1 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"FAM181A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting FAM181A to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"GPR149\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting GPR149 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"ZNF439\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting ZNF439 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"OR5L1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting OR5L1 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"PARP16\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting PARP16 to neurological disorders or epilepsy.\"\n  },\n  {\n    \"gene\": \"AGPS\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting AGPS to neurological disorders or epilepsy.\"\n  }\n]",
+  "parsed_top5": [
+    "STXBP1",
+    "HPCA",
+    "GOLGA8S",
+    "IFNA14",
+    "GDF5"
+  ]
+}

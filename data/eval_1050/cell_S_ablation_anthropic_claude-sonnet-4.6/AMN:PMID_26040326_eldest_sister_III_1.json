@@ -1,0 +1,26 @@
+{
+  "case_id": "AMN:PMID_26040326_eldest_sister_III_1",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "AMN",
+  "orig_qwen3_8b_top1": "AMN",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AMN",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 16134,
+  "tokens_out": 716,
+  "finish_reason": "stop",
+  "latency_s": 9.123315334320068,
+  "cost_usd": 0.059142,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AMN\",\"confidence\":0.92,\"rationale\":\"AMN encodes amnionless, directly causing Imerslund-Gr\u00e4sbeck syndrome (IGS) with all three patient phenotypes: megaloblastic anemia, proteinuria, and decreased vitamin B12; evidence chunks explicitly mention AMN variants causing IGS.\"},{\"gene\":\"ADAM10\",\"confidence\":0.02,\"rationale\":\"No direct evidence linking ADAM10 to the patient's phenotype; evidence chunks only mention AMN/CUBN in context of IGS.\"},{\"gene\":\"TOP2A\",\"confidence\":0.01,\"rationale\":\"No evidence linking TOP2A to megaloblastic anemia, proteinuria, or B12 deficiency; chunks reference IGS but not this gene.\"},{\"gene\":\"TMEM64\",\"confidence\":0.01,\"rationale\":\"No evidence linking TMEM64 to the patient's phenotype; referenced chunks discuss AMN/CUBN-related IGS only.\"},{\"gene\":\"CXorf66\",\"confidence\":0.01,\"rationale\":\"No evidence linking CXorf66 to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"},{\"gene\":\"RPUSD1\",\"confidence\":0.01,\"rationale\":\"No evidence linking RPUSD1 to the patient's phenotype; chunks reference IGS but not this gene.\"},{\"gene\":\"FBXL7\",\"confidence\":0.01,\"rationale\":\"No evidence linking FBXL7 to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"},{\"gene\":\"SLC44A1\",\"confidence\":0.01,\"rationale\":\"No evidence linking SLC44A1 to the patient's phenotype; chunks reference IGS but not this gene.\"},{\"gene\":\"CTSD\",\"confidence\":0.01,\"rationale\":\"No evidence linking CTSD to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"},{\"gene\":\"F7\",\"confidence\":0.01,\"rationale\":\"No evidence linking F7 to the patient's phenotype; chunks reference IGS but not this gene.\"},{\"gene\":\"ANG\",\"confidence\":0.01,\"rationale\":\"No evidence linking ANG to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"},{\"gene\":\"FERMT3\",\"confidence\":0.01,\"rationale\":\"No evidence linking FERMT3 to the patient's phenotype; chunks reference IGS but not this gene.\"},{\"gene\":\"CDK1\",\"confidence\":0.01,\"rationale\":\"No evidence linking CDK1 to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"},{\"gene\":\"AMIGO1\",\"confidence\":0.01,\"rationale\":\"No evidence linking AMIGO1 to the patient's phenotype; chunks reference IGS/AMN but not this gene directly.\"},{\"gene\":\"TRIO\",\"confidence\":0.01,\"rationale\":\"No evidence linking TRIO to megaloblastic anemia, proteinuria, or B12 deficiency in the provided chunks.\"}]",
+  "parsed_top5": [
+    "AMN",
+    "ADAM10",
+    "TOP2A",
+    "TMEM64",
+    "CXorf66"
+  ]
+}

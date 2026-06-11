@@ -1,0 +1,22 @@
+{
+  "case_id": "IKZF1:PMID_27939403_A_1",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "IKZF1",
+  "orig_qwen3_8b_top1": "IKZF1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "IKZF1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18694,
+  "tokens_out": 58,
+  "finish_reason": "stop",
+  "latency_s": 4.2200767993927,
+  "cost_usd": 0.00378346,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"IKZF1\",\n  \"confidence\": 0.95,\n  \"rationale\": \"IKZF1 mutations directly cause immune dysregulation matching all patient phenotypes, including thrombocytopenia, B/T cell defects, and hypogammaglobulinemia.\"\n}",
+  "parsed_top5": [
+    "IKZF1"
+  ]
+}

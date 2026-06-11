@@ -1,0 +1,26 @@
+{
+  "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+  "category": "developmental",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "DNA2",
+  "orig_qwen3_8b_top1": "DNA2",
+  "orig_qwen3_8b_correct": true,
+  "top1": "DNA2",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17281,
+  "tokens_out": 600,
+  "finish_reason": "stop",
+  "latency_s": 17.39079213142395,
+  "cost_usd": 0.0039182,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"DNA2\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Strong evidence linking DNA2 to a phenotype similar to the patient's, including neurologic and ectodermal findings like nail dystrophy and cataracts.\"\n  },\n  {\n    \"gene\": \"KRT24\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Indirect evidence suggesting involvement in phenotypes with skin and nail abnormalities, though less specific.\"\n  },\n  {\n    \"gene\": \"CRIP2\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Mentions similar skeletal and ectodermal anomalies, but linkage to the patient's full phenotype is less clear.\"\n  },\n  {\n    \"gene\": \"SMCO4\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Some evidence of neurologic and ectodermal involvement, but not as directly linked as DNA2.\"\n  },\n  {\n    \"gene\": \"STK24\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Possible skeletal abnormalities mentioned, but relevance to the patient's full phenotype is unclear.\"\n  },\n  {\n    \"gene\": \"FOXP3\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Limited evidence, mainly skeletal findings without strong phenotype overlap.\"\n  },\n  {\n    \"gene\": \"PGM1\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Minimal evidence, lacks direct connection to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC12A2\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Very minimal evidence, no strong phenotype overlap.\"\n  },\n  {\n    \"gene\": \"SAXO1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"H2BC4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"SSH2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"ALB\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"CXCL1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"EOLA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  },\n  {\n    \"gene\": \"GAST\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No relevant evidence found.\"\n  }\n]",
+  "parsed_top5": [
+    "DNA2",
+    "KRT24",
+    "CRIP2",
+    "SMCO4",
+    "STK24"
+  ]
+}

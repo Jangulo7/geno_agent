@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_26031502_proband",
+  "category": "immunological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18266,
+  "tokens_out": 154,
+  "finish_reason": "stop",
+  "latency_s": 3.7250208854675293,
+  "cost_usd": 0.0015044000000000001,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\"SPINK5\": 0.95, \"FABP5\": 0.7, \"TSNAXIP1\": 0.6, \"POLR2M\": 0.6, \"CCDC6\": 0.6, \"SCOC\": 0.6, \"APMAP\": 0.6, \"XPOT\": 0.6, \"VRK2\": 0.6, \"FSCN3\": 0.6, \"CIB1\": 0.6, \"RPAIN\": 0.6, \"RENBP\": 0.6, \"COQ4\": 0.6, \"LYZ\": 0.6}",
+  "parsed_top5": [
+    "SPINK5",
+    "FABP5",
+    "TSNAXIP1",
+    "POLR2M",
+    "CCDC6"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "AIRE:PMID_18616706_Case_3",
+  "category": "immunological",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "AIRE",
+  "orig_qwen3_8b_top1": "AIRE",
+  "orig_qwen3_8b_correct": true,
+  "top1": "AIRE",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17235,
+  "tokens_out": 665,
+  "finish_reason": "stop",
+  "latency_s": 51.124194622039795,
+  "cost_usd": 0.00395905,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"AIRE\",\n    \"confidence\": 0.99,\n    \"rationale\": \"AIRE is the definitive cause of APS-1, matching all patient phenotypes with strong literature support.\"\n  },\n  {\n    \"gene\": \"DAB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking DAB2 to APS-1 or the patient's phenotype profile.\"\n  },\n  {\n    \"gene\": \"F8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant evidence connecting F8 to autoimmune or endocrine disorders.\"\n  },\n  {\n    \"gene\": \"PDHB\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting PDHB's role in APS-1 or related phenotypes.\"\n  },\n  {\n    \"gene\": \"NDUFS8\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking NDUFS8 to the patient's autoimmune/endocrine profile.\"\n  },\n  {\n    \"gene\": \"TTBK2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting TTBK2 to APS-1 or mucocutaneous candidiasis.\"\n  },\n  {\n    \"gene\": \"CEP44\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature associating CEP44 with APS-1 or similar syndromes.\"\n  },\n  {\n    \"gene\": \"PRAMEF7\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting PRAMEF7's involvement in autoimmune disorders.\"\n  },\n  {\n    \"gene\": \"PAPSS2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking PAPSS2 to APS-1 or chronic mucocutaneous candidiasis.\"\n  },\n  {\n    \"gene\": \"LMOD2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting LMOD2 to endocrine or autoimmune phenotypes.\"\n  },\n  {\n    \"gene\": \"ARMH2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature associating ARMH2 with APS-1 or similar conditions.\"\n  },\n  {\n    \"gene\": \"SDIM1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence supporting SDIM1's role in autoimmune polyendocrinopathy.\"\n  },\n  {\n    \"gene\": \"ADH1C\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No literature linking ADH1C to mucocutaneous candidiasis or hypoparathyroidism.\"\n  },\n  {\n    \"gene\": \"SORCS3\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No evidence connecting SORCS3 to APS-1 or related autoimmune disorders.\"\n  },\n  {\n    \"gene\": \"CCDC17\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No relevant literature associating CCDC17 with the patient's phenotype profile.\"\n  }\n]",
+  "parsed_top5": [
+    "AIRE",
+    "DAB2",
+    "F8",
+    "PDHB",
+    "NDUFS8"
+  ]
+}

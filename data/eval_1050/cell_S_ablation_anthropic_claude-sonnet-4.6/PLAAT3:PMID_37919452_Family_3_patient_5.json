@@ -1,0 +1,26 @@
+{
+  "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "PLAAT3",
+  "orig_qwen3_8b_top1": "AKR1B10",
+  "orig_qwen3_8b_correct": false,
+  "top1": "AKR1B10",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16225,
+  "tokens_out": 883,
+  "finish_reason": "stop",
+  "latency_s": 11.329792022705078,
+  "cost_usd": 0.06192,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"AKR1B10\",\"confidence\":0.72,\"rationale\":\"AKR1B10 evidence chunks are directly cited (mention=yes, relevance 4-5/5) with case reports matching intellectual disability, global developmental delay, demyelinating peripheral neuropathy, pes cavus, scoliosis, and gait disturbance.\"},{\"gene\":\"SPATA24\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for SPATA24 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"ZFP69B\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for ZFP69B are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"PHC2\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for PHC2 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"GVQW3\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for GVQW3 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"PTCHD1\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for PTCHD1 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"ARID3B\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for ARID3B are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"STRN3\",\"confidence\":0.03,\"rationale\":\"Evidence chunks for STRN3 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"FSIP1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for FSIP1 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"UBL4A\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for UBL4A are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"VRK3\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for VRK3 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"UBE2L5\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for UBE2L5 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"KRTDAP\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for KRTDAP are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"ASAP2\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for ASAP2 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"},{\"gene\":\"MAGEB17\",\"confidence\":0.02,\"rationale\":\"Evidence chunks for MAGEB17 are non-specific (mention=no, relevance 2/5) with no direct gene-phenotype link to the patient's profile.\"}]",
+  "parsed_top5": [
+    "AKR1B10",
+    "SPATA24",
+    "ZFP69B",
+    "PHC2",
+    "GVQW3"
+  ]
+}

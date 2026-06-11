@@ -1,0 +1,22 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM36",
+  "category": "metabolic",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17204,
+  "tokens_out": 60,
+  "finish_reason": "stop",
+  "latency_s": 4.212893486022949,
+  "cost_usd": 0.003487,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "{\n  \"gene\": \"LMNA\",\n  \"confidence\": 0.95,\n  \"rationale\": \"LMNA mutations are strongly associated with familial partial lipodystrophy, matching the patient's phenotype of limb and truncal fat loss, diabetes, and hepatic steatosis.\"\n}",
+  "parsed_top5": [
+    "LMNA"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "EXTL3:PMID_28148688_P2",
+  "category": "developmental",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "EXTL3",
+  "orig_qwen3_8b_top1": "EXTL3",
+  "orig_qwen3_8b_correct": true,
+  "top1": "EXTL3",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17869,
+  "tokens_out": 684,
+  "finish_reason": "stop",
+  "latency_s": 10.256535768508911,
+  "cost_usd": 0.063867,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"EXTL3\",\"confidence\":0.96,\"rationale\":\"EXTL3 chunks directly describe patients with trident acetabula, cloverleaf skull, cervical canal stenosis, liver cysts, anal atresia, T-cell SCID with undetectable TRECs, limb undergrowth, craniosynostosis, and increased intervertebral space\u2014matching all patient HPOs.\"},{\"gene\":\"ZBED2\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct ZBED2-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"DENND1B\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct DENND1B-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"WNK3\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct WNK3-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"SEMG2\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct SEMG2-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"PTN\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct PTN-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"FBXO7\",\"confidence\":0.01,\"rationale\":\"Only shared background literature chunks with no direct FBXO7-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"PRAMEF19\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct PRAMEF19-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"DPM3\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct DPM3-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"TMEM63C\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct TMEM63C-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"KRTCAP3\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct KRTCAP3-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"ZNF577\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct ZNF577-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"CLEC4A\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct CLEC4A-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"IGF2\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct IGF2-specific evidence linking it to this phenotype profile.\"},{\"gene\":\"FKBPL\",\"confidence\":0.0,\"rationale\":\"Only shared background literature chunks with no direct FKBPL-specific evidence linking it to this phenotype profile.\"}]",
+  "parsed_top5": [
+    "EXTL3",
+    "ZBED2",
+    "DENND1B",
+    "WNK3",
+    "SEMG2"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "SPINK5:PMID_11841556_15_1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "SPINK5",
+  "orig_qwen3_8b_top1": "SPINK5",
+  "orig_qwen3_8b_correct": true,
+  "top1": "SPINK5",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19878,
+  "tokens_out": 712,
+  "finish_reason": "stop",
+  "latency_s": 12.91699767112732,
+  "cost_usd": 0.070314,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"SPINK5\",\"confidence\":0.97,\"rationale\":\"SPINK5 mutations cause Netherton syndrome, directly matching all key HPO terms: congenital exfoliative erythroderma, ichthyosis linearis circumflexa, trichorrhexis invaginata, elevated IgE, recurrent skin infections, hypernatremic dehydration, and failure to thrive.\"},{\"gene\":\"SAMD4B\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SAMD4B to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"NME5\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NME5 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"ACTR1A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ACTR1A to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"ZNF546\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking ZNF546 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"MPZL1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking MPZL1 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"RAB9A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking RAB9A to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"TAF6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TAF6 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"SPEM1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SPEM1 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"SCX\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SCX to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"TUBB6\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking TUBB6 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"NPY5R\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking NPY5R to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"CYB5A\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking CYB5A to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"SPRR3\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking SPRR3 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"},{\"gene\":\"DAAM1\",\"confidence\":0.01,\"rationale\":\"No direct evidence linking DAAM1 to this phenotype; evidence chunks are generic background text not mentioning this gene.\"}]",
+  "parsed_top5": [
+    "SPINK5",
+    "SAMD4B",
+    "NME5",
+    "ACTR1A",
+    "ZNF546"
+  ]
+}

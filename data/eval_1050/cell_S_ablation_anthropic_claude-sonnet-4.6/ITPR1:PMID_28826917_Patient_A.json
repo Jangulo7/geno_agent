@@ -1,0 +1,26 @@
+{
+  "case_id": "ITPR1:PMID_28826917_Patient_A",
+  "category": "neurological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "ITPR1",
+  "orig_qwen3_8b_top1": "ITPR1",
+  "orig_qwen3_8b_correct": true,
+  "top1": "ITPR1",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19548,
+  "tokens_out": 763,
+  "finish_reason": "stop",
+  "latency_s": 16.88733172416687,
+  "cost_usd": 0.070089,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"ITPR1\",\"confidence\":0.72,\"rationale\":\"ITPR1/SCA15 evidence directly describes slowly progressive limb/gait ataxia, saccadic eye movements, dysarthria, cerebellar vermis atrophy, and loss of ambulation\u2014matching nearly all patient HPO terms.\"},{\"gene\":\"SUCLA2\",\"confidence\":0.08,\"rationale\":\"SUCLA2 evidence mentions hypotonia, ataxia, and myoclonus in mitochondrial disease context, partially overlapping the phenotype but not a direct gene-disease match in the chunks.\"},{\"gene\":\"CPLX1\",\"confidence\":0.03,\"rationale\":\"Evidence chunks are generic cerebellar ataxia reviews with no specific CPLX1 disease association matching this phenotype profile.\"},{\"gene\":\"GTF3C4\",\"confidence\":0.03,\"rationale\":\"Evidence describes a spastic ataxia syndrome with slow saccades but is attributed to another gene; no direct GTF3C4-disease link supporting this phenotype.\"},{\"gene\":\"EML5\",\"confidence\":0.03,\"rationale\":\"Evidence mentions ELOVL5/SCA38 with limb ataxia and saccadic eye movements but EML5 itself has no direct supporting evidence for this phenotype.\"},{\"gene\":\"TRIT1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks are generic ataxia descriptions with no specific TRIT1 causal link to the patient's phenotype profile.\"},{\"gene\":\"CYLC2\",\"confidence\":0.02,\"rationale\":\"No specific CYLC2 neurological disease evidence; chunks are generic cerebellar ataxia reviews unrelated to this gene.\"},{\"gene\":\"B3GNT8\",\"confidence\":0.01,\"rationale\":\"No direct B3GNT8 neurological disease evidence in provided chunks; only generic ataxia literature.\"},{\"gene\":\"KLF1\",\"confidence\":0.01,\"rationale\":\"KLF1 is a hematopoietic transcription factor; no evidence linking it to the cerebellar/movement disorder phenotype described.\"},{\"gene\":\"PPME1\",\"confidence\":0.01,\"rationale\":\"No specific PPME1 neurological disease evidence; chunks describe SYNE1 ataxia unrelated to PPME1.\"},{\"gene\":\"NDUFB1\",\"confidence\":0.01,\"rationale\":\"NDUFB1 is a mitochondrial complex I subunit; no direct evidence in chunks linking it to this specific phenotype cluster.\"},{\"gene\":\"ZNF407\",\"confidence\":0.01,\"rationale\":\"No specific ZNF407 neurological disease evidence in provided chunks; only generic ataxia descriptions.\"},{\"gene\":\"CASQ2\",\"confidence\":0.01,\"rationale\":\"CASQ2 is associated with cardiac arrhythmia; no evidence linking it to the cerebellar/movement disorder phenotype.\"},{\"gene\":\"NABP2\",\"confidence\":0.01,\"rationale\":\"No specific NABP2 neurological disease evidence; chunks are generic ataxia literature unrelated to this gene.\"},{\"gene\":\"STOX2\",\"confidence\":0.01,\"rationale\":\"No specific STOX2 neurological disease evidence; chunks are generic ataxia descriptions with no STOX2 causal link.\"}]",
+  "parsed_top5": [
+    "ITPR1",
+    "SUCLA2",
+    "CPLX1",
+    "GTF3C4",
+    "EML5"
+  ]
+}

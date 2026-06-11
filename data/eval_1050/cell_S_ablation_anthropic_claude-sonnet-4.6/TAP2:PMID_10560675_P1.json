@@ -1,0 +1,26 @@
+{
+  "case_id": "TAP2:PMID_10560675_P1",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "TAP2",
+  "orig_qwen3_8b_top1": "RFX6",
+  "orig_qwen3_8b_correct": false,
+  "top1": "CCDC160",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 19619,
+  "tokens_out": 1072,
+  "finish_reason": "stop",
+  "latency_s": 20.83513069152832,
+  "cost_usd": 0.074937,
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "error": null,
+  "raw_text": "The phenotype profile (bronchiectasis, chronic rhinitis, chronic sinusitis, chronic bronchitis, nasal polyposis) is classic for Primary Ciliary Dyskinesia (PCD). Among the candidates, CCDC160 is a coiled-coil domain containing gene associated with cilia structure/function, and its evidence chunk specifically discusses PCD patients with bronchiectasis, bronchitis, chronic rhinosinusitis, and nasal polyposis. ING5 and SERPINH1 also have the PCD-specific chunk. However, CCDC160 (coiled-coil domain containing 160) is most directly a ciliary gene fitting PCD. The evidence chunks are largely generic across candidates, but CCDC160's name and the PCD-specific chunk give it the strongest prior. ING5 and SERPINH1 share the same PCD chunk. Given that none of the genes have gene-specific evidence linking them directly, I must rely on gene biology: CCDC160 is a ciliary/axonemal gene most consistent with PCD phenotype.\n\n[{\"gene\":\"CCDC160\",\"confidence\":0.35,\"rationale\":\"CCDC160 encodes a coiled-coil domain protein consistent with ciliary axonemal function; its evidence includes PCD patients with bronchiectasis, chronic rhinosinusitis, bronchitis, and nasal polyposis matching the full phenotype.\"},{\"gene\":\"ING5\",\"confidence\":0.12,\"rationale\":\"ING5 evidence includes PCD/Kartagener syndrome description with bronchiectasis, chronic rhinitis, and sinusitis, but ING5 is a chromatin regulator with no known ciliary role.\"},{\"gene\":\"SERPINH1\",\"confidence\":0.10,\"rationale\":\"SERPINH1 evidence includes PCD/Kartagener syndrome chunk matching the phenotype, but SERPINH1 is a collagen chaperone with no established ciliary or airway disease link.\"},{\"gene\":\"MSI2\",\"confidence\":0.07,\"rationale\":\"MSI2 evidence includes PCD patient descriptions with bronchiectasis and nasal polyposis, but MSI2 is an RNA-binding protein without known ciliary function.\"},{\"gene\":\"DPF2\",\"confidence\":0.05,\"rationale\":\"DPF2 shares PCD-related evidence chunks but is a chromatin remodeling factor with no established link to ciliary dyskinesia or airway disease.\"},{\"gene\":\"SIX2\",\"confidence\":0.04,\"rationale\":\"SIX2 shares PCD-related evidence but is a transcription factor involved in kidney development, not ciliary airway disease.\"},{\"gene\":\"SDHAF2\",\"confidence\":0.04,\"rationale\":\"SDHAF2 shares PCD-related evidence chunks but is a mitochondrial complex II assembly factor unrelated to ciliary function.\"},{\"gene\":\"RNF220\",\"confidence\":0.04,\"rationale\":\"RNF220 shares PCD-related evidence but is a ubiquitin E3 ligase with no known ciliary or respiratory disease association.\"},{\"gene\":\"CREB3L1\",\"confidence\":0.03,\"rationale\":\"CREB3L1 shares generic airway disease evidence but is an ER stress transcription factor with no known PCD or bronchiectasis link.\"},{\"gene\":\"RFX6\",\"confidence\":0.03,\"rationale\":\"RFX6 shares generic bronchiectasis/sinusitis evidence but is a transcription factor involved in pancreatic development, not ciliary airway disease.\"},{\"gene\":\"TET2\",\"confidence\":0.03,\"rationale\":\"TET2 shares generic airway evidence but is a DNA demethylase associated with hematologic malignancies, not ciliary dyskinesia.\"},{\"gene\":\"GPAA1\",\"confidence\":0.03,\"rationale\":\"GPAA1 shares generic airway evidence but is a GPI anchor biosynthesis gene with no established link to bronchiectasis or PCD.\"},{\"gene\":\"MLKL\",\"confidence\":0.03,\"rationale\":\"MLKL shares generic airway evidence but is a necroptosis mediator with no known role in ciliary function or chronic airway disease.\"},{\"gene\":\"H3Y2\",\"confidence\":0.02,\"rationale\":\"H3Y2 shares generic airway evidence but is a histone gene with no established link to PCD or bronchiectasis.\"},{\"gene\":\"PRSS53\",\"confidence\":0.02,\"rationale\":\"PRSS53 shares generic airway evidence but is a serine protease with no known association with PCD or the described airway phenotype.\"}]",
+  "parsed_top5": [
+    "CCDC160",
+    "ING5",
+    "SERPINH1",
+    "MSI2",
+    "DPF2"
+  ]
+}

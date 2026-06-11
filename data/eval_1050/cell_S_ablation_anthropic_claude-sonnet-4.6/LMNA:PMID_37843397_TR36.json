@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_TR36",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 20456,
+  "tokens_out": 659,
+  "finish_reason": "stop",
+  "latency_s": 8.835470914840698,
+  "cost_usd": 0.071253,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.92,\"rationale\":\"LMNA evidence directly and explicitly describes FPLD2 with loss of subcutaneous fat in limbs/trunk, T2DM, hepatic steatosis, and premature atherosclerosis matching all patient HPO terms.\"},{\"gene\":\"AFMID\",\"confidence\":0.01,\"rationale\":\"No direct mention of AFMID in lipodystrophy; evidence chunks are generic lipodystrophy background with no gene-specific link.\"},{\"gene\":\"ARAP1\",\"confidence\":0.01,\"rationale\":\"No direct mention of ARAP1 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"CAMKK2\",\"confidence\":0.01,\"rationale\":\"No direct mention of CAMKK2 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"DUSP26\",\"confidence\":0.01,\"rationale\":\"No direct mention of DUSP26 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"RFXAP\",\"confidence\":0.01,\"rationale\":\"No direct mention of RFXAP in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"ZIM3\",\"confidence\":0.01,\"rationale\":\"No direct mention of ZIM3 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"COLGALT2\",\"confidence\":0.01,\"rationale\":\"No direct mention of COLGALT2 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"C5orf34\",\"confidence\":0.01,\"rationale\":\"No direct mention of C5orf34 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"TIMM44\",\"confidence\":0.01,\"rationale\":\"No direct mention of TIMM44 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"PRAMEF17\",\"confidence\":0.01,\"rationale\":\"No direct mention of PRAMEF17 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"BMS1\",\"confidence\":0.01,\"rationale\":\"No direct mention of BMS1 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"PRSS35\",\"confidence\":0.01,\"rationale\":\"No direct mention of PRSS35 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"SMARCA4\",\"confidence\":0.01,\"rationale\":\"No direct mention of SMARCA4 in lipodystrophy; evidence is generic background text only.\"},{\"gene\":\"CAP1\",\"confidence\":0.01,\"rationale\":\"No direct mention of CAP1 in lipodystrophy; evidence is generic background text only.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "AFMID",
+    "ARAP1",
+    "CAMKK2",
+    "DUSP26"
+  ]
+}

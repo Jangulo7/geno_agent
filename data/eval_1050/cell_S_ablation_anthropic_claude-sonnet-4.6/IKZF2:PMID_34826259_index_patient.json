@@ -1,0 +1,26 @@
+{
+  "case_id": "IKZF2:PMID_34826259_index_patient",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "IKZF2",
+  "orig_qwen3_8b_top1": "TANC2",
+  "orig_qwen3_8b_correct": false,
+  "top1": "IGHMBP2",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 15875,
+  "tokens_out": 1137,
+  "finish_reason": "stop",
+  "latency_s": 13.985344886779785,
+  "cost_usd": 0.06468,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n  {\n    \"gene\": \"IGHMBP2\",\n    \"confidence\": 0.35,\n    \"rationale\": \"IGHMBP2 is known to cause immunodeficiency with hypogammaglobulinemia, recurrent infections, and growth failure; its name (immunoglobulin mu binding protein 2) directly implicates antibody deficiency matching the patient's low IgG/IgA/IgM and recurrent pneumonia/otitis.\"\n  },\n  {\n    \"gene\": \"TANC2\",\n    \"confidence\": 0.25,\n    \"rationale\": \"TANC2 disruption in mice directly causes decreased body weight and short stature (highest-relevance evidence chunk), partially matching the patient's growth phenotype, though immune features are less supported.\"\n  },\n  {\n    \"gene\": \"TREM2\",\n    \"confidence\": 0.08,\n    \"rationale\": \"TREM2 evidence touches on CD4/CD8 T cell ratios and hypothyroidism context, but no direct link to the combined immunodeficiency and growth phenotype profile.\"\n  },\n  {\n    \"gene\": \"GPR171\",\n    \"confidence\": 0.04,\n    \"rationale\": \"GPR171 evidence relates to CD8/CD4 ratio in tumor immunity only; no direct connection to the patient's combined immunodeficiency, hypogammaglobulinemia, or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"KLF1\",\n    \"confidence\": 0.04,\n    \"rationale\": \"No specific evidence linking KLF1 to the patient's combined immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism phenotype profile.\"\n  },\n  {\n    \"gene\": \"GABRR2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking GABRR2 to combined immunodeficiency, hypogammaglobulinemia, or the patient's growth and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"PRADC1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking PRADC1 to the patient's immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"ZNF706\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking ZNF706 to combined immunodeficiency, hypogammaglobulinemia, or the patient's growth and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"SPRY2\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking SPRY2 to the patient's combined immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"ABI1\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking ABI1 to combined immunodeficiency, hypogammaglobulinemia, or the patient's growth and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"RPL38\",\n    \"confidence\": 0.03,\n    \"rationale\": \"No evidence linking RPL38 to the patient's combined immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"KCNK4\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence linking KCNK4 to combined immunodeficiency, hypogammaglobulinemia, or the patient's growth and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"SPDYE17\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence linking SPDYE17 to the patient's combined immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism.\"\n  },\n  {\n    \"gene\": \"SH3GL3\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence linking SH3GL3 to combined immunodeficiency, hypogammaglobulinemia, or the patient's growth and endocrine phenotypes.\"\n  },\n  {\n    \"gene\": \"NOL7\",\n    \"confidence\": 0.02,\n    \"rationale\": \"No evidence linking NOL7 to the patient's combined immunodeficiency, hypogammaglobulinemia, short stature, or hypothyroidism.\"\n  }\n]",
+  "parsed_top5": [
+    "IGHMBP2",
+    "TANC2",
+    "TREM2",
+    "GPR171",
+    "KLF1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "GNAS:PMID_25802881_P57",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "GNAS",
+  "orig_qwen3_8b_top1": "GNAS",
+  "orig_qwen3_8b_correct": true,
+  "top1": "GNAS",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 19305,
+  "tokens_out": 868,
+  "finish_reason": "stop",
+  "latency_s": 11.204622030258179,
+  "cost_usd": 0.070935,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"GNAS\",\"confidence\":0.93,\"rationale\":\"GNAS mutations cause pseudohypoparathyroidism type 1a/AHO, directly explaining all 5 HPO features: short metacarpals, hypocalcemia, hyperphosphatemia, short stature, and obesity; evidence chunks explicitly mention GNAS.\"},{\"gene\":\"GNAO1\",\"confidence\":0.02,\"rationale\":\"Evidence chunks describe AHO/PHP phenotype but GNAO1 is not the causal gene for this disorder; no direct gene-phenotype link in evidence.\"},{\"gene\":\"ADORA3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but ADORA3 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"VRK3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but VRK3 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"KRT71\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but KRT71 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"TALDO1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but TALDO1 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"CFAP52\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but CFAP52 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"RTP4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but RTP4 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"SEPTIN7\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but SEPTIN7 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"ZNF467\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but ZNF467 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"TMEM240\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but TMEM240 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"ATAD3A\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but ATAD3A has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"DUSP5\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but DUSP5 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"ZNF75A\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but ZNF75A has no established role in pseudohypoparathyroidism or the patient's HPO features.\"},{\"gene\":\"SIGLEC1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks reference PHP/AHO phenotype but SIGLEC1 has no established role in pseudohypoparathyroidism or the patient's HPO features.\"}]",
+  "parsed_top5": [
+    "GNAS",
+    "GNAO1",
+    "ADORA3",
+    "VRK3",
+    "KRT71"
+  ]
+}

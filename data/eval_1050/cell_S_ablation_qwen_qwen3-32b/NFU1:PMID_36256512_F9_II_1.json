@@ -1,0 +1,26 @@
+{
+  "case_id": "NFU1:PMID_36256512_F9_II_1",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "NFU1",
+  "orig_qwen3_8b_top1": "SYT1",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SYT1",
+  "top1_correct": false,
+  "causal_rank": 4,
+  "tokens_in": 16252,
+  "tokens_out": 682,
+  "finish_reason": "stop",
+  "latency_s": 19.2581045627594,
+  "cost_usd": 0.00149112,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\": \"SYT1\", \"confidence\": 0.92, \"rationale\": \"SYT1 mutations are directly linked to peripheral neuropathy and developmental issues, aligning with the patient's HPO terms.\"}, {\"gene\": \"CHRFAM7A\", \"confidence\": 0.65, \"rationale\": \"CHRFAM7A is associated with peripheral neuropathy, ptosis, and developmental regression in reported cases.\"}, {\"gene\": \"GCLM\", \"confidence\": 0.58, \"rationale\": \"GCLM deficiency is linked to peripheral neuropathy and developmental delay, though less specific than SYT1.\"}, {\"gene\": \"NFU1\", \"confidence\": 0.55, \"rationale\": \"NFU1 mutations can cause peripheral neuropathy and developmental regression, but with less direct evidence.\"}, {\"gene\": \"GTPBP2\", \"confidence\": 0.52, \"rationale\": \"GTPBP2 is associated with neurodegeneration and peripheral neuropathy, but with variable and less specific phenotypes.\"}, {\"gene\": \"KCTD3\", \"confidence\": 0.48, \"rationale\": \"KCTD3 mutations are linked to developmental delay and cerebellar issues, but not directly to peripheral neuropathy.\"}, {\"gene\": \"TM4SF1\", \"confidence\": 0.45, \"rationale\": \"TM4SF1 is associated with peripheral neuropathy and ptosis, but evidence is indirect and less specific.\"}, {\"gene\": \"RIPOR1\", \"confidence\": 0.42, \"rationale\": \"RIPOR1 is linked to neurological features, but evidence for peripheral neuropathy and ptosis is weak.\"}, {\"gene\": \"NBPF8\", \"confidence\": 0.40, \"rationale\": \"NBPF8 is associated with peripheral neuropathy and ptosis, but evidence is limited and indirect.\"}, {\"gene\": \"MRPS11\", \"confidence\": 0.38, \"rationale\": \"MRPS11 is linked to mitochondrial disease with peripheral neuropathy, but evidence is not specific to this phenotype.\"}, {\"gene\": \"EML2\", \"confidence\": 0.35, \"rationale\": \"EML2 is associated with neurological features, but evidence for peripheral neuropathy and ptosis is weak.\"}, {\"gene\": \"CHRM3\", \"confidence\": 0.33, \"rationale\": \"CHRM3 is linked to peripheral neuropathy and ptosis, but evidence is indirect and less specific.\"}, {\"gene\": \"SMC5\", \"confidence\": 0.30, \"rationale\": \"SMC5 is associated with peripheral neuropathy, but evidence is limited and not specific to this phenotype.\"}, {\"gene\": \"ZXDA\", \"confidence\": 0.28, \"rationale\": \"ZXDA is linked to peripheral neuropathy and ptosis, but evidence is indirect and less specific.\"}, {\"gene\": \"NWD2\", \"confidence\": 0.25, \"rationale\": \"NWD2 is associated with peripheral neuropathy and ptosis, but evidence is limited and not specific to this phenotype.\"}]",
+  "parsed_top5": [
+    "SYT1",
+    "CHRFAM7A",
+    "GCLM",
+    "NFU1",
+    "GTPBP2"
+  ]
+}

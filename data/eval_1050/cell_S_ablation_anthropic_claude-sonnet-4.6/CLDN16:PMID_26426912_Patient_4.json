@@ -1,0 +1,26 @@
+{
+  "case_id": "CLDN16:PMID_26426912_Patient_4",
+  "category": "metabolic",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "CLDN16",
+  "orig_qwen3_8b_top1": "CLDN16",
+  "orig_qwen3_8b_correct": true,
+  "top1": "CLDN16",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 17546,
+  "tokens_out": 810,
+  "finish_reason": "stop",
+  "latency_s": 9.786300420761108,
+  "cost_usd": 0.064788,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"CLDN16\",\"confidence\":0.93,\"rationale\":\"All three evidence chunks directly and explicitly link CLDN16 mutations to FHHNC, matching every patient HPO: nephrocalcinosis, renal insufficiency, hypercalciuria, hematuria, hypomagnesemia, and enamel defects.\"},{\"gene\":\"SMCO1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between SMCO1 and the patient's phenotype profile.\"},{\"gene\":\"LRP1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between LRP1 and the patient's phenotype profile.\"},{\"gene\":\"ARIH1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between ARIH1 and the patient's phenotype profile.\"},{\"gene\":\"ITGA7\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between ITGA7 and the patient's phenotype profile.\"},{\"gene\":\"HOXB6\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between HOXB6 and the patient's phenotype profile.\"},{\"gene\":\"MC4R\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between MC4R and the patient's phenotype profile.\"},{\"gene\":\"CHIC1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between CHIC1 and the patient's phenotype profile.\"},{\"gene\":\"PGA4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between PGA4 and the patient's phenotype profile.\"},{\"gene\":\"DNAJA4\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between DNAJA4 and the patient's phenotype profile.\"},{\"gene\":\"ASB8\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between ASB8 and the patient's phenotype profile.\"},{\"gene\":\"ITPKB\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between ITPKB and the patient's phenotype profile.\"},{\"gene\":\"CYP4V2\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between CYP4V2 and the patient's phenotype profile.\"},{\"gene\":\"GSTA3\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between GSTA3 and the patient's phenotype profile.\"},{\"gene\":\"VRK1\",\"confidence\":0.01,\"rationale\":\"Evidence chunks discuss FHHNC/CLDN16 context only; no direct link between VRK1 and the patient's phenotype profile.\"}]",
+  "parsed_top5": [
+    "CLDN16",
+    "SMCO1",
+    "LRP1",
+    "ARIH1",
+    "ITGA7"
+  ]
+}

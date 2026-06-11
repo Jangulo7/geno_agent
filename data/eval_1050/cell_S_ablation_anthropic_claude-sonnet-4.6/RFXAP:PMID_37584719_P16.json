@@ -1,0 +1,26 @@
+{
+  "case_id": "RFXAP:PMID_37584719_P16",
+  "category": "immunological",
+  "model": "anthropic/claude-sonnet-4.6",
+  "causal_gene": "RFXAP",
+  "orig_qwen3_8b_top1": "RFXAP",
+  "orig_qwen3_8b_correct": true,
+  "top1": "RFXAP",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 29186,
+  "tokens_out": 824,
+  "finish_reason": "stop",
+  "latency_s": 10.433763027191162,
+  "cost_usd": 0.099918,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"RFXAP\",\"confidence\":0.82,\"rationale\":\"RFXAP evidence directly describes MHC class II deficiency causing decreased CD4 cells, inverted CD4:CD8 ratio, diarrhea, recurrent sinopulmonary infections, failure to thrive, and hypogammaglobulinemia\u2014matching all patient HPO phenotypes.\"},{\"gene\":\"KCND2\",\"confidence\":0.03,\"rationale\":\"No specific KCND2 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"IARS1\",\"confidence\":0.03,\"rationale\":\"No specific IARS1 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"NTM\",\"confidence\":0.02,\"rationale\":\"No specific NTM immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"SLURP2\",\"confidence\":0.02,\"rationale\":\"No specific SLURP2 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"E2F2\",\"confidence\":0.02,\"rationale\":\"No specific E2F2 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"CXADR\",\"confidence\":0.01,\"rationale\":\"No specific CXADR immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"ZDHHC2\",\"confidence\":0.01,\"rationale\":\"No specific ZDHHC2 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"METTL18\",\"confidence\":0.01,\"rationale\":\"No specific METTL18 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"RENBP\",\"confidence\":0.01,\"rationale\":\"No specific RENBP immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"LACTB\",\"confidence\":0.01,\"rationale\":\"No specific LACTB immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"CCDC71L\",\"confidence\":0.01,\"rationale\":\"No specific CCDC71L immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"PXDN\",\"confidence\":0.01,\"rationale\":\"No specific PXDN immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"CTXN1\",\"confidence\":0.01,\"rationale\":\"No specific CTXN1 immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"},{\"gene\":\"ACTL6A\",\"confidence\":0.01,\"rationale\":\"No specific ACTL6A immunodeficiency evidence; shared generic SCID literature chunks with no direct gene-phenotype link to this patient's profile.\"}]",
+  "parsed_top5": [
+    "RFXAP",
+    "KCND2",
+    "IARS1",
+    "NTM",
+    "SLURP2"
+  ]
+}

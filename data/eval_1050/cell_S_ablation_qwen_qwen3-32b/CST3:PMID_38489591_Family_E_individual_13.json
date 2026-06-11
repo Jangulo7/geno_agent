@@ -1,0 +1,26 @@
+{
+  "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+  "category": "neurological",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "CST3",
+  "orig_qwen3_8b_top1": "SRD5A3",
+  "orig_qwen3_8b_correct": false,
+  "top1": "SRD5A3",
+  "top1_correct": false,
+  "causal_rank": null,
+  "tokens_in": 16261,
+  "tokens_out": 895,
+  "finish_reason": "stop",
+  "latency_s": 2.356602191925049,
+  "cost_usd": 0.00155148,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[\n{\n    \"gene\": \"SRD5A3\",\n    \"confidence\": 0.92,\n    \"rationale\": \"Homozygous nonsense mutation in SRD5A3 causes SRD5A3-CDG with cerebellar atrophy and gait disturbance, matching the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SUFU\",\n    \"confidence\": 0.65,\n    \"rationale\": \"SUFU mutations cause Joubert syndrome with cerebellar vermis hypoplasia and gait issues, partially overlapping with the patient's features.\"\n  },\n  {\n    \"gene\": \"SLC52A1\",\n    \"confidence\": 0.55,\n    \"rationale\": \"SLC52A1 mutations are associated with riboflavin transport deficiency and neurological features including ataxia and cerebellar atrophy.\"\n  },\n  {\n    \"gene\": \"TECPR2\",\n    \"confidence\": 0.50,\n    \"rationale\": \"TECPR2 mutations are linked to autosomal recessive ataxia with cerebellar atrophy and gait disturbance, consistent with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"SLC35F6\",\n    \"confidence\": 0.45,\n    \"rationale\": \"SLC35F6 mutations are associated with neurological features including ataxia and cerebellar atrophy, aligning with the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"SLC16A14\",\n    \"confidence\": 0.40,\n    \"rationale\": \"SLC16A14 mutations are linked to neurological features including gait disturbance and cerebellar atrophy, partially overlapping with the patient's symptoms.\"\n  },\n  {\n    \"gene\": \"MAGIX\",\n    \"confidence\": 0.38,\n    \"rationale\": \"MAGIX mutations are associated with neurological features including ataxia and cerebellar atrophy, but evidence is less specific to this patient.\"\n  },\n  {\n    \"gene\": \"NAXD\",\n    \"confidence\": 0.35,\n    \"rationale\": \"NAXD mutations are linked to neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"SLC52A1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"SLC52A1 mutations are associated with neurological features including ataxia and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"NUDT2\",\n    \"confidence\": 0.32,\n    \"rationale\": \"NUDT2 mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"POTEA\",\n    \"confidence\": 0.30,\n    \"rationale\": \"POTEA mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"SFT2D1\",\n    \"confidence\": 0.28,\n    \"rationale\": \"SFT2D1 mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"MACROH2A2\",\n    \"confidence\": 0.25,\n    \"rationale\": \"MACROH2A2 mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"ETV7\",\n    \"confidence\": 0.22,\n    \"rationale\": \"ETV7 mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  },\n  {\n    \"gene\": \"TBATA\",\n    \"confidence\": 0.20,\n    \"rationale\": \"TBATA mutations are associated with neurological features including gait disturbance and cerebellar atrophy, but evidence is limited.\"\n  }\n]",
+  "parsed_top5": [
+    "SRD5A3",
+    "SUFU",
+    "SLC52A1",
+    "TECPR2",
+    "SLC35F6"
+  ]
+}

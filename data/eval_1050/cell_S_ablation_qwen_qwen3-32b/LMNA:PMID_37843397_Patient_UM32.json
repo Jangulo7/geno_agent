@@ -1,0 +1,26 @@
+{
+  "case_id": "LMNA:PMID_37843397_Patient_UM32",
+  "category": "metabolic",
+  "model": "qwen/qwen3-32b",
+  "causal_gene": "LMNA",
+  "orig_qwen3_8b_top1": "LMNA",
+  "orig_qwen3_8b_correct": true,
+  "top1": "LMNA",
+  "top1_correct": true,
+  "causal_rank": 1,
+  "tokens_in": 18139,
+  "tokens_out": 641,
+  "finish_reason": "stop",
+  "latency_s": 21.620652675628662,
+  "cost_usd": 0.0016306,
+  "parse_error": null,
+  "error": null,
+  "raw_text": "[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations are directly linked to FPLD2, characterized by subcutaneous fat loss in limbs and trunk, hepatic steatosis, and metabolic abnormalities matching the patient's phenotype.\"},{\"gene\":\"KIDINS220\",\"confidence\":0.65,\"rationale\":\"KIDINS220 is associated with partial lipodystrophy and metabolic features, but evidence is less specific compared to LMNA.\"},{\"gene\":\"BPY2B\",\"confidence\":0.55,\"rationale\":\"BPY2B is mentioned in general lipodystrophy discussions but lacks direct evidence linking it to the patient's specific phenotype.\"},{\"gene\":\"ALG3\",\"confidence\":0.55,\"rationale\":\"ALG3 is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"OR2L3\",\"confidence\":0.55,\"rationale\":\"OR2L3 is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"},{\"gene\":\"RNF170\",\"confidence\":0.55,\"rationale\":\"RNF170 is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"UGGT2\",\"confidence\":0.55,\"rationale\":\"UGGT2 is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"},{\"gene\":\"ELL2\",\"confidence\":0.55,\"rationale\":\"ELL2 is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"GAGE10\",\"confidence\":0.55,\"rationale\":\"GAGE10 is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"},{\"gene\":\"MRPS14\",\"confidence\":0.55,\"rationale\":\"MRPS14 is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"ATMIN\",\"confidence\":0.55,\"rationale\":\"ATMIN is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"},{\"gene\":\"MGAT4C\",\"confidence\":0.55,\"rationale\":\"MGAT4C is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"FTMT\",\"confidence\":0.55,\"rationale\":\"FTMT is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"},{\"gene\":\"CA9\",\"confidence\":0.55,\"rationale\":\"CA9 is discussed in lipodystrophy contexts but does not have strong evidence connecting it to the patient's features.\"},{\"gene\":\"POLR1A\",\"confidence\":0.55,\"rationale\":\"POLR1A is mentioned in general lipodystrophy discussions but lacks specific evidence for the patient's phenotype.\"}]",
+  "parsed_top5": [
+    "LMNA",
+    "KIDINS220",
+    "BPY2B",
+    "ALG3",
+    "OR2L3"
+  ]
+}
