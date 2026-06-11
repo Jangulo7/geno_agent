@@ -29,16 +29,19 @@ neurological (MONDO v2026-03-03, [39]) — and
 (iv) at least five PubMed Central Open Access (PMC OA) full-text
 articles indexed for the causal gene in our local Qdrant corpus (see
 *Index construction*), ensuring downstream literature retrieval is
-non-trivial. 4,670 cases met all four criteria (464 developmental, 390
-immunological, 672 metabolic, 3,144 neurological).
+non-trivial. Criteria (i)–(iii) yielded an eligible pool of 4,670 cases
+(464 developmental, 390 immunological, 672 metabolic, 3,144
+neurological); criterion (iv) was subsequently verified on the drawn
+sample, which it did not reduce.
 
 To support an adequately-powered analysis on the smallest categorical
 subgroup (immunological diseases), a disproportionate stratified sample
-was drawn with seed 42: 250 cases each from developmental, metabolic,
-and neurological categories, and 300 cases from the immunological pool
-(390 cases eligible). Three cases were excluded at the HGNC
-protein-coding gate (two RNU4-2 and one further non-protein-coding-RNA
-gene), yielding a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
+of 1,050 was drawn from this pool with seed 42: 250 cases each from
+developmental, metabolic, and neurological categories, and 300 from the
+immunological pool (390 eligible). Three neurological cases — two RNU4-2
+and one RNU2-2, all small nuclear RNA genes — were then removed at the
+candidate-list stage because their causal gene is not protein-coding,
+yielding a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
 sampling is standard practice in epidemiological and clinical-genomics
 benchmarking when one subgroup is rate-limiting for statistical power
 and the overall cohort is large enough that overall-cohort estimates
