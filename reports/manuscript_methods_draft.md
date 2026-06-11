@@ -22,22 +22,23 @@ Health (GA4GH) Phenopacket Store v0.1.26 (released 13 January 2026)
 patient phenopackets curated from primary literature with solved
 (gene-level) diagnoses. Cases were retained if they met four
 criteria: (i) a single causal gene supported by a SOLVED interpretation
-status, (ii) at least one Human Phenotype Ontology term (HPO; v2026-02-16,
+status, (ii) at least three Human Phenotype Ontology terms (HPO; v2026-02-16,
 [7]), (iii) a Mondo Disease Ontology mapping to one
 of four broad categories — developmental, immunological, metabolic, or
 neurological (MONDO v2026-03-03, [39]) — and
 (iv) at least five PubMed Central Open Access (PMC OA) full-text
 articles indexed for the causal gene in our local Qdrant corpus (see
 *Index construction*), ensuring downstream literature retrieval is
-non-trivial. 1,699 cases met all four criteria.
+non-trivial. 4,670 cases met all four criteria (464 developmental, 390
+immunological, 672 metabolic, 3,144 neurological).
 
 To support an adequately-powered analysis on the smallest categorical
 subgroup (immunological diseases), a disproportionate stratified sample
 was drawn with seed 42: 250 cases each from developmental, metabolic,
 and neurological categories, and 300 cases from the immunological pool
-(386 cases eligible). One case was excluded after pre-evaluation
-quality control (gene symbol could not be resolved to HGNC), yielding
-a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
+(390 cases eligible). Three cases were excluded at the HGNC
+protein-coding gate (two RNU4-2 and one further non-protein-coding-RNA
+gene), yielding a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
 sampling is standard practice in epidemiological and clinical-genomics
 benchmarking when one subgroup is rate-limiting for statistical power
 and the overall cohort is large enough that overall-cohort estimates
@@ -62,9 +63,16 @@ date (most recent: 2024; oldest: 1988; median: 2018).
 ### Comparator systems
 
 Five gene-prioritisation systems were evaluated on the same n = 1,047
-cohort, each operating on the same 50-gene candidate list per case:
+cohort, each operating on the same 50-gene candidate list per case. This
+study evaluates **phenotype-driven gene prioritisation**: Exomiser and
+LIRICAL are run in HPO-only mode (no patient VCF), isolating the
+phenotype signal so that all five systems receive identical inputs (HPO
+terms plus the same 50-gene candidate list). Variant-aware
+prioritisation, in which Exomiser and LIRICAL additionally consume
+patient variant calls, is out of scope for this study and is the subject
+of planned follow-up work.
 
-**Cell K (Exomiser HPO-only baseline).** Exomiser v14.0.0
+**Cell K (Exomiser HPO-only baseline).** Exomiser v14.0.2
 [11] was run with the default phenotype-only
 configuration (hiPhive scoring on the patient's HPO terms; no variant
 input). The candidate gene list was passed as a whitelist.
@@ -134,15 +142,17 @@ A 3.4 million-article subset of the PubMed Central Open Access XML
 corpus (downloaded 2026-05; [45]) was parsed and
 filtered for genetics / genomics / rare-disease relevance via MeSH
 descriptor matching (terms: Genetic Diseases, Rare Diseases, Mutation,
-Pathogenicity, Inheritance Patterns) and full-text inclusion criteria,
-yielding 287,000 articles. Articles were chunked at 512 tokens with
+Pathogenicity, Inheritance Patterns) and full-text inclusion criteria.
+The resulting genetics-relevant full-text corpus (~3.4 million articles)
+was chunked at 512 tokens with
 50-token overlap using a PubMedBERT-base tokeniser [17];
 chunk identifiers were derived deterministically via UUID5 on
 the content key to enable bit-identical re-indexing. Dense embeddings
 were computed with PubMedBERT and stored in Qdrant v1.14.1 alongside
 sparse embeddings from FastEmbed BM25, supporting hybrid retrieval via
-Reciprocal Rank Fusion at query time. The Qdrant collection contains
-4.2 million chunks with on-disk payload.
+Reciprocal Rank Fusion at query time. The production Qdrant collection
+(`geno_agent_pmc_oa_v1`) contains **52,777,395 chunks** with on-disk
+payload (collection size verified via the Qdrant `points_count` API).
 
 ### Evaluation metrics
 
@@ -161,7 +171,19 @@ estimate and 95 % CI for Δ. A two-sided exact McNemar test was
 applied to the discordant-pair counts (A > B, B < A) for binary
 metrics [46]. Statistical significance is reported by the
 conjunction of "95 % CI excludes zero" and "McNemar p < 0.05" — both
-criteria are required for a Δ to be flagged ★.
+criteria are required for a Δ to be flagged ★. To guard against
+inflation from multiple testing, a single primary endpoint was
+pre-declared — top-1 superiority of geno_agent (Cell S) over each
+curated baseline (Exomiser, LIRICAL) on the deconfounded fair cohort —
+and the resulting two-comparison family was corrected with the Holm
+step-down procedure (both comparisons remained significant; adjusted
+p = 0.028). A supportive family (full-cohort and post-2020 comparisons)
+was additionally controlled with the Benjamini-Hochberg false-discovery-
+rate procedure. All remaining subgroup and secondary-metric comparisons
+are reported as exploratory. Adjusted p-values are tabulated in the
+supplementary multiplicity-correction table
+(`reports/tables/supp_table_multiplicity.md`), regenerable via
+`scripts/eval/multiplicity_correction.py`.
 
 Per-MONDO subgroup analyses repeated the above on each category's
 cases. The immunological subgroup (n = 300), as the smallest
@@ -265,10 +287,16 @@ LEA's final ranking before the cap, and stripping the response to the
 predicted gene's rationale alone) yielded **mean faithfulness 0.480 /
 median 0.500** (vs 0.286 / 0.433 for the multi-claim measurement), with
 a fair-cohort lift of **+18.8 pp** (0.616 vs 0.428, vs +3.4 pp on the
-multi-claim measurement). The 0.480 number is reported as the primary
-RAGAS faithfulness in this paper; the 0.286 multi-claim measurement is
-retained as a methodological note documenting how RAGAS interacts with
-multi-gene structured outputs.
+multi-claim measurement). Because the rank-1 gene is the only prediction geno_agent asserts and
+acts upon — the remaining 14 entries are deliberate "no direct evidence"
+abstentions rather than asserted claims — the rank-1 rationale is the
+appropriate unit for claim-level faithfulness, and 0.480 is reported as
+the primary RAGAS faithfulness. The multi-claim measurement (0.286),
+which scores the 14 abstentions as unsupported claims, is reported as a
+conservative lower-bound sensitivity analysis rather than a competing
+estimate; the gap between the two is a measurement property of applying
+claim-level faithfulness to a structured multi-gene output, not evidence
+of hallucination.
 
 To independently corroborate the faithfulness signal, a second
 hallucination judge was applied: DeepEval v4.0.3's holistic

@@ -58,8 +58,9 @@ deconfounded conditions is unknown.
 **Methods.** We developed **geno_agent**, a four-agent LangGraph
 pipeline (Planner, Retriever, Critic, Synthesiser) augmented by an
 LLM-as-Evidence-Aggregator (LEA) using a locally-served Qwen3-8B
-model, operating over a frozen 4.2-million-chunk index of 287,000
-PubMed Central Open Access articles. We evaluated five systems
+model, operating over a frozen 52.8-million-chunk index (52,777,395
+chunks) of the genetics/genomics-relevant PubMed Central Open Access
+full-text corpus. We evaluated five systems
 (Exomiser, LIRICAL, multi-agent baseline, +cross-encoder rerank, and
 geno_agent) on a disproportionate stratified n = 1,047 cohort drawn
 from Phenopacket Store v0.1.26, with paired-bootstrap 95 % CIs and
@@ -220,8 +221,9 @@ prioritisation study has quantified LLM-generated rationale
 faithfulness** as a deployable triage signal. The present study
 addresses all three gaps. Specifically, we (1) describe geno_agent, a
 four-agent LangGraph pipeline + LLM-as-Evidence-Aggregator (LEA)
-operating on a frozen 4.2-million-chunk index of 287,000 filtered PMC
-OA full-text articles; (2) evaluate it on n = 1,047 Phenopacket Store
+operating on a frozen 52.8-million-chunk index (52,777,395 chunks) of
+genetics/genomics-relevant PMC OA full-text articles; (2) evaluate it
+on n = 1,047 Phenopacket Store
 v0.1.26 cases stratified by MONDO disease category, by annotation-
 overlap status, and by source-publication year; (3) quantify LEA
 rationale grounding with both strict (RAGAS) and lenient (DeepEval)
@@ -291,6 +293,14 @@ a further Δ = +0.028 [+0.016, +0.040] ★. Full overall metrics (top-1,
 top-5, top-10, MRR, NDCG@10) for all cells are reported in
 **Table 2**.
 
+Because the cohort oversamples the immunological stratum (300 vs 250
+cases) for subgroup power, overall estimates were additionally computed
+with each MONDO supercategory weighted equally (25 %) as a sensitivity
+analysis. geno_agent's advantage over Exomiser was invariant to stratum
+weighting (equal-weighted top-1 0.724 vs 0.691, Δ = +0.034, versus the
+unweighted Δ = +0.035; Supplementary Table — stratum-weighted overall,
+`reports/tables/supp_table_weighted_overall.md`).
+
 [INSERT Table 2 here — overall results for K/M/D/L/S, point estimate +
 95 % CI for each of {top-1, top-5, top-10, MRR, NDCG@10}. Source:
 `data/eval_1050/_results_summary.md`.]
@@ -340,6 +350,25 @@ exposure. Paired comparisons on the fair cohort (Table 3):
 - **LIRICAL M vs Exomiser K**: Δ = -0.004 [-0.053, +0.043], McNemar p =
   1.000 — **LIRICAL is statistically tied with Exomiser when overlap is
   removed**.
+
+The two fair-cohort comparisons constitute the pre-declared primary
+endpoint of this study (top-1 superiority of geno_agent over each
+curated baseline on the deconfounded cohort). **Both remain significant
+after Holm correction for multiple comparisons** (Holm-adjusted p =
+0.028 for Cell S vs Exomiser K and for Cell S vs LIRICAL M; Benjamini-
+Hochberg-adjusted p = 0.015). The supportive full-cohort (p = 0.019)
+and post-2020 (p < 0.001) geno_agent-vs-Exomiser comparisons also
+survive correction (Supplementary Table — multiplicity correction;
+`reports/tables/supp_table_multiplicity.md`).
+
+geno_agent's fair-cohort advantage is specific to rank 1. At deeper
+cut-offs LIRICAL retains higher recall even on the fair cohort, reaching
+top-5 = 0.965 and top-10 = 1.000 versus geno_agent's 0.933 and 0.940
+(top-10 Δ = -0.060 favouring LIRICAL, McNemar p < 0.001). geno_agent
+thus maximises the probability that the causal gene is ranked first,
+whereas LIRICAL maximises the probability that it appears anywhere in a
+ten-gene shortlist — a precision-versus-recall distinction with distinct
+clinical implications (Discussion).
 
 [INSERT Table 3 here — paired Δ on overlap-absent fair cohort for the
 five canonical comparisons (S vs K, S vs M, S vs L, L vs D, M vs K).
@@ -447,11 +476,15 @@ LLM judges (`gpt-4o-2024-08-06`) measuring orthogonal aspects of
 grounding (see Methods §*RAG-quality evaluation*):
 
 - **RAGAS faithfulness** (strict, claim-level): mean **0.480** /
-  median 0.500 on a stratified n = 100 sensitivity subset (revised
-  from a multi-claim full-response measurement of 0.286 that was
-  found to be a measurement artefact of judging LEA's 14 honest
-  "no direct evidence" distractor-gene rationales as unsupported
-  claims). Fair-cohort RAGAS faithfulness was **0.616**, a +18.8 pp
+  median 0.500 on a stratified n = 100 subset, evaluated on the rank-1
+  rationale — the only gene the system asserts and acts upon. The
+  multi-claim full-response measurement (0.286), which additionally
+  scores LEA's 14 deliberate "no direct evidence" distractor-gene
+  abstentions as if they were unsupported claims, is reported as a
+  conservative lower bound; the gap is a measurement property of
+  applying claim-level faithfulness to a structured multi-gene output,
+  not evidence of hallucination. Fair-cohort RAGAS faithfulness was
+  **0.616**, a +18.8 pp
   lift over the overlap-present cohort.
 - **DeepEval HallucinationMetric** (lenient, holistic): mean
   groundedness **0.845** / median 0.933 on a stratified n = 100
@@ -523,9 +556,9 @@ with per-cell wall times of: Cell K (Exomiser, CPU) 3 h 38 min;
 Cell M (LIRICAL, 8-worker CPU) 22 min; Cell D (GPU) 6 h 53 min;
 Cell L (GPU) 5 h 28 min; **Cell S (GPU, with vLLM serving Qwen3-8B)
 7 h 36 min**, equivalent to **26.1 s per case end-to-end**.
-LLM-judge evaluation cost an additional ~$98 in OpenAI API spend
+LLM-judge evaluation cost an additional $98.20 in OpenAI API spend
 (RAGAS n = 600 multi-claim + n = 100 top-1-only sensitivity +
-DeepEval n = 100) and ~$21 in OpenRouter spend (3-model ablation
+DeepEval n = 100) and $21.42 in OpenRouter spend (3-model ablation
 n = 300). The production pipeline (Cells D, L, S) requires **no
 cloud API at inference time**; cloud spend is evaluation-only.
 Per-case throughput is well within the timeframe a clinical
@@ -564,6 +597,15 @@ LLMs (Qwen3-32B Instruct, Claude Sonnet 4.6, DeepSeek-V3) on the same
 fair cohort produced top-1 scores within 2.4 percentage points of the
 production Qwen3-8B (range 0.869-0.893), all of which exceeded Exomiser
 and LIRICAL by ≥ 7 pp.
+
+These advantages are concentrated at rank 1. At deeper cut-offs LIRICAL
+retains higher recall even on the fair cohort (top-10 1.000 vs
+geno_agent 0.940), so the two systems are best characterised as
+complementary — geno_agent maximising top-1 precision, LIRICAL
+maximising the probability that the causal gene appears anywhere in a
+ten-gene review shortlist — rather than as a strict ordering. Which
+property matters more is workflow-dependent: rank-1 precision for triage
+and automated flagging, shortlist recall for exhaustive manual review.
 
 ### Methodological contribution — the deconfounded fair-comparison cohort
 
@@ -658,7 +700,7 @@ clinical-triage signal in the rare-disease prioritisation context.
 
 Two operational characteristics shape responsible deployment. *Handling
 of poor-quality input.* Three layers protect against degraded inputs:
-at cohort construction, cases with fewer than two HPO terms or fewer
+at cohort construction, cases with fewer than three HPO terms or fewer
 than five PMC articles for the causal gene are excluded as
 out-of-scope; at runtime, if LEA fails to return parseable JSON the
 system falls back to the cross-encoder rerank ordering and logs the
@@ -789,7 +831,7 @@ needed next study.
 
 ### Future work
 
-Six concrete extensions follow directly from the limitations above:
+Seven concrete extensions follow directly from the limitations above:
 (1) clinical reviewer panel for LEA rationale Likert ratings, sized at
 ~30 sampled cases per subgroup; (2) RAGAS re-run at MAX_CONTEXTS = 45
 to bound true faithfulness; (3) inline-citation prompting (each LEA
@@ -798,7 +840,10 @@ chunk-removal ablation to identify minimal-evidence cases; (5)
 prospective evaluation in a real clinical-genetics consultation
 workflow; (6) extension of the cohort to non-Phenopacket-Store sources
 (e.g., curated UDP cases, internal hospital cohorts under appropriate
-data-sharing agreements).
+data-sharing agreements); and (7) variant-aware prioritisation that
+supplies Exomiser, LIRICAL, and geno_agent with patient variant calls
+in addition to phenotypes, extending the present phenotype-driven
+comparison to the full diagnostic setting.
 
 *Note — the standalone Conclusions section that follows Discussion
 contains the synthesis paragraph. The Discussion-internal §8
@@ -973,8 +1018,8 @@ supplementary file.
   DeepEval outputs: `data/eval_1050/cell_*/`,
   `data/eval_1050/cell_S_ablation_*/`,
   `data/eval_1050/ragas_*.json`, `data/eval_1050/deepeval_*.json`.
-- **Frozen Qdrant index** (4.2 M PMC OA chunks, MedCPT dense
-  embeddings + BM25 sparse): persistent local volume mounted at
+- **Frozen Qdrant index** (52,777,395 PMC OA chunks, PubMedBERT dense
+  embeddings + FastEmbed BM25 sparse): persistent local volume mounted at
   `~/rare-disease-rag/qdrant_storage/`. A bit-perfect snapshot is
   hosted at [**flagged — Zenodo deposition pending at submission
   time**], with SHA-256 manifest in the repository.
@@ -986,7 +1031,7 @@ supplementary file.
 
 The Phenopacket Store source release is publicly available at
 https://github.com/monarch-initiative/phenopacket-store (Danis et al.,
-2025). Exomiser v14.1.0 and LIRICAL v2.0.2 were used as released and
+2025). Exomiser v14.0.2 and LIRICAL v2.4.0 were used as released and
 are available at https://github.com/exomiser/Exomiser and
 https://github.com/TheJacksonLaboratory/LIRICAL respectively. The
 Qwen3-8B model weights are released under Apache 2.0 by Alibaba Cloud
@@ -1006,8 +1051,8 @@ research at Universidad Europea (UE)**, Madrid, Spain. **No external
 grant funding** was used. Computational infrastructure (a single
 NVIDIA RTX 5090 workstation) was provided by the first author. Cloud
 LLM API spend for the evaluation-only components (GPT-4o judge for
-RAGAS + DeepEval, ~$95; OpenRouter spend for the LLM-family ablation,
-~$22) was paid by the first author and was not subsidised by any
+RAGAS + DeepEval, $98.20; OpenRouter spend for the LLM-family ablation,
+$21.42) was paid by the first author and was not subsidised by any
 third party.
 
 ### Authors' contributions

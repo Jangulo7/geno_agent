@@ -22,6 +22,30 @@ Cell K), two new evaluation axes (RAGAS + DeepEval), and four new analyses
 cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
 (paper extension) and refines the runtime configuration accordingly.
 
+**Ground-truth corrections (2026-06-10 — authoritative; supersede planning-era estimates above and any conflicting figure in draft manuscripts):**
+
+- **Actual Qdrant index size.** The live production collection
+  `geno_agent_pmc_oa_v1` contains **52,777,395 chunks** (verified
+  2026-06-10 via `client.get_collection().points_count`). This is the
+  *full* genetics/genomics PMC OA corpus that was actually indexed and
+  queried by every paper-extension cell (Cells D/L/S retrieve against this
+  collection). It supersedes (i) the Phase-1A planning estimate of
+  "~2–5 M chunks" used for RAM/`on_disk_payload` sizing throughout §§5–6,
+  and (ii) the **incorrect "287,000 articles / 4.2 M chunks" figure that
+  appears in the draft manuscript Methods/Abstract** — that figure
+  describes an intended genetics-filtered subset that was *not* the index
+  actually searched. Manuscript and methodology files must be corrected to
+  52.78 M chunks before submission.
+- **Sample-size provenance (two distinct studies, both retained).**
+  **n=1,047** (250 dev + 300 imm + 250 met + 247 neuro, Phenopacket Store
+  v0.1.26, seed 42) is the canonical cohort for the **current PhD thesis —
+  first paper (gene prioritisation)** and is authoritative for all Phase 3
+  results. **n=75** is the earlier **AI-master's research** cohort from a
+  separate branch; it is deliberately **preserved as historical record**
+  (e.g. the compute-budget and factorial-planning passages in the Phase-2
+  sections still reference 75 cases) and must **not** be scrubbed or
+  "corrected" to 1,047 — the two numbers belong to two different studies.
+
 **Cohort upgrades:**
 
 1. **Phenopacket Store v0.1.19 → v0.1.26** (released 2026-01-13). +252 new gene cohorts, +1,699 new eligible cases. Immunological-disease eligible pool grew 85 → 390 (+359 %), eliminating the structural cap on the paper's lead categorical analysis.
@@ -79,6 +103,67 @@ cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
 29c. **Q1-B LLM ablation COMPLETED 2026-05-23 21:49Z** (~60 min wall, $21.42 of $30 OpenRouter credit). n=300 stratified (75/MONDO, seed 42), three frontier models via OpenRouter: `qwen/qwen3-32b`, `anthropic/claude-sonnet-4.6`, `deepseek/deepseek-chat-v3-0324`. **All three production-quality models converge on the fair cohort within 2.4 pp** (Qwen3-8B 0.869, Sonnet 4.6 0.893, DeepSeek-V3 0.881) — paper headline is robust to LLM family choice. Claude Sonnet 4.6 gives **+5.0 pp ★ lift on full cohort** (paired CI [+0.027, +0.073], McNemar p<0.001) but **not significant on fair cohort** (+2.4 pp, n=84). Qwen3-32B Instruct has a **22 % JSON-format refusal rate** (model emits `{"error":"The JSON response is missing..."}` — real model behavior, not parser bug); on parsed responses its top-1 matches 8B baseline at 0.722. DeepSeek-V3 is the best cloud-upgrade option by cost-per-correct-prediction. Code: `scripts/eval/run_lea_ablation.py` + `aggregate_lea_ablation.py`. Results: `data/eval_1050/_results_lea_ablation.{json,md}` + `cell_S_ablation_<slug>/`. Combined session OpenAI+OpenRouter spend: $119.62.
 
 29b. **DeepEval HallucinationMetric COMPLETED 2026-05-23 18:40Z** (3.1 min wall, $1.20 spent — combined RAGAS+DeepEval $96.20 / $100 budget). n=100 stratified subset (25/MONDO, seed 42 — a subset of the RAGAS n=600), same gpt-4o-2024-08-06 judge, MAX_CONTEXTS=45. **Mean groundedness 0.845 / median 0.933, hallucination rate 0.155**. Independent reproduction of the RAGAS findings: (i) correctness-prediction signal reproduces (78.9 % top-1 correct at groundedness ≥ 0.5 vs 40.0 % at < 0.5, 39-pp gap matching RAGAS's 33-pp); (ii) fair-cohort lift reproduces (0.894 overlap_absent vs 0.830 overlap_present). Per-MONDO: developmental 0.898, immunological 0.946, metabolic 0.872, **neurological 0.665 (worst on both judges — robustly-documented system-level limitation)**. The two metrics together bound LEA grounding quality at a defensible range (0.286 strict claim-level ↔ 0.845 lenient holistic) — the paper reports both rather than cherry-picking.
+
+30. **Thread H — Leave-one-paper-out (LOPO) literature-redundancy analysis** (added 2026-06-10). The geno_agent-side counterpart to Thread D: Thread D removes LIRICAL's source-publication exposure (annotation overlap with `phenotype.hpoa`); Thread H removes geno_agent's, by excluding each case's own source publication from retrieval. Motivated by the observation that the Cell D/L/S retriever queries the index with `"{gene} {HPO-labels}"` where the HPO labels are curated *from the source case report*, and that source report is itself in the PMC OA index — so retrieving it risks reading the answer key rather than reasoning from the broader literature. Code: `scripts/eval/run_lopo.py` (control + LOPO arms from one shared retrieval pool; `--all` for full cohort, resumable), `scripts/eval/aggregate_lopo.py` (stratified + fair-cohort + leak cross-tabs), `scripts/eval/run_lopo_full_overnight.sh` (vLLM up → run → vLLM down → aggregate). Implementation surfaces the payload `pmid` on each `RetrievedChunk` and drops chunks whose `pmid` equals the case's source PMID *before* cross-encoder reranking; the article is **never deleted from Qdrant** — exclusion is per-case and inference-time only.
+    - **Pilot (n=100 stratified, seed 42) COMPLETED 2026-06-10, both Cell L and Cell S, $0 (all-local):** harness validated against the on-disk baselines (98/100 exact-rank match, **0 top-1 mismatches**; control top-1 = published baseline = 0.790 on this subset). **Cell S (geno_agent): control top-1 0.790 → LOPO 0.780 (Δ = −0.010, McNemar p = 1.0)**; top-5 0.81→0.80, top-10 0.84→0.83. Source publication appeared in the causal gene's candidate pool in only **10 %** of cases (top of pool 1 %). Exactly **one** case flipped on top-1 (`CCN2:PMID_39414788`, a 2024 paper; with its source paper removed, top-1 falls 1→14) — the single genuinely source-dependent case in 100. Cell L behaved identically (Δ = −0.010, p = 1.0, same flipped case).
+    - **Full cohort (n=1,047 Cell S) COMPLETED 2026-06-11** (717 min wall, $0). **The deconfounded fair cohort is completely unaffected by source-paper removal: control 0.858 → LOPO 0.858 (Δ = 0.000, McNemar p = 1.0)** — geno_agent's fair-cohort advantage survives identically (vs Exomiser +0.078, p = 0.015; vs LIRICAL +0.082, p = 0.014). On the full cohort there is a small but significant source-paper dependence (0.726 → 0.711, Δ = −0.015, 16/0 discordant, p = 3×10⁻⁵) that is **entirely concentrated in the overlap-present / benchmark-contaminated subset** (0.677 → 0.656, Δ = −0.021); the fair cohort shows zero effect. Leak (source-in-causal-pool) = 11.7 % overall and, notably, *higher* on the fair cohort (14.2 %) than overlap-present (10.8 %) yet with zero accuracy impact there — the signal is redundant across the literature. Per-MONDO impact ≤ 0.036 (neurological −0.036 worst; metabolic/immunological ≤ 0.008). Results: `data/eval_1050_lopo_full/_lopo_full_results_cell_S.{md,json}`.
+
+    **Manuscript draft — Methods (LOPO):**
+
+    > *Leave-one-paper-out retrieval.* Because geno_agent reasons from the
+    > primary literature rather than a curated knowledge base, we tested whether
+    > its performance depends on retrieving each case's own source publication —
+    > the case report from which the Phenopacket's phenotype was transcribed. For
+    > each case we identified the source PubMed identifier (from the phenopacket
+    > `metaData.externalReferences` field, mirrored in the `case_id`) and re-ran
+    > the deterministic multi-agent pipeline (Cells D/L) and geno_agent (Cell S)
+    > with every chunk whose source PMID matched the case's source publication
+    > excluded from each candidate gene's retrieval pool prior to cross-encoder
+    > reranking. The article was not removed from the index; exclusion was applied
+    > only to the case whose source it was, at inference time. Control and
+    > leave-one-paper-out arms were produced from a single shared retrieval pass to
+    > isolate the source-publication contribution as a paired, within-system
+    > comparison (two-sided exact McNemar on top-1; bootstrap CIs on Δ). We
+    > additionally quantified, per case, whether the source publication was
+    > retrieved into the causal gene's candidate pool and at what rank, and
+    > cross-tabulated this leak against the annotation-overlap flag (§Methods,
+    > annotation-overlap deconfounding).
+
+    **Manuscript draft — Results (LOPO):** *(full cohort n=1,047 — definitive; pilot n=100 lead sentence retained as validation)*
+
+    > Excluding each case's own source publication from retrieval left geno_agent's
+    > accuracy essentially unchanged (top-1 0.790 → 0.780; Δ = −0.010, McNemar
+    > p = 1.0; top-10 0.84 → 0.83). The source publication appeared in the causal
+    > gene's candidate pool in only 10 % of cases, and a single case (1/100)
+    > changed its top-1 prediction when its source report was withheld. geno_agent's
+    > causal-gene prioritisation is therefore distributed across the literature
+    > rather than concentrated in the originating case report — the property that
+    > allows it to generalise to newly-presenting patients, for whom no source
+    > case report yet exists. On the full cohort (n = 1,047), excluding each
+    > case's source publication produced a small overall decline (top-1
+    > 0.726 → 0.711; Δ = −0.015, McNemar p = 3 × 10⁻⁵), but this dependence was
+    > **entirely confined to the annotation-overlap-present subset** (0.677 →
+    > 0.656); on the deconfounded fair cohort (overlap-absent, n = 282)
+    > leave-one-paper-out had **no effect whatsoever** (0.858 → 0.858, Δ = 0.000,
+    > p = 1.0), and geno_agent's fair-cohort advantage over Exomiser (+0.078,
+    > p = 0.015) and LIRICAL (+0.082, p = 0.014) was preserved identically. The
+    > source publication was retrieved into the causal gene's candidate pool in
+    > 11.7 % of cases — and, strikingly, more often on the fair cohort (14.2 %)
+    > than on the overlap-present subset (10.8 %) — yet removing it left
+    > fair-cohort accuracy unchanged, demonstrating that geno_agent's causal-gene
+    > signal is redundant across the literature rather than concentrated in any
+    > single source report.
+
+    **Manuscript draft — Discussion (LOPO):**
+
+    > Source-publication exposure was controlled symmetrically for both classes of
+    > system: for the curated tools through annotation-overlap stratification, and
+    > for geno_agent through leave-one-paper-out retrieval. That geno_agent's
+    > accuracy is robust to removing the originating case report — whereas the
+    > curated tools' apparent advantage is largely an annotation-overlap artefact —
+    > indicates the two effects are distinct, and that geno_agent's signal reflects
+    > genuine literature reasoning rather than retrieval of the benchmark's own
+    > source documents.
 
 **Strategy A timeline revised:** ~3-4 weeks remaining to Genome Medicine submission (was ~12-13 weeks at v3 start). Threads D-G collapsed from ~8-11 day estimate to ~1 h actual wall — Thread D's per-case PMID/overlap toolkit made Threads E/F/G mechanical.
 
