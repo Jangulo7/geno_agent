@@ -15,8 +15,9 @@
 > source paper (fair-cohort top-1 unchanged, 0.858 → 0.858, McNemar p=1.0).
 > geno_agent is the strongest **literature-only** rare-disease gene-prioritisation
 > system (no curated phenotype-gene tables); **production inference runs entirely
-> on local hardware with no cloud API** — only the optional RAGAS/DeepEval
-> evaluation judges (used for measurement, not prioritisation) call a cloud LLM.
+> on local hardware** — only the optional RAGAS/DeepEval evaluation judges (used
+> for measurement, not prioritisation) require an external OpenAI-compatible LLM
+> endpoint (GPT-4o in this study).
 >
 > **Latest update (2026-06-11).** Full n=1,047 evaluation complete
 > (annotation-overlap deconfounding, publication-recency stratification,
@@ -48,7 +49,7 @@ To our knowledge, this is the first end-to-end validated agentic multi-agent RAG
 
 1. **An open, reproducible architecture** — four specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated through LangGraph, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
-3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No cloud API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS/DeepEval evaluation judges are the sole cloud component, used only to *measure* rationale quality, never for gene prioritisation.)
+3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No external API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS/DeepEval evaluation judges are the sole component that calls an external OpenAI-compatible LLM endpoint — GPT-4o in this study — used only to *measure* rationale quality, never for gene prioritisation.)
 4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper, v0.1.19 for the thesis), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
 
 Where this work *is not* claiming novelty: RAG itself ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)), multi-agent LLM systems generally, hybrid dense+sparse retrieval, and the use of PubMed/PMC as a corpus are all established techniques. The contribution is the application of these techniques, in this combination, to this clinical problem, with rigorous evaluation.
