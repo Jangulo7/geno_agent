@@ -2,14 +2,25 @@
 
 **An Agentic Multi-Agent RAG System for Gene Prioritization in Rare Mendelian Disease**
 
-> Research prototype: Master's thesis (TFM, Universidad Alfonso X, defended 2026) +
-> ongoing paper extension (target: *Genome Medicine* / *Bioinformatics* / *JAMIA*).
-> **Headline result (paper extension v2, n=1,047):** Cell S statistically outperforms
-> Exomiser HPO-only on overall top-1 (Δ = +0.034, paired-bootstrap 95 % CI
-> [+0.006, +0.064]), wins on metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO
-> subgroups, and is the strongest **literature-only** rare-disease gene prioritization
-> system (no curated phenotype-gene tables). Annotation-overlap-aware comparison
-> against LIRICAL and RAGAS/DeepEval evaluation in progress (v3).
+> Research prototype spanning two studies: an AI **Master's thesis** (TFM,
+> Universidad Alfonso X, n=75) and the current **doctoral first paper**
+> (Universidad Europea, Madrid; n=1,047; target: *Genome Medicine*).
+>
+> **Headline (n=1,047, deconfounded).** On the *fair-comparison cohort* — cases
+> whose source publication is **not** cited by `phenotype.hpoa` for the causal
+> gene — geno_agent (Cell S) is the **top-ranked system** (top-1 **0.858**),
+> significantly beating Exomiser (+0.078, p=0.015) and LIRICAL (+0.082, p=0.014);
+> both survive Holm multiple-comparison correction. A **leave-one-paper-out**
+> robustness check confirms this does **not** depend on retrieving each case's own
+> source paper (fair-cohort top-1 unchanged, 0.858 → 0.858, McNemar p=1.0).
+> geno_agent is the strongest **literature-only**, all-local rare-disease
+> gene-prioritisation system (no curated phenotype-gene tables, no cloud API).
+>
+> **Latest update (2026-06-11).** Full n=1,047 evaluation complete
+> (annotation-overlap deconfounding, publication-recency stratification,
+> three-LLM-family ablation, RAGAS + DeepEval). Added a **leave-one-paper-out**
+> robustness analysis, **Holm / Benjamini-Hochberg** multiplicity correction, and
+> **stratum-weighted** sensitivity. Manuscript Q1 draft hardened (PR #37, merged).
 
 ---
 
@@ -36,7 +47,7 @@ To our knowledge, this is the first end-to-end validated agentic multi-agent RAG
 1. **An open, reproducible architecture** — four specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated through LangGraph, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
 3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No cloud API dependencies, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data.
-4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket-store v0.1.19](https://github.com/monarch-initiative/phenopacket-store), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
+4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper, v0.1.19 for the thesis), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
 
 Where this work *is not* claiming novelty: RAG itself ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)), multi-agent LLM systems generally, hybrid dense+sparse retrieval, and the use of PubMed/PMC as a corpus are all established techniques. The contribution is the application of these techniques, in this combination, to this clinical problem, with rigorous evaluation.
 
@@ -130,9 +141,31 @@ trail.
 bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 (leave-one-out, leave-N-out, permutation, McNemar) on load-bearing claims.
 
-**New evaluation axes (v3, in progress):**
-- **RAGAS** — faithfulness, context precision/recall, answer relevance (GPT-4o judge)
-- **DeepEval** — hallucination rate (GPT-4o judge)
+### Deconfounding & robustness (n=1,047, complete)
+
+- **Annotation-overlap deconfounding.** A per-case flag marks whether the source
+  publication is cited by `phenotype.hpoa` for the causal gene's OMIM disease
+  (cohort overlap rate 73.1 %). On the **fair cohort (overlap-absent, n=282)**,
+  geno_agent is #1 (top-1 **0.858**) vs Exomiser 0.780 (**+0.078 ★**) and LIRICAL
+  0.777 (**+0.082 ★**); LIRICAL's apparent overall 0.924 collapses to a tie with
+  Exomiser, quantifying its training-data exposure.
+- **Leave-one-paper-out (LOPO).** Excluding each case's own source publication
+  from retrieval leaves the fair cohort **completely unchanged** (0.858 → 0.858,
+  McNemar p=1.0); the small full-cohort effect (−0.015) is confined to the
+  overlap-present subset. geno_agent's signal is distributed across the
+  literature, not concentrated in the source case report.
+- **Publication-recency stratification.** Exomiser top-1 collapses 0.847 → 0.480
+  on post-2020 source papers; geno_agent's edge over Exomiser is 2.7× larger on
+  recent cases.
+- **LLM-family ablation.** Replaying the LEA prompts across Qwen3-32B, Claude
+  Sonnet 4.6, and DeepSeek-V3 converges within 2.4 pp on the fair cohort — the
+  headline is robust to model family.
+- **Statistical rigor.** Primary fair-cohort comparisons survive Holm correction
+  (adjusted p=0.028); the geno_agent–Exomiser advantage is invariant to stratum
+  weighting (+0.034 equal-weighted vs +0.035 unweighted).
+- **RAG quality (GPT-4o judge).** RAGAS rank-1 faithfulness 0.480 and DeepEval
+  groundedness 0.845; both predict top-1 correctness with a 33–39 pp gap,
+  supporting a low-grounding clinical-triage flag.
 
 ## Project status
 
@@ -145,10 +178,11 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 | **1B (test set v3)** | **n=1,047 paper extension (v0.1.26, seed 42, disproportionate 250+300+250+250)** | ✅ Complete |
 | 2a | LangGraph 4-agent state graph + Qwen3-8B/vLLM | ✅ Complete |
 | 2c | CopilotKit React UI | ⏳ Deferred to post-paper |
-| Eval (thesis) | 16-cell factorial at n=75 | ✅ Complete; PR #36, tag `paper-v2-final` |
+| Eval (thesis) | 16-cell factorial at n=75 | ✅ Complete |
 | **Eval (paper v2)** | **5 cells × n=1,047, bootstrap CIs, per-MONDO breakdown, LIRICAL** | ✅ Complete |
-| **Eval (paper v3)** | **LEA response logging + RAGAS + DeepEval + annotation-overlap analysis** | 🟢 In progress (Cell S re-run ~58 %, RAGAS pending OPENAI_API_KEY) |
-| Manuscript | Target: *Genome Medicine* | ⏳ Drafting after v3 evaluation completes (~10-12 weeks) |
+| **Eval (paper v3)** | **LEA logging + RAGAS + DeepEval + annotation-overlap + recency + LLM-family ablation** | ✅ Complete |
+| **Robustness** | **Leave-one-paper-out + Holm/BH multiplicity correction + stratum-weighted sensitivity** | ✅ Complete (2026-06-11) |
+| **Manuscript** | **Q1 draft (*Genome Medicine*): Methods + Results + Discussion + 50 refs + TRIPOD-LLM** | 🟢 Prose complete; pending UE ethics letter + co-author list |
 
 Key reports:
 - [`reports/methodology.md`](reports/methodology.md) — **consolidated authoritative methodology**
@@ -226,7 +260,11 @@ geno_agent/
 │       ├── start_vllm.sh              # vLLM 0.20.1 with v3 VRAM caps
 │       ├── aggregate_metrics.py       # Per-case → overall + per-MONDO bootstrap CIs
 │       ├── run_ragas.py               # RAGAS faithfulness/precision/recall/relevance (GPT-4o)
-│       └── run_deepeval.py            # DeepEval hallucination (GPT-4o)
+│       ├── run_deepeval.py            # DeepEval hallucination (GPT-4o)
+│       ├── run_lopo.py                # Leave-one-paper-out retrieval (source-paper exclusion)
+│       ├── aggregate_lopo.py          # LOPO stratified + fair-cohort cross-tabs
+│       ├── multiplicity_correction.py # Holm / Benjamini-Hochberg on primary comparisons
+│       └── weighted_overall.py        # Stratum-weighted overall sensitivity
 ├── src/
 │   ├── agents/                        # LangGraph state + 4 agent nodes + synthesizer_lea
 │   ├── baselines/                     # exomiser_runner.py + lirical_runner.py (v3)
@@ -249,14 +287,15 @@ geno_agent/
     ├── test_cases_1050/               # n=1,047 paper v2/v3 cohort (v0.1.26, seed 42)
     ├── eval/                          # n=75 thesis results (16 cells)
     ├── eval_500/                      # n=459 v1 results (4 cells K/D/L/S)
-    └── eval_1050/                     # n=1,047 v2/v3 results (5 cells K/D/L/S/M + sidecars)
+    ├── eval_1050/                     # n=1,047 v2/v3 results (5 cells K/D/L/S/M + sidecars)
+    └── eval_1050_lopo_full/           # leave-one-paper-out results (summaries; per-case sidecars gitignored)
 ```
 
 Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean. The `frontend/` directory will hold a standalone Next.js + CopilotKit project; the upstream CopilotKit framework lives at the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) and is consumed via npm rather than vendored.
 
 ## Quick start
 
-> ⚠️ The full pipeline is under active development; this section will be expanded as Phase 1A completes. The instructions below set up the infrastructure but do not yet run an end-to-end experiment.
+> The Phase 1A/1B pipeline and the full n=1,047 evaluation are complete and reproducible. The steps below set up the infrastructure; per-cell evaluation drivers live in `scripts/eval/`, and the consolidated methodology is in [`reports/methodology.md`](reports/methodology.md).
 
 ```bash
 # 1. Clone and enter
@@ -307,13 +346,13 @@ submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Master's thesis project, Universidad Alfonso X; paper extension in progress (target: Genome Medicine).}
+  note         = {AI Master's thesis (Universidad Alfonso X, n=75); doctoral first paper (Universidad Europea, n=1,047; target: Genome Medicine).}
 }
 ```
 
-Headline finding to cite (paper extension v2 final):
+Headline finding to cite (n=1,047, deconfounded):
 
-> At n=1,047 cases from Phenopacket Store v0.1.26 (250 developmental + 300 immunological + 250 metabolic + 247 neurological, disproportionate stratified sampling, seed 42), Cell S (multi-agent + MedCPT cross-encoder rerank + Qwen3-8B LEA) statistically outperforms Exomiser HPO-only on overall top-1 (Δ = +0.034, paired-bootstrap 95 % CI [+0.006, +0.064]) and on the metabolic (+8.4 pp) and immunological (+6.7 pp) MONDO subgroups. The immunological lead claim survives 100 % leave-one-out at n=300 (McNemar exact p = 0.008). LIRICAL HPO-only achieves the highest raw top-1 (0.924) but with significant annotation overlap with the Phenopacket Store source publications; stratified deconfounded numbers are reported in the paper.
+> On the fair-comparison cohort (overlap-absent, n=282) of Phenopacket Store v0.1.26, geno_agent (multi-agent + MedCPT cross-encoder rerank + Qwen3-8B LEA) is the top-ranked system (top-1 0.858), significantly exceeding Exomiser HPO-only (+0.078, p=0.015) and LIRICAL HPO-only (+0.082, p=0.014) — both surviving Holm multiplicity correction. LIRICAL's apparent overall top-1 (0.924) is largely an annotation-overlap artefact (it ties Exomiser once overlap is removed). A leave-one-paper-out analysis confirms geno_agent's advantage does not depend on retrieving each case's own source publication (fair-cohort top-1 unchanged, 0.858 → 0.858). On the full cohort, Cell S also exceeds Exomiser HPO-only (Δ = +0.034, 95 % CI [+0.006, +0.064]).
 
 ## License
 
@@ -321,8 +360,9 @@ The code in this repository is released under the MIT License (see [`LICENSE`](L
 
 ## Acknowledgments
 
-This work is a Master's thesis (TFM) at Universidad Alfonso X, supervised by
-[advisor name to be added]. It builds on the open ecosystem of biomedical NLP
+The n=75 baseline was an AI Master's thesis (TFM) at Universidad Alfonso X; the
+n=1,047 paper extension is doctoral research at Universidad Europea (Madrid),
+supervised by [advisor name to be added]. It builds on the open ecosystem of biomedical NLP
 and bioinformatics — particularly the Monarch Initiative (Phenopacket Store,
 HPO, MONDO), the [LIRICAL](https://github.com/TheJacksonLaboratory/LIRICAL) and
 [Exomiser](https://exomiser.readthedocs.io/) teams, the
