@@ -13,8 +13,10 @@
 > both survive Holm multiple-comparison correction. A **leave-one-paper-out**
 > robustness check confirms this does **not** depend on retrieving each case's own
 > source paper (fair-cohort top-1 unchanged, 0.858 → 0.858, McNemar p=1.0).
-> geno_agent is the strongest **literature-only**, all-local rare-disease
-> gene-prioritisation system (no curated phenotype-gene tables, no cloud API).
+> geno_agent is the strongest **literature-only** rare-disease gene-prioritisation
+> system (no curated phenotype-gene tables); **production inference runs entirely
+> on local hardware with no cloud API** — only the optional RAGAS/DeepEval
+> evaluation judges (used for measurement, not prioritisation) call a cloud LLM.
 >
 > **Latest update (2026-06-11).** Full n=1,047 evaluation complete
 > (annotation-overlap deconfounding, publication-recency stratification,
@@ -46,7 +48,7 @@ To our knowledge, this is the first end-to-end validated agentic multi-agent RAG
 
 1. **An open, reproducible architecture** — four specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated through LangGraph, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
-3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No cloud API dependencies, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data.
+3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No cloud API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS/DeepEval evaluation judges are the sole cloud component, used only to *measure* rationale quality, never for gene prioritisation.)
 4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper, v0.1.19 for the thesis), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
 
 Where this work *is not* claiming novelty: RAG itself ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)), multi-agent LLM systems generally, hybrid dense+sparse retrieval, and the use of PubMed/PMC as a corpus are all established techniques. The contribution is the application of these techniques, in this combination, to this clinical problem, with rigorous evaluation.
@@ -163,9 +165,11 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 - **Statistical rigor.** Primary fair-cohort comparisons survive Holm correction
   (adjusted p=0.028); the geno_agent–Exomiser advantage is invariant to stratum
   weighting (+0.034 equal-weighted vs +0.035 unweighted).
-- **RAG quality (GPT-4o judge).** RAGAS rank-1 faithfulness 0.480 and DeepEval
-  groundedness 0.845; both predict top-1 correctness with a 33–39 pp gap,
-  supporting a low-grounding clinical-triage flag.
+- **RAG quality (GPT-4o judge).** RAGAS faithfulness (rank-1 / top-1-only
+  sensitivity) **0.480** — the multi-claim full-response measurement is **0.286**,
+  reported as a conservative lower bound — and DeepEval groundedness **0.845**;
+  both predict top-1 correctness with a 33–39 pp gap, supporting a low-grounding
+  clinical-triage flag.
 
 ## Project status
 
