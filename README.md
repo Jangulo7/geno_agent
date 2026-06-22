@@ -2,9 +2,9 @@
 
 **An Agentic Multi-Agent RAG System for Gene Prioritization in Rare Mendelian Disease**
 
-> Research prototype spanning two studies: an AI **Master's thesis** (TFM,
-> Universidad Alfonso X, n=75) and the current **doctoral first paper**
-> (Universidad Europea, Madrid; n=1,047; target: *Genome Medicine*).
+> **Doctoral first paper** (Universidad Europea, Madrid; n=1,047; target:
+> *Genome Medicine*). An end-to-end agentic multi-agent RAG system for
+> literature-based causal gene prioritisation in rare Mendelian disease.
 >
 > **Headline (n=1,047, deconfounded).** On the *fair-comparison cohort* — cases
 > whose source publication is **not** cited by `phenotype.hpoa` for the causal
@@ -351,7 +351,7 @@ submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {AI Master's thesis (Universidad Alfonso X, n=75); doctoral first paper (Universidad Europea, n=1,047; target: Genome Medicine).}
+  note         = {Doctoral first paper (Universidad Europea, Madrid; n=1,047; target: Genome Medicine).}
 }
 ```
 
@@ -365,8 +365,7 @@ The code in this repository is released under the MIT License (see [`LICENSE`](L
 
 ## Acknowledgments
 
-The n=75 baseline was an AI Master's thesis (TFM) at Universidad Alfonso X; the
-n=1,047 paper extension is doctoral research at Universidad Europea (Madrid),
+This is doctoral research at Universidad Europea (Madrid),
 supervised by [advisor name to be added]. It builds on the open ecosystem of biomedical NLP
 and bioinformatics — particularly the Monarch Initiative (Phenopacket Store,
 HPO, MONDO), the [LIRICAL](https://github.com/TheJacksonLaboratory/LIRICAL) and
