@@ -193,7 +193,7 @@ Key reports:
 - [`reports/methodology.md`](reports/methodology.md) — **consolidated authoritative methodology**
 - [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — current execution plan (LIRICAL + RAGAS + DeepEval + Threads D-G)
 - [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + [`.html`](reports/paper_extension_results.html) — v2 final results
-- [`reports/thesis_final_report.md`](reports/thesis_final_report.md) + [`.html`](reports/thesis_final_report.html) — thesis n=75 baseline
+- [`reports/_archive_thesis_n75/thesis_final_report.md`](reports/_archive_thesis_n75/thesis_final_report.md) + [`.html`](reports/_archive_thesis_n75/thesis_final_report.html) — thesis n=75 baseline (archived)
 
 ### Phase 2 UI — CopilotKit
 
@@ -280,12 +280,12 @@ geno_agent/
 ├── config/                            # Prompt templates, agent configs
 ├── reports/                           # All planning + results documents
 │   ├── methodology.md                 # v3 consolidated technical methodology (authoritative)
-│   ├── paper_extension_plan.md        # v1 plan (n=460, v0.1.19)
+│   ├── research_status_2026-06-22_n1047.md  # consolidated n=1,047 status + gap analysis
 │   ├── paper_extension_plan_v2.md     # v2 plan (n=1,047, v0.1.26)
 │   ├── paper_extension_plan_v3.md     # v3 plan (LIRICAL + RAGAS + Threads D-G)
-│   ├── paper_extension_results.md     # v2 final results
-│   ├── thesis_final_report.md         # n=75 thesis baseline
-│   └── (each above also has a .html counterpart)
+│   ├── paper_extension_results.md     # v2 final results (each above also has a .html)
+│   ├── tables/                        # supplementary tables (e.g. multiplicity correction)
+│   └── _archive_thesis_n75/           # superseded n=75 thesis-era reports + v1 plan (n=460)
 └── data/                              # Manifests + ontologies (large files .gitignored)
     ├── test_cases/                    # n=75 thesis cohort (v0.1.19)
     ├── test_cases_500/                # n=459 paper v1 cohort (v0.1.19, seed 4242)

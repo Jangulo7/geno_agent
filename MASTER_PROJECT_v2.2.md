@@ -78,7 +78,7 @@ cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
 
 **Documentation additions (Phase 3):**
 
-16. [`reports/paper_extension_plan.md`](reports/paper_extension_plan.md) — v1 plan (n=460, v0.1.19, seed 4242)
+16. [`reports/_archive_thesis_n75/paper_extension_plan.md`](reports/_archive_thesis_n75/paper_extension_plan.md) — v1 plan (n=460, v0.1.19, seed 4242; archived, superseded by v2/v3)
 17. [`reports/paper_extension_plan_v2.md`](reports/paper_extension_plan_v2.md) — v2 plan (n=1,047, v0.1.26, seed 42)
 18. [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — v3 plan (LIRICAL, RAGAS, DeepEval, Threads D-G)
 19. [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + `.html` — v2 final results (Cell S beats Exomiser, Δ=+3.4 pp ★)
@@ -3183,7 +3183,7 @@ MONDO category.
 ### 11.8 Phase 2e — Cross-encoder re-ranker (added 2026-05-15)
 
 **Motivation.** The Phase 2d LLM-augmented factorial (cells E-J,
-`reports/progress_report_15052026_llm_critic_results.md`) showed that
+`reports/_archive_thesis_n75/progress_report_15052026_llm_critic_results.md`) showed that
 neither LLM-Planner nor LLM-Critic produces a top-1 improvement over the
 deterministic Cell D (multi-agent + hybrid retrieval). The factorial
 decomposition cleanly isolates **retrieval** as the binding constraint:

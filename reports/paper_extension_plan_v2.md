@@ -3,7 +3,7 @@
 **Author:** Johanna Angulo (johanna.angulo@gmail.com)
 **Date:** 2026-05-17
 **Branch:** `paper/n500-validation` (will be renamed for the v2 work)
-**Supersedes:** [`reports/paper_extension_plan.md`](paper_extension_plan.md) (n=460, v0.1.19)
+**Supersedes:** [`reports/paper_extension_plan.md`](_archive_thesis_n75/paper_extension_plan.md) (n=460, v0.1.19; archived)
 **Companion result document:** [`reports/paper_extension_results.md`](paper_extension_results.md) (n=459 results, to be updated with n=1047 once compute completes)
 
 ---
