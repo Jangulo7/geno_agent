@@ -142,19 +142,21 @@ paper-extension phase: evaluation scaled from n=75 to n=1,047, two new baselines
 | LLM-family ablation | Q1-B documented | run | ✅ |
 | Ontology pins (2026) | §10 | files in `data/` | ✅ |
 
-**Genuine gaps in the master plan (small, doc-only):**
+**Gaps in the master plan — RESOLVED 2026-06-22:**
 
-1. **Holm / Benjamini-Hochberg multiplicity correction** is *done* (script +
-   supp table exist, README cites it) but is **not mentioned in v2.2** — the plan
-   only discusses per-comparison McNemar p / bootstrap CIs. Add a sentence to §11.5
-   / §3 noting the multiplicity-correction step and `supp_table_multiplicity`.
-2. **Cell N (RRF ensemble of M + S, Thread F)** appears in results but is thinly
-   described in the plan; worth one line so the cell roster (D/K/L/M/N/S) is explicit.
+1. ✅ **Holm / Benjamini-Hochberg multiplicity correction** — now documented in
+   §11.5 (with `multiplicity_correction.py`, `weighted_overall.py`, and
+   `supp_table_multiplicity`) and recorded as a §10 deviation. Previously the plan
+   discussed only per-comparison McNemar p / bootstrap CIs.
+2. ✅ **Cell N (RRF ensemble of M + S, Thread F)** — the executed cell roster
+   (D/K/L/M/N/S) is now stated explicitly via a §11.8 disambiguation note + §10
+   deviation entry. This also fixed a latent **naming collision**: §11.8 originally
+   defined "Cell N" as a reranker+LLM-Planner variant that was never run.
 3. Earlier drift risk flagged in older notes — manuscript citing "287k articles /
-   4.2 M chunks" — is **already fixed**: the draft now cites the exact 52,777,395
+   4.2 M chunks" — was **already fixed**: the draft cites the exact 52,777,395
    chunk count. No action.
 
-Otherwise the master plan and repo are concordant.
+With these edits, the master plan and repo are concordant.
 
 ---
 
@@ -247,10 +249,10 @@ core is solid; this is about closing the gap on the newest additions.
 | # | Item | Type | Owner action |
 |---|---|---|---|
 | 1 | UE ethics/IRB exemption letter | Admin | obtain; template at `ue_irb_exemption_request_template.md` |
-| 2 | Co-author + advisor names (README, draft, cover letter) | Admin | fill placeholders |
-| 3 | Patch master plan §11.5/§3 with multiplicity correction + Cell N | Doc | 1-paragraph edit |
-| 4 | Archive stale n = 75 reports → `reports/_archive_thesis_n75/` | Cleanup | §6 list |
-| 5 | Commit/ignore the untracked n = 1,047 artifacts consistently | Git | §7 |
+| 2 | Co-author + advisor names + contact email (README, draft, cover letter) | Admin | fill placeholders (needs author input) |
+| 3 | ✅ Patch master plan §11.5/§10/§11.8 with multiplicity correction + Cell N roster | Doc | **DONE 2026-06-22** |
+| 4 | ✅ Archive stale n = 75 reports → `reports/_archive_thesis_n75/` | Cleanup | **DONE 2026-06-22** |
+| 5 | Commit/ignore the untracked n = 1,047 artifacts consistently | Git | partial: `*.odt/*.doc/*.docx` now ignored; per-case dirs still to reconcile |
 | 6 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per `cover_letter_genome_medicine.md` |
 
 No further *experiments* are required for the primary submission. Optional
