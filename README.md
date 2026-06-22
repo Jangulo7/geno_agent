@@ -193,7 +193,7 @@ Key reports:
 - [`reports/methodology.md`](reports/methodology.md) — **consolidated authoritative methodology**
 - [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — current execution plan (LIRICAL + RAGAS + DeepEval + Threads D-G)
 - [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + [`.html`](reports/paper_extension_results.html) — v2 final results
-- [`reports/_archive_thesis_n75/thesis_final_report.md`](reports/_archive_thesis_n75/thesis_final_report.md) + [`.html`](reports/_archive_thesis_n75/thesis_final_report.html) — earlier n=75 baseline (archived)
+- [`reports/_archive_n75/thesis_final_report.md`](reports/_archive_n75/thesis_final_report.md) + [`.html`](reports/_archive_n75/thesis_final_report.html) — earlier n=75 baseline (archived)
 
 ### Phase 2 UI — CopilotKit
 
@@ -285,7 +285,7 @@ geno_agent/
 │   ├── paper_extension_plan_v3.md     # v3 plan (LIRICAL + RAGAS + Threads D-G)
 │   ├── paper_extension_results.md     # v2 final results (each above also has a .html)
 │   ├── tables/                        # supplementary tables (e.g. multiplicity correction)
-│   └── _archive_thesis_n75/           # superseded n=75-era reports + v1 plan (n=460)
+│   └── _archive_n75/           # superseded n=75-era reports + v1 plan (n=460)
 └── data/                              # Manifests + ontologies (large files .gitignored)
     ├── test_cases/                    # n=75 earlier cohort (v0.1.19)
     ├── test_cases_500/                # n=459 paper v1 cohort (v0.1.19, seed 4242)

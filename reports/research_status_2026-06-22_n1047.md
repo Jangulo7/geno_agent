@@ -185,7 +185,7 @@ was seen, it was likely the GitHub web view on an older commit or a cached copy.
 ## 6. Stale n = 75 reports still in `reports/` (the real cleanup target)
 
 > **Done (2026-06-22):** the 27 files below were moved to
-> `reports/_archive_thesis_n75/` (tracked files via `git mv`; the two untracked
+> `reports/_archive_n75/` (tracked files via `git mv`; the two untracked
 > `progress_report_15052026_end_of_day.*` via plain `mv`). All inbound links in
 > `README.md` and `MASTER_PROJECT_v2.2.md` were repointed to the archive path.
 
@@ -193,7 +193,7 @@ These do **not** mention n = 1,047 and are thesis-era or early-pipeline artifact
 They are kept for the audit trail but subordinated so the current paper material is
 not diluted:
 
-**Thesis-era / superseded (archived → `reports/_archive_thesis_n75/`):**
+**Thesis-era / superseded (archived → `reports/_archive_n75/`):**
 - `thesis_final_report.md` (+ `.html`) — n = 75 final report
 - `research_summary_15052026.md`, `research_summary_15052026_technical.md` — n = 75
 - `progress_report_09052026{,_v2,_v3}.md`, `progress_report_11052026.md`,
@@ -251,7 +251,7 @@ core is solid; this is about closing the gap on the newest additions.
 | 1 | UE ethics/IRB exemption letter | Admin | obtain; template at `ue_irb_exemption_request_template.md` |
 | 2 | Co-author + advisor names + contact email (README, draft, cover letter) | Admin | fill placeholders (needs author input) |
 | 3 | ✅ Patch master plan §11.5/§10/§11.8 with multiplicity correction + Cell N roster | Doc | **DONE 2026-06-22** |
-| 4 | ✅ Archive stale n = 75 reports → `reports/_archive_thesis_n75/` | Cleanup | **DONE 2026-06-22** |
+| 4 | ✅ Archive stale n = 75 reports → `reports/_archive_n75/` | Cleanup | **DONE 2026-06-22** |
 | 5 | Commit/ignore the untracked n = 1,047 artifacts consistently | Git | partial: `*.odt/*.doc/*.docx` now ignored; per-case dirs still to reconcile |
 | 6 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per `cover_letter_genome_medicine.md` |
 

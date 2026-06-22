@@ -7,7 +7,7 @@
 
 This document is the **single authoritative technical methodology reference** for
 the project as of the v3 paper-extension phase. It supersedes the methodology
-sections of the v1 plan ([`paper_extension_plan.md`](_archive_thesis_n75/paper_extension_plan.md)),
+sections of the v1 plan ([`paper_extension_plan.md`](_archive_n75/paper_extension_plan.md)),
 the v2 plan ([`paper_extension_plan_v2.md`](paper_extension_plan_v2.md)), and the
 v3 plan ([`paper_extension_plan_v3.md`](paper_extension_plan_v3.md)) by
 consolidating their methodology decisions into a single coherent description
