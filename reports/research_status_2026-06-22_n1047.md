@@ -1,6 +1,6 @@
 # Research Status Report — geno_agent (n = 1,047 Q1 paper)
 
-**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42/#43)
+**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42–#46)
 **Scope:** Doctoral first paper (Universidad Europea, Madrid) — *not* the n = 75 AI
 master's thesis (Universidad Alfonso X). Target journal: *Genome Medicine*.
 **Purpose:** Consolidated, verified status of the **n = 1,047** research; concordance
@@ -34,6 +34,21 @@ revisions is now **closed** — the roster rankings, LOPO summaries, diagnostic
 script, and archived material were committed and merged to `main` via PRs #42 and
 #43 on 2026-06-27, with the 1.9 GB of raw response dumps and earlier-cohort data
 deliberately gitignored (see §7).
+
+**Merged on 2026-06-27 (this housekeeping batch):**
+
+- **PR #42 / #43** — n = 75 report archival + n = 1,047 roster/artifact tracking
+  (see §6, §7).
+- **PR #44** — removed the private cover letter from tracking and scrubbed the
+  personal email from 14 files (privacy hygiene; see §7).
+- **PR #45** — **terminology reframe**: the system is now positioned as an
+  *agentic-workflow RAG* (not "agentic multi-agent"), with a Methods note defining
+  the workflow-vs-autonomous-agent distinction. This matches the implementation (a
+  fixed-topology LangGraph orchestration with a critic-driven self-correction loop,
+  T = 0; not an autonomous tool-selecting agent). Experimental-factor/cell labels
+  ("single- vs multi-agent", Cell D descriptors) are unchanged. See §5.
+- **PR #46** — archived two thesis-era HTML renders (`visual_report.html`,
+  `agent_architecture.html`) to `reports/_archive_n75/` (see §6).
 
 ---
 
@@ -173,6 +188,15 @@ With these edits, the master plan and repo are concordant.
 - Status table marks paper v2/v3, robustness, manuscript states correctly.
 - Reproducibility table pins (PPS v0.1.26, LIRICAL 2.4.0, Qdrant v1.14.1, etc.) — match.
 
+**Terminology reframe (PR #45, merged 2026-06-27).** The README, master plan,
+methodology, `pyproject.toml`, and both manuscript drafts now position the system as
+an **agentic-workflow RAG** rather than "agentic multi-agent RAG". This reflects the
+implementation (a fixed-topology LangGraph orchestration with a critic-driven
+self-correction loop; T = 0, seeded — not an autonomous, tool-selecting agent), and a
+new Methods paragraph states the distinction explicitly. The "single- vs multi-agent"
+experimental factor and the Cell D/L/S labels are unchanged (they denote the number
+of role-specialised stages, not autonomy).
+
 Minor residual nits (optional):
 - README's repo-layout block lists `eval_1050_lopo_full/` (correct — it exists) but
   the prose also references the LOPO pilot dir `data/eval_1050_lopo/`; both exist, so
@@ -191,6 +215,11 @@ was seen, it was likely the GitHub web view on an older commit or a cached copy.
 > `reports/_archive_n75/` (tracked files via `git mv`; the two untracked
 > `progress_report_15052026_end_of_day.*` via plain `mv`). All inbound links in
 > `README.md` and `MASTER_PROJECT_v2.2.md` were repointed to the archive path.
+>
+> **Added 2026-06-27 (PR #46):** two thesis-era HTML renders —
+> `visual_report.html` and `agent_architecture.html` (both n = 75, "Universidad UAX",
+> 100-article sample) — were also moved to `reports/_archive_n75/`. The one inbound
+> reference (a comment in `tests/test_seed.py`) was repointed.
 
 These do **not** mention n = 1,047 and are thesis-era or early-pipeline artifacts.
 They are kept for the audit trail but subordinated so the current paper material is
@@ -205,8 +234,13 @@ not diluted:
   `progress_report_15052026_{end_of_day,llm_critic_results}.md` — daily logs, n = 75
 - `paper_extension_plan.md` (v1, n = 460 superseded by v2/v3)
 - `technical_report.md`, `validation_results_2026-05-13.md` — early pipeline
-- `agent_architecture.md`, `methodology_test_case_selection.md` — version-agnostic;
-  verify before archiving (architecture doc may still be cited).
+- `visual_report.html`, `agent_architecture.html` — thesis-era HTML renders
+  (archived 2026-06-27, PR #46)
+
+> **Note:** the *Markdown* sources `agent_architecture.md` and
+> `methodology_test_case_selection.md` were **retained** in `reports/` (version-
+> agnostic; reframed to "agentic-workflow" in PR #45). Only the stale
+> `agent_architecture.html` render was archived.
 
 **Current n = 1,047 paper material (keep, authoritative):**
 - `methodology.md` — consolidated authoritative methodology
@@ -277,7 +311,9 @@ a deterministic, intentional set of files. Two PRs landed on 2026-06-27:
 | 4 | ✅ Archive stale n = 75 reports → `reports/_archive_n75/` | Cleanup | **DONE** — merged via PR #42 (2026-06-27) |
 | 5 | ✅ Commit/ignore the untracked n = 1,047 artifacts consistently | Git | **DONE** — merged via PR #43 (2026-06-27); roster tracked, heavy/older data + private docs gitignored |
 | 6 | ✅ Remove private cover letter from repo (local-only) | Privacy | **DONE 2026-06-27** — untracked + gitignored; history-scrub optional (§7) |
-| 7 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
+| 7 | ✅ Reframe positioning to "agentic-workflow RAG" + workflow-vs-agent Methods note | Doc | **DONE** — merged via PR #45 (2026-06-27) |
+| 8 | ✅ Archive thesis-era HTML renders (`visual_report.html`, `agent_architecture.html`) | Cleanup | **DONE** — merged via PR #46 (2026-06-27) |
+| 9 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
 
 No further *experiments* are required for the primary submission. Optional
 strengtheners noted in the v3 plan (DeepRare head-to-head; Qwen3-32B AWQ ablation)
@@ -286,6 +322,7 @@ remain explicitly deferred.
 ---
 
 *Prepared from on-disk artifacts in `data/eval_1050*/`, `reports/tables/`, and git
-state as of 2026-06-22; §1/§6/§7/§8 revised 2026-06-27 to reflect the merge of PRs
-#42/#43 and the removal of the private cover letter. Every metric in §2 was read from
+state as of 2026-06-22; §1/§5/§6/§7/§8 revised 2026-06-27 to reflect the merge of PRs
+#42–#46 (n = 75 archival, n = 1,047 artifact tracking, private-data removal,
+agentic-workflow reframe, and stale-HTML archival). Every metric in §2 was read from
 result files, not prose.*
