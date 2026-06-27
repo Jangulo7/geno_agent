@@ -1,13 +1,13 @@
 # GenoAgent Benchmark Cohort (n=1,047) — Data Descriptor
 
-**Title.** A Stratified Rare-Disease Benchmark Cohort for Literature-Based Causal
-Gene Prioritization (n=1,047)
+**Title.** GenoAgent Benchmark: A Stratified Rare-Disease Benchmark Cohort for
+Literature-Based Causal Gene Prioritization (n=1,047)
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
 **Figshare item type.** Dataset · **License.** CC BY 4.0 · **Version.** v1.0 (n=1,047)
 
-**DOI (this dataset).** `<to be filled after upload>`
+**DOI (this dataset).** `10.6084/m9.figshare.32814449`
 
 ## Summary
 
@@ -98,7 +98,7 @@ HPO/MONDO/HGNC (open / CC BY). Reuse freely **with attribution** (cite below).
   year      = {2026},
   publisher = {Figshare},
   version   = {v1.0},
-  doi       = {<to be filled after upload>},
+  doi       = {10.6084/m9.figshare.32814449},
   note      = {Derived from GA4GH Phenopacket Store v0.1.26; CC BY 4.0.}
 }
 ```
@@ -120,7 +120,7 @@ python scripts/cases/20_validate_test_cases.py
 ```
 
 Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
-(`c355b800e53e5347…`). Methods/foundation code DOI: `<P1 software DOI to be filled>`.
+(`c355b800e53e5347…`). Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
 
 ## Known limitations
 
@@ -133,11 +133,23 @@ Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
   subset — recommended for unbiased comparison against curated tools.
 - One causal gene per case; distractors are protein-coding HGNC genes.
 
+## Related materials (Figshare metadata)
+
+These are the relations declared on the Figshare item (relation type · identifier
+type · identifier):
+
+| Relation type | Identifier type | Identifier |
+|---|---|---|
+| Is derived from | URL | `https://github.com/monarch-initiative/phenopacket-store` (GA4GH Phenopacket Store v0.1.26) |
+| Is supplemented by | DOI | `10.6084/m9.figshare.32814491` (build-recipe / methods item) |
+| Is referenced by | DOI | `10.6084/m9.figshare.32814497` (system evaluated on this cohort) |
+| Is supplemented by | URL | `https://github.com/Jangulo7/geno_agent` (source-code repository) |
+
 ## Relationship to the GenoAgent papers
 
 - This **dataset** is the citable benchmark, used by the GenoAgent system evaluation.
 - **Methods / foundation** (corpus + index build recipe, ontology provenance) is a
-  separate release/item: `<P1 software DOI to be filled>`.
-- **GenoAgent system** (the agentic-RAG that is evaluated on this cohort): `<P2 DOI>`.
+  separate release/item: `10.6084/m9.figshare.32814491`.
+- **GenoAgent system** (the agentic-RAG that is evaluated on this cohort): `10.6084/m9.figshare.32814497`.
 - A separate variant-interpretation safety benchmark (different repository) reuses
   the shared foundation by DOI.
