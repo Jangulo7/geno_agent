@@ -324,7 +324,9 @@ a deterministic, intentional set of files. Two PRs landed on 2026-06-27:
 | 6 | ✅ Remove private cover letter from repo (local-only) | Privacy | **DONE 2026-06-27** — untracked + gitignored; history-scrub optional (§7) |
 | 7 | ✅ Reframe positioning to "agentic-workflow RAG" + workflow-vs-agent Methods note | Doc | **DONE** — merged via PR #45 (2026-06-27) |
 | 8 | ✅ Archive thesis-era HTML renders (`visual_report.html`, `agent_architecture.html`) | Cleanup | **DONE** — merged via PR #46 (2026-06-27) |
-| 9 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
+| 9 | ✅ Canonical "role-specialised agents" phrasing + operational *agent* definition | Doc | **DONE** — merged via PR #48 (2026-06-27) |
+| 10 | ✅ Fix stale APA/TRIPOD corpus figures + MedCPT→PubMedBERT | Fix | **DONE** — merged via PR #49 (2026-06-27) |
+| 11 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
 
 No further *experiments* are required for the primary submission. Optional
 strengtheners noted in the v3 plan (DeepRare head-to-head; Qwen3-32B AWQ ablation)
