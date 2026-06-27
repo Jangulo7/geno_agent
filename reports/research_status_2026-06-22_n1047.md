@@ -1,6 +1,6 @@
 # Research Status Report — geno_agent (n = 1,047 Q1 paper)
 
-**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42–#46)
+**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42–#49)
 **Scope:** Doctoral first paper (Universidad Europea, Madrid) — *not* the n = 75 AI
 master's thesis (Universidad Alfonso X). Target journal: *Genome Medicine*.
 **Purpose:** Consolidated, verified status of the **n = 1,047** research; concordance
@@ -49,6 +49,14 @@ deliberately gitignored (see §7).
   ("single- vs multi-agent", Cell D descriptors) are unchanged. See §5.
 - **PR #46** — archived two thesis-era HTML renders (`visual_report.html`,
   `agent_architecture.html`) to `reports/_archive_n75/` (see §6).
+- **PR #48** — adopted the canonical phrasing *"an agentic workflow composed of four
+  role-specialised agents (Planner, Retriever, Critic, Synthesizer)"* + a one-time
+  operational definition of *agent* across README, master plan, and both manuscript
+  drafts (reverting the interim "stages" wording). See §5.
+- **PR #49** — fixed stale corpus figures in the APA manuscript variant + TRIPOD doc
+  ("287,000 articles / 4.2 M chunks" → "~3.4 M genetics-relevant articles /
+  52,777,395 chunks") and corrected "MedCPT dense" → "PubMedBERT dense" (MedCPT is
+  the cross-encoder reranker). Headline results were already consistent.
 
 ---
 
@@ -326,6 +334,6 @@ remain explicitly deferred.
 
 *Prepared from on-disk artifacts in `data/eval_1050*/`, `reports/tables/`, and git
 state as of 2026-06-22; §1/§5/§6/§7/§8 revised 2026-06-27 to reflect the merge of PRs
-#42–#46 (n = 75 archival, n = 1,047 artifact tracking, private-data removal,
-agentic-workflow reframe, and stale-HTML archival). Every metric in §2 was read from
-result files, not prose.*
+#42–#49 (n = 75 archival, n = 1,047 artifact tracking, private-data removal,
+agentic-workflow reframe, "role-specialised agents" phrasing, and APA/TRIPOD
+corpus-figure fixes). Every metric in §2 was read from result files, not prose.*
