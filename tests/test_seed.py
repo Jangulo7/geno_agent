@@ -64,7 +64,7 @@ class TestStableHash:
     def test_known_value(self) -> None:
         """The known fixed value for 'geno_agent' captured during the demo run."""
         # If this changes, the chunk-id derivation has been perturbed.
-        # See reports/visual_report.html, section "stable_hash".
+        # See reports/_archive_n75/visual_report.html, section "stable_hash".
         assert stable_hash("geno_agent") == 11547620462806487235
 
     def test_returns_int(self) -> None:
