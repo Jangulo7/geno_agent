@@ -1,7 +1,7 @@
 # geno_agent — Test Case Selection Methodology
 
 **Author:** Johanna Angulo
-**Project:** `geno_agent` — agentic multi-agent RAG for rare-disease gene prioritisation
+**Project:** `geno_agent` — agentic-workflow RAG for rare-disease gene prioritisation
 **Master plan reference:** `MASTER_PROJECT_v2.1.md` §6 (Phase 1B), §11.5 (Evaluation harness)
 **Canonical artefact:** `data/test_cases/test_cases.jsonl` (sha256 `4872afb6…`)
 **Companion:** `reports/methodology_test_case_selection.html` (visual variant)

@@ -1,4 +1,4 @@
-# geno_agent — Agentic Multi-Agent RAG for Gene Prioritization
+# geno_agent — Agentic-Workflow RAG for Gene Prioritization
 
 Authoritative spec: `./MASTER_PROJECT_v2.2.md` (read in full before any task).
 Private GitHub repo: github.com/Jangulo7/geno_agent

@@ -1,9 +1,9 @@
 # geno_agent
 
-**An Agentic Multi-Agent RAG System for Gene Prioritization in Rare Mendelian Disease**
+**An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease**
 
 > **Doctoral first paper** (Universidad Europea, Madrid; n=1,047; target:
-> *Genome Medicine*). An end-to-end agentic multi-agent RAG system for
+> *Genome Medicine*). An end-to-end agentic-workflow RAG system for
 > literature-based causal gene prioritisation in rare Mendelian disease.
 >
 > **Headline (n=1,047, deconfounded).** On the *fair-comparison cohort* — cases
@@ -29,11 +29,13 @@
 
 ## Overview
 
-`geno_agent` is an agentic, multi-agent retrieval-augmented generation (RAG) system that automates literature-based evidence synthesis for the most labor-intensive step of the rare-disease diagnostic pipeline: deciding which candidate gene most plausibly causes a patient's phenotype.
+`geno_agent` is an agentic-workflow retrieval-augmented generation (RAG) system that automates literature-based evidence synthesis for the most labor-intensive step of the rare-disease diagnostic pipeline: deciding which candidate gene most plausibly causes a patient's phenotype.
 
-Given a patient's phenotypic profile (encoded as [Human Phenotype Ontology](https://hpo.jax.org) terms) and a list of candidate genes from upstream variant calling, the system autonomously retrieves full-text articles from PubMed Central Open Access (PMC OA), critically evaluates the relevance and strength of the recovered evidence, and synthesizes a re-ranked candidate list with cited justifications.
+Given a patient's phenotypic profile (encoded as [Human Phenotype Ontology](https://hpo.jax.org) terms) and a list of candidate genes from upstream variant calling, the system automatically retrieves full-text articles from PubMed Central Open Access (PMC OA), critically evaluates the relevance and strength of the recovered evidence, and synthesizes a re-ranked candidate list with cited justifications.
 
-Unlike monolithic RAG systems that perform a single retrieve-and-generate pass, `geno_agent` decomposes the task across four specialized agents — **Query Planner**, **Retriever**, **Critic**, and **Synthesizer** — orchestrated as a stateful graph in [LangGraph](https://github.com/langchain-ai/langgraph). This decomposition enables iterative query refinement, explicit relevance grading, and self-correction loops that single-pass architectures cannot support.
+Unlike monolithic RAG systems that perform a single retrieve-and-generate pass, `geno_agent` decomposes the task across four specialized stages — **Query Planner**, **Retriever**, **Critic**, and **Synthesizer** — orchestrated as a stateful graph in [LangGraph](https://github.com/langchain-ai/langgraph). This decomposition enables iterative query refinement, explicit relevance grading, and a critic-driven self-correction loop that single-pass architectures cannot support.
+
+**Terminology — *agentic workflow*, not autonomous agents.** In the workflow-vs-agent taxonomy of LLM systems, `geno_agent` is an **agentic workflow**: the orchestration graph, the routing logic, and the tool calls (retrieval, ontology, gene-symbol lookup) are predefined in code, with a critic-driven self-correction loop. It is *not* an autonomous agent system in which an LLM decides its own control flow and chooses tools at run time. This is deliberate — fixing the topology and decoding (temperature 0, seeded) keeps inference reproducible and the evaluation valid, a prerequisite for clinical benchmarking. The "single-agent vs. multi-agent" factor below refers to the number of role-specialized stages (one vs. four), not to agent autonomy.
 
 ## Why this matters
 
@@ -41,13 +43,13 @@ Rare diseases affect an estimated [300 million people worldwide](https://doi.org
 
 Phenotype-driven prioritization tools such as [Exomiser](https://exomiser.readthedocs.io) (Smedley et al., 2015) work well when the causal gene is already well annotated in curated phenotype databases. They cannot surface novel or emerging gene–phenotype associations that exist *only* in unstructured literature — which is precisely where the most diagnostically valuable case reports, functional studies, and phenotype-expansion papers live. PubMed indexes over a million new articles per year, and the PMC Open Access subset alone contains more than four million full-text articles. No human curator can keep pace.
 
-This project asks whether an agentic, multi-agent RAG architecture, deployed on local hardware and grounded in the published literature, can meaningfully assist this synthesis step for clinical genetics teams.
+This project asks whether an agentic-workflow RAG architecture, deployed on local hardware and grounded in the published literature, can meaningfully assist this synthesis step for clinical genetics teams.
 
 ## What this project contributes
 
-To our knowledge, this is the first end-to-end validated agentic multi-agent RAG system designed and evaluated specifically for **causal gene prioritization in rare Mendelian disease via literature evidence synthesis**. Specifically, the project contributes:
+To our knowledge, this is the first end-to-end validated agentic-workflow RAG system designed and evaluated specifically for **causal gene prioritization in rare Mendelian disease via literature evidence synthesis**. Specifically, the project contributes:
 
-1. **An open, reproducible architecture** — four specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated through LangGraph, with all components, prompts, and configuration released under an open license.
+1. **An open, reproducible architecture** — four role-specialized stages (Query Planner / Retriever / Critic / Synthesizer) coordinated as a LangGraph workflow, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
 3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No external API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS/DeepEval evaluation judges are the sole component that calls an external OpenAI-compatible LLM endpoint — GPT-4o in this study — used only to *measure* rationale quality, never for gene prioritisation.)
 4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper; v0.1.19 for the earlier cohort), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
@@ -347,7 +349,7 @@ submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
 ```bibtex
 @misc{angulo2026geno_agent,
   author       = {Angulo, Johanna},
-  title        = {geno\_agent: An Agentic Multi-Agent RAG System for
+  title        = {geno\_agent: An Agentic-Workflow RAG System for
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},

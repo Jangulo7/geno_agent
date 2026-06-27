@@ -1,4 +1,4 @@
-# MASTER PROJECT FILE v2.2 — Agentic Multi-Agent RAG for Gene Prioritization
+# MASTER PROJECT FILE v2.2 — Agentic-Workflow RAG for Gene Prioritization
 
 Private GitHub repository: https://github.com/Jangulo7/geno_agent
 Project Local folder: `/home/hana77/ia_jo/uax_tfm/geno_agent`

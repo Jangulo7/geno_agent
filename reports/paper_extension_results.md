@@ -15,7 +15,7 @@ preserved in §3 for the audit trail and reproducibility record.
 
 ## 0. Executive Summary
 
-We validated geno_agent — an agentic multi-agent RAG with cross-encoder reranking
+We validated geno_agent — an agentic-workflow RAG with cross-encoder reranking
 and an LLM-as-Evidence-Aggregator (Cell S) — against Exomiser HPO-only (Cell K)
 across three sample-size scales (n=75 thesis, n=459 paper v1, n=1047 paper v2)
 using the Phenopacket Store as the source cohort. Each scale uses a fresh

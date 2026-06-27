@@ -1,7 +1,7 @@
 # geno_agent — Agentic Architecture Report
 
 **Author:** Johanna Angulo
-**Project:** TFM, Universidad UAX — *Agentic Multi-Agent RAG for Gene Prioritization in Rare Mendelian Disease*
+**Project:** geno_agent — *Agentic-Workflow RAG for Gene Prioritization in Rare Mendelian Disease*
 **Repository:** [github.com/Jangulo7/geno_agent](https://github.com/Jangulo7/geno_agent) (private)
 **Reference:** [`MASTER_PROJECT_v2.1.md`](../MASTER_PROJECT_v2.1.md) §11
 **Status snapshot:** Phase 2a deterministic baseline complete (PRs #22–#26 merged); C7 (LangGraph + Qwen3-8B) pending.
