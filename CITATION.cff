@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or its datasets, please cite as below."
+title: "geno_agent: An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease"
+abstract: >-
+  An end-to-end agentic-workflow retrieval-augmented generation (RAG) system for
+  literature-based causal gene prioritisation in rare Mendelian disease, evaluated
+  on a stratified n=1,047 cohort from the GA4GH Phenopacket Store. This repository
+  hosts the methods/foundation paper (P1) and the GenoAgent system paper (P2).
+type: software
+authors:
+  - family-names: Angulo
+    given-names: Johanna
+    affiliation: "Universidad Europea, Madrid"
+license: AGPL-3.0-or-later
+repository-code: "https://github.com/Jangulo7/geno_agent"
+year: 2026
+keywords:
+  - rare disease
+  - gene prioritization
+  - retrieval-augmented generation
+  - agentic workflow
+  - Human Phenotype Ontology
+  - clinical genomics

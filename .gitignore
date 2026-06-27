@@ -87,6 +87,11 @@ data/eval_1050_lopo_full/leak_S/
 *.doc
 *.docx
 
+# Figshare release build outputs — code zips + assembled data bundles + checksums.
+# The release MANIFESTS under release/ ARE committed; the built archives are not
+# (regenerable from a tag via release/build_figshare_bundles.sh).
+figshare_uploads/
+
 # Raw LLM response dumps (1.9 GB; regenerable from the per-case ranking JSONs).
 # Per-case ranking JSONs in data/eval_1050/cell_{D,K,L,M,N,S}/ ARE committed.
 data/eval_1050/cell_S_responses/

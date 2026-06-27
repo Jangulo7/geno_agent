@@ -1,0 +1,40 @@
+# Pathspecs for the P1 (methods / shared foundation) code zip.
+# Fed to `git archive <tag> -- <these>`. Only tracked files at the tag are emitted,
+# so gitignored data/caches/.env can never leak in. One pathspec per line.
+#
+# --- Foundation pipeline: PMC-OA corpus -> Qdrant index (Phase 1A) ---
+scripts/corpus
+scripts/embedding
+scripts/indexing
+scripts/ontology
+# --- Cohort construction: Phenopackets -> n=1,047 test cases (Phase 1B) ---
+scripts/cases
+# --- Shared utilities (determinism / seeding) ---
+scripts/utils
+scripts/__init__.py
+src/__init__.py
+# --- Tests covering the foundation ---
+tests/__init__.py
+tests/test_acceptance_gate.py
+tests/test_candidate_lists.py
+tests/test_chunking.py
+tests/test_finalize.py
+tests/test_phase1b_helpers.py
+tests/test_seed.py
+# --- Build / environment / provenance ---
+pyproject.toml
+requirements.lock.txt
+docker-compose.yml
+.env.example
+LICENSE
+CITATION.cff
+data/MANIFEST.tsv
+# --- Authoritative spec + methods docs + reproduction guide ---
+README.md
+MASTER_PROJECT_v2.2.md
+reports/methodology.md
+reports/methodology_test_case_selection.md
+release/README.md
+release/paper-methods/REPRODUCE.md
+release/paper-methods/artifacts_manifest.tsv
+release/paper-methods/README_FIGSHARE.md
