@@ -41,9 +41,12 @@ manuscript draft.
   supporting analyses.
 - `*.sha256` — checksums for every uploaded file.
 
-**Not included (by design):** the 1.9 GB raw LLM response dumps (regenerable);
-the shared foundation (reference P1's DOI); models / baseline tools (reference
-upstream by pinned version); the personal cover letter.
+**Not included (by design):** the 1.9 GB raw LLM response dumps — they embed
+**verbatim PMC-OA passages** (mixed CC tiers), so they are not license-clean to
+publish; keep local / recipe-only, or publish the text-stripped rationale
+derivative described in `artifacts_manifest.tsv`. Also excluded: the shared
+foundation (reference P1's DOI); models / baseline tools (reference upstream by
+pinned version); the personal cover letter.
 
 ## How to cite
 

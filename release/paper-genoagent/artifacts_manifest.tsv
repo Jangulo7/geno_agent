@@ -1,6 +1,7 @@
 artifact	role	figshare_action	approx_size	license	needed_by_P3	source_or_location
 data/eval_1050/ committed per-case results (cell_D/K/L/M/N/S/*) + _results_*.{json,md,csv}	primary n=1,047 evaluation results	UPLOAD	~80 MB	AGPL-3.0	NO	git-tracked (7,209 files)
-data/eval_1050/cell_S_responses/ + cell_L_responses/	raw LLM response dumps	EXCLUDE	1.9 GB	—	NO	regenerable from per-case ranking JSONs; gitignored
+data/eval_1050/cell_S_responses/ + cell_L_responses/	raw LLM response dumps (embed verbatim PMC-OA passages)	DO-NOT-UPLOAD	1.9 GB	mixed PMC-OA CC tiers	NO	NOT license-clean to publish (verbatim PMC full text in retrieved_per_gene[].text + lea_user_prompt). Keep local / recipe-only. Publish a text-stripped derivative instead (see row below)
+data/eval_1050/ rationale derivative (ranked + lea_response_parsed + chunk provenance, verbatim text stripped)	model-generated rationales + PMC-ID provenance	UPLOAD (optional, on request)	~small	AGPL-3.0	NO	derive from cell_S_responses by dropping retrieved_per_gene[].text and lea_user_prompt; license-clean explainability artifact
 data/eval_1050_lopo_full/ (_lopo_*.{json,md} summaries)	leave-one-paper-out robustness	UPLOAD	38 MB (summaries; per-case sidecars gitignored)	AGPL-3.0	NO	git-tracked summaries only
 reports/figures/*.png	manuscript figures (CONSORT, architecture, results)	UPLOAD	~1.4 MB	AGPL-3.0	NO	git-tracked
 reports/tables/*	manuscript + supplementary tables	UPLOAD	~60 KB	AGPL-3.0	NO	git-tracked
