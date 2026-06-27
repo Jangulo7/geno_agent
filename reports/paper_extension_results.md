@@ -1,6 +1,6 @@
 # Paper Extension Results — n=1047 v2 (Phenopacket Store v0.1.26)
 
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Date:** 2026-05-17 (v2 final)
 **Branch:** `paper/n500-validation`
 **Plan v1:** [`reports/paper_extension_plan.md`](_archive_n75/paper_extension_plan.md) (n=460, v0.1.19; archived)

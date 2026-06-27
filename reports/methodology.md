@@ -1,7 +1,7 @@
 # Methodology (v3, paper-extension consolidated)
 
 **Project:** geno_agent — Agentic Multi-Agent RAG for Rare-Disease Gene Prioritization
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Date:** 2026-05-18
 **Status:** Paper extension v3 in progress (Cell S re-run with response logging, ~60 % done)
 

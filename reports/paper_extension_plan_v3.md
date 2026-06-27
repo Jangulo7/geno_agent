@@ -1,6 +1,6 @@
 # Paper Extension Plan v3 — LIRICAL + RAGAS + DeepEval
 
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Date:** 2026-05-17
 **Branch:** `paper/n500-validation`
 **Supersedes:** [`paper_extension_plan_v2.md`](paper_extension_plan_v2.md) by extending Strategy A with two new workstreams before the DeepRare comparison

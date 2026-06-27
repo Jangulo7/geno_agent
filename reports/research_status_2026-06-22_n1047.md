@@ -1,6 +1,6 @@
 # Research Status Report — geno_agent (n = 1,047 Q1 paper)
 
-**Date:** 2026-06-22
+**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42/#43)
 **Scope:** Doctoral first paper (Universidad Europea, Madrid) — *not* the n = 75 AI
 master's thesis (Universidad Alfonso X). Target journal: *Genome Medicine*.
 **Purpose:** Consolidated, verified status of the **n = 1,047** research; concordance
@@ -28,9 +28,12 @@ all reflect the current n = 1,047 study. The genuinely stale material is in the
 `reports/` directory — a layer of n = 75 thesis-era progress reports and summaries
 that still sit alongside the current ones (see §6).
 
-**What remains** is administrative/editorial, not experimental: UE ethics letter,
-co-author/advisor names, and committing a batch of n = 1,047 artifacts that are
-currently untracked in the working tree (see §7).
+**What remains** is administrative/editorial, not experimental: UE ethics letter and
+co-author/advisor names. The n = 1,047 artifact-tracking gap flagged in earlier
+revisions is now **closed** — the roster rankings, LOPO summaries, diagnostic
+script, and archived material were committed and merged to `main` via PRs #42 and
+#43 on 2026-06-27, with the 1.9 GB of raw response dumps and earlier-cohort data
+deliberately gitignored (see §7).
 
 ---
 
@@ -211,36 +214,56 @@ not diluted:
 - `paper_extension_results.md` (+ `.html`) — v2 final results
 - `manuscript_q1_draft.md`, `manuscript_methods_draft.md` (+ `_apa` variants)
 - `explainability_report.md`, `deeprare_comparability_analysis.md`,
-  `tripod_llm_compliance.md`, `wallclock_cost_table.md`, `cover_letter_genome_medicine.md`
+  `tripod_llm_compliance.md`, `wallclock_cost_table.md`
 - `expert_review_2026-06-10.md` — most recent review
 - `reports/tables/supp_table_multiplicity.md` — multiplicity supplement
 - **this file** — `research_status_2026-06-22_n1047.md`
 
-> ⚠️ Two thesis-era reports are currently **untracked** in git
-> (`progress_report_15052026_end_of_day.{md,html}`) — decide whether to commit them
-> to the archive or drop them; do not leave them dangling.
+**Local-only (deliberately NOT tracked):**
+- `cover_letter_genome_medicine.md` — the *Genome Medicine* submission cover letter.
+  It carries personal contact details (name, affiliation, email, phone), so it is
+  gitignored and kept only as a local working copy. It was briefly tracked (committed
+  in PR #43) and was untracked again on 2026-06-27; the bytes remain in git history
+  on the private repo (see §7 for the optional history-scrub note).
+
+> ✅ **Resolved (2026-06-27):** the two previously-untracked thesis-era reports
+> (`progress_report_15052026_end_of_day.{md,html}`) are now committed under
+> `reports/_archive_n75/` (merged via PR #42). Nothing is left dangling.
 
 ---
 
-## 7. Git hygiene — uncommitted n = 1,047 artifacts
+## 7. Git hygiene — RESOLVED (2026-06-27)
 
-A large set of result artifacts is sitting **untracked** in the working tree on
-branch `docs/claude-md-scope`. These are not lost, but they are not yet in version
-control and are easy to misread as "missing":
+The artifact-tracking gap is closed. The working tree is **clean** and `main` carries
+a deterministic, intentional set of files. Two PRs landed on 2026-06-27:
 
-- `data/eval_1050/cell_{D,K,L,M,S}_*/` per-case dirs, `cell_L_responses/`,
-  `cell_S_responses/`, and `*.v2_backup_*` dirs
-- `data/eval_1050_lopo/` (LOPO pilot)
-- `data/eval_500/`, `data/test_cases/`, `data/eval/cell_*` (n = 75 + n = 459 backfill)
+- **PR #42** (`docs/archive-thesis-reports`) — archived the n = 75 reports to
+  `reports/_archive_n75/`, added this status report, and patched the master plan
+  (multiplicity correction + Cell N roster).
+- **PR #43** (`chore/track-eval-roster`) — committed the n = 1,047 roster and
+  housekeeping, with an explicit gitignore policy.
+
+**Now tracked (committed):**
+- `data/eval_1050/cell_{D,K,L,M,S}/` per-case ranking JSONs (mirroring the already-
+  tracked `cell_N`) + `data/eval_1050_lopo/` summaries
 - `scripts/eval/rerank_diagnostic.py`
-- `reports/cover_letter_genome_medicine.md`
-- `demos/_archive/`
+- `demos/_archive/streamlit_thesis_presentation_v1_2026-05-24.py`
 
-**Recommendation:** decide per the existing `.gitignore` convention (summaries +
-`_results_*` committed; bulky per-case sidecars gitignored). Several per-case dirs
-appear *neither* committed *nor* ignored — reconcile this so the repo state is
-deterministic. `data/eval_1050` already has 1,974 files tracked, so the committed
-core is solid; this is about closing the gap on the newest additions.
+**Deliberately gitignored (heavy/derived/private — outside git by policy):**
+- `data/eval_1050/cell_{S,L}_responses/` — 1.9 GB raw LLM response dumps
+  (regenerable from the committed rankings)
+- `data/eval_1050/*_backup_*/` — pre-v2 aggregation snapshots
+- `data/eval/cell_*/`, `data/eval_500/`, `data/test_cases/` — earlier-cohort
+  (n = 75 / n = 500) artifacts, superseded by n = 1,047
+- `*Zone.Identifier` — Windows mark-of-the-web sidecars (one stray file removed)
+- `reports/cover_letter_genome_medicine.md` — private submission letter (local only)
+
+> **Optional history scrub.** `cover_letter_genome_medicine.md` was committed in
+> PR #43 before being untracked, so its bytes (incl. personal contact details)
+> persist in `main`'s history. The repo is **private**, so exposure is contained.
+> If a full purge is wanted (e.g. before any future public release), rewrite history
+> with `git filter-repo --path reports/cover_letter_genome_medicine.md --invert-paths`
+> and force-push — a separate, coordinated operation, not done here.
 
 ---
 
@@ -251,9 +274,10 @@ core is solid; this is about closing the gap on the newest additions.
 | 1 | UE ethics/IRB exemption letter | Admin | obtain; template at `ue_irb_exemption_request_template.md` |
 | 2 | Co-author + advisor names + contact email (README, draft, cover letter) | Admin | fill placeholders (needs author input) |
 | 3 | ✅ Patch master plan §11.5/§10/§11.8 with multiplicity correction + Cell N roster | Doc | **DONE 2026-06-22** |
-| 4 | ✅ Archive stale n = 75 reports → `reports/_archive_n75/` | Cleanup | **DONE 2026-06-22** |
-| 5 | Commit/ignore the untracked n = 1,047 artifacts consistently | Git | partial: `*.odt/*.doc/*.docx` now ignored; per-case dirs still to reconcile |
-| 6 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per `cover_letter_genome_medicine.md` |
+| 4 | ✅ Archive stale n = 75 reports → `reports/_archive_n75/` | Cleanup | **DONE** — merged via PR #42 (2026-06-27) |
+| 5 | ✅ Commit/ignore the untracked n = 1,047 artifacts consistently | Git | **DONE** — merged via PR #43 (2026-06-27); roster tracked, heavy/older data + private docs gitignored |
+| 6 | ✅ Remove private cover letter from repo (local-only) | Privacy | **DONE 2026-06-27** — untracked + gitignored; history-scrub optional (§7) |
+| 7 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
 
 No further *experiments* are required for the primary submission. Optional
 strengtheners noted in the v3 plan (DeepRare head-to-head; Qwen3-32B AWQ ablation)
@@ -262,4 +286,6 @@ remain explicitly deferred.
 ---
 
 *Prepared from on-disk artifacts in `data/eval_1050*/`, `reports/tables/`, and git
-state as of 2026-06-22. Every metric in §2 was read from result files, not prose.*
+state as of 2026-06-22; §1/§6/§7/§8 revised 2026-06-27 to reflect the merge of PRs
+#42/#43 and the removal of the private cover letter. Every metric in §2 was read from
+result files, not prose.*

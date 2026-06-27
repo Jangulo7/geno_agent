@@ -1,7 +1,7 @@
 # geno_agent — Project status & resumption plan
 
 **Date:** 2026-05-09 (Saturday)
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Snapshot of:** `main` @ commit `3308a0f`
 **Reference:** [`MASTER_PROJECT_v2.1.md`](../MASTER_PROJECT_v2.1.md)
 

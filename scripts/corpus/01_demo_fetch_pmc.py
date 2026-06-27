@@ -93,7 +93,7 @@ def _http_get(url: str, params: dict[str, str]) -> requests.Response:
     Raises:
         requests.HTTPError: After exhausting retries.
     """
-    headers = {"User-Agent": "geno_agent-tfm/0.1 (johanna.angulo@gmail.com)"}
+    headers = {"User-Agent": "geno_agent-tfm/0.1"}
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             r = requests.get(url, params=params, headers=headers, timeout=HTTP_TIMEOUT_S)
