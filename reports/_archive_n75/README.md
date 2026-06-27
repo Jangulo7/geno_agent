@@ -13,3 +13,7 @@ For the current state of the research, see:
 
 Do not cite figures from this directory as current results — the n=75 numbers do not
 match the n=1,047 study. Archived 2026-06-22.
+
+**Added 2026-06-27:** `visual_report.html` and `agent_architecture.html` — two
+thesis-era HTML renders (n=75, "Master's thesis, Universidad UAX") that escaped the
+first pass. The current architecture write-up is `reports/agent_architecture.md`.
