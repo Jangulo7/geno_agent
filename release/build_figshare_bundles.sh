@@ -31,7 +31,8 @@ if ! git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
   echo "  git tag -a $TAG -m '<snapshot description + target journal>'"
   exit 1
 fi
-COMMIT="$(git rev-parse --short "refs/tags/$TAG")"
+# Dereference to the underlying commit (annotated tags resolve to a tag object).
+COMMIT="$(git rev-parse --short "${TAG}^{commit}")"
 
 OUT_DIR="$ROOT/figshare_uploads"
 mkdir -p "$OUT_DIR"
