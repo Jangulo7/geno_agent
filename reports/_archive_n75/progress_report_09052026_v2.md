@@ -1,7 +1,7 @@
 # geno_agent — Project status v2
 
 **Date:** 2026-05-09 (Saturday, ~21:00 local)
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Snapshot of:** `main` @ `eb110e6`
 **Reference:** [`MASTER_PROJECT_v2.1.md`](../MASTER_PROJECT_v2.1.md)
 **Supersedes:** [`progress_report_09052026.md`](progress_report_09052026.md) (v1, this morning)

@@ -1,6 +1,6 @@
 # geno_agent — Comprehensive Project Report (v3, consolidated)
 
-**Author:** Johanna Angulo (johanna.angulo@gmail.com)
+**Author:** Johanna Angulo
 **Project:** TFM, Universidad UAX — *Agentic Multi-Agent RAG for Gene Prioritization in Rare Mendelian Disease*
 **Repository:** [github.com/Jangulo7/geno_agent](https://github.com/Jangulo7/geno_agent) (private)
 **Date:** 2026-05-09 21:00 local
