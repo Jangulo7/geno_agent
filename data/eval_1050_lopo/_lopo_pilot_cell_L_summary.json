@@ -1,0 +1,837 @@
+{
+  "summary": {
+    "cell": "L",
+    "n": 100,
+    "seed": 42,
+    "fetch_k": 80,
+    "paired_top1": {
+      "control_top1": 79,
+      "lopo_top1": 78,
+      "n": 100,
+      "control_top1_acc": 0.79,
+      "lopo_top1_acc": 0.78,
+      "delta_top1": -0.01,
+      "discordant_control_only": 1,
+      "discordant_lopo_only": 0,
+      "mcnemar_p": 1.0
+    },
+    "control_topk": {
+      "top1": 0.79,
+      "top5": 0.81,
+      "top10": 0.84
+    },
+    "lopo_topk": {
+      "top1": 0.78,
+      "top5": 0.8,
+      "top10": 0.83
+    },
+    "leak": {
+      "source_in_causal_pool_rate": 0.1,
+      "source_top_of_causal_pool_rate": 0.02,
+      "mean_source_chunks_in_causal_pool": 0.15
+    },
+    "wallclock_min": 52.1
+  },
+  "leak_records": [
+    {
+      "case_id": "AEBP1:PMID_29606302_C_IV_6",
+      "source_pmid": "29606302",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+      "source_pmid": "30759870",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "AIRE:PMID_16965330_patient_11",
+      "source_pmid": "16965330",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "AIRE:PMID_18616706_Case_21",
+      "source_pmid": "18616706",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "AIRE:PMID_19758376_Family_2_individual_V_11",
+      "source_pmid": "19758376",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ARMC9:PMID_28625504_SA2_3",
+      "source_pmid": "28625504",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "B3GALT6:PMID_23664117_family_F8_subject_P9",
+      "source_pmid": "23664117",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "BAG3:PMID_31853710_III_2",
+      "source_pmid": "31853710",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CCN2:PMID_39414788_I_2",
+      "source_pmid": "39414788",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 9,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 2
+    },
+    {
+      "case_id": "CD28:PMID_34214472_patient_P2",
+      "source_pmid": "34214472",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CHUK:PMID_20961246_fetus_2",
+      "source_pmid": "20961246",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+      "source_pmid": "39753129",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+      "source_pmid": "39753129",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CLDN16:PMID_14628289_Family_B_individual_6",
+      "source_pmid": "14628289",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CLDN16:PMID_16705067_Patient_2_brother",
+      "source_pmid": "16705067",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CLDN16:PMID_25477417_F12_1",
+      "source_pmid": "25477417",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "COL3A1:PMID_36189931_26",
+      "source_pmid": "36189931",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "COPZ1:PMID_39642330_Patient_3",
+      "source_pmid": "39642330",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_18",
+      "source_pmid": "30968594",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 67,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 1
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_44",
+      "source_pmid": "30968594",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "CYP21A2:PMID_30968594_individual_56",
+      "source_pmid": "30968594",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 42,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 1
+    },
+    {
+      "case_id": "DDX59:PMID_29127725_Patient_1",
+      "source_pmid": "29127725",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+      "source_pmid": "37055165",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+      "source_pmid": "37055165",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_2_1",
+      "source_pmid": "19776401",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "DOCK8:PMID_19776401_Patient_5_1",
+      "source_pmid": "19776401",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "EDA:PMID_18702659_proband",
+      "source_pmid": "18702659",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "EEFSEC:PMID_39753114_F3_II_1",
+      "source_pmid": "39753114",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "EFNB1:PMID_23335590_Subject_4271",
+      "source_pmid": "23335590",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 0,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 50
+    },
+    {
+      "case_id": "ERCC3:PMID_9012405_index_case_TTD6VI",
+      "source_pmid": "9012405",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_3_individual_12Y",
+      "source_pmid": "16865293",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ERCC8:PMID_16865293_Family_5_individual_10Y11M",
+      "source_pmid": "16865293",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ESAM:PMID_36996813_Individual_11",
+      "source_pmid": "36996813",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "GLI3:PMID_24736735_A017",
+      "source_pmid": "24736735",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P49",
+      "source_pmid": "25802881",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "GNAS:PMID_25802881_P62",
+      "source_pmid": "25802881",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "GNB1:PMID_27108799_Individual_1",
+      "source_pmid": "27108799",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "HMGCS2:PMID_25511235_B3_1",
+      "source_pmid": "25511235",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+      "source_pmid": "26981933",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_26981933_Family_F_individual_F7",
+      "source_pmid": "26981933",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_27939403_A_1",
+      "source_pmid": "27939403",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_31057532_Family_D_individual_D_II_2",
+      "source_pmid": "31057532",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_33097959_boy",
+      "source_pmid": "33097959",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "IKZF1:PMID_33855675_girl",
+      "source_pmid": "33855675",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ITPR1:PMID_27108797_F3_II1",
+      "source_pmid": "27108797",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ITPR1:PMID_28488678_IV_3",
+      "source_pmid": "28488678",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+      "source_pmid": "29663667",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ITPR1:PMID_37964426_Individual_T267A_2",
+      "source_pmid": "37964426",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 2,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 50
+    },
+    {
+      "case_id": "ITPR3:PMID_39270020_Patient_2",
+      "source_pmid": "39270020",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "KCNH5:PMID_36307226_Proband_10",
+      "source_pmid": "36307226",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD4_III_7",
+      "source_pmid": "10939567",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_EMD6_IV_7",
+      "source_pmid": "10939567",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_10939567_Patient_Spo1",
+      "source_pmid": "10939567",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_11",
+      "source_pmid": "18256394",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_18256394_Patient_2",
+      "source_pmid": "18256394",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_Patient_UM53",
+      "source_pmid": "37843397",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR27",
+      "source_pmid": "37843397",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LMNA:PMID_37843397_TR31",
+      "source_pmid": "37843397",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "LRP5:PMID_20034086_Patient_2",
+      "source_pmid": "20034086",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "MAP3K14:PMID_25406581_P2",
+      "source_pmid": "25406581",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "MMADHC:PMID_18385497_Patient_4",
+      "source_pmid": "18385497",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+      "source_pmid": "26541327",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "NBAS:PMID_28425089_subject_10A",
+      "source_pmid": "28425089",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "NFU1:PMID_36256512_F7_II_1",
+      "source_pmid": "36256512",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "NHS:PMID_30642278_individual_II_5",
+      "source_pmid": "30642278",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 1,
+      "source_chunks_in_causal_pool": 3,
+      "source_chunks_all_genes": 150
+    },
+    {
+      "case_id": "NHS:PMID_30642278_proband_III_1",
+      "source_pmid": "30642278",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 1,
+      "source_chunks_in_causal_pool": 3,
+      "source_chunks_all_genes": 150
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_2",
+      "source_pmid": "38503300",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "PSMB10:PMID_38503300_Individual_5",
+      "source_pmid": "38503300",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "PSMB9:PMID_34819510_Patient_1",
+      "source_pmid": "34819510",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+      "source_pmid": "38422122",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "PYCR1:PMID_21487760_Patient_2",
+      "source_pmid": "21487760",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P15",
+      "source_pmid": "37584719",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "RFXANK:PMID_37584719_Patient_P16",
+      "source_pmid": "37584719",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "RGS9BP:PMID_14702087_Guatemalan_patient",
+      "source_pmid": "14702087",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SATB2:PMID_31021519_individual_SATB2_97",
+      "source_pmid": "31021519",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SEC61A1:PMID_32325141_index_patient",
+      "source_pmid": "32325141",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 77,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 50
+    },
+    {
+      "case_id": "SLC45A2:PMID_36553465_P4",
+      "source_pmid": "36553465",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SNAP29:PMID_33977139_Patient_1",
+      "source_pmid": "33977139",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 0,
+      "source_chunks_in_causal_pool": 1,
+      "source_chunks_all_genes": 50
+    },
+    {
+      "case_id": "SNAPIN:PMID_40930097_Family_B_II_3",
+      "source_pmid": "40930097",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SNF8:PMID_38423010_individual_E1",
+      "source_pmid": "38423010",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_1",
+      "source_pmid": "11841556",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_11841556_21_2",
+      "source_pmid": "11841556",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_16670861_twin_1",
+      "source_pmid": "16670861",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+      "source_pmid": "37102386",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_37102386_Family_7_Patient_9",
+      "source_pmid": "37102386",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPINK5:PMID_38419182_Case_2",
+      "source_pmid": "38419182",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPTAN1:PMID_29050398_Patient_11",
+      "source_pmid": "29050398",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "SPTAN1:PMID_35150594_G_II_1",
+      "source_pmid": "35150594",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_25951140_Case_2",
+      "source_pmid": "35190816",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "STXBP1:PMID_35190816_STX_26865513_Patient_7",
+      "source_pmid": "35190816",
+      "source_in_causal_pool": true,
+      "source_best_pos_in_causal_pool": 56,
+      "source_chunks_in_causal_pool": 2,
+      "source_chunks_all_genes": 2
+    },
+    {
+      "case_id": "TANGO2:PMID_26805781_Family_2_Subject2_II_1",
+      "source_pmid": "26805781",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "TAP2:PMID_10560675_P1",
+      "source_pmid": "10560675",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "UGGT1:PMID_40267907_Family_8_2",
+      "source_pmid": "40267907",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F1_individual_3",
+      "source_pmid": "14569098",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "UMOD:PMID_14569098_F6_individual_1",
+      "source_pmid": "14569098",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "UMOD:PMID_15575003_daughter_IV_2",
+      "source_pmid": "15575003",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "UMOD:PMID_17245395_Family_K8_individual_II_2",
+      "source_pmid": "17245395",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ZMYM3:PMID_36586412_Individual_4a",
+      "source_pmid": "36586412",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+      "source_pmid": "38158857",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    },
+    {
+      "case_id": "ZSWIM6:PMID_29198722_p_Arg913Ter_Affected_Individual_2",
+      "source_pmid": "29198722",
+      "source_in_causal_pool": false,
+      "source_best_pos_in_causal_pool": null,
+      "source_chunks_in_causal_pool": 0,
+      "source_chunks_all_genes": 0
+    }
+  ]
+}
