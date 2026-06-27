@@ -1,5 +1,5 @@
 artifact	role	figshare_action	approx_size	license	needed_by_P3	source_or_location
-data/test_cases_1050/ (test_cases.jsonl + 06_with_candidates.jsonl + 01-05 stages + annotation_overlap.json + pmid_dates.json)	n=1,047 evaluation cohort (derived)	UPLOAD	17 MB	CC BY 4.0 (derived from Phenopacket Store)	YES	on disk (mostly gitignored); assemble from data/test_cases_1050/
+data/test_cases_1050/ (full cohort + sidecars + 01-06 stages)	n=1,047 benchmark cohort (derived)	SEPARATE DATASET ITEM	17 MB	CC BY 4.0 (derived from Phenopacket Store)	YES	Published as its OWN Figshare Dataset item (genoagent-cohort-n1047-v1.0, own DOI) — NOT bundled here; cite that DOI. Built by release/assemble_data_bundles.sh + release/cohort/README_FIGSHARE.md
 data/MANIFEST.tsv	provenance + SHA-256 of every artifact	UPLOAD	3 KB	—	YES	git-tracked
 Qdrant index geno_agent_pmc_oa_v1 (52,777,395 chunks)	dense+BM25 vector DB over PMC-OA	RECIPE-ONLY	323 GB	mixed PMC-OA CC tiers	YES	NOT uploaded. Rebuild via scripts/corpus+embedding+indexing; verify against fingerprint c6e53665e0e32e39e2871b705c32f8e0d69dd3654a20da4749bcf672d07f3d6e
 PMC-OA chunk + parsed JSONL (all_chunks.jsonl.gz, all_articles.normalized.jsonl.gz)	intermediate corpus text	RECIPE-ONLY	~49 GB	mixed PMC-OA CC tiers	YES (via rebuild)	NOT uploaded. ~/chunks/, /mnt/c/pmc_workspace/parsed/ ; ship PMC-ID list + scripts only

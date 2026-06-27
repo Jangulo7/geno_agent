@@ -22,17 +22,30 @@ P2 and the external P3 repo **reference it by DOI**, never duplicate it.
 release/
 ├── README.md                      # this file
 ├── build_figshare_bundles.sh      # builds code zips (git archive) + checksums into ../figshare_uploads/
-├── paper-methods/                 # P1
+├── cohort/                        # Benchmark cohort — standalone Dataset item (own DOI)
+│   ├── README_FIGSHARE.md         # data descriptor (provenance, data dictionary, license, citation, regeneration)
+│   └── FIGSHARE_CHECKLIST.md
+├── paper-methods/                 # P1 methods/foundation — Software item (code only; references the cohort DOI)
 │   ├── README_FIGSHARE.md         # Figshare item description (title, abstract, license, citation, tag+commit)
 │   ├── REPRODUCE.md               # exact commands to rebuild the corpus/index/cohort
 │   ├── code_paths.txt             # pathspecs fed to `git archive` for the P1 code zip
-│   └── artifacts_manifest.tsv     # every data/resource artifact -> action (upload/reference/recipe/exclude)
-└── paper-genoagent/               # P2
+│   ├── artifacts_manifest.tsv     # every data/resource artifact -> action (upload/reference/recipe/exclude)
+│   └── FIGSHARE_CHECKLIST.md
+└── paper-genoagent/               # P2 system — Software + data item
     ├── README_FIGSHARE.md
     ├── REPRODUCE.md
     ├── code_paths.txt
-    └── artifacts_manifest.tsv
+    ├── artifacts_manifest.tsv
+    └── FIGSHARE_CHECKLIST.md
 ```
+
+## Figshare items (in the "GenoAgent" project)
+
+| Item | Type | Bundle(s) | DOI cited by |
+|---|---|---|---|
+| **Benchmark cohort (n=1,047)** | Dataset (CC BY 4.0) | `genoagent-cohort-n1047-v1.0.zip` | methods item, P2, manuscripts |
+| **Methods / foundation** | Software (AGPL) | `paper-methods-v1.0_code_*.zip` | P2, external P3 repo |
+| **GenoAgent system** | Software (AGPL) | `paper-genoagent-v1.0_code_*.zip` + `_data.zip` | manuscript |
 
 ## How to build (after the tags exist)
 
@@ -41,6 +54,8 @@ release/
 # 2. build the code zips + sha256 from those tags:
 bash release/build_figshare_bundles.sh paper-methods-v1.0
 bash release/build_figshare_bundles.sh paper-genoagent-v1.0
+# 3. assemble the data bundles (cohort Dataset + P2 results/manuscript):
+bash release/assemble_data_bundles.sh
 # outputs land in ../figshare_uploads/ (gitignored)
 ```
 

@@ -37,10 +37,14 @@ reference**, not duplicated, by the downstream papers.
 
 - `…_code_<commit>.zip` — corpus/cohort pipeline code, tests, env/build config,
   `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`.
-- Cohort data bundle — `data/test_cases_1050/` (n=1,047), see `artifacts_manifest.tsv`.
 - `artifacts_manifest.tsv` — every resource with its action (upload / reference /
   recipe-only) and license.
 - `*.sha256` — checksums for every uploaded file.
+
+> **The n=1,047 benchmark cohort is a *separate* Figshare item** (type: Dataset,
+> CC BY 4.0) so it has its own citable DOI — it is **not** duplicated here. This
+> methods item is the build recipe/code; it references the cohort by DOI.
+> **Benchmark cohort DOI: `<to be filled after cohort upload>`**
 
 **Not included (by design):** the 323 GB Qdrant index and PMC chunk text
 (recipe-only, mixed CC); ontologies / phenopackets / models (reference upstream by

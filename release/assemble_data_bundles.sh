@@ -18,16 +18,22 @@ mkdir -p "$STAGE"
 # Use Python's zipfile so no external `zip` binary is required.
 zip_dir() { ( cd "$STAGE" && python3 -m zipfile -c "$OUT/$1.zip" "$1" ) && ( cd "$OUT" && sha256sum "$1.zip" > "$1.zip.sha256" ); }
 
-# ---------- P1: methods / shared foundation data ----------
-P1="paper-methods-v1.0_data"
-P1D="$STAGE/$P1"
-mkdir -p "$P1D/data"
-# n=1,047 cohort (gitignored on disk — copied explicitly) + provenance manifest
-cp -r data/test_cases_1050 "$P1D/data/"
-cp data/MANIFEST.tsv "$P1D/data/"
-cp release/paper-methods/README_FIGSHARE.md release/paper-methods/REPRODUCE.md \
-   release/paper-methods/artifacts_manifest.tsv "$P1D/"
-zip_dir "$P1"
+# ---------- Standalone cohort dataset (own DOI; Figshare "Dataset" item) ----------
+# The n=1,047 benchmark cohort is published as its own citable dataset, separate
+# from the methods/foundation code (which references this dataset's DOI). The
+# methods item is the code zip only — it already carries MANIFEST.tsv — so there
+# is no separate paper-methods data bundle and no duplicate cohort copy.
+COH="genoagent-cohort-n1047-v1.0"
+COHD="$STAGE/$COH"
+mkdir -p "$COHD"
+# full cohort + sidecars + staged provenance (gitignored on disk — copied explicitly)
+cp data/test_cases_1050/*.jsonl data/test_cases_1050/*.json "$COHD/"
+cp data/MANIFEST.tsv "$COHD/"
+cp release/cohort/README_FIGSHARE.md "$COHD/"
+# per-file SHA-256 inside the bundle (good-practice integrity for a citable dataset)
+( cd "$COHD" && find . -type f ! -name CHECKSUMS.sha256 -printf '%P\n' | sort \
+    | xargs sha256sum > CHECKSUMS.sha256 )
+zip_dir "$COH"
 
 # ---------- P2: GenoAgent results / manuscript / derivative ----------
 P2="paper-genoagent-v1.0_data"
