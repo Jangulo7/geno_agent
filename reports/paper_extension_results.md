@@ -3,9 +3,9 @@
 **Author:** Johanna Angulo (johanna.angulo@gmail.com)
 **Date:** 2026-05-17 (v2 final)
 **Branch:** `paper/n500-validation`
-**Plan v1:** [`reports/paper_extension_plan.md`](paper_extension_plan.md) (n=460, v0.1.19)
+**Plan v1:** [`reports/paper_extension_plan.md`](_archive_n75/paper_extension_plan.md) (n=460, v0.1.19; archived)
 **Plan v2:** [`reports/paper_extension_plan_v2.md`](paper_extension_plan_v2.md) (n=1047, v0.1.26)
-**Thesis baseline:** [`reports/thesis_final_report.md`](thesis_final_report.md) (n=75, v0.1.19)
+**Thesis baseline:** [`reports/thesis_final_report.md`](_archive_n75/thesis_final_report.md) (n=75, v0.1.19; archived)
 
 This document supersedes the earlier v1 results section (n=459) by including the
 final v2 numbers (n=1047) and the full v1-vs-v2 progression. v1 results are
@@ -67,7 +67,7 @@ bootstrap CI is centred well above zero.
 
 ### 1.1 Why a paper extension at all?
 
-The master thesis ([`reports/thesis_final_report.md`](thesis_final_report.md))
+The master thesis ([`reports/thesis_final_report.md`](_archive_n75/thesis_final_report.md))
 established the 16-cell factorial at n=75 with paired-bootstrap CIs and identified
 Cell S as the architectural winner. The thesis result (S = 0.787, K = 0.773, Δ =
 +1.3 pp, CI half-width ≈ ±0.10) was framed as *statistical parity with point
@@ -77,7 +77,7 @@ at larger n where the CI half-width would drop to ±0.04 or better.
 ### 1.2 Why both v1 (n=459) and v2 (n=1047)?
 
 The original paper extension plan called for n=500 from Phenopacket Store v0.1.19
-with a 4-cell focused sub-factorial (K, D, L, S — see [`paper_extension_plan.md`](paper_extension_plan.md)).
+with a 4-cell focused sub-factorial (K, D, L, S — see [`paper_extension_plan.md`](_archive_n75/paper_extension_plan.md)).
 The v1 run completed on 2026-05-16 with n=459 actual cases (immunological capped
 at the eligible-pool size of 85). Result: overall S vs K exact parity Δ=+0.000,
 immunological win Δ=+0.118 marginal (CI lower bound = +0.000 exactly).
