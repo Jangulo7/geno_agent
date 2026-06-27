@@ -240,6 +240,18 @@ The full reproducibility specification is documented in
 [`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md) §4.1.3 and consolidated in
 [`reports/methodology.md`](reports/methodology.md).
 
+## Data and software availability
+
+The release artifacts are archived on Figshare (project "GenoAgent") with persistent DOIs:
+
+| Item | Figshare type | License | DOI |
+|---|---|---|---|
+| **Benchmark cohort (n=1,047)** — `test_cases.jsonl` + provenance stages + manifest | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32814449`](https://doi.org/10.6084/m9.figshare.32814449) |
+| **Methods / shared foundation** — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
+| **GenoAgent system** — agents, evaluation harness, per-cell results, manuscript artifacts | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
+
+The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixed-licence verbatim PMC OA text): they are not deposited but regenerate bit-for-bit from public inputs via the methods item (index fingerprint `52,777,395` chunks; SHA-256 in `data/MANIFEST.tsv`). Upstream resources — Phenopacket Store v0.1.26, ontologies, Exomiser/LIRICAL, and the Qwen3-8B / PubMedBERT / MedCPT models — are referenced by pinned version (see [Reproducibility](#reproducibility)), not redistributed.
+
 ## Repository layout
 
 ```
