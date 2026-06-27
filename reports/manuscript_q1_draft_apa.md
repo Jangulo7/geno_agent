@@ -974,23 +974,31 @@ supplementary file.
 
 - **Source code** (full evaluation pipeline, all agents, all
   evaluation scripts, all aggregation utilities): publicly available
-  at https://github.com/Jangulo7/geno_agent under the **MIT licence**
-  (proposed; final licence to be confirmed at submission time).
-- **Frozen evaluation manifest** (per-case phenotypes, candidate
-  lists, MONDO categorisation): `data/test_cases_1050/` in the same
-  repository, with `MANIFEST.tsv` recording SHA-256 of every input
-  artefact.
+  at https://github.com/Jangulo7/geno_agent under the **GNU Affero
+  General Public License v3.0 (AGPL-3.0)**, and archived on Figshare as
+  the GenoAgent system item (DOI 10.6084/m9.figshare.32814497).
+- **Frozen evaluation manifest / benchmark cohort** (per-case
+  phenotypes, candidate lists, MONDO categorisation):
+  `data/test_cases_1050/` in the same repository (with `MANIFEST.tsv`
+  recording SHA-256 of every input artefact), and published as a
+  standalone Figshare Dataset under CC BY 4.0
+  (DOI 10.6084/m9.figshare.32814449).
 - **Per-case result sidecars** for all five cells (Exomiser, LIRICAL,
   multi-agent baseline, +rerank, geno_agent), the LLM-family ablation
   (Qwen3-32B, Sonnet 4.6, DeepSeek-V3), and the GPT-4o-judged RAGAS +
   DeepEval outputs: `data/eval_1050/cell_*/`,
   `data/eval_1050/cell_S_ablation_*/`,
-  `data/eval_1050/ragas_*.json`, `data/eval_1050/deepeval_*.json`.
+  `data/eval_1050/ragas_*.json`, `data/eval_1050/deepeval_*.json`;
+  these also ship in the GenoAgent system Figshare item
+  (DOI 10.6084/m9.figshare.32814497).
 - **Frozen Qdrant index** (52,777,395 PMC OA chunks, PubMedBERT dense
   embeddings + FastEmbed BM25 sparse): persistent local volume mounted at
-  `~/rare-disease-rag/qdrant_storage/`. A bit-perfect snapshot is
-  hosted at [**flagged — Zenodo deposition pending at submission
-  time**], with SHA-256 manifest in the repository.
+  `~/rare-disease-rag/qdrant_storage/`. The index itself is not
+  deposited (323 GB of mixed-licence PMC OA text); its full build recipe
+  is published as the Methods / Shared-Foundation Figshare item under
+  AGPL-3.0 (DOI 10.6084/m9.figshare.32814491), and the index regenerates
+  bit-for-bit from public inputs (fingerprint 52,777,395 chunks; SHA-256
+  manifest in `data/MANIFEST.tsv`).
 - **Pinned ontology versions**: HPO v2026-02-16, MONDO v2026-03-03,
   GO 2026-03-25, HGNC 2026-04-07. SHA-256 recorded in
   `data/MANIFEST.tsv`.
@@ -1200,8 +1208,10 @@ handling + required user expertise) and §Fairness and representation;
 Methods adds §Prompt design and curation. Affiliation set to
 **Universidad Europea (UE)** for PhD submission. Pending: (a) UE
 ethics-secretary signature on the exemption letter (request template
-at `reports/ue_irb_exemption_request_template.md`); (b) Zenodo DOI for
-frozen Qdrant index at submission time; (c) final UE co-author list +
+at `reports/ue_irb_exemption_request_template.md`); (b) ✅ Figshare DOIs
+published 2026-06-28 (system `…32814497`, methods/foundation `…32814491`,
+cohort `…32814449`; the 323 GB index is recipe-only, rebuilt from the
+methods item); (c) final UE co-author list +
 CRediT contributions; (d) Springer Vancouver citation reformatting;
 (e) cover letter + reviewer suggestions; (f) TRIPOD-LLM-statement PDF
 generated via https://tripod-llm.vercel.app/.*

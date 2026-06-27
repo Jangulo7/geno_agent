@@ -365,7 +365,12 @@ is effectively deterministic on the headline accuracy metric despite
 expected stochasticity in non-greedy vLLM token sampling.
 
 All evaluation code is available at github.com/Jangulo7/geno_agent
-under the MIT licence. Per-case sidecar JSON files containing the
+under the GNU Affero General Public License v3.0 (AGPL-3.0) and is
+archived on Figshare as the Methods / Shared-Foundation item
+(DOI 10.6084/m9.figshare.32814491); the benchmark cohort is a separate
+Figshare Dataset under CC BY 4.0 (DOI 10.6084/m9.figshare.32814449) and
+the GenoAgent system item is DOI 10.6084/m9.figshare.32814497. Per-case
+sidecar JSON files containing the
 full LEA system prompt, user prompt, raw model response, parsed
 ranking, retrieved chunks (with PMCIDs, section types, and RRF
 scores), and per-case token / latency / fallback metadata are
@@ -399,9 +404,11 @@ before submission, but are out of scope for the present draft:
    licensing. A formal IRB-exempt declaration sentence will be added.
 3. **Funding statement and conflict of interest declarations** —
    per author requirements (TFM funding source; no commercial COI).
-4. **Data and code availability statement** — GitHub URL, Zenodo DOI
-   for the frozen v3 release tag, Phenopacket Store version pin,
-   ontology version pins.
+4. **Data and code availability statement** — ✅ Figshare DOIs published
+   2026-06-28 (Methods/foundation `10.6084/m9.figshare.32814491`; cohort
+   `10.6084/m9.figshare.32814449`; system `10.6084/m9.figshare.32814497`);
+   GitHub URL, Phenopacket Store version pin, and ontology version pins
+   still to be folded into the final statement.
 5. **Detailed wall-time and cost table** — see `reports/wallclock_cost_table.md` for the locked v3 numbers. Headline: total reproducible runtime ~24 h local compute on a single RTX 5090 workstation + ~3 h OpenAI API spend ($98.20 of $100 budget). Per-case throughput on Cell S = 26.1 s end-to-end. Production geno_agent requires no cloud API; cloud spend is RAGAS + DeepEval evaluation-only. The full table belongs as Methods Table 1 in the final manuscript.
 6. **DeepRare comparison** — ✅ resolved 2026-05-23 by categorical
    reframing rather than head-to-head benchmark. After studying the
