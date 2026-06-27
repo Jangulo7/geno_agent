@@ -193,9 +193,12 @@ methodology, `pyproject.toml`, and both manuscript drafts now position the syste
 an **agentic-workflow RAG** rather than "agentic multi-agent RAG". This reflects the
 implementation (a fixed-topology LangGraph orchestration with a critic-driven
 self-correction loop; T = 0, seeded — not an autonomous, tool-selecting agent), and a
-new Methods paragraph states the distinction explicitly. The "single- vs multi-agent"
-experimental factor and the Cell D/L/S labels are unchanged (they denote the number
-of role-specialised stages, not autonomy).
+new Methods paragraph states the distinction explicitly. The canonical first-mention
+description is *"an agentic workflow composed of four role-specialised agents (Planner,
+Retriever, Critic, Synthesizer)"*, with an operational definition of *agent* (a
+role-specialised LangGraph node over shared state) at first use (PR set after #45). The
+"single- vs multi-agent" experimental factor and the Cell D/L/S labels are unchanged
+(they denote the number of role-specialised agents, not autonomy).
 
 Minor residual nits (optional):
 - README's repo-layout block lists `eval_1050_lopo_full/` (correct — it exists) but

@@ -2865,7 +2865,9 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 
 ## 11. PHASE 2 — AGENTIC UI LAYER (added 2026-05-09)
 
-Phase 2 wraps the Phase 1A retrieval substrate and the Phase 1B test cases in a **four-agent LangGraph orchestration**, exposes it via FastAPI using `copilotkit-sdk-python`, and ships a **CopilotKit-based React UI** (forked from `CopilotKit/CopilotKit` at [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI)) that surfaces agent reasoning to a clinician-style end user. Phase 2 is the visible product of the thesis and the basis for the defense demo.
+Phase 2 wraps the Phase 1A retrieval substrate and the Phase 1B test cases in a LangGraph **agentic workflow composed of four role-specialized agents** (Query Planner, Retriever, Critic, Synthesizer), exposes it via FastAPI using `copilotkit-sdk-python`, and ships a **CopilotKit-based React UI** (forked from `CopilotKit/CopilotKit` at [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI)) that surfaces agent reasoning to a clinician-style end user. Phase 2 is the visible product of the thesis and the basis for the defense demo.
+
+**Terminology.** We use *agent* to denote a **role-specialized component** — a node in the LangGraph state graph that consumes and updates shared workflow state — and *agentic workflow* for the system as a whole: orchestration with predefined routing plus a critic-driven self-correction loop (Critic → Retriever). This is distinct from an autonomous multi-agent system in which each agent decides its own control flow and selects its own tools at run time; here the topology and decoding (temperature 0, seeded) are fixed for reproducible, evaluable inference. The "single-agent vs. multi-agent" factor in §11.5 denotes the number of role-specialized agents (one vs. four), not agent autonomy.
 
 **Hard precondition:** Phase 1A and Phase 1B must complete first (per `CLAUDE.md`). Phase 2c can be developed against the Phase 1A *demo* Qdrant collection (1,625 chunks) for iteration; the production index plus the Phase 1B benchmark are required for the formal evaluation in §11.5.
 

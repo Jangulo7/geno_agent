@@ -219,8 +219,9 @@ annotation-overlap status**, despite the well-recognised leakage
 concern [14]; and (iii) **no rare-disease
 prioritisation study has quantified LLM-generated rationale
 faithfulness** as a deployable triage signal. The present study
-addresses all three gaps. Specifically, we (1) describe geno_agent, a
-four-stage LangGraph agentic workflow + LLM-as-Evidence-Aggregator (LEA)
+addresses all three gaps. Specifically, we (1) describe geno_agent, an
+agentic workflow composed of four role-specialised agents (Planner,
+Retriever, Critic, Synthesiser) plus an LLM-as-Evidence-Aggregator (LEA),
 operating on a frozen 52.8-million-chunk index (52,777,395 chunks) of
 genetics/genomics-relevant PMC OA full-text articles; (2) evaluate it
 on n = 1,047 Phenopacket Store
