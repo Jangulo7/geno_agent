@@ -1,6 +1,6 @@
 # Research Status Report — geno_agent (n = 1,047 Q1 paper)
 
-**Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42–#49)
+**Date:** 2026-06-22 · **Last updated:** 2026-06-28 (Figshare DOIs published, PR #53)
 **Scope:** Doctoral first paper (Universidad Europea de Madrid) — *not* the n = 75 AI
 master's thesis (Universidad Alfonso X). Target journal: *Genome Medicine*.
 **Purpose:** Consolidated, verified status of the **n = 1,047** research; concordance
@@ -327,6 +327,7 @@ a deterministic, intentional set of files. Two PRs landed on 2026-06-27:
 | 9 | ✅ Canonical "role-specialised agents" phrasing + operational *agent* definition | Doc | **DONE** — merged via PR #48 (2026-06-27) |
 | 10 | ✅ Fix stale APA/TRIPOD corpus figures + MedCPT→PubMedBERT | Fix | **DONE** — merged via PR #49 (2026-06-27) |
 | 11 | Final manuscript pass (figures, ref formatting, journal template) | Editorial | per the (local) cover-letter checklist |
+| 12 | ✅ Publish Figshare data + software items and wire their DOIs into the release descriptions | Release | **DONE 2026-06-28** — three items published; DOIs back-filled via PR #53 (see §9) |
 
 No further *experiments* are required for the primary submission. Optional
 strengtheners noted in the v3 plan (DeepRare head-to-head; Qwen3-32B AWQ ablation)
@@ -334,8 +335,34 @@ remain explicitly deferred.
 
 ---
 
+## 9. Published data & software (Figshare DOIs)
+
+All three release artifacts are published on Figshare (project "GenoAgent") and
+their DOIs are wired into `release/*/README_FIGSHARE.md` (PR #53, merged
+2026-06-28). Use these in the manuscript's **Data/Code Availability** statement.
+
+| Item | Figshare type | License | DOI |
+|---|---|---|---|
+| Benchmark cohort (n = 1,047) | Dataset | CC BY 4.0 | `10.6084/m9.figshare.32814449` |
+| Methods / shared foundation (P1) | Software | AGPL-3.0 | `10.6084/m9.figshare.32814491` |
+| GenoAgent system (P2) | Software | AGPL-3.0 | `10.6084/m9.figshare.32814497` |
+
+Cross-references between the three items are mutually consistent (the cohort cites
+both software items; each software item cites the cohort; P2 cites P1). All bundles
+were built from tag `paper-genoagent-v1.0` / `paper-methods-v1.0` at commit
+`c2a2059`. The 323 GB Qdrant index and 1.9 GB raw LLM response dumps are
+deliberately **recipe-only / excluded** (mixed-CC verbatim PMC-OA text); a
+text-stripped rationale derivative ships in the P2 data bundle instead.
+
+**Remaining (Figshare UI only, not the repo):** add the **Related materials**
+rows to each item and re-save the already-public cohort as **v2** to carry its
+P1/P2 DOI relations.
+
+---
+
 *Prepared from on-disk artifacts in `data/eval_1050*/`, `reports/tables/`, and git
 state as of 2026-06-22; §1/§5/§6/§7/§8 revised 2026-06-27 to reflect the merge of PRs
 #42–#49 (n = 75 archival, n = 1,047 artifact tracking, private-data removal,
 agentic-workflow reframe, "role-specialised agents" phrasing, and APA/TRIPOD
-corpus-figure fixes). Every metric in §2 was read from result files, not prose.*
+corpus-figure fixes); §8/§9 revised 2026-06-28 to record the three published
+Figshare DOIs (PR #53). Every metric in §2 was read from result files, not prose.*
