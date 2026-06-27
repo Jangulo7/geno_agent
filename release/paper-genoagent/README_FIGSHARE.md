@@ -7,7 +7,7 @@ Rare Mendelian Disease (code, evaluation results, and manuscript artifacts)
 
 **License.** Code: AGPL-3.0-or-later. Result/manuscript artifacts: AGPL-3.0.
 
-**Git tag.** `paper-genoagent-v1.0`  ·  **Commit.** `<filled by build script>`
+**Git tag.** `paper-genoagent-v1.0`  ·  **Commit.** `c2a2059`
 **Repository.** https://github.com/Jangulo7/geno_agent
 **Target journal.** Genome Medicine (fallbacks: Bioinformatics, JAMIA, Briefings in Bioinformatics)
 
@@ -22,16 +22,16 @@ manuscript draft.
 ## The three-paper relationship
 
 - **P1** — methods + shared foundation (corpus/index recipe, ontologies, cohort).
-  This item **depends on P1 and references it by DOI** rather than copying it.
-- **P2 (this item)** — the GenoAgent system and its evaluation.
+- **P2 (this item)** — the GenoAgent system and its evaluation. This item
+  **depends on P1 and references it by DOI** rather than copying it.
 - **P3** — variant-interpretation safety benchmark in the separate
   `geno_agent_variant` repo; reuses P1's foundation and forks P2's agent code under
   AGPL-3.0.
 
-> **Shared-foundation DOI (from P1): <to be filled>** — the retrieval-index build
+> **Shared-foundation DOI (from P1): 10.6084/m9.figshare.32814491** — the retrieval-index build
 > recipe needed to run this code comes from the P1 methods item; paste its DOI here.
-> **Benchmark cohort DOI: <to be filled>** — the n=1,047 cohort this system is
-> evaluated on is a separate Dataset item; paste its DOI here.
+> **Benchmark cohort DOI: 10.6084/m9.figshare.32814449** — the n=1,047 cohort this
+> system is evaluated on is a separate Dataset item.
 
 ## Contents
 
@@ -54,4 +54,4 @@ pinned version); the personal cover letter.
 
 > Angulo, J. (2026). *geno_agent: An Agentic-Workflow RAG System for Gene
 > Prioritization in Rare Mendelian Disease* [Software & data set]. Figshare.
-> https://doi.org/<filled after upload>
+> https://doi.org/10.6084/m9.figshare.32814497
