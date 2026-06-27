@@ -2,7 +2,7 @@
 
 **An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease**
 
-> **Doctoral first paper** (Universidad Europea, Madrid; n=1,047; target:
+> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047; target:
 > *Genome Medicine*). An end-to-end agentic-workflow RAG system for
 > literature-based causal gene prioritisation in rare Mendelian disease.
 >
@@ -245,7 +245,6 @@ The full reproducibility specification is documented in
 ```
 geno_agent/
 ├── MASTER_PROJECT_v2.2.md            # Authoritative project spec (Phases 1A, 1B, 2, 3)
-├── CLAUDE.md                          # Project rules + memory pointers
 ├── pyproject.toml                     # Pinned Python dependencies
 ├── docker-compose.yml                 # Qdrant v1.14.1 on :6533/:6534
 ├── .env.example                       # Template; copy to .env and fill in
@@ -353,7 +352,7 @@ submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Doctoral first paper (Universidad Europea, Madrid; n=1,047; target: Genome Medicine).}
+  note         = {Doctoral first paper (Universidad Europea de Madrid; n=1,047; target: Genome Medicine).}
 }
 ```
 
@@ -363,11 +362,11 @@ Headline finding to cite (n=1,047, deconfounded):
 
 ## License
 
-The code in this repository is released under the MIT License (see [`LICENSE`](LICENSE)). Note that the redistributable artifacts have their own licenses — PMC OA articles retain their original publisher licenses, ontologies (HPO, MONDO, GO) are CC BY 4.0, and HGNC data is publicly available without restriction. Pinned versions and SHA-256 hashes for every external dataset are recorded in `data/MANIFEST.tsv`.
+The code in this repository is released under the **GNU Affero General Public License v3.0 (AGPL-3.0)** (see [`LICENSE`](LICENSE)). Note that the redistributable artifacts have their own licenses — PMC OA articles retain their original publisher licenses, ontologies (HPO, MONDO, GO) are CC BY 4.0, and HGNC data is publicly available without restriction. Pinned versions and SHA-256 hashes for every external dataset are recorded in `data/MANIFEST.tsv`.
 
 ## Acknowledgments
 
-This is doctoral research at Universidad Europea (Madrid),
+This is doctoral research at Universidad Europea de Madrid,
 supervised by [advisor name to be added]. It builds on the open ecosystem of biomedical NLP
 and bioinformatics — particularly the Monarch Initiative (Phenopacket Store,
 HPO, MONDO), the [LIRICAL](https://github.com/TheJacksonLaboratory/LIRICAL) and

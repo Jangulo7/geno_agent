@@ -7,7 +7,7 @@ Authoritative methodology reference (consolidated 2026-05-18): [`reports/methodo
 
 ## Phase 1A + Phase 1B (Database & Cohort) + Phase 3 (Paper Extension)
 
-> **Target executor:** Claude Code on WSL2 Ubuntu 24 (Windows host, NVIDIA RTX 5090 32 GB VRAM, 64 GB RAM)
+> **Target environment:** WSL2 Ubuntu 24 (Windows host, NVIDIA RTX 5090 32 GB VRAM, 64 GB RAM)
 > **Methodology source:** Chapter 4 — Methodology v3 + [`reports/methodology.md`](reports/methodology.md) (2026-05-18 consolidated)
 > **Storage strategy:** Linux (~700 GB) for Qdrant + models + code; Windows (`/mnt/c/`) for temporary bulk processing
 
@@ -2577,7 +2577,7 @@ if __name__ == '__main__':
 
 ---
 
-## 7. EXECUTION ORDER — Claude Code Checklist (Updated for v2.1)
+## 7. EXECUTION ORDER — Checklist (Updated for v2.1)
 
 Execute the scripts in this exact order. Each step depends on the previous one.
 
@@ -2869,7 +2869,7 @@ Phase 2 wraps the Phase 1A retrieval substrate and the Phase 1B test cases in a 
 
 **Terminology.** We use *agent* to denote a **role-specialized component** — a node in the LangGraph state graph that consumes and updates shared workflow state — and *agentic workflow* for the system as a whole: orchestration with predefined routing plus a critic-driven self-correction loop (Critic → Retriever). This is distinct from an autonomous multi-agent system in which each agent decides its own control flow and selects its own tools at run time; here the topology and decoding (temperature 0, seeded) are fixed for reproducible, evaluable inference. The "single-agent vs. multi-agent" factor in §11.5 denotes the number of role-specialized agents (one vs. four), not agent autonomy.
 
-**Hard precondition:** Phase 1A and Phase 1B must complete first (per `CLAUDE.md`). Phase 2c can be developed against the Phase 1A *demo* Qdrant collection (1,625 chunks) for iteration; the production index plus the Phase 1B benchmark are required for the formal evaluation in §11.5.
+**Hard precondition:** Phase 1A and Phase 1B must complete first (per the project rules). Phase 2c can be developed against the Phase 1A *demo* Qdrant collection (1,625 chunks) for iteration; the production index plus the Phase 1B benchmark are required for the formal evaluation in §11.5.
 
 ### 11.0 Phase 2 architecture
 

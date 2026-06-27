@@ -1,0 +1,49 @@
+# Pathspecs for the P2 (GenoAgent) code zip.
+# Fed to `git archive <tag> -- <these>`. Only tracked files at the tag are emitted.
+# The shared foundation (corpus/index/cohort) is NOT here — it is referenced by
+# P1's Figshare DOI. One pathspec per line.
+#
+# --- The 4-agent LangGraph system + LLM/ontology/Qdrant tools + baselines ---
+src
+# --- Evaluation harness (factorial, baselines, RAGAS/DeepEval, LOPO, aggregation) ---
+scripts/eval
+# --- Demos + shared utilities + manuscript tooling ---
+scripts/demo
+scripts/manuscript
+scripts/utils
+scripts/__init__.py
+demos
+# --- Tests covering agents + tools + eval ---
+tests/__init__.py
+tests/test_graph.py
+tests/test_critic.py
+tests/test_synthesizer.py
+tests/test_retriever.py
+tests/test_query_planner.py
+tests/test_state.py
+tests/test_tools_llm.py
+tests/test_tools_qdrant_search.py
+tests/test_tools_hpo.py
+tests/test_tools_hgnc.py
+# --- Build / environment / provenance ---
+pyproject.toml
+requirements.lock.txt
+docker-compose.yml
+.env.example
+LICENSE
+CITATION.cff
+CONTRIBUTING.md
+data/MANIFEST.tsv
+# --- Architecture/methods docs + reproduction guide ---
+# (MASTER_PROJECT_v2.2.md is intentionally excluded: internal execution plan with
+#  cost/session logs. reports/methodology.md is the published authoritative methods.)
+README.md
+reports/methodology.md
+reports/agent_architecture.md
+release/README.md
+release/build_figshare_bundles.sh
+release/assemble_data_bundles.sh
+release/paper-genoagent/REPRODUCE.md
+release/paper-genoagent/artifacts_manifest.tsv
+release/paper-genoagent/README_FIGSHARE.md
+release/paper-genoagent/FIGSHARE_CHECKLIST.md

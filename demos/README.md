@@ -139,7 +139,7 @@ Already installed in the project's `pytorch-env` virtual environment.
 - **No write operations**: read-only on the data directories.
 
 If you want a live demo with full retrieval + LEA inference, that's a
-different deployment — see CLAUDE.md §Phase 2 for the production
+different deployment — see CONTRIBUTING.md §Phase 2 for the production
 FastAPI + CopilotKit + Next.js stack that runs against a live local
 vLLM + Qdrant.
 

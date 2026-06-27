@@ -27,7 +27,7 @@ rare-disease gene-prioritisation papers in 2025-2026:
    relevance. DeepEval measures hallucination rate. **Both are computed by
    an LLM judge** — we will use **GPT-4o via API** as the judge.
 
-3. **Documented project-rule deviation.** `CLAUDE.md` rule: "No cloud LLM API
+3. **Documented project-rule deviation.** `CONTRIBUTING.md` rule: "No cloud LLM API
    in any code path." Using GPT-4o as a RAGAS/DeepEval judge is a deliberate
    deviation **for evaluation only** (not production). Documented in the paper
    Methods and below in §3.5.
@@ -264,7 +264,7 @@ Each metric = 1 GPT-4o call per case. RAGAS framework handles the orchestration.
 
 ### 3.5 ⚠️ Documented project-rule deviation
 
-`CLAUDE.md` rule: *"No cloud LLM API in any code path. CopilotKit Cloud is NOT used;
+`CONTRIBUTING.md` rule: *"No cloud LLM API in any code path. CopilotKit Cloud is NOT used;
 the React UI talks to the local FastAPI backend on loopback only."*
 
 **Deviation for v3 evaluation:** GPT-4o (or GPT-4o-mini) via OpenAI API is used
@@ -760,7 +760,7 @@ The v3 phase is successful when:
 - [ ] `scripts/eval/run_ragas.py` produces per-case + aggregate RAGAS metrics
 - [ ] `scripts/eval/run_deepeval.py` produces per-case + aggregate hallucination metrics
 - [ ] RAGAS + DeepEval results are documented in updated reports
-- [ ] Project-rule deviation is documented in `CLAUDE.md` and paper Methods
+- [ ] Project-rule deviation is documented in `CONTRIBUTING.md` and paper Methods
 - [ ] All artefacts committed to `paper/n500-validation` branch with a `paper-v3-final` tag
 
 ---

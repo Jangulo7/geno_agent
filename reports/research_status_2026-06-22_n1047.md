@@ -1,7 +1,7 @@
 # Research Status Report — geno_agent (n = 1,047 Q1 paper)
 
 **Date:** 2026-06-22 · **Last updated:** 2026-06-27 (post-merge of PRs #42–#49)
-**Scope:** Doctoral first paper (Universidad Europea, Madrid) — *not* the n = 75 AI
+**Scope:** Doctoral first paper (Universidad Europea de Madrid) — *not* the n = 75 AI
 master's thesis (Universidad Alfonso X). Target journal: *Genome Medicine*.
 **Purpose:** Consolidated, verified status of the **n = 1,047** research; concordance
 check of `MASTER_PROJECT_v2.2.md` and `README.md` against what is actually in the

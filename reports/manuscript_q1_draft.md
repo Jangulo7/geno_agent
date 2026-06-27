@@ -37,7 +37,7 @@ Final selection deferred to co-author review.
 
 ## Authors (❌ pending)
 
-- Johanna Angulo (Universidad Europea, Madrid, Spain) —
+- Johanna Angulo (Universidad Europea de Madrid, Spain) —
   *first author, corresponding*
 - [PhD advisor — confirm name + affiliation]
 - [Additional co-authors — confirm]
@@ -1048,7 +1048,7 @@ execution, or reporting of this study.
 ### Funding
 
 This work was conducted as part of the first author's **doctoral
-research at Universidad Europea (UE)**, Madrid, Spain. **No external
+research at Universidad Europea de Madrid (UE)**, Spain. **No external
 grant funding** was used. Computational infrastructure (a single
 NVIDIA RTX 5090 workstation) was provided by the first author. Cloud
 LLM API spend for the evaluation-only components (GPT-4o judge for
