@@ -55,8 +55,8 @@ evaluations have not addressed. Whether a literature-only agentic-workflow
 retrieval-augmented LLM system can match curated tools under
 deconfounded conditions is unknown.
 
-**Methods.** We developed **geno_agent**, a four-stage LangGraph
-pipeline (Planner, Retriever, Critic, Synthesiser) augmented by an
+**Methods.** We developed **geno_agent**, an agentic workflow composed
+of four role-specialised agents (Planner, Retriever, Critic, Synthesiser) augmented by an
 LLM-as-Evidence-Aggregator (LEA) using a locally-served Qwen3-8B
 model, operating over a frozen 4.2-million-chunk index of 287,000
 PubMed Central Open Access articles. We evaluated five systems
@@ -227,8 +227,9 @@ annotation-overlap status**, despite the well-recognised leakage
 concern [Kapoor & Narayanan, 2023]; and (iii) **no rare-disease
 prioritisation study has quantified LLM-generated rationale
 faithfulness** as a deployable triage signal. The present study
-addresses all three gaps. Specifically, we (1) describe geno_agent, a
-four-stage LangGraph pipeline + LLM-as-Evidence-Aggregator (LEA)
+addresses all three gaps. Specifically, we (1) describe geno_agent, an
+agentic workflow composed of four role-specialised agents (Planner,
+Retriever, Critic, Synthesiser) plus an LLM-as-Evidence-Aggregator (LEA)
 operating on a frozen 4.2-million-chunk index of 287,000 filtered PMC
 OA full-text articles; (2) evaluate it on n = 1,047 Phenopacket Store
 v0.1.26 cases stratified by MONDO disease category, by annotation-
