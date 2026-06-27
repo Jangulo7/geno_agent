@@ -148,15 +148,17 @@ A 3.4 million-article subset of the PubMed Central Open Access XML
 corpus (downloaded 2026-05; [National Library of Medicine, 2024]) was parsed and
 filtered for genetics / genomics / rare-disease relevance via MeSH
 descriptor matching (terms: Genetic Diseases, Rare Diseases, Mutation,
-Pathogenicity, Inheritance Patterns) and full-text inclusion criteria,
-yielding 287,000 articles. Articles were chunked at 512 tokens with
+Pathogenicity, Inheritance Patterns) and full-text inclusion criteria.
+The resulting genetics-relevant full-text corpus (~3.4 million articles)
+was chunked at 512 tokens with
 50-token overlap using a PubMedBERT-base tokeniser [Gu et al., 2021];
 chunk identifiers were derived deterministically via UUID5 on
 the content key to enable bit-identical re-indexing. Dense embeddings
 were computed with PubMedBERT and stored in Qdrant v1.14.1 alongside
 sparse embeddings from FastEmbed BM25, supporting hybrid retrieval via
-Reciprocal Rank Fusion at query time. The Qdrant collection contains
-4.2 million chunks with on-disk payload.
+Reciprocal Rank Fusion at query time. The production Qdrant collection
+(`geno_agent_pmc_oa_v1`) contains **52,777,395 chunks** with on-disk
+payload (collection size verified via the Qdrant `points_count` API).
 
 ### Evaluation metrics
 
