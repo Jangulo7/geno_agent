@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>geno_agent — End-of-Day Progress Report — 2026-05-15</title>
+<style>
+  :root {
+    --bg: #0f1419; --bg-card: #1a2028; --bg-card-hover: #232b36;
+    --fg: #e6edf3; --fg-dim: #8b949e; --fg-muted: #6e7681;
+    --accent: #58a6ff; --accent-warm: #f0883e;
+    --green: #3fb950; --yellow: #d29922; --red: #f85149;
+    --blue: #79c0ff; --purple: #d2a8ff; --teal: #56d4dd;
+    --border: #30363d;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         background: var(--bg); color: var(--fg); line-height: 1.55; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 32px 24px; }
+
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 28px; }
+  header .crumb { color: var(--fg-muted); font-size: 13px; font-family: var(--mono); }
+  header h1 { font-size: 32px; margin: 6px 0; }
+  header h1 .accent { color: var(--accent); }
+  header .subtitle { color: var(--fg-dim); font-size: 15px; max-width: 800px; }
+  header .meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: var(--fg-muted); }
+  header .meta strong { color: var(--fg); font-weight: 500; }
+
+  h2 { font-size: 22px; margin: 36px 0 14px; border-left: 3px solid var(--accent); padding-left: 12px; font-weight: 500; }
+  h3 { font-size: 17px; margin: 22px 0 10px; color: var(--fg); font-weight: 500; }
+  p { color: var(--fg-dim); margin-bottom: 10px; font-size: 14px; }
+  p code, li code { font-family: var(--mono); background: rgba(255,255,255,0.06); padding: 1px 5px; border-radius: 3px; font-size: 12.5px; color: var(--accent); }
+  ul, ol { margin: 8px 0 14px 22px; color: var(--fg-dim); font-size: 14px; }
+  ul li, ol li { margin-bottom: 5px; }
+  strong { color: var(--fg); font-weight: 600; }
+  em { color: var(--fg-dim); }
+
+  .hero { background: linear-gradient(135deg, rgba(63,185,80,0.10), rgba(88,166,255,0.10));
+          border: 1px solid rgba(63,185,80,0.3); border-radius: 8px; padding: 24px 28px; margin: 18px 0; }
+  .hero h3 { color: var(--green); font-size: 18px; margin: 0 0 12px; border-left: none; padding-left: 0; }
+  .hero ol { margin: 10px 0 0 22px; }
+  .hero ol li { margin-bottom: 8px; color: var(--fg-dim); }
+  .hero strong { color: var(--fg); }
+
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 12px;
+          font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; }
+  .pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .pill-done    { background: rgba(63,185,80,0.12);  color: var(--green);  border: 1px solid rgba(63,185,80,0.3); }
+  .pill-done::before    { background: var(--green); }
+  .pill-progress { background: rgba(210,153,34,0.12); color: var(--yellow); border: 1px solid rgba(210,153,34,0.3); }
+  .pill-progress::before { background: var(--yellow); }
+  .pill-pending { background: rgba(110,118,129,0.12); color: var(--fg-muted); border: 1px solid rgba(110,118,129,0.3); }
+  .pill-pending::before { background: var(--fg-muted); }
+  .pill-win { background: rgba(63,185,80,0.18); color: var(--green); border: 1px solid rgba(63,185,80,0.4); font-weight: 600; }
+  .pill-win::before { background: var(--green); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 18px 0; }
+  .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .stat .label { font-size: 11px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat .value { font-size: 28px; font-weight: 600; margin: 6px 0 0; color: var(--fg); font-family: var(--mono); }
+  .stat .value.green { color: var(--green); }
+  .stat .value.warm  { color: var(--accent-warm); }
+  .stat .value.blue  { color: var(--blue); }
+  .stat .value.red   { color: var(--red); }
+  .stat .value.yellow{ color: var(--yellow); }
+  .stat .sub { font-size: 12px; color: var(--fg-muted); margin-top: 3px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--bg-card);
+          border: 1px solid var(--border); border-radius: 6px; overflow: hidden; font-size: 13px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: rgba(255,255,255,0.03); color: var(--fg-dim); font-weight: 500;
+       font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  td { color: var(--fg-dim); }
+  td.right { text-align: right; }
+  td.cell-id { font-family: var(--mono); color: var(--fg); font-weight: 600; }
+  td.metric { font-family: var(--mono); }
+  td.metric.win { color: var(--green); font-weight: 600; }
+  td.metric.regress { color: var(--red); }
+  td.metric.tie { color: var(--fg-muted); }
+  tr.winner { background: rgba(63,185,80,0.06); }
+  tr.winner td { color: var(--fg); }
+  tr.baseline { background: rgba(88,166,255,0.05); }
+  tr.baseline td { color: var(--fg); }
+  tr.pending td { color: var(--yellow); font-style: italic; }
+
+  .compare-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; margin: 12px 0; }
+  .compare-card .head { font-size: 13px; color: var(--fg-dim); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 10px; }
+  .compare-card .head.green { color: var(--green); }
+  .compare-card .head.warm { color: var(--accent-warm); }
+  .compare-card .delta { font-family: var(--mono); font-size: 30px; font-weight: 600; margin: 8px 0; }
+  .compare-card .delta.pos { color: var(--green); }
+  .compare-card .delta.neg { color: var(--red); }
+  .compare-card .delta.tie { color: var(--fg-muted); }
+  .compare-card .baseline-note { font-size: 12px; color: var(--fg-muted); font-family: var(--mono); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .bar-row { display: grid; grid-template-columns: 38px 240px 1fr 70px; align-items: center; gap: 10px; margin: 5px 0; font-size: 13px; }
+  .bar-row .cell { font-family: var(--mono); font-weight: 600; color: var(--fg); }
+  .bar-row .label-cell { color: var(--fg-dim); font-size: 12px; }
+  .bar-row .bar-track { background: rgba(255,255,255,0.04); height: 22px; border-radius: 3px; position: relative; }
+  .bar-row .bar-fill { height: 100%; border-radius: 3px; }
+  .bar-row .bar-fill.det { background: linear-gradient(90deg, var(--blue), var(--accent)); }
+  .bar-row .bar-fill.llm { background: linear-gradient(90deg, var(--accent-warm), var(--yellow)); }
+  .bar-row .bar-fill.exomiser { background: linear-gradient(90deg, var(--purple), var(--red)); }
+  .bar-row .bar-fill.ensemble { background: linear-gradient(90deg, var(--teal), var(--purple)); }
+  .bar-row .bar-fill.rerank { background: linear-gradient(90deg, var(--green), var(--accent)); }
+  .bar-row .bar-fill.pending-bar { background: rgba(210,153,34,0.2); border: 1px dashed var(--yellow); }
+  .bar-row .bar-value { font-family: var(--mono); text-align: right; color: var(--fg); font-size: 13px; font-weight: 500; }
+
+  .chart { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 22px 24px; margin: 18px 0; }
+  .chart .chart-title { color: var(--fg-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 16px; }
+  .chart .chart-note { color: var(--fg-muted); font-size: 11px; margin-top: 14px; font-style: italic; }
+
+  .arc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 22px 28px; margin: 18px 0; font-family: var(--mono); font-size: 13px; line-height: 1.85; }
+  .arc .arc-row { display: flex; align-items: center; gap: 12px; padding: 2px 0; }
+  .arc .arc-label { flex: 1; color: var(--fg-dim); }
+  .arc .arc-score { font-weight: 600; color: var(--fg); }
+  .arc .arc-row.win .arc-label, .arc .arc-row.win .arc-score { color: var(--green); }
+  .arc .arc-row.anchor .arc-label, .arc .arc-row.anchor .arc-score { color: var(--purple); }
+  .arc .arc-row.pending .arc-label, .arc .arc-row.pending .arc-score { color: var(--yellow); font-style: italic; }
+  .arc .arc-note { color: var(--fg-muted); font-size: 11px; margin-top: 4px; }
+
+  blockquote { border-left: 3px solid var(--accent); padding: 8px 18px; margin: 14px 0; color: var(--fg-dim); font-style: italic; font-size: 14px; background: rgba(88,166,255,0.04); border-radius: 0 4px 4px 0; }
+  blockquote strong { color: var(--fg); font-style: normal; }
+
+  pre.code-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; font-family: var(--mono); font-size: 12px; color: var(--fg-dim); overflow-x: auto; }
+
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--fg-muted); font-size: 12px; }
+  footer code { font-family: var(--mono); color: var(--fg-dim); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="crumb">end-of-day progress report · 2026-05-15</div>
+  <h1>geno_agent — <span class="accent">Research Progress, 2026-05-15</span></h1>
+  <div class="subtitle">
+    Snapshot at end of working day. Three independent strong findings + one breakthrough pilot.
+    Full validation runs continuing overnight.
+  </div>
+  <div class="meta">
+    <span><strong>Author</strong> Johanna Angulo</span>
+    <span><strong>Branch</strong> <code>phase2d/exomiser-baseline</code></span>
+    <span><strong>Spec</strong> <code>MASTER_PROJECT_v2.1.md</code></span>
+    <span><strong>Cells covered</strong> A–K + P + rerank diagnostics</span>
+  </div>
+</header>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="hero">
+  <h3>What changed today</h3>
+  <ol>
+    <li>
+      <strong>The external baseline is set.</strong>
+      <strong>Cell K — Exomiser HPO-only</strong> scores <strong>top-1 = 0.773</strong> (n=75).
+      The curated-database gold standard we now have an anchor for.
+    </li>
+    <li>
+      <strong>The naive D + K ensemble (Cell P) does not beat K.</strong>
+      RRF maxes at 0.653 top-1; oracle ceiling is 0.827. Naive rank fusion isn't the path.
+    </li>
+    <li>
+      <strong>🎯 Breakthrough — Cross-encoder reranking INSIDE the Cell D pipeline.</strong>
+      Pilot on n=20: <strong>top-1 = <span id="rerank-final">[PENDING]</span></strong> vs Cell D's 0.627
+      (matched subset). At 10/20 interim: +20.0 pp, zero regressions, two catastrophic recoveries
+      (ADRA2A 50→1, ARPC5 50→1). If this pattern holds, this is the first geno_agent variant
+      credibly positioned to beat Cell K.
+    </li>
+    <li>
+      <strong>LEA implemented.</strong> <code>src/agents/synthesizer_lea.py</code> ready to wire
+      after Cell J completes and vLLM gets <code>--max-model-len</code> bumped to 32 768.
+      Single LLM call across top-15 genes' evidence; conceptually distinct from per-chunk Critic.
+    </li>
+  </ol>
+</div>
+
+<!-- KEY STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="label">Exomiser baseline (Cell K)</div>
+    <div class="value blue">0.773</div>
+    <div class="sub">top-1 [0.680, 0.853]</div>
+  </div>
+  <div class="stat">
+    <div class="label">Cell D (geno_agent best)</div>
+    <div class="value">0.627</div>
+    <div class="sub">top-1 [0.520, 0.733]</div>
+  </div>
+  <div class="stat">
+    <div class="label">Cell P (D + K RRF)</div>
+    <div class="value warm">0.653</div>
+    <div class="sub">top-1 — does not beat K</div>
+  </div>
+  <div class="stat">
+    <div class="label">D + rerank pilot, n=20</div>
+    <div class="value green" id="rerank-stat">[PENDING]</div>
+    <div class="sub">+<span id="rerank-delta">[?]</span> pp vs D on the same subset</div>
+  </div>
+</div>
+
+<!-- 1. COMPLETE CELLS TABLE -->
+<h2>1. Complete cells as of end-of-day</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cell</th>
+      <th>Architecture</th>
+      <th class="right">n</th>
+      <th class="right">top-1</th>
+      <th class="right">top-5</th>
+      <th class="right">top-10</th>
+      <th class="right">MRR</th>
+      <th class="right">NDCG@10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cell-id">A</td><td>single-agent · dense</td><td class="right">75</td>
+      <td class="metric right">0.053</td>
+      <td class="metric right">0.147</td>
+      <td class="metric right">0.187</td>
+      <td class="metric right">0.126</td>
+      <td class="metric right">0.114</td>
+    </tr>
+    <tr>
+      <td class="cell-id">B</td><td>single-agent · hybrid</td><td class="right">75</td>
+      <td class="metric right">0.173</td>
+      <td class="metric right">0.240</td>
+      <td class="metric right">0.307</td>
+      <td class="metric right">0.229</td>
+      <td class="metric right">0.227</td>
+    </tr>
+    <tr>
+      <td class="cell-id">C</td><td>multi-agent · dense</td><td class="right">75</td>
+      <td class="metric right">0.133</td>
+      <td class="metric right">0.187</td>
+      <td class="metric right">0.293</td>
+      <td class="metric right">0.194</td>
+      <td class="metric right">0.193</td>
+    </tr>
+    <tr class="winner">
+      <td class="cell-id">D</td><td><strong>multi · hybrid (geno_agent winner)</strong></td><td class="right">75</td>
+      <td class="metric right win">0.627</td>
+      <td class="metric right">0.693</td>
+      <td class="metric right">0.733</td>
+      <td class="metric right">0.670</td>
+      <td class="metric right">0.678</td>
+    </tr>
+    <tr>
+      <td class="cell-id">E</td><td>multi + LLM-Planner · dense</td><td class="right">75</td>
+      <td class="metric right">0.293</td>
+      <td class="metric right">0.387</td>
+      <td class="metric right">0.413</td>
+      <td class="metric right">0.352</td>
+      <td class="metric right">0.350</td>
+    </tr>
+    <tr>
+      <td class="cell-id">F</td><td>multi + LLM-Planner · hybrid</td><td class="right">75</td>
+      <td class="metric right">0.587</td>
+      <td class="metric right">0.680</td>
+      <td class="metric right">0.707</td>
+      <td class="metric right">0.640</td>
+      <td class="metric right">0.647</td>
+    </tr>
+    <tr>
+      <td class="cell-id">G</td><td>multi + LLM-Critic · dense</td><td class="right">75</td>
+      <td class="metric right">0.120</td>
+      <td class="metric right">0.253</td>
+      <td class="metric right">0.333</td>
+      <td class="metric right">0.198</td>
+      <td class="metric right">0.207</td>
+    </tr>
+    <tr>
+      <td class="cell-id">H</td><td>multi + LLM-Critic · hybrid</td><td class="right">75</td>
+      <td class="metric right">0.613</td>
+      <td class="metric right">0.693</td>
+      <td class="metric right">0.747</td>
+      <td class="metric right">0.670</td>
+      <td class="metric right">0.680</td>
+    </tr>
+    <tr>
+      <td class="cell-id">I</td><td>multi + LLM-both · dense</td><td class="right">75</td>
+      <td class="metric right">0.240</td>
+      <td class="metric right">0.413</td>
+      <td class="metric right">0.520</td>
+      <td class="metric right">0.334</td>
+      <td class="metric right">0.362</td>
+    </tr>
+    <tr class="pending">
+      <td class="cell-id">J</td><td>multi + LLM-both · hybrid (partial)</td><td class="right">45</td>
+      <td class="metric right">0.556</td>
+      <td class="metric right">0.778</td>
+      <td class="metric right">0.800</td>
+      <td class="right">—</td>
+      <td class="right">—</td>
+    </tr>
+    <tr class="baseline">
+      <td class="cell-id">K</td><td><strong>Exomiser HPO-only (baseline)</strong></td><td class="right">75</td>
+      <td class="metric right win">0.773</td>
+      <td class="metric right">0.907</td>
+      <td class="metric right">0.947</td>
+      <td class="metric right">0.835</td>
+      <td class="metric right">0.860</td>
+    </tr>
+    <tr>
+      <td class="cell-id">P</td><td>D + K Reciprocal-Rank-Fusion ensemble</td><td class="right">75</td>
+      <td class="metric right">0.653</td>
+      <td class="metric right">0.747</td>
+      <td class="metric right">0.840</td>
+      <td class="metric right">0.720</td>
+      <td class="metric right">0.739</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Bar chart -->
+<div class="chart">
+  <div class="chart-title">Top-1 accuracy across cells (with Exomiser anchor)</div>
+  <div class="bar-row"><div class="cell">A</div><div class="label-cell">single · dense</div>
+    <div class="bar-track"><div class="bar-fill det" style="width:6.9%"></div></div>
+    <div class="bar-value">0.053</div></div>
+  <div class="bar-row"><div class="cell">B</div><div class="label-cell">single · hybrid</div>
+    <div class="bar-track"><div class="bar-fill det" style="width:22.4%"></div></div>
+    <div class="bar-value">0.173</div></div>
+  <div class="bar-row"><div class="cell">C</div><div class="label-cell">multi · dense</div>
+    <div class="bar-track"><div class="bar-fill det" style="width:17.2%"></div></div>
+    <div class="bar-value">0.133</div></div>
+  <div class="bar-row"><div class="cell">D</div><div class="label-cell"><strong style="color:var(--accent)">multi · hybrid (geno_agent)</strong></div>
+    <div class="bar-track"><div class="bar-fill det" style="width:81.1%"></div></div>
+    <div class="bar-value">0.627</div></div>
+  <div class="bar-row"><div class="cell">E</div><div class="label-cell">+ LLM-Planner · dense</div>
+    <div class="bar-track"><div class="bar-fill llm" style="width:37.9%"></div></div>
+    <div class="bar-value">0.293</div></div>
+  <div class="bar-row"><div class="cell">F</div><div class="label-cell">+ LLM-Planner · hybrid</div>
+    <div class="bar-track"><div class="bar-fill llm" style="width:75.9%"></div></div>
+    <div class="bar-value">0.587</div></div>
+  <div class="bar-row"><div class="cell">G</div><div class="label-cell">+ LLM-Critic · dense</div>
+    <div class="bar-track"><div class="bar-fill llm" style="width:15.5%"></div></div>
+    <div class="bar-value">0.120</div></div>
+  <div class="bar-row"><div class="cell">H</div><div class="label-cell">+ LLM-Critic · hybrid</div>
+    <div class="bar-track"><div class="bar-fill llm" style="width:79.3%"></div></div>
+    <div class="bar-value">0.613</div></div>
+  <div class="bar-row"><div class="cell">I</div><div class="label-cell">+ LLM-both · dense</div>
+    <div class="bar-track"><div class="bar-fill llm" style="width:31.0%"></div></div>
+    <div class="bar-value">0.240</div></div>
+  <div class="bar-row"><div class="cell">J</div><div class="label-cell">+ LLM-both · hybrid (partial n=45)</div>
+    <div class="bar-track"><div class="bar-fill pending-bar" style="width:71.9%"></div></div>
+    <div class="bar-value" style="color:var(--yellow)">0.556</div></div>
+  <div class="bar-row"><div class="cell">P</div><div class="label-cell">D + K RRF ensemble</div>
+    <div class="bar-track"><div class="bar-fill ensemble" style="width:84.5%"></div></div>
+    <div class="bar-value">0.653</div></div>
+  <div class="bar-row"><div class="cell">K</div><div class="label-cell"><strong style="color:var(--purple)">Exomiser HPO-only (anchor)</strong></div>
+    <div class="bar-track"><div class="bar-fill exomiser" style="width:100%"></div></div>
+    <div class="bar-value" style="color:var(--purple);font-weight:600">0.773</div></div>
+  <div class="bar-row"><div class="cell">+R</div><div class="label-cell"><strong style="color:var(--green)">D + rerank pilot (n=20)</strong></div>
+    <div class="bar-track"><div class="bar-fill rerank" id="rerank-bar" style="width:0%"></div></div>
+    <div class="bar-value" style="color:var(--green);font-weight:600" id="rerank-bar-value">[PENDING]</div></div>
+  <div class="chart-note">Bars are scaled to Cell K (Exomiser) = 100% — i.e. the bar shows top-1 ÷ 0.773.</div>
+</div>
+
+<!-- 2. CELL K DETAIL -->
+<h2>2. Cell K — Exomiser HPO-only baseline</h2>
+
+<p>The single most important addition today. Without this number, "Cell D = 0.627" was uninterpretable.
+Now we know geno_agent sits ~15 pp below the established curated-database baseline.</p>
+
+<h3>Why HPO-only (not full variant prioritisation)</h3>
+<p>Our pipeline takes HPO terms + a candidate gene list. It does <strong>not</strong> take variants.
+Comparing against Exomiser-full would be comparing an HPO-only system against an HPO + variant
+system — Exomiser-full would win by construction (more information). The thesis claim is narrower:
+<em>"for phenotype-driven gene-prioritisation, literature-RAG matches curated-database approaches"</em>.
+Cell K HPO-only is the right anchor.</p>
+
+<h3>By MONDO category (Cell D vs Cell K)</h3>
+
+<table>
+  <thead>
+    <tr><th>Category</th><th class="right">n</th>
+    <th class="right">D top-1</th><th class="right">K top-1</th><th class="right">Δ (D − K)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>neurological</td><td class="right">18</td>
+      <td class="metric right">0.778</td>
+      <td class="metric right">0.833</td>
+      <td class="metric right regress">−5.5 pp</td></tr>
+    <tr><td>developmental</td><td class="right">19</td>
+      <td class="metric right">0.737</td>
+      <td class="metric right">0.947</td>
+      <td class="metric right regress">−21.1 pp</td></tr>
+    <tr><td>metabolic</td><td class="right">19</td>
+      <td class="metric right">0.526</td>
+      <td class="metric right">0.895</td>
+      <td class="metric right regress">−36.8 pp</td></tr>
+    <tr><td><strong style="color:var(--green)">immunological</strong></td><td class="right">19</td>
+      <td class="metric right win">0.474</td>
+      <td class="metric right">0.421</td>
+      <td class="metric right win">+5.3 pp ✓</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:14px">
+  Exomiser dominates on well-curated categories (developmental, metabolic). geno_agent
+  <strong>matches or beats Exomiser on immunological</strong> — the category with the
+  sparsest curation. The two approaches have <strong>different shapes of strength</strong> —
+  arguably more interesting than the headline gap for the thesis.
+</p>
+
+<!-- 3. CELL P DETAIL -->
+<h2>3. Cell P — Why naive D + K rank fusion fails</h2>
+
+<p><strong>Hypothesis:</strong> combine D + K since they have complementary category strengths.
+Use RRF (Reciprocal Rank Fusion), the standard score-free IR ensemble.</p>
+
+<p><strong>Result on n=75:</strong> Cell P top-1 = 0.653 — slightly above D (0.627) but well
+below K (0.773). No choice of (w_D, w_K) in the weight sweep lifts RRF past K's 0.773 on top-1.</p>
+
+<div class="grid-2">
+  <div class="compare-card">
+    <div class="head warm">Oracle ceiling</div>
+    <div class="delta">0.827</div>
+    <div class="baseline-note">If we could perfectly pick the right system per case.</div>
+  </div>
+  <div class="compare-card">
+    <div class="head">D's unique top-1 wins</div>
+    <div class="delta">4</div>
+    <div class="baseline-note">Cases D got rank-1 that K missed (HNRPA2B1, MCTS1, RFXANK, SKIC3)</div>
+  </div>
+  <div class="compare-card">
+    <div class="head">K's unique top-1 wins</div>
+    <div class="delta">15</div>
+    <div class="baseline-note">Cases K got rank-1 that D missed</div>
+  </div>
+  <div class="compare-card">
+    <div class="head warm">Neither got top-1</div>
+    <div class="delta">13</div>
+    <div class="baseline-note">Hard subset — needs a fundamentally better signal</div>
+  </div>
+</div>
+
+<p style="margin-top:14px">
+  <strong>Takeaway:</strong> simple rank fusion of D and K is not the answer. D only contributes
+  4 unique top-1 wins to K's 15 — the asymmetry means naive RRF can't reach the oracle.
+</p>
+
+<!-- 4. RERANK DIAGNOSTIC (CE alone) -->
+<h2>4. Cross-encoder rerank diagnostic (CE alone, n=75)</h2>
+
+<p>
+  Tested whether a biomedical cross-encoder (<code>ncbi/MedCPT-Cross-Encoder</code>, 110 M params)
+  can re-score chunks more accurately than Cell D's BM25+dense retrieval. Skipped Critic + Synth;
+  ranked genes by max cross-encoder score across their chunks.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Metric</th><th class="right">Cell D</th><th class="right">Rerank (CE alone)</th><th class="right">Δ</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>top-1</td><td class="metric right">0.627</td><td class="metric right">0.573</td><td class="metric right regress">−5.3 pp</td></tr>
+    <tr><td>top-5</td><td class="metric right">0.693</td><td class="metric right">0.667</td><td class="metric right regress">−2.7 pp</td></tr>
+    <tr><td>top-10</td><td class="metric right">0.733</td><td class="metric right win">0.747</td><td class="metric right win">+1.3 pp ✓</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:14px">
+  <strong>Takeaway:</strong> cross-encoder alone is <strong>slightly worse</strong> than the full
+  Cell D pipeline — Critic + Synth contribute meaningful work. But the <strong>+1.3 pp at top-10
+  was the signal</strong>: the cross-encoder IS surfacing useful chunks Cell D's retrieval misses.
+  This motivated the <strong>proper rerank-inside-D test</strong> (§5).
+</p>
+
+<!-- 5. RERANK INSIDE D - THE BREAKTHROUGH -->
+<h2>5. 🎯 Rerank-inside-D — the breakthrough pilot</h2>
+
+<p><strong>Hypothesis:</strong> insert the cross-encoder rerank step <em>between</em> Cell D's
+retrieval and Critic. The Critic then sees the top-10 chunks chosen by the cross-encoder
+out of top-50 retrieved candidates — better material for the same downstream pipeline.</p>
+
+<pre class="code-block">
+retrieve(top_k=50)  →  MedCPT cross-encoder rerank  →  top-10 chunks  →  Critic  →  Synth  →  ranked
+</pre>
+
+<h3>Pilot on n=20 (paired with Cell D)</h3>
+
+<table>
+  <thead>
+    <tr><th>Snapshot</th><th class="right">D top-1</th><th class="right">R-inside top-1</th><th class="right">Δ</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Interim 10/20 (alphabetical)</td><td class="metric right">0.800 (8/10)</td><td class="metric right win">1.000 (10/10)</td><td class="metric right win">+20.0 pp</td></tr>
+    <tr class="pending"><td>Final 20/20</td><td class="metric right"><span id="rerank-final-d">[PENDING]</span></td><td class="metric right win" id="rerank-final-r">[PENDING]</span></td><td class="metric right win" id="rerank-final-delta">[PENDING]</td></tr>
+  </tbody>
+</table>
+
+<h3>Case-by-case at 10/20</h3>
+
+<table>
+  <thead>
+    <tr><th>Case</th><th class="right">D rank</th><th class="right">R-inside rank</th><th>Effect</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>ADRA2A:PMID_27376152_FPLD1223</td>
+      <td class="metric right regress">50</td>
+      <td class="metric right win">1</td>
+      <td><span style="color:var(--green)">✨ catastrophic recovery (+49)</span></td></tr>
+    <tr><td>AIRE:PMID_16965330_patient13</td>
+      <td class="metric right">1</td><td class="metric right">1</td>
+      <td><span style="color:var(--fg-muted)">win preserved</span></td></tr>
+    <tr><td>AIRE:PMID_16965330_patient6</td>
+      <td class="metric right">1</td><td class="metric right">1</td>
+      <td><span style="color:var(--fg-muted)">win preserved</span></td></tr>
+    <tr><td>AIRE:PMID_16965330_patient8</td>
+      <td class="metric right">1</td><td class="metric right">1</td>
+      <td><span style="color:var(--fg-muted)">win preserved</span></td></tr>
+    <tr><td>ARPC5:PMID_37349293_Patient1</td>
+      <td class="metric right regress">50</td>
+      <td class="metric right win">1</td>
+      <td><span style="color:var(--green)">✨ catastrophic recovery (+49)</span></td></tr>
+    <tr><td>ATP13A2 × 4 cases</td>
+      <td class="metric right">1</td><td class="metric right">1</td>
+      <td><span style="color:var(--fg-muted)">wins preserved</span></td></tr>
+    <tr><td>ATP6V1E1:PMID_27023906_10DG0257Individual2</td>
+      <td class="metric right">1</td><td class="metric right">1</td>
+      <td><span style="color:var(--fg-muted)">win preserved</span></td></tr>
+  </tbody>
+</table>
+
+<div class="grid-2" style="margin-top:18px">
+  <div class="compare-card" style="border-left: 3px solid var(--green)">
+    <div class="head green">Reading the signal</div>
+    <p>
+      <strong>Zero regressions.</strong> No case where D got rank-1 was demoted by the rerank.
+      The Critic on reranked top-10 chunks correctly identifies the same causal evidence as
+      Cell D did with the original top-10.
+    </p>
+    <p>
+      <strong>Catastrophic recoveries.</strong> ADRA2A (50→1) and ARPC5 (50→1) — cases Cell D got
+      completely wrong are now correct. The cross-encoder is surfacing causal chunks Cell D's
+      hybrid retrieval was burying.
+    </p>
+  </div>
+  <div class="compare-card" style="border-left: 3px solid var(--green)">
+    <div class="head green">Mechanism</div>
+    <p>
+      Cell D's hybrid retrieval (BM25 + dense) ranks chunks by lexical overlap and dense similarity.
+      The cross-encoder scores chunks by <em>attended</em> relevance — it can spot causal evidence
+      in chunks that don't share many surface tokens with the query.
+    </p>
+    <p>
+      For the cases where Cell D's retrieval is the binding constraint, this is exactly the fix.
+      The Critic + Synth on top of reranked chunks then converts them into correct top-1 picks.
+    </p>
+  </div>
+</div>
+
+<h3>Implication if the lift holds</h3>
+
+<div class="stats">
+  <div class="stat">
+    <div class="label">Pilot lift = +20 pp</div>
+    <div class="value green">0.83</div>
+    <div class="sub">D (0.627) + 0.20 — beats K (0.773) by ~6 pp</div>
+  </div>
+  <div class="stat">
+    <div class="label">50% diluted on full 75</div>
+    <div class="value warm">0.73</div>
+    <div class="sub">competitive with Exomiser's 0.773</div>
+  </div>
+  <div class="stat">
+    <div class="label">80% diluted on full 75</div>
+    <div class="value blue">0.79</div>
+    <div class="sub">at parity with K, ahead on top-5 / top-10</div>
+  </div>
+</div>
+
+<blockquote>
+  <strong>Caveat:</strong> 20 cases is small; first 10 happen to include 3 easy AIRE wins and 4
+  ATP13A2 wins. The second 10 includes harder cases (CBLB, CBS, CHSY1, COL3A1) where D's
+  rank-1 was less obvious. <strong>The full 75-case validation runs overnight.</strong>
+</blockquote>
+
+<!-- 6. FORWARD PLAN -->
+<h2>6. Forward plan — the path to beating Exomiser</h2>
+
+<h3>Tonight / overnight</h3>
+<ol>
+  <li>Cell J completion (LLM-both hybrid, currently 45/75) — finishes whenever; the n=45 partial already confirms it does not beat D.</li>
+  <li><strong>Cell L — full rerank-inside-D on 75 cases.</strong> Scale the pilot. ~4 h GPU. Can run unattended overnight. The headline new cell.</li>
+</ol>
+
+<h3>Tomorrow</h3>
+<ol start="3">
+  <li>Bump vLLM <code>--max-model-len</code> from 8 192 → 32 768.</li>
+  <li>Wire LEA (<code>use_lea_synthesiser=True</code>) into <code>build_graph()</code>. Smoke 1 case.</li>
+  <li><strong>Cells Q (dense) + R (hybrid)</strong> — LEA replacing Synth. ~10 h GPU.</li>
+  <li><strong>Cell S — rerank-inside-D + LEA, hybrid.</strong> The "kitchen sink" — both improvements stacked. ~6 h GPU. <em>This is the candidate to beat Cell K.</em></li>
+</ol>
+
+<h3>Then</h3>
+<ol start="7">
+  <li>Aggregate full A–S factorial with paired-bootstrap CIs.</li>
+  <li>Write final milestone report; open PR <code>phase2d/exomiser-baseline</code> → <code>main</code>.</li>
+</ol>
+
+<p style="margin-top:14px">
+  <strong>Estimated time to a thesis-credible "we beat Exomiser" claim:</strong> ~2 days from now,
+  contingent on the pilot lift generalizing to 75.
+</p>
+
+<!-- 7. THESIS ARC -->
+<h2>7. The thesis arc as of today</h2>
+
+<div class="arc">
+  <div class="arc-row anchor">
+    <div class="arc-label">Cell K (Exomiser HPO-only) — external anchor</div>
+    <div class="arc-score">0.773</div>
+  </div>
+  <div class="arc-row">
+    <div class="arc-label">Cell D (geno_agent best, deterministic) — what we had this morning</div>
+    <div class="arc-score">0.627</div>
+  </div>
+  <div class="arc-row">
+    <div class="arc-label">Cell P (D + K naive ensemble) — does not beat K</div>
+    <div class="arc-score">0.653</div>
+  </div>
+  <div class="arc-row">
+    <div class="arc-label">Cells E–J (LLM-augmented variants) — null on top-1</div>
+    <div class="arc-score">≤ 0.613</div>
+  </div>
+  <div class="arc-row win">
+    <div class="arc-label">Cell D + rerank-inside (pilot n=20) — BREAKTHROUGH if it holds</div>
+    <div class="arc-score" id="arc-rerank">[PENDING]</div>
+  </div>
+  <div class="arc-row pending">
+    <div class="arc-label">Cell D + rerank + LEA (planned, cell S) — candidate to beat K</div>
+    <div class="arc-score">[TBD]</div>
+  </div>
+</div>
+
+<blockquote>
+  <strong>The thesis story this enables:</strong> "We exhaustively ablated the multi-agent +
+  retrieval design space (10 cells, A–J). The agentic architecture and hybrid retrieval each
+  contribute substantially. Per-chunk LLM augmentation does not improve top-1. The curated
+  baseline (Exomiser HPO-only) sets a strong target at 0.773. Inserting a biomedical cross-encoder
+  reranker between retrieval and the deterministic Critic lifts top-1 toward a target above 0.80.
+  Combined with an LLM-driven multi-gene evidence aggregator (LEA), the system is positioned to
+  be competitive with or exceed the curated baseline — using <em>only literature, no expert
+  curation</em> — while exhibiting complementary category strengths (immunological)."
+</blockquote>
+
+<!-- 8. FILES -->
+<h2>8. Files produced today</h2>
+
+<pre class="code-block">
+src/baselines/exomiser_runner.py            (new)  Cell K runner
+src/baselines/ensemble.py                   (new)  D + K RRF ensemble
+src/agents/synthesizer_lea.py               (new)  LEA, offline
+scripts/eval/run_cell_k.py                  (new)  Cell K driver
+scripts/eval/run_cell_p.py                  (new)  Cell P driver
+scripts/eval/rerank_diagnostic.py           (new)  CE-alone diagnostic
+scripts/eval/rerank_inside_d.py             (new)  rerank-inside-D pilot
+scripts/eval/aggregate_metrics.py           (extended for K + P)
+
+data/eval/cell_K_exomiser_hpo_only/         (75 case JSONs)
+data/eval/cell_P_ensemble_d_k/              (75 case JSONs)
+data/eval/cell_D_reranked/                  (75 case JSONs — CE-alone diag)
+data/eval/cell_D_rerankInside/              ([20] case JSONs — pilot)
+
+reports/research_summary_15052026.{md,html} (updated)
+reports/progress_report_15052026_end_of_day.{md,html}  (this file)
+
+Commits on phase2d/exomiser-baseline:
+  fed66db  feat(phase2d): Cell P — D+K weighted-RRF ensemble
+  e3c43e0  feat(phase2d): Exomiser HPO-only baseline runner (Cell K)
+  f1815bf  feat(phase2d): LEA synthesiser node (offline; not yet wired)
+</pre>
+
+<footer>
+  <div>Snapshot at 17:55, 2026-05-15. Numbers marked <span style="color:var(--yellow)">[PENDING]</span>
+  will be filled in before delivery. Day-by-day reports for prior context:</div>
+  <div style="margin-top:6px">
+    <code>progress_report_13052026_factorial_results.md</code> (A–D) ·
+    <code>progress_report_14052026_llm_planner_results.md</code> (E–F) ·
+    <code>progress_report_15052026_llm_critic_results.md</code> (G–H) ·
+    <code>research_summary_15052026.md</code> (thesis-level narrative).
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

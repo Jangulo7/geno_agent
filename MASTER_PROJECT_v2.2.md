@@ -78,7 +78,7 @@ cohort generation, original 16-cell factorial) is unchanged; v2.2 adds Phase 3
 
 **Documentation additions (Phase 3):**
 
-16. [`reports/paper_extension_plan.md`](reports/paper_extension_plan.md) — v1 plan (n=460, v0.1.19, seed 4242)
+16. [`reports/_archive_n75/paper_extension_plan.md`](reports/_archive_n75/paper_extension_plan.md) — v1 plan (n=460, v0.1.19, seed 4242; archived, superseded by v2/v3)
 17. [`reports/paper_extension_plan_v2.md`](reports/paper_extension_plan_v2.md) — v2 plan (n=1,047, v0.1.26, seed 42)
 18. [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — v3 plan (LIRICAL, RAGAS, DeepEval, Threads D-G)
 19. [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + `.html` — v2 final results (Cell S beats Exomiser, Δ=+3.4 pp ★)
@@ -2849,6 +2849,8 @@ These are intentional deviations from the literal text of Chapter 4 v3, with rat
 - **Qdrant client/server version match (resolved in §7 step [4]).** `docker-compose.yml` was bumped from `qdrant/qdrant:v1.12.4` → `qdrant/qdrant:v1.14.1` to align with `qdrant-client==1.14.3` in pytorch-env. v1.14.1 is the highest server tag in the v1.14.x line (no v1.14.3 server release exists). Bump performed before any collection had data, so no migration was required.
 
 - **Factorial cell letter remapping (Phase 2d, 2026-05-14 → 2026-05-15).** The original §11.5 names *Cell E* as the Exomiser baseline. Phase 2d added six LLM-augmented cells in alphabetical order *after* the deterministic 2×2, pushing Exomiser from E to K. Phase 2e (§11.8, added 2026-05-15) reserves L-O for the cross-encoder re-ranker cells. Final layout: A–D deterministic 2×2 · E–F LLM-Planner · G–H LLM-Critic · I–J LLM-both · K Exomiser (deferred) · L–O re-ranker (proposed). The §11.5 prose still describes the original 2×2+1 design; this remapping is an additive extension, not a replacement.
+- **Paper-extension cell roster (n=1,047, 2026-05 → 2026-06).** The Phase 2e L–O re-ranker letters (§11.8) were *repurposed* for the paper extension; the **executed roster is D / K / L / M / N / S**, where L = CE-rerank-inside-D, M = LIRICAL HPO-only baseline, N = RRF(M, S) ensemble (Thread F), and S = L + LEA. The proposed §11.8 cells N/O (LLM-Planner/Critic reranker variants) were never run (Phase 2d showed no top-1 lift from the LLM components). Disambiguation note added inline at §11.8.
+- **Multiplicity correction (paper extension).** Holm (FWER) + Benjamini–Hochberg (FDR) over the pre-declared primary fair-cohort top-1 comparisons were added in `scripts/eval/multiplicity_correction.py` (not in the original §11.5 prose, which specified only paired-bootstrap CIs). Both primary comparisons survive Holm (adjusted p = 0.028). Documented in §11.5; supplement `reports/tables/supp_table_multiplicity.{md,json}`.
 
 ### Phase 2 design choices (added 2026-05-09)
 
@@ -3144,9 +3146,22 @@ HGNC distractors, seed = 42). Metrics:
 - **NDCG@10**
 
 Statistical significance: paired bootstrap over cases (1000 resamples,
-95 % CI). Output: a single LaTeX-ready results table per metric +
+95 % CI) plus two-sided exact McNemar on top-1 for each paired
+comparison. Output: a single LaTeX-ready results table per metric +
 per-cell confidence intervals + per-cell error analysis grouped by
 MONDO category.
+
+**Multiplicity correction (paper extension).** Because the paper reports
+several paired top-1 comparisons, the pre-declared primary endpoints
+(Cell S vs Exomiser/K and vs LIRICAL/M on the deconfounded fair cohort)
+are corrected for multiple testing: **Holm** (family-wise error) and
+**Benjamini–Hochberg** (FDR), implemented in
+`scripts/eval/multiplicity_correction.py`. Both primary fair-cohort
+comparisons survive Holm at α = 0.05 (adjusted p = 0.028 each); the
+supplementary table is `reports/tables/supp_table_multiplicity.{md,json}`.
+A stratum-weighted overall (`scripts/eval/weighted_overall.py`) confirms
+the S-vs-K advantage is invariant to MONDO weighting (+0.034 equal-weighted
+vs +0.035 unweighted).
 
 ### 11.6 Acceptance criteria — Phase 2 done = ALL of
 
@@ -3183,7 +3198,7 @@ MONDO category.
 ### 11.8 Phase 2e — Cross-encoder re-ranker (added 2026-05-15)
 
 **Motivation.** The Phase 2d LLM-augmented factorial (cells E-J,
-`reports/progress_report_15052026_llm_critic_results.md`) showed that
+`reports/_archive_n75/progress_report_15052026_llm_critic_results.md`) showed that
 neither LLM-Planner nor LLM-Critic produces a top-1 improvement over the
 deterministic Cell D (multi-agent + hybrid retrieval). The factorial
 decomposition cleanly isolates **retrieval** as the binding constraint:
@@ -3239,6 +3254,25 @@ feasible.
 
 Cells L and M isolate the reranker's main effect; N and O test whether
 re-ranking restores the LLM components' lost headroom.
+
+> **Deviation — executed paper-extension layout (recorded in §10).** The
+> L–O letters above are the *original Phase 2e proposal*. The n=1,047 paper
+> extension repurposed them; cells N and O as defined here (LLM-Planner /
+> LLM-Critic reranker variants) were **not run** because Phase 2d already
+> showed the LLM components add no top-1 lift. The **executed cell roster**
+> is **D / K / L / M / N / S**:
+> - **D** — multi-agent + hybrid (deterministic inside-system baseline)
+> - **K** — Exomiser HPO-only (curated baseline)
+> - **L** — D + MedCPT cross-encoder rerank inside the agent loop
+> - **M** — LIRICAL HPO-only (second curated baseline, paper v3)
+> - **N** — **RRF(M, S) ensemble** at k=60 (Thread F complementarity check;
+>   `scripts/eval/build_cell_n_rrf.py`, results `data/eval_1050/cell_N_rrf_m_s/`)
+> - **S** — L + LEA (LLM-as-Evidence-Aggregator, Qwen3-8B); full agentic stack
+>
+> Thread F found Cell N statistically tied with S alone on the fair cohort
+> (Δ = −0.007 NS) and worse than M on the contaminated cohort — the two
+> systems carry no independent predictive signal beyond annotation-overlap
+> status, so the ensemble is not the primary contribution.
 
 **Implementation outline.**
 

@@ -82,6 +82,11 @@ data/eval_1050_lopo_full/leak_S/
 # DeepEval cache (created on import; per-machine, not reproducibility-critical)
 .deepeval/
 
+# Office documents — local drafts/exports, not tracked in the repo
+*.odt
+*.doc
+*.docx
+
 # Raw LLM response dumps (1.9 GB; regenerable from the per-case ranking JSONs).
 # Per-case ranking JSONs in data/eval_1050/cell_{D,K,L,M,N,S}/ ARE committed.
 data/eval_1050/cell_S_responses/
