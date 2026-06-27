@@ -22,8 +22,8 @@ manuscript draft.
 ## The three-paper relationship
 
 - **P1** — methods + shared foundation (corpus/index recipe, ontologies, cohort).
-  This item **depends on P1 and references it by DOI** rather than copying it.
-- **P2 (this item)** — the GenoAgent system and its evaluation.
+- **P2 (this item)** — the GenoAgent system and its evaluation. This item
+  **depends on P1 and references it by DOI** rather than copying it.
 - **P3** — variant-interpretation safety benchmark in the separate
   `geno_agent_variant` repo; reuses P1's foundation and forks P2's agent code under
   AGPL-3.0.
