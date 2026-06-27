@@ -87,12 +87,23 @@ mapped to gene rankings via NCBI mim2gene_medgen (2026-04-07) and
 Orphanet en_product6.xml. When multiple diseases mapped to a candidate
 gene, the maximum posterior was used.
 
-**Cell D (multi-agent hybrid baseline).** A deterministic four-agent
-LangGraph pipeline (planner → retriever → critic → synthesiser) using
-hybrid dense + BM25 retrieval [41] with Reciprocal Rank
+**Cell D (multi-agent hybrid baseline).** A deterministic four-stage
+LangGraph agentic workflow (planner → retriever → critic → synthesiser)
+using hybrid dense + BM25 retrieval [41] with Reciprocal Rank
 Fusion (k = 60, [42]) over a local PMC OA Qdrant
 index (see *Index construction*). The synthesiser
 ranks candidates by the sum of inverse-rank chunk scores per gene.
+
+We use *agentic workflow* in its precise sense: an orchestration with
+predefined nodes, edges, and conditional routing — here a critic-driven
+self-correction loop that re-enters the retriever when too many chunks
+are graded low-relevance — as distinct from an autonomous agent that
+selects its own tools and control flow at run time. Topology and
+decoding are fixed (temperature 0, seeded) so that inference is
+reproducible and the comparative evaluation is valid, a prerequisite for
+clinical benchmarking. Accordingly, the "single-agent vs. multi-agent"
+factor below denotes the number of role-specialised stages (one vs.
+four), not agent autonomy.
 
 **Cell L (Cell D + cross-encoder reranking).** Identical to Cell D but
 with an additional MedCPT cross-encoder pass over the top-50 retrieved

@@ -19,17 +19,17 @@ deployment property (literature-only, locally-deployable).
 **Candidate 1 (recommended) — methodology-first, action verb, balanced
 length (18 words):**
 
-> ***Literature-only multi-agent retrieval-augmented gene prioritisation
+> ***Literature-only agentic-workflow retrieval-augmented gene prioritisation
 > for rare disease: a deconfounded benchmark against curated baselines.***
 
 **Candidate 2 — finding-first, headline-grade, shorter (15 words):**
 
-> ***A literature-only multi-agent LLM system matches curated tools for
+> ***A literature-only agentic-workflow LLM system matches curated tools for
 > rare-disease gene prioritisation under deconfounded evaluation.***
 
 **Candidate 3 — system-name-first, descriptive (19 words):**
 
-> ***geno_agent: a literature-grounded multi-agent retrieval-augmented
+> ***geno_agent: a literature-grounded agentic-workflow retrieval-augmented
 > system for rare-disease gene prioritisation with annotation-overlap-
 > deconfounded evaluation against Exomiser and LIRICAL.***
 
@@ -51,7 +51,7 @@ roughly half of sequenced cases remain undiagnosed. Curated
 phenotype-driven tools such as Exomiser and LIRICAL are the current
 standard but lag the published literature by years and benefit from
 training-data exposure to benchmark cases — a confound prior
-evaluations have not addressed. Whether a literature-only multi-agent
+evaluations have not addressed. Whether a literature-only agentic-workflow
 retrieval-augmented LLM system can match curated tools under
 deconfounded conditions is unknown.
 
@@ -84,7 +84,7 @@ GPT-4o judges independently predicted top-1 correctness with a
 33-39 pp gap, enabling an automated triage flag. The headline result
 was robust across three frontier LLM families (within 2.4 pp).
 
-**Conclusions.** A literature-only, locally-deployable, multi-agent
+**Conclusions.** A literature-only, locally-deployable, agentic-workflow
 retrieval-augmented system can match or exceed curated phenotype-
 driven tools for rare-disease gene prioritisation. Annotation-overlap
 stratification reveals systematic overstatement of curated-tool
@@ -211,7 +211,7 @@ from a different model family than the system being judged.
 Despite the maturing of biomedical RAG, agentic LLM systems, and LLM-
 quality evaluation, three gaps remain in the rare-disease gene-
 prioritisation literature: (i) **no literature-only locally-deployable
-multi-agent gene-prioritisation system has been rigorously evaluated
+agentic-workflow gene-prioritisation system has been rigorously evaluated
 against curated phenotype-driven tools** on a large stratified
 Phenopacket Store cohort; (ii) **no published evaluation of rare-
 disease prioritisation tools has formally stratified results by
@@ -220,7 +220,7 @@ concern [14]; and (iii) **no rare-disease
 prioritisation study has quantified LLM-generated rationale
 faithfulness** as a deployable triage signal. The present study
 addresses all three gaps. Specifically, we (1) describe geno_agent, a
-four-agent LangGraph pipeline + LLM-as-Evidence-Aggregator (LEA)
+four-stage LangGraph agentic workflow + LLM-as-Evidence-Aggregator (LEA)
 operating on a frozen 52.8-million-chunk index (52,777,395 chunks) of
 genetics/genomics-relevant PMC OA full-text articles; (2) evaluate it
 on n = 1,047 Phenopacket Store
@@ -572,7 +572,7 @@ sidecars in the GitHub repository.
 
 ### Principal findings
 
-This study evaluated geno_agent, a literature-only multi-agent retrieval-
+This study evaluated geno_agent, a literature-only agentic-workflow retrieval-
 augmented gene-prioritisation system, against established curated-
 knowledge-base baselines (Exomiser HPO-only and LIRICAL HPO-only) on
 a stratified n = 1,047 cohort drawn from Phenopacket Store v0.1.26.
@@ -854,7 +854,7 @@ manuscript v7 to align with the BMC structural convention.*
 
 ## Conclusions (✅ DRAFTED — this commit, ~180 words)
 
-A **literature-only, locally-deployable, multi-agent retrieval-
+A **literature-only, locally-deployable, agentic-workflow retrieval-
 augmented gene-prioritisation system can match — and on the fair-
 comparison cohort, exceed — established curated-knowledge-base tools**
 for rare-disease causal-gene prioritisation. The result is robust
@@ -881,7 +881,7 @@ Prior work on automated rare-disease gene prioritisation can be
 organised along two architectural axes: the **primary knowledge
 source** (curated knowledge bases vs primary literature) and the
 **inference-time orchestration** (single deterministic model vs
-multi-agent LLM-in-the-loop). geno_agent occupies a quadrant that
+agentic-workflow LLM-in-the-loop). geno_agent occupies a quadrant that
 prior work has not formally evaluated.
 
 ### Curated phenotype-driven gene prioritisation
