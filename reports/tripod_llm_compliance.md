@@ -140,7 +140,7 @@ faithfulness, LLM-family robustness).
 **Status:** ✅ **Addressed**.
 **Evidence:** `manuscript_methods_draft.md` §Cohort construction +
 §Index construction. Phenopacket Store v0.1.26, PMC OA corpus (~3.4M
-articles → 287K filtered → 4.2M chunks). Qwen3-8B used as-released
+genetics-relevant articles → 52,777,395 chunks). Qwen3-8B used as-released
 (no fine-tuning).
 
 ### Item 5b — Data point distribution

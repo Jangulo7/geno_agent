@@ -58,8 +58,9 @@ deconfounded conditions is unknown.
 **Methods.** We developed **geno_agent**, an agentic workflow composed
 of four role-specialised agents (Planner, Retriever, Critic, Synthesiser) augmented by an
 LLM-as-Evidence-Aggregator (LEA) using a locally-served Qwen3-8B
-model, operating over a frozen 4.2-million-chunk index of 287,000
-PubMed Central Open Access articles. We evaluated five systems
+model, operating over a frozen 52.8-million-chunk index (52,777,395
+chunks) of the genetics/genomics-relevant PubMed Central Open Access
+full-text corpus. We evaluated five systems
 (Exomiser, LIRICAL, multi-agent baseline, +cross-encoder rerank, and
 geno_agent) on a disproportionate stratified n = 1,047 cohort drawn
 from Phenopacket Store v0.1.26, with paired-bootstrap 95 % CIs and
@@ -230,8 +231,8 @@ faithfulness** as a deployable triage signal. The present study
 addresses all three gaps. Specifically, we (1) describe geno_agent, an
 agentic workflow composed of four role-specialised agents (Planner,
 Retriever, Critic, Synthesiser) plus an LLM-as-Evidence-Aggregator (LEA)
-operating on a frozen 4.2-million-chunk index of 287,000 filtered PMC
-OA full-text articles; (2) evaluate it on n = 1,047 Phenopacket Store
+operating on a frozen 52.8-million-chunk index (52,777,395 chunks) of
+genetics/genomics-relevant PMC OA full-text articles; (2) evaluate it on n = 1,047 Phenopacket Store
 v0.1.26 cases stratified by MONDO disease category, by annotation-
 overlap status, and by source-publication year; (3) quantify LEA
 rationale grounding with both strict (RAGAS) and lenient (DeepEval)
@@ -985,8 +986,8 @@ supplementary file.
   DeepEval outputs: `data/eval_1050/cell_*/`,
   `data/eval_1050/cell_S_ablation_*/`,
   `data/eval_1050/ragas_*.json`, `data/eval_1050/deepeval_*.json`.
-- **Frozen Qdrant index** (4.2 M PMC OA chunks, MedCPT dense
-  embeddings + BM25 sparse): persistent local volume mounted at
+- **Frozen Qdrant index** (52,777,395 PMC OA chunks, PubMedBERT dense
+  embeddings + FastEmbed BM25 sparse): persistent local volume mounted at
   `~/rare-disease-rag/qdrant_storage/`. A bit-perfect snapshot is
   hosted at [**flagged — Zenodo deposition pending at submission
   time**], with SHA-256 manifest in the repository.
