@@ -3,7 +3,7 @@
 **Title.** geno_agent — Methods and Shared Foundation: A Reproducible PMC-OA
 Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort
 
-**Author.** Johanna Angulo (Universidad Europea, Madrid)
+**Author.** Johanna Angulo (Universidad Europea de Madrid)
 
 **License.** Code: AGPL-3.0-or-later. Data artifacts retain upstream licenses
 (cohort: CC BY 4.0, derived from the GA4GH Phenopacket Store).

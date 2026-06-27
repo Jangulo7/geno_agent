@@ -745,7 +745,7 @@ Exomiser on the Phase 1B benchmark — the headline contribution.
 | Qdrant search tool | [`src/tools/qdrant_search.py`](../src/tools/qdrant_search.py) |
 | Tests (40 + 15 + 12 + 24 + 21 = 112 in src/agents) | [`tests/test_state.py`](../tests/test_state.py), [`test_query_planner.py`](../tests/test_query_planner.py), [`test_retriever.py`](../tests/test_retriever.py), [`test_critic.py`](../tests/test_critic.py), [`test_synthesizer.py`](../tests/test_synthesizer.py) |
 | Master plan §11 (Phase 2 spec) | [`MASTER_PROJECT_v2.1.md`](../MASTER_PROJECT_v2.1.md) §11 |
-| Project rules | [`CLAUDE.md`](../CLAUDE.md) |
+| Project rules | [`CONTRIBUTING.md`](../CONTRIBUTING.md) |
 | Tooling config | [`pyproject.toml`](../pyproject.toml), [`.pre-commit-config.yaml`](../.pre-commit-config.yaml) |
 
 ### Relevant prior PRs

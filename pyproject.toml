@@ -40,7 +40,7 @@ dependencies = [
     "tokenizers==0.22.2",
 
     # Vector database + sparse embeddings (§2 line 193) — fastembed provides the
-    # native Qdrant BM25 implementation per CLAUDE.md hard rule.
+    # native Qdrant BM25 implementation per CONTRIBUTING.md hard rule.
     "qdrant-client==1.14.3",
     "fastembed==0.8.0",
 
@@ -60,12 +60,11 @@ dependencies = [
     "awscli==1.45.6",
 
     # Phase 2a — LangGraph state graph orchestration (§11.1, C7)
-    # Note: bumped from 0.0.56 to 0.4.10 to enable dataclass state schemas;
-    # langchain-core was bumped to 1.3.3 transitively (incompatible with the
-    # pre-existing langchain==0.3.27, but langchain itself is not used by this project).
-    "langgraph==0.4.10",
-    "langgraph-checkpoint==4.0.3",
-    "langchain-core==1.3.3",
+    # Versions reflect the pytorch-env used for the study (the unit tests pass on
+    # these); langchain-core is a transitive pin (langchain itself is not used).
+    "langgraph==1.2.1",
+    "langgraph-checkpoint==4.1.1",
+    "langchain-core==1.4.0",
 
     # Phase 2a — local LLM client (OpenAI-compatible API to vLLM/Ollama, §11.1, C7b)
     # Used by src/tools/llm.py. Bumped to 2.36.0 by vLLM install on 2026-05-09;
@@ -89,7 +88,7 @@ Homepage = "https://github.com/Jangulo7/geno_agent"
 Issues = "https://github.com/Jangulo7/geno_agent/issues"
 
 # ============================================================================
-# Tooling configuration — see README and CLAUDE.md for project style rules.
+# Tooling configuration — see README and CONTRIBUTING.md for project style rules.
 # ============================================================================
 
 [tool.ruff]

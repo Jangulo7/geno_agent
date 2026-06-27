@@ -37,9 +37,10 @@ mkdir -p "$P2D"
 git archive --format=tar HEAD -- \
   data/eval_1050 data/eval_1050_lopo_full \
   reports/figures reports/tables \
+  reports/paper_extension_results.md \
   reports/manuscript_q1_draft.md reports/manuscript_q1_draft_apa.md \
   reports/explainability_report.md reports/tripod_llm_compliance.md \
-  reports/wallclock_cost_table.md reports/deeprare_comparability_analysis.md \
+  reports/deeprare_comparability_analysis.md \
   | tar -x -C "$P2D"
 # License-clean rationale derivative (verbatim PMC text stripped) for the champion cell
 python scripts/eval/strip_responses_for_release.py \

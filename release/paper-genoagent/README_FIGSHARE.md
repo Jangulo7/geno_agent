@@ -3,7 +3,7 @@
 **Title.** geno_agent: An Agentic-Workflow RAG System for Gene Prioritization in
 Rare Mendelian Disease (code, evaluation results, and manuscript artifacts)
 
-**Author.** Johanna Angulo (Universidad Europea, Madrid)
+**Author.** Johanna Angulo (Universidad Europea de Madrid)
 
 **License.** Code: AGPL-3.0-or-later. Result/manuscript artifacts: AGPL-3.0.
 

@@ -133,7 +133,7 @@ Many thanks for your attention and assistance.
 Kind regards,
 
 **Johanna Angulo**
-PhD candidate, Universidad Europea, Madrid, Spain
+PhD candidate, Universidad Europea de Madrid, Spain
 [email] | [phone]
 PhD supervisor: **[supervisor's name]**
 Doctoral programme: **[programme name]**

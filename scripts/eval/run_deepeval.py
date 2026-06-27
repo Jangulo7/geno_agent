@@ -16,7 +16,7 @@ plus the raw score for compatibility.
 Project-rule deviation
 ======================
 
-``CLAUDE.md`` mandates "No cloud LLM API in any code path." Using
+``CONTRIBUTING.md`` mandates "No cloud LLM API in any code path." Using
 GPT-4o as a DeepEval judge is a deliberate deviation **for evaluation
 only**; the production pipeline (Cells D, L, S) remains all-local.
 Documented in paper_extension_plan_v3.md §3.5.

@@ -3,7 +3,7 @@
 **Project:** geno_agent — Agentic-Workflow RAG for Rare-Disease Gene Prioritization
 **Author:** Johanna Angulo
 **Date:** 2026-05-18
-**Status:** Paper extension v3 in progress (Cell S re-run with response logging, ~60 % done)
+**Status:** Complete — v3 final (Cell S response logging, RAGAS/DeepEval, leave-one-paper-out, and all robustness analyses finalized 2026-06-11)
 
 This document is the **single authoritative technical methodology reference** for
 the project as of the v3 paper-extension phase. It supersedes the methodology
@@ -763,7 +763,7 @@ objections.
 
 ## 8. Project-rule deviations (deliberate, documented)
 
-The project's `CLAUDE.md` and master plan have hard rules. Three deliberate
+The project's `CONTRIBUTING.md` and master plan have hard rules. Three deliberate
 deviations are documented:
 
 | Deviation | Where allowed | Justification |

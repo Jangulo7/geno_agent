@@ -5,7 +5,7 @@ evaluation cohort. P2 (GenoAgent) and the external P3 repo both depend on this.
 
 > The full, authoritative command sequence with exact flags lives in
 > [`reports/methodology.md`](../../reports/methodology.md) and
-> [`MASTER_PROJECT_v2.2.md`](../../MASTER_PROJECT_v2.2.md) §4 (Phase 1A) and §6/§7
+> [`reports/methodology_test_case_selection.md`](../../reports/methodology_test_case_selection.md)
 > (Phase 1B). This file is the entry-point map and the verification contract.
 
 ## 0. Environment (as actually run in the study — do not "upgrade")
@@ -29,7 +29,7 @@ source ~/pytorch-env/bin/activate
 cp .env.example .env          # edit paths/ports
 docker compose up -d          # Qdrant v1.14.1 on :6533/:6534
 
-# acquire + parse + filter + chunk  (MASTER_PROJECT §4 / §7 step 5)
+# acquire + parse + filter + chunk  (see reports/methodology.md)
 python scripts/corpus/02_extract_and_parse_ftp.py
 python scripts/corpus/03_normalize_dedupe_filter.py
 python scripts/corpus/06_parse_jats_xml.py
@@ -49,6 +49,7 @@ match the fingerprint in `data/MANIFEST.tsv`
 ## 2. Phase 1B — Phenopackets → n=1,047 cohort
 
 ```bash
+# phenopackets -> cohort (see reports/methodology_test_case_selection.md)
 python scripts/ontology/12_verify_ontologies.py   # HPO/MONDO/GO/HGNC integrity
 python scripts/cases/13_load_phenopackets.py
 python scripts/cases/14_apply_inclusion_exclusion.py

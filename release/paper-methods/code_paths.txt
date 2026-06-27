@@ -28,10 +28,13 @@ docker-compose.yml
 .env.example
 LICENSE
 CITATION.cff
+CONTRIBUTING.md
 data/MANIFEST.tsv
-# --- Authoritative spec + methods docs + reproduction guide ---
+# --- Authoritative methods docs + reproduction guide ---
+# (MASTER_PROJECT_v2.2.md is intentionally excluded: it is an internal execution
+#  plan with cost/session logs and checklists. reports/methodology.md is the
+#  published authoritative methodology.)
 README.md
-MASTER_PROJECT_v2.2.md
 reports/methodology.md
 reports/methodology_test_case_selection.md
 release/README.md

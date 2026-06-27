@@ -23,7 +23,7 @@ For Cell S (LEA — has free-text LLM response):
 Project-rule deviation
 ======================
 
-``CLAUDE.md`` mandates "No cloud LLM API in any code path." Using
+``CONTRIBUTING.md`` mandates "No cloud LLM API in any code path." Using
 GPT-4o as a RAGAS judge is a deliberate deviation **for evaluation
 only**; the production pipeline (Cells D, L, S) remains all-local.
 Documented in paper_extension_plan_v3.md §3.5.

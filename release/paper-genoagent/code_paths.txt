@@ -32,10 +32,12 @@ docker-compose.yml
 .env.example
 LICENSE
 CITATION.cff
+CONTRIBUTING.md
 data/MANIFEST.tsv
-# --- Spec + architecture/methods docs + reproduction guide ---
+# --- Architecture/methods docs + reproduction guide ---
+# (MASTER_PROJECT_v2.2.md is intentionally excluded: internal execution plan with
+#  cost/session logs. reports/methodology.md is the published authoritative methods.)
 README.md
-MASTER_PROJECT_v2.2.md
 reports/methodology.md
 reports/agent_architecture.md
 release/README.md

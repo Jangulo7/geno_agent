@@ -4,9 +4,8 @@ Reproduce the n=1,047 evaluation and the headline result. Requires the **P1 shar
 foundation** (Qdrant index + n=1,047 cohort) — see P1's `REPRODUCE.md` / DOI first.
 
 > Authoritative methodology + exact flags:
-> [`reports/methodology.md`](../../reports/methodology.md),
-> [`reports/agent_architecture.md`](../../reports/agent_architecture.md), and
-> [`MASTER_PROJECT_v2.2.md`](../../MASTER_PROJECT_v2.2.md) §11.
+> [`reports/methodology.md`](../../reports/methodology.md) and
+> [`reports/agent_architecture.md`](../../reports/agent_architecture.md).
 
 ## 0. Preconditions
 

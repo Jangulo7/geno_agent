@@ -37,7 +37,7 @@ Final selection deferred to co-author review.
 
 ## Authors (❌ pending)
 
-- Johanna Angulo (Universidad Europea, Madrid, Spain) —
+- Johanna Angulo (Universidad Europea de Madrid, Spain) —
   *first author, corresponding*
 - [PhD advisor — confirm name + affiliation]
 - [Additional co-authors — confirm]

@@ -13,7 +13,7 @@ the full chunk metadata + both embeddings::
             ``bm25_indices`` (list[int32]) and ``bm25_values``
             (list[float32]). Both lists, same length per row.
 
-CLAUDE.md hard rule: BM25 must be ``fastembed.SparseTextEmbedding("Qdrant/bm25")``
+CONTRIBUTING.md hard rule: BM25 must be ``fastembed.SparseTextEmbedding("Qdrant/bm25")``
 — no hash-based fallback. Honoured.
 
 Inputs::
@@ -69,7 +69,7 @@ DENSE_MODEL_PATH: Final[str] = os.environ.get(
     "EMBED_MODEL_NAME",
     "/home/hana77/rare-disease-rag/models/pubmedbert-base-embeddings",
 )
-SPARSE_MODEL_NAME: Final[str] = "Qdrant/bm25"  # CLAUDE.md hard rule
+SPARSE_MODEL_NAME: Final[str] = "Qdrant/bm25"  # CONTRIBUTING.md hard rule
 EXPECTED_DIM: Final[int] = 768
 SHARD_SIZE: Final[int] = 200_000
 DENSE_BATCH_SIZE: Final[int] = 128
@@ -286,7 +286,7 @@ def main() -> int:
     log.info("Output dir:  %s", args.output_dir)
     log.info("Shard size:  %d chunks", args.shard_size)
     log.info("Dense model: %s", DENSE_MODEL_PATH)
-    log.info("Sparse:      %s (CLAUDE.md hard rule — no fallback)", SPARSE_MODEL_NAME)
+    log.info("Sparse:      %s (CONTRIBUTING.md hard rule — no fallback)", SPARSE_MODEL_NAME)
     log.info(
         "Device:      %s%s", args.device, " (FP16)" if args.fp16 and args.device == "cuda" else ""
     )
