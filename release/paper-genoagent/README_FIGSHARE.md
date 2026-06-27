@@ -28,8 +28,10 @@ manuscript draft.
   `geno_agent_variant` repo; reuses P1's foundation and forks P2's agent code under
   AGPL-3.0.
 
-> **Shared-foundation DOI (from P1): <to be filled>** — the retrieval index and
-> cohort needed to run this code come from the P1 item; paste its DOI here.
+> **Shared-foundation DOI (from P1): <to be filled>** — the retrieval-index build
+> recipe needed to run this code comes from the P1 methods item; paste its DOI here.
+> **Benchmark cohort DOI: <to be filled>** — the n=1,047 cohort this system is
+> evaluated on is a separate Dataset item; paste its DOI here.
 
 ## Contents
 
