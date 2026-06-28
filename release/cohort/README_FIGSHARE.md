@@ -112,12 +112,19 @@ The cohort is fully reproducible from public inputs + the methods/foundation cod
 python scripts/cases/13_load_phenopackets.py        # Phenopacket Store v0.1.26
 python scripts/cases/14_apply_inclusion_exclusion.py
 python scripts/cases/15_categorize_by_mondo.py
-python scripts/cases/16_stratified_sample.py --per-category-target 250,300,250,247
+python scripts/cases/16_stratified_sample.py \
+  --per-category-target developmental=250,immunological=300,metabolic=250,neurological=250
 python scripts/cases/17_validate_pmc_coverage.py
 python scripts/cases/18_build_candidate_lists.py    # seed 42
 python scripts/cases/19_finalize_test_cases.py
 python scripts/cases/20_validate_test_cases.py
 ```
+
+The stratified sample draws **1,050** cases (250/300/250/**250**); the final
+cohort is **1,047** because stage 18 automatically drops three neurological
+cases whose causal gene is non-protein-coding (two `RNU4-2`, one `RNU2-2`) and
+therefore outside the HGNC protein-coding distractor pool. This is expected — do
+not pass `neurological=247` to stage 16.
 
 Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
 (`c355b800e53e5347…`). Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
