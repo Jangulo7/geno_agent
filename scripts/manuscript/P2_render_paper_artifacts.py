@@ -345,12 +345,9 @@ def render_figure5_landscape() -> None:
     ax.add_patch(plt.Rectangle((5.3, 5.2), 4.0, 4.3, fc="none", ec="#2f855a", lw=2.5))
 
     # axes
-    ax.annotate(
-        "", xy=(9.6, 1), xytext=(1, 1), arrowprops=dict(arrowstyle="-|>", color="#2d3748", lw=2)
-    )
-    ax.annotate(
-        "", xy=(1, 9.7), xytext=(1, 1), arrowprops=dict(arrowstyle="-|>", color="#2d3748", lw=2)
-    )
+    _axkw = {"arrowstyle": "-|>", "color": "#2d3748", "lw": 2}
+    ax.annotate("", xy=(9.6, 1), xytext=(1, 1), arrowprops=_axkw)
+    ax.annotate("", xy=(1, 9.7), xytext=(1, 1), arrowprops=_axkw)
     ax.text(5.3, 0.45, "Knowledge source", ha="center", fontsize=12, fontweight="bold")
     ax.text(
         0.45,
@@ -438,7 +435,10 @@ def render_figure5_landscape() -> None:
     tool(7.3, 1.9, "(BM25 / dense, same index)", "#6b46c1", w=2.1)
 
     ax.set_title(
-        "Position of geno_agent in the method landscape", fontsize=13, fontweight="bold", pad=12
+        "Figure 5 — Position of geno_agent in the method landscape",
+        fontsize=13,
+        fontweight="bold",
+        pad=12,
     )
     fig.text(
         0.5,
@@ -459,88 +459,73 @@ def render_figure5_landscape() -> None:
 # Figure 2 -- Multi-agent architecture
 # =============================================================================
 def render_figure2() -> None:
-    """Multi-agent architecture diagram (pipeline view)."""
-    fig, ax = plt.subplots(figsize=(11, 5))
-    ax.set_xlim(0, 12)
-    ax.set_ylim(0, 5)
+    """Multi-agent architecture diagram (horizontal pipeline view).
+
+    Octagonal I/O terminals with INPUT/OUTPUT labels, colour-coded agent boxes,
+    a Cell-S span bracket, and a two-row legend.
+    """
+    fig, ax = plt.subplots(figsize=(12, 6))
+    ax.set_xlim(0, 12.6)
+    ax.set_ylim(0, 6)
     ax.axis("off")
 
+    y = 3.5
+    hw, hh = 0.72, 1.0  # half-width / half-height
     stages = [
-        ("HPO\nterms\n(input)", 0.7, "#edf2f7", "#2d3748"),
-        ("Planner\n(rewrite query\n+ MONDO\ncontext)", 2.3, "#bee3f8", "#2b6cb0"),
-        ("Retriever\n(Qdrant\nhybrid:\ndense + BM25)", 4.0, "#bee3f8", "#2b6cb0"),
-        ("Critic\n(filter,\ndedup, rank\nchunks)", 5.7, "#bee3f8", "#2b6cb0"),
-        ("CE-rerank\n(MedCPT-CE,\ntop-45)", 7.4, "#fed7e2", "#b83280"),
-        ("Synthesiser\n(LEA over\nQwen3-8B,\nvLLM local)", 9.1, "#c6f6d5", "#2f855a"),
-        ("Ranked\ngenes +\nrationale +\nPMC cites", 10.85, "#edf2f7", "#2d3748"),
+        ("HPO terms\n+ 50-gene\ncandidate list", 0.95, "#e2e8f0", "#2d3748", "term"),
+        ("Planner\n(rewrite query,\nMONDO context)", 2.75, "#bee3f8", "#2b6cb0", "box"),
+        ("Retriever\n(Qdrant hybrid:\ndense + BM25)", 4.55, "#bee3f8", "#2b6cb0", "box"),
+        ("Critic\n(filter, dedup,\nrank chunks)", 6.35, "#bee3f8", "#2b6cb0", "box"),
+        ("CE-rerank\n(MedCPT-CE,\ntop-45)", 8.15, "#fed7e2", "#b83280", "box"),
+        ("Synthesiser\n(LEA, Qwen3-8B,\nvLLM local)", 9.95, "#c6f6d5", "#2f855a", "box"),
+        ("Ranked genes\n+ rationale\n+ PMC cites", 11.75, "#e2e8f0", "#2d3748", "term"),
     ]
-    y = 2.6
-    box_h = 1.4
-    for label, x, fc, ec in stages:
-        ax.add_patch(
-            mpatches.FancyBboxPatch(
-                (x - 0.65, y - box_h / 2),
-                1.3,
-                box_h,
-                boxstyle="round,pad=0.1",
-                facecolor=fc,
-                edgecolor=ec,
-                linewidth=1.5,
-            )
-        )
-        ax.text(x, y, label, ha="center", va="center", fontsize=9)
 
-    # Arrows
+    def octagon(cx, cy, w, h, c=0.28):
+        return mpatches.Polygon(
+            [(cx - w + c, cy - h), (cx + w - c, cy - h), (cx + w, cy - h + c),
+             (cx + w, cy + h - c), (cx + w - c, cy + h), (cx - w + c, cy + h),
+             (cx - w, cy + h - c), (cx - w, cy - h + c)],
+            closed=True,
+        )
+
+    for label, x, fc, ec, kind in stages:
+        if kind == "term":
+            patch = octagon(x, y, hw, hh)
+            patch.set(facecolor=fc, edgecolor=ec, linewidth=1.8)
+            ax.add_patch(patch)
+        else:
+            ax.add_patch(mpatches.FancyBboxPatch(
+                (x - hw, y - hh), 2 * hw, 2 * hh,
+                boxstyle="round,pad=0.02,rounding_size=0.12",
+                facecolor=fc, edgecolor=ec, linewidth=1.8))
+        ax.text(x, y, label, ha="center", va="center", fontsize=9.2)
+
+    # INPUT / OUTPUT labels above the terminals
+    ax.text(0.95, y + hh + 0.32, "INPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
+    ax.text(11.75, y + hh + 0.32, "OUTPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
+
     for i in range(len(stages) - 1):
-        x1 = stages[i][1] + 0.65
-        x2 = stages[i + 1][1] - 0.65
-        ax.annotate(
-            "",
-            xy=(x2, y),
-            xytext=(x1, y),
-            arrowprops={"arrowstyle": "->", "color": "#4a5568", "lw": 1.3},
-        )
+        ax.annotate("", xy=(stages[i + 1][1] - hw, y), xytext=(stages[i][1] + hw, y),
+                    arrowprops={"arrowstyle": "-|>", "color": "#4a5568", "lw": 1.6})
 
-    # Group legend at bottom
+    # Cell-S span bracket
+    ax.annotate("", xy=(stages[5][1] + hw, 1.85), xytext=(stages[1][1] - hw, 1.85),
+                arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.6})
+    ax.text(6.35, 1.35, "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
+            ha="center", va="center", fontsize=10, color="#2f855a", style="italic")
+
     legend_handles = [
-        mpatches.Patch(color="#bee3f8", label="LangGraph agents (deterministic)"),
-        mpatches.Patch(color="#fed7e2", label="Neural reranking"),
-        mpatches.Patch(color="#c6f6d5", label="LLM-as-Evidence-Aggregator (LEA)"),
-        mpatches.Patch(color="#edf2f7", label="I/O"),
+        mpatches.Patch(facecolor="#bee3f8", edgecolor="#2b6cb0", label="LangGraph agents (deterministic)"),
+        mpatches.Patch(facecolor="#fed7e2", edgecolor="#b83280", label="Neural reranking"),
+        mpatches.Patch(facecolor="#c6f6d5", edgecolor="#2f855a", label="LLM-as-Evidence-Aggregator (LEA)"),
+        mpatches.Patch(facecolor="#e2e8f0", edgecolor="#2d3748", label="Input / Output (terminals)"),
     ]
-    ax.legend(
-        handles=legend_handles,
-        loc="lower center",
-        bbox_to_anchor=(0.5, -0.06),
-        ncol=4,
-        frameon=False,
-        fontsize=9,
-    )
+    ax.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, -0.04),
+              ncol=2, frameon=False, fontsize=9.5, columnspacing=3, handlelength=1.4)
 
-    # Indicate the geno_agent (Cell S) span
-    ax.annotate(
-        "",
-        xy=(9.75, 0.6),
-        xytext=(1.65, 0.6),
-        arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.5},
-    )
-    ax.text(
-        5.7,
-        0.3,
-        "geno_agent (Cell S) — 26.1 s/case mean, 1 RTX 5090, $0 cloud",
-        ha="center",
-        va="center",
-        fontsize=9.5,
-        color="#2f855a",
-        style="italic",
-    )
-
-    ax.set_title(
-        "Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
-        pad=12,
-        fontsize=12,
-        fontweight="bold",
-    )
+    ax.set_title("Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
+                 pad=12, fontsize=13, fontweight="bold")
     fig.savefig(FIG_DIR / "fig2_architecture.png")
     plt.close(fig)
     print("  ✓ Figure 2 (architecture)")
