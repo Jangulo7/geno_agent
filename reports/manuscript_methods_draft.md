@@ -28,8 +28,8 @@ criteria — a single SOLVED causal gene; ≥ 3 HPO terms (v2026-02-16, [7]); a 
 mapping (v2026-03-03, [39]) to one of four categories (developmental, immunological,
 metabolic, neurological); and ≥ 5 PMC OA articles for the causal gene in the
 retrieval index (see *Index*) — from an eligible pool of 4,670. A disproportionate
-stratified sample (seed 42; the immunological pool oversampled for subgroup power)
-yielded a final **n = 1,047** (250 developmental, 300 immunological, 250 metabolic,
+stratified sample (seed 42; the immunological pool oversampled for subgroup power
+[40]) yielded a final **n = 1,047** (250 developmental, 300 immunological, 250 metabolic,
 247 neurological; three non-protein-coding-gene cases removed at the candidate-list
 stage). Each case pairs its HPO profile with a **50-gene candidate list** — the
 causal gene plus 49 phenotype-matched distractors sampled deterministically (per-case
