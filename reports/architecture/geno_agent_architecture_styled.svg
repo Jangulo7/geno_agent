@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1960" viewBox="0 0 2560 1960" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="arrow_2f5bd6" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#2f5bd6"/></marker>
+<marker id="arrow_2e8b57" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#2e8b57"/></marker>
+<marker id="arrow_e07a1f" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#e07a1f"/></marker>
+<marker id="arrow_6a4fb0" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#6a4fb0"/></marker>
+<marker id="arrow_c2497d" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#c2497d"/></marker>
+<marker id="arrow_1f8f8f" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#1f8f8f"/></marker>
+<marker id="arrow_516079" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#516079"/></marker>
+<marker id="arrow_d6453f" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#d6453f"/></marker>
+<marker id="arrow_6b7794" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 z" fill="#6b7794"/></marker>
+<filter id="sh" x="-6%" y="-6%" width="112%" height="118%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1f2a44" flood-opacity="0.10"/></filter>
+<filter id="shsoft" x="-6%" y="-6%" width="112%" height="118%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1f2a44" flood-opacity="0.08"/></filter>
+</defs>
+<rect x="0" y="0" width="2560" height="1960" fill="#ffffff"/>
+<text x="1280.0" y="70" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="46" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">Arquitectura del sistema multiagente geno_agent</text>
+<text x="1280.0" y="108" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="normal" fill="#6b7794" text-anchor="middle" style="">Presentation · LangGraph · pipeline de 5 agentes · RAG híbrido · evaluación factorial</text>
+<rect x="60" y="140" width="470" height="200" rx="16" ry="16" fill="#eef2fd" stroke="#9db4ee" stroke-width="2.6" filter="url(#sh)"/>
+<g transform="translate(82,160) scale(1.05)" stroke="#2f5bd6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="3" width="24" height="16" rx="2"/><path d="M10 23 h8 M14 19 v4"/>
+</g>
+<text x="124" y="182" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Presentation layer</text>
+<circle cx="90" cy="212" r="3.1" fill="#2f5bd6"/>
+<text x="102" y="218" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Frontend</text>
+<text x="182.64000000000001" y="218" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> · carga de casos clínicos</text>
+<circle cx="90" cy="245" r="3.1" fill="#2f5bd6"/>
+<text x="102" y="251" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">API</text>
+<text x="132.24" y="251" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> · submit_case → run_id</text>
+<circle cx="90" cy="278" r="3.1" fill="#2f5bd6"/>
+<text x="102" y="284" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Vista</text>
+<text x="152.4" y="284" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> · ranked list + reporte</text>
+<circle cx="90" cy="311" r="3.1" fill="#2f5bd6"/>
+<text x="102" y="317" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Streaming</text>
+<text x="192.72000000000003" y="317" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> · progreso de agentes</text>
+<rect x="620" y="140" width="560" height="200" rx="16" ry="16" fill="#eef2fd" stroke="#9db4ee" stroke-width="2.6" filter="url(#sh)"/>
+<g transform="translate(642,160) scale(1.05)" stroke="#2f5bd6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="14" cy="14" r="10"/><path d="M14 4 v20 M8 8 a4 4 0 0 0 0 6 M8 14 a4 4 0 0 0 0 6 M20 8 a4 4 0 0 1 0 6 M20 14 a4 4 0 0 1 0 6"/>
+</g>
+<text x="684" y="182" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">LangGraph orchestrator</text>
+<circle cx="650" cy="212" r="3.1" fill="#2f5bd6"/>
+<text x="662" y="218" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">StateGraph</text>
+<text x="762.8" y="218" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> · build AgentState</text>
+<circle cx="650" cy="245" r="3.1" fill="#2f5bd6"/>
+<text x="662" y="251" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Coordina</text>
+<text x="742.64" y="251" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> transiciones y estado</text>
+<circle cx="650" cy="278" r="3.1" fill="#2f5bd6"/>
+<text x="662" y="284" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Reintentos</text>
+<text x="762.8" y="284" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> y manejo de errores</text>
+<circle cx="650" cy="311" r="3.1" fill="#2f5bd6"/>
+<text x="662" y="317" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Observabilidad</text>
+<text x="803.12" y="317" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="normal" fill="#3d4a66" text-anchor="start" style=""> y trazabilidad</text>
+<rect x="1270" y="140" width="880" height="200" rx="16" ry="16" fill="#eef2fd" stroke="#9db4ee" stroke-width="2.6" filter="url(#sh)"/>
+<g transform="translate(1292,160) scale(1.05)" stroke="#2f5bd6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2f5bd6"/><circle cx="10.5" cy="15" r="1.7" fill="#2f5bd6"/><circle cx="17.5" cy="15" r="1.7" fill="#2f5bd6"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="1334" y="182" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Multi-agent pipeline</text>
+<text x="1296" y="218" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#3d4a66" text-anchor="start" style="">query_planner → retriever → critic → ⬦ router → synthesizer</text>
+<rect x="1296.0" y="238" width="153.6" height="40" rx="9" ry="9" fill="#ffffff" stroke="#9db4ee" stroke-width="2" />
+<text x="1372.8" y="263" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#2f5bd6" text-anchor="middle" style="">query_planner</text>
+<rect x="1461.6" y="238" width="153.6" height="40" rx="9" ry="9" fill="#ffffff" stroke="#9db4ee" stroke-width="2" />
+<text x="1538.3999999999999" y="263" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#2f5bd6" text-anchor="middle" style="">retriever</text>
+<rect x="1627.2" y="238" width="153.6" height="40" rx="9" ry="9" fill="#ffffff" stroke="#9db4ee" stroke-width="2" />
+<text x="1704.0" y="263" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#2f5bd6" text-anchor="middle" style="">critic</text>
+<rect x="1792.8" y="238" width="153.6" height="40" rx="9" ry="9" fill="#ffffff" stroke="#9db4ee" stroke-width="2" />
+<text x="1869.6" y="263" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#2f5bd6" text-anchor="middle" style="">router ⬦</text>
+<rect x="1958.4" y="238" width="153.6" height="40" rx="9" ry="9" fill="#ffffff" stroke="#9db4ee" stroke-width="2" />
+<text x="2035.2" y="263" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#2f5bd6" text-anchor="middle" style="">synthesizer</text>
+<text x="1296" y="310" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="normal" fill="#6b7794" text-anchor="start" style="">loop ≤3 si baja confianza · LEA / LLM synthesis · GPT-4o solo como juez</text>
+<path d="M 530 240.0 L 620 240.0" fill="none" stroke="#2f5bd6" stroke-width="3" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_2f5bd6)"/>
+<path d="M 1180 240.0 L 1270 240.0" fill="none" stroke="#2f5bd6" stroke-width="3" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_2f5bd6)"/>
+<rect x="60" y="390" width="2440" height="150" rx="16" ry="16" fill="#f6f8fd" stroke="#9db4ee" stroke-width="2.6" filter="url(#shsoft)"/>
+<g transform="translate(1080.0,408) scale(1.1)" stroke="#2f5bd6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="14" cy="6" rx="10" ry="3.4"/><path d="M4 6 v14 a10 3.4 0 0 0 20 0 v-14"/><path d="M4 13 a10 3.4 0 0 0 20 0"/>
+</g>
+<text x="1120.0" y="432" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="24" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">AgentState — estado compartido tipado</text>
+<text x="90.0" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Input</text>
+<circle cx="94.0" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="104.0" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">run_id, case</text>
+<circle cx="94.0" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="104.0" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">phenotypes (HPO)</text>
+<circle cx="94.0" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="104.0" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">candidate_genes</text>
+<text x="486.6666666666667" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Retrieval</text>
+<circle cx="490.6666666666667" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="500.6666666666667" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">dense / bm25</text>
+<circle cx="490.6666666666667" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="500.6666666666667" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">hybrid → RRF</text>
+<circle cx="490.6666666666667" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="500.6666666666667" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">reranked hits</text>
+<text x="883.3333333333334" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Critic</text>
+<circle cx="887.3333333333334" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="897.3333333333334" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">rel grades</text>
+<circle cx="887.3333333333334" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="897.3333333333334" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">low-conf count</text>
+<circle cx="887.3333333333334" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="897.3333333333334" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">iteration</text>
+<text x="1280.0" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Synthesis</text>
+<circle cx="1284.0" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="1294.0" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">LEA sidecar</text>
+<circle cx="1284.0" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="1294.0" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">ranked 50-gene</text>
+<circle cx="1284.0" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="1294.0" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">rationale</text>
+<text x="1676.6666666666667" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Eval</text>
+<circle cx="1680.6666666666667" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="1690.6666666666667" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">metrics</text>
+<circle cx="1680.6666666666667" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="1690.6666666666667" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">stratified</text>
+<circle cx="1680.6666666666667" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="1690.6666666666667" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">judge scores</text>
+<text x="2073.3333333333335" y="472" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="18" font-weight="bold" fill="#2f5bd6" text-anchor="start" style="">Control</text>
+<circle cx="2077.3333333333335" cy="491" r="2.6" fill="#2f5bd6"/>
+<text x="2087.3333333333335" y="496" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">status</text>
+<circle cx="2077.3333333333335" cy="512" r="2.6" fill="#2f5bd6"/>
+<text x="2087.3333333333335" y="517" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">errors</text>
+<circle cx="2077.3333333333335" cy="533" r="2.6" fill="#2f5bd6"/>
+<text x="2087.3333333333335" y="538" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">lea_log</text>
+<polyline points="1710.0,340 1710.0,364 1344.0,364 1344.0,390" fill="none" stroke="#2f5bd6" stroke-width="2.6" stroke-dasharray="2 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_2f5bd6)"/>
+<polyline points="900.0,340 900.0,346 947.3333333333334,346 947.3333333333334,390" fill="none" stroke="#2f5bd6" stroke-width="2.4" stroke-dasharray="2 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_2f5bd6)"/>
+<rect x="60" y="590" width="2440" height="250" rx="18" ry="18" fill="#eaf6ee" stroke="#9ad0ae" stroke-width="2.8" />
+<g transform="translate(84,610) scale(1.1)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 5 h6 v18 h-6 z M11 5 h6 v18 h-6 z"/><path d="M17 7 l5 1 l-3 17 l-5 -1 z"/>
+</g>
+<text x="126" y="634" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="24" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Ontologías + Modelos  (recursos consumidos)</text>
+<rect x="85.0" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(95.0,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 3 C20 9 8 17 19 23"/><path d="M19 3 C8 9 20 17 9 23"/><path d="M10 7 h8 M9 12 h10 M10 18 h8"/>
+</g>
+<text x="123.0" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">HPO · hp.obo</text>
+<text x="97.0" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">pronto — expand</text>
+<text x="97.0" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">+ labels</text>
+<rect x="352.33333333333337" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(362.33333333333337,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 3 C20 9 8 17 19 23"/><path d="M19 3 C8 9 20 17 9 23"/><path d="M10 7 h8 M9 12 h10 M10 18 h8"/>
+</g>
+<text x="390.33333333333337" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">HGNC complete set</text>
+<text x="364.33333333333337" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">symbols + aliases</text>
+<rect x="619.6666666666667" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(629.6666666666667,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 3 C20 9 8 17 19 23"/><path d="M19 3 C8 9 20 17 9 23"/><path d="M10 7 h8 M9 12 h10 M10 18 h8"/>
+</g>
+<text x="657.6666666666667" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">MONDO</text>
+<text x="631.6666666666667" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">disease ontology</text>
+<rect x="887.0000000000001" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(897.0000000000001,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 3 C20 9 8 17 19 23"/><path d="M19 3 C8 9 20 17 9 23"/><path d="M10 7 h8 M9 12 h10 M10 18 h8"/>
+</g>
+<text x="925.0000000000001" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Gene Ontology</text>
+<text x="899.0000000000001" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">go.obo (reference)</text>
+<rect x="1154.3333333333335" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(1164.3333333333335,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2e8b57"/><circle cx="10.5" cy="15" r="1.7" fill="#2e8b57"/><circle cx="17.5" cy="15" r="1.7" fill="#2e8b57"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="1192.3333333333335" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">PubMedBERT 768-d</text>
+<text x="1166.3333333333335" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">NeuML/pubmedbert</text>
+<text x="1166.3333333333335" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">dense embeddings</text>
+<rect x="1421.666666666667" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(1431.666666666667,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2e8b57"/><circle cx="10.5" cy="15" r="1.7" fill="#2e8b57"/><circle cx="17.5" cy="15" r="1.7" fill="#2e8b57"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="1459.666666666667" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">BM25 sparse</text>
+<text x="1433.666666666667" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">Qdrant/bm25</text>
+<text x="1433.666666666667" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">(fastembed)</text>
+<rect x="1689.0000000000002" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(1699.0000000000002,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2e8b57"/><circle cx="10.5" cy="15" r="1.7" fill="#2e8b57"/><circle cx="17.5" cy="15" r="1.7" fill="#2e8b57"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="1727.0000000000002" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">MedCPT Cross-Enc.</text>
+<text x="1701.0000000000002" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">rerank 50→10</text>
+<text x="1701.0000000000002" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">(cells L/S)</text>
+<rect x="1956.3333333333335" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(1966.3333333333335,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2e8b57"/><circle cx="10.5" cy="15" r="1.7" fill="#2e8b57"/><circle cx="17.5" cy="15" r="1.7" fill="#2e8b57"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="1994.3333333333335" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Qwen3-8B (vLLM)</text>
+<text x="1968.3333333333335" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">:8001 · Planner/</text>
+<text x="1968.3333333333335" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">Critic + LEA</text>
+<rect x="2223.666666666667" y="668" width="251.33333333333334" height="140" rx="12" ry="12" fill="#ffffff" stroke="#9ad0ae" stroke-width="2" />
+<g transform="translate(2233.666666666667,680) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#2e8b57"/><circle cx="10.5" cy="15" r="1.7" fill="#2e8b57"/><circle cx="17.5" cy="15" r="1.7" fill="#2e8b57"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="2261.666666666667" y="698" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">GPT-4o (OpenAI)</text>
+<text x="2235.666666666667" y="726" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">judges only —</text>
+<text x="2235.666666666667" y="746" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">never prioritizes</text>
+<path d="M 1875.0 540 L 1875.0 590" fill="none" stroke="#2e8b57" stroke-width="2.4" stroke-dasharray="2 8" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_2e8b57)"/>
+<text x="1889.0" y="565.0" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#2e8b57" text-anchor="start" style="font-style:italic">embeddings · rerank · LLM</text>
+<rect x="60" y="895" width="786.6666666666666" height="430" rx="18" ry="18" fill="#fdf3e6" stroke="#f0c184" stroke-width="2.8" />
+<g transform="translate(84,915) scale(1.1)" stroke="#e07a1f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 8 L3 14 L9 20 M19 8 L25 14 L19 20 M16 5 L12 23"/>
+</g>
+<text x="126" y="939" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Offline indexing  (pre-pipeline)</text>
+<text x="86" y="969" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="normal" fill="#6b7794" text-anchor="start" style="font-style:italic">scripts/corpus · embedding · indexing</text>
+<rect x="90" y="997" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#f0c184" stroke-width="2" />
+<text x="453.3333333333333" y="1019" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">PMC-OA corpus (FTP)</text>
+<text x="453.3333333333333" y="1039" font-family="'DejaVu Sans Mono', monospace" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">s5cmd bulk sync · JATS-XML</text>
+<path d="M 453.3333333333333 1047 L 453.3333333333333 1061" fill="none" stroke="#e07a1f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_e07a1f)"/>
+<rect x="90" y="1061" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#f0c184" stroke-width="2" />
+<text x="453.3333333333333" y="1083" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">parse · normalize · dedupe · filter</text>
+<text x="453.3333333333333" y="1103" font-family="'DejaVu Sans Mono', monospace" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">03/06/07_*.py</text>
+<path d="M 453.3333333333333 1111 L 453.3333333333333 1125" fill="none" stroke="#e07a1f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_e07a1f)"/>
+<rect x="90" y="1125" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#f0c184" stroke-width="2" />
+<text x="453.3333333333333" y="1147" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">section-aware chunking</text>
+<text x="453.3333333333333" y="1167" font-family="'DejaVu Sans Mono', monospace" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">04/08_*.py · UUID5 · section_type</text>
+<path d="M 453.3333333333333 1175 L 453.3333333333333 1189" fill="none" stroke="#e07a1f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_e07a1f)"/>
+<rect x="90" y="1189" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#f0c184" stroke-width="2" />
+<text x="453.3333333333333" y="1211" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">embed (PubMedBERT 768-d)</text>
+<text x="453.3333333333333" y="1231" font-family="'DejaVu Sans Mono', monospace" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">05/09_*.py · CUDA · L2-norm parquet</text>
+<rect x="886.6666666666666" y="895" width="786.6666666666666" height="430" rx="18" ry="18" fill="#e6f5f4" stroke="#9bd4d2" stroke-width="2.8" />
+<g transform="translate(910.6666666666666,915) scale(1.1)" stroke="#1f8f8f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 3 C20 9 8 17 19 23"/><path d="M19 3 C8 9 20 17 9 23"/><path d="M10 7 h8 M9 12 h10 M10 18 h8"/>
+</g>
+<text x="952.6666666666666" y="939" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Offline cohort construction</text>
+<text x="912.6666666666666" y="969" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="normal" fill="#6b7794" text-anchor="start" style="font-style:italic">scripts/cases (Phase 1B)</text>
+<rect x="916.6666666666666" y="997" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#9bd4d2" stroke-width="2" />
+<text x="1280.0" y="1019" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">GA4GH Phenopacket Store v0.1.2</text>
+<text x="1280.0" y="1039" font-family="'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">6,668 packets → HPO + disease + gene</text>
+<path d="M 1280.0 1047 L 1280.0 1061" fill="none" stroke="#1f8f8f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_1f8f8f)"/>
+<rect x="916.6666666666666" y="1061" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#9bd4d2" stroke-width="2" />
+<text x="1280.0" y="1083" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">load → inclusion/exclusion → MONDO</text>
+<text x="1280.0" y="1103" font-family="'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">13–15_*.py</text>
+<path d="M 1280.0 1111 L 1280.0 1125" fill="none" stroke="#1f8f8f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_1f8f8f)"/>
+<rect x="916.6666666666666" y="1125" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#9bd4d2" stroke-width="2" />
+<text x="1280.0" y="1147" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">stratified sample → PMC coverage</text>
+<text x="1280.0" y="1167" font-family="'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">16/17_*.py</text>
+<path d="M 1280.0 1175 L 1280.0 1189" fill="none" stroke="#1f8f8f" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_1f8f8f)"/>
+<rect x="916.6666666666666" y="1189" width="726.6666666666666" height="50" rx="10" ry="10" fill="#ffffff" stroke="#9bd4d2" stroke-width="2" />
+<text x="1280.0" y="1211" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">build 50-gene candidate lists</text>
+<text x="1280.0" y="1231" font-family="'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">per-case blake2b-seeded shuffle</text>
+<rect x="1713.3333333333333" y="895" width="786.6666666666666" height="430" rx="18" ry="18" fill="#fbecf3" stroke="#e7b0ca" stroke-width="2.8" />
+<g transform="translate(1737.3333333333333,915) scale(1.1)" stroke="#c2497d" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 4 v18 M6 22 h16"/><path d="M14 6 L5 11 M14 6 L23 11"/><path d="M2 11 a3 3 0 0 0 6 0 M20 11 a3 3 0 0 0 6 0"/>
+</g>
+<text x="1779.3333333333333" y="939" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Baselines  (HPO-only)</text>
+<text x="1739.3333333333333" y="969" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="normal" fill="#6b7794" text-anchor="start" style="font-style:italic">comparadores deterministas</text>
+<rect x="1743.3333333333333" y="1003" width="726.6666666666666" height="74" rx="12" ry="12" fill="#ffffff" stroke="#e7b0ca" stroke-width="2" />
+<text x="2106.6666666666665" y="1033" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">Exomiser v14.0.2  (Cell K)</text>
+<text x="2106.6666666666665" y="1055" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">hiPhive · phenopacket→YAML→CLI</text>
+<rect x="1743.3333333333333" y="1095" width="726.6666666666666" height="74" rx="12" ry="12" fill="#ffffff" stroke="#e7b0ca" stroke-width="2" />
+<text x="2106.6666666666665" y="1125" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">LIRICAL v2.4.0  (Cell M)</text>
+<text x="2106.6666666666665" y="1147" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">disease LR → gene (OMIM/Orphanet)</text>
+<rect x="1743.3333333333333" y="1187" width="726.6666666666666" height="74" rx="12" ry="12" fill="#ffffff" stroke="#e7b0ca" stroke-width="2" />
+<text x="2106.6666666666665" y="1217" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="16" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">RRF ensemble  (Cell N/P)</text>
+<text x="2106.6666666666665" y="1239" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">fuse M+S or D+K · k=60</text>
+<polyline points="453.3333333333333,895 453.3333333333333,860 453.3333333333333,840" fill="none" stroke="#e07a1f" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_e07a1f)"/>
+<text x="465.3333333333333" y="867.5" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#e07a1f" text-anchor="start" style="font-style:italic">index corpus</text>
+<rect x="60" y="1380" width="1512.8" height="360" rx="18" ry="18" fill="#f0ecfa" stroke="#c3b3e6" stroke-width="2.8" />
+<g transform="translate(84,1400) scale(1.1)" stroke="#6a4fb0" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M11 3 h6 M12 3 v7 l-6 11 a2 2 0 0 0 2 3 h12 a2 2 0 0 0 2 -3 l-6 -11 v-7"/><path d="M8.5 17 h11"/>
+</g>
+<text x="126" y="1424" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Evaluation harness  —  scripts/eval</text>
+<rect x="400" y="1458" width="1132.8" height="66" rx="12" ry="12" fill="#ffffff" stroke="#c3b3e6" stroke-width="2" />
+<text x="966.4" y="1484" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="17" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">Factorial cells A–J, Q, R</text>
+<text x="966.4" y="1506" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">single/multi × dense/hybrid × det/LLM-planner/LLM-critic × LEA</text>
+<rect x="260" y="1548" width="1152.8" height="56" rx="12" ry="12" fill="#ffffff" stroke="#c3b3e6" stroke-width="2" />
+<text x="836.4" y="1572" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#6a4fb0" text-anchor="middle" style="">Headline:  D (multi·hybrid)  ·  L (+CE-rerank)  ·  S = geno_agent (rerank+LEA)</text>
+<rect x="100" y="1628" width="676.4" height="86" rx="12" ry="12" fill="#ffffff" stroke="#c3b3e6" stroke-width="2" />
+<text x="438.2" y="1658" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">aggregate_metrics · stratified</text>
+<text x="438.2" y="1680" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">(full vs FAIR = overlap-absent)</text>
+<text x="438.2" y="1700" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">paired_diff (McNemar) · Holm/BH</text>
+<rect x="816.4" y="1628" width="676.4" height="86" rx="12" ry="12" fill="#ffffff" stroke="#c3b3e6" stroke-width="2" />
+<text x="1154.6" y="1658" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="middle" style="">LLM judges</text>
+<text x="1154.6" y="1680" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">RAGAS (faithfulness) + DeepEval</text>
+<text x="1154.6" y="1700" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="middle" style="">n=100 stratified · seed 42</text>
+<path d="M 966.4 1524 L 966.4 1548" fill="none" stroke="#6a4fb0" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_6a4fb0)"/>
+<path d="M 836.4 1604 L 438.2 1628" fill="none" stroke="#6a4fb0" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_6a4fb0)"/>
+<path d="M 836.4 1604 L 1154.6 1628" fill="none" stroke="#6a4fb0" stroke-width="2.4" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_6a4fb0)"/>
+<polyline points="1280.0,1325 1280.0,1350 513.8399999999999,1350 513.8399999999999,1380" fill="none" stroke="#1f8f8f" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_1f8f8f)"/>
+<text x="1268.0" y="1340" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#1f8f8f" text-anchor="end" style="font-style:italic">test_cases {1050, hard}</text>
+<polyline points="2106.6666666666665,1325 2106.6666666666665,1314 1118.9599999999998,1314 1118.9599999999998,1380" fill="none" stroke="#c2497d" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_c2497d)"/>
+<text x="2094.6666666666665" y="1304" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#c2497d" text-anchor="end" style="font-style:italic">baseline cells</text>
+<rect x="1612.8" y="1380" width="887.2" height="360" rx="16" ry="16" fill="#eef1f6" stroke="#b9c3d4" stroke-width="2.6" filter="url(#sh)"/>
+<g transform="translate(1634.8,1400) scale(1.05)" stroke="#516079" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="14" cy="6" rx="10" ry="3.4"/><path d="M4 6 v14 a10 3.4 0 0 0 20 0 v-14"/><path d="M4 13 a10 3.4 0 0 0 20 0"/>
+</g>
+<text x="1676.8" y="1422" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="23" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Persistence + outputs</text>
+<g transform="translate(1634.8,1466) scale(0.95)" stroke="#516079" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M3 7 a1 1 0 0 1 1 -1 h6 l2 3 h12 a1 1 0 0 1 1 1 v12 a1 1 0 0 1 -1 1 h-20 a1 1 0 0 1 -1 -1 z"/>
+</g>
+<text x="1670.8" y="1488" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">data/eval_{1050,hard}/cell_*/&lt;case&gt;.json</text>
+<text x="1670.8" y="1510" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">ranked 50-gene lists (shared schema)</text>
+<g transform="translate(1634.8,1538) scale(0.95)" stroke="#516079" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M7 3 h10 l5 5 v17 a1 1 0 0 1 -1 1 h-14 a1 1 0 0 1 -1 -1 v-23 z"/><path d="M17 3 v5 h5 M9 14 h10 M9 18 h10 M9 22 h7"/>
+</g>
+<text x="1670.8" y="1560" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">cell_S_responses/ — LEA sidecars</text>
+<text x="1670.8" y="1582" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">prompt + raw + parsed → judges</text>
+<g transform="translate(1634.8,1610) scale(0.95)" stroke="#516079" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 4 v20 h20"/><path d="M8 20 v-6 M13 20 v-11 M18 20 v-8 M23 20 v-13"/>
+</g>
+<text x="1670.8" y="1632" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">_results_summary · _stratified</text>
+<text x="1670.8" y="1654" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">_paired_diffs · multiplicity</text>
+<g transform="translate(1634.8,1680) scale(0.95)" stroke="#516079" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M7 3 h10 l5 5 v17 a1 1 0 0 1 -1 1 h-14 a1 1 0 0 1 -1 -1 v-23 z"/><path d="M17 3 v5 h5 M9 14 h10 M9 18 h10 M9 22 h7"/>
+</g>
+<text x="1670.8" y="1702" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15.5" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">figures / reports</text>
+<text x="1670.8" y="1724" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">supp_table_multiplicity</text>
+<path d="M 1572.8 1560.0 L 1612.8 1560.0" fill="none" stroke="#516079" stroke-width="2.8" stroke-dasharray="3 9" stroke-linecap="round" opacity="1.0" marker-end="url(#arrow_516079)"/>
+<text x="1592.8" y="1544.0" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#516079" text-anchor="middle" style="font-style:italic">results</text>
+<text x="1592.8" y="1590.0" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#516079" text-anchor="middle" style="font-style:italic">+ report</text>
+<polyline points="1330,340 1330,1286 211.28,1286 211.28,1380" fill="none" stroke="#2f5bd6" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round" stroke-linejoin="round" opacity="1.0" marker-end="url(#arrow_2f5bd6)"/>
+<text x="225.28" y="1276" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="normal" fill="#2f5bd6" text-anchor="start" style="font-style:italic">ranked list → eval</text>
+<rect x="60" y="1795" width="2440" height="160" rx="18" ry="18" fill="#f7f8fb" stroke="#b9c3d4" stroke-width="2.6" filter="url(#shsoft)"/>
+<g transform="translate(84,1815) scale(1.0)" stroke="#d6453f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 3 L25 14 L14 25 L3 14 Z"/>
+</g>
+<text x="126" y="1839" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="24" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">Puntos de decisión y controles</text>
+<rect x="80.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#2f5bd6" stroke-width="2.2" />
+<g transform="translate(90.0,1875) scale(0.8)" stroke="#2f5bd6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="7" cy="7" r="3"/><circle cx="21" cy="21" r="3"/><path d="M7 10 v6 a4 4 0 0 0 4 4 h7"/>
+</g>
+<text x="120.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">1 · retrieval mode</text>
+<text x="92.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">dense | bm25 | hybrid</text>
+<rect x="480.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#6a4fb0" stroke-width="2.2" />
+<g transform="translate(490.0,1875) scale(0.8)" stroke="#6a4fb0" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="9" width="18" height="13" rx="3"/><path d="M14 3 v4"/><circle cx="14" cy="5" r="1.6" fill="#6a4fb0"/><circle cx="10.5" cy="15" r="1.7" fill="#6a4fb0"/><circle cx="17.5" cy="15" r="1.7" fill="#6a4fb0"/><path d="M2 13 v5 M26 13 v5"/>
+</g>
+<text x="520.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">2 · agent variant</text>
+<text x="492.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">det | LLM (planner/critic)</text>
+<rect x="880.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#1f8f8f" stroke-width="2.2" />
+<g transform="translate(890.0,1875) scale(0.8)" stroke="#1f8f8f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M11 3 h6 M12 3 v7 l-6 11 a2 2 0 0 0 2 3 h12 a2 2 0 0 0 2 -3 l-6 -11 v-7"/><path d="M8.5 17 h11"/>
+</g>
+<text x="920.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">3 · synthesizer</text>
+<text x="892.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">det | LEA</text>
+<rect x="1280.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#d6453f" stroke-width="2.2" />
+<g transform="translate(1290.0,1875) scale(0.8)" stroke="#d6453f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 3 L25 14 L14 25 L3 14 Z"/>
+</g>
+<text x="1320.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">4 · self-correction</text>
+<text x="1292.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">rel≤2 grades &gt;5 &amp; iter&lt;3</text>
+<rect x="1680.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#e07a1f" stroke-width="2.2" />
+<g transform="translate(1690.0,1875) scale(0.8)" stroke="#e07a1f" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="14" cy="14" r="5"/><path d="M14 2 v4 M14 22 v4 M2 14 h4 M22 14 h4 M5.5 5.5 l2.8 2.8 M19.7 19.7 l2.8 2.8 M22.5 5.5 l-2.8 2.8 M8.3 19.7 l-2.8 2.8"/>
+</g>
+<text x="1720.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">5 · CE-rerank inside</text>
+<text x="1692.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">MedCPT 50→10 (L/S)</text>
+<rect x="2080.0" y="1865" width="382.0" height="64" rx="12" ry="12" fill="#ffffff" stroke="#2e8b57" stroke-width="2.2" />
+<g transform="translate(2090.0,1875) scale(0.8)" stroke="#2e8b57" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 3 L25 9 L14 15 L3 9 Z"/><path d="M3 14 L14 20 L25 14"/><path d="M3 19 L14 25 L25 19"/>
+</g>
+<text x="2120.0" y="1891" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#1f2a44" text-anchor="start" style="">6 · ensemble fusion</text>
+<text x="2092.0" y="1915" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#3d4a66" text-anchor="start" style="">RRF k=60</text>
+</svg>
