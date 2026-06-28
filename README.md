@@ -191,11 +191,11 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 | **Robustness** | **Leave-one-paper-out + Holm/BH multiplicity correction + stratum-weighted sensitivity** | ✅ Complete (2026-06-11) |
 | **Manuscript** | **Q1 draft (*Genome Medicine*): Methods + Results + Discussion + 50 refs + TRIPOD-LLM** | 🟢 Prose complete; pending UE ethics letter + co-author list |
 
-Key reports:
-- [`reports/methodology.md`](reports/methodology.md) — **consolidated authoritative methodology**
-- [`reports/paper_extension_plan_v3.md`](reports/paper_extension_plan_v3.md) — current execution plan (LIRICAL + RAGAS + DeepEval + Threads D-G)
-- [`reports/paper_extension_results.md`](reports/paper_extension_results.md) + [`.html`](reports/paper_extension_results.html) — v2 final results
-- [`reports/_archive_n75/thesis_final_report.md`](reports/_archive_n75/thesis_final_report.md) + [`.html`](reports/_archive_n75/thesis_final_report.html) — earlier n=75 baseline (archived)
+Reports: the consolidated methodology, execution plans, result write-ups, and
+manuscript drafts are maintained as **local working documents and kept private until
+publication**. The published methodology, results, and benchmark are available
+through the Figshare deposits (see [Data and software availability](#data-and-software-availability));
+`reports/` retains the rendered **figures, tables, and pipeline logs**.
 
 ### Phase 2 UI — CopilotKit
 
@@ -237,8 +237,8 @@ In addition:
 - vLLM at `temperature=0.0` is mostly deterministic (~98 % per-case rank stability between runs; **top-1 metric is bit-identical** across two independent v2 and v3 runs)
 
 The full reproducibility specification is documented in
-[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md) §4.1.3 and consolidated in
-[`reports/methodology.md`](reports/methodology.md).
+[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md) §4.1.3 and consolidated in the
+project's methodology document (kept local until publication).
 
 ## Data and software availability
 
@@ -313,7 +313,7 @@ Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) li
 
 ## Quick start
 
-> The Phase 1A/1B pipeline and the full n=1,047 evaluation are complete and reproducible. The steps below set up the infrastructure; per-cell evaluation drivers live in `scripts/eval/`, and the consolidated methodology is in [`reports/methodology.md`](reports/methodology.md).
+> The Phase 1A/1B pipeline and the full n=1,047 evaluation are complete and reproducible. The steps below set up the infrastructure; per-cell evaluation drivers live in `scripts/eval/`, and the consolidated methodology is kept as a local document (private until publication).
 
 ```bash
 # 1. Clone and enter
@@ -337,9 +337,8 @@ uv pip install -e .
 
 Detailed Phase 1A and 1B execution instructions are in
 [`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md). The full paper-extension
-methodology is consolidated in
-[`reports/methodology.md`](reports/methodology.md); per-version plans live in
-[`reports/paper_extension_plan{,_v2,_v3}.md`](reports/).
+methodology and per-version execution plans are kept as local working documents
+(private until publication).
 
 ## Hardware
 
