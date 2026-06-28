@@ -237,16 +237,18 @@ support independent replication and method extension.
 
 ## Methods (✅ separate file)
 
-See `reports/manuscript_methods_draft.md` (3,268 words, locked). To be
-inlined at submission time. Covers: cohort construction (Phenopacket
-Store v0.1.26, stratified n=1,047), 5-cell architecture (K Exomiser, M
-LIRICAL, D multi-agent hybrid, L + CE-rerank, S + LEA = geno_agent),
-PMC OA index construction, evaluation metrics with paired-bootstrap CIs
-+ McNemar, annotation-overlap deconfounding (Thread D), publication-
-recency stratification (Thread E), ensemble evaluation (Thread F), RAG-
-quality evaluation (RAGAS + DeepEval), local explainability analysis
-(Thread G), reproducibility infrastructure, computational resources.
-Excludes DeepRare from head-to-head with explicit rationale.
+See `reports/manuscript_methods_draft.md`, to be inlined at submission time. The
+**benchmark cohort, the PMC OA retrieval index, and the deconfounding metadata
+(annotation-overlap flag, recency strata) are described in the companion resource
+paper P1** (`reports/manuscript_p1_resource_draft.md`; cohort DOI
+10.6084/m9.figshare.32814449, methods/index DOI 10.6084/m9.figshare.32814491) and are
+cited by DOI here, not re-derived. The P2 Methods section covers what is specific to
+evaluating geno_agent: the 5-cell architecture (K Exomiser, M LIRICAL, D multi-agent
+hybrid, L + CE-rerank, S + LEA = geno_agent), evaluation metrics with paired-bootstrap
+CIs + McNemar and multiplicity correction, the application of the annotation-overlap
+fair-comparison cohort and recency strata, ensemble evaluation, RAG-quality
+evaluation (RAGAS + DeepEval), local explainability analysis, and computational
+resources. Excludes DeepRare from head-to-head with explicit rationale.
 
 ---
 
