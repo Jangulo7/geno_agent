@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Download GA4GH Phenopacket-Store v0.1.19 release tarball
+# Download GA4GH Phenopacket-Store v0.1.26 release tarball
 # (master plan §3.4 / §7 step [8]).
 #
 # The release ships a single zip of all phenopackets organized by cohort.
@@ -24,7 +24,7 @@ if [[ -f .env ]]; then
     set +a
 fi
 
-VER="${PHENOPACKET_STORE_VERSION:-0.1.19}"
+VER="${PHENOPACKET_STORE_VERSION:-0.1.26}"
 DEST="${PHENOPACKET_DIR:-$PROJECT_ROOT/data/phenopackets}"
 LOG_DIR="${LOG_DIR:-$PROJECT_ROOT/logs}"
 LOG="$LOG_DIR/download_phenopackets.log"
