@@ -112,5 +112,32 @@ data/test_cases/
 # (contain personal contact details: address, phone, email).
 reports/cover_letter_genome_medicine.md
 
+# Manuscripts and intermediate research reports — kept LOCAL until publication so
+# a journal reviewer browsing the repo does not see unpublished drafts or internal
+# write-ups. Figures, tables, images, and pipeline logs under reports/ stay tracked
+# (thesis directors review them). Files remain on disk for the author's records.
+reports/manuscript_methods_draft.md
+reports/manuscript_p1_resource_draft.md
+reports/manuscript_q1_draft.md
+reports/agent_architecture.md
+reports/deeprare_comparability_analysis.md
+reports/expert_review_2026-06-10.md
+reports/explainability_report.md
+reports/methodology.md
+reports/methodology_test_case_selection.md
+reports/methodology_test_case_selection.html
+reports/paper_extension_plan_v2.md
+reports/paper_extension_plan_v3.md
+reports/paper_extension_results.md
+reports/paper_extension_results.html
+reports/research_status_2026-06-22_n1047.md
+reports/tripod_llm_compliance.md
+reports/ue_irb_exemption_request_template.md
+reports/wallclock_cost_table.md
+reports/_archive_n75/
+reports/_archive_apa/
+# Local-only deliverables: LaTeX manuscript builds + journal/venue analysis.
+reports/_local/
+
 # Development-only project instructions — kept local, not published.
 CLAUDE.md
