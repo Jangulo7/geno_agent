@@ -317,29 +317,52 @@ v2026-02-16, MONDO v2026-03-03, GO 2026-03-25, HGNC 2026-04-07, and PMC OA (retr
 
 ---
 
-## References (⚠️ DRAFT — to be finalised against journal style)
+## References (Vancouver; full entries verified against the P2 reference list)
 
-1. Nguengang Wakap S, et al. Estimating cumulative point prevalence of rare diseases.
-   *Eur J Hum Genet.* 2020. doi:10.1038/s41431-019-0508-0
-2. Clark MM, et al. Meta-analysis of the diagnostic and clinical utility of genome
-   and exome sequencing. *NPJ Genom Med.* 2018. doi:10.1038/s41525-018-0053-8
-3. Smedley D, et al. Next-generation diagnostics and disease-gene discovery with the
-   Exomiser. *Nat Protoc.* 2015.
-4. Robinson PN, et al. Interpretable clinical genomics with a likelihood ratio
-   paradigm (LIRICAL). *Am J Hum Genet.* 2020.
-5. Danis D, et al. The GA4GH Phenopacket Store. 2025.
-6. National Library of Medicine. PMC Open Access Subset. 2024.
-7. Gu Y, et al. Domain-specific language model pretraining for biomedical NLP
-   (PubMedBERT). *ACM Trans Comput Healthc.* 2021.
-8. Qdrant vector database. v1.14.1.
-9. Cormack GV, Clarke CLA, Buettcher S. Reciprocal rank fusion. *SIGIR* 2009.
-10. Jin Q, et al. MedCPT: contrastive pre-trained transformers for biomedical
-    retrieval. *Bioinformatics* 2023.
-11. Köhler S, et al. The Human Phenotype Ontology. 2021. (v2026-02-16 release)
-12. Vasilevsky NA, et al. Mondo: unifying diseases for the world. 2022.
-13. Lohr SL. *Sampling: Design and Analysis.* 2022. (disproportionate stratified
-    sampling)
-14. Seal RL, et al. Genenames.org: the HGNC resources. 2023. (2026-04-07 snapshot)
+1. Nguengang Wakap S, Lambert DM, Olry A, Rodwell C, Gueydan C, Lanneau V, et al.
+   Estimating cumulative point prevalence of rare diseases: Analysis of the Orphanet
+   database. European Journal of Human Genetics. 2020;28(2):165-173.
+   doi:10.1038/s41431-019-0508-0.
+2. Clark MM, Stark Z, Farnaes L, Tan TY, White SM, Dimmock D, et al. Meta-analysis of
+   the diagnostic and clinical utility of genome and exome sequencing and chromosomal
+   microarray in children with suspected genetic diseases. npj Genomic Medicine.
+   2018;3(1):16. doi:10.1038/s41525-018-0053-8.
+3. Smedley D, Jacobsen JOB, Jäger M, Köhler S, Holtgrewe M, Schubach M, et al.
+   Next-generation diagnostics and disease-gene discovery with the Exomiser. Nature
+   Protocols. 2015;10(12):2004-2015. doi:10.1038/nprot.2015.124.
+4. Robinson PN, Ravanmehr V, Jacobsen JOB, Danis D, Zhang XA, Carmody LC, et al.
+   Interpretable clinical genomics with a likelihood ratio paradigm. American Journal
+   of Human Genetics. 2020;107(3):403-417. doi:10.1016/j.ajhg.2020.06.021.
+5. Danis D, Bamshad MJ, Bridges Y, Caballero-Oteyza A, Cacheiro P, Carmody LC, et al.
+   A corpus of GA4GH Phenopackets: Case-level phenotyping for genomic diagnostics and
+   discovery. Human Genetics and Genomics Advances. 2025;6(1):100371.
+   doi:10.1016/j.xhgg.2024.100371.
+6. National Library of Medicine. PubMed Central Open Access subset. [Data resource].
+   2024. https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/.
+7. Gu Y, Tinn R, Cheng H, Lucas M, Usuyama N, Liu X, et al. Domain-specific language
+   model pretraining for biomedical natural language processing. ACM Transactions on
+   Computing for Healthcare. 2021;3(1):1-23. doi:10.1145/3458754.
+8. Qdrant. Qdrant vector search engine. [Computer software]. Version 1.14.1.
+   https://github.com/qdrant/qdrant.
+9. Cormack GV, Clarke CLA, Büttcher S. Reciprocal Rank Fusion outperforms Condorcet
+   and individual rank learning methods. In: Proceedings of the 32nd International
+   ACM SIGIR Conference on Research and Development in Information Retrieval
+   (SIGIR '09). 2009. doi:10.1145/1571941.1572114.
+10. Jin Q, Kim W, Chen Q, Comeau DC, Yeganova L, Wilbur WJ, et al. MedCPT: Contrastive
+    pre-trained transformers with large-scale PubMed search logs for zero-shot
+    biomedical information retrieval. Bioinformatics. 2023;39(11):btad651.
+    doi:10.1093/bioinformatics/btad651.
+11. Köhler S, Gargano M, Matentzoglu N, Carmody LC, Lewis-Smith D, Vasilevsky NA,
+    et al. The Human Phenotype Ontology in 2021. Nucleic Acids Research.
+    2021;49(D1):D1207-D1217. doi:10.1093/nar/gkaa1043.
+12. Vasilevsky NA, Matentzoglu NA, Toro S, Flack JE, Hegde H, Unni DR, et al. Mondo:
+    Unifying diseases for the world, by the world. medRxiv preprint. 2022.
+    doi:10.1101/2022.04.13.22273750.
+13. Lohr SL. Sampling: Design and analysis. 3rd ed. Boca Raton: Chapman and Hall/CRC;
+    2022. doi:10.1201/9780429298899.
+14. Seal RL, Braschi B, Gray KA, Jones TEM, Tweedie S, Haim-Vilmovsky L, et al.
+    Genenames.org: the HGNC resources in 2023. Nucleic Acids Research.
+    2023;51(D1):D1003-D1009. doi:10.1093/nar/gkac888.
 
 ---
 
