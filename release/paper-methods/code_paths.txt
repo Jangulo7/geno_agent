@@ -31,12 +31,10 @@ CITATION.cff
 CONTRIBUTING.md
 data/MANIFEST.tsv
 # --- Authoritative methods docs + reproduction guide ---
-# (MASTER_PROJECT_v2.2.md is intentionally excluded: it is an internal execution
-#  plan with cost/session logs and checklists. reports/methodology.md is the
-#  published authoritative methodology.)
+# (reports/methodology*.md are intentionally NOT bundled: the manuscript/methods
+#  reports were made local-only in the repo; REPRODUCE.md below is the tracked,
+#  published reproduction guide. MASTER_PROJECT_v2.2.md is also excluded.)
 README.md
-reports/methodology.md
-reports/methodology_test_case_selection.md
 release/README.md
 release/build_figshare_bundles.sh
 release/assemble_data_bundles.sh

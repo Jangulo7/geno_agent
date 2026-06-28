@@ -8,16 +8,25 @@ Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort
 **License.** Code: AGPL-3.0-or-later. Data artifacts retain upstream licenses
 (cohort: CC BY 4.0, derived from the GA4GH Phenopacket Store).
 
-**Git tag.** `paper-methods-v1.0`  ·  **Commit.** `c2a2059`
-**Repository.** https://github.com/Jangulo7/geno_agent
+**Git tag.** `paper-methods-v1.1`  ·  **Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
 
 The reproducible foundation shared by the geno_agent paper programme: the build
 recipe for the PMC-OA Qdrant retrieval index (52,777,395 chunks), the pinned
 ontology set (HPO/MONDO/GO/HGNC), and the construction of the n=1,047 stratified
-evaluation cohort from Phenopacket Store v0.1.26. It is designed to be **cited by
-reference**, not duplicated, by the downstream papers.
+evaluation cohort from Phenopacket Store v0.1.26. The cohort is released in **two
+case-paired difficulty variants** — a *standard* variant (49 uniformly-random
+HGNC protein-coding distractors per case) and a *hard* variant (49
+phenotype-similar distractors selected by HPO Resnik best-match-average
+similarity) — each as its own Figshare Dataset (DOIs below). This item is the
+shared **build recipe/code** for both cohort variants and the index; it is
+designed to be **cited by reference**, not duplicated, by the downstream papers.
+
+The two distractor variants are produced by
+`scripts/cases/18_build_candidate_lists.py` (standard) and
+`scripts/cases/18b_build_hard_candidates.py` (hard); both share the same cases and
+per-case BLAKE2b seed, so they are deterministic and case-paired.
 
 ## The three-paper relationship
 
@@ -41,14 +50,17 @@ reference**, not duplicated, by the downstream papers.
   recipe-only) and license.
 - `*.sha256` — checksums for every uploaded file.
 
-> **The n=1,047 benchmark cohort is a *separate* Figshare item** (type: Dataset,
-> CC BY 4.0) so it has its own citable DOI — it is **not** duplicated here. This
-> methods item is the build recipe/code; it references the cohort by DOI.
-> **Benchmark cohort DOI: `10.6084/m9.figshare.32814449`**
+> **The n=1,047 benchmark cohort is shipped as *separate* Figshare Dataset items**
+> (type: Dataset, CC BY 4.0) so each has its own citable DOI — they are **not**
+> duplicated here. This methods item is the shared build recipe/code; it references
+> the cohorts by DOI:
+> - **Standard cohort (random distractors): `10.6084/m9.figshare.32814449`**
+> - **Hard cohort (phenotype-similar distractors): `10.6084/m9.figshare.32816468`**
 
 **Not included (by design):** the 323 GB Qdrant index and PMC chunk text
-(recipe-only, mixed CC); ontologies / phenopackets / models (reference upstream by
-pinned version); any personal correspondence.
+(recipe-only, mixed CC; rebuild from the recipe and verify against the
+fingerprint `c6e53665…07f3d6e`); ontologies / phenopackets / models (reference
+upstream by pinned version); any personal correspondence.
 
 ## How to cite
 
