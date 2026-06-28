@@ -2,66 +2,42 @@
 
 Target venue: **Genome Medicine** (~12-15 IF). Submission window: Q3 2026.
 
-This is a Methods-section draft, written in paper voice (passive,
-methods-not-decisions, third-person). All numerical values reference the
-locked v3 results in `paper_extension_results.md` §§12-16 and the
-authoritative methodology in `methodology.md` v3.1. Word target for the
-Genome Medicine Methods section is ~2,500-3,500 words; this draft is
-~3,260 words and sits right at the upper bound of the Genome Medicine
-Methods target — further additions will require trimming elsewhere.
+This is the **P2 (GenoAgent system) Methods-section draft**, written in paper voice
+(passive, methods-not-decisions, third-person). The **benchmark cohort, the PMC OA
+retrieval index, and the deconfounding metadata (annotation-overlap flag, recency
+strata) are described in full in the companion resource paper P1**
+(`reports/manuscript_p1_resource_draft.md`; cohort DOI
+10.6084/m9.figshare.32814449, methods/index DOI 10.6084/m9.figshare.32814491) and
+are **summarised here only briefly and cited by DOI**, not re-derived. This Methods
+section focuses on what is specific to evaluating geno_agent: the comparator systems,
+prompt design, evaluation metrics and statistics, ensemble and RAG-quality
+evaluation, and the local explainability analysis. All numerical values reference the
+locked v3 results in `paper_extension_results.md` §§12-16 and the authoritative
+methodology in `methodology.md` v3.1.
 
 ---
 
 ## Methods
 
-### Cohort construction
+### Cohort
 
-Clinical cases were drawn from the Global Alliance for Genomics and
-Health (GA4GH) Phenopacket Store v0.1.26 (released 13 January 2026)
-[9], which aggregates published rare-disease
-patient phenopackets curated from primary literature with solved
-(gene-level) diagnoses. Cases were retained if they met four
-criteria: (i) a single causal gene supported by a SOLVED interpretation
-status, (ii) at least three Human Phenotype Ontology terms (HPO; v2026-02-16,
-[7]), (iii) a Mondo Disease Ontology mapping to one
-of four broad categories — developmental, immunological, metabolic, or
-neurological (MONDO v2026-03-03, [39]) — and
-(iv) at least five PubMed Central Open Access (PMC OA) full-text
-articles indexed for the causal gene in our local Qdrant corpus (see
-*Index construction*), ensuring downstream literature retrieval is
-non-trivial. Criteria (i)–(iii) yielded an eligible pool of 4,670 cases
-(464 developmental, 390 immunological, 672 metabolic, 3,144
-neurological); criterion (iv) was subsequently verified on the drawn
-sample, which it did not reduce.
-
-To support an adequately-powered analysis on the smallest categorical
-subgroup (immunological diseases), a disproportionate stratified sample
-of 1,050 was drawn from this pool with seed 42: 250 cases each from
-developmental, metabolic, and neurological categories, and 300 from the
-immunological pool (390 eligible). Three neurological cases — two RNU4-2
-and one RNU2-2, all small nuclear RNA genes — were then removed at the
-candidate-list stage because their causal gene is not protein-coding,
-yielding a final n = 1,047 cohort (250 + 300 + 250 + 247). Disproportionate
-sampling is standard practice in epidemiological and clinical-genomics
-benchmarking when one subgroup is rate-limiting for statistical power
-and the overall cohort is large enough that overall-cohort estimates
-remain unbiased after stratum-weight correction [40].
-
-For each case, the canonical 50-gene candidate list comprised the
-single causal gene plus 49 distractor genes sampled deterministically
-(per-case derived seed: SHA-256 hash of case_id) from the
-phenotype-matched HGNC quarterly snapshot (2026-04-07). Phenotype
-matching used the Jaccard similarity between the case's HPO term set
-and each candidate gene's HPO annotations in `phenotype.hpoa`
-v2026-02-16, taking the top-49 distractors by similarity. This
-construction ensures distractors are clinically plausible alternatives,
-not random genes — a more conservative evaluation setting than uniform
-sampling.
-
-Per-case publication-date metadata was retrieved from NCBI E-utils
-(efetch `PubMedPubDate PubStatus="pubmed"` field) for the 415 unique
-source PMIDs in the cohort. 100 % of cases resolved to a PMID and a
-date (most recent: 2024; oldest: 1988; median: 2018).
+The benchmark cohort and its construction are described in full in the companion
+resource paper (P1; cohort DOI 10.6084/m9.figshare.32814449) and are summarised here.
+Cases were drawn from GA4GH Phenopacket Store v0.1.26 [9] under four inclusion
+criteria — a single SOLVED causal gene; ≥ 3 HPO terms (v2026-02-16, [7]); a MONDO
+mapping (v2026-03-03, [39]) to one of four categories (developmental, immunological,
+metabolic, neurological); and ≥ 5 PMC OA articles for the causal gene in the
+retrieval index (see *Index*) — from an eligible pool of 4,670. A disproportionate
+stratified sample (seed 42; the immunological pool oversampled for subgroup power)
+yielded a final **n = 1,047** (250 developmental, 300 immunological, 250 metabolic,
+247 neurological; three non-protein-coding-gene cases removed at the candidate-list
+stage). Each case pairs its HPO profile with a **50-gene candidate list** — the
+causal gene plus 49 phenotype-matched distractors sampled deterministically (per-case
+SHA-256-derived seed; top-49 by HPO Jaccard similarity in `phenotype.hpoa`
+v2026-02-16) — and the known causal gene as the prediction target. Per-case source
+publication dates (415 unique PMIDs; median 2018, range 1988–2024) were resolved from
+NCBI E-utilities. Full provenance, the candidate-list schema, and pinned ontology
+versions are given in P1.
 
 ### Comparator systems
 
@@ -153,23 +129,16 @@ are captured deterministically in
 `data/eval_1050/cell_S_responses/<case>.json:lea_log.*` for replay,
 audit, and adversarial prompt-rewriting experiments.
 
-### Index construction
+### Index
 
-A 3.4 million-article subset of the PubMed Central Open Access XML
-corpus (downloaded 2026-05; [45]) was parsed and
-filtered for genetics / genomics / rare-disease relevance via MeSH
-descriptor matching (terms: Genetic Diseases, Rare Diseases, Mutation,
-Pathogenicity, Inheritance Patterns) and full-text inclusion criteria.
-The resulting genetics-relevant full-text corpus (~3.4 million articles)
-was chunked at 512 tokens with
-50-token overlap using a PubMedBERT-base tokeniser [17];
-chunk identifiers were derived deterministically via UUID5 on
-the content key to enable bit-identical re-indexing. Dense embeddings
-were computed with PubMedBERT and stored in Qdrant v1.14.1 alongside
-sparse embeddings from FastEmbed BM25, supporting hybrid retrieval via
-Reciprocal Rank Fusion at query time. The production Qdrant collection
-(`geno_agent_pmc_oa_v1`) contains **52,777,395 chunks** with on-disk
-payload (collection size verified via the Qdrant `points_count` API).
+Retrieval used the reproducible PMC OA hybrid index described in P1 (methods/index
+DOI 10.6084/m9.figshare.32814491): a genetics-relevant subset of the PMC Open Access
+corpus (~3.4 million articles [45]) chunked at 512 tokens (50-token overlap,
+PubMedBERT tokeniser [17], UUID5 content-addressed identifiers) and indexed in Qdrant
+v1.14.1 with PubMedBERT dense + FastEmbed BM25 sparse embeddings, supporting hybrid
+retrieval via Reciprocal Rank Fusion at query time. The production collection
+(`geno_agent_pmc_oa_v1`) contains **52,777,395 chunks**; the build recipe and
+fingerprint are archived with P1.
 
 ### Evaluation metrics
 
@@ -210,39 +179,28 @@ the S-vs-K paired McNemar test.
 
 ### Annotation-overlap deconfounding
 
-LIRICAL's likelihood-ratio computation uses HPO annotations from
-`phenotype.hpoa` (curated from primary literature). Phenopacket Store
-cases are themselves derived from publications; if a case's source PMID
-is cited in `phenotype.hpoa` as a reference for the causal OMIM
-disease, LIRICAL has direct training-data exposure to that case. To
-quantify and adjust for this confound, for each of the 1,047 cases we
-computed a binary `annotation_overlap` flag: 1 if the case's source
-PMID (extracted from `case_id` and verified against the phenopacket
-`metaData.externalReferences[0].id` field) appears in `phenotype.hpoa`
-v2026-02-16 as a reference for any annotation of any of the case's
-causal OMIM disease IDs; 0 otherwise. The implementation parses the
-282,723 phenotype.hpoa rows (yielding 9,852 unique `(disease, PMID)`
-keys after deduplication and PMID-only filtering) and joins each case
-against this index. All 1,047 cases resolved to both a PMID and an
-OMIM disease ID (zero edge cases). All paired comparisons were then
-repeated on (i) the full cohort, (ii) the overlap-present subset, and
-(iii) the **overlap-absent subset (n = 282, 26.9 % of cohort)** — the
-latter being the fair-comparison cohort on which LIRICAL cannot
-benefit from training-data exposure.
+Curated tools such as LIRICAL compute likelihood ratios from `phenotype.hpoa`
+annotations, which are themselves curated from primary literature; because
+Phenopacket Store cases are also derived from publications, a tool can have direct
+exposure to a case whose source publication is cited in `phenotype.hpoa` for the
+causal disease. The per-case binary `annotation_overlap` flag that detects this, and
+the fair-comparison subset it defines, are constructed and validated in P1. In the
+cohort, 73.1 % of cases (765/1,047) are overlap-present, leaving an **overlap-absent
+fair-comparison subset of n = 282 (26.9 %)** on which curated tools cannot benefit
+from source-publication exposure. All paired comparisons below were repeated on
+(i) the full cohort, (ii) the overlap-present subset, and (iii) the overlap-absent
+subset, the last being the **pre-declared primary endpoint** for comparison against
+curated baselines.
 
 ### Publication-recency stratification
 
-To separately assess whether geno_agent's literature-driven approach
-generalises better than curated-knowledge-base tools to cases that
-post-date curation cycles, the cohort was additionally split by source
-PMID publication year (cutoff 2020-01-01). Pre-2020 cases (n = 601)
-predominantly reflect well-characterised genes; post-2020 cases
-(n = 446) are more likely to involve recently-discovered gene-phenotype
-associations that curated tools may not yet incorporate. The same
-paired-bootstrap and McNemar tests were repeated on each recency
-stratum, plus the crossed `post_2020 × overlap-absent` subset
-(n = 88) as the closest available substitute for a "truly novel"
-cohort.
+To assess whether geno_agent's literature-driven approach generalises better than
+curated-knowledge-base tools to associations that post-date curation cycles, the
+cohort's recency strata from P1 were used: pre-2020 (n = 601) versus post-2020
+(n = 446) by source-PMID publication year (cutoff 2020-01-01), plus the crossed
+`post_2020 × overlap-absent` subset (n = 88) as the closest substitute for a
+"truly novel" cohort. The same paired-bootstrap and McNemar tests were repeated on
+each stratum.
 
 ### Ensemble evaluation
 
@@ -350,31 +308,24 @@ top-3 chunks the LEA was shown for that gene.
 
 ### Reproducibility infrastructure
 
-All pinned versions are recorded in `methodology.md §3` and replicated
-in `data/MANIFEST.tsv` with SHA-256 hashes for each downloaded asset.
-Determinism is enforced via (i) `PYTHONHASHSEED=42`, (ii) UUID5 chunk
-identifiers, (iii) seed-42 sampling at every random step, (iv) vLLM
-temperature 0.0 with greedy decoding, and (v) `response_format=
-{"type":"json_object"}` to deterministically constrain LEA output. A
-bit-perfect cross-version reproducibility check between two
-independent runs of Cells L and S (seven months apart) found
-1,026 / 1,047 (97.99 %) rank-identical Cell L cases with **zero
-top-1 flips**, and 1,024 / 1,047 (97.80 %) rank-identical Cell S
-cases with **one top-1 flip**, confirming the LEA-augmented pipeline
-is effectively deterministic on the headline accuracy metric despite
+Pinned versions and SHA-256 manifests for all shared inputs (corpus, ontologies,
+cohort) are given in P1 and `data/MANIFEST.tsv`. For the evaluation itself,
+determinism is enforced via (i) `PYTHONHASHSEED=42`, (ii) UUID5 chunk identifiers,
+(iii) seed-42 sampling at every random step, (iv) vLLM temperature 0.0 with greedy
+decoding, and (v) `response_format={"type":"json_object"}` to deterministically
+constrain LEA output. A bit-perfect cross-version reproducibility check between two
+independent runs of Cells L and S (seven months apart) found 1,026 / 1,047 (97.99 %)
+rank-identical Cell L cases with **zero top-1 flips**, and 1,024 / 1,047 (97.80 %)
+rank-identical Cell S cases with **one top-1 flip**, confirming the LEA-augmented
+pipeline is effectively deterministic on the headline accuracy metric despite
 expected stochasticity in non-greedy vLLM token sampling.
 
-All evaluation code is available at github.com/Jangulo7/geno_agent
-under the GNU Affero General Public License v3.0 (AGPL-3.0) and is
-archived on Figshare as the Methods / Shared-Foundation item
-(DOI 10.6084/m9.figshare.32814491); the benchmark cohort is a separate
-Figshare Dataset under CC BY 4.0 (DOI 10.6084/m9.figshare.32814449) and
-the GenoAgent system item is DOI 10.6084/m9.figshare.32814497. Per-case
-sidecar JSON files containing the
-full LEA system prompt, user prompt, raw model response, parsed
-ranking, retrieved chunks (with PMCIDs, section types, and RRF
-scores), and per-case token / latency / fallback metadata are
-included for the 1,047-case cohort to support third-party replay.
+For each of the 1,047 cases, per-case sidecar JSON files capture the full LEA system
+prompt, user prompt, raw model response, parsed ranking, retrieved chunks (with
+PMCIDs, section types, and RRF scores), and token / latency / fallback metadata, to
+support third-party replay. The GenoAgent system code, evaluation harness, and these
+result artifacts are archived under AGPL-3.0 (DOI 10.6084/m9.figshare.32814497); the
+shared foundation (cohort, index recipe) is referenced from P1 by DOI.
 
 ### Computational resources
 
@@ -457,3 +408,11 @@ OpenAI 2024 (GPT-4o), Cruz Rivera 2020 (CONSORT-AI),
 Collins 2024 (TRIPOD+AI), Gallifant 2025 (TRIPOD-LLM). RAGAS results
 now inlined. Methods file remains separate from the main manuscript
 draft to ease inlining at submission-assembly time.*
+
+*P1 split — 2026-06-28: the cohort, PMC OA index, and deconfounding metadata
+(annotation-overlap, recency) are now described in the companion resource paper
+`reports/manuscript_p1_resource_draft.md` and cited here by DOI
+(10.6084/m9.figshare.32814449, 10.6084/m9.figshare.32814491) rather than re-derived.
+This section now covers only evaluation-specific methods (comparators, metrics +
+statistics, ensemble, RAG-quality, local explainability, resources); the
+explainability analysis is retained in P2 by design.*
