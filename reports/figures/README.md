@@ -16,7 +16,7 @@ cohort in `figshare_uploads/_staging/…` and pinned HPO inputs; also imports
 | `fig1_consort_flow.png` | CONSORT cohort-selection flow | **shared with P2**; full intake funnel 9,588→6,382→4,670→1,050→1,047 |
 | `fig2_index_pipeline.png` | PMC-OA hybrid-index build pipeline | raster copy; the P1 `.tex` renders this as TikZ |
 | `fig3_cohort_characterisation.png` | category / overlap / recency / HPO-depth | 2×2 panel |
-| `fig5_hard_vs_random_separability.png` | candidate-list difficulty (standard vs hard) | Resnik BMA; 7.4% vs 42.8% |
+| `fig4_hard_vs_random_separability.png` | candidate-list difficulty (standard vs hard) | Resnik BMA; 7.4% vs 42.8% |
 
 ## P2 — GenoAgent system evaluation
 
