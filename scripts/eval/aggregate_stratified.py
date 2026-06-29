@@ -166,11 +166,16 @@ def main() -> int:
     parser.add_argument("--eval-root", type=Path, default=DEFAULT_EVAL_ROOT)
     parser.add_argument("--test-cases", type=Path, default=DEFAULT_TEST_CASES)
     parser.add_argument("--overlap", type=Path, default=DEFAULT_OVERLAP)
-    parser.add_argument(
-        "--out-json", type=Path, default=DEFAULT_EVAL_ROOT / "_results_stratified.json"
-    )
-    parser.add_argument("--out-md", type=Path, default=DEFAULT_EVAL_ROOT / "_results_stratified.md")
+    # Defaults are resolved after parsing so they follow --eval-root. Hardcoding
+    # them to DEFAULT_EVAL_ROOT caused a non-default cohort (e.g. eval_hard) to
+    # silently overwrite the eval_1050 _results_stratified.* files.
+    parser.add_argument("--out-json", type=Path, default=None)
+    parser.add_argument("--out-md", type=Path, default=None)
     args = parser.parse_args()
+    if args.out_json is None:
+        args.out_json = args.eval_root / "_results_stratified.json"
+    if args.out_md is None:
+        args.out_md = args.eval_root / "_results_stratified.md"
 
     # ---- load overlap flags + categories
     overlap_records: list[dict] = json.loads(args.overlap.read_text())["records"]
