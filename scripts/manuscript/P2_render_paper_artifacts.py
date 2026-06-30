@@ -5,7 +5,8 @@ Produces:
                    table3_fair_paired_delta.{md,csv}, table4_llm_ablation.{md,csv}
                    (supp_table1_tripod_llm.md is maintained manually and preserved)
   reports/figures/ fig2_architecture.png, fig3_per_mondo_top1.png,
-                   fig4_faithfulness_vs_correctness.png, fig5_landscape_quadrant.png,
+                   fig4_hard_difficulty.png (hard-cohort full vs fair top-1),
+                   fig5_faithfulness_vs_correctness.png, fig6_landscape_quadrant.png,
                    supp_fig1_lirical_recency_paradox.png,
                    supp_fig2_llm_family_ablation.png
 
@@ -29,6 +30,7 @@ import numpy as np
 
 REPO = pathlib.Path("/home/hana77/ia_jo/uax_tfm/geno_agent")
 DATA_EVAL = REPO / "data/eval_1050"
+DATA_HARD = REPO / "data/eval_hard"
 FIG_DIR = REPO / "reports/figures"
 TBL_DIR = REPO / "reports/tables"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -43,6 +45,22 @@ CELL_DISPLAY = {
     "N": "RRF ensemble (M+S)",
 }
 CELL_ORDER = ["K", "M", "D", "L", "S", "N"]
+
+# Harmonised palette — one source of truth so every P2 figure is colour-consistent
+# and colourblind-aware. geno_agent (Cell S) carries the signature green everywhere.
+SIG_GREEN = "#2f855a"  # geno_agent / fair cohort / "this work" — signature accent
+NEUTRAL = "#a0aec0"  # full cohort / neutral baseline grey
+POS_FILL = "#c6f6d5"  # light green — correct / grounded
+NEG_FILL = "#fed7d7"  # light red — wrong / ungrounded
+EDGE = "#2d3748"  # dark slate — edges and text
+CELL_COLORS = {
+    "K": "#718096",  # Exomiser — slate grey
+    "M": "#d69e2e",  # LIRICAL — amber
+    "D": "#3182ce",  # multi-agent baseline — blue
+    "L": "#805ad5",  # +CE-rerank — purple
+    "S": SIG_GREEN,  # geno_agent — signature green
+    "N": "#dd6b20",  # RRF ensemble — orange
+}
 
 # Publication-grade plot style
 plt.rcParams.update(
@@ -322,9 +340,9 @@ def render_supp_table1() -> None:
 
 
 # =============================================================================
-# Figure 5 (P2) -- method-landscape positioning quadrant
+# Figure 6 (P2) -- method-landscape positioning quadrant
 # =============================================================================
-def render_figure5_landscape() -> None:
+def render_figure6_landscape() -> None:
     """Conceptual 2x2 positioning of geno_agent vs prior methods.
 
     Axes: knowledge source (curated KB -> primary literature) x inference-time
@@ -435,7 +453,7 @@ def render_figure5_landscape() -> None:
     tool(7.3, 1.9, "(BM25 / dense, same index)", "#6b46c1", w=2.1)
 
     ax.set_title(
-        "Figure 5 — Position of geno_agent in the method landscape",
+        "Figure 6 — Position of geno_agent in the method landscape",
         fontsize=13,
         fontweight="bold",
         pad=12,
@@ -450,9 +468,9 @@ def render_figure5_landscape() -> None:
         style="italic",
         color="#4a5568",
     )
-    fig.savefig(FIG_DIR / "fig5_landscape_quadrant.png")
+    fig.savefig(FIG_DIR / "fig6_landscape_quadrant.png")
     plt.close(fig)
-    print("  ✓ Figure 5 (method-landscape quadrant)")
+    print("  ✓ Figure 6 (method-landscape quadrant)")
 
 
 # =============================================================================
@@ -483,9 +501,16 @@ def render_figure2() -> None:
 
     def octagon(cx, cy, w, h, c=0.28):
         return mpatches.Polygon(
-            [(cx - w + c, cy - h), (cx + w - c, cy - h), (cx + w, cy - h + c),
-             (cx + w, cy + h - c), (cx + w - c, cy + h), (cx - w + c, cy + h),
-             (cx - w, cy + h - c), (cx - w, cy - h + c)],
+            [
+                (cx - w + c, cy - h),
+                (cx + w - c, cy - h),
+                (cx + w, cy - h + c),
+                (cx + w, cy + h - c),
+                (cx + w - c, cy + h),
+                (cx - w + c, cy + h),
+                (cx - w, cy + h - c),
+                (cx - w, cy - h + c),
+            ],
             closed=True,
         )
 
@@ -495,37 +520,82 @@ def render_figure2() -> None:
             patch.set(facecolor=fc, edgecolor=ec, linewidth=1.8)
             ax.add_patch(patch)
         else:
-            ax.add_patch(mpatches.FancyBboxPatch(
-                (x - hw, y - hh), 2 * hw, 2 * hh,
-                boxstyle="round,pad=0.02,rounding_size=0.12",
-                facecolor=fc, edgecolor=ec, linewidth=1.8))
+            ax.add_patch(
+                mpatches.FancyBboxPatch(
+                    (x - hw, y - hh),
+                    2 * hw,
+                    2 * hh,
+                    boxstyle="round,pad=0.02,rounding_size=0.12",
+                    facecolor=fc,
+                    edgecolor=ec,
+                    linewidth=1.8,
+                )
+            )
         ax.text(x, y, label, ha="center", va="center", fontsize=9.2)
 
     # INPUT / OUTPUT labels above the terminals
-    ax.text(0.95, y + hh + 0.32, "INPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
-    ax.text(11.75, y + hh + 0.32, "OUTPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
+    ax.text(
+        0.95, y + hh + 0.32, "INPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748"
+    )
+    ax.text(
+        11.75, y + hh + 0.32, "OUTPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748"
+    )
 
     for i in range(len(stages) - 1):
-        ax.annotate("", xy=(stages[i + 1][1] - hw, y), xytext=(stages[i][1] + hw, y),
-                    arrowprops={"arrowstyle": "-|>", "color": "#4a5568", "lw": 1.6})
+        ax.annotate(
+            "",
+            xy=(stages[i + 1][1] - hw, y),
+            xytext=(stages[i][1] + hw, y),
+            arrowprops={"arrowstyle": "-|>", "color": "#4a5568", "lw": 1.6},
+        )
 
     # Cell-S span bracket
-    ax.annotate("", xy=(stages[5][1] + hw, 1.85), xytext=(stages[1][1] - hw, 1.85),
-                arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.6})
-    ax.text(6.35, 1.35, "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
-            ha="center", va="center", fontsize=10, color="#2f855a", style="italic")
+    ax.annotate(
+        "",
+        xy=(stages[5][1] + hw, 1.85),
+        xytext=(stages[1][1] - hw, 1.85),
+        arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.6},
+    )
+    ax.text(
+        6.35,
+        1.35,
+        "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
+        ha="center",
+        va="center",
+        fontsize=10,
+        color="#2f855a",
+        style="italic",
+    )
 
     legend_handles = [
-        mpatches.Patch(facecolor="#bee3f8", edgecolor="#2b6cb0", label="LangGraph agents (deterministic)"),
+        mpatches.Patch(
+            facecolor="#bee3f8", edgecolor="#2b6cb0", label="LangGraph agents (deterministic)"
+        ),
         mpatches.Patch(facecolor="#fed7e2", edgecolor="#b83280", label="Neural reranking"),
-        mpatches.Patch(facecolor="#c6f6d5", edgecolor="#2f855a", label="LLM-as-Evidence-Aggregator (LEA)"),
-        mpatches.Patch(facecolor="#e2e8f0", edgecolor="#2d3748", label="Input / Output (terminals)"),
+        mpatches.Patch(
+            facecolor="#c6f6d5", edgecolor="#2f855a", label="LLM-as-Evidence-Aggregator (LEA)"
+        ),
+        mpatches.Patch(
+            facecolor="#e2e8f0", edgecolor="#2d3748", label="Input / Output (terminals)"
+        ),
     ]
-    ax.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, -0.04),
-              ncol=2, frameon=False, fontsize=9.5, columnspacing=3, handlelength=1.4)
+    ax.legend(
+        handles=legend_handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, -0.04),
+        ncol=2,
+        frameon=False,
+        fontsize=9.5,
+        columnspacing=3,
+        handlelength=1.4,
+    )
 
-    ax.set_title("Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
-                 pad=12, fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
+        pad=12,
+        fontsize=13,
+        fontweight="bold",
+    )
     fig.savefig(FIG_DIR / "fig2_architecture.png")
     plt.close(fig)
     print("  ✓ Figure 2 (architecture)")
@@ -545,13 +615,6 @@ def render_figure3() -> None:
         if row["cell"] in cells and row["category"] in cats:
             by_cell_cat[row["cell"]][row["category"]] = row["top1_point"]
 
-    cell_colors = {
-        "K": "#718096",  # Exomiser - grey
-        "M": "#d69e2e",  # LIRICAL - amber
-        "D": "#3182ce",  # multi-agent baseline - blue
-        "L": "#805ad5",  # +rerank - purple
-        "S": "#2f855a",  # geno_agent - green
-    }
     cell_labels = {c: CELL_DISPLAY[c] for c in cells}
 
     fig, ax = plt.subplots(figsize=(9.5, 5.2))
@@ -559,7 +622,15 @@ def render_figure3() -> None:
     w = 0.16
     for i, c in enumerate(cells):
         vals = [by_cell_cat[c].get(cat, 0) for cat in cats]
-        bars = ax.bar(x + (i - 2) * w, vals, w, label=cell_labels[c], color=cell_colors[c])
+        bars = ax.bar(
+            x + (i - 2) * w,
+            vals,
+            w,
+            label=cell_labels[c],
+            color=CELL_COLORS[c],
+            edgecolor=EDGE,
+            linewidth=0.4,
+        )
         for b, v in zip(bars, vals, strict=False):
             ax.text(
                 b.get_x() + b.get_width() / 2,
@@ -588,9 +659,81 @@ def render_figure3() -> None:
 
 
 # =============================================================================
-# Figure 4 -- Faithfulness vs top-1 correctness
+# Figure 4 -- Hard-cohort full vs fair top-1 (distractor-difficulty stress test)
 # =============================================================================
-def render_figure4() -> None:
+def render_figure4_hard() -> None:
+    """Hard cohort (phenotype-similar distractors): full vs fair top-1 per cell.
+
+    Visualises the annotation-overlap deconfounding signature under difficulty:
+    LIRICAL collapses full->fair while geno_agent (and +CE-rerank) improve and
+    lead the fair cohort. Source: data/eval_hard/_results_stratified.json.
+    """
+    strat = json.loads((DATA_HARD / "_results_stratified.json").read_text())["per_cell"]
+    cells = CELL_ORDER  # K, M, D, L, S, N
+    full = [strat["__all__"][c]["top1"][0] for c in cells]
+    fair = [strat["overlap_absent"][c]["top1"][0] for c in cells]
+    short = {
+        "K": "Exomiser",
+        "M": "LIRICAL",
+        "D": "Multi-agent",
+        "L": "+CE-rerank",
+        "S": "geno_agent",
+        "N": "RRF(M+S)",
+    }
+
+    fig, ax = plt.subplots(figsize=(9.5, 5.0))
+    x = np.arange(len(cells))
+    w = 0.38
+    b1 = ax.bar(
+        x - w / 2,
+        full,
+        w,
+        label="Full (n=1,047)",
+        color=NEUTRAL,
+        edgecolor=EDGE,
+        linewidth=0.5,
+    )
+    b2 = ax.bar(
+        x + w / 2,
+        fair,
+        w,
+        label="Fair / overlap-absent (n=282)",
+        color=SIG_GREEN,
+        edgecolor=EDGE,
+        linewidth=0.5,
+    )
+    for bars, vals in ((b1, full), (b2, fair)):
+        for b, v in zip(bars, vals, strict=False):
+            ax.text(
+                b.get_x() + b.get_width() / 2,
+                v + 0.010,
+                f"{v:.2f}",
+                ha="center",
+                va="bottom",
+                fontsize=7.5,
+            )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([short[c] for c in cells])
+    ax.set_ylabel("Top-1 accuracy")
+    ax.set_ylim(0, 0.75)
+    ax.set_title(
+        "Figure 4 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
+        pad=10,
+        fontsize=12,
+        fontweight="bold",
+    )
+    ax.legend(loc="upper right", frameon=False)
+    ax.grid(axis="y", alpha=0.3)
+    fig.savefig(FIG_DIR / "fig4_hard_difficulty.png")
+    plt.close(fig)
+    print("  ✓ Figure 4 (hard-cohort full vs fair top-1)")
+
+
+# =============================================================================
+# Figure 5 -- Faithfulness vs top-1 correctness
+# =============================================================================
+def render_figure5_faithfulness() -> None:
     """RAGAS + DeepEval faithfulness distributions split by top-1 correctness."""
     # Load RAGAS top1-only (n=100) per-case + DeepEval per-case
     ragas = json.loads((DATA_EVAL / "ragas_top1only_cell_S_n100_summary.json").read_text())
@@ -656,9 +799,9 @@ def render_figure4() -> None:
         widths=0.55,
         medianprops={"color": "black", "linewidth": 1.5},
     )
-    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+    for patch, color in zip(bp["boxes"], [POS_FILL, NEG_FILL], strict=False):
         patch.set_facecolor(color)
-        patch.set_edgecolor("#2d3748")
+        patch.set_edgecolor(EDGE)
     ax.set_ylabel("RAGAS faithfulness (top-1-only)")
     mean_c = np.mean(ragas_correct) if ragas_correct else float("nan")
     mean_w = np.mean(ragas_wrong) if ragas_wrong else float("nan")
@@ -676,9 +819,9 @@ def render_figure4() -> None:
         widths=0.55,
         medianprops={"color": "black", "linewidth": 1.5},
     )
-    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+    for patch, color in zip(bp["boxes"], [POS_FILL, NEG_FILL], strict=False):
         patch.set_facecolor(color)
-        patch.set_edgecolor("#2d3748")
+        patch.set_edgecolor(EDGE)
     ax.set_ylabel("DeepEval groundedness")
     mean_c2 = np.mean(de_correct) if de_correct else float("nan")
     mean_w2 = np.mean(de_wrong) if de_wrong else float("nan")
@@ -688,14 +831,14 @@ def render_figure4() -> None:
     ax.grid(axis="y", alpha=0.3)
 
     fig.suptitle(
-        "Figure 4 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
+        "Figure 5 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
         fontsize=12,
         fontweight="bold",
         y=1.02,
     )
-    fig.savefig(FIG_DIR / "fig4_faithfulness_vs_correctness.png")
+    fig.savefig(FIG_DIR / "fig5_faithfulness_vs_correctness.png")
     plt.close(fig)
-    print(f"  ✓ Figure 4 (faithfulness gaps: RAGAS={gap:+.1f}pp, DeepEval={gap2:+.1f}pp)")
+    print(f"  ✓ Figure 5 (faithfulness gaps: RAGAS={gap:+.1f}pp, DeepEval={gap2:+.1f}pp)")
 
 
 # =============================================================================
@@ -897,8 +1040,9 @@ def main() -> None:
     # Fig 1 (CONSORT, shared) is generated by scripts/manuscript/P1_figures.ipynb.
     render_figure2()
     render_figure3()
-    render_figure4()
-    render_figure5_landscape()
+    render_figure4_hard()
+    render_figure5_faithfulness()
+    render_figure6_landscape()
     render_supp_fig1()
     render_supp_fig2()
     print()
