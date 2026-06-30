@@ -12,7 +12,8 @@ scripts/cases
 # --- Shared utilities (determinism / seeding) ---
 scripts/utils
 scripts/__init__.py
-src/__init__.py
+# (src/__init__.py is intentionally NOT bundled: no P1 corpus/cohort script
+#  imports it, and its docstring describes the Phase-2 agent layer — P2 content.)
 # --- Tests covering the foundation ---
 tests/__init__.py
 tests/test_acceptance_gate.py
@@ -30,12 +31,15 @@ LICENSE
 CITATION.cff
 CONTRIBUTING.md
 data/MANIFEST.tsv
-# --- Authoritative methods docs + reproduction guide ---
-# (reports/methodology*.md are intentionally NOT bundled: the manuscript/methods
-#  reports were made local-only in the repo; REPRODUCE.md below is the tracked,
-#  published reproduction guide. MASTER_PROJECT_v2.2.md is also excluded.)
-README.md
-release/README.md
+# --- Reproduction guide + Figshare descriptors (P1-scoped only) ---
+# The repo-root README.md and release/README.md are intentionally NOT bundled:
+# both describe the downstream geno_agent *system* (P2) — its 4-agent
+# architecture, factorial design, and headline results — and lay out the full
+# P1/P2/P3 programme. P1 is the shared foundation and must stand alone without
+# revealing P2 content. The P1 front page is
+# release/paper-methods/README_FIGSHARE.md; reproduction steps are in
+# REPRODUCE.md. (reports/methodology*.md were already local-only; the brief
+# DOI cross-references to P2/P3 in README_FIGSHARE.md are kept by design.)
 release/build_figshare_bundles.sh
 release/assemble_data_bundles.sh
 release/cohort/README_FIGSHARE.md

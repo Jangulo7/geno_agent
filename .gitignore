@@ -69,6 +69,10 @@ yarn-error.log*
 # Aggregate + per-case scores live in data/eval_1050/ragas_cell_S_n600_summary.json (101 KB, committed).
 data/eval_1050/ragas_cell_S_n600.json
 data/eval_1050/ragas_top1only_cell_S_n100.json
+# Hard-cohort RAGAS raw output (same convention: only the *_summary.json are committed).
+data/eval_hard/ragas_cell_S_n600.json
+data/eval_hard/ragas_top1only_cell_S_n100.json
+data/eval_hard/*.PARTIAL_*.bak
 
 # LOPO per-case sidecars (38 MB / 3,143 files). Summaries
 # data/eval_1050_lopo_full/_lopo_*.{md,json} ARE committed; per-case dirs are not
@@ -96,6 +100,8 @@ figshare_uploads/
 # Per-case ranking JSONs in data/eval_1050/cell_{D,K,L,M,N,S}/ ARE committed.
 data/eval_1050/cell_S_responses/
 data/eval_1050/cell_L_responses/
+data/eval_hard/cell_S_responses/
+data/eval_hard/cell_L_responses/
 # Pre-v2 aggregation snapshots (superseded by the committed cell_* + _results_*).
 data/eval_1050/*_backup_*/
 

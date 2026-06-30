@@ -14,10 +14,19 @@ family adds the full-cohort and post-2020 geno_agent-vs-Exomiser comparisons.
 Run::
 
     PYTHONPATH=. python scripts/eval/multiplicity_correction.py
+
+To correct a different cohort (e.g. the hard-distractor variant) without
+touching the default eval_1050 inputs/outputs, override the paths::
+
+    PYTHONPATH=. python scripts/eval/multiplicity_correction.py \\
+        --strat data/eval_hard/_results_stratified.json \\
+        --out-md reports/tables/supp_table_multiplicity_hard.md \\
+        --out-json reports/tables/supp_table_multiplicity_hard.json
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 from typing import Final
@@ -65,8 +74,15 @@ def benjamini_hochberg(pvals: list[float]) -> list[float]:
 
 
 def main() -> int:
-    strat = json.loads(STRAT.read_text())
-    recency = json.loads(RECENCY.read_text()) if RECENCY.exists() else {"paired": {}}
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--strat", type=Path, default=STRAT)
+    parser.add_argument("--recency", type=Path, default=RECENCY)
+    parser.add_argument("--out-md", type=Path, default=OUT_MD)
+    parser.add_argument("--out-json", type=Path, default=OUT_JSON)
+    args = parser.parse_args()
+
+    strat = json.loads(args.strat.read_text())
+    recency = json.loads(args.recency.read_text()) if args.recency.exists() else {"paired": {}}
 
     # (label, raw p-value). M_vs_S carries the S-vs-M comparison (symmetric McNemar p).
     family: list[tuple[str, float | None]] = [
@@ -134,9 +150,9 @@ def main() -> int:
     )
     lines += [f"**Verdict:** {verdict}", ""]
 
-    OUT_MD.parent.mkdir(parents=True, exist_ok=True)
-    OUT_MD.write_text("\n".join(lines) + "\n")
-    OUT_JSON.write_text(
+    args.out_md.parent.mkdir(parents=True, exist_ok=True)
+    args.out_md.write_text("\n".join(lines) + "\n")
+    args.out_json.write_text(
         json.dumps(
             {
                 "primary": primary_recs,
@@ -147,7 +163,7 @@ def main() -> int:
         )
     )
     print("\n".join(lines))
-    print(f"Wrote {OUT_MD}\n      {OUT_JSON}")
+    print(f"Wrote {args.out_md}\n      {args.out_json}")
     return 0
 
 
