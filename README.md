@@ -17,13 +17,22 @@
 > system (no curated phenotype-gene tables); **production inference runs entirely
 > on local hardware** — only the optional RAGAS/DeepEval evaluation judges (used
 > for measurement, not prioritisation) require an external OpenAI-compatible LLM
-> endpoint (GPT-4o in this study).
+> endpoint (GPT-4o in this study). On a **case-paired hard cohort** — 49
+> phenotype-similar distractors per case instead of random — geno_agent **stays the
+> top-ranked system and its margin widens** (fair-cohort top-1 **+0.152** vs
+> Exomiser, **+0.106** vs LIRICAL; both Holm-significant): it degrades most
+> gracefully as the differential becomes clinically realistic.
 >
-> **Latest update (2026-06-11).** Full n=1,047 evaluation complete
-> (annotation-overlap deconfounding, publication-recency stratification,
-> three-LLM-family ablation, RAGAS + DeepEval). Added a **leave-one-paper-out**
-> robustness analysis, **Holm / Benjamini-Hochberg** multiplicity correction, and
-> **stratum-weighted** sensitivity. Manuscript Q1 draft hardened (PR #37, merged).
+> **Latest update (2026-07-01).** Added a **difficulty × leakage 2×2**: a
+> case-paired *hard* cohort with 49 phenotype-similar distractors (HPO Resnik
+> best-match-average) alongside the standard random-distractor cohort, crossed with
+> the annotation-overlap (leakage) axis. On the deconfounded fair cohort, geno_agent
+> remains #1 in **both** difficulty regimes and its advantage over both curated
+> baselines **grows** under hard distractors (Holm-significant); the RAGAS + DeepEval
+> judges were re-run on the hard cohort. Earlier (2026-06-11): full n=1,047
+> evaluation — annotation-overlap deconfounding, publication-recency stratification,
+> three-LLM-family ablation, **leave-one-paper-out**, and **Holm / Benjamini–Hochberg**
+> multiplicity correction.
 
 ---
 
@@ -52,7 +61,7 @@ To our knowledge, this is the first end-to-end validated agentic-workflow RAG sy
 1. **An open, reproducible architecture** — four role-specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated as a LangGraph agentic workflow, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
 3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No external API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS/DeepEval evaluation judges are the sole component that calls an external OpenAI-compatible LLM endpoint — GPT-4o in this study — used only to *measure* rationale quality, never for gene prioritisation.)
-4. **A standardized benchmark pipeline** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper; v0.1.19 for the earlier cohort), with deterministic case selection (stratified across neurological, metabolic, immunological, and developmental categories) and seeded distractor sampling, so that any reported result can be regenerated bit-for-bit.
+4. **A standardized, difficulty-controlled benchmark** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper; v0.1.19 for the earlier cohort), with deterministic stratified case selection (neurological, metabolic, immunological, developmental) and **two case-paired distractor variants** — *standard* (49 uniformly-random HGNC protein-coding genes) and *hard* (49 phenotypically most-similar genes by HPO Resnik best-match-average). Crossed with a per-case annotation-overlap (leakage) flag, these form a **difficulty × leakage 2×2**; every reported result regenerates bit-for-bit from the seeded pipeline.
 
 Where this work *is not* claiming novelty: RAG itself ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)), multi-agent LLM systems generally, hybrid dense+sparse retrieval, and the use of PubMed/PMC as a corpus are all established techniques. The contribution is the application of these techniques, in this combination, to this clinical problem, with rigorous evaluation.
 
@@ -132,6 +141,16 @@ using disproportionate stratified sampling (250 dev + **300 imm** + 250 met +
 earlier n=75 and n=459 (paper-v1) cohorts remain in the repo for the audit
 trail.
 
+**Distractor-difficulty variants.** Each case carries a fixed 50-gene candidate
+list (1 causal + 49 distractors), built in two **case-paired** variants that differ
+*only* in the distractors: a **standard** cohort with 49 uniformly-random HGNC
+protein-coding genes (genome-wide separability) and a **hard** cohort with the 49
+phenotypically most-similar genes by HPO Resnik best-match-average
+(differential-diagnosis stress test). Crossing distractor difficulty with the
+annotation-overlap (leakage) axis yields a **difficulty × leakage 2×2**; the fair
+(overlap-absent, n=282) split is the identical case set in both variants, so
+difficulty is varied orthogonally to leakage.
+
 **Headline results at n=1,047 (v2 final, tagged `paper-v2-final`):**
 
 | Cell | top-1 | top-5 | top-10 | MRR | Notes |
@@ -159,6 +178,17 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
   McNemar p=1.0); the small full-cohort effect (−0.015) is confined to the
   overlap-present subset. geno_agent's signal is distributed across the
   literature, not concentrated in the source case report.
+- **Distractor-difficulty stress test (hard cohort).** Replacing the 49 random
+  distractors with the 49 phenotype-similar genes (Resnik BMA) drops every system,
+  but on the fair cohort geno_agent **remains #1 (top-1 0.390)** and its margin
+  *widens*: **+0.152** vs Exomiser (McNemar p=1×10⁻⁵) and **+0.106** vs LIRICAL
+  (p=0.0021), both surviving Holm correction. LIRICAL collapses full→fair
+  (0.642 → 0.284) while geno_agent *improves* (0.303 → 0.390); retrieval stays
+  strong (fair top-10 **0.812**), so the residual difficulty is rank-1
+  discrimination among phenotype-confusable genes. The GPT-4o judges localise this:
+  top-1 rationale faithfulness holds (0.507 vs 0.480) while full-response
+  groundedness falls (DeepEval 0.845 → 0.465), i.e. the hard regime stresses
+  grounded discrimination, not retrieval recall.
 - **Publication-recency stratification.** Exomiser top-1 collapses 0.847 → 0.480
   on post-2020 source papers; geno_agent's edge over Exomiser is 2.7× larger on
   recent cases.
@@ -246,7 +276,8 @@ The release artifacts are archived on Figshare (project "GenoAgent") with persis
 
 | Item | Figshare type | License | DOI |
 |---|---|---|---|
-| **Benchmark cohort (n=1,047)** — `test_cases.jsonl` + provenance stages + manifest | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32814449`](https://doi.org/10.6084/m9.figshare.32814449) |
+| **Benchmark cohort — standard (n=1,047)** — random distractors; `test_cases.jsonl` + provenance + manifest | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32814449`](https://doi.org/10.6084/m9.figshare.32814449) |
+| **Benchmark cohort — hard (n=1,047)** — phenotype-similar (Resnik BMA) distractors; case-paired with the standard set | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32816468`](https://doi.org/10.6084/m9.figshare.32816468) |
 | **Methods / shared foundation** — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
 | **GenoAgent system** — agents, evaluation harness, per-cell results, manuscript artifacts | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
 
