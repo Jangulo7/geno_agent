@@ -5,8 +5,8 @@ Produces:
                    table3_fair_paired_delta.{md,csv}, table4_llm_ablation.{md,csv}
                    (supp_table1_tripod_llm.md is maintained manually and preserved)
   reports/figures/ fig2_architecture.png, fig3_per_mondo_top1.png,
-                   fig4_faithfulness_vs_correctness.png, fig5_landscape_quadrant.png,
-                   fig6_hard_difficulty.png (hard-cohort full vs fair top-1),
+                   fig4_hard_difficulty.png (hard-cohort full vs fair top-1),
+                   fig5_faithfulness_vs_correctness.png, fig6_landscape_quadrant.png,
                    supp_fig1_lirical_recency_paradox.png,
                    supp_fig2_llm_family_ablation.png
 
@@ -45,6 +45,22 @@ CELL_DISPLAY = {
     "N": "RRF ensemble (M+S)",
 }
 CELL_ORDER = ["K", "M", "D", "L", "S", "N"]
+
+# Harmonised palette — one source of truth so every P2 figure is colour-consistent
+# and colourblind-aware. geno_agent (Cell S) carries the signature green everywhere.
+SIG_GREEN = "#2f855a"  # geno_agent / fair cohort / "this work" — signature accent
+NEUTRAL = "#a0aec0"  # full cohort / neutral baseline grey
+POS_FILL = "#c6f6d5"  # light green — correct / grounded
+NEG_FILL = "#fed7d7"  # light red — wrong / ungrounded
+EDGE = "#2d3748"  # dark slate — edges and text
+CELL_COLORS = {
+    "K": "#718096",  # Exomiser — slate grey
+    "M": "#d69e2e",  # LIRICAL — amber
+    "D": "#3182ce",  # multi-agent baseline — blue
+    "L": "#805ad5",  # +CE-rerank — purple
+    "S": SIG_GREEN,  # geno_agent — signature green
+    "N": "#dd6b20",  # RRF ensemble — orange
+}
 
 # Publication-grade plot style
 plt.rcParams.update(
@@ -324,9 +340,9 @@ def render_supp_table1() -> None:
 
 
 # =============================================================================
-# Figure 5 (P2) -- method-landscape positioning quadrant
+# Figure 6 (P2) -- method-landscape positioning quadrant
 # =============================================================================
-def render_figure5_landscape() -> None:
+def render_figure6_landscape() -> None:
     """Conceptual 2x2 positioning of geno_agent vs prior methods.
 
     Axes: knowledge source (curated KB -> primary literature) x inference-time
@@ -437,7 +453,7 @@ def render_figure5_landscape() -> None:
     tool(7.3, 1.9, "(BM25 / dense, same index)", "#6b46c1", w=2.1)
 
     ax.set_title(
-        "Figure 5 — Position of geno_agent in the method landscape",
+        "Figure 6 — Position of geno_agent in the method landscape",
         fontsize=13,
         fontweight="bold",
         pad=12,
@@ -452,9 +468,9 @@ def render_figure5_landscape() -> None:
         style="italic",
         color="#4a5568",
     )
-    fig.savefig(FIG_DIR / "fig5_landscape_quadrant.png")
+    fig.savefig(FIG_DIR / "fig6_landscape_quadrant.png")
     plt.close(fig)
-    print("  ✓ Figure 5 (method-landscape quadrant)")
+    print("  ✓ Figure 6 (method-landscape quadrant)")
 
 
 # =============================================================================
@@ -599,13 +615,6 @@ def render_figure3() -> None:
         if row["cell"] in cells and row["category"] in cats:
             by_cell_cat[row["cell"]][row["category"]] = row["top1_point"]
 
-    cell_colors = {
-        "K": "#718096",  # Exomiser - grey
-        "M": "#d69e2e",  # LIRICAL - amber
-        "D": "#3182ce",  # multi-agent baseline - blue
-        "L": "#805ad5",  # +rerank - purple
-        "S": "#2f855a",  # geno_agent - green
-    }
     cell_labels = {c: CELL_DISPLAY[c] for c in cells}
 
     fig, ax = plt.subplots(figsize=(9.5, 5.2))
@@ -613,7 +622,15 @@ def render_figure3() -> None:
     w = 0.16
     for i, c in enumerate(cells):
         vals = [by_cell_cat[c].get(cat, 0) for cat in cats]
-        bars = ax.bar(x + (i - 2) * w, vals, w, label=cell_labels[c], color=cell_colors[c])
+        bars = ax.bar(
+            x + (i - 2) * w,
+            vals,
+            w,
+            label=cell_labels[c],
+            color=CELL_COLORS[c],
+            edgecolor=EDGE,
+            linewidth=0.4,
+        )
         for b, v in zip(bars, vals, strict=False):
             ax.text(
                 b.get_x() + b.get_width() / 2,
@@ -642,9 +659,9 @@ def render_figure3() -> None:
 
 
 # =============================================================================
-# Figure 6 -- Hard-cohort full vs fair top-1 (distractor-difficulty stress test)
+# Figure 4 -- Hard-cohort full vs fair top-1 (distractor-difficulty stress test)
 # =============================================================================
-def render_figure6_hard() -> None:
+def render_figure4_hard() -> None:
     """Hard cohort (phenotype-similar distractors): full vs fair top-1 per cell.
 
     Visualises the annotation-overlap deconfounding signature under difficulty:
@@ -672,8 +689,8 @@ def render_figure6_hard() -> None:
         full,
         w,
         label="Full (n=1,047)",
-        color="#cbd5e0",
-        edgecolor="#4a5568",
+        color=NEUTRAL,
+        edgecolor=EDGE,
         linewidth=0.5,
     )
     b2 = ax.bar(
@@ -681,8 +698,8 @@ def render_figure6_hard() -> None:
         fair,
         w,
         label="Fair / overlap-absent (n=282)",
-        color="#2f855a",
-        edgecolor="#22543d",
+        color=SIG_GREEN,
+        edgecolor=EDGE,
         linewidth=0.5,
     )
     for bars, vals in ((b1, full), (b2, fair)):
@@ -701,22 +718,22 @@ def render_figure6_hard() -> None:
     ax.set_ylabel("Top-1 accuracy")
     ax.set_ylim(0, 0.75)
     ax.set_title(
-        "Figure 6 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
+        "Figure 4 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
         pad=10,
         fontsize=12,
         fontweight="bold",
     )
     ax.legend(loc="upper right", frameon=False)
     ax.grid(axis="y", alpha=0.3)
-    fig.savefig(FIG_DIR / "fig6_hard_difficulty.png")
+    fig.savefig(FIG_DIR / "fig4_hard_difficulty.png")
     plt.close(fig)
-    print("  ✓ Figure 6 (hard-cohort full vs fair top-1)")
+    print("  ✓ Figure 4 (hard-cohort full vs fair top-1)")
 
 
 # =============================================================================
-# Figure 4 -- Faithfulness vs top-1 correctness
+# Figure 5 -- Faithfulness vs top-1 correctness
 # =============================================================================
-def render_figure4() -> None:
+def render_figure5_faithfulness() -> None:
     """RAGAS + DeepEval faithfulness distributions split by top-1 correctness."""
     # Load RAGAS top1-only (n=100) per-case + DeepEval per-case
     ragas = json.loads((DATA_EVAL / "ragas_top1only_cell_S_n100_summary.json").read_text())
@@ -782,9 +799,9 @@ def render_figure4() -> None:
         widths=0.55,
         medianprops={"color": "black", "linewidth": 1.5},
     )
-    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+    for patch, color in zip(bp["boxes"], [POS_FILL, NEG_FILL], strict=False):
         patch.set_facecolor(color)
-        patch.set_edgecolor("#2d3748")
+        patch.set_edgecolor(EDGE)
     ax.set_ylabel("RAGAS faithfulness (top-1-only)")
     mean_c = np.mean(ragas_correct) if ragas_correct else float("nan")
     mean_w = np.mean(ragas_wrong) if ragas_wrong else float("nan")
@@ -802,9 +819,9 @@ def render_figure4() -> None:
         widths=0.55,
         medianprops={"color": "black", "linewidth": 1.5},
     )
-    for patch, color in zip(bp["boxes"], ["#c6f6d5", "#fed7d7"], strict=False):
+    for patch, color in zip(bp["boxes"], [POS_FILL, NEG_FILL], strict=False):
         patch.set_facecolor(color)
-        patch.set_edgecolor("#2d3748")
+        patch.set_edgecolor(EDGE)
     ax.set_ylabel("DeepEval groundedness")
     mean_c2 = np.mean(de_correct) if de_correct else float("nan")
     mean_w2 = np.mean(de_wrong) if de_wrong else float("nan")
@@ -814,14 +831,14 @@ def render_figure4() -> None:
     ax.grid(axis="y", alpha=0.3)
 
     fig.suptitle(
-        "Figure 4 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
+        "Figure 5 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
         fontsize=12,
         fontweight="bold",
         y=1.02,
     )
-    fig.savefig(FIG_DIR / "fig4_faithfulness_vs_correctness.png")
+    fig.savefig(FIG_DIR / "fig5_faithfulness_vs_correctness.png")
     plt.close(fig)
-    print(f"  ✓ Figure 4 (faithfulness gaps: RAGAS={gap:+.1f}pp, DeepEval={gap2:+.1f}pp)")
+    print(f"  ✓ Figure 5 (faithfulness gaps: RAGAS={gap:+.1f}pp, DeepEval={gap2:+.1f}pp)")
 
 
 # =============================================================================
@@ -1023,9 +1040,9 @@ def main() -> None:
     # Fig 1 (CONSORT, shared) is generated by scripts/manuscript/P1_figures.ipynb.
     render_figure2()
     render_figure3()
-    render_figure4()
-    render_figure5_landscape()
-    render_figure6_hard()
+    render_figure4_hard()
+    render_figure5_faithfulness()
+    render_figure6_landscape()
     render_supp_fig1()
     render_supp_fig2()
     print()
