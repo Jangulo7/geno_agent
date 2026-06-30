@@ -30,6 +30,7 @@ The shared CONSORT (`fig1_consort_flow.png`) comes from the P1 notebook.
 | `fig3_per_mondo_top1.png` | per-MONDO top-1 accuracy | `_results_summary.json` (by_category) |
 | `fig4_faithfulness_vs_correctness.png` | faithfulness vs correctness gaps | RAGAS/DeepEval sidecars |
 | `fig5_landscape_quadrant.png` | method-landscape positioning | schematic |
+| `fig6_hard_difficulty.png` | hard cohort: full vs fair top-1 per system | `data/eval_hard/_results_stratified.json` |
 | `supp_fig1_lirical_recency_paradox.png` | recency stratification | `_results_recency.json` |
 | `supp_fig2_llm_family_ablation.png` | LLM-family ablation | `_results_lea_ablation.json` |
 

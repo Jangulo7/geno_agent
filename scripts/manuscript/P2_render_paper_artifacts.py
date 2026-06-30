@@ -6,6 +6,7 @@ Produces:
                    (supp_table1_tripod_llm.md is maintained manually and preserved)
   reports/figures/ fig2_architecture.png, fig3_per_mondo_top1.png,
                    fig4_faithfulness_vs_correctness.png, fig5_landscape_quadrant.png,
+                   fig6_hard_difficulty.png (hard-cohort full vs fair top-1),
                    supp_fig1_lirical_recency_paradox.png,
                    supp_fig2_llm_family_ablation.png
 
@@ -29,6 +30,7 @@ import numpy as np
 
 REPO = pathlib.Path("/home/hana77/ia_jo/uax_tfm/geno_agent")
 DATA_EVAL = REPO / "data/eval_1050"
+DATA_HARD = REPO / "data/eval_hard"
 FIG_DIR = REPO / "reports/figures"
 TBL_DIR = REPO / "reports/tables"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -483,9 +485,16 @@ def render_figure2() -> None:
 
     def octagon(cx, cy, w, h, c=0.28):
         return mpatches.Polygon(
-            [(cx - w + c, cy - h), (cx + w - c, cy - h), (cx + w, cy - h + c),
-             (cx + w, cy + h - c), (cx + w - c, cy + h), (cx - w + c, cy + h),
-             (cx - w, cy + h - c), (cx - w, cy - h + c)],
+            [
+                (cx - w + c, cy - h),
+                (cx + w - c, cy - h),
+                (cx + w, cy - h + c),
+                (cx + w, cy + h - c),
+                (cx + w - c, cy + h),
+                (cx - w + c, cy + h),
+                (cx - w, cy + h - c),
+                (cx - w, cy - h + c),
+            ],
             closed=True,
         )
 
@@ -495,37 +504,82 @@ def render_figure2() -> None:
             patch.set(facecolor=fc, edgecolor=ec, linewidth=1.8)
             ax.add_patch(patch)
         else:
-            ax.add_patch(mpatches.FancyBboxPatch(
-                (x - hw, y - hh), 2 * hw, 2 * hh,
-                boxstyle="round,pad=0.02,rounding_size=0.12",
-                facecolor=fc, edgecolor=ec, linewidth=1.8))
+            ax.add_patch(
+                mpatches.FancyBboxPatch(
+                    (x - hw, y - hh),
+                    2 * hw,
+                    2 * hh,
+                    boxstyle="round,pad=0.02,rounding_size=0.12",
+                    facecolor=fc,
+                    edgecolor=ec,
+                    linewidth=1.8,
+                )
+            )
         ax.text(x, y, label, ha="center", va="center", fontsize=9.2)
 
     # INPUT / OUTPUT labels above the terminals
-    ax.text(0.95, y + hh + 0.32, "INPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
-    ax.text(11.75, y + hh + 0.32, "OUTPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748")
+    ax.text(
+        0.95, y + hh + 0.32, "INPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748"
+    )
+    ax.text(
+        11.75, y + hh + 0.32, "OUTPUT", ha="center", fontsize=11, fontweight="bold", color="#2d3748"
+    )
 
     for i in range(len(stages) - 1):
-        ax.annotate("", xy=(stages[i + 1][1] - hw, y), xytext=(stages[i][1] + hw, y),
-                    arrowprops={"arrowstyle": "-|>", "color": "#4a5568", "lw": 1.6})
+        ax.annotate(
+            "",
+            xy=(stages[i + 1][1] - hw, y),
+            xytext=(stages[i][1] + hw, y),
+            arrowprops={"arrowstyle": "-|>", "color": "#4a5568", "lw": 1.6},
+        )
 
     # Cell-S span bracket
-    ax.annotate("", xy=(stages[5][1] + hw, 1.85), xytext=(stages[1][1] - hw, 1.85),
-                arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.6})
-    ax.text(6.35, 1.35, "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
-            ha="center", va="center", fontsize=10, color="#2f855a", style="italic")
+    ax.annotate(
+        "",
+        xy=(stages[5][1] + hw, 1.85),
+        xytext=(stages[1][1] - hw, 1.85),
+        arrowprops={"arrowstyle": "|-|", "color": "#2f855a", "lw": 1.6},
+    )
+    ax.text(
+        6.35,
+        1.35,
+        "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
+        ha="center",
+        va="center",
+        fontsize=10,
+        color="#2f855a",
+        style="italic",
+    )
 
     legend_handles = [
-        mpatches.Patch(facecolor="#bee3f8", edgecolor="#2b6cb0", label="LangGraph agents (deterministic)"),
+        mpatches.Patch(
+            facecolor="#bee3f8", edgecolor="#2b6cb0", label="LangGraph agents (deterministic)"
+        ),
         mpatches.Patch(facecolor="#fed7e2", edgecolor="#b83280", label="Neural reranking"),
-        mpatches.Patch(facecolor="#c6f6d5", edgecolor="#2f855a", label="LLM-as-Evidence-Aggregator (LEA)"),
-        mpatches.Patch(facecolor="#e2e8f0", edgecolor="#2d3748", label="Input / Output (terminals)"),
+        mpatches.Patch(
+            facecolor="#c6f6d5", edgecolor="#2f855a", label="LLM-as-Evidence-Aggregator (LEA)"
+        ),
+        mpatches.Patch(
+            facecolor="#e2e8f0", edgecolor="#2d3748", label="Input / Output (terminals)"
+        ),
     ]
-    ax.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, -0.04),
-              ncol=2, frameon=False, fontsize=9.5, columnspacing=3, handlelength=1.4)
+    ax.legend(
+        handles=legend_handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, -0.04),
+        ncol=2,
+        frameon=False,
+        fontsize=9.5,
+        columnspacing=3,
+        handlelength=1.4,
+    )
 
-    ax.set_title("Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
-                 pad=12, fontsize=13, fontweight="bold")
+    ax.set_title(
+        "Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
+        pad=12,
+        fontsize=13,
+        fontweight="bold",
+    )
     fig.savefig(FIG_DIR / "fig2_architecture.png")
     plt.close(fig)
     print("  ✓ Figure 2 (architecture)")
@@ -585,6 +639,78 @@ def render_figure3() -> None:
     fig.savefig(FIG_DIR / "fig3_per_mondo_top1.png")
     plt.close(fig)
     print("  ✓ Figure 3 (per-MONDO top-1)")
+
+
+# =============================================================================
+# Figure 6 -- Hard-cohort full vs fair top-1 (distractor-difficulty stress test)
+# =============================================================================
+def render_figure6_hard() -> None:
+    """Hard cohort (phenotype-similar distractors): full vs fair top-1 per cell.
+
+    Visualises the annotation-overlap deconfounding signature under difficulty:
+    LIRICAL collapses full->fair while geno_agent (and +CE-rerank) improve and
+    lead the fair cohort. Source: data/eval_hard/_results_stratified.json.
+    """
+    strat = json.loads((DATA_HARD / "_results_stratified.json").read_text())["per_cell"]
+    cells = CELL_ORDER  # K, M, D, L, S, N
+    full = [strat["__all__"][c]["top1"][0] for c in cells]
+    fair = [strat["overlap_absent"][c]["top1"][0] for c in cells]
+    short = {
+        "K": "Exomiser",
+        "M": "LIRICAL",
+        "D": "Multi-agent",
+        "L": "+CE-rerank",
+        "S": "geno_agent",
+        "N": "RRF(M+S)",
+    }
+
+    fig, ax = plt.subplots(figsize=(9.5, 5.0))
+    x = np.arange(len(cells))
+    w = 0.38
+    b1 = ax.bar(
+        x - w / 2,
+        full,
+        w,
+        label="Full (n=1,047)",
+        color="#cbd5e0",
+        edgecolor="#4a5568",
+        linewidth=0.5,
+    )
+    b2 = ax.bar(
+        x + w / 2,
+        fair,
+        w,
+        label="Fair / overlap-absent (n=282)",
+        color="#2f855a",
+        edgecolor="#22543d",
+        linewidth=0.5,
+    )
+    for bars, vals in ((b1, full), (b2, fair)):
+        for b, v in zip(bars, vals, strict=False):
+            ax.text(
+                b.get_x() + b.get_width() / 2,
+                v + 0.010,
+                f"{v:.2f}",
+                ha="center",
+                va="bottom",
+                fontsize=7.5,
+            )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([short[c] for c in cells])
+    ax.set_ylabel("Top-1 accuracy")
+    ax.set_ylim(0, 0.75)
+    ax.set_title(
+        "Figure 6 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
+        pad=10,
+        fontsize=12,
+        fontweight="bold",
+    )
+    ax.legend(loc="upper right", frameon=False)
+    ax.grid(axis="y", alpha=0.3)
+    fig.savefig(FIG_DIR / "fig6_hard_difficulty.png")
+    plt.close(fig)
+    print("  ✓ Figure 6 (hard-cohort full vs fair top-1)")
 
 
 # =============================================================================
@@ -899,6 +1025,7 @@ def main() -> None:
     render_figure3()
     render_figure4()
     render_figure5_landscape()
+    render_figure6_hard()
     render_supp_fig1()
     render_supp_fig2()
     print()
