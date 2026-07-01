@@ -62,7 +62,7 @@ log = logging.getLogger("stratified")
 DEFAULT_EVAL_ROOT: Final[Path] = PROJECT_ROOT / "data" / "eval_1050"
 DEFAULT_TEST_CASES: Final[Path] = PROJECT_ROOT / "data" / "test_cases_1050" / "test_cases.jsonl"
 DEFAULT_OVERLAP: Final[Path] = PROJECT_ROOT / "data" / "test_cases_1050" / "annotation_overlap.json"
-CELL_IDS: Final[tuple[str, ...]] = ("D", "K", "L", "M", "S", "N")
+CELL_IDS: Final[tuple[str, ...]] = ("D", "K", "L", "M", "S", "N", "O")
 COMPARISONS: Final[tuple[tuple[str, str], ...]] = (
     ("S", "K"),  # paper headline
     ("S", "L"),  # LEA effect
@@ -71,6 +71,7 @@ COMPARISONS: Final[tuple[tuple[str, str], ...]] = (
     ("M", "S"),  # LIRICAL vs geno_agent
     ("N", "S"),  # Thread F: RRF ensemble vs S alone
     ("N", "M"),  # Thread F: RRF ensemble vs M alone
+    ("S", "O"),  # retrieval + agentic workflow effect (vs bare LLM)
 )
 
 

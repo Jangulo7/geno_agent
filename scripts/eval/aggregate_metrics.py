@@ -67,6 +67,7 @@ CELLS: Final[dict[str, dict]] = {
     "L": {"dir": "cell_L_rerank_inside_d", "label": "multi-agent + CE-rerank-inside · hybrid"},
     "M": {"dir": "cell_M_lirical_hpo_only", "label": "LIRICAL HPO-only (baseline)"},
     "N": {"dir": "cell_N_rrf_m_s", "label": "RRF ensemble of M + S (Thread F)"},
+    "O": {"dir": "cell_O_llm_only", "label": "LLM-only, no retrieval (Qwen3-8B)"},
     "Q": {"dir": "cell_Q_multi_lea_dense", "label": "multi-agent + LEA - dense"},
     "R": {"dir": "cell_R_multi_lea_hybrid", "label": "multi-agent + LEA - hybrid"},
     "S": {
