@@ -62,6 +62,15 @@ import torch
 from fastembed import SparseTextEmbedding
 from sentence_transformers import SentenceTransformer
 
+# Deterministic seeding — match every other pipeline entrypoint (08/09/10/11):
+# fixes numpy/torch/cudnn to seed 42 so bulk embedding is reproducible on the
+# pinned hardware. Called at import so it precedes any model load or encode.
+PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
+from scripts.utils.seed import apply_seeds  # noqa: E402
+
+apply_seeds()
+
 # ---------------------------------------------------------------- defaults
 INPUT_PATH: Final[Path] = Path("/home/hana77/chunks/all_chunks.jsonl.gz")
 OUTPUT_DIR: Final[Path] = Path("/home/hana77/embeddings")

@@ -7,13 +7,14 @@ Interface-compatible drop-in: same
 ``(chunk, gene, hpo_labels, hgnc) -> CriticGrade`` signature.
 
 Design notes:
-  * **Thinking mode ON.** Qwen3 has native ``<think>...</think>`` support
-    and our vLLM startup script (PR #30) passes ``--reasoning-parser qwen3``
-    so the thinking tokens land in ``response.reasoning_content`` and are
-    kept out of the JSON ``content`` field. The Critic's job — does this
-    chunk substantively support a gene->phenotype claim, and what kind of
-    evidence is it? — is exactly the reasoning-heavy operation that
-    benefits from thinking.
+  * **Thinking mode OFF.** Every prompt is prefixed with the ``/no_think``
+    control token (see ``SYSTEM_PROMPT`` / ``BATCH_SYSTEM_PROMPT``), so Qwen3
+    emits only the JSON answer with no ``<think>...</think>`` trace. Grading a
+    chunk is a bounded classification, so we trade open-ended reasoning for
+    faster, tightly-structured decoding and lower output-token cost. vLLM is
+    still launched with ``--reasoning-parser qwen3`` in
+    ``scripts/eval/start_vllm.sh``, but the per-request ``/no_think`` prefix
+    overrides that global setting.
   * **Cross-check against deterministic gene-mention regex.** The LLM is
     allowed to set ``gene_mention_valid=True`` even when the deterministic
     regex would say False, but only if the LLM's response includes the
@@ -45,11 +46,9 @@ from src.tools.llm import LlmConfig, generate_json
 
 logger = logging.getLogger(__name__)
 
-# Max output tokens INCLUDING the Qwen3 thinking trace. vLLM with
-# --reasoning-parser qwen3 puts thinking in response.raw[…].reasoning
-# (NOT in content), but the thinking still counts against max_tokens.
-# A typical Critic thinking pass is ~400-600 tokens; the JSON answer
-# adds ~120; 1024 gives generous headroom.
+# Max output tokens for the grade. Prompts are prefixed ``/no_think`` (thinking
+# OFF), so the model emits only the JSON answer (~120 tokens for a single grade);
+# 1024 leaves generous headroom and also covers the batched multi-chunk array.
 _MAX_OUTPUT_TOKENS: Final[int] = 1024
 
 # Cap chunk text fed into the prompt. Most chunks are < 512 tokens already;
@@ -142,7 +141,7 @@ def grade_chunk_llm(
     hgnc: HgncIndex,
     *,
     llm_cfg: LlmConfig | None = None,
-    enable_thinking: bool = True,
+    enable_thinking: bool = False,
 ) -> CriticGrade:
     """LLM-prompted replacement for :func:`grade_chunk`.
 
@@ -159,10 +158,11 @@ def grade_chunk_llm(
             (rejects LLM=True when neither the canonical symbol nor any
             HGNC alias appears literally in the text).
         llm_cfg: Optional LLM server config. Defaults to local vLLM.
-        enable_thinking: Pass through to the LLM (currently unused at the
-            HTTP level — vLLM handles thinking via its global flag set in
-            ``scripts/eval/start_vllm.sh``). Kept as a parameter so the
-            caller can audit intent.
+        enable_thinking: Reserved / currently a no-op. Thinking is controlled
+            per-request by the ``/no_think`` prefix hard-coded into the system
+            prompts (thinking OFF); this flag is not forwarded to the HTTP API.
+            Kept in the signature so behaviour can be wired later without an
+            interface change; default ``False`` matches the actual behaviour.
 
     Returns:
         :class:`CriticGrade`.
@@ -253,7 +253,7 @@ def _build_batch_prompt(chunks: list[RetrievedChunk], gene: str, hpo_labels: lis
         text = (ch.text or "")[:_CHUNK_TEXT_CAP_CHARS]
         lines.append(f"\n[chunk_idx={i}] section={ch.section_type}")
         lines.append(text)
-    lines.append("\nGrade every chunk. Return a JSON array of {len(chunks)} objects.")
+    lines.append(f"\nGrade every chunk. Return a JSON array of {len(chunks)} objects.")
     return "\n".join(lines)
 
 

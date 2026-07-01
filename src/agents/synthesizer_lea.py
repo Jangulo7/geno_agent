@@ -244,7 +244,8 @@ def lea_synthesizer_node(
     user_prompt = _build_lea_prompt(hpo_labels, top_gene_symbols, evidence)
 
     # Persist a per-case sidecar log for RAGAS/DeepEval evaluation. Attached
-    # via setattr because AgentState is a frozen dataclass; consumed by
+    # via object.__setattr__ because AgentState uses slots (dataclass with
+    # slots=True, not frozen) and lea_log is set outside __init__; consumed by
     # scripts/eval/rerank_inside_d.py to write data/eval_*/cell_S_responses/.
     # When the LEA call fails or returns invalid JSON, the log records the
     # failure mode so faithfulness/hallucination metrics can mark these cases
