@@ -2,9 +2,9 @@
 
 **An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease**
 
-> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047; target:
-> *Genome Medicine*). An end-to-end agentic-workflow RAG system for
-> literature-based causal gene prioritisation in rare Mendelian disease.
+> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047). An
+> end-to-end agentic-workflow RAG system for literature-based causal gene
+> prioritisation in rare Mendelian disease.
 >
 > **Headline (n=1,047, deconfounded).** On the *fair-comparison cohort* — cases
 > whose source publication is **not** cited by `phenotype.hpoa` for the causal
@@ -192,9 +192,9 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 - **Publication-recency stratification.** Exomiser top-1 collapses 0.847 → 0.480
   on post-2020 source papers; geno_agent's edge over Exomiser is 2.7× larger on
   recent cases.
-- **LLM-family ablation.** Replaying the LEA prompts across Qwen3-32B, Claude
-  Sonnet 4.6, and DeepSeek-V3 converges within 2.4 pp on the fair cohort — the
-  headline is robust to model family.
+- **LLM-family ablation.** Replaying the LEA prompts across three frontier LLMs
+  spanning three independent model families converges within 2.4 pp on the fair
+  cohort — the headline is robust to model family.
 - **Statistical rigor.** Primary fair-cohort comparisons survive Holm correction
   (adjusted p=0.028); the geno_agent–Exomiser advantage is invariant to stratum
   weighting (+0.034 equal-weighted vs +0.035 unweighted).
@@ -214,29 +214,18 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 | 1B (test set v2) | n=459 paper v1 (v0.1.19, seed 4242) | ✅ Complete |
 | **1B (test set v3)** | **n=1,047 paper extension (v0.1.26, seed 42, disproportionate 250+300+250+250)** | ✅ Complete |
 | 2a | LangGraph 4-agent state graph + Qwen3-8B/vLLM | ✅ Complete |
-| 2c | CopilotKit React UI | ⏳ Deferred to post-paper |
 | Eval (earlier n=75) | 16-cell factorial at n=75 | ✅ Complete |
 | **Eval (paper v2)** | **5 cells × n=1,047, bootstrap CIs, per-MONDO breakdown, LIRICAL** | ✅ Complete |
 | **Eval (paper v3)** | **LEA logging + RAGAS + DeepEval + annotation-overlap + recency + LLM-family ablation** | ✅ Complete |
 | **Robustness** | **Leave-one-paper-out + Holm/BH multiplicity correction + stratum-weighted sensitivity** | ✅ Complete (2026-06-11) |
-| **Manuscript** | **Q1 draft (*Genome Medicine*): Methods + Results + Discussion + 50 refs + TRIPOD-LLM** | 🟢 Prose complete; pending UE ethics letter + co-author list |
+| **Difficulty × leakage 2×2** | **Hard (phenotype-similar distractor) cohort + hard-cohort RAGAS/DeepEval** | ✅ Complete (2026-07-01) |
 
-Reports: the consolidated methodology, execution plans, result write-ups, and
-manuscript drafts are maintained as **local working documents and kept private until
-publication**. The published methodology, results, and benchmark are available
-through the Figshare deposits (see [Data and software availability](#data-and-software-availability));
-`reports/` retains the rendered **figures, tables, and pipeline logs**.
-
-### Phase 2 UI — CopilotKit
-
-The interactive demo will be served through a [CopilotKit](https://copilotkit.ai)-based React UI sourced from the user's fork at [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) (upstream `CopilotKit/CopilotKit`). CopilotKit ships first-class LangGraph integration via the AG-UI protocol; geno_agent's four agents stream their state into a chat + generative-UI surface so a clinician-style user can:
-
-- Pick HPO phenotype terms with autocomplete sourced from the local `hp.obo`
-- Paste / edit a candidate gene list (validated against HGNC)
-- Watch the Query Planner expand HPO terms, the Retriever pull chunks from Qdrant, the Critic grade them, and the Synthesizer re-rank — live, with citations
-- Click into individual `<GeneCandidateCard>` tiles to see the supporting passages with PMC links
-
-Full design in master plan §11.
+Reports: the consolidated methodology, execution plans, and result write-ups are
+maintained as **local working documents and kept private until publication** — the
+README is the single explanatory document in the repo. The published results and
+benchmark are available through the Figshare deposits (see
+[Data and software availability](#data-and-software-availability)); `reports/`
+retains the rendered **figures, tables, and method descriptors**.
 
 ## Reproducibility
 
@@ -266,9 +255,9 @@ In addition:
 - All cohort sample sizes (n=75, n=459, n=1,047) regenerable from `RANDOM_SEED` + pinned ontology versions + Phenopacket Store version
 - vLLM at `temperature=0.0` is mostly deterministic (~98 % per-case rank stability between runs; **top-1 metric is bit-identical** across two independent v2 and v3 runs)
 
-The full reproducibility specification is documented in
-[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md) §4.1.3 and consolidated in the
-project's methodology document (kept local until publication).
+The full reproducibility specification is kept in the project's local methodology
+document (private until publication); the pinned versions and SHA-256 hashes below,
+together with `data/MANIFEST.tsv`, are the reproducibility-critical subset.
 
 ## Data and software availability
 
@@ -279,7 +268,7 @@ The release artifacts are archived on Figshare (project "GenoAgent") with persis
 | **Benchmark cohort — standard (n=1,047)** — random distractors; `test_cases.jsonl` + provenance + manifest | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32814449`](https://doi.org/10.6084/m9.figshare.32814449) |
 | **Benchmark cohort — hard (n=1,047)** — phenotype-similar (Resnik BMA) distractors; case-paired with the standard set | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32816468`](https://doi.org/10.6084/m9.figshare.32816468) |
 | **Methods / shared foundation** — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
-| **GenoAgent system** — agents, evaluation harness, per-cell results, manuscript artifacts | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
+| **GenoAgent system** — agents, evaluation harness, per-cell results, figures + tables | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
 
 The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixed-licence verbatim PMC OA text): they are not deposited but regenerate bit-for-bit from public inputs via the methods item (index fingerprint `52,777,395` chunks; SHA-256 in `data/MANIFEST.tsv`). Upstream resources — Phenopacket Store v0.1.26, ontologies, Exomiser/LIRICAL, and the Qwen3-8B / PubMedBERT / MedCPT models — are referenced by pinned version (see [Reproducibility](#reproducibility)), not redistributed.
 
@@ -287,7 +276,6 @@ The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixe
 
 ```
 geno_agent/
-├── MASTER_PROJECT_v2.2.md            # Authoritative project spec (Phases 1A, 1B, 2, 3)
 ├── pyproject.toml                     # Pinned Python dependencies
 ├── docker-compose.yml                 # Qdrant v1.14.1 on :6533/:6534
 ├── .env.example                       # Template; copy to .env and fill in
@@ -317,19 +305,15 @@ geno_agent/
 ├── src/
 │   ├── agents/                        # LangGraph state + 4 agent nodes + synthesizer_lea
 │   ├── baselines/                     # exomiser_runner.py + lirical_runner.py (v3)
-│   ├── api/                           # FastAPI (Phase 2b, deferred)
 │   └── tools/                         # Qdrant search, HGNC, LLM wrapper
-├── frontend/                          # Phase 2c CopilotKit React UI (deferred to post-paper)
 ├── tests/                             # Unit + integration
 ├── config/                            # Prompt templates, agent configs
-├── reports/                           # All planning + results documents
-│   ├── methodology.md                 # v3 consolidated technical methodology (authoritative)
-│   ├── research_status_2026-06-22_n1047.md  # consolidated n=1,047 status + gap analysis
-│   ├── paper_extension_plan_v2.md     # v2 plan (n=1,047, v0.1.26)
-│   ├── paper_extension_plan_v3.md     # v3 plan (LIRICAL + RAGAS + Threads D-G)
-│   ├── paper_extension_results.md     # v2 final results (each above also has a .html)
-│   ├── tables/                        # supplementary tables (e.g. multiplicity correction)
-│   └── _archive_n75/           # superseded n=75-era reports + v1 plan (n=460)
+├── reports/                           # Tracked: method descriptors, figures, tables
+│   ├── dataset-development-method.md  # cohort + distractor-variant construction
+│   ├── annotation-overlap-method.md   # leakage-flag computation
+│   ├── architecture/                  # geno_agent_architecture.md
+│   ├── figures/                       # publication figures (regenerated from committed data via `scripts/`)
+│   └── tables/                        # supplementary tables (e.g. multiplicity correction)
 └── data/                              # Manifests + ontologies (large files .gitignored)
     ├── test_cases/                    # n=75 earlier cohort (v0.1.19)
     ├── test_cases_500/                # n=459 paper v1 cohort (v0.1.19, seed 4242)
@@ -340,7 +324,7 @@ geno_agent/
     └── eval_1050_lopo_full/           # leave-one-paper-out results (summaries; per-case sidecars gitignored)
 ```
 
-Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean. The `frontend/` directory will hold a standalone Next.js + CopilotKit project; the upstream CopilotKit framework lives at the user's fork [`github.com/Jangulo7/agent_UI`](https://github.com/Jangulo7/agent_UI) and is consumed via npm rather than vendored.
+Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean.
 
 ## Quick start
 
@@ -366,10 +350,9 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
-Detailed Phase 1A and 1B execution instructions are in
-[`MASTER_PROJECT_v2.2.md`](MASTER_PROJECT_v2.2.md). The full paper-extension
-methodology and per-version execution plans are kept as local working documents
-(private until publication).
+The full paper-extension methodology and per-version execution plans are kept as
+local working documents (private until publication); the reproducible pipeline is
+the `scripts/` drivers plus the pinned versions above.
 
 ## Hardware
 
@@ -383,9 +366,8 @@ The architecture should run on any GPU with ≥24 GB VRAM and is GPU-required fo
 
 ## Citation
 
-A peer-reviewed manuscript derived from this work is in preparation for
-submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
-*Briefings in Bioinformatics*). In the interim, please cite this repository:
+This work is being prepared for peer-reviewed publication. In the interim,
+please cite this repository:
 
 ```bibtex
 @misc{angulo2026geno_agent,
@@ -394,7 +376,7 @@ submission to *Genome Medicine* (fallbacks: *Bioinformatics*, *JAMIA*,
                   Gene Prioritization in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Doctoral first paper (Universidad Europea de Madrid; n=1,047; target: Genome Medicine).}
+  note         = {Doctoral first paper (Universidad Europea de Madrid; n=1,047).}
 }
 ```
 
