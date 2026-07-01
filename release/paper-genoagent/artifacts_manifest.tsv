@@ -5,9 +5,9 @@ data/eval_1050/ rationale derivative (ranked + lea_response_parsed + chunk prove
 data/eval_1050_lopo_full/ (_lopo_*.{json,md} summaries)	leave-one-paper-out robustness	UPLOAD	38 MB (summaries; per-case sidecars gitignored)	AGPL-3.0	NO	git-tracked summaries only
 reports/figures/*.png	manuscript figures (CONSORT, architecture, results)	UPLOAD	~1.4 MB	AGPL-3.0	NO	git-tracked
 reports/tables/*	manuscript + supplementary tables	UPLOAD	~60 KB	AGPL-3.0	NO	git-tracked
-reports/manuscript_q1_draft.md + _apa.md	main manuscript draft	UPLOAD (supplementary)	~150 KB	AGPL-3.0	NO	git-tracked
-reports/explainability_report.md, tripod_llm_compliance.md, wallclock_cost_table.md, deeprare_comparability_analysis.md	supporting analyses	UPLOAD (supplementary)	~250 KB	AGPL-3.0	NO	git-tracked
-SHARED foundation (Qdrant index + ontologies + n=1,047 cohort + MANIFEST)	retrieval + eval dependency	REFERENCE	—	see P1	—	cite P1 Figshare DOI <to be filled>; do NOT duplicate
+reports/manuscript_q1_draft.md + _apa.md	main manuscript draft	DO-NOT-UPLOAD (privatised; local-only, not bundled in v1.1)	~150 KB	AGPL-3.0	NO	git-tracked
+reports/explainability_report.md, tripod_llm_compliance.md, wallclock_cost_table.md, deeprare_comparability_analysis.md	supporting analyses	DO-NOT-UPLOAD (privatised; local-only, not bundled in v1.1)	~250 KB	AGPL-3.0	NO	git-tracked
+SHARED foundation (Qdrant index + ontologies + n=1,047 cohort + MANIFEST)	retrieval + eval dependency	REFERENCE	—	see P1	—	cite P1 Figshare DOI 10.6084/m9.figshare.32814491; do NOT duplicate
 Qwen3-8B (reasoning), vLLM 0.20.1	local LLM + serving	REFERENCE	16 GB	Apache-2.0	—	upstream HF / vLLM (pinned)
 MedCPT Cross-Encoder (ncbi/MedCPT-Cross-Encoder)	reranker (cells L/S)	REFERENCE	—	upstream terms	—	upstream HF
 Exomiser CLI 14.0.2 (+ data 2402), LIRICAL CLI 2.4.0	curated baselines (cells K/M)	REFERENCE	~24.5 GB data	BSD-3 / GPL-3	—	upstream GitHub releases (pinned)

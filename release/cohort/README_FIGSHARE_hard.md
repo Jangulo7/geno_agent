@@ -1,0 +1,119 @@
+# GenoAgent Benchmark (Hard): Phenotype-Similar Distractor Variant (n=1,047)
+
+**Title.** GenoAgent Benchmark (Hard): A Phenotype-Similar Distractor Variant of
+the Stratified Rare-Disease Cohort for Literature-Based Causal Gene
+Prioritization (n=1,047)
+
+**Author.** Johanna Angulo (Universidad Europea de Madrid)
+
+**Figshare item type.** Dataset · **License.** CC BY 4.0 · **Version.** v1.0
+
+**DOI (this dataset).** `10.6084/m9.figshare.32816468`
+**Base/standard cohort (sibling).** `10.6084/m9.figshare.32814449`
+
+## Summary
+
+A **hard** variant of the GenoAgent benchmark cohort. It contains the **same
+1,047 rare-disease cases** as the standard cohort (DOI `10.6084/m9.figshare.32814449`) — identical
+`case_id`, `causal_gene`, `hpo_terms`, `diseases`, and the same deconfounding
+layers — but the 49 distractor genes per case are **phenotypically similar to the
+case** rather than random. This turns distractor difficulty into an explicit
+experimental axis, orthogonal to the annotation-overlap (leakage) axis shipped
+with the standard cohort, enabling a 2×2 (difficulty × leakage) evaluation.
+
+## How the hard distractors are chosen (deterministic, version-pinned)
+
+- **Similarity.** HPO **Resnik** term similarity (information content of the
+  most-informative common ancestor) aggregated by **best-match-average (BMA)**
+  between the case HPO profile and each gene's known HPO annotations — the
+  Phenomizer/Exomiser-standard symmetric phenotypic-similarity measure.
+- **Information content.** Computed from the gene→HPO annotation corpus
+  (`genes_to_phenotype.txt`), frequencies propagated over the `hp.obo` is-a DAG.
+- **Pool & exclusions.** Candidates are HGNC protein-coding genes (the same pool
+  as the standard cohort) that carry HPO annotations, **excluding** the causal
+  gene and **excluding any gene annotated to the case's own causal disease(s)**,
+  so a distractor can never be a genuine alternative cause (clean hard negatives).
+- **Selection.** The **top-49** by BMA; ties broken by gene symbol (deterministic).
+- **Shuffle.** The final 50-gene list is shuffled with the **same per-case seed**
+  as the standard cohort (`BLAKE2b(global_seed=42 | case_id)`), so the variant is
+  as reproducible and case-paired as the original.
+
+## Provenance
+
+| Input | Pinned version | License |
+|---|---|---|
+| GA4GH Phenopacket Store (cases) | v0.1.26 (2026-01-13) | CC BY 4.0 |
+| HPO `hp.obo` + `genes_to_phenotype.txt` (similarity) | v2026-02-16 | open (HPO) |
+| HGNC complete set (distractor gene pool) | 2026-04-07 | open (EBI/HGNC) |
+
+## Files
+
+| File | Rows | What |
+|---|---:|---|
+| `test_cases_hard.jsonl` | 1,047 | Canonical hard cohort — same schema as the standard cohort plus `candidate_difficulty: "hard"`. SHA-256 in `test_cases_hard_manifest.json`. |
+| `hard_candidates_stats.json` | — | Per-case selection diagnostics (causal vs distractor BMA, #scored candidates) + `meta`. |
+| `test_cases_hard_manifest.json` | — | Build manifest: pinned versions, seed, SHA-256 + bytes, relation to base DOI. |
+| `CHECKSUMS.sha256` | — | SHA-256 of every file in this bundle (verify with `sha256sum -c`). |
+| `LICENSE` | — | CC BY 4.0 dataset license (machine-discoverable; SPDX `CC-BY-4.0`). |
+
+## Data dictionary
+
+Identical to the standard cohort, with one added field:
+
+| Field | Type | Description |
+|---|---|---|
+| `candidate_genes` | list[string] | 50 HGNC symbols: causal + **49 phenotype-similar** distractors. |
+| `causal_gene_index_in_candidates` | int | 0-based index of the causal gene. |
+| `candidate_difficulty` | string | `"hard"` (marks this as the hard variant). |
+
+All other fields (`case_id`, `category`, `hpo_terms`, `diseases`, `causal_gene`,
+`pmc_article_count`, `source_phenopacket`) are byte-for-byte the values of the
+matching case in the standard cohort.
+
+## Recommended use
+
+Pair with the standard cohort for a **difficulty × leakage** analysis: report on
+the standard (random) and hard (phenotype-similar) candidate lists, each split by
+the annotation-overlap fair subset. The hard variant stresses
+differential-diagnosis behaviour; the leakage split keeps the comparison fair to
+literature-based vs curated tools.
+
+## How to regenerate
+
+```bash
+# GenoAgent methods/foundation release (stages 13-20 build the base cohort), then:
+python scripts/cases/18b_build_hard_candidates.py   # Resnik-BMA top-49, seed 42
+```
+Verify `test_cases_hard.jsonl` against the SHA-256 in
+`test_cases_hard_manifest.json`. Methods/foundation code DOI:
+`10.6084/m9.figshare.32814491`.
+
+## License
+
+**CC BY 4.0.** Derived from the GA4GH Phenopacket Store (CC BY 4.0); annotated
+with HPO/HGNC (open). Reuse freely with attribution.
+
+## Recommended citation
+
+```bibtex
+@dataset{angulo2026genoagent_cohort_hard,
+  author    = {Angulo, Johanna},
+  title     = {GenoAgent Benchmark (Hard): A Phenotype-Similar Distractor Variant
+               of the Stratified Rare-Disease Cohort for Literature-Based Causal
+               Gene Prioritization (n=1,047)},
+  year      = {2026},
+  publisher = {Figshare},
+  version   = {v1.0},
+  doi       = {10.6084/m9.figshare.32816468},
+  note      = {Case-paired hard variant of DOI 10.6084/m9.figshare.32814449;
+               derived from GA4GH Phenopacket Store v0.1.26; CC BY 4.0.}
+}
+```
+
+## Relationship to the GenoAgent papers
+
+- **Standard cohort** (random distractors): DOI `10.6084/m9.figshare.32814449`.
+- **This hard variant**: `10.6084/m9.figshare.32816468`.
+- **Methods / foundation** (build recipe incl. `18b_build_hard_candidates.py`):
+  DOI `10.6084/m9.figshare.32814491`.
+- **GenoAgent system** (evaluated on both variants): DOI `10.6084/m9.figshare.32814497`.

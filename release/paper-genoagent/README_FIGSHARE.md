@@ -1,7 +1,7 @@
 # Figshare item — P2: geno_agent (GenoAgent)
 
-**Title.** geno_agent: An Agentic-Workflow RAG System for Gene Prioritization in
-Rare Mendelian Disease (code and evaluation results)
+**Title.** GenoAgent: An Agentic-Workflow RAG System for Gene Prioritization in
+Rare Mendelian Disease (code, evaluation results, and manuscript artifacts)
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
@@ -61,7 +61,9 @@ cohorts; and the publication figures and tables.
   `data/eval_1050_lopo_full/` summaries; the publication figures and tables; and the
   license-clean, text-stripped **rationale derivative** for the champion cell in both
   cohorts (see `artifacts_manifest.tsv`).
-- `*.sha256` — checksums for every uploaded file.
+- `CHECKSUMS.sha256` — SHA-256 of every file in this bundle; verify after download
+  with `sha256sum -c CHECKSUMS.sha256`.
+- `LICENSE` — AGPL-3.0 (the result artifacts' license; see the **License** note above).
 
 **Not included (by design):** the raw LLM response dumps — they embed **verbatim
 PMC-OA passages** (mixed CC tiers), so they are not license-clean to publish (the
@@ -71,6 +73,7 @@ and the unpublished drafts / internal reports (kept local until publication).
 
 ## How to cite
 
-> Angulo, J. (2026). *geno_agent: An Agentic-Workflow RAG System for Gene
-> Prioritization in Rare Mendelian Disease* (v1.1) [Software & data set]. Figshare.
+> Angulo, J. (2026). *GenoAgent: An Agentic-Workflow RAG System for Gene
+> Prioritization in Rare Mendelian Disease (code, evaluation results, and
+> manuscript artifacts)* (v1.1) [Software & data set]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814497
