@@ -1,0 +1,44 @@
+# CI-ONLY dependency set — CPU wheels for GitHub Actions regression testing.
+#
+# This is NOT the reproducibility environment. Every numeric result in the paper
+# comes from the pinned RTX-5090 workstation env (requirements.lock.txt, torch
+# 2.12 cu128 nightly). That nightly cannot install on stock GitHub runners, so CI
+# installs CPU PyTorch (in the workflow) purely to import modules and run the unit
+# tests (which mock Qdrant / vLLM / the GPU). Versions below match the lock so the
+# code under test is the same; only the torch build differs.
+#
+# torch/torchvision/torchaudio are installed separately from the CPU index in
+# ci.yml. awscli (bulk-download only) is omitted — no test needs it.
+
+lxml==5.4.0
+requests==2.32.5
+tqdm==4.67.1
+
+pronto==2.7.3
+obonet==1.1.1
+networkx==3.5
+
+transformers==4.57.6
+tokenizers==0.22.2
+sentence-transformers==4.1.0
+
+qdrant-client==1.14.3
+fastembed==0.8.0
+
+phenopackets==2.0.2.post5
+
+pandas==2.2.3
+pyarrow==19.0.1
+numpy==2.2.6
+
+python-dotenv==1.0.1
+joblib==1.5.1
+psutil==7.0.0
+
+langgraph==1.2.1
+langgraph-checkpoint==4.1.1
+langchain-core==1.4.0
+
+openai==2.36.0
+
+pytest==8.3.5

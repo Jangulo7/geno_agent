@@ -100,7 +100,10 @@ extend-exclude = [
     "frontend",
     "logs",
     ".venv",
+    "figshare_uploads",  # deposited bundle copies of the code, not the source of truth
+    "release",
     "*.egg-info",
+    "*.ipynb",  # exploratory notebooks use intentional multi-statement / display cells
     "MASTER_PROJECT_v2.1.md",  # Markdown, not Python
 ]
 

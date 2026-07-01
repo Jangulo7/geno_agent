@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Lint + format — fast, zero heavy deps. Mirrors the local dev checks.
+  # ---------------------------------------------------------------------------
+  lint:
+    name: ruff (lint + format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff==0.15.12
+      - name: Ruff lint
+        run: ruff check .
+      - name: Ruff format check
+        run: ruff format --check .
+
+  # ---------------------------------------------------------------------------
+  # Unit tests — CPU-only. The reproducibility env uses torch cu128 nightly
+  # (RTX 5090), which can't install here; CI uses CPU torch just to run the unit
+  # suite. Tests marked `slow` (large data / GPU) and `integration` (Qdrant /
+  # vLLM) are excluded — those run on the workstation.
+  # ---------------------------------------------------------------------------
+  test:
+    name: pytest (CPU, unit)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install CPU PyTorch
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Install CI dependencies
+        run: pip install -r requirements-ci.txt
+      - name: Run unit tests (no GPU / external services)
+        run: python -m pytest -m "not slow and not integration"
