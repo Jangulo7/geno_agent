@@ -1,4 +1,8 @@
-"""Ingest GA4GH Phenopacket-Store v0.1.19 into a single normalized JSONL.
+"""Ingest a GA4GH Phenopacket-Store release into a single normalized JSONL.
+
+The release is selected by ``$PHENOPACKET_STORE_VERSION`` (loaded from ``.env``);
+the fallback default is **v0.1.26**, the published n=1,047 paper cohort. The
+legacy n=459 cohort used v0.1.19 — set the env var to reproduce it.
 
 Implements master plan §6 step 1 (Phase 1B / §7 step [9]). Reads every
 ``*.json`` file recursively under ``$PHENOPACKET_DIR/v$PHENOPACKET_STORE_VERSION/``
@@ -127,7 +131,7 @@ def extract_interpretations(pp: dict) -> list[dict]:
 
 def parse_args() -> argparse.Namespace:
     """CLI args."""
-    version = os.environ.get("PHENOPACKET_STORE_VERSION", "0.1.19")
+    version = os.environ.get("PHENOPACKET_STORE_VERSION", "0.1.26")
     pp_dir = os.environ.get("PHENOPACKET_DIR", str(PROJECT_ROOT / "data" / "phenopackets"))
     tc_dir = os.environ.get("TEST_CASES_DIR", str(PROJECT_ROOT / "data" / "test_cases"))
     p = argparse.ArgumentParser(description="Ingest Phenopacket-Store JSONs to JSONL.")

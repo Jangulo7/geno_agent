@@ -14,6 +14,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | LIRICAL HPO-only (baseline) | 0.924 [0.908, 0.939] | 0.989 [0.983, 0.994] | 0.999 [0.997, 1.000] | 0.953 [0.943, 0.962] | 0.964 [0.956, 0.972] |
 | S | multi-agent + CE-rerank + LEA - hybrid | 0.726 [0.698, 0.753] | 0.798 [0.774, 0.824] | 0.817 [0.793, 0.841] | 0.766 [0.743, 0.792] | 0.773 [0.750, 0.795] |
 | N | RRF ensemble of M + S (Thread F) | 0.775 [0.750, 0.800] | 0.856 [0.835, 0.878] | 0.903 [0.883, 0.920] | 0.819 [0.798, 0.840] | 0.834 [0.813, 0.853] |
+| O | LLM-only, no retrieval (Qwen3-8B) | 0.511 [0.480, 0.541] | 0.626 [0.597, 0.656] | 0.697 [0.670, 0.725] | 0.575 [0.548, 0.600] | 0.594 [0.566, 0.622] |
 
 ### Paired comparisons
 
@@ -54,6 +55,11 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | N vs M | top10 | -0.0965 | [-0.1146, -0.0783] | 0 | 101 | 0.00000 | ★ |
 | N vs M | mrr | -0.1335 | [-0.1563, -0.1117] |  |  |  | ★ |
 | N vs M | ndcg10 | -0.1306 | [-0.1532, -0.1106] |  |  |  | ★ |
+| S vs O | top1 | +0.2149 | [+0.1824, +0.2464] | 269 | 44 | 0.00000 | ★ |
+| S vs O | top5 | +0.1729 | [+0.1423, +0.2034] | 235 | 54 | 0.00000 | ★ |
+| S vs O | top10 | +0.1194 | [+0.0898, +0.1490] | 194 | 69 | 0.00000 | ★ |
+| S vs O | mrr | +0.1914 | [+0.1652, +0.2201] |  |  |  | ★ |
+| S vs O | ndcg10 | +0.1790 | [+0.1533, +0.2068] |  |  |  | ★ |
 
 ## overlap_present (n = 765)
 
@@ -65,6 +71,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | LIRICAL HPO-only (baseline) | 0.978 [0.966, 0.987] | 0.997 [0.994, 1.000] | 0.999 [0.996, 1.000] | 0.987 [0.980, 0.993] | 0.990 [0.984, 0.994] |
 | S | multi-agent + CE-rerank + LEA - hybrid | 0.677 [0.643, 0.709] | 0.749 [0.718, 0.778] | 0.771 [0.741, 0.800] | 0.719 [0.690, 0.747] | 0.725 [0.694, 0.756] |
 | N | RRF ensemble of M + S (Thread F) | 0.748 [0.718, 0.778] | 0.820 [0.792, 0.846] | 0.877 [0.854, 0.899] | 0.789 [0.763, 0.815] | 0.803 [0.777, 0.830] |
+| O | LLM-only, no retrieval (Qwen3-8B) | 0.454 [0.420, 0.486] | 0.573 [0.537, 0.605] | 0.665 [0.631, 0.698] | 0.522 [0.490, 0.553] | 0.545 [0.512, 0.577] |
 
 ### Paired comparisons
 
@@ -105,6 +112,11 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | N vs M | top10 | -0.1216 | [-0.1438, -0.0993] | 0 | 93 | 0.00000 | ★ |
 | N vs M | mrr | -0.1970 | [-0.2221, -0.1724] |  |  |  | ★ |
 | N vs M | ndcg10 | -0.1865 | [-0.2102, -0.1633] |  |  |  | ★ |
+| S vs O | top1 | +0.2235 | [+0.1830, +0.2601] | 206 | 35 | 0.00000 | ★ |
+| S vs O | top5 | +0.1765 | [+0.1373, +0.2144] | 186 | 51 | 0.00000 | ★ |
+| S vs O | top10 | +0.1059 | [+0.0680, +0.1412] | 147 | 66 | 0.00000 | ★ |
+| S vs O | mrr | +0.1963 | [+0.1619, +0.2273] |  |  |  | ★ |
+| S vs O | ndcg10 | +0.1795 | [+0.1441, +0.2088] |  |  |  | ★ |
 
 ## overlap_absent (n = 282)
 
@@ -116,6 +128,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | LIRICAL HPO-only (baseline) | 0.777 [0.727, 0.826] | 0.965 [0.940, 0.986] | 1.000 [1.000, 1.000] | 0.861 [0.832, 0.892] | 0.895 [0.874, 0.917] |
 | S | multi-agent + CE-rerank + LEA - hybrid | 0.858 [0.816, 0.901] | 0.933 [0.901, 0.957] | 0.940 [0.911, 0.965] | 0.896 [0.863, 0.926] | 0.905 [0.874, 0.932] |
 | N | RRF ensemble of M + S (Thread F) | 0.851 [0.808, 0.894] | 0.954 [0.925, 0.979] | 0.972 [0.950, 0.989] | 0.900 [0.871, 0.927] | 0.916 [0.891, 0.937] |
+| O | LLM-only, no retrieval (Qwen3-8B) | 0.667 [0.610, 0.720] | 0.769 [0.720, 0.816] | 0.784 [0.734, 0.830] | 0.718 [0.668, 0.765] | 0.727 [0.680, 0.773] |
 
 ### Paired comparisons
 
@@ -156,6 +169,11 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | N vs M | top10 | -0.0284 | [-0.0496, -0.0106] | 0 | 8 | 0.00781 | ★ |
 | N vs M | mrr | +0.0388 | [+0.0031, +0.0710] |  |  |  | ★ |
 | N vs M | ndcg10 | +0.0210 | [-0.0109, +0.0487] |  |  |  |  |
+| S vs O | top1 | +0.1915 | [+0.1383, +0.2447] | 63 | 9 | 0.00000 | ★ |
+| S vs O | top5 | +0.1631 | [+0.1170, +0.2092] | 49 | 3 | 0.00000 | ★ |
+| S vs O | top10 | +0.1560 | [+0.1099, +0.2021] | 47 | 3 | 0.00000 | ★ |
+| S vs O | mrr | +0.1780 | [+0.1334, +0.2226] |  |  |  | ★ |
+| S vs O | ndcg10 | +0.1778 | [+0.1328, +0.2218] |  |  |  | ★ |
 
 ## Per-MONDO x overlap-absent — fair-comparison detail
 
@@ -169,6 +187,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | 0.870 | 0.967 | 1.000 | 0.918 | 0.939 |
 | S | 0.859 | 0.902 | 0.913 | 0.883 | 0.888 |
 | N | 0.837 | 0.935 | 0.978 | 0.884 | 0.906 |
+| O | 0.478 | 0.543 | 0.565 | 0.524 | 0.519 |
 
 ### immunological | overlap-absent | n = 41
 
@@ -180,6 +199,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | 0.634 | 1.000 | 1.000 | 0.813 | 0.862 |
 | S | 0.878 | 0.951 | 0.951 | 0.913 | 0.921 |
 | N | 0.829 | 0.976 | 0.976 | 0.904 | 0.922 |
+| O | 0.707 | 0.927 | 0.927 | 0.808 | 0.836 |
 
 ### metabolic | overlap-absent | n = 90
 
@@ -191,6 +211,7 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | 0.756 | 0.933 | 1.000 | 0.822 | 0.865 |
 | S | 0.900 | 0.967 | 0.967 | 0.931 | 0.940 |
 | N | 0.856 | 0.967 | 0.967 | 0.906 | 0.920 |
+| O | 0.822 | 0.889 | 0.900 | 0.858 | 0.866 |
 
 ### neurological | overlap-absent | n = 59
 
@@ -202,3 +223,4 @@ Overlap = case's source PMID is referenced by phenotype.hpoa for the causal OMIM
 | M | 0.763 | 0.983 | 1.000 | 0.864 | 0.899 |
 | S | 0.780 | 0.915 | 0.932 | 0.850 | 0.868 |
 | N | 0.881 | 0.949 | 0.966 | 0.913 | 0.924 |
+| O | 0.695 | 0.831 | 0.848 | 0.745 | 0.765 |

@@ -58,7 +58,8 @@ publication dates (for recency stratification).
 | `test_cases_manifest.json` | — | Build manifest: pinned versions, seed, category distribution, SHA-256 + byte size of `test_cases.jsonl`. |
 | `05_validated_stats.json` | — | Validation statistics (pass/fail/replacements). |
 | `MANIFEST.tsv` | — | Provenance + SHA-256 of upstream sources (incl. the index fingerprint). |
-| `CHECKSUMS.sha256` | — | SHA-256 of every file in this bundle. |
+| `CHECKSUMS.sha256` | — | SHA-256 of every file in this bundle (verify with `sha256sum -c`). |
+| `LICENSE` | — | CC BY 4.0 dataset license (machine-discoverable; SPDX `CC-BY-4.0`). |
 
 The 01–06 staged files are included for full provenance/transparency; **most reusers
 need only `test_cases.jsonl`** plus the two sidecars.
@@ -93,8 +94,8 @@ HPO/MONDO/HGNC (open / CC BY). Reuse freely **with attribution** (cite below).
 ```bibtex
 @dataset{angulo2026genoagent_cohort,
   author    = {Angulo, Johanna},
-  title     = {A Stratified Rare-Disease Benchmark Cohort for Literature-Based
-               Causal Gene Prioritization (n=1,047)},
+  title     = {GenoAgent Benchmark: A Stratified Rare-Disease Benchmark Cohort
+               for Literature-Based Causal Gene Prioritization (n=1,047)},
   year      = {2026},
   publisher = {Figshare},
   version   = {v1.0},

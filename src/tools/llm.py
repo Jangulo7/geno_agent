@@ -93,6 +93,7 @@ def generate(
     system_prompt: str | None = None,
     temperature: float = DEFAULT_TEMPERATURE,
     max_tokens: int = 512,
+    extra_body: dict[str, Any] | None = None,
 ) -> LlmResponse:
     """Send a chat-completion request and return the structured response.
 
@@ -109,6 +110,10 @@ def generate(
         temperature: Sampling temperature (default 0.0 for determinism;
             agent prompts that want diversity should set higher).
         max_tokens: Max completion tokens (default 512).
+        extra_body: Optional server-specific request fields forwarded verbatim in
+            the request body — e.g. vLLM's grammar-constrained decoding via
+            ``{"structured_outputs": {"json": <schema>, "disable_any_whitespace":
+            True}}``. ``None`` sends an ordinary chat request.
 
     Returns:
         :class:`LlmResponse` with the text and token-usage metadata.
@@ -133,6 +138,7 @@ def generate(
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
+            extra_body=extra_body,
         )
     except (APIConnectionError, APITimeoutError) as exc:
         raise LlmConnectionError(f"Could not reach LLM at {cfg.base_url}: {exc}") from exc
@@ -157,6 +163,7 @@ def generate_json(
     system_prompt: str | None = None,
     temperature: float = DEFAULT_TEMPERATURE,
     max_tokens: int = 512,
+    extra_body: dict[str, Any] | None = None,
 ) -> tuple[Any, LlmResponse]:
     """Like :func:`generate` but parse the response text as JSON.
 
@@ -167,7 +174,10 @@ def generate_json(
 
     Args:
         prompt: As :func:`generate`. The prompt should explicitly request JSON.
-        cfg, system_prompt, temperature, max_tokens: As :func:`generate`.
+        cfg, system_prompt, temperature, max_tokens, extra_body: As
+            :func:`generate`. Pass ``extra_body={"structured_outputs": {"json":
+            schema, ...}}`` to grammar-constrain the output, which guarantees
+            well-formed JSON and removes parse-failure fallbacks.
 
     Returns:
         Tuple ``(parsed_json, raw_response)``. Caller can read both the
@@ -183,6 +193,7 @@ def generate_json(
         system_prompt=system_prompt,
         temperature=temperature,
         max_tokens=max_tokens,
+        extra_body=extra_body,
     )
     text = response.text.strip()
     # Strip markdown fences if present

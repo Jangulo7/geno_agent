@@ -14,11 +14,18 @@ ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 OUT="$ROOT/figshare_uploads"
 STAGE="$OUT/_staging"
+CCBY="$ROOT/release/licenses/LICENSE-CC-BY-4.0.txt"  # dataset license (cohorts)
+AGPL="$ROOT/LICENSE"                                 # AGPL-3.0 (P2 result artifacts)
 rm -rf "$STAGE"
 mkdir -p "$STAGE"
 
 # Use Python's zipfile so no external `zip` binary is required.
 zip_dir() { ( cd "$STAGE" && python3 -m zipfile -c "$OUT/$1.zip" "$1" ) && ( cd "$OUT" && sha256sum "$1.zip" > "$1.zip.sha256" ); }
+
+# Write per-file SHA-256 for every file in a staged bundle (excluding the
+# manifest itself), so each bundle is self-verifiable after download with
+# `sha256sum -c CHECKSUMS.sha256`.
+gen_checksums() { ( cd "$1" && find . -type f ! -name CHECKSUMS.sha256 -printf '%P\n' | sort | xargs sha256sum > CHECKSUMS.sha256 ); }
 
 # ---------- Standalone cohort dataset (own DOI; Figshare "Dataset" item) ----------
 # The n=1,047 benchmark cohort is published as its own citable dataset, separate
@@ -32,10 +39,28 @@ mkdir -p "$COHD"
 cp data/test_cases_1050/*.jsonl data/test_cases_1050/*.json "$COHD/"
 cp data/MANIFEST.tsv "$COHD/"
 cp release/cohort/README_FIGSHARE.md "$COHD/"
+cp "$CCBY" "$COHD/LICENSE"   # machine-discoverable dataset license (CC BY 4.0)
 # per-file SHA-256 inside the bundle (good-practice integrity for a citable dataset)
-( cd "$COHD" && find . -type f ! -name CHECKSUMS.sha256 -printf '%P\n' | sort \
-    | xargs sha256sum > CHECKSUMS.sha256 )
+gen_checksums "$COHD"
 zip_dir "$COH"
+
+# ---------- Hard cohort (own DOI; case-paired phenotype-similar distractors) ----------
+# Scripted here for reproducibility (previously assembled by hand). Sources are
+# the regenerable 18b outputs in data/test_cases_hard/; guarded so the build
+# still succeeds when the hard cohort has not been regenerated locally.
+COHH="genoagent-cohort-hard-n1047-v1.0"
+COHHD="$STAGE/$COHH"
+if compgen -G "data/test_cases_hard/test_cases_hard.jsonl" >/dev/null; then
+  mkdir -p "$COHHD"
+  cp data/test_cases_hard/*.jsonl data/test_cases_hard/*.json "$COHHD/"
+  cp release/cohort/README_FIGSHARE_hard.md "$COHHD/README_FIGSHARE.md"
+  cp "$CCBY" "$COHHD/LICENSE"
+  gen_checksums "$COHHD"
+  zip_dir "$COHH"
+else
+  echo "SKIP hard cohort: data/test_cases_hard/test_cases_hard.jsonl absent "\
+"(run scripts/cases/18b_build_hard_candidates.py to regenerate, then re-run this script)."
+fi
 
 # ---------- P2: GenoAgent results (standard + hard cohorts) + figures/tables ----------
 P2="paper-genoagent-v1.1_data"
@@ -60,6 +85,10 @@ python scripts/eval/strip_responses_for_release.py \
   --output "$P2D/data/eval_hard/cell_S_rationale_derivative"
 cp release/paper-genoagent/README_FIGSHARE.md release/paper-genoagent/REPRODUCE.md \
    release/paper-genoagent/artifacts_manifest.tsv "$P2D/"
+cp "$AGPL" "$P2D/LICENSE"   # AGPL-3.0 — result artifacts (matches README + manifest)
+# per-file SHA-256 inside the bundle: the data bundle has ~15k files, so an in-zip
+# manifest lets downloaders verify integrity beyond the single outer .zip hash.
+gen_checksums "$P2D"
 zip_dir "$P2"
 
 echo "Assembled:"

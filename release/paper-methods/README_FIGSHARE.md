@@ -1,6 +1,6 @@
 # Figshare item — P1: geno_agent methods & shared foundation
 
-**Title.** geno_agent — Methods and Shared Foundation: A Reproducible PMC-OA
+**Title.** GenoAgent: Methods and Shared Foundation: A Reproducible PMC-OA
 Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
@@ -64,5 +64,6 @@ upstream by pinned version); any personal correspondence.
 
 ## How to cite
 
-> Angulo, J. (2026). *geno_agent — Methods and Shared Foundation* [Data set & software].
-> Figshare. https://doi.org/10.6084/m9.figshare.32814491
+> Angulo, J. (2026). *GenoAgent: Methods and Shared Foundation: A Reproducible
+> PMC-OA Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort*
+> [Data set & software]. Figshare. https://doi.org/10.6084/m9.figshare.32814491
