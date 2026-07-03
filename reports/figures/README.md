@@ -24,15 +24,21 @@ Generator: **`scripts/manuscript/P2_render_paper_artifacts.py`** (computed from
 `data/eval_1050/*.json`; table values track `reports/wallclock_cost_table.md`).
 The shared CONSORT (`fig1_consort_flow.png`) comes from the P1 notebook.
 
-| File | Figure | Source |
-|---|---|---|
-| `fig2_architecture.png` | agentic-workflow architecture | schematic |
-| `fig3_per_mondo_top1.png` | per-MONDO top-1 accuracy | `_results_summary.json` (by_category) |
-| `fig4_hard_difficulty.png` | hard cohort: full vs fair top-1 per system | `data/eval_hard/_results_stratified.json` |
-| `fig5_faithfulness_vs_correctness.png` | faithfulness vs correctness gaps | RAGAS/DeepEval sidecars |
-| `fig6_landscape_quadrant.png` | method-landscape positioning | schematic |
-| `supp_fig1_lirical_recency_paradox.png` | recency stratification | `_results_recency.json` |
-| `supp_fig2_llm_family_ablation.png` | LLM-family ablation | `_results_lea_ablation.json` |
+Filenames are stable; each figure's **embedded title carries its in-paper number**
+(main-text Figures 1–3; annex Figures A1–A3) and the **`GenoAgent`** name. The
+`In P2` column below is the number that appears in the manuscript after the
+methodology/annex restructure.
+
+| File | In P2 | Figure | Source |
+|---|---|---|---|
+| `fig2_architecture.png` | Figure 1 | GenoAgent agentic-workflow architecture | schematic |
+| `fig3_per_mondo_top1.png` | Figure 2 | per-MONDO top-1 accuracy (6 cells, incl. LLM-only control O) | `_results_stratified.json` (`cat_*` subsets) |
+| `fig5_faithfulness_vs_correctness.png` | Figure 3 | faithfulness vs correctness gaps | RAGAS/DeepEval sidecars |
+| `fig1_consort_flow.png` | Annex Fig A1 | CONSORT cohort-selection flow (shared with P1; see above) | staged cohort funnel (P1 notebook) |
+| `fig6_landscape_quadrant.png` | Annex Fig A2 | method-landscape positioning | schematic |
+| `fig4_hard_difficulty.png` | Annex Fig A3 | hard cohort: full vs fair top-1 per system | `data/eval_hard/_results_stratified.json` |
+| `supp_fig1_lirical_recency_paradox.png` | Supp Fig S1 | recency stratification | `_results_recency.json` |
+| `supp_fig2_llm_family_ablation.png` | Supp Fig S2 | LLM-family ablation | `_results_lea_ablation.json` |
 
 ## Regenerate
 
