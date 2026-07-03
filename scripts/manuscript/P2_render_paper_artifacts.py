@@ -41,7 +41,7 @@ CELL_DISPLAY = {
     "M": "LIRICAL (HPO-only)",
     "D": "Multi-agent baseline",
     "L": "+ CE-rerank (inside)",
-    "S": "geno_agent (Cell S)",
+    "S": "GenoAgent (Cell S)",
     "N": "RRF ensemble (M+S)",
     "O": "LLM-only (no retrieval)",
 }
@@ -441,7 +441,7 @@ def render_figure6_landscape() -> None:
         )
 
     tool(3.0, 7.2, "DeepRare", "#2b6cb0")
-    tool(7.3, 7.6, "geno_agent", "#2f855a", bold=True, w=1.5)
+    tool(7.3, 7.6, "GenoAgent", "#2f855a", bold=True, w=1.5)
     ax.text(
         7.3,
         6.5,
@@ -457,7 +457,7 @@ def render_figure6_landscape() -> None:
     tool(7.3, 1.9, "(BM25 / dense, same index)", "#6b46c1", w=2.1)
 
     ax.set_title(
-        "Figure 6 — Position of geno_agent in the method landscape",
+        "Figure A2 — Position of GenoAgent in the method landscape",
         fontsize=13,
         fontweight="bold",
         pad=12,
@@ -465,7 +465,7 @@ def render_figure6_landscape() -> None:
     fig.text(
         0.5,
         0.02,
-        "geno_agent occupies the literature x LLM-in-loop quadrant -- where no deconfounded, locally\n"
+        "GenoAgent occupies the literature x LLM-in-loop quadrant -- where no deconfounded, locally\n"
         "deployable system had previously matched or exceeded curated tools under formal evaluation.",
         ha="center",
         fontsize=9,
@@ -563,7 +563,7 @@ def render_figure2() -> None:
     ax.text(
         6.35,
         1.35,
-        "geno_agent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
+        "GenoAgent (Cell S) — 26.1 s/case mean, 1× RTX 5090, $0 cloud",  # noqa: RUF001
         ha="center",
         va="center",
         fontsize=10,
@@ -595,7 +595,7 @@ def render_figure2() -> None:
     )
 
     ax.set_title(
-        "Figure 2 — geno_agent multi-agent retrieval-augmented architecture",
+        "Figure 1 — GenoAgent multi-agent retrieval-augmented architecture",
         pad=12,
         fontsize=13,
         fontweight="bold",
@@ -658,7 +658,7 @@ def render_figure3() -> None:
     ax.set_ylabel("Top-1 accuracy")
     ax.set_ylim(0, 1.05)
     ax.set_title(
-        "Figure 3 — Top-1 accuracy by MONDO supercategory and cell (full cohort n=1,047)",
+        "Figure 2 — Top-1 accuracy by MONDO supercategory and cell (full cohort n=1,047)",
         pad=10,
         fontsize=12,
         fontweight="bold",
@@ -689,7 +689,7 @@ def render_figure4_hard() -> None:
         "M": "LIRICAL",
         "D": "Multi-agent",
         "L": "+CE-rerank",
-        "S": "geno_agent",
+        "S": "GenoAgent",
         "N": "RRF(M+S)",
     }
 
@@ -730,7 +730,7 @@ def render_figure4_hard() -> None:
     ax.set_ylabel("Top-1 accuracy")
     ax.set_ylim(0, 0.75)
     ax.set_title(
-        "Figure 4 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
+        "Figure A3 — Hard cohort (phenotype-similar distractors): full vs fair top-1",
         pad=10,
         fontsize=12,
         fontweight="bold",
@@ -843,7 +843,7 @@ def render_figure5_faithfulness() -> None:
     ax.grid(axis="y", alpha=0.3)
 
     fig.suptitle(
-        "Figure 5 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
+        "Figure 3 — Faithfulness predicts top-1 correctness (Cell S, n≤100)",
         fontsize=12,
         fontweight="bold",
         y=1.02,
