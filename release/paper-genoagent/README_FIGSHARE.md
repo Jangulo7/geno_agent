@@ -20,7 +20,10 @@ annotation-overlap (leakage) status and reported on **two case-paired distractor
 cohorts** — a *standard* cohort (49 uniformly-random distractors) and a *hard* cohort
 (49 phenotype-similar distractors by HPO Resnik best-match-average). It includes the
 annotation-overlap deconfounding, leave-one-paper-out, publication-recency, and
-LLM-family robustness analyses; the RAGAS/DeepEval rationale-grounding judges on both
+LLM-family robustness analyses; an **LLM-only no-retrieval control (Cell O)** — the
+same Qwen3-8B backbone with neither retrieval nor the agentic workflow — that
+isolates the joint contribution of retrieval and orchestration (fair-cohort top-1
+0.667 vs geno_agent's 0.858); the RAGAS/DeepEval rationale-grounding judges on both
 cohorts; and the publication figures and tables.
 
 ## What's new in v1.1
@@ -31,6 +34,10 @@ cohorts; and the publication figures and tables.
 - On the deconfounded fair cohort, geno_agent remains the top-ranked system in **both**
   difficulty regimes and its margin over both curated baselines **widens** under hard
   distractors (Holm-significant).
+- Adds the **LLM-only no-retrieval control (Cell O)** — the same Qwen3-8B backbone with
+  neither retrieval nor the agentic workflow (`data/eval_1050/cell_O_llm_only/`) —
+  isolating the joint contribution of retrieval and orchestration (full-cohort top-1
+  0.511, fair 0.667, vs geno_agent 0.726 / 0.858).
 - Release-clean `README.md` is the single explanatory document; unpublished drafts and
   internal working reports are kept local and are not bundled.
 
