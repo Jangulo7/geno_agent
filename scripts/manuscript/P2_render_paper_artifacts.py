@@ -43,7 +43,10 @@ CELL_DISPLAY = {
     "L": "+ CE-rerank (inside)",
     "S": "geno_agent (Cell S)",
     "N": "RRF ensemble (M+S)",
+    "O": "LLM-only (no retrieval)",
 }
+# CELL_ORDER excludes O: it drives the hard-cohort figure (fig4), on which the
+# LLM-only control was not run. O is added only to the per-MONDO figure (fig3).
 CELL_ORDER = ["K", "M", "D", "L", "S", "N"]
 
 # Harmonised palette — one source of truth so every P2 figure is colour-consistent
@@ -60,6 +63,7 @@ CELL_COLORS = {
     "L": "#805ad5",  # +CE-rerank — purple
     "S": SIG_GREEN,  # geno_agent — signature green
     "N": "#dd6b20",  # RRF ensemble — orange
+    "O": "#b83280",  # LLM-only control — magenta (distinct from S/D/L)
 }
 
 # Publication-grade plot style
@@ -605,25 +609,33 @@ def render_figure2() -> None:
 # Figure 3 -- Per-MONDO top-1 grouped bar (5 cells)
 # =============================================================================
 def render_figure3() -> None:
-    """Per-MONDO top-1 grouped bar (5 cells: K, M, D, L, S)."""
-    summary = json.loads((DATA_EVAL / "_results_summary.json").read_text())
-    # Build {cell: {category: top1_point}} ignoring N (ensemble) for clarity
-    cats = ["developmental", "immunological", "metabolic", "neurological"]
-    cells = ["K", "M", "D", "L", "S"]
-    by_cell_cat = {c: {} for c in cells}
-    for row in summary["by_category"]:
-        if row["cell"] in cells and row["category"] in cats:
-            by_cell_cat[row["cell"]][row["category"]] = row["top1_point"]
+    """Per-MONDO top-1 grouped bar (6 cells: K, M, D, L, S, and the O control).
 
+    Sourced from the stratified aggregation (``_results_stratified.json``), whose
+    per-category ``cat_<name>`` subsets carry every evaluated cell including the
+    LLM-only no-retrieval control (Cell O). Cell O is shown alongside the five
+    head-to-head systems to visualise how much of each category's accuracy comes
+    from retrieval + the agentic workflow versus the backbone LLM's parametric
+    knowledge.
+    """
+    strat = json.loads((DATA_EVAL / "_results_stratified.json").read_text())["per_cell"]
+    cats = ["developmental", "immunological", "metabolic", "neurological"]
+    cells = ["K", "M", "D", "L", "S", "O"]
+    # per-category top-1 point estimate: strat["cat_<name>"][cell]["top1"][0]
+    by_cell_cat = {
+        c: {cat: strat[f"cat_{cat}"][c]["top1"][0] for cat in cats if c in strat[f"cat_{cat}"]}
+        for c in cells
+    }
     cell_labels = {c: CELL_DISPLAY[c] for c in cells}
 
-    fig, ax = plt.subplots(figsize=(9.5, 5.2))
+    fig, ax = plt.subplots(figsize=(10.5, 5.4))
     x = np.arange(len(cats))
-    w = 0.16
+    w = 0.14
+    offset0 = (len(cells) - 1) / 2.0  # centre the group of bars on each tick
     for i, c in enumerate(cells):
         vals = [by_cell_cat[c].get(cat, 0) for cat in cats]
         bars = ax.bar(
-            x + (i - 2) * w,
+            x + (i - offset0) * w,
             vals,
             w,
             label=cell_labels[c],
@@ -638,7 +650,7 @@ def render_figure3() -> None:
                 f"{v:.2f}",
                 ha="center",
                 va="bottom",
-                fontsize=7.5,
+                fontsize=6.8,
             )
 
     ax.set_xticks(x)
@@ -651,11 +663,11 @@ def render_figure3() -> None:
         fontsize=12,
         fontweight="bold",
     )
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.22), ncol=5, frameon=False)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.24), ncol=3, frameon=False)
     ax.grid(axis="y", alpha=0.3)
     fig.savefig(FIG_DIR / "fig3_per_mondo_top1.png")
     plt.close(fig)
-    print("  ✓ Figure 3 (per-MONDO top-1)")
+    print("  ✓ Figure 3 (per-MONDO top-1, 6 cells incl. LLM-only control O)")
 
 
 # =============================================================================
