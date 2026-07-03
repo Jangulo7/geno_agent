@@ -134,6 +134,7 @@ n=1,047 and adds a second curated baseline:
 | **S** | L + LEA (LLM-as-Evidence-Aggregator, Qwen3-8B) | Full agentic stack — primary contribution |
 | **K** | Exomiser CLI 14.0.2 HPO-only, hiPhive prioritiser | External curated baseline |
 | **M** | LIRICAL CLI 2.4.0 HPO-only (likelihood-ratio framework) | Second curated baseline (added v3) |
+| **O** | LLM-only, no retrieval (same Qwen3-8B backend, no agents/retrieval) | Control — isolates the joint value of retrieval + the agentic workflow |
 
 Test cases (n=1,047) are sampled from GA4GH Phenopacket Store **v0.1.26**
 using disproportionate stratified sampling (250 dev + **300 imm** + 250 met +
@@ -160,6 +161,7 @@ difficulty is varied orthogonally to leakage.
 | D (multi+hybrid) | 0.460 | 0.581 | 0.628 | 0.529 | inside-system baseline |
 | L (D + CE-rerank) | 0.698 | 0.791 | 0.814 | 0.745 | +23.8 pp rerank contribution |
 | **S (L + LEA)** | **0.725** | 0.798 | 0.816 | **0.766** | **+3.4 pp over K (★ paired bootstrap)** |
+| O (LLM-only, no retrieval) | 0.511 | 0.626 | 0.697 | 0.575 | control: −0.215 vs S (McNemar p<0.001) |
 
 **Metrics:** top-1 / top-5 / top-10 (Recall@k), MRR, NDCG@10. Paired
 bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
@@ -173,6 +175,17 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
   geno_agent is #1 (top-1 **0.858**) vs Exomiser 0.780 (**+0.078 ★**) and LIRICAL
   0.777 (**+0.082 ★**); LIRICAL's apparent overall 0.924 collapses to a tie with
   Exomiser, quantifying its training-data exposure.
+- **LLM-only ablation (retrieval + workflow value).** An LLM-only control
+  (Cell O; the same Qwen3-8B backend with no retrieval and no agents) reaches
+  top-1 **0.511 overall / 0.667 fair** — a non-trivial parametric baseline, but
+  geno_agent adds **+0.215 overall / +0.191 fair** (McNemar p<0.001), isolating
+  the joint contribution of retrieval and the agentic workflow. Unlike the curated
+  tools, the LLM-only score *rises* on the fair cohort (0.454 → 0.667): parametric
+  knowledge is orthogonal to `phenotype.hpoa` citation, independently corroborating
+  that the fair split removes a curated-tool confound rather than a difficulty
+  effect. (Grammar-constrained decoding was evaluated and rejected — at
+  temperature 0 it distorted the backbone; Cell O uses free-form generation with a
+  tolerant JSON/regex parser.)
 - **Leave-one-paper-out (LOPO).** Excluding each case's own source publication
   from retrieval leaves the fair cohort **completely unchanged** (0.858 → 0.858,
   McNemar p=1.0); the small full-cohort effect (−0.015) is confined to the
@@ -291,6 +304,7 @@ geno_agent/
 │       ├── run_factorial.py           # 16-cell factorial driver (earlier n=75 run)
 │       ├── run_cell_k.py              # Cell K (Exomiser HPO-only)
 │       ├── run_cell_m.py              # Cell M (LIRICAL HPO-only, v3, 8-worker pool)
+│       ├── run_cell_o.py              # Cell O (LLM-only, no-retrieval control)
 │       ├── rerank_inside_d.py         # Cell L / S driver (CE-rerank-inside-D + optional LEA)
 │       ├── run_paper_extension.sh     # Sequenced D → L → vLLM → S launcher
 │       ├── run_paper_extension_LS_responses.sh  # v3 re-run with --responses-dir
