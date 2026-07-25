@@ -48,9 +48,14 @@ INPUT_PATH: Final[Path] = Path("/mnt/c/pmc_workspace/parsed/all_articles.normali
 # Output on Linux ext4 (not /mnt/c via 9P) — writer ~10x faster, keeps result
 # queue from accumulating and tripping OOM (62 GB main process killed in run #1).
 OUTPUT_PATH: Final[Path] = Path("/home/hana77/chunks/all_chunks.jsonl.gz")
-TOKENIZER_NAME: Final[str] = os.environ.get(
-    "EMBED_MODEL_NAME",
-    "/home/hana77/rare-disease-rag/models/pubmedbert-base-embeddings",
+# Public, revision-pinned tokenizer. The production build loaded these weights
+# from a bare local path, which carries no revision and cannot be reproduced by
+# anyone else; that copy is byte-identical to the Hugging Face snapshot below, so
+# pinning the public revision is what makes the chunk set regenerable off this
+# machine. EMBED_MODEL_NAME still overrides for an offline/local copy.
+TOKENIZER_NAME: Final[str] = os.environ.get("EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings")
+TOKENIZER_REVISION: Final[str] = os.environ.get(
+    "EMBED_MODEL_REVISION", "b79526d6ef3645e0df4530322e266f24c829f5ef"
 )
 MAX_TOKENS: Final[int] = int(os.environ.get("CHUNK_MAX_TOKENS", "512"))
 OVERLAP_TOKENS: Final[int] = int(os.environ.get("CHUNK_OVERLAP_TOKENS", "50"))
@@ -106,9 +111,11 @@ def chunk_section_text(
 _TOKENIZER: PreTrainedTokenizerBase | None = None
 
 
-def _worker_init(tokenizer_name: str) -> None:
+def _worker_init(tokenizer_name: str, revision: str | None = None) -> None:
     global _TOKENIZER
-    _TOKENIZER = AutoTokenizer.from_pretrained(tokenizer_name)
+    # A local path carries no revision, so only pass one for a hub identifier.
+    kwargs = {} if Path(tokenizer_name).exists() else {"revision": revision}
+    _TOKENIZER = AutoTokenizer.from_pretrained(tokenizer_name, **kwargs)
 
 
 def _process_article(article_json: str) -> tuple[list[dict], int]:
@@ -281,7 +288,7 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     status_path = args.output.parent / "_chunk_status.json"
 
-    log.info("Tokenizer: %s", TOKENIZER_NAME)
+    log.info("Tokenizer: %s @ %s", TOKENIZER_NAME, TOKENIZER_REVISION)
     log.info("Input:     %s", args.input)
     log.info("Output:    %s", args.output)
     log.info("Workers:   %d", args.workers)
@@ -309,7 +316,7 @@ def main() -> int:
             mp.Pool(
                 processes=args.workers,
                 initializer=_worker_init,
-                initargs=(TOKENIZER_NAME,),
+                initargs=(TOKENIZER_NAME, TOKENIZER_REVISION),
             ) as pool,
         ):
             line_iter = stream_lines(args.input)

@@ -74,9 +74,16 @@ apply_seeds()
 # ---------------------------------------------------------------- defaults
 INPUT_PATH: Final[Path] = Path("/home/hana77/chunks/all_chunks.jsonl.gz")
 OUTPUT_DIR: Final[Path] = Path("/home/hana77/embeddings")
+# Public, revision-pinned embedder. The production build loaded these weights
+# from a bare local path, which carries no revision and cannot be reproduced by
+# anyone else; that copy is byte-identical to the Hugging Face snapshot below, so
+# pinning the public revision is what makes the vectors regenerable off this
+# machine. EMBED_MODEL_NAME still overrides for an offline/local copy.
 DENSE_MODEL_PATH: Final[str] = os.environ.get(
-    "EMBED_MODEL_NAME",
-    "/home/hana77/rare-disease-rag/models/pubmedbert-base-embeddings",
+    "EMBED_MODEL_NAME", "NeuML/pubmedbert-base-embeddings"
+)
+DENSE_MODEL_REVISION: Final[str] = os.environ.get(
+    "EMBED_MODEL_REVISION", "b79526d6ef3645e0df4530322e266f24c829f5ef"
 )
 SPARSE_MODEL_NAME: Final[str] = "Qdrant/bm25"  # CONTRIBUTING.md hard rule
 EXPECTED_DIM: Final[int] = 768
@@ -312,7 +319,9 @@ def main() -> int:
 
     # Load models
     log.info("Loading dense model...")
-    dense_model = SentenceTransformer(DENSE_MODEL_PATH, device=args.device)
+    # A local path carries no revision, so only pass one for a hub identifier.
+    _st_kwargs = {} if Path(DENSE_MODEL_PATH).exists() else {"revision": DENSE_MODEL_REVISION}
+    dense_model = SentenceTransformer(DENSE_MODEL_PATH, device=args.device, **_st_kwargs)
     if args.fp16 and args.device == "cuda":
         dense_model = dense_model.half()
     dim = dense_model.get_sentence_embedding_dimension()
