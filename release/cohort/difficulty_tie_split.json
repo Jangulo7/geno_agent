@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "metric": "case-to-gene Resnik best-match-average (BMA) phenotypic similarity",
+    "comparison": "hardest distractor vs causal gene, per case",
+    "hpo_version": "v2026-02-16",
+    "annotation_source": "genes_to_phenotype.txt",
+    "tie_tolerance": 1e-09,
+    "note": "tie_at_zero counts cases where BOTH the causal gene and the hardest distractor score 0.00, i.e. the causal gene carries no informative HPO annotation -- not a competitive distractor."
+  },
+  "variants": {
+    "standard": {
+      "n_cases": 1047,
+      "matches_or_exceeds_n": 78,
+      "matches_or_exceeds_pct": 7.45,
+      "strict_exceeds_n": 78,
+      "strict_exceeds_pct": 7.45,
+      "tie_at_zero_n": 0,
+      "tie_at_zero_pct": 0.0,
+      "tie_above_zero_n": 0,
+      "tie_above_zero_pct": 0.0,
+      "causal_bma_is_zero_n": 1
+    },
+    "hard": {
+      "n_cases": 1047,
+      "matches_or_exceeds_n": 448,
+      "matches_or_exceeds_pct": 42.79,
+      "strict_exceeds_n": 448,
+      "strict_exceeds_pct": 42.79,
+      "tie_at_zero_n": 0,
+      "tie_at_zero_pct": 0.0,
+      "tie_above_zero_n": 0,
+      "tie_above_zero_pct": 0.0,
+      "causal_bma_is_zero_n": 1
+    }
+  }
+}
