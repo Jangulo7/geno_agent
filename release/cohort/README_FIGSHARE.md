@@ -37,6 +37,33 @@ publication dates (for recency stratification).
   seed `blake2b(global_seed, case_id)` so individual cases regenerate independently.
 - **Sampling:** disproportionate stratified — 250 developmental + 300 immunological
   + 250 metabolic + 247 neurological (immunological oversampled for subgroup power).
+- **Sampling design and weights.** The four strata were drawn at very different
+  rates, so **unweighted pooling over the cohort estimates a design-defined
+  quantity, not a population one**. Report per-category metrics as the primary
+  per-domain result; for a single cohort-level number, compute a stratum-weighted
+  estimate using the inclusion probabilities below.
+
+  | Category | Eligible pool | Drawn | Analytic cohort | Inclusion prob. | Design weight |
+  |---|---|---|---|---|---|
+  | Developmental | 464 | 250 | 250 | 0.539 | 1.86 |
+  | Immunological | 390 | 300 | 300 | 0.769 | 1.30 |
+  | Metabolic | 672 | 250 | 250 | 0.372 | 2.69 |
+  | Neurological | 3,144 | 250 | 247 | 0.0786 | 12.73 |
+  | **Total** | **4,670** | **1,050** | **1,047** | — | — |
+
+  The inclusion probability uses the *analytic* count, not the drawn count,
+  because three neurological cases were removed post-sampling. The neurological
+  eligible pool of 3,144 was not screened for non-protein-coding causal genes, so
+  the neurological inclusion probability is marginally conservative. These values
+  are **not** stored as a field in `test_cases.jsonl`; they are properties of the
+  stratum, joinable on `category`.
+- **Clustered cases.** The 1,047 cases derive from **415 unique source
+  publications** (median 1, mean 2.5, max 42 cases per publication). Cases sharing
+  a publication are not independent — they share a source, frequently a causal
+  gene, and by construction an `annotation_overlap` flag. Cluster confidence
+  intervals and significance tests on the source PMID (encoded in `case_id`); a
+  publication-level bootstrap is recommended over resampling cases. Per-stratum
+  unique-publication counts are in `clustering_stats.json`.
 - **Coverage gate:** every causal gene has ≥5 PMC Open Access articles (validated
   against the `geno_agent_pmc_oa_v1` index; fingerprint in `MANIFEST.tsv`).
 - **Pipeline:** stages 13–20 (`scripts/cases/`) of the GenoAgent methods/foundation
