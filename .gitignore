@@ -150,3 +150,8 @@ CLAUDE.md
 
 # Internal execution plan (cost/session logs) — local only, not in repo
 MASTER_PROJECT_v2.2.md
+
+# Large derived index artefacts — deposited on Figshare (DOI 10.6084/m9.figshare.32814491),
+# referenced by SHA-256 in data/MANIFEST.tsv rather than carried in git.
+release/cohort/retained_pmcids.txt
+release/index_fingerprint/chunk_counts_by_pmcid.tsv

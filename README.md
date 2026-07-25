@@ -6,7 +6,7 @@
 > end-to-end agentic-workflow RAG system for literature-based causal gene
 > prioritisation in rare Mendelian disease.
 >
-> **Headline (n=1,047, deconfounded).** On the *fair-comparison cohort* — cases
+> **Headline (n=1,047, overlap-absent subset).** On the *fair-comparison cohort* — cases
 > whose source publication is **not** cited by `phenotype.hpoa` for the causal
 > gene — geno_agent (Cell S) is the **top-ranked system** (top-1 **0.858**),
 > significantly beating Exomiser (+0.078, p=0.015) and LIRICAL (+0.082, p=0.014);
@@ -26,11 +26,11 @@
 > **Latest update (2026-07-01).** Added a **difficulty × leakage 2×2**: a
 > case-paired *hard* cohort with 49 phenotype-similar distractors (HPO Resnik
 > best-match-average) alongside the standard random-distractor cohort, crossed with
-> the annotation-overlap (leakage) axis. On the deconfounded fair cohort, geno_agent
+> the annotation-overlap (leakage) axis. On the overlap-absent fair cohort, geno_agent
 > remains #1 in **both** difficulty regimes and its advantage over both curated
 > baselines **grows** under hard distractors (Holm-significant); the RAGAS + DeepEval
 > judges were re-run on the hard cohort. Earlier (2026-06-11): full n=1,047
-> evaluation — annotation-overlap deconfounding, publication-recency stratification,
+> evaluation — annotation-overlap flagging, publication-recency stratification,
 > three-LLM-family ablation, **leave-one-paper-out**, and **Holm / Benjamini–Hochberg**
 > multiplicity correction.
 
@@ -167,9 +167,9 @@ difficulty is varied orthogonally to leakage.
 bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 (leave-one-out, leave-N-out, permutation, McNemar) on load-bearing claims.
 
-### Deconfounding & robustness (n=1,047, complete)
+### Curation-overlap analysis & robustness (n=1,047, complete)
 
-- **Annotation-overlap deconfounding.** A per-case flag marks whether the source
+- **Annotation-overlap flag.** A per-case flag marks whether the source
   publication is cited by `phenotype.hpoa` for the causal gene's OMIM disease
   (cohort overlap rate 73.1 %). On the **fair cohort (overlap-absent, n=282)**,
   geno_agent is #1 (top-1 **0.858**) vs Exomiser 0.780 (**+0.078 ★**) and LIRICAL
@@ -252,7 +252,7 @@ This project is built reproducibility-first. Every external dataset is pinned to
 | HGNC complete set              | `2026-04-07` quarterly |
 | **Phenopacket Store**           | **`v0.1.26`** (this study; earlier cohort used `v0.1.19`) |
 | MedCPT Cross-Encoder           | `ncbi/MedCPT-Cross-Encoder` (HuggingFace, cached) |
-| PubMedBERT dense embedder      | `NeuML/pubmedbert-base-embeddings` (HuggingFace, cached) |
+| PubMedBERT dense embedder      | `NeuML/pubmedbert-base-embeddings` @ `b79526d6ef3645e0df4530322e266f24c829f5ef` |
 | Qdrant server / client         | `v1.14.1` / `1.14.3` |
 | Qwen3-8B Instruct              | HuggingFace default, FP16 weights, local `~/rare-disease-rag/models/` |
 | vLLM                            | `0.20.1` (dedicated venv `~/vllm-env/`) |
@@ -283,7 +283,47 @@ The release artifacts are archived on Figshare (project "GenoAgent") with persis
 | **Methods / shared foundation** — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
 | **GenoAgent system** — agents, evaluation harness, per-cell results, figures + tables | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
 
-The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixed-licence verbatim PMC OA text): they are not deposited but regenerate bit-for-bit from public inputs via the methods item (index fingerprint `52,777,395` chunks; SHA-256 in `data/MANIFEST.tsv`). Upstream resources — Phenopacket Store v0.1.26, ontologies, Exomiser/LIRICAL, and the Qwen3-8B / PubMedBERT / MedCPT models — are referenced by pinned version (see [Reproducibility](#reproducibility)), not redistributed.
+The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixed-licence verbatim PMC OA text): they are not deposited but regenerate from public inputs via the methods item. What regenerates is the indexed **content** — which chunks exist, under which content-addressed identifiers — verifiable against the chunk-set fingerprint below. The Qdrant collection itself is *not* byte-identical across builds: HNSW graph construction depends on insertion order and concurrency, and dense vectors are computed in FP16 on GPU, so two builds from identical inputs are content-equivalent rather than binary-identical. Upstream resources — Phenopacket Store v0.1.26, ontologies, Exomiser/LIRICAL, and the Qwen3-8B / PubMedBERT / MedCPT models — are referenced by pinned version (see [Reproducibility](#reproducibility)), not redistributed.
+
+### Index fingerprint and substrate validation
+
+The retrieval index is released as a build recipe, so it needs a way to be
+*checked*. `release/index_fingerprint/` carries that (all values also in
+`data/MANIFEST.tsv`):
+
+| Quantity | Value |
+|---|---|
+| Distinct `chunk_id` values | **52,777,395** (= Qdrant `points_count`) |
+| SHA-256 over the sorted, deduplicated `chunk_id` list | `70759656…aa39ea` |
+| Per-PMCID chunk-count manifest (`chunk_counts_by_pmcid.tsv`, 2,249,438 rows) | `639eae12…8a1769` |
+
+Recompute with `scripts/corpus/compute_chunk_fingerprint.sh`. Two steps are
+load-bearing and a rebuild will not match without them: `LC_ALL=C` byte ordering,
+and **deduplication** — `chunk_id` is a content-addressed UUID5, so a resumed
+build can re-emit a record an earlier pass already wrote, and that record upserts
+onto the same point. The released build emitted 52,782,789 records containing
+5,394 such duplicates; the distinct count matching `points_count` exactly is what
+confirms the upserts were idempotent.
+
+Two index-level characterisations (`retrieval_substrate_validation.json`, from
+`scripts/eval/validate_retrieval_substrate.py`) establish that the substrate
+retrieves something useful — properties of the corpus and retrieval configuration
+alone, with no ranker, LLM or prioritisation tool involved:
+
+- **Source-article recall.** Of the 415 unique source publications behind the
+  cohort, only **130 (31.3 %)** are in the index — 174 have no PMC record at all.
+  Among the 345 cases whose source article *is* indexed, a single unrefined query
+  recovers it in the top-100 chunks for 35.7 % (gene symbol) to 37.4 % (HPO
+  labels) of cases.
+- **Symbol grounding.** A mean of 18.6 % of the top-100 chunks returned for a gene
+  symbol contain that symbol under a case-sensitive word-boundary match; no gene
+  among the 100 sampled returned zero literal matches.
+
+Cohort-level analysis caveats are quantified in `release/cohort/`: the 1,047 cases
+derive from only **415 unique publications** (`clustering_stats.json`), so
+per-case metrics are not independent observations and intervals should cluster on
+source PMID; and the four strata were sampled at inclusion probabilities from
+0.769 down to 0.0786, so unweighted pooling estimates a design-defined quantity.
 
 ## Repository layout
 
@@ -394,7 +434,7 @@ please cite this repository:
 }
 ```
 
-Headline finding to cite (n=1,047, deconfounded):
+Headline finding to cite (n=1,047, overlap-absent subset):
 
 > On the fair-comparison cohort (overlap-absent, n=282) of Phenopacket Store v0.1.26, geno_agent (multi-agent + MedCPT cross-encoder rerank + Qwen3-8B LEA) is the top-ranked system (top-1 0.858), significantly exceeding Exomiser HPO-only (+0.078, p=0.015) and LIRICAL HPO-only (+0.082, p=0.014) — both surviving Holm multiplicity correction. LIRICAL's apparent overall top-1 (0.924) is largely an annotation-overlap artefact (it ties Exomiser once overlap is removed). A leave-one-paper-out analysis confirms geno_agent's advantage does not depend on retrieving each case's own source publication (fair-cohort top-1 unchanged, 0.858 → 0.858). On the full cohort, Cell S also exceeds Exomiser HPO-only (Δ = +0.034, 95 % CI [+0.006, +0.064]).
 

@@ -38,6 +38,27 @@ with the standard cohort, enabling a 2×2 (difficulty × leakage) evaluation.
   as the standard cohort (`BLAKE2b(global_seed=42 | case_id)`), so the variant is
   as reproducible and case-paired as the original.
 
+## Analysis caveats (inherited from the base cohort)
+
+Because this variant shares the base cohort's cases, both caveats below apply
+unchanged; see the standard-variant deposit
+([10.6084/m9.figshare.32814449](https://doi.org/10.6084/m9.figshare.32814449))
+for the full sampling-design table.
+
+- **Clustered cases.** The 1,047 cases derive from **415 unique source
+  publications** (median 1, mean 2.5, max 42 per publication), so per-case metrics
+  treated as independent observations understate variance. Cluster confidence
+  intervals on the source PMID encoded in `case_id`.
+- **Sampling weights.** The four strata were drawn at inclusion probabilities
+  ranging from 0.769 (immunological) to 0.0786 (neurological). Unweighted pooling
+  estimates a design-defined quantity, not a population one.
+- **Tool-class asymmetry.** Distractors are selected by HPO Resnik
+  best-match-average similarity computed over `genes_to_phenotype` — the same
+  curated resource from which knowledge-base tools derive their gene–phenotype
+  associations. Results on this variant should be read as performance against an
+  HPO-similarity-defined adversary, not as a tool-neutral difficulty increase.
+  Cross-tool comparisons are more safely made on the standard variant.
+
 ## Provenance
 
 | Input | Pinned version | License |

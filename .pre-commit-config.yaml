@@ -10,10 +10,13 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
+      # data/ and release/ hold released artefacts whose SHA-256 digests are
+      # cited in the manuscript and in data/MANIFEST.tsv. A hook that appends a
+      # newline silently invalidates a published digest, so they are excluded.
       - id: trailing-whitespace
-        exclude: ^reports/run_logs/
+        exclude: ^(reports/run_logs/|data/|release/)
       - id: end-of-file-fixer
-        exclude: ^reports/run_logs/
+        exclude: ^(reports/run_logs/|data/|release/)
       - id: check-yaml
       - id: check-toml
       - id: check-added-large-files

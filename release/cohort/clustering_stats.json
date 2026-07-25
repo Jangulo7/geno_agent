@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "source_cohort": "data/test_cases_1050/test_cases.jsonl",
+    "phenopacket_store_version": "0.1.26",
+    "hpoa_version": "v2026-02-16",
+    "recency_boundary": "2020-01-01",
+    "clustering_variable": "source PMID parsed from case_id",
+    "note": "Cases sharing a source publication are not independent: they share a source, frequently a causal gene, and by construction an annotation-overlap flag."
+  },
+  "strata": {
+    "full_cohort": {
+      "n_cases": 1047,
+      "n_unique_pmids": 415,
+      "median_cases_per_pmid": 1,
+      "mean_cases_per_pmid": 2.5229,
+      "max_cases_per_pmid": 42
+    },
+    "category_developmental": {
+      "n_cases": 250,
+      "n_unique_pmids": 91,
+      "median_cases_per_pmid": 2,
+      "mean_cases_per_pmid": 2.7473,
+      "max_cases_per_pmid": 15
+    },
+    "category_immunological": {
+      "n_cases": 300,
+      "n_unique_pmids": 107,
+      "median_cases_per_pmid": 2,
+      "mean_cases_per_pmid": 2.8037,
+      "max_cases_per_pmid": 20
+    },
+    "category_metabolic": {
+      "n_cases": 250,
+      "n_unique_pmids": 85,
+      "median_cases_per_pmid": 1,
+      "mean_cases_per_pmid": 2.9412,
+      "max_cases_per_pmid": 42
+    },
+    "category_neurological": {
+      "n_cases": 247,
+      "n_unique_pmids": 133,
+      "median_cases_per_pmid": 1,
+      "mean_cases_per_pmid": 1.8571,
+      "max_cases_per_pmid": 35
+    },
+    "overlap_present": {
+      "n_cases": 765,
+      "n_unique_pmids": 322,
+      "median_cases_per_pmid": 1.0,
+      "mean_cases_per_pmid": 2.3758,
+      "max_cases_per_pmid": 42
+    },
+    "overlap_absent": {
+      "n_cases": 282,
+      "n_unique_pmids": 93,
+      "median_cases_per_pmid": 1,
+      "mean_cases_per_pmid": 3.0323,
+      "max_cases_per_pmid": 35
+    },
+    "pre_2020": {
+      "n_cases": 601,
+      "n_unique_pmids": 251,
+      "median_cases_per_pmid": 1,
+      "mean_cases_per_pmid": 2.3944,
+      "max_cases_per_pmid": 28
+    },
+    "post_2020": {
+      "n_cases": 446,
+      "n_unique_pmids": 164,
+      "median_cases_per_pmid": 1.0,
+      "mean_cases_per_pmid": 2.7195,
+      "max_cases_per_pmid": 42
+    },
+    "post_2020_x_overlap_absent": {
+      "n_cases": 88,
+      "n_unique_pmids": 18,
+      "median_cases_per_pmid": 1.0,
+      "mean_cases_per_pmid": 4.8889,
+      "max_cases_per_pmid": 35
+    }
+  }
+}
