@@ -101,6 +101,15 @@ _ap.add_argument(
     default=ROOT / "reports" / "figures",
     help="output directory (default: reports/figures)",
 )
+_ap.add_argument(
+    "--consort-title",
+    default="Figure 1 - CONSORT-style cohort selection flow",
+    help=(
+        "title drawn inside fig1. P1 numbers this Figure 1; P2 carries the same "
+        "flow as Figure A.1 in its annex, so the number must be settable rather "
+        "than hard-coded, or the two papers disagree with their own captions."
+    ),
+)
 _args = _ap.parse_args()
 OUT = _args.out
 OUT.mkdir(parents=True, exist_ok=True)
@@ -295,13 +304,11 @@ tb(
     1.5,
     "Annotation-overlap stratification (per-PMID vs phenotype.hpoa)\n"
     f"Overlap-present  n = {n_overlap} ({100 * n_overlap / final:.1f}%)\n"
-    f"Overlap-absent (fair-comparison subset)  n = {final - n_overlap} ({100 * (final - n_overlap) / final:.1f}%)",
+    f"Overlap-absent subset  n = {final - n_overlap} ({100 * (final - n_overlap) / final:.1f}%)",
     TAN,
     fs=8.6,
 )
-ax.set_title(
-    "Figure 1 - CONSORT-style cohort selection flow", fontsize=12, fontweight="bold", pad=8
-)
+ax.set_title(_args.consort_title, fontsize=12, fontweight="bold", pad=8)
 fig.savefig(OUT / "fig1_consort_flow.png", dpi=300, bbox_inches="tight")
 plt.close(fig)
 print("fig1 done | funnel", loaded, elig_ii, categ, sampled, final, "| drops", sum(DROP.values()))
@@ -405,7 +412,7 @@ ax[0, 1].bar(
     bottom=present,
     color=ABSENT,
     width=0.68,
-    label=f"Overlap-absent - fair-comparison subset  ({tot_a}, {100 * tot_a / final:.1f}%)",
+    label=f"Overlap-absent subset  ({tot_a}, {100 * tot_a / final:.1f}%)",
 )
 ax[0, 1].set_xticks(range(4))
 ax[0, 1].set_xticklabels([c[:5].capitalize() for c in CATS], rotation=20, ha="right")
