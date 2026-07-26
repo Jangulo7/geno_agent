@@ -1,0 +1,32 @@
+{
+ "case_id": "POLR1A:PMID_37075751_Individual_14",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "POLR1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NLRP12",
+  "ATP6V1G2",
+  "MFSD12",
+  "ZNF287",
+  "TP53I11",
+  "ATP11B",
+  "NFKBIE",
+  "PCARE",
+  "ZNF385C",
+  "WDFY2",
+  "SPTAN1",
+  "HTR6",
+  "ZMYND12",
+  "SIRPB2"
+ ],
+ "top1": "NLRP12",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IRF2BL\",\"confidence\":0.95,\"rationale\":\"Multiple case reports link IRF2BL variants to facial dysmorphism and developmental delay.\"},{\"gene\":\"NLRP12\",\"confidence\":0.15,\"rationale\":\"Limited evidence of facial features overlap.\"},{\"gene\":\"ATP6V1G2\",\"confidence\":0.12,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"MFSD12\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZNF287\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"TP53I11\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ATP11B\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"NFKBIE\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"PCARE\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZNF385C\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"WDFY2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"HTR6\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZMYND12\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SIRPB2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.455,
+ "tokens_in": 14457,
+ "tokens_out": 389
+}

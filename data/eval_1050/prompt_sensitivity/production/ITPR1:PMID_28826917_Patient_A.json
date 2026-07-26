@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_28826917_Patient_A",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "SUCLA2",
+  "GTF3C4",
+  "NABP2",
+  "CASQ2",
+  "STOX2",
+  "ZNF407",
+  "PPME1",
+  "CYLC2",
+  "CPLX1",
+  "EML5",
+  "TRIT1",
+  "B3GNT8",
+  "NDUFB1",
+  "KLF1"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly linked to SCA15 with all patient phenotypes\"},{\"gene\":\"SUCLA2\",\"confidence\":0.85,\"rationale\":\"SCA2 with slow saccades and ataxia\"},{\"gene\":\"GTF3C4\",\"confidence\":0.75,\"rationale\":\"Slow saccades and ataxia in patient\"},{\"gene\":\"NABP2\",\"confidence\":0.65,\"rationale\":\"Slow saccades and ataxia in patient\"},{\"gene\":\"CASQ2\",\"confidence\":0.6,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"STOX2\",\"confidence\":0.55,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"ZNF407\",\"confidence\":0.5,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"PPME1\",\"confidence\":0.45,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"CYLC2\",\"confidence\":0.4,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"CPLX1\",\"confidence\":0.35,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"EML5\",\"confidence\":0.3,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"TRIT1\",\"confidence\":0.25,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"B3GNT8\",\"confidence\":0.2,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"NDUFB1\",\"confidence\":0.15,\"rationale\":\"Ataxia and saccadic issues\"},{\"gene\":\"KLF1\",\"confidence\":0.1,\"rationale\":\"Ataxia and saccadic issues\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.229,
+ "tokens_in": 18199,
+ "tokens_out": 399
+}

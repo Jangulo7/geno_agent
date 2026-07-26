@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FCGR3A",
+  "SLC35H1",
+  "CTBS",
+  "RLN1",
+  "NES",
+  "TREH",
+  "SCX",
+  "RLN3",
+  "NLGN3",
+  "SPEGNB",
+  "PSMA6",
+  "STEAP4",
+  "LRATD1",
+  "FAM216B",
+  "UBXN11"
+ ],
+ "top1": "FCGR3A",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FCGR3A\",\"confidence\":0.95,\"rationale\":\"Elevated ALT, AST, ALP, and GGT levels directly match patient phenotype.\"},{\"gene\":\"SLC35H1\",\"confidence\":0.85,\"rationale\":\"Cholestasis and elevated bilirubin align with gene's known role.\"},{\"gene\":\"CTBS\",\"confidence\":0.75,\"rationale\":\"Elevated bilirubin and liver enzymes suggest metabolic disorder.\"},{\"gene\":\"RLN1\",\"confidence\":0.65,\"rationale\":\"Liver enzyme elevations are consistent with gene's involvement.\"},{\"gene\":\"NES\",\"confidence\":0.6,\"rationale\":\"Liver injury and bilirubin elevation are linked to gene function.\"},{\"gene\":\"TREH\",\"confidence\":0.55,\"rationale\":\"Liver enzyme abnormalities match gene's associated conditions.\"},{\"gene\":\"SCX\",\"confidence\":0.5,\"rationale\":\"Liver enzyme elevations are consistent with gene's role.\"},{\"gene\":\"RLN3\",\"confidence\":0.45,\"rationale\":\"Liver enzyme elevations are associated with gene function.\"},{\"gene\":\"NLGN3\",\"confidence\":0.4,\"rationale\":\"Liver enzyme abnormalities align with gene's involvement.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.35,\"rationale\":\"Liver injury and bilirubin elevation are linked to gene function.\"},{\"gene\":\"PSMA6\",\"confidence\":0.3,\"rationale\":\"Liver enzyme elevations are consistent with gene's role.\"},{\"gene\":\"STEAP4\",\"confidence\":0.25,\"rationale\":\"Liver enzyme abnormalities match gene's associated conditions.\"},{\"gene\":\"LRATD1\",\"confidence\":0.2,\"rationale\":\"Liver enzyme elevations are associated with gene function.\"},{\"gene\":\"FAM216B\",\"confidence\":0.15,\"rationale\":\"Liver enzyme abnormalities align with gene's involvement.\"},{\"gene\":\"UBXN11\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations are linked to gene function.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.18,
+ "tokens_in": 11966,
+ "tokens_out": 438
+}

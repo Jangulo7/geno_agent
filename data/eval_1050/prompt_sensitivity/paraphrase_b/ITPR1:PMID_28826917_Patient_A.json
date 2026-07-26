@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_28826917_Patient_A",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "SUCLA2",
+  "GTF3C4",
+  "CPLX1",
+  "EML5",
+  "TRIT1",
+  "CYLC2",
+  "B3GNT8",
+  "KLF1",
+  "PPME1",
+  "NDUFB1",
+  "ZNF407",
+  "CASQ2",
+  "NABP2",
+  "STOX2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly links to SCA15 with all patient phenotypes including ataxia, dysarthria, saccadic eye movements, and cerebellar atrophy.\"},{\"gene\":\"SUCLA2\",\"confidence\":0.85,\"rationale\":\"Associated with SCA2, matching symptoms like ataxia, dysarthria, slow saccades, and brainstem/cerebellar atrophy.\"},{\"gene\":\"GTF3C4\",\"confidence\":0.75,\"rationale\":\"Linked to ataxia with dysarthria, spasticity, and slow saccades, though less specific than ITPR1.\"},{\"gene\":\"CPLX1\",\"confidence\":0.65,\"rationale\":\"Ataxia with dysarthria and eye movement abnormalities, but not as directly linked as ITPR1.\"},{\"gene\":\"EML5\",\"confidence\":0.6,\"rationale\":\"Ataxia with dysarthria and saccadic eye movements, but less specific evidence.\"},{\"gene\":\"TRIT1\",\"confidence\":0.55,\"rationale\":\"Ataxia with dysarthria and slow saccades, but not as directly linked as ITPR1.\"},{\"gene\":\"CYLC2\",\"confidence\":0.5,\"rationale\":\"General ataxia description without specific phenotypic match.\"},{\"gene\":\"B3GNT8\",\"confidence\":0.45,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"KLF1\",\"confidence\":0.4,\"rationale\":\"Ataxia with dysarthria, but no direct phenotypic match.\"},{\"gene\":\"PPME1\",\"confidence\":0.35,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"NDUFB1\",\"confidence\":0.3,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"ZNF407\",\"confidence\":0.25,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"CASQ2\",\"confidence\":0.2,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"NABP2\",\"confidence\":0.15,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"},{\"gene\":\"STOX2\",\"confidence\":0.1,\"rationale\":\"Ataxia with dysarthria and eye movement issues, but not as directly linked.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.23,
+ "tokens_in": 18181,
+ "tokens_out": 581
+}

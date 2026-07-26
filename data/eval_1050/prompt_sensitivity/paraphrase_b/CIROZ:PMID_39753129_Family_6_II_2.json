@@ -1,0 +1,33 @@
+{
+ "case_id": "CIROZ:PMID_39753129_Family_6_II_2",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "CIROZ",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MOSMO",
+  "PPIB",
+  "HPCA",
+  "FAM120AOS",
+  "SLC45A2",
+  "NXPE1",
+  "RMDN2",
+  "WEE2",
+  "SF3A1",
+  "ZC3H11C",
+  "CFAP299",
+  "ZFP36L2",
+  "FAM76B",
+  "TIGD1",
+  "OR2H2"
+ ],
+ "top1": "MOSMO",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MOSMO\",\"confidence\":0.95,\"rationale\":\"Direct evidence of heart malformations in MOSMO knockout mice matching patient phenotype.\"},{\"gene\":\"PPIB\",\"confidence\":0.15,\"rationale\":\"General heterotaxy criteria mentioned, no specific gene-disease link.\"},{\"gene\":\"HPCA\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"FAM120AOS\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"SLC45A2\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"NXPE1\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"RMDN2\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"WEE2\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"SF3A1\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"ZC3H11C\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"CFAP299\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"ZFP36L2\",\"confidence\":0.15,\"rationale\":\"General cardiac defect discussion, no specific gene-disease link.\"},{\"gene\":\"FAM76B\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"TIGD1\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"},{\"gene\":\"OR2H2\",\"confidence\":0.15,\"rationale\":\"General heterotaxy discussion, no specific gene-disease link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.619,
+ "tokens_in": 15317,
+ "tokens_out": 481
+}

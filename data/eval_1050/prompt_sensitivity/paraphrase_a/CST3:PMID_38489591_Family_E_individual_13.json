@@ -1,0 +1,33 @@
+{
+ "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "CST3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SRD5A3",
+  "SUFU",
+  "MACROH2A2",
+  "SLC35F6",
+  "SLC16A14",
+  "SLC52A1",
+  "TECPR2",
+  "NAXD",
+  "SFT2D1",
+  "NUDT2",
+  "POTEA",
+  "SUCLG2",
+  "TBATA",
+  "ETV7",
+  "MAGIX"
+ ],
+ "top1": "SRD5A3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"SRD5A3\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Direct link to cerebellar atrophy and mental deterioration with homozygous mutations.\"\n  },\n  {\n    \"gene\": \"SUFU\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Associated with cerebellar vermis hypoplasia and ataxia.\"\n  },\n  {\n    \"gene\": \"MACROH2A2\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Linked to cerebellar atrophy and corpus callosum abnormalities.\"\n  },\n  {\n    \"gene\": \"SLC35F6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Reported with cerebellar and corpus callosum anomalies.\"\n  },\n  {\n    \"gene\": \"SLC16A14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"SLC52A1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TECPR2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"NAXD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"SFT2D1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"NUDT2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"POTEA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"SUCLG2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TBATA\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Linked to cerebellar peduncle involvement.\"\n  },\n  {\n    \"gene\": \"ETV7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"MAGIX\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.3,
+ "tokens_in": 16252,
+ "tokens_out": 619
+}

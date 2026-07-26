@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF2:PMID_34826260_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "IKZF2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF2",
+  "FAM13B",
+  "MTDH",
+  "SMTN",
+  "FIGLA",
+  "PTK6",
+  "DEPTOR",
+  "KCNS1",
+  "BMI1",
+  "DSCAML1",
+  "TFDP1",
+  "OR2G6",
+  "DPPA4",
+  "DHPS",
+  "FAM90A12"
+ ],
+ "top1": "IKZF2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF2\",\"confidence\":0.95,\"rationale\":\"Directly links to CD4/CD8 T cell memory subsets and immune checkpoint markers relevant to the patient's T cell phenotype.\"},{\"gene\":\"FAM13B\",\"confidence\":0.25,\"rationale\":\"Correlates with effector memory CD4 T cells but lacks comprehensive coverage of other T/B cell phenotypes.\"},{\"gene\":\"MTDH\",\"confidence\":0.15,\"rationale\":\"Shows immune cell infiltration patterns but not specific to the patient's T/B cell subset changes.\"},{\"gene\":\"SMTN\",\"confidence\":0.1,\"rationale\":\"Limited relevance to T cell subsets and lacks direct phenotypic correlation.\"},{\"gene\":\"FIGLA\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"PTK6\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"DEPTOR\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"KCNS1\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"BMI1\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"DSCAML1\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"TFDP1\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"OR2G6\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"DPPA4\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"DHPS\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"},{\"gene\":\"FAM90A12\",\"confidence\":0.1,\"rationale\":\"No direct link to T cell subsets or immune-related phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.612,
+ "tokens_in": 20872,
+ "tokens_out": 479
+}

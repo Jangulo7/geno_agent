@@ -1,0 +1,33 @@
+{
+ "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "ZSWIM6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PROP1",
+  "DSN1",
+  "C12orf75",
+  "CWF19L1",
+  "TMEM11",
+  "SPINK5",
+  "HNRNPLL",
+  "VWA2",
+  "SNTG2",
+  "TFAM",
+  "APOO",
+  "EVX1",
+  "NTAN1",
+  "TARS1",
+  "UHRF1"
+ ],
+ "top1": "PROP1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PROP1\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms with strong evidence of CNS and facial anomalies.\"},{\"gene\":\"DSN1\",\"confidence\":0.85,\"rationale\":\"Shows parietal foramina and CNS anomalies matching patient phenotype.\"},{\"gene\":\"C12orf75\",\"confidence\":0.75,\"rationale\":\"Linked to CNS and facial features in multiple patients.\"},{\"gene\":\"CWF19L1\",\"confidence\":0.7,\"rationale\":\"Shares facial and CNS features with patient phenotype.\"},{\"gene\":\"TMEM11\",\"confidence\":0.65,\"rationale\":\"Has CNS and facial anomalies overlapping with patient's features.\"},{\"gene\":\"SPINK5\",\"confidence\":0.6,\"rationale\":\"Includes hypertelorism and lip anomalies matching patient's phenotype.\"},{\"gene\":\"HNRNPLL\",\"confidence\":0.55,\"rationale\":\"Shares some facial and CNS features with patient.\"},{\"gene\":\"VWA2\",\"confidence\":0.5,\"rationale\":\"Has hypertelorism and lip features matching patient.\"},{\"gene\":\"SNTG2\",\"confidence\":0.45,\"rationale\":\"Includes hypertelorism and facial anomalies similar to patient.\"},{\"gene\":\"TFAM\",\"confidence\":0.4,\"rationale\":\"Shares some facial and CNS features with patient.\"},{\"gene\":\"APOO\",\"confidence\":0.35,\"rationale\":\"Has facial and CNS features overlapping with patient.\"},{\"gene\":\"EVX1\",\"confidence\":0.3,\"rationale\":\"Includes hypertelorism and facial anomalies matching patient.\"},{\"gene\":\"NTAN1\",\"confidence\":0.25,\"rationale\":\"Shares some facial features with patient.\"},{\"gene\":\"TARS1\",\"confidence\":0.2,\"rationale\":\"Has CNS and facial features similar to patient.\"},{\"gene\":\"UHRF1\",\"confidence\":0.15,\"rationale\":\"Shares some facial and CNS features with patient.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.093,
+ "tokens_in": 16479,
+ "tokens_out": 415
+}

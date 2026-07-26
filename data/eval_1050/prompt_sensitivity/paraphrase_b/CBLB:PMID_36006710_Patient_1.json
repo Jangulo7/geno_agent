@@ -1,0 +1,33 @@
+{
+ "case_id": "CBLB:PMID_36006710_Patient_1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "CBLB",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ERP44",
+  "MOB1A",
+  "ASS1",
+  "GHSR",
+  "SPANXA2",
+  "CABP2",
+  "PABPC1",
+  "TEKT2",
+  "PRKAB1",
+  "TMEM140",
+  "NMRAL1",
+  "CAVIN1",
+  "COX17",
+  "RAD21",
+  "FIGN"
+ ],
+ "top1": "ERP44",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ERP44\",\"confidence\":0.95,\"rationale\":\"High IgG, IgA, and IgM levels with poor antibody response to vaccines align with ERP44 dysfunction.\"},{\"gene\":\"MOB1A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking MOB1A to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"ASS1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking ASS1 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"GHSR\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking GHSR to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"SPANXA2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SPANXA2 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"CABP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CABP2 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"PABPC1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking PABPC1 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"TEKT2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking TEKT2 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"PRKAB1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking PRKAB1 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"TMEM140\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking TMEM140 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"NMRAL1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NMRAL1 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"CAVIN1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CAVIN1 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"COX17\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking COX17 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"RAD21\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking RAD21 to immunoglobulin deficiencies or vaccine responses.\"},{\"gene\":\"FIGN\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking FIGN to immunoglobulin deficiencies or vaccine responses.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.306,
+ "tokens_in": 16976,
+ "tokens_out": 510
+}

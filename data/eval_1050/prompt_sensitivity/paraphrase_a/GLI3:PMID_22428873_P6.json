@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_22428873_P6",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "SOHLH2",
+  "MEGF11",
+  "AGMO",
+  "FSCN3",
+  "RAI2",
+  "LIPI",
+  "CFAP144",
+  "PIP5KL1",
+  "CXXC1",
+  "FKBP14",
+  "FAM209B",
+  "MMGT1",
+  "SPATS2L",
+  "STAG1"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"Directly links to GCPS with postaxial polydactyly, broad thumbs, syndactyly, and macrocephaly.\"},{\"gene\":\"SOHLH2\",\"confidence\":0.15,\"rationale\":\"Limited mention of polydactyly and syndactyly.\"},{\"gene\":\"MEGF11\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"AGMO\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"FSCN3\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"RAI2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"LIPI\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"CFAP144\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"CXXC1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"FKBP14\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"FAM209B\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"MMGT1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"SPATS2L\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"},{\"gene\":\"STAG1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.169,
+ "tokens_in": 15252,
+ "tokens_out": 445
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_37964426_Individual_G2550R_2",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GDI1",
+  "ITPR1",
+  "SPOCK1",
+  "LAX1",
+  "CYP27B1",
+  "ZNF235",
+  "SERF1A",
+  "ACADS",
+  "OR7D2",
+  "ALOX15B",
+  "LRBA",
+  "EEF1AKMT3",
+  "KRTAP11-1",
+  "INSL4",
+  "WWTR1"
+ ],
+ "top1": "GDI1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GDI1\",\"confidence\":0.95,\"rationale\":\"Multiple reports link GDI1 duplications to hypotonia, intellectual disability, and ocular abnormalities.\"},{\"gene\":\"ITPR1\",\"confidence\":0.85,\"rationale\":\"ITPR1 mutations are associated with ataxia, hypotonia, and intellectual disability.\"},{\"gene\":\"SPOCK1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking SPOCK1 to the phenotype.\"},{\"gene\":\"LAX1\",\"confidence\":0.15,\"rationale\":\"LAX1 is linked to ciliopathy but not the full phenotype.\"},{\"gene\":\"CYP27B1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking CYP27B1 to the phenotype.\"},{\"gene\":\"ZNF235\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking ZNF235 to the phenotype.\"},{\"gene\":\"SERF1A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking SERF1A to the phenotype.\"},{\"gene\":\"ACADS\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking ACADS to the phenotype.\"},{\"gene\":\"OR7D2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking OR7D2 to the phenotype.\"},{\"gene\":\"ALOX15B\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking ALOX15B to the phenotype.\"},{\"gene\":\"LRBA\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking LRBA to the phenotype.\"},{\"gene\":\"EEF1AKMT3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking EEF1AKMT3 to the phenotype.\"},{\"gene\":\"KRTAP11-1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking KRTAP11-1 to the phenotype.\"},{\"gene\":\"INSL4\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking INSL4 to the phenotype.\"},{\"gene\":\"WWTR1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking WWTR1 to the phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.844,
+ "tokens_in": 10395,
+ "tokens_out": 480
+}

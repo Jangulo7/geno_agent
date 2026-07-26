@@ -1,0 +1,32 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR9",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPARC",
+  "LMNA",
+  "GBP5",
+  "SLC2A8",
+  "SLC4A3",
+  "TAF2",
+  "TMEM218",
+  "OXT",
+  "FOXB2",
+  "DGCR8",
+  "WDR53",
+  "HEPH",
+  "ITGB1BP2",
+  "MPI"
+ ],
+ "top1": "SPARC",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPARC\",\"confidence\":0.95,\"rationale\":\"Directly links to lipodystrophy, hypertriglyceridemia, and metabolic features matching the patient's presentation.\"},{\"gene\":\"LMNA\",\"confidence\":0.85,\"rationale\":\"Associated with partial lipodystrophy, hypertriglyceridemia, and hepatic steatosis.\"},{\"gene\":\"GBP5\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"SLC2A8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"SLC4A3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"TAF2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"TMEM218\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"OXT\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"FOXB2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"DGCR8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"WDR53\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"HEPH\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"ITGB1BP2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"MPI\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"},{\"gene\":\"SLC2A8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's specific phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.926,
+ "tokens_in": 18025,
+ "tokens_out": 469
+}

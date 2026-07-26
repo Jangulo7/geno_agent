@@ -1,0 +1,33 @@
+{
+ "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "CST3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SRD5A3",
+  "MACROH2A2",
+  "TECPR2",
+  "SLC35F6",
+  "SLC52A1",
+  "MAGIX",
+  "NAXD",
+  "SFT2D1",
+  "NUDT2",
+  "POTEA",
+  "SUCLG2",
+  "TBATA",
+  "SUFU",
+  "ETV7",
+  "SLC16A14"
+ ],
+ "top1": "SRD5A3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SRD5A3\",\"confidence\":0.95,\"rationale\":\"Homozygous mutations linked to cerebellar atrophy and gait disturbance.\"},{\"gene\":\"MACROH2A2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"TECPR2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SLC35F6\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SLC52A1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"MAGIX\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"NAXD\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SFT2D1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"NUDT2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"POTEA\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SUCLG2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"TBATA\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SUFU\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"ETV7\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"},{\"gene\":\"SLC16A14\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.558,
+ "tokens_in": 16257,
+ "tokens_out": 368
+}

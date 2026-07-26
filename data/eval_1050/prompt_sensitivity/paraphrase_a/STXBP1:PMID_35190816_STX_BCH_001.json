@@ -1,0 +1,33 @@
+{
+ "case_id": "STXBP1:PMID_35190816_STX_BCH_001",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "STXBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "STXBP1",
+  "MRPL46",
+  "IGSF23",
+  "GOLGA8T",
+  "CXCR3",
+  "SETD7",
+  "CLDN6",
+  "DMRTA1",
+  "ARL14",
+  "SSBP2",
+  "MRPS28",
+  "LZIC",
+  "RABGAP1",
+  "BAMBI",
+  "INSC"
+ ],
+ "top1": "STXBP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"STXBP1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Matches EIDEE with infantile spasms, multifocal discharges, and developmental delay.\"\n  },\n  {\n    \"gene\": \"MRPL46\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"IGSF23\",\n    \"confidence\": 0.1,\n    \"rationale\": \"General epilepsy features but no specific match to the patient's phenotype.\"\n  },\n  {\n    \"gene\": \"GOLGA8T\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"CXCR3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"SETD7\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"CLDN6\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"DMRTA1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"ARL14\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"SSBP2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"MRPS28\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"LZIC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"RABGAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"BAMBI\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  },\n  {\n    \"gene\": \"INSC\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No specific relevance to the patient's seizure types or developmental features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.543,
+ "tokens_in": 16135,
+ "tokens_out": 639
+}

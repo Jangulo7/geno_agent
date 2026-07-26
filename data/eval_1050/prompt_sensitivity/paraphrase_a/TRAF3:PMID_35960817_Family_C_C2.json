@@ -1,0 +1,33 @@
+{
+ "case_id": "TRAF3:PMID_35960817_Family_C_C2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "TRAF3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TRAF3",
+  "GADD45G",
+  "TLCD3A",
+  "SNW1",
+  "ARL15",
+  "KLHL20",
+  "GSG1L",
+  "CACNG4",
+  "RASSF4",
+  "COMTD1",
+  "RCCD1",
+  "COL4A1",
+  "MORF4L1",
+  "CPSF3",
+  "NBPF12"
+ ],
+ "top1": "TRAF3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TRAF3\",\"confidence\":0.95,\"rationale\":\"TRAF3 mutation linked to high IgG/IgA and recurrent infections with atopic dermatitis.\"},{\"gene\":\"GADD45G\",\"confidence\":0.15,\"rationale\":\"Associated with elevated IgE and recurrent infections but not IgA.\"},{\"gene\":\"IL6R\",\"confidence\":0.1,\"rationale\":\"Linked to atopic dermatitis and infections but not IgA elevation.\"},{\"gene\":\"TLCD3A\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"SNW1\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"ARL15\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"KLHL20\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"TLCD3A\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"GSG1L\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"CACNG4\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"RASSF4\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"COMTD1\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"RCCD1\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"COL4A1\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"MORF4L1\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"CPSF3\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"},{\"gene\":\"NBPF12\",\"confidence\":0.05,\"rationale\":\"No direct link to IgA or specific infections.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.552,
+ "tokens_in": 13269,
+ "tokens_out": 498
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_10939567_Patient_EMD4_II_2",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "FCF1",
+  "FEZ1",
+  "RGPD1",
+  "FABP6",
+  "CEBPB",
+  "ZFP82",
+  "KDELR2",
+  "SDR9C7",
+  "ADAD1",
+  "IBA57",
+  "OR2AT4",
+  "SLC30A7",
+  "EMILIN3",
+  "LCE1B"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations cause Emery-Dreifuss muscular dystrophy with contractures, spinal rigidity, and arrhythmia matching the phenotype.\"},{\"gene\":\"FCF1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking FCF1 to the described phenotype.\"},{\"gene\":\"FEZ1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking FEZ1 to the described phenotype.\"},{\"gene\":\"RGPD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking RGPD1 to the described phenotype.\"},{\"gene\":\"FABP6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking FABP6 to the described phenotype.\"},{\"gene\":\"CEBPB\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CEBPB to the described phenotype.\"},{\"gene\":\"ZFP82\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ZFP82 to the described phenotype.\"},{\"gene\":\"KDELR2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking KDELR2 to the described phenotype.\"},{\"gene\":\"SDR9C7\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SDR9C7 to the described phenotype.\"},{\"gene\":\"ADAD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ADAD1 to the described phenotype.\"},{\"gene\":\"IBA57\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking IBA57 to the described phenotype.\"},{\"gene\":\"OR2AT4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking OR2AT4 to the described phenotype.\"},{\"gene\":\"SLC30A7\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SLC30A7 to the described phenotype.\"},{\"gene\":\"EMILIN3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking EMILIN3 to the described phenotype.\"},{\"gene\":\"LCE1B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking LCE1B to the described phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.18,
+ "tokens_in": 18973,
+ "tokens_out": 481
+}

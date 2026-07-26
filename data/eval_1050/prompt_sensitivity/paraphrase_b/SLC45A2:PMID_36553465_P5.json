@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC45A2:PMID_36553465_P5",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "SLC45A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PAX6",
+  "SLC45A2",
+  "SIX3",
+  "DMRTC1",
+  "CYP20A1",
+  "PAQR4",
+  "TMEM139",
+  "TRPV4",
+  "SACK1B",
+  "WWP2",
+  "ZNF611",
+  "SCN9A",
+  "ATP13A4",
+  "RPL24",
+  "AFAP1L1"
+ ],
+ "top1": "PAX6",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PAX6\",\"confidence\":0.95,\"rationale\":\"PAX6 is strongly linked to Waardenburg syndrome and albinism, matching the patient's pigmentation and ocular features.\"},{\"gene\":\"SLC45A2\",\"confidence\":0.85,\"rationale\":\"SLC45A2 mutations cause OCA4, aligning with hypopigmentation, blue irises, and reduced vision.\"},{\"gene\":\"SIX3\",\"confidence\":0.15,\"rationale\":\"SIX3 is associated with eye development but lacks direct evidence for the patient's pigmentation issues.\"},{\"gene\":\"DMRTC1\",\"confidence\":0.1,\"rationale\":\"DMRTC1 is linked to hypopigmentation but not the full range of the patient's ocular features.\"},{\"gene\":\"CYP20A1\",\"confidence\":0.1,\"rationale\":\"CYP20A1 is not directly associated with the patient's phenotype.\"},{\"gene\":\"PAQR4\",\"confidence\":0.1,\"rationale\":\"PAQR4 is not directly associated with the patient's phenotype.\"},{\"gene\":\"TMEM139\",\"confidence\":0.1,\"rationale\":\"TMEM139 is not directly associated with the patient's phenotype.\"},{\"gene\":\"TRPV4\",\"confidence\":0.1,\"rationale\":\"TRPV4 is not directly associated with the patient's phenotype.\"},{\"gene\":\"SACK1B\",\"confidence\":0.1,\"rationale\":\"SACK1B is not directly associated with the patient's phenotype.\"},{\"gene\":\"WWP2\",\"confidence\":0.1,\"rationale\":\"WWP2 is not directly associated with the patient's phenotype.\"},{\"gene\":\"ZNF611\",\"confidence\":0.1,\"rationale\":\"ZNF611 is not directly associated with the patient's phenotype.\"},{\"gene\":\"SCN9A\",\"confidence\":0.1,\"rationale\":\"SCN9A is not directly associated with the patient's phenotype.\"},{\"gene\":\"ATP13A4\",\"confidence\":0.1,\"rationale\":\"ATP13A4 is not directly associated with the patient's phenotype.\"},{\"gene\":\"RPL24\",\"confidence\":0.1,\"rationale\":\"RPL24 is not directly associated with the patient's phenotype.\"},{\"gene\":\"AFAP1L1\",\"confidence\":0.1,\"rationale\":\"AFAP1L1 is not directly associated with the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.476,
+ "tokens_in": 17703,
+ "tokens_out": 524
+}

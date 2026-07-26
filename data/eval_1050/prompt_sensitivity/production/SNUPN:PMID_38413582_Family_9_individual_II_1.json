@@ -1,0 +1,33 @@
+{
+ "case_id": "SNUPN:PMID_38413582_Family_9_individual_II_1",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "SNUPN",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ALS2",
+  "POMK",
+  "MMP16",
+  "HECW2",
+  "ATP8A2",
+  "FOXA2",
+  "ZNF610",
+  "MSANTD3",
+  "LALBA",
+  "OR13C9",
+  "FOXJ1",
+  "NKX2-6",
+  "MAGOH",
+  "PPP1CC",
+  "ACOT2"
+ ],
+ "top1": "ALS2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ALS2\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including progressive weakness, Gowers sign, and neurogenic EMG findings.\"},{\"gene\":\"POMK\",\"confidence\":0.85,\"rationale\":\"Family history and progressive distal to proximal weakness align with known POMK-related disorders.\"},{\"gene\":\"MMP16\",\"confidence\":0.75,\"rationale\":\"Shared clinical features with the patient, including muscle weakness and gait issues.\"},{\"gene\":\"HECW2\",\"confidence\":0.65,\"rationale\":\"Similar muscle weakness and EMG findings reported in literature.\"},{\"gene\":\"ATP8A2\",\"confidence\":0.6,\"rationale\":\"Neurogenic EMG and progressive muscle weakness match reported cases.\"},{\"gene\":\"FOXA2\",\"confidence\":0.55,\"rationale\":\"Shared clinical features with the patient, including muscle weakness and gait abnormalities.\"},{\"gene\":\"ZNF610\",\"confidence\":0.5,\"rationale\":\"Some overlapping symptoms like muscle weakness and gait issues.\"},{\"gene\":\"MSANTD3\",\"confidence\":0.45,\"rationale\":\"Partial overlap in muscle weakness and EMG findings.\"},{\"gene\":\"LALBA\",\"confidence\":0.4,\"rationale\":\"Some phenotypic overlap with muscle weakness and gait issues.\"},{\"gene\":\"OR13C9\",\"confidence\":0.35,\"rationale\":\"Limited overlap in symptoms like muscle weakness and seizures.\"},{\"gene\":\"FOXJ1\",\"confidence\":0.3,\"rationale\":\"Some shared features with muscle weakness and gait issues.\"},{\"gene\":\"NKX2-6\",\"confidence\":0.25,\"rationale\":\"Partial overlap in muscle weakness and developmental features.\"},{\"gene\":\"MAGOH\",\"confidence\":0.2,\"rationale\":\"Limited phenotypic overlap with muscle weakness and gait issues.\"},{\"gene\":\"PPP1CC\",\"confidence\":0.15,\"rationale\":\"Some shared symptoms like muscle weakness and gait abnormalities.\"},{\"gene\":\"ACOT2\",\"confidence\":0.1,\"rationale\":\"Minimal overlap in symptoms with the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.746,
+ "tokens_in": 11296,
+ "tokens_out": 456
+}

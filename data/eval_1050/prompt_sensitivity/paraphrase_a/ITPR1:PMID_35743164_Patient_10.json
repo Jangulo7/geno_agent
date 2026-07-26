@@ -1,0 +1,32 @@
+{
+ "case_id": "ITPR1:PMID_35743164_Patient_10",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "ATP6V0B",
+  "GABRR3",
+  "ZNF711",
+  "TEP1",
+  "FOXD4L5",
+  "ZNF146",
+  "STRC",
+  "IDH2",
+  "GUCY1A1",
+  "OAS1",
+  "ZNF724",
+  "C19orf18",
+  "TSPY2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly matches all patient phenotypes including ataxia, hypotonia, intellectual disability, and cerebellar atrophy.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.15,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability but lacks specific mention of ataxia and hypotonia.\"},{\"gene\":\"GABRR3\",\"confidence\":0.1,\"rationale\":\"Associated with cerebellar atrophy but lacks specific mention of ataxia and hypotonia.\"},{\"gene\":\"ZNF711\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"TEP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"FOXD4L5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"ZNF146\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"STRC\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"IDH2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"GUCY1A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"OAS1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"ZNF724\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"C19orf18\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"TSPY2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to patient features.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.15,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability but lacks specific mention of ataxia and hypotonia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.682,
+ "tokens_in": 15734,
+ "tokens_out": 484
+}

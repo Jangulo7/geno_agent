@@ -1,0 +1,33 @@
+{
+ "case_id": "ATP6V1A:PMID_28065471_PIV_1",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "ATP6V1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ATP6V1A",
+  "PYCR3",
+  "FGFR3",
+  "STX11",
+  "TRIM17",
+  "CEBPB",
+  "HAPLN4",
+  "GPBP1L1",
+  "SAXO4",
+  "LARP1",
+  "THTPA",
+  "SHISA4",
+  "FUT8",
+  "LACTB2",
+  "MED21"
+ ],
+ "top1": "ATP6V1A",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ATP6V1A\",\"confidence\":0.95,\"rationale\":\"Directly linked to cutis laxa with mask-like triangular face and respiratory/cardiac issues.\"},{\"gene\":\"PYCR3\",\"confidence\":0.15,\"rationale\":\"Associated with progeroid features, not matching all phenotypes.\"},{\"gene\":\"FGFR3\",\"confidence\":0.05,\"rationale\":\"Linked to short stature and facial features, not cutis laxa.\"},{\"gene\":\"STX11\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"TRIM17\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"CEBPB\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"HAPLN4\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"GPBP1L1\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"SAXO4\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"LARP1\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"THTPA\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"SHISA4\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"FUT8\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"LACTB2\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"},{\"gene\":\"MED21\",\"confidence\":0.05,\"rationale\":\"No direct link to cutis laxa or relevant phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.499,
+ "tokens_in": 16910,
+ "tokens_out": 474
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ADAMTS15",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PIERCE1",
+  "HAPLN1",
+  "NTN3",
+  "GON7",
+  "PNPLA1",
+  "TRAPPC2",
+  "H3-4",
+  "F2RL1",
+  "RIC3",
+  "TIGIT",
+  "CAVIN3",
+  "SPHK1",
+  "GPAA1",
+  "MTHFR",
+  "ZFAND2A"
+ ],
+ "top1": "PIERCE1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PIERCE1\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including contractures, flexion creases, and talipes.\"},{\"gene\":\"HAPLN1\",\"confidence\":0.85,\"rationale\":\"Linked to distal arthrogryposis with similar clinical features.\"},{\"gene\":\"NTN3\",\"confidence\":0.8,\"rationale\":\"Associated with congenital contractures and limb abnormalities.\"},{\"gene\":\"GON7\",\"confidence\":0.75,\"rationale\":\"Linked to distal arthrogryposis with overlapping features.\"},{\"gene\":\"PNPLA1\",\"confidence\":0.7,\"rationale\":\"Shares distal arthrogryposis features with patient's phenotype.\"},{\"gene\":\"TRAPPC2\",\"confidence\":0.65,\"rationale\":\"Reports include skeletal abnormalities matching the patient's features.\"},{\"gene\":\"H3-4\",\"confidence\":0.6,\"rationale\":\"Linked to distal arthrogryposis with similar clinical manifestations.\"},{\"gene\":\"F2RL1\",\"confidence\":0.55,\"rationale\":\"Shares some skeletal features with the patient's phenotype.\"},{\"gene\":\"RIC3\",\"confidence\":0.5,\"rationale\":\"Reports include limb abnormalities matching the patient's features.\"},{\"gene\":\"TIGIT\",\"confidence\":0.45,\"rationale\":\"Linked to skeletal anomalies with partial overlap.\"},{\"gene\":\"CAVIN3\",\"confidence\":0.4,\"rationale\":\"Shares some skeletal features with the patient's phenotype.\"},{\"gene\":\"SPHK1\",\"confidence\":0.35,\"rationale\":\"Reports include limb abnormalities matching the patient's features.\"},{\"gene\":\"GPAA1\",\"confidence\":0.3,\"rationale\":\"Linked to skeletal anomalies with partial overlap.\"},{\"gene\":\"MTHFR\",\"confidence\":0.25,\"rationale\":\"No direct link to the patient's specific phenotypes.\"},{\"gene\":\"ZFAND2A\",\"confidence\":0.2,\"rationale\":\"No direct link to the patient's specific phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.225,
+ "tokens_in": 15249,
+ "tokens_out": 436
+}

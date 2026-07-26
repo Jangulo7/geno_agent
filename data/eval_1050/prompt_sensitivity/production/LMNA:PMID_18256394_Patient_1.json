@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "CCDC157",
+  "HECW2",
+  "SPAG11A",
+  "CLHC1",
+  "MVB12A",
+  "MAP3K7CL",
+  "KCNIP1",
+  "TTC13",
+  "PIK3C2G",
+  "OR10V1",
+  "C12orf54",
+  "FAM90A1",
+  "DDX49",
+  "RCOR3"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly links to lipodystrophy, progeria, and dental issues in patient.\"},{\"gene\":\"CCDC157\",\"confidence\":0.15,\"rationale\":\"Associated with cleidocranial dysplasia, which matches some features.\"},{\"gene\":\"HECW2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SPAG11A\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CLHC1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MVB12A\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MAP3K7CL\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"KCNIP1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TTC13\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PIK3C2G\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"OR10V1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"C12orf54\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"FAM90A1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"DDX49\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"RCOR3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.403,
+ "tokens_in": 16972,
+ "tokens_out": 435
+}

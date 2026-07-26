@@ -1,0 +1,23 @@
+{
+  "work_package": "WP1-A",
+  "question": "Did the >=5-article corpus-coverage check ever exclude or replace a case, i.e. did the retrieval index gate cohort membership?",
+  "source": "data/test_cases_1050/05_validated_stats.json",
+  "initial_sample_size": 1050,
+  "initial_pass": 1050,
+  "initial_fail": 0,
+  "replacements_made": 0,
+  "unreplaced": 0,
+  "min_pmc_threshold": 5,
+  "top_k": 100,
+  "no_case_was_gated": true,
+  "verdict": "CONFIRMED: no case failed and none was replaced, so the check never altered cohort membership. P2 may remove it as an eligibility criterion with no re-run; pmc_article_count is a released descriptor of retrieval-result diversity, bounded above by the top-100 cut.",
+  "pmc_article_count_distribution": {
+    "n": 1047,
+    "min": 24,
+    "max": 97,
+    "median": 55,
+    "n_at_ceiling_100": 0,
+    "n_below_5": 0
+  },
+  "analytic_cohort_n": 1047
+}

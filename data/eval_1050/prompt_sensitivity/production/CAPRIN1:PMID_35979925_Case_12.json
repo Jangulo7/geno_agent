@@ -1,0 +1,33 @@
+{
+ "case_id": "CAPRIN1:PMID_35979925_Case_12",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "CAPRIN1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CAPRIN1",
+  "PTBP1",
+  "GFRA2",
+  "ZACN",
+  "PEX12",
+  "LRRC28",
+  "TMEM101",
+  "SERPINI2",
+  "DAPL1",
+  "ZNF799",
+  "FOXD4L6",
+  "GPR37",
+  "LY6G5C",
+  "NUDCD1",
+  "MTF1"
+ ],
+ "top1": "CAPRIN1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CAPRIN1\",\"confidence\":0.95,\"rationale\":\"Directly links to seizures, speech delay, ADHD, ASD, and facial dysmorphisms.\"},{\"gene\":\"PTBP1\",\"confidence\":0.65,\"rationale\":\"Shares ADHD, speech delay, and hypertelorism with patient.\"},{\"gene\":\"GFRA2\",\"confidence\":0.55,\"rationale\":\"Linked to ADHD and speech delay.\"},{\"gene\":\"ZACN\",\"confidence\":0.5,\"rationale\":\"Associated with speech delay and ADHD.\"},{\"gene\":\"PEX12\",\"confidence\":0.45,\"rationale\":\"Shares ADHD and speech delay.\"},{\"gene\":\"LRRC28\",\"confidence\":0.4,\"rationale\":\"Linked to developmental delay and ADHD.\"},{\"gene\":\"TMEM101\",\"confidence\":0.35,\"rationale\":\"Associated with developmental delay and ADHD.\"},{\"gene\":\"SERPINI2\",\"confidence\":0.3,\"rationale\":\"Shares speech delay and ADHD.\"},{\"gene\":\"DAPL1\",\"confidence\":0.25,\"rationale\":\"Linked to ADHD and speech delay.\"},{\"gene\":\"ZNF799\",\"confidence\":0.2,\"rationale\":\"Associated with ADHD and speech delay.\"},{\"gene\":\"FOXD4L6\",\"confidence\":0.15,\"rationale\":\"Shares ADHD and speech delay.\"},{\"gene\":\"GPR37\",\"confidence\":0.1,\"rationale\":\"Linked to ADHD and speech delay.\"},{\"gene\":\"LY6G5C\",\"confidence\":0.05,\"rationale\":\"Associated with ADHD and speech delay.\"},{\"gene\":\"NUDCD1\",\"confidence\":0.05,\"rationale\":\"Linked to ADHD and speech delay.\"},{\"gene\":\"MTF1\",\"confidence\":0.05,\"rationale\":\"Associated with ADHD and speech delay.\"},{\"gene\":\"NCKAP1\",\"confidence\":0.05,\"rationale\":\"Shares ADHD, speech delay, and hypertelorism.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.203,
+ "tokens_in": 16511,
+ "tokens_out": 421
+}

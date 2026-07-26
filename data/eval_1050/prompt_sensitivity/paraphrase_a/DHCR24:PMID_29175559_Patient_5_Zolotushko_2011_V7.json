@@ -1,0 +1,33 @@
+{
+ "case_id": "DHCR24:PMID_29175559_Patient_5_Zolotushko_2011_V7",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "DHCR24",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DHCR24",
+  "HLA-E",
+  "CPEB4",
+  "DEPDC4",
+  "GGACT",
+  "IRS1",
+  "HNRNPA3",
+  "IFNAR1",
+  "KRTAP21-1",
+  "LANCL1",
+  "C11orf42",
+  "WDR7",
+  "RANGAP1",
+  "PGM2",
+  "ARFGAP2"
+ ],
+ "top1": "DHCR24",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DHCR24\",\"confidence\":0.95,\"rationale\":\"Desmosterolosis directly links to elevated desmosterol, corpus callosum agenesis, and white matter abnormalities.\"},{\"gene\":\"HLA-E\",\"confidence\":0.15,\"rationale\":\"HLA-E mutations are linked to similar brain abnormalities but not desmosterol elevation.\"},{\"gene\":\"CPEB4\",\"confidence\":0.1,\"rationale\":\"CPEB4 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"DEPDC4\",\"confidence\":0.1,\"rationale\":\"DEPDC4 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"GGACT\",\"confidence\":0.1,\"rationale\":\"GGACT is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"IRS1\",\"confidence\":0.1,\"rationale\":\"IRS1 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"HNRNPA3\",\"confidence\":0.1,\"rationale\":\"HNRNPA3 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"IFNAR1\",\"confidence\":0.1,\"rationale\":\"IFNAR1 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"KRTAP21-1\",\"confidence\":0.1,\"rationale\":\"KRTAP21-1 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"LANCL1\",\"confidence\":0.1,\"rationale\":\"LANCL1 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"C11orf42\",\"confidence\":0.1,\"rationale\":\"C11orf42 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"WDR7\",\"confidence\":0.1,\"rationale\":\"WDR7 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"RANGAP1\",\"confidence\":0.1,\"rationale\":\"RANGAP1 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"PGM2\",\"confidence\":0.1,\"rationale\":\"PGM2 is not directly linked to desmosterol or the full range of phenotypes.\"},{\"gene\":\"ARFGAP2\",\"confidence\":0.1,\"rationale\":\"ARFGAP2 is not directly linked to desmosterol or the full range of phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.996,
+ "tokens_in": 16966,
+ "tokens_out": 579
+}

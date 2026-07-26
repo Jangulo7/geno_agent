@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_24736735_G079",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "TBCC",
+  "TFE3",
+  "FGA",
+  "CCDC88C",
+  "S100A3",
+  "SLFN12L",
+  "PARVG",
+  "EXOSC6",
+  "SMAD2",
+  "THOC1",
+  "SERPINC1",
+  "SLC18A2",
+  "OR4X2",
+  "SMYD4"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"Directly links to polydactyly, macrocephaly, and hypertelorism in multiple syndromes.\"},{\"gene\":\"TBCC\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"TFE3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"FGA\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"CCDC88C\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"S100A3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SLFN12L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"PARVG\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"EXOSC6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SMAD2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"THOC1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SERPINC1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SLC18A2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"OR4X2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SMYD4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.401,
+ "tokens_in": 16916,
+ "tokens_out": 436
+}

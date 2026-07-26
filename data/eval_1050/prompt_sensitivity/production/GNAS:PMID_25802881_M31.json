@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_M31",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBXW4",
+  "GNAS",
+  "PRRC2C",
+  "EPRS1",
+  "PDLIM4",
+  "LIF",
+  "GHR",
+  "LRTM3",
+  "CDR2L",
+  "ID3",
+  "PLCD1",
+  "ANKRD18B",
+  "NIBAN3",
+  "CYRIA",
+  "DBT"
+ ],
+ "top1": "FBXW4",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBXW4\",\"confidence\":0.95,\"rationale\":\"Deletions at 10q24.31-q24.32 include FBXW4 and present with short metacarpal, intellectual disability, and obesity.\"},{\"gene\":\"GNAS\",\"confidence\":0.25,\"rationale\":\"Linked to AHO with obesity and short stature but not short metacarpal.\"},{\"gene\":\"PRRC2C\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"EPRS1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"PDLIM4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"LIF\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"GHR\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"LRTM3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"CDR2L\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"ID3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"PLCD1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"ANKRD18B\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"NIBAN3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"CYRIA\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"DBT\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.093,
+ "tokens_in": 14245,
+ "tokens_out": 451
+}

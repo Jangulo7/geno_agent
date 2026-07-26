@@ -1,0 +1,33 @@
+{
+ "case_id": "AEBP1:PMID_29606302_C_IV_6",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "AEBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AEBP1",
+  "CD44",
+  "TNFSF14",
+  "COL15A1",
+  "PMVK",
+  "WHRN",
+  "FDXR",
+  "ZMYM6",
+  "CHST5",
+  "TRMT11",
+  "STON2",
+  "C1D",
+  "PPT1",
+  "CEP85L",
+  "CDH23"
+ ],
+ "top1": "AEBP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AEBP1\",\"confidence\":0.95,\"rationale\":\"Matches all HPO terms with detailed evidence of classical-like EDS type 2\"},{\"gene\":\"CD44\",\"confidence\":0.15,\"rationale\":\"Limited relevance to HPO terms\"},{\"gene\":\"TNFSF14\",\"confidence\":0.1,\"rationale\":\"Partial overlap with some HPO terms\"},{\"gene\":\"COL15A1\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"PMVK\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"WHRN\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"FDXR\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"ZMYM6\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"CHST5\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"TRMT11\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"STON2\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"C1D\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"PPT1\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"CEP85L\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"},{\"gene\":\"CDH23\",\"confidence\":0.1,\"rationale\":\"No direct relevance to HPO terms\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.953,
+ "tokens_in": 18315,
+ "tokens_out": 371
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_11",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "DHX30",
+  "CHD7",
+  "KDELR2",
+  "PRIM1",
+  "FAM237B",
+  "GSTM1",
+  "RBPJ",
+  "ZBTB33",
+  "CACNG6",
+  "RAB11FIP3",
+  "IQGAP1",
+  "CIMIP7",
+  "CFAP90",
+  "ACBD3"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Matches all key HPO features of Hutchinson-Gilford Progeria Syndrome.\"},{\"gene\":\"DHX30\",\"confidence\":0.15,\"rationale\":\"Some overlapping features but not specific to the patient's phenotype.\"},{\"gene\":\"CHD7\",\"confidence\":0.1,\"rationale\":\"Limited overlap with patient's specific features.\"},{\"gene\":\"KDELR2\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"PRIM1\",\"confidence\":0.05,\"rationale\":\"Some features match but not specific to the patient's phenotype.\"},{\"gene\":\"FAM237B\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"GSTM1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"RBPJ\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ZBTB33\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"CACNG6\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"RAB11FIP3\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"IQGAP1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"CIMIP7\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"CFAP90\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ACBD3\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.983,
+ "tokens_in": 15546,
+ "tokens_out": 421
+}

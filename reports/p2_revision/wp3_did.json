@@ -1,0 +1,556 @@
+{
+  "work_package": "WP3",
+  "description": "Difference-in-differences reading of the annotation-overlap contrast: per-system shift, system x overlap interaction against LIRICAL, and directly standardised estimates.",
+  "seed": 42,
+  "n_bootstrap": 10000,
+  "bootstrap_unit": "source publication (PMID)",
+  "per_system_shift": [
+    {
+      "system": "K",
+      "name": "Exomiser (HPO-only)",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.6575,
+      "top1_overlap_absent": 0.7801,
+      "shift_absent_minus_present": 0.1226,
+      "shift_pp": 12.3,
+      "shift_ci95_cluster": [
+        -0.0319,
+        0.2519
+      ]
+    },
+    {
+      "system": "M",
+      "name": "LIRICAL (HPO-only)",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.9778,
+      "top1_overlap_absent": 0.7766,
+      "shift_absent_minus_present": -0.2012,
+      "shift_pp": -20.1,
+      "shift_ci95_cluster": [
+        -0.3367,
+        -0.0875
+      ]
+    },
+    {
+      "system": "S",
+      "name": "GenoAgent",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.6771,
+      "top1_overlap_absent": 0.8582,
+      "shift_absent_minus_present": 0.181,
+      "shift_pp": 18.1,
+      "shift_ci95_cluster": [
+        0.0927,
+        0.2626
+      ]
+    },
+    {
+      "system": "O",
+      "name": "LLM-only (no retrieval)",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.4536,
+      "top1_overlap_absent": 0.6667,
+      "shift_absent_minus_present": 0.2131,
+      "shift_pp": 21.3,
+      "shift_ci95_cluster": [
+        0.0405,
+        0.3549
+      ]
+    },
+    {
+      "system": "L",
+      "name": "+ CE-rerank (inside)",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.6523,
+      "top1_overlap_absent": 0.8227,
+      "shift_absent_minus_present": 0.1704,
+      "shift_pp": 17.0,
+      "shift_ci95_cluster": [
+        0.0788,
+        0.2553
+      ]
+    },
+    {
+      "system": "D",
+      "name": "Multi-agent baseline",
+      "n_overlap_present": 765,
+      "n_overlap_absent": 282,
+      "top1_overlap_present": 0.4549,
+      "top1_overlap_absent": 0.4752,
+      "shift_absent_minus_present": 0.0203,
+      "shift_pp": 2.0,
+      "shift_ci95_cluster": [
+        -0.0999,
+        0.1342
+      ]
+    }
+  ],
+  "mixed_effects": {
+    "model": "MixedLM (linear probability, random intercept for source_pmid)",
+    "note": "Fitted as a linear probability model with a publication random intercept; coefficients are on the probability scale and are directly interpretable as percentage-point interactions. A logistic GLMM is reported alongside in glmm_logit.",
+    "reference_system": "M (LIRICAL)",
+    "n_obs": 6282,
+    "n_groups": 415,
+    "interactions": {
+      "K": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 0.3238,
+        "se": 0.0351,
+        "ci95_logodds": [
+          0.255,
+          0.3926
+        ],
+        "z": 9.226,
+        "p": 2.8114616829338295e-20
+      },
+      "S": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 0.3822,
+        "se": 0.0351,
+        "ci95_logodds": [
+          0.3134,
+          0.451
+        ],
+        "z": 10.89,
+        "p": 1.2859994766273557e-27
+      },
+      "O": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 0.4143,
+        "se": 0.0351,
+        "ci95_logodds": [
+          0.3455,
+          0.483
+        ],
+        "z": 11.803,
+        "p": 3.7703023702054426e-32
+      },
+      "L": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 0.3716,
+        "se": 0.0351,
+        "ci95_logodds": [
+          0.3028,
+          0.4404
+        ],
+        "z": 10.587,
+        "p": 3.412262391317587e-26
+      },
+      "D": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 0.2215,
+        "se": 0.0351,
+        "ci95_logodds": [
+          0.1527,
+          0.2902
+        ],
+        "z": 6.31,
+        "p": 2.794717168554593e-10
+      }
+    }
+  },
+  "gee_logit": {
+    "model": "Logistic GEE, exchangeable working correlation, clustered on source_pmid",
+    "reference_system": "M (LIRICAL)",
+    "interactions": {
+      "D": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 2.2779,
+        "odds_ratio": 9.756,
+        "or_ci95": [
+          3.884,
+          24.506
+        ],
+        "z": 4.848,
+        "p": 1.2481867279508294e-06
+      },
+      "K": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 2.7803,
+        "odds_ratio": 16.123,
+        "or_ci95": [
+          8.31,
+          31.284
+        ],
+        "z": 8.221,
+        "p": 2.019789306641529e-16
+      },
+      "L": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 3.0521,
+        "odds_ratio": 21.159,
+        "or_ci95": [
+          8.134,
+          55.039
+        ],
+        "z": 6.258,
+        "p": 3.909982645643702e-10
+      },
+      "O": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 3.0647,
+        "odds_ratio": 21.428,
+        "or_ci95": [
+          6.716,
+          68.371
+        ],
+        "z": 5.177,
+        "p": 2.2532716063161268e-07
+      },
+      "S": {
+        "vs": "M (LIRICAL)",
+        "coef_logodds": 3.186,
+        "odds_ratio": 24.193,
+        "or_ci95": [
+          9.046,
+          64.701
+        ],
+        "z": 6.348,
+        "p": 2.1830325681594694e-10
+      }
+    }
+  },
+  "direct_standardisation": [
+    {
+      "system": "K",
+      "name": "Exomiser (HPO-only)",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.6575,
+        "standardised_top1": 0.6653,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 0.6835
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.6718
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.85
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.4521
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.7801,
+        "standardised_top1": 0.7708,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.9022
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.7317
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.6778
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.7797
+          }
+        }
+      },
+      "shift_crude": 0.1226,
+      "shift_standardised": 0.1055
+    },
+    {
+      "system": "M",
+      "name": "LIRICAL (HPO-only)",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.9778,
+        "standardised_top1": 0.979,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 1.0
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.9846
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.9938
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.9362
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.7766,
+        "standardised_top1": 0.7497,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.8696
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.6341
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.7556
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.7627
+          }
+        }
+      },
+      "shift_crude": -0.2012,
+      "shift_standardised": -0.2293
+    },
+    {
+      "system": "S",
+      "name": "GenoAgent",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.6771,
+        "standardised_top1": 0.6805,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 0.6392
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.7259
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.8562
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.4894
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.8582,
+        "standardised_top1": 0.8555,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.8587
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.878
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.9
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.7797
+          }
+        }
+      },
+      "shift_crude": 0.1811,
+      "shift_standardised": 0.175
+    },
+    {
+      "system": "O",
+      "name": "LLM-only (no retrieval)",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.4536,
+        "standardised_top1": 0.4522,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 0.2785
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.556
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.7063
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.2447
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.6667,
+        "standardised_top1": 0.6771,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.4783
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.7073
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.8222
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.6949
+          }
+        }
+      },
+      "shift_crude": 0.2131,
+      "shift_standardised": 0.2249
+    },
+    {
+      "system": "L",
+      "name": "+ CE-rerank (inside)",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.6523,
+        "standardised_top1": 0.6565,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 0.6139
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.6911
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.8438
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.4681
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.8227,
+        "standardised_top1": 0.8248,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.8152
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.8537
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.8444
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.7797
+          }
+        }
+      },
+      "shift_crude": 0.1704,
+      "shift_standardised": 0.1683
+    },
+    {
+      "system": "D",
+      "name": "Multi-agent baseline",
+      "full_cohort_weights": {
+        "developmental": 0.2388,
+        "immunological": 0.2865,
+        "metabolic": 0.2388,
+        "neurological": 0.2359
+      },
+      "overlap_present": {
+        "crude_top1": 0.4549,
+        "standardised_top1": 0.4671,
+        "by_category": {
+          "developmental": {
+            "n": 158,
+            "top1": 0.4557
+          },
+          "immunological": {
+            "n": 259,
+            "top1": 0.3745
+          },
+          "metabolic": {
+            "n": 160,
+            "top1": 0.6937
+          },
+          "neurological": {
+            "n": 188,
+            "top1": 0.3617
+          }
+        }
+      },
+      "overlap_absent": {
+        "crude_top1": 0.4752,
+        "standardised_top1": 0.4418,
+        "by_category": {
+          "developmental": {
+            "n": 92,
+            "top1": 0.4783
+          },
+          "immunological": {
+            "n": 41,
+            "top1": 0.2195
+          },
+          "metabolic": {
+            "n": 90,
+            "top1": 0.4889
+          },
+          "neurological": {
+            "n": 59,
+            "top1": 0.6271
+          }
+        }
+      },
+      "shift_crude": 0.0203,
+      "shift_standardised": -0.0253
+    }
+  ]
+}

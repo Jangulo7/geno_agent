@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC19A1:PMID_36517554_patient_2",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "SLC19A1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WIPF1",
+  "SLC19A1",
+  "CEACAM18",
+  "MAL",
+  "OLA1",
+  "ADGRA2",
+  "OR56A4",
+  "UBE2NL",
+  "TRUB2",
+  "C16orf86",
+  "SEMA3F",
+  "FPR3",
+  "RPS6KA4",
+  "MYO7B",
+  "TAF11L11"
+ ],
+ "top1": "WIPF1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WIPF1\",\"confidence\":0.95,\"rationale\":\"Links to ATM syndrome with cerebellar atrophy, immunodeficiency, and recurrent infections.\"},{\"gene\":\"SLC19A1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"MAL\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"OLA1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"ADGRA2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"OR56A4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"UBE2NL\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"TRUB2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"C16orf86\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"SEMA3F\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"FPR3\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"RPS6KA4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"MYO7B\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"},{\"gene\":\"TAF11L11\",\"confidence\":0.15,\"rationale\":\"No direct phenotype overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.196,
+ "tokens_in": 13958,
+ "tokens_out": 367
+}

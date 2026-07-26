@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR24",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "HMGXB3",
+  "RPLP0",
+  "NGFR",
+  "SMPDL3A",
+  "CLGN",
+  "RABGAP1",
+  "FAM237A",
+  "OR6K2",
+  "SGIP1",
+  "ADGRG6",
+  "BMX",
+  "RANBP17",
+  "SEL1L2",
+  "IGSF11"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to familial partial lipodystrophy with metabolic features matching the patient.\"},{\"gene\":\"HMGXB3\",\"confidence\":0.15,\"rationale\":\"General metabolic features mentioned but no direct link to lipodystrophy.\"},{\"gene\":\"RPLP0\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"NGFR\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"SMPDL3A\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"CLGN\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"RABGAP1\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"FAM237A\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"OR6K2\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"SGIP1\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"ADGRG6\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"BMX\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"RANBP17\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"SEL1L2\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"},{\"gene\":\"IGSF11\",\"confidence\":0.1,\"rationale\":\"No specific link to lipodystrophy or metabolic features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.825,
+ "tokens_in": 18924,
+ "tokens_out": 447
+}

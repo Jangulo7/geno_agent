@@ -1,0 +1,33 @@
+{
+ "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "ADAMTS15",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PIERCE1",
+  "HAPLN1",
+  "NTN3",
+  "GON7",
+  "PNPLA1",
+  "TRAPPC2",
+  "H3-4",
+  "F2RL1",
+  "RIC3",
+  "TIGIT",
+  "CAVIN3",
+  "SPHK1",
+  "GPAA1",
+  "MTHFR",
+  "ZFAND2A"
+ ],
+ "top1": "PIERCE1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PIERCE1\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including contractures, absent creases, and talipes.\"},{\"gene\":\"HAPLN1\",\"confidence\":0.75,\"rationale\":\"Linked to congenital contractures and skeletal anomalies.\"},{\"gene\":\"NTN3\",\"confidence\":0.65,\"rationale\":\"Associated with joint contractures and limb malformations.\"},{\"gene\":\"GON7\",\"confidence\":0.6,\"rationale\":\"Linked to distal arthrogryposis and skeletal features.\"},{\"gene\":\"PNPLA1\",\"confidence\":0.55,\"rationale\":\"Shares skeletal features with the patient's presentation.\"},{\"gene\":\"TRAPPC2\",\"confidence\":0.5,\"rationale\":\"Reports skeletal anomalies similar to the patient's.\"},{\"gene\":\"H3-4\",\"confidence\":0.45,\"rationale\":\"Linked to skeletal and limb abnormalities.\"},{\"gene\":\"F2RL1\",\"confidence\":0.4,\"rationale\":\"Shares some skeletal features with the patient.\"},{\"gene\":\"RIC3\",\"confidence\":0.35,\"rationale\":\"Reports limb and skeletal anomalies.\"},{\"gene\":\"TIGIT\",\"confidence\":0.3,\"rationale\":\"Linked to some skeletal features.\"},{\"gene\":\"CAVIN3\",\"confidence\":0.25,\"rationale\":\"Associated with limb and skeletal anomalies.\"},{\"gene\":\"SPHK1\",\"confidence\":0.2,\"rationale\":\"Reports skeletal and limb malformations.\"},{\"gene\":\"GPAA1\",\"confidence\":0.15,\"rationale\":\"Linked to brachydactyly and skeletal features.\"},{\"gene\":\"MTHFR\",\"confidence\":0.1,\"rationale\":\"Not strongly linked to the patient's specific features.\"},{\"gene\":\"ZFAND2A\",\"confidence\":0.05,\"rationale\":\"Less relevant to the patient's specific phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.792,
+ "tokens_in": 15244,
+ "tokens_out": 406
+}

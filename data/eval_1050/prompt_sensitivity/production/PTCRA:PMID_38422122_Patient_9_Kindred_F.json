@@ -1,0 +1,33 @@
+{
+ "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "PTCRA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PTCRA",
+  "ZBED4",
+  "DNAI1",
+  "KCNQ5",
+  "GRIK1",
+  "TAOK1",
+  "ZNG1B",
+  "BAG1",
+  "FXN",
+  "EXOSC7",
+  "GIT1",
+  "MUC12",
+  "CHIA",
+  "GPR21",
+  "POLR1G"
+ ],
+ "top1": "PTCRA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PTCRA\",\"confidence\":0.95,\"rationale\":\"Direct link to T-cell subset abnormalities and TREC levels.\"},{\"gene\":\"ZBED4\",\"confidence\":0.15,\"rationale\":\"General immunodeficiency features mentioned.\"},{\"gene\":\"DNAI1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"KCNQ5\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"GRIK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"TAOK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"ZNG1B\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"BAG1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"FXN\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"EXOSC7\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"GIT1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"MUC12\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"CHIA\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"GPR21\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"},{\"gene\":\"POLR1G\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.12,
+ "tokens_in": 13657,
+ "tokens_out": 362
+}

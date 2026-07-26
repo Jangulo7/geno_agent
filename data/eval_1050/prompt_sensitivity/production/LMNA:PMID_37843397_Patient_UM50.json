@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_Patient_UM50",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PHLDB2",
+  "TSPEAR",
+  "TMEM72",
+  "ZSCAN5C",
+  "SLC5A7",
+  "CLNS1A",
+  "TFE3",
+  "AMMECR1",
+  "ARID5B",
+  "GP9",
+  "ESPNL",
+  "PRKCE",
+  "PEX12",
+  "CABYR"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to lipodystrophy, diabetes, and hepatic steatosis in multiple evidence chunks.\"},{\"gene\":\"PHLDB2\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mentions but lacks specific phenotype alignment.\"},{\"gene\":\"TSPEAR\",\"confidence\":0.1,\"rationale\":\"No specific phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"TMEM72\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"ZSCAN5C\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"SLC5A7\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"CLNS1A\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"TFE3\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"AMMECR1\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"},{\"gene\":\"ARID5B\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"GP9\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"ESPNL\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"PRKCE\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"PEX12\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"CABYR\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence, general lipodystrophy context.\"},{\"gene\":\"TSPEAR\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype alignment.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.054,
+ "tokens_in": 18135,
+ "tokens_out": 478
+}

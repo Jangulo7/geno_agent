@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_M31",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBXW4",
+  "GNAS",
+  "PRRC2C",
+  "EPRS1",
+  "PDLIM4",
+  "LIF",
+  "GHR",
+  "LRTM3",
+  "CDR2L",
+  "ID3",
+  "PLCD1",
+  "ANKRD18B",
+  "NIBAN3",
+  "CYRIA",
+  "DBT"
+ ],
+ "top1": "FBXW4",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBXW4\",\"confidence\":0.95,\"rationale\":\"Deletions at 10q24.31-q24.32 include FBXW4 and present with short metacarpal, intellectual disability, and obesity.\"},{\"gene\":\"GNAS\",\"confidence\":0.15,\"rationale\":\"Linked to AHO with short metacarpal and obesity but not intellectual disability.\"},{\"gene\":\"PRRC2C\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"EPRS1\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"PDLIM4\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"LIF\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"GHR\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"LRTM3\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"CDR2L\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"ID3\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"PLCD1\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"ANKRD18B\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"NIBAN3\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"CYRIA\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"},{\"gene\":\"DBT\",\"confidence\":0.05,\"rationale\":\"No direct link to short metacarpal or obesity.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.363,
+ "tokens_in": 14240,
+ "tokens_out": 476
+}

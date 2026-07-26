@@ -1,0 +1,34 @@
+{
+  "work_package": "WP1-D",
+  "question": "Did LIRICAL consume the same phenotype.hpoa release that the annotation-overlap flag is computed against?",
+  "exomiser": {
+    "version": "14.0.2",
+    "data_bundle_default": "2402",
+    "bundles_present": [
+      "2402_hg19",
+      "2402_hg38",
+      "2402_phenotype"
+    ],
+    "prioritiser": "hiPhive via --preset phenotype-only (HPO-only, no variants)",
+    "hp_release_declared_in_job_yaml": "hp/releases/2026-02-16"
+  },
+  "lirical": {
+    "version": "2.4.0",
+    "data_dir": "/home/hana77/rare-disease-rag/lirical/data",
+    "phenotype_hpoa_sha256": "5d7aedee5f6218e9952fceba5f883df2cc4a0c1938e55d8d2616c15c517964fb",
+    "data_files_required": [
+      "hp.json",
+      "phenotype.hpoa",
+      "mim2gene_medgen",
+      "en_product6.xml",
+      "hgnc_complete_set.txt"
+    ]
+  },
+  "pinned_flag_release": {
+    "path": "data/Human_Phenotype_Ontology/phenotype.hpoa",
+    "sha256": "5d7aedee5f6218e9952fceba5f883df2cc4a0c1938e55d8d2616c15c517964fb",
+    "version_header": "2026-02-16"
+  },
+  "hpoa_matches_flag_release": true,
+  "verdict": "CONFIRMED: the phenotype.hpoa LIRICAL read is byte-identical to the release the overlap flag is computed against, so the flag indexes exactly the annotation set the tool consumed. No re-run required."
+}

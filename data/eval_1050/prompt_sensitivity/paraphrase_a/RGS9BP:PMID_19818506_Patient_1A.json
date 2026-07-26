@@ -1,0 +1,33 @@
+{
+ "case_id": "RGS9BP:PMID_19818506_Patient_1A",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "RGS9BP",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RGS9BP",
+  "ZNF548",
+  "PPP1R14A",
+  "PRDX4",
+  "ACE2",
+  "PLBD1",
+  "PPP4R4",
+  "MGAT2",
+  "PAGR1",
+  "ITM2C",
+  "CFAP43",
+  "TCF21",
+  "SELENOO",
+  "ZNF347",
+  "DVL2"
+ ],
+ "top1": "RGS9BP",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RGS9BP\",\"confidence\":0.95,\"rationale\":\"Directly linked to bradyopsia with specific symptoms and mutations.\"},{\"gene\":\"ZNF548\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"PPP1R14A\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"PRDX4\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"ACE2\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"PLBD1\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"PPP4R4\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"MGAT2\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"PAGR1\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"ITM2C\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"CFAP43\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"TCF21\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"SELENOO\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"ZNF347\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"},{\"gene\":\"DVL2\",\"confidence\":0.05,\"rationale\":\"No direct relevance to the phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.797,
+ "tokens_in": 17120,
+ "tokens_out": 400
+}

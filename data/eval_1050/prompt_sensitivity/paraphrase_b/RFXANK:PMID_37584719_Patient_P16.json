@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P16",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "SET",
+  "DAGLA",
+  "PIGT",
+  "CACNB3",
+  "TF",
+  "EDARADD",
+  "VARS1",
+  "IFITM3",
+  "RPP25L",
+  "CLRN3",
+  "STAG3",
+  "SEMA5B",
+  "SLC35A4",
+  "ADAM29"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"Directly links to MHC class II deficiency with chronic diarrhea, failure to thrive, and recurrent infections.\"},{\"gene\":\"SET\",\"confidence\":0.15,\"rationale\":\"Limited relevance to the patient's symptoms.\"},{\"gene\":\"DAGLA\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"PIGT\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"CACNB3\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"TF\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"EDARADD\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"VARS1\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"IFITM3\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"RPP25L\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"CLRN3\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"STAG3\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"SEMA5B\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"SLC35A4\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"},{\"gene\":\"ADAM29\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.328,
+ "tokens_in": 13539,
+ "tokens_out": 411
+}

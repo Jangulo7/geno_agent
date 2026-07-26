@@ -1,0 +1,33 @@
+{
+ "case_id": "DDX59:PMID_23972372_family_1_V_13",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "DDX59",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DDX59",
+  "IFT43",
+  "CDKL1",
+  "SFXN5",
+  "H4C11",
+  "GPR87",
+  "C8G",
+  "ABCB11",
+  "LIME1",
+  "TRAF1",
+  "UNC5CL",
+  "FBXO22",
+  "MKNK1",
+  "NDUFV2",
+  "TBX6"
+ ],
+ "top1": "DDX59",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DDX59\",\"confidence\":0.95,\"rationale\":\"Matches all phenotypes including polydactyly, cleft palate, and intellectual disability.\"},{\"gene\":\"IFT43\",\"confidence\":0.15,\"rationale\":\"Linked to ciliopathy but lacks full phenotype match.\"},{\"gene\":\"CDKL1\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"SFXN5\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"H4C11\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"GPR87\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"C8G\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"ABCB11\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"LIME1\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"TRAF1\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"UNC5CL\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"FBXO22\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"MKNK1\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"NDUFV2\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"},{\"gene\":\"TBX6\",\"confidence\":0.1,\"rationale\":\"No direct phenotype correlation.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.287,
+ "tokens_in": 16052,
+ "tokens_out": 354
+}

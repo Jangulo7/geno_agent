@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P1",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "PTPRC",
+  "CXCL6",
+  "AKR1C8",
+  "ADAMTSL4",
+  "TUBB2A",
+  "EDRF1",
+  "NPSR1",
+  "ATG4A",
+  "FAM162B",
+  "OR12D2",
+  "SHLD3",
+  "PAPOLB",
+  "CCDC63",
+  "AEBP2"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"MHC-II deficiency with autoimmune hemolytic anemia and CMV colitis.\"},{\"gene\":\"PTPRC\",\"confidence\":0.15,\"rationale\":\"CD4 lymphopenia and autoimmune features.\"},{\"gene\":\"CXCL6\",\"confidence\":0.1,\"rationale\":\"Autoimmune features and chronic diarrhea.\"},{\"gene\":\"AKR1C8\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ADAMTSL4\",\"confidence\":0.05,\"rationale\":\"IBD and chronic diarrhea.\"},{\"gene\":\"TUBB2A\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"EDRF1\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"NPSR1\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ATG4A\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"FAM162B\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"OR12D2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"SHLD3\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"PAPOLB\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CCDC63\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"AEBP2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.22,
+ "tokens_in": 17954,
+ "tokens_out": 404
+}

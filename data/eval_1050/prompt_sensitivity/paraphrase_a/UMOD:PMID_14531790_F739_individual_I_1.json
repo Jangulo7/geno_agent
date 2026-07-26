@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_14531790_F739_individual_I_1",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "ADAMTS18",
+  "CKM",
+  "NOX5",
+  "SKOR2",
+  "TNFRSF10B",
+  "TOPORS",
+  "MCC",
+  "HCK",
+  "SP140",
+  "ERMN",
+  "PPIAL4A",
+  "ARL5A",
+  "OR10G3",
+  "GYG2"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"UMOD mutations cause hyperuricemia, gout, and chronic kidney disease matching the patient's phenotype.\"},{\"gene\":\"ADAMTS18\",\"confidence\":0.15,\"rationale\":\"ADAMTS18 linked to kidney development but not hyperuricemia or CKD.\"},{\"gene\":\"CKM\",\"confidence\":0.1,\"rationale\":\"CKM syndrome involves CKD but not hyperuricemia or renal hypoplasia.\"},{\"gene\":\"NOX5\",\"confidence\":0.05,\"rationale\":\"NOX5 related to oxidative stress, not directly to CKD or hyperuricemia.\"},{\"gene\":\"SKOR2\",\"confidence\":0.05,\"rationale\":\"SKOR2 not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"TNFRSF10B\",\"confidence\":0.05,\"rationale\":\"TNFRSF10B not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"TOPORS\",\"confidence\":0.05,\"rationale\":\"TOPORS not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"MCC\",\"confidence\":0.05,\"rationale\":\"MCC not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"HCK\",\"confidence\":0.05,\"rationale\":\"HCK not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"SP140\",\"confidence\":0.05,\"rationale\":\"SP140 not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"ERMN\",\"confidence\":0.05,\"rationale\":\"ERMN not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"PPIAL4A\",\"confidence\":0.05,\"rationale\":\"PPIAL4A not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"ARL5A\",\"confidence\":0.05,\"rationale\":\"ARL5A not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"OR10G3\",\"confidence\":0.05,\"rationale\":\"OR10G3 not directly linked to CKD or hyperuricemia.\"},{\"gene\":\"GYG2\",\"confidence\":0.05,\"rationale\":\"GYG2 not directly linked to CKD or hyperuricemia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.465,
+ "tokens_in": 16315,
+ "tokens_out": 515
+}

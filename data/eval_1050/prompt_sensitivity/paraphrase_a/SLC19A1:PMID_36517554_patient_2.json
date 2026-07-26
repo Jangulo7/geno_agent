@@ -1,0 +1,32 @@
+{
+ "case_id": "SLC19A1:PMID_36517554_patient_2",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "SLC19A1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WIPF1",
+  "SLC19A1",
+  "CEACAM18",
+  "MAL",
+  "OLA1",
+  "ADGRA2",
+  "OR56A4",
+  "UBE2NL",
+  "TRUB2",
+  "C16orf86",
+  "SEMA3F",
+  "FPR3",
+  "RPS6KA4",
+  "MYO7B"
+ ],
+ "top1": "WIPF1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WIPF1\",\"confidence\":0.95,\"rationale\":\"Links to immunodeficiency, recurrent infections, and neurological features.\"},{\"gene\":\"SLC19A1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"MAL\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"OLA1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ADGRA2\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"OR56A4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"UBE2NL\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"TRUB2\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"C16orf86\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"SEMA3F\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"FPR3\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"RPS6KA4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"MYO7B\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"HEATR5B\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.126,
+ "tokens_in": 13953,
+ "tokens_out": 387
+}

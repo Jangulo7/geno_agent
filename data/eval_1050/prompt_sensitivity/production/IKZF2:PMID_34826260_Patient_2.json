@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF2:PMID_34826260_Patient_2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF2",
+  "FAM13B",
+  "MTDH",
+  "SMTN",
+  "FIGLA",
+  "PTK6",
+  "DEPTOR",
+  "KCNS1",
+  "BMI1",
+  "DSCAML1",
+  "TFDP1",
+  "OR2G6",
+  "DPPA4",
+  "DHPS",
+  "FAM90A12"
+ ],
+ "top1": "IKZF2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF2\",\"confidence\":0.95,\"rationale\":\"Direct link to CD8+ T cell memory and immune checkpoint markers.\"},{\"gene\":\"FAM13B\",\"confidence\":0.15,\"rationale\":\"Correlates with effector memory CD4+ T cells.\"},{\"gene\":\"MTDH\",\"confidence\":0.12,\"rationale\":\"Associated with memory B and T cell infiltration.\"},{\"gene\":\"SMTN\",\"confidence\":0.08,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"FIGLA\",\"confidence\":0.07,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"PTK6\",\"confidence\":0.06,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"DEPTOR\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"KCNS1\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"BMI1\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"DSCAML1\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"TFDP1\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"OR2G6\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"DPPA4\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"DHPS\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"},{\"gene\":\"FAM90A12\",\"confidence\":0.05,\"rationale\":\"No direct immune cell evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.875,
+ "tokens_in": 20877,
+ "tokens_out": 375
+}

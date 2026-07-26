@@ -1,0 +1,33 @@
+{
+ "case_id": "EEF1D:PMID_30787422_E11_207",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "EEF1D",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EEF1D",
+  "TRIO",
+  "ALG6",
+  "KCNJ12",
+  "COX7A1",
+  "SLC25A31",
+  "PAQR6",
+  "ZIC5",
+  "OR5H2",
+  "CCL24",
+  "RAC1",
+  "ADPRH",
+  "KRTAP4-12",
+  "OR51D1",
+  "POLG2"
+ ],
+ "top1": "EEF1D",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EEF1D\",\"confidence\":0.95,\"rationale\":\"Microcephaly, seizures, hypotonia, and corpus callosum abnormalities match EEF1D's known phenotype.\"},{\"gene\":\"TRIO\",\"confidence\":0.85,\"rationale\":\"Severe microcephaly, seizures, hypotonia, and facial dysmorphisms align with TRIO's reported features.\"},{\"gene\":\"ALG6\",\"confidence\":0.65,\"rationale\":\"Seizures, hypotonia, and developmental delay are common in ALG6-related disorders.\"},{\"gene\":\"KCNJ12\",\"confidence\":0.55,\"rationale\":\"Microcephaly and seizures are noted, but less specific than EEF1D or TRIO.\"},{\"gene\":\"COX7A1\",\"confidence\":0.45,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"SLC25A31\",\"confidence\":0.4,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"PAQR6\",\"confidence\":0.35,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"ZIC5\",\"confidence\":0.3,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"OR5H2\",\"confidence\":0.25,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"CCL24\",\"confidence\":0.2,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"RAC1\",\"confidence\":0.15,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"ADPRH\",\"confidence\":0.1,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"KRTAP4-12\",\"confidence\":0.05,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"OR51D1\",\"confidence\":0.05,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"},{\"gene\":\"POLG2\",\"confidence\":0.05,\"rationale\":\"Seizures and microcephaly are present, but not as strongly linked as EEF1D.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 461.951,
+ "tokens_in": 18366,
+ "tokens_out": 595
+}

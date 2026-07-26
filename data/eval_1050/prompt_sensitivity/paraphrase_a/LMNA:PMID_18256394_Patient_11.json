@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_11",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "CHD7",
+  "DHX30",
+  "PRIM1",
+  "FAM237B",
+  "GSTM1",
+  "RBPJ",
+  "ZBTB33",
+  "CACNG6",
+  "RAB11FIP3",
+  "IQGAP1",
+  "CIMIP7",
+  "CFAP90",
+  "ACBD3",
+  "KDELR2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Matches all key features of Hutchinson-Gilford Progeria Syndrome.\"},{\"gene\":\"CHD7\",\"confidence\":0.15,\"rationale\":\"Linked to facial features but lacks lipodystrophy and proptosis.\"},{\"gene\":\"DHX30\",\"confidence\":0.05,\"rationale\":\"Associated with developmental delay but not lipodystrophy or proptosis.\"},{\"gene\":\"PRIM1\",\"confidence\":0.05,\"rationale\":\"Lacks proptosis and lipodystrophy.\"},{\"gene\":\"FAM237B\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"GSTM1\",\"confidence\":0.05,\"rationale\":\"Linked to aflatoxin exposure, not the patient's features.\"},{\"gene\":\"RBPJ\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ZBTB33\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CACNG6\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"RAB11FIP3\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"IQGAP1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CIMIP7\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CFAP90\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ACBD3\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"KDELR2\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.849,
+ "tokens_in": 15541,
+ "tokens_out": 433
+}

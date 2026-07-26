@@ -1,0 +1,33 @@
+{
+ "case_id": "SNAP29:PMID_33977139_Patient_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "SNAP29",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NDUFV3",
+  "COG1",
+  "TBC1D3L",
+  "HOXA10",
+  "FKBP10",
+  "LARS1",
+  "PLA2G4A",
+  "ADGRG2",
+  "KCNQ3",
+  "SNAP29",
+  "ESPN",
+  "OR14A16",
+  "SYAP1",
+  "RPL34",
+  "TYW3"
+ ],
+ "top1": "NDUFV3",
+ "top1_correct": false,
+ "causal_rank": 10,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NDUFV3\",\"confidence\":0.95,\"rationale\":\"Evidence links NDUFV3 variants to hypotonia, hypertonia, seizures, and scoliosis matching patient phenotype.\"},{\"gene\":\"COG1\",\"confidence\":0.15,\"rationale\":\"COG1 mutations associated with hypotonia and scoliosis, but less specific to patient's full phenotype.\"},{\"gene\":\"TBC1D3L\",\"confidence\":0.05,\"rationale\":\"TBC1D3L evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"HOXA10\",\"confidence\":0.05,\"rationale\":\"HOXA10 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"FKBP10\",\"confidence\":0.05,\"rationale\":\"FKBP10 evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"LARS1\",\"confidence\":0.05,\"rationale\":\"LARS1 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"PLA2G4A\",\"confidence\":0.05,\"rationale\":\"PLA2G4A evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"ADGRG2\",\"confidence\":0.05,\"rationale\":\"ADGRG2 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"KCNQ3\",\"confidence\":0.05,\"rationale\":\"KCNQ3 evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"SNAP29\",\"confidence\":0.05,\"rationale\":\"SNAP29 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"ESPN\",\"confidence\":0.05,\"rationale\":\"ESPN evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"OR14A16\",\"confidence\":0.05,\"rationale\":\"OR14A16 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"SYAP1\",\"confidence\":0.05,\"rationale\":\"SYAP1 evidence includes hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"RPL34\",\"confidence\":0.05,\"rationale\":\"RPL34 linked to hypotonia and scoliosis, but not all patient features.\"},{\"gene\":\"TYW3\",\"confidence\":0.05,\"rationale\":\"TYW3 evidence includes hypotonia and scoliosis, but not all patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.911,
+ "tokens_in": 17631,
+ "tokens_out": 584
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "DNAH3",
+  "ATP6V0A4",
+  "MMP16",
+  "TMEM72",
+  "CALHM4",
+  "GAGE2D",
+  "SENP5",
+  "KBTBD12",
+  "CFH",
+  "UQCR10",
+  "ZNF541",
+  "ELL",
+  "LRRC10",
+  "DUS1L"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"Directly linked to Netherton syndrome, matching all patient phenotypes.\"},{\"gene\":\"DNAH3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ATP6V0A4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MMP16\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TMEM72\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CALHM4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GAGE2D\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SENP5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"KBTBD12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CFH\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"UQCR10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ZNF541\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ELL\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"LRRC10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DUS1L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.616,
+ "tokens_in": 17331,
+ "tokens_out": 401
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "CLDN16:PMID_14628289_Family_A_individual_3",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "CLDN16",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CLDN16",
+  "ITGA2B",
+  "UMOD",
+  "TRABD",
+  "CMKLR1",
+  "ZCCHC7",
+  "RHBDF1",
+  "CGN",
+  "RMP24",
+  "KCNK3",
+  "SDHA",
+  "PHF24",
+  "STYXL1",
+  "MAGEB3",
+  "DNA2"
+ ],
+ "top1": "CLDN16",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CLDN16\",\"confidence\":0.95,\"rationale\":\"Directly linked to FHHNC with all patient phenotypes.\"},{\"gene\":\"ITGA2B\",\"confidence\":0.05,\"rationale\":\"Associated with dRTA, not FHHNC.\"},{\"gene\":\"UMOD\",\"confidence\":0.03,\"rationale\":\"No direct link to FHHNC.\"},{\"gene\":\"TRABD\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"CMKLR1\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"ZCCHC7\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"RHBDF1\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"CGN\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"RMP24\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"KCNK3\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"SDHA\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"PHF24\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"STYXL1\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"MAGEB3\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"},{\"gene\":\"DNA2\",\"confidence\":0.02,\"rationale\":\"No evidence of FHHNC association.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.127,
+ "tokens_in": 17815,
+ "tokens_out": 397
+}

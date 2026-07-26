@@ -1,0 +1,33 @@
+{
+ "case_id": "EFNB1:PMID_23335590_Subject_4271",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "EFNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EFNB1",
+  "TRIO",
+  "CHD3",
+  "TP53BP2",
+  "NOS1",
+  "SBK2",
+  "FAM236C",
+  "KRTAP19-6",
+  "HTR3C",
+  "PTCH2",
+  "HS3ST3A1",
+  "RIMBP2",
+  "ARG1",
+  "PPP1R13L",
+  "GEMIN7"
+ ],
+ "top1": "EFNB1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"Matches all HPO terms in CFNS, including agenesis of corpus callosum and global developmental delay.\"},{\"gene\":\"TRIO\",\"confidence\":0.15,\"rationale\":\"Only mentions craniosynostosis, not other HPO terms.\"},{\"gene\":\"CHD3\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"TP53BP2\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"NOS1\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"SBK2\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"FAM236C\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"KRTAP19-6\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"HTR3C\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"PTCH2\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"HS3ST3A1\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"RIMBP2\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"ARG1\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"PPP1R13L\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"GEMIN7\",\"confidence\":0.1,\"rationale\":\"No direct HPO term matches.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.222,
+ "tokens_in": 18736,
+ "tokens_out": 393
+}

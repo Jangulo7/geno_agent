@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR3:PMID_39270020_Patient_2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "ITPR3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR3",
+  "SMG8",
+  "COX11",
+  "SMIM24",
+  "B3GNT4",
+  "GPIHBP1",
+  "HSFX2",
+  "FOXB1",
+  "ABHD11",
+  "SPTAN1",
+  "EPB41L5",
+  "GPX2",
+  "CLEC14A",
+  "GPBAR1",
+  "BAG3"
+ ],
+ "top1": "ITPR3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR3\",\"confidence\":0.95,\"rationale\":\"Direct evidence of impaired T-cell proliferation and calcium flux linked to mutation.\"},{\"gene\":\"SMG8\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"COX11\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"SMIM24\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"B3GNT4\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"GPIHBP1\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"HSFX2\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"FOXB1\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"ABHD11\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"EPB41L5\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"GPX2\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"CLEC14A\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"GPBAR1\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"},{\"gene\":\"BAG3\",\"confidence\":0.15,\"rationale\":\"General T-cell proliferation issues without specific mutation link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.421,
+ "tokens_in": 17757,
+ "tokens_out": 429
+}

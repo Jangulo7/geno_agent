@@ -1,0 +1,32 @@
+{
+ "case_id": "NHS:PMID_30642278_proband_III_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NHS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NHS",
+  "KRT14",
+  "PEDS1",
+  "WDR6",
+  "MOSPD3",
+  "CD80",
+  "PPP1R21",
+  "CYP3A43",
+  "PM20D1",
+  "HP1BP3",
+  "CCL22",
+  "RAB37",
+  "DALRD3",
+  "CFB"
+ ],
+ "top1": "NHS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NHS\",\"confidence\":0.98,\"rationale\":\"Directly linked to all patient phenotypes including cataracts, facial features, and dental anomalies.\"},{\"gene\":\"KRT14\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's dental or facial features.\"},{\"gene\":\"PEDS1\",\"confidence\":0.03,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"WDR6\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"MOSPD3\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"CD80\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"PPP1R21\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"CYP3A43\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"PM20D1\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"HP1BP3\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"CCL22\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"RAB37\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"DALRD3\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"},{\"gene\":\"CFB\",\"confidence\":0.02,\"rationale\":\"No evidence of association with cataracts or dental anomalies.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.171,
+ "tokens_in": 15787,
+ "tokens_out": 431
+}

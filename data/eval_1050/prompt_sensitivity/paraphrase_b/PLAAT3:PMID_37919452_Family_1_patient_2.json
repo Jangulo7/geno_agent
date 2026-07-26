@@ -1,0 +1,33 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_1_patient_2",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PQBP1",
+  "SET",
+  "TMEM18",
+  "PLAAT3",
+  "FBXO44",
+  "SIDT1",
+  "HORMAD2",
+  "SRD5A3",
+  "NTM",
+  "ARF1",
+  "LMO3",
+  "SLC15A2",
+  "C8orf76",
+  "ZCCHC10",
+  "CD247"
+ ],
+ "top1": "PQBP1",
+ "top1_correct": false,
+ "causal_rank": 4,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PQBP1\",\"confidence\":0.95,\"rationale\":\"Directly links to intellectual disability and short stature with metabolic features.\"},{\"gene\":\"SET\",\"confidence\":0.85,\"rationale\":\"Associated with insulin resistance and lipoatrophy.\"},{\"gene\":\"TMEM18\",\"confidence\":0.75,\"rationale\":\"Linked to obesity and metabolic abnormalities.\"},{\"gene\":\"PLAAT3\",\"confidence\":0.65,\"rationale\":\"Homozygous deletion linked to lipodystrophy and metabolic issues.\"},{\"gene\":\"FBXO44\",\"confidence\":0.55,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"SIDT1\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"HORMAD2\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"SRD5A3\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"NTM\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"ARF1\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"LMO3\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"SLC15A2\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"C8orf76\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"ZCCHC10\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"},{\"gene\":\"CD247\",\"confidence\":0.5,\"rationale\":\"No direct evidence, but some overlap with lipodystrophy features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.474,
+ "tokens_in": 16921,
+ "tokens_out": 466
+}

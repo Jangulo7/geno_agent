@@ -1,0 +1,33 @@
+{
+ "case_id": "PYGL:PMID_28984260_child",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "PYGL",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TG",
+  "PYGL",
+  "IRX2",
+  "NEURL1B",
+  "ELMO1",
+  "PHB1",
+  "RCAN3",
+  "CNGA1",
+  "DNASE1",
+  "OR1S2",
+  "TFAP4",
+  "TRIM49",
+  "CCDC200",
+  "SLC25A52",
+  "RTL4"
+ ],
+ "top1": "TG",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TG\",\"confidence\":0.95,\"rationale\":\"Directly linked to hypertriglyceridemia and hypercholesterolemia with enzyme effects on liver enzymes.\"},{\"gene\":\"PYGL\",\"confidence\":0.15,\"rationale\":\"Associated with lipid metabolism and liver enzymes in mice.\"},{\"gene\":\"IRX2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"NEURL1B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ELMO1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"PHB1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"RCAN3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CNGA1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DNASE1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"OR1S2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TFAP4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TRIM49\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CCDC200\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SLC25A52\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"RTL4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.378,
+ "tokens_in": 12075,
+ "tokens_out": 406
+}

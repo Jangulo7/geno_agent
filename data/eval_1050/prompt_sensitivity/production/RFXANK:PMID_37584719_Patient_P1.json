@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "PTPRC",
+  "CXCL6",
+  "AKR1C8",
+  "CCDC63",
+  "AEBP2",
+  "SHLD3",
+  "FAM162B",
+  "OR12D2",
+  "ADAMTSL4",
+  "EDRF1",
+  "NPSR1",
+  "ATG4A",
+  "PAPOLB",
+  "TUBB2A"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"Homozygous mutation linked to MHC-II deficiency with autoimmune hemolytic anemia and CMV colitis.\"},{\"gene\":\"PTPRC\",\"confidence\":0.15,\"rationale\":\"Common in immune disorders but no direct link to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"CXCL6\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"AKR1C8\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"CCDC63\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"AEBP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"SHLD3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"FAM162B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"OR12D2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"ADAMTSL4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"EDRF1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"NPSR1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"ATG4A\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"PAPOLB\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"},{\"gene\":\"TUBB2A\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to CMV colitis or autoimmune hemolytic anemia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.885,
+ "tokens_in": 17959,
+ "tokens_out": 532
+}

@@ -1,0 +1,421 @@
+{
+  "work_package": "WP6",
+  "description": "Annotation density as a competing explanation for the overlap effect. Density counts phenotype.hpoa rows for the case's OMIM disease(s), excluding rows citing the case's own source PMID.",
+  "seed": 42,
+  "hpoa_file": "data/Human_Phenotype_Ontology/phenotype.hpoa",
+  "hpoa_version": "2026-02-16",
+  "n_cases": 1047,
+  "density_by_overlap_stratum": {
+    "overlap_present": {
+      "n": 765,
+      "mean": 34.99,
+      "median": 18.0,
+      "q25": 3.0,
+      "q75": 52.0,
+      "zero_density_cases": 173
+    },
+    "overlap_absent": {
+      "n": 282,
+      "mean": 31.32,
+      "median": 27.0,
+      "q25": 16.0,
+      "q75": 38.0,
+      "zero_density_cases": 0
+    },
+    "mann_whitney_u": {
+      "U": 90915.0,
+      "p": 9.051422024761707e-05
+    }
+  },
+  "adjusted_models": [
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "model": "linear-probability GEE, exchangeable, clustered on source_pmid",
+      "crude_overlap_effect": -0.1659,
+      "crude_se": 0.0366,
+      "crude_p": 5.914338423199906e-06,
+      "adjusted_overlap_effect": -0.171,
+      "adjusted_se": 0.0373,
+      "adjusted_p": 4.475598280840868e-06,
+      "log_density_coef": 0.0052,
+      "log_density_p": 0.3041241570928285,
+      "percent_attenuation": -3.0
+    },
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "model": "linear-probability GEE, exchangeable, clustered on source_pmid",
+      "crude_overlap_effect": 0.18,
+      "crude_se": 0.0447,
+      "crude_p": 5.61238152603125e-05,
+      "adjusted_overlap_effect": 0.0396,
+      "adjusted_se": 0.0434,
+      "adjusted_p": 0.36127543613950264,
+      "log_density_coef": 0.1463,
+      "log_density_p": 2.198982335543257e-36,
+      "percent_attenuation": 78.0
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "model": "linear-probability GEE, exchangeable, clustered on source_pmid",
+      "crude_overlap_effect": 0.1664,
+      "crude_se": 0.0436,
+      "crude_p": 0.00013503034901384786,
+      "adjusted_overlap_effect": 0.0651,
+      "adjusted_se": 0.042,
+      "adjusted_p": 0.12144942056470825,
+      "log_density_coef": 0.1162,
+      "log_density_p": 1.6274813847359198e-21,
+      "percent_attenuation": 60.9
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "model": "linear-probability GEE, exchangeable, clustered on source_pmid",
+      "crude_overlap_effect": 0.0995,
+      "crude_se": 0.0556,
+      "crude_p": 0.07378915881121936,
+      "adjusted_overlap_effect": -0.0043,
+      "adjusted_se": 0.059,
+      "adjusted_p": 0.9421453054459941,
+      "log_density_coef": 0.1143,
+      "log_density_p": 8.02834958087128e-17,
+      "percent_attenuation": 104.3
+    }
+  ],
+  "adjusted_interaction": {
+    "model": "linear-probability GEE, clustered on source_pmid",
+    "reference_system": "M (LIRICAL)",
+    "note": "Coefficients are the system's overlap shift relative to LIRICAL's, in percentage points. 'adjusted' additionally controls annotation density and lets its slope differ by system.",
+    "crude_interaction": {
+      "K": {
+        "coef": 0.3238,
+        "se": 0.0459,
+        "ci95": [
+          0.2338,
+          0.4139
+        ],
+        "p": 1.8153074040995636e-12
+      },
+      "O": {
+        "coef": 0.4143,
+        "se": 0.1119,
+        "ci95": [
+          0.195,
+          0.6335
+        ],
+        "p": 0.00021307452615102647
+      },
+      "S": {
+        "coef": 0.3822,
+        "se": 0.0788,
+        "ci95": [
+          0.2277,
+          0.5367
+        ],
+        "p": 1.2377110850554462e-06
+      }
+    },
+    "density_adjusted_interaction": {
+      "K": {
+        "coef": 0.2162,
+        "se": 0.0406,
+        "ci95": [
+          0.1366,
+          0.2958
+        ],
+        "p": 1.0143627735525399e-07
+      },
+      "O": {
+        "coef": 0.3252,
+        "se": 0.1192,
+        "ci95": [
+          0.0915,
+          0.5588
+        ],
+        "p": 0.006384034451202218
+      },
+      "S": {
+        "coef": 0.3038,
+        "se": 0.0846,
+        "ci95": [
+          0.1379,
+          0.4697
+        ],
+        "p": 0.00033213321493435083
+      }
+    }
+  },
+  "density_stratified": [
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "crude_shift": -0.2012,
+      "density_stratified_shift": -0.1779,
+      "bins": [
+        {
+          "quintile": 1,
+          "density_range": [
+            0.0,
+            3.0
+          ],
+          "n_present": 210,
+          "n_absent": 0,
+          "top1_present": 0.9762,
+          "top1_absent": null
+        },
+        {
+          "quintile": 2,
+          "density_range": [
+            3.0,
+            16.0
+          ],
+          "n_present": 120,
+          "n_absent": 89,
+          "top1_present": 0.9417,
+          "top1_absent": 0.5955,
+          "shift_absent_minus_present": -0.3462
+        },
+        {
+          "quintile": 3,
+          "density_range": [
+            16.0,
+            32.0
+          ],
+          "n_present": 139,
+          "n_absent": 70,
+          "top1_present": 1.0,
+          "top1_absent": 0.7857,
+          "shift_absent_minus_present": -0.2143
+        },
+        {
+          "quintile": 4,
+          "density_range": [
+            32.0,
+            56.0
+          ],
+          "n_present": 119,
+          "n_absent": 90,
+          "top1_present": 0.9664,
+          "top1_absent": 0.9,
+          "shift_absent_minus_present": -0.0664
+        },
+        {
+          "quintile": 5,
+          "density_range": [
+            56.0,
+            175.0
+          ],
+          "n_present": 177,
+          "n_absent": 33,
+          "top1_present": 0.9944,
+          "top1_absent": 0.9091,
+          "shift_absent_minus_present": -0.0853
+        }
+      ]
+    },
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "crude_shift": 0.1226,
+      "density_stratified_shift": -0.0016,
+      "bins": [
+        {
+          "quintile": 1,
+          "density_range": [
+            0.0,
+            3.0
+          ],
+          "n_present": 210,
+          "n_absent": 0,
+          "top1_present": 0.2762,
+          "top1_absent": null
+        },
+        {
+          "quintile": 2,
+          "density_range": [
+            3.0,
+            16.0
+          ],
+          "n_present": 120,
+          "n_absent": 89,
+          "top1_present": 0.5583,
+          "top1_absent": 0.6404,
+          "shift_absent_minus_present": 0.0821
+        },
+        {
+          "quintile": 3,
+          "density_range": [
+            16.0,
+            32.0
+          ],
+          "n_present": 139,
+          "n_absent": 70,
+          "top1_present": 0.7914,
+          "top1_absent": 0.7857,
+          "shift_absent_minus_present": -0.0057
+        },
+        {
+          "quintile": 4,
+          "density_range": [
+            32.0,
+            56.0
+          ],
+          "n_present": 119,
+          "n_absent": 90,
+          "top1_present": 0.8739,
+          "top1_absent": 0.9,
+          "shift_absent_minus_present": 0.0261
+        },
+        {
+          "quintile": 5,
+          "density_range": [
+            56.0,
+            175.0
+          ],
+          "n_present": 177,
+          "n_absent": 33,
+          "top1_present": 0.9266,
+          "top1_absent": 0.8182,
+          "shift_absent_minus_present": -0.1084
+        }
+      ]
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "crude_shift": 0.181,
+      "density_stratified_shift": 0.0711,
+      "bins": [
+        {
+          "quintile": 1,
+          "density_range": [
+            0.0,
+            3.0
+          ],
+          "n_present": 210,
+          "n_absent": 0,
+          "top1_present": 0.3857,
+          "top1_absent": null
+        },
+        {
+          "quintile": 2,
+          "density_range": [
+            3.0,
+            16.0
+          ],
+          "n_present": 120,
+          "n_absent": 89,
+          "top1_present": 0.525,
+          "top1_absent": 0.9213,
+          "shift_absent_minus_present": 0.3963
+        },
+        {
+          "quintile": 3,
+          "density_range": [
+            16.0,
+            32.0
+          ],
+          "n_present": 139,
+          "n_absent": 70,
+          "top1_present": 0.7914,
+          "top1_absent": 0.8429,
+          "shift_absent_minus_present": 0.0515
+        },
+        {
+          "quintile": 4,
+          "density_range": [
+            32.0,
+            56.0
+          ],
+          "n_present": 119,
+          "n_absent": 90,
+          "top1_present": 0.8319,
+          "top1_absent": 0.8444,
+          "shift_absent_minus_present": 0.0125
+        },
+        {
+          "quintile": 5,
+          "density_range": [
+            56.0,
+            175.0
+          ],
+          "n_present": 177,
+          "n_absent": 33,
+          "top1_present": 0.9322,
+          "top1_absent": 0.7576,
+          "shift_absent_minus_present": -0.1746
+        }
+      ]
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "crude_shift": 0.2131,
+      "density_stratified_shift": 0.0727,
+      "bins": [
+        {
+          "quintile": 1,
+          "density_range": [
+            0.0,
+            3.0
+          ],
+          "n_present": 210,
+          "n_absent": 0,
+          "top1_present": 0.119,
+          "top1_absent": null
+        },
+        {
+          "quintile": 2,
+          "density_range": [
+            3.0,
+            16.0
+          ],
+          "n_present": 120,
+          "n_absent": 89,
+          "top1_present": 0.2917,
+          "top1_absent": 0.809,
+          "shift_absent_minus_present": 0.5173
+        },
+        {
+          "quintile": 3,
+          "density_range": [
+            16.0,
+            32.0
+          ],
+          "n_present": 139,
+          "n_absent": 70,
+          "top1_present": 0.6403,
+          "top1_absent": 0.8143,
+          "shift_absent_minus_present": 0.174
+        },
+        {
+          "quintile": 4,
+          "density_range": [
+            32.0,
+            56.0
+          ],
+          "n_present": 119,
+          "n_absent": 90,
+          "top1_present": 0.5042,
+          "top1_absent": 0.5222,
+          "shift_absent_minus_present": 0.018
+        },
+        {
+          "quintile": 5,
+          "density_range": [
+            56.0,
+            175.0
+          ],
+          "n_present": 177,
+          "n_absent": 33,
+          "top1_present": 0.7797,
+          "top1_absent": 0.3636,
+          "shift_absent_minus_present": -0.416
+        }
+      ]
+    }
+  ]
+}

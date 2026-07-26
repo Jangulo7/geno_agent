@@ -1,0 +1,33 @@
+{
+ "case_id": "SNAP29:PMID_33977139_Patient_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "SNAP29",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NDUFV3",
+  "COG1",
+  "TBC1D3L",
+  "HOXA10",
+  "FKBP10",
+  "LARS1",
+  "PLA2G4A",
+  "ADGRG2",
+  "KCNQ3",
+  "SNAP29",
+  "ESPN",
+  "OR14A16",
+  "SYAP1",
+  "RPL34",
+  "TYW3"
+ ],
+ "top1": "NDUFV3",
+ "top1_correct": false,
+ "causal_rank": 10,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NDUFV3\",\"confidence\":0.95,\"rationale\":\"Links to axial hypotonia, hypertonia, scoliosis, and dermatological features.\"},{\"gene\":\"COG1\",\"confidence\":0.75,\"rationale\":\"Associated with hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"TBC1D3L\",\"confidence\":0.6,\"rationale\":\"Reports axial hypotonia and hypertonia, scoliosis.\"},{\"gene\":\"HOXA10\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and developmental delay.\"},{\"gene\":\"FKBP10\",\"confidence\":0.5,\"rationale\":\"Associated with hypotonia and scoliosis.\"},{\"gene\":\"LARS1\",\"confidence\":0.5,\"rationale\":\"Reports axial hypotonia and scoliosis.\"},{\"gene\":\"PLA2G4A\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"ADGRG2\",\"confidence\":0.5,\"rationale\":\"Reports hypotonia, scoliosis, and facial dysmorphisms.\"},{\"gene\":\"KCNQ3\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"SNAP29\",\"confidence\":0.5,\"rationale\":\"Reports axial hypotonia and hypertonia, scoliosis.\"},{\"gene\":\"ESPN\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"OR14A16\",\"confidence\":0.5,\"rationale\":\"Reports hypotonia and scoliosis.\"},{\"gene\":\"SYAP1\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"RPL34\",\"confidence\":0.5,\"rationale\":\"Reports axial hypotonia and scoliosis.\"},{\"gene\":\"TYW3\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and scoliosis.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.524,
+ "tokens_in": 17626,
+ "tokens_out": 435
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR36",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "AFMID",
+  "ARAP1",
+  "CAMKK2",
+  "DUSP26",
+  "RFXAP",
+  "ZIM3",
+  "COLGALT2",
+  "C5orf34",
+  "TIMM44",
+  "PRAMEF17",
+  "BMS1",
+  "PRSS35",
+  "SMARCA4",
+  "CAP1"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to familial partial lipodystrophy type 2 with all patient phenotypes\"},{\"gene\":\"AFMID\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"ARAP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"CAMKK2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"DUSP26\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"RFXAP\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"ZIM3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"COLGALT2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"C5orf34\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"TIMM44\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"PRAMEF17\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"BMS1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"PRSS35\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"SMARCA4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"},{\"gene\":\"CAP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to lipodystrophy or patient phenotypes\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.049,
+ "tokens_in": 18855,
+ "tokens_out": 471
+}

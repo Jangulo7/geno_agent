@@ -1,0 +1,33 @@
+{
+ "case_id": "PCYT1A:PMID_24889630_Proband_2",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "PCYT1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LEP",
+  "GPRC6A",
+  "PCYT1A",
+  "SLC10A5",
+  "FMN1",
+  "LENG9",
+  "SPECC1",
+  "SRPK1",
+  "C8orf58",
+  "CRYM",
+  "CDH12",
+  "ST6GALNAC5",
+  "ZNF804A",
+  "PFDN6",
+  "FCRLA"
+ ],
+ "top1": "LEP",
+ "top1_correct": false,
+ "causal_rank": 3,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LEP\",\"confidence\":0.95,\"rationale\":\"Directly links to lipodystrophy, insulin resistance, and hepatic steatosis with leptin deficiency.\"},{\"gene\":\"GPRC6A\",\"confidence\":0.85,\"rationale\":\"Associated with metabolic syndrome, hepatic steatosis, and insulin resistance in knockout models.\"},{\"gene\":\"PCYT1A\",\"confidence\":0.75,\"rationale\":\"Linked to lipodystrophy and metabolic complications like hypertriglyceridemia and insulin resistance.\"},{\"gene\":\"SLC10A5\",\"confidence\":0.65,\"rationale\":\"Indirectly related to lipodystrophy and metabolic traits through LMNA gene connections.\"},{\"gene\":\"FMN1\",\"confidence\":0.6,\"rationale\":\"Part of lipodystrophy pathways with metabolic complications like hypertriglyceridemia.\"},{\"gene\":\"LENG9\",\"confidence\":0.55,\"rationale\":\"Associated with lipodystrophy and metabolic traits through LMNA gene connections.\"},{\"gene\":\"SPECC1\",\"confidence\":0.5,\"rationale\":\"Linked to lipodystrophy and metabolic complications through LMNA gene connections.\"},{\"gene\":\"SRPK1\",\"confidence\":0.5,\"rationale\":\"Part of lipodystrophy pathways with metabolic complications like hypertriglyceridemia.\"},{\"gene\":\"C8orf58\",\"confidence\":0.5,\"rationale\":\"Indirectly related to lipodystrophy and metabolic traits through LMNA gene connections.\"},{\"gene\":\"CRYM\",\"confidence\":0.5,\"rationale\":\"Linked to lipodystrophy and metabolic complications through LMNA gene connections.\"},{\"gene\":\"CDH12\",\"confidence\":0.5,\"rationale\":\"Part of lipodystrophy pathways with metabolic complications like hypertriglyceridemia.\"},{\"gene\":\"ST6GALNAC5\",\"confidence\":0.5,\"rationale\":\"Indirectly related to lipodystrophy and metabolic traits through LMNA gene connections.\"},{\"gene\":\"ZNF804A\",\"confidence\":0.5,\"rationale\":\"Part of lipodystrophy pathways with metabolic complications like hypertriglyceridemia.\"},{\"gene\":\"PFDN6\",\"confidence\":0.5,\"rationale\":\"Linked to lipodystrophy and metabolic complications through LMNA gene connections.\"},{\"gene\":\"FCRLA\",\"confidence\":0.5,\"rationale\":\"Part of lipodystrophy pathways with metabolic complications like hypertriglyceridemia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.422,
+ "tokens_in": 16521,
+ "tokens_out": 533
+}

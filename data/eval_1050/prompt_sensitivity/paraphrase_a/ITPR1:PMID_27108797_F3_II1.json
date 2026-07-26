@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_27108797_F3_II1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "POLR3K",
+  "PMP22",
+  "PCYOX1L",
+  "HNRNPDL",
+  "CDX1",
+  "STRA8",
+  "NCOA6",
+  "ERC1",
+  "IKZF4",
+  "FAM149A",
+  "KCNH8",
+  "C15orf62",
+  "DCUN1D1",
+  "UBTD2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Matches multiple phenotypes including ataxia, hypotonia, and intellectual disability with cerebellar atrophy.\"},{\"gene\":\"POLR3K\",\"confidence\":0.15,\"rationale\":\"Linked to ataxia and hypomyelination but lacks specific features like hypoplasia of the iris.\"},{\"gene\":\"PMP22\",\"confidence\":0.05,\"rationale\":\"Associated with CMT but not the full range of neurological and ocular features.\"},{\"gene\":\"PCYOX1L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"HNRNPDL\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"CDX1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"STRA8\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"NCOA6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"ERC1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"IKZF4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"FAM149A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"KCNH8\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"C15orf62\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"DCUN1D1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"},{\"gene\":\"UBTD2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.634,
+ "tokens_in": 15258,
+ "tokens_out": 482
+}

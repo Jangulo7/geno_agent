@@ -1,0 +1,33 @@
+{
+ "case_id": "CD28:PMID_34214472_patient_P2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "CD28",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD28",
+  "ZNF474",
+  "IFT57",
+  "SHISA3",
+  "VDAC2",
+  "ADAP2",
+  "CREBL2",
+  "ZNF517",
+  "TRH",
+  "NOTCH2NLA",
+  "SORBS3",
+  "CEACAM18",
+  "CCDC89",
+  "CPSF7",
+  "AP3M2"
+ ],
+ "top1": "CD28",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD28\",\"confidence\":0.95,\"rationale\":\"CD28 deficiency directly links to HPV, EBV, CMV infections and warts as described in literature.\"},{\"gene\":\"RLTPR\",\"confidence\":0.15,\"rationale\":\"RLTPR deficiency is linked to CD28 co-stimulation defects, but not directly to the patient's specific features.\"},{\"gene\":\"GATA2\",\"confidence\":0.05,\"rationale\":\"GATA2 deficiency is associated with viral infections but not specifically with the patient's features.\"},{\"gene\":\"ZNF474\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"IFT57\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"SHISA3\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"VDAC2\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ADAP2\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CREBL2\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ZNF517\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"TRH\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"NOTCH2NLA\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"SORBS3\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CCDC89\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"CPSF7\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"AP3M2\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.314,
+ "tokens_in": 19552,
+ "tokens_out": 484
+}

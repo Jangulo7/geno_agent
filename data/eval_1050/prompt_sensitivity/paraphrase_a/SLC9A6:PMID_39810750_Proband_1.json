@@ -1,0 +1,32 @@
+{
+ "case_id": "SLC9A6:PMID_39810750_Proband_1",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "SLC9A6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SLC9A6",
+  "LMX1B",
+  "AAK1",
+  "PDE3A",
+  "SCFD2",
+  "FAM9A",
+  "HS6ST1",
+  "EFCAB6",
+  "ARL6",
+  "SLC39A10",
+  "GTSF1",
+  "RYR3",
+  "OR9G4",
+  "KRT14"
+ ],
+ "top1": "SLC9A6",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SLC9A6\",\"confidence\":0.95,\"rationale\":\"Mutations linked to parkinsonism, bradykinesia, rigidity, and levodopa response.\"},{\"gene\":\"PLA2G6\",\"confidence\":0.15,\"rationale\":\"Associated with dystonia-parkinsonism but lacks specific phenotypic match.\"},{\"gene\":\"LMX1B\",\"confidence\":0.1,\"rationale\":\"Linked to parkinsonism but not all features.\"},{\"gene\":\"AAK1\",\"confidence\":0.1,\"rationale\":\"Tied to PSP but not all features.\"},{\"gene\":\"PDE3A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"SCFD2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"FAM9A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"HS6ST1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"EFCAB6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"ARL6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"SLC39A10\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"GTSF1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"RYR3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"OR9G4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"KRT14\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.535,
+ "tokens_in": 12512,
+ "tokens_out": 411
+}

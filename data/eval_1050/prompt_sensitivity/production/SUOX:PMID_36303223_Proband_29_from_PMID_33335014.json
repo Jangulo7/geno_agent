@@ -1,0 +1,33 @@
+{
+ "case_id": "SUOX:PMID_36303223_Proband_29_from_PMID_33335014",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "SUOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MACF1",
+  "SUOX",
+  "MDGA2",
+  "SKI",
+  "CA5A",
+  "SEC23B",
+  "RAP1B",
+  "OFD1",
+  "POLE",
+  "BMAL1",
+  "RIBC2",
+  "ANXA11",
+  "YIPF1",
+  "RBMY1D",
+  "CIMIP6"
+ ],
+ "top1": "MACF1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MACF1\",\"confidence\":0.95,\"rationale\":\"Direct link to seizures, hypotonia, developmental delay with de novo variants\"},{\"gene\":\"SUOX\",\"confidence\":0.85,\"rationale\":\"Hypouricemia, hypocystinemia, seizures with SUOX deficiency\"},{\"gene\":\"MDGA2\",\"confidence\":0.75,\"rationale\":\"Seizures, hypotonia, developmental delay with DEE\"},{\"gene\":\"SKI\",\"confidence\":0.65,\"rationale\":\"Developmental delay, hypotonia, seizures in 1p36 deletion\"},{\"gene\":\"CA5A\",\"confidence\":0.55,\"rationale\":\"Developmental delay, hypotonia with CA5A deficiency\"},{\"gene\":\"SEC23B\",\"confidence\":0.45,\"rationale\":\"Developmental delay, seizures with SEC31A variants\"},{\"gene\":\"RAP1B\",\"confidence\":0.4,\"rationale\":\"Seizures, hypotonia with RAP1B variants\"},{\"gene\":\"OFD1\",\"confidence\":0.35,\"rationale\":\"Hypotonia, developmental delay with OFD1 variants\"},{\"gene\":\"POLE\",\"confidence\":0.3,\"rationale\":\"Developmental delay, seizures with POLE variants\"},{\"gene\":\"BMAL1\",\"confidence\":0.25,\"rationale\":\"Developmental delay, seizures with BMAL1 variants\"},{\"gene\":\"RIBC2\",\"confidence\":0.2,\"rationale\":\"Hypotonia, developmental delay with RIBC2 variants\"},{\"gene\":\"ANXA11\",\"confidence\":0.15,\"rationale\":\"Developmental delay, hypotonia with ANXA11 variants\"},{\"gene\":\"YIPF1\",\"confidence\":0.1,\"rationale\":\"Developmental delay, hypotonia with YIPF1 variants\"},{\"gene\":\"RBMY1D\",\"confidence\":0.05,\"rationale\":\"Developmental delay, hypotonia with RBMY1D variants\"},{\"gene\":\"CIMIP6\",\"confidence\":0.05,\"rationale\":\"Developmental delay, hypotonia with CIMIP6 variants\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.59,
+ "tokens_in": 16843,
+ "tokens_out": 450
+}

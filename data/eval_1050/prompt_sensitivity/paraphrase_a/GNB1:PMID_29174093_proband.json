@@ -1,0 +1,33 @@
+{
+ "case_id": "GNB1:PMID_29174093_proband",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "GNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MMP2",
+  "MAPKAPK5",
+  "TMEM190",
+  "DUX3",
+  "EFHB",
+  "RTP2",
+  "VSIG10L2",
+  "TMEM254",
+  "DNMT3L",
+  "ZNF281",
+  "MTMR14",
+  "BAG5",
+  "GNB1",
+  "FXYD5",
+  "SPEM1"
+ ],
+ "top1": "MMP2",
+ "top1_correct": false,
+ "causal_rank": 13,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MMP2\",\"confidence\":0.95,\"rationale\":\"Mutation linked to vesicoureteral reflux and microretrognathia with clear pathogenic mechanism.\"},{\"gene\":\"MAPKAPK5\",\"confidence\":0.15,\"rationale\":\"Overlap with some features but lacks specific mention of key phenotypes.\"},{\"gene\":\"TMEM190\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"DUX3\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"EFHB\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"RTP2\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"VSIG10L2\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"TMEM254\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"DNMT3L\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"ZNF281\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"MTMR14\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"BAG5\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"GNB1\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"FXYD5\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"},{\"gene\":\"SPEM1\",\"confidence\":0.1,\"rationale\":\"No direct link to key phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.159,
+ "tokens_in": 14741,
+ "tokens_out": 402
+}

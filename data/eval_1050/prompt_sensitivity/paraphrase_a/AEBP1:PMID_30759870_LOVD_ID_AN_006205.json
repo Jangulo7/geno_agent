@@ -1,0 +1,33 @@
+{
+ "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "AEBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBLN5",
+  "TOPBP1",
+  "FHIP2B",
+  "P3H4",
+  "CCDC85A",
+  "TRIM60",
+  "KCTD19",
+  "C1orf115",
+  "KHSRP",
+  "MYO3B",
+  "SYT10",
+  "OPN1MW3",
+  "PMEL",
+  "GDNF",
+  "ZFP91"
+ ],
+ "top1": "FBLN5",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBLN5\",\"confidence\":0.95,\"rationale\":\"Matches hallux valgus, hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"TOPBP1\",\"confidence\":0.85,\"rationale\":\"Linked to hypotonia, scoliosis, and respiratory distress.\"},{\"gene\":\"FHIP2B\",\"confidence\":0.75,\"rationale\":\"Associated with hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"P3H4\",\"confidence\":0.7,\"rationale\":\"Ties to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"CCDC85A\",\"confidence\":0.65,\"rationale\":\"Linked to hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"TRIM60\",\"confidence\":0.6,\"rationale\":\"Connected to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"KCTD19\",\"confidence\":0.55,\"rationale\":\"Ties to hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"C1orf115\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"KHSRP\",\"confidence\":0.45,\"rationale\":\"Associated with hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"MYO3B\",\"confidence\":0.4,\"rationale\":\"Connected to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"SYT10\",\"confidence\":0.35,\"rationale\":\"Ties to hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"OPN1MW3\",\"confidence\":0.3,\"rationale\":\"Linked to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"PMEL\",\"confidence\":0.25,\"rationale\":\"Associated with hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"GDNF\",\"confidence\":0.2,\"rationale\":\"Connected to hypotonia, scoliosis, and respiratory issues.\"},{\"gene\":\"ZFP91\",\"confidence\":0.15,\"rationale\":\"Ties to hypotonia, scoliosis, and developmental delay.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.054,
+ "tokens_in": 16961,
+ "tokens_out": 490
+}

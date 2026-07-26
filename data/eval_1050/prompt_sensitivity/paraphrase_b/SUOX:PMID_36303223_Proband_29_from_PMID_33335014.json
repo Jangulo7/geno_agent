@@ -1,0 +1,33 @@
+{
+ "case_id": "SUOX:PMID_36303223_Proband_29_from_PMID_33335014",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "SUOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MACF1",
+  "SUOX",
+  "SKI",
+  "MDGA2",
+  "CA5A",
+  "RAP1B",
+  "SEC23B",
+  "OFD1",
+  "POLE",
+  "BMAL1",
+  "RIBC2",
+  "ANXA11",
+  "YIPF1",
+  "RBMY1D",
+  "CIMIP6"
+ ],
+ "top1": "MACF1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MACF1\",\"confidence\":0.95,\"rationale\":\"Directly links to seizures, hypotonia, and developmental delay with de novo variants.\"},{\"gene\":\"SUOX\",\"confidence\":0.85,\"rationale\":\"Matches hypouricemia, hypocystinemia, and seizures with sulfite oxidase deficiency.\"},{\"gene\":\"SKI\",\"confidence\":0.75,\"rationale\":\"Associated with developmental delay, hypotonia, and seizures in 1p36 deletion syndrome.\"},{\"gene\":\"MDGA2\",\"confidence\":0.7,\"rationale\":\"Linked to developmental delay, hypotonia, and seizures with homozygous variants.\"},{\"gene\":\"CA5A\",\"confidence\":0.65,\"rationale\":\"Matches developmental delay and hypouricemia with CA5A deficiency.\"},{\"gene\":\"RAP1B\",\"confidence\":0.6,\"rationale\":\"Gain-of-function variant linked to seizures and developmental delay.\"},{\"gene\":\"SEC23B\",\"confidence\":0.55,\"rationale\":\"Associated with developmental delay and seizures in neurodevelopmental disorders.\"},{\"gene\":\"OFD1\",\"confidence\":0.5,\"rationale\":\"Linked to hypotonia and developmental delay with mutations.\"},{\"gene\":\"POLE\",\"confidence\":0.45,\"rationale\":\"Ties to developmental delay and seizures with hyperprolinaemia.\"},{\"gene\":\"BMAL1\",\"confidence\":0.4,\"rationale\":\"Linked to developmental delay and seizures with circadian rhythm disruption.\"},{\"gene\":\"RIBC2\",\"confidence\":0.35,\"rationale\":\"Associated with hypotonia and developmental delay with renal issues.\"},{\"gene\":\"ANXA11\",\"confidence\":0.3,\"rationale\":\"Ties to developmental delay and seizures with ataxia.\"},{\"gene\":\"YIPF1\",\"confidence\":0.25,\"rationale\":\"Linked to hypotonia and developmental delay with tubular dysfunction.\"},{\"gene\":\"RBMY1D\",\"confidence\":0.2,\"rationale\":\"Associated with developmental delay and hypotonia with macrocephaly.\"},{\"gene\":\"CIMIP6\",\"confidence\":0.15,\"rationale\":\"Matches developmental delay and hypotonia with metabolic issues.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.741,
+ "tokens_in": 16825,
+ "tokens_out": 468
+}

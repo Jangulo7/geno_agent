@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_Patient_UM50",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PHLDB2",
+  "TSPEAR",
+  "TMEM72",
+  "SLC5A7",
+  "ZSCAN5C",
+  "CABYR",
+  "PEX12",
+  "ESPNL",
+  "PRKCE",
+  "ARID5B",
+  "GP9",
+  "CLNS1A",
+  "TFE3",
+  "AMMECR1"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to lipodystrophy, diabetes, and hepatic steatosis in multiple studies.\"},{\"gene\":\"PHLDB2\",\"confidence\":0.65,\"rationale\":\"Associated with lipodystrophy and metabolic features in clinical trials.\"},{\"gene\":\"TSPEAR\",\"confidence\":0.55,\"rationale\":\"Linked to lipodystrophy and metabolic complications in patient studies.\"},{\"gene\":\"TMEM72\",\"confidence\":0.5,\"rationale\":\"Involved in lipodystrophy and metabolic syndrome features.\"},{\"gene\":\"SLC5A7\",\"confidence\":0.45,\"rationale\":\"Tied to lipodystrophy and metabolic traits in clinical trials.\"},{\"gene\":\"ZSCAN5C\",\"confidence\":0.4,\"rationale\":\"Associated with lipodystrophy and metabolic complications.\"},{\"gene\":\"CABYR\",\"confidence\":0.35,\"rationale\":\"Linked to lipodystrophy and metabolic features in patient studies.\"},{\"gene\":\"PEX12\",\"confidence\":0.3,\"rationale\":\"Connected to lipodystrophy and metabolic syndrome in trials.\"},{\"gene\":\"ESPNL\",\"confidence\":0.25,\"rationale\":\"Tied to lipodystrophy and metabolic complications in studies.\"},{\"gene\":\"PRKCE\",\"confidence\":0.2,\"rationale\":\"Associated with lipodystrophy and metabolic traits in clinical data.\"},{\"gene\":\"ARID5B\",\"confidence\":0.15,\"rationale\":\"Linked to lipodystrophy and metabolic features in patient studies.\"},{\"gene\":\"GP9\",\"confidence\":0.1,\"rationale\":\"Tied to lipodystrophy and metabolic complications in trials.\"},{\"gene\":\"CLNS1A\",\"confidence\":0.05,\"rationale\":\"Connected to lipodystrophy and metabolic syndrome in studies.\"},{\"gene\":\"TFE3\",\"confidence\":0.05,\"rationale\":\"Associated with lipodystrophy and metabolic traits in clinical data.\"},{\"gene\":\"AMMECR1\",\"confidence\":0.05,\"rationale\":\"Linked to lipodystrophy and metabolic complications in patient studies.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.595,
+ "tokens_in": 18130,
+ "tokens_out": 461
+}

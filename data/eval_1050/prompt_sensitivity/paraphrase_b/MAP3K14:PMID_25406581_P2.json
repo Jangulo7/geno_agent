@@ -1,0 +1,32 @@
+{
+ "case_id": "MAP3K14:PMID_25406581_P2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "MAP3K14",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MALT1",
+  "DPF1",
+  "SIGLEC1",
+  "AIFM2",
+  "PHETA1",
+  "TANK",
+  "YAE1",
+  "HIBADH",
+  "FYTTD1",
+  "BMP2K",
+  "RHBDL1",
+  "TMC6",
+  "SPIDR",
+  "MT-ATP8"
+ ],
+ "top1": "MALT1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MALT1\",\"confidence\":0.95,\"rationale\":\"Directly links to B cell class switching and memory B cell defects matching patient phenotype.\"},{\"gene\":\"IMPAA2\",\"confidence\":0.75,\"rationale\":\"Shows IgM reduction and B cell subset abnormalities consistent with patient data.\"},{\"gene\":\"DPF1\",\"confidence\":0.65,\"rationale\":\"Reports IgM reduction and B cell subset changes aligning with patient findings.\"},{\"gene\":\"SIGLEC1\",\"confidence\":0.6,\"rationale\":\"Describes B cell subset alterations and IgM changes matching patient profile.\"},{\"gene\":\"AIFM2\",\"confidence\":0.55,\"rationale\":\"Reports IgM reduction and B cell subset abnormalities consistent with patient data.\"},{\"gene\":\"PHETA1\",\"confidence\":0.5,\"rationale\":\"Shows IgM reduction and B cell subset changes aligning with patient findings.\"},{\"gene\":\"TANK\",\"confidence\":0.45,\"rationale\":\"Reports IgM reduction and B cell subset abnormalities consistent with patient data.\"},{\"gene\":\"YAE1\",\"confidence\":0.4,\"rationale\":\"Describes B cell subset alterations and IgM changes matching patient profile.\"},{\"gene\":\"HIBADH\",\"confidence\":0.35,\"rationale\":\"Reports IgM reduction and B cell subset changes aligning with patient findings.\"},{\"gene\":\"FYTTD1\",\"confidence\":0.3,\"rationale\":\"Shows B cell subset abnormalities and IgM changes matching patient data.\"},{\"gene\":\"BMP2K\",\"confidence\":0.25,\"rationale\":\"Reports IgM reduction and B cell subset abnormalities consistent with patient findings.\"},{\"gene\":\"RHBDL1\",\"confidence\":0.2,\"rationale\":\"Describes B cell subset alterations and IgM changes matching patient profile.\"},{\"gene\":\"TMC6\",\"confidence\":0.15,\"rationale\":\"Reports IgM reduction and B cell subset changes aligning with patient data.\"},{\"gene\":\"SPIDR\",\"confidence\":0.1,\"rationale\":\"Shows B cell subset abnormalities and IgM changes matching patient findings.\"},{\"gene\":\"MT-ATP8\",\"confidence\":0.05,\"rationale\":\"Reports B cell subset changes but less direct link to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.151,
+ "tokens_in": 15686,
+ "tokens_out": 476
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "NCF2:PMID_10498624_Case_4_IP",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "NCF2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NCF2",
+  "NOD2",
+  "USB1",
+  "GPI",
+  "IMMP2L",
+  "CMTM3",
+  "ZBTB18",
+  "DNAJB13",
+  "ADGRG2",
+  "LRWD1",
+  "ST6GAL2",
+  "CACNG8",
+  "CBLC",
+  "ACADS",
+  "GORASP1"
+ ],
+ "top1": "NCF2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NCF2\",\"confidence\":0.95,\"rationale\":\"Directly linked to oxidative burst defects and lymphadenopathy in CGD.\"},{\"gene\":\"NOD2\",\"confidence\":0.15,\"rationale\":\"Associated with infections but not lymphadenopathy or oxidative burst.\"},{\"gene\":\"USB1\",\"confidence\":0.1,\"rationale\":\"Linked to neutropenia and poikiloderma, not lymphadenopathy.\"},{\"gene\":\"GPI\",\"confidence\":0.1,\"rationale\":\"Involves glucose metabolism, not lymphadenopathy or infections.\"},{\"gene\":\"IMMP2L\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CMTM3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ZBTB18\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"DNAJB13\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ADGRG2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"LRWD1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ST6GAL2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CACNG8\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CBLC\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ACADS\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"GORASP1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.206,
+ "tokens_in": 18251,
+ "tokens_out": 398
+}

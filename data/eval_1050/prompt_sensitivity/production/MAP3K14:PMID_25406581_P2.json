@@ -1,0 +1,32 @@
+{
+ "case_id": "MAP3K14:PMID_25406581_P2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "MAP3K14",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MALT1",
+  "DPF1",
+  "SIGLEC1",
+  "AIFM2",
+  "PHETA1",
+  "TANK",
+  "YAE1",
+  "HIBADH",
+  "FYTTD1",
+  "BMP2K",
+  "RHBDL1",
+  "TMC6",
+  "SPIDR",
+  "MT-ATP8"
+ ],
+ "top1": "MALT1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MALT1\",\"confidence\":0.95,\"rationale\":\"Directly links to B cell class switching defects matching patient phenotype.\"},{\"gene\":\"IMPAA2\",\"confidence\":0.65,\"rationale\":\"Reports IgM reduction and B cell subset abnormalities.\"},{\"gene\":\"DPF1\",\"confidence\":0.55,\"rationale\":\"Describes IgM reduction and B cell subset changes.\"},{\"gene\":\"SIGLEC1\",\"confidence\":0.5,\"rationale\":\"Reports B cell subset abnormalities and IgM changes.\"},{\"gene\":\"AIFM2\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"PHETA1\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"TANK\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"YAE1\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"HIBADH\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"FYTTD1\",\"confidence\":0.5,\"rationale\":\"Reports B cell subset abnormalities and IgM changes.\"},{\"gene\":\"BMP2K\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"RHBDL1\",\"confidence\":0.5,\"rationale\":\"Reports B cell subset abnormalities and IgM changes.\"},{\"gene\":\"TMC6\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"SPIDR\",\"confidence\":0.5,\"rationale\":\"Reports IgM reduction and B cell subset issues.\"},{\"gene\":\"MT-ATP8\",\"confidence\":0.45,\"rationale\":\"Reports B cell subset changes and IgM reduction.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.995,
+ "tokens_in": 15704,
+ "tokens_out": 411
+}

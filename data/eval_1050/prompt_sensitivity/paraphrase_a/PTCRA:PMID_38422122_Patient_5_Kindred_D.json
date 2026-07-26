@@ -1,0 +1,33 @@
+{
+ "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "PTCRA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PYROXD1",
+  "SLC39A8",
+  "PAFAH1B1",
+  "ZNF883",
+  "CYP2A7",
+  "BTNL3",
+  "PSPN",
+  "SORCS1",
+  "ZBTB47",
+  "VCY1B",
+  "NPIPB3",
+  "PRPF40B",
+  "LPA",
+  "SRRM3",
+  "NKAP"
+ ],
+ "top1": "PYROXD1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PYROXD1\",\"confidence\":0.95,\"rationale\":\"Directly linked to myofibrillar myopathy with hyporeflexia and neuropathy features.\"},{\"gene\":\"SLC39A8\",\"confidence\":0.15,\"rationale\":\"Associated with distal neuropathy and ataxia, but not hypothyroidism.\"},{\"gene\":\"PAFAH1B1\",\"confidence\":0.1,\"rationale\":\"Linked to leukodystrophy, not matching all symptoms.\"},{\"gene\":\"ZNF883\",\"confidence\":0.1,\"rationale\":\"No direct link to hypothyroidism or neuropathy.\"},{\"gene\":\"CYP2A7\",\"confidence\":0.1,\"rationale\":\"No clear connection to the patient's symptoms.\"},{\"gene\":\"BTNL3\",\"confidence\":0.1,\"rationale\":\"No evidence of hypothyroidism or neuropathy.\"},{\"gene\":\"PSPN\",\"confidence\":0.1,\"rationale\":\"No direct link to hypothyroidism or neuropathy.\"},{\"gene\":\"SORCS1\",\"confidence\":0.1,\"rationale\":\"No clear connection to hypothyroidism or neuropathy.\"},{\"gene\":\"ZBTB47\",\"confidence\":0.1,\"rationale\":\"No evidence of hypothyroidism or neuropathy.\"},{\"gene\":\"VCY1B\",\"confidence\":0.1,\"rationale\":\"No direct link to hypothyroidism or neuropathy.\"},{\"gene\":\"NPIPB3\",\"confidence\":0.1,\"rationale\":\"No clear connection to hypothyroidism or neuropathy.\"},{\"gene\":\"PRPF40B\",\"confidence\":0.1,\"rationale\":\"No evidence of hypothyroidism or neuropathy.\"},{\"gene\":\"LPA\",\"confidence\":0.1,\"rationale\":\"No direct link to hypothyroidism or neuropathy.\"},{\"gene\":\"SRRM3\",\"confidence\":0.1,\"rationale\":\"No clear connection to hypothyroidism or neuropathy.\"},{\"gene\":\"NKAP\",\"confidence\":0.1,\"rationale\":\"No evidence of hypothyroidism or neuropathy.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.674,
+ "tokens_in": 17397,
+ "tokens_out": 453
+}

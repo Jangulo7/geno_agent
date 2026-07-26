@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC9A6:PMID_39810750_Proband_1",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "SLC9A6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SLC9A6",
+  "PLA2R1",
+  "SCFD2",
+  "FAM9A",
+  "GTSF1",
+  "RYR3",
+  "KRT14",
+  "OR9G4",
+  "EFCAB6",
+  "ARL6",
+  "HS6ST1",
+  "PDE3A",
+  "LMX1B",
+  "AAK1",
+  "SLC39A10"
+ ],
+ "top1": "SLC9A6",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SLC9A6\",\"confidence\":0.95,\"rationale\":\"Direct link to parkinsonism, bradykinesia, rigidity, and levodopa response.\"},{\"gene\":\"PLA2R1\",\"confidence\":0.15,\"rationale\":\"Associated with dystonia-parkinsonism but lacks specific phenotype match.\"},{\"gene\":\"SCFD2\",\"confidence\":0.1,\"rationale\":\"General parkinsonism mentions but no direct gene-phenotype link.\"},{\"gene\":\"FAM9A\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"GTSF1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"RYR3\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"KRT14\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"OR9G4\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"EFCAB6\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"ARL6\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"HS6ST1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"PDE3A\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"LMX1B\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"AAK1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"SLC39A10\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.785,
+ "tokens_in": 12517,
+ "tokens_out": 435
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB9:PMID_34819510_Patient_1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "PSMB9",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PSMB9",
+  "WDR19",
+  "CCL17",
+  "PKM",
+  "FOLR2",
+  "SP140",
+  "CPHXL",
+  "FCAR",
+  "TPP2",
+  "REL",
+  "ANKRD17",
+  "SAXO6",
+  "FAM151B",
+  "XYLB",
+  "NDST3"
+ ],
+ "top1": "PSMB9",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PSMB9\",\"confidence\":0.95,\"rationale\":\"Directly linked to PRAAS-ID with matching phenotypes including portal hypertension, myositis, and immune deficiency.\"},{\"gene\":\"WDR19\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"CCL17\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"PKM\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"FOLR2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"SP140\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"CPHXL\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"FCAR\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"TPP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"REL\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"ANKRD17\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"SAXO6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"FAM151B\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"XYLB\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"},{\"gene\":\"NDST3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links to patient symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.463,
+ "tokens_in": 17576,
+ "tokens_out": 430
+}

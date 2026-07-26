@@ -1,0 +1,33 @@
+{
+ "case_id": "SUOX:PMID_36303223_Proband_29_from_PMID_33335014",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "SUOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SUOX",
+  "MACF1",
+  "MDGA2",
+  "SKI",
+  "CA5A",
+  "SEC23B",
+  "RAP1B",
+  "BMAL1",
+  "POLE",
+  "RIBC2",
+  "ANXA11",
+  "YIPF1",
+  "RBMY1D",
+  "CIMIP6",
+  "OFD1"
+ ],
+ "top1": "SUOX",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SUOX\",\"confidence\":0.95,\"rationale\":\"Hypouricemia, seizures, hypotonia, and hypocystinemia are classic features of SUOX deficiency.\"},{\"gene\":\"MACF1\",\"confidence\":0.75,\"rationale\":\"Seizures, hypotonia, and developmental delay are linked to MACF1 variants.\"},{\"gene\":\"MDGA2\",\"confidence\":0.65,\"rationale\":\"Seizures, hypotonia, and developmental delay are consistent with MDGA2-related DEE.\"},{\"gene\":\"SKI\",\"confidence\":0.55,\"rationale\":\"Seizures, hypotonia, and developmental delay are features of 1p36 deletion syndrome.\"},{\"gene\":\"CA5A\",\"confidence\":0.45,\"rationale\":\"Developmental delay and hypotonia are associated with CA5A, but not hypouricemia or hypocystinemia.\"},{\"gene\":\"SEC23B\",\"confidence\":0.35,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"RAP1B\",\"confidence\":0.3,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"BMAL1\",\"confidence\":0.25,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"POLE\",\"confidence\":0.2,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"RIBC2\",\"confidence\":0.15,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"ANXA11\",\"confidence\":0.1,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"YIPF1\",\"confidence\":0.05,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"RBMY1D\",\"confidence\":0.05,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"CIMIP6\",\"confidence\":0.05,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"},{\"gene\":\"OFD1\",\"confidence\":0.05,\"rationale\":\"No direct link to hypouricemia or hypocystinemia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.022,
+ "tokens_in": 16838,
+ "tokens_out": 513
+}

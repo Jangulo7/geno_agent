@@ -1,0 +1,33 @@
+{
+ "case_id": "AIRE:PMID_19758376_Family_2_individual_V_2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "AIRE",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AIRE",
+  "NFKB2",
+  "C16orf89",
+  "SMURF2",
+  "OLFML2B",
+  "COMMD1",
+  "GSTA1",
+  "TEKT2",
+  "FANCD2OS",
+  "TOX",
+  "KCNJ14",
+  "MRPL11",
+  "AQP1",
+  "ZDHHC8",
+  "MPIG6B"
+ ],
+ "top1": "AIRE",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"Matches all patient phenotypes including APS-1 triad and associated autoimmune conditions.\"},{\"gene\":\"NFKB2\",\"confidence\":0.15,\"rationale\":\"Linked to immune deficiencies but not the full triad.\"},{\"gene\":\"C16orf89\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"SMURF2\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"OLFML2B\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"COMMD1\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"GSTA1\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"TEKT2\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"FANCD2OS\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"TOX\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"KCNJ14\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"MRPL11\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"AQP1\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"ZDHHC8\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"},{\"gene\":\"MPIG6B\",\"confidence\":0.1,\"rationale\":\"No direct relevance to patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.081,
+ "tokens_in": 18010,
+ "tokens_out": 391
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_11841556_1",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "TLR7",
+  "GALK2",
+  "VTCN1",
+  "TUSC2",
+  "TRIM59",
+  "OR52J3",
+  "URB2",
+  "TMCC1",
+  "UBIAD1",
+  "ADAP1",
+  "SLC35F4",
+  "ADAMTS3",
+  "EN2",
+  "TACC1"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to Netherton syndrome with all listed phenotypes.\"\n  },\n  {\n    \"gene\": \"TLR7\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"GALK2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"VTCN1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TUSC2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TRIM59\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"OR52J3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"URB2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TMCC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"UBIAD1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"ADAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"SLC35F4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"ADAMTS3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"EN2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  },\n  {\n    \"gene\": \"TACC1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic overlap with patient features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.184,
+ "tokens_in": 17318,
+ "tokens_out": 592
+}

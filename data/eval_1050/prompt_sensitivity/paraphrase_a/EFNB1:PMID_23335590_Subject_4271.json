@@ -1,0 +1,33 @@
+{
+ "case_id": "EFNB1:PMID_23335590_Subject_4271",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "EFNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EFNB1",
+  "CHD3",
+  "TRIO",
+  "TP53BP2",
+  "NOS1",
+  "SBK2",
+  "FAM236C",
+  "KRTAP19-6",
+  "HTR3C",
+  "PTCH2",
+  "HS3ST3A1",
+  "RIMBP2",
+  "ARG1",
+  "PPP1R13L",
+  "GEMIN7"
+ ],
+ "top1": "EFNB1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"Matches all key features of craniofrontonasal syndrome.\"},{\"gene\":\"CHD3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"TRIO\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"TP53BP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"NOS1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SBK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"FAM236C\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"KRTAP19-6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"HTR3C\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"PTCH2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"HS3ST3A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"RIMBP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ARG1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"PPP1R13L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"GEMIN7\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.113,
+ "tokens_in": 18749,
+ "tokens_out": 388
+}

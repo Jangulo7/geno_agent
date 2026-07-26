@@ -1,0 +1,33 @@
+{
+ "case_id": "NF1:PMID_26178382_UAB_R7916",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "NF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NF1",
+  "ZNF559",
+  "ZNF750",
+  "ANAPC7",
+  "C19orf53",
+  "ZNF816",
+  "TXNRD2",
+  "PRDM5",
+  "VPS29",
+  "DDIT4",
+  "AMBRA1",
+  "FLOT2",
+  "DEFA5",
+  "FBLN7",
+  "CSF2RB"
+ ],
+ "top1": "NF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NF1\",\"confidence\":0.95,\"rationale\":\"Directly linked to axillary freckling, cafe-au-lait spots, and pulmonic stenosis in literature.\"},{\"gene\":\"ZNF559\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"ZNF750\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"ANAPC7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"C19orf53\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"ZNF816\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"TXNRD2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"PRDM5\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"VPS29\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"DDIT4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"AMBRA1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"FLOT2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"DEFA5\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"FBLN7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"},{\"gene\":\"CSF2RB\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic link to patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.619,
+ "tokens_in": 19023,
+ "tokens_out": 426
+}

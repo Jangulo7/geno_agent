@@ -1,0 +1,33 @@
+{
+ "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "AEBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBLN5",
+  "TOPBP1",
+  "FHIP2B",
+  "P3H4",
+  "ZFP91",
+  "CCDC85A",
+  "TRIM60",
+  "KCTD19",
+  "C1orf115",
+  "KHSRP",
+  "MYO3B",
+  "SYT10",
+  "OPN1MW3",
+  "PMEL",
+  "GDNF"
+ ],
+ "top1": "FBLN5",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBLN5\",\"confidence\":0.95,\"rationale\":\"Multiple musculoskeletal and respiratory features match FBLN5-related disorders.\"},{\"gene\":\"TOPBP1\",\"confidence\":0.85,\"rationale\":\"Neonatal hypotonia and scoliosis align with TOPBP1-related myopathies.\"},{\"gene\":\"FHIP2B\",\"confidence\":0.75,\"rationale\":\"Neonatal hypotonia and scoliosis match FHIP2B-related myopathies.\"},{\"gene\":\"P3H4\",\"confidence\":0.7,\"rationale\":\"Musculoskeletal features align with P3H4-related disorders.\"},{\"gene\":\"ZFP91\",\"confidence\":0.65,\"rationale\":\"Neonatal hypotonia and scoliosis match ZFP91-related myopathies.\"},{\"gene\":\"CCDC85A\",\"confidence\":0.6,\"rationale\":\"Musculoskeletal features align with CCDC85A-related disorders.\"},{\"gene\":\"TRIM60\",\"confidence\":0.55,\"rationale\":\"Neonatal hypotonia and scoliosis match TRIM60-related myopathies.\"},{\"gene\":\"KCTD19\",\"confidence\":0.5,\"rationale\":\"Musculoskeletal features align with KCTD19-related disorders.\"},{\"gene\":\"C1orf115\",\"confidence\":0.45,\"rationale\":\"Neonatal hypotonia and scoliosis match C1orf115-related myopathies.\"},{\"gene\":\"KHSRP\",\"confidence\":0.4,\"rationale\":\"Musculoskeletal features align with KHSRP-related disorders.\"},{\"gene\":\"MYO3B\",\"confidence\":0.35,\"rationale\":\"Neonatal hypotonia and scoliosis match MYO3B-related myopathies.\"},{\"gene\":\"SYT10\",\"confidence\":0.3,\"rationale\":\"Musculoskeletal features align with SYT10-related disorders.\"},{\"gene\":\"OPN1MW3\",\"confidence\":0.25,\"rationale\":\"No direct phenotypic match for OPN1MW3.\"},{\"gene\":\"PMEL\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic match for PMEL.\"},{\"gene\":\"GDNF\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match for GDNF.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.961,
+ "tokens_in": 16966,
+ "tokens_out": 508
+}

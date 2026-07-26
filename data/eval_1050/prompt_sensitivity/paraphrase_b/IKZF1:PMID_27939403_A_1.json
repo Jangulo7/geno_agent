@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_27939403_A_1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "C17orf78",
+  "C1QTNF5",
+  "DACH2",
+  "STS",
+  "TOMM22",
+  "MECOM",
+  "PIGM",
+  "H3C7",
+  "ANO3",
+  "ABCG2",
+  "OR10J4",
+  "CNPY2",
+  "B4GALT2",
+  "PRG2"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Directly links to B cell and T cell defects, reduced IgA/IgM, and CD4/CD8 ratio inversion with variant evidence.\"},{\"gene\":\"C17orf78\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"C1QTNF5\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"DACH2\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"STS\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"TOMM22\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"MECOM\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"PIGM\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"H3C7\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"ANO3\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"ABCG2\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"OR10J4\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"CNPY2\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"B4GALT2\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"},{\"gene\":\"PRG2\",\"confidence\":0.15,\"rationale\":\"General immune defect mentions but no specific phenotype linkage.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.041,
+ "tokens_in": 20274,
+ "tokens_out": 441
+}

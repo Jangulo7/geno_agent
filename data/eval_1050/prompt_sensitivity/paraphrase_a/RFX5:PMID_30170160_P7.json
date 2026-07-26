@@ -1,0 +1,33 @@
+{
+ "case_id": "RFX5:PMID_30170160_P7",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "RFX5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EXOSC9",
+  "HTATIP2",
+  "ZNF14",
+  "SLC25A45",
+  "TESMIN",
+  "ST8SIA2",
+  "CDH22",
+  "HIRA",
+  "YBEY",
+  "WWC1",
+  "TIGD2",
+  "RNF122",
+  "ADAM12",
+  "TBC1D32",
+  "WDR70"
+ ],
+ "top1": "EXOSC9",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EXOSC9\",\"confidence\":0.95,\"rationale\":\"Multiple studies link EXOSC9 mutations to immune deficiencies with chronic candidiasis, recurrent infections, and T cell defects matching the patient's presentation.\"},{\"gene\":\"HTATIP2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking HTATIP2 to the patient's symptoms.\"},{\"gene\":\"ZNF14\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ZNF14 to the patient's symptoms.\"},{\"gene\":\"SLC25A45\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SLC25A45 to the patient's symptoms.\"},{\"gene\":\"TESMIN\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TESMIN to the patient's symptoms.\"},{\"gene\":\"ST8SIA2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ST8SIA2 to the patient's symptoms.\"},{\"gene\":\"CDH22\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CDH22 to the patient's symptoms.\"},{\"gene\":\"HIRA\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking HIRA to the patient's symptoms.\"},{\"gene\":\"YBEY\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking YBEY to the patient's symptoms.\"},{\"gene\":\"WWC1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking WWC1 to the patient's symptoms.\"},{\"gene\":\"TIGD2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TIGD2 to the patient's symptoms.\"},{\"gene\":\"RNF122\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking RNF122 to the patient's symptoms.\"},{\"gene\":\"ADAM12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ADAM12 to the patient's symptoms.\"},{\"gene\":\"TBC1D32\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TBC1D32 to the patient's symptoms.\"},{\"gene\":\"WDR70\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking WDR70 to the patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.676,
+ "tokens_in": 15889,
+ "tokens_out": 504
+}

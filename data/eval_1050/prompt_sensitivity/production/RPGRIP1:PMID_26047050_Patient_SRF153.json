@@ -1,0 +1,33 @@
+{
+ "case_id": "RPGRIP1:PMID_26047050_Patient_SRF153",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "RPGRIP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RPGRIP1",
+  "COG4",
+  "TCN1",
+  "CDC16",
+  "DNAJC24",
+  "FAM153B",
+  "MFSD2B",
+  "PAXIP1",
+  "GNB1L",
+  "GTPBP3",
+  "DRC12",
+  "LIMS3",
+  "CCR2",
+  "KIF18B",
+  "MAGEB5"
+ ],
+ "top1": "RPGRIP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RPGRIP1\",\"confidence\":0.95,\"rationale\":\"Directly linked to LCA6 with retinal mottling, nystagmus, and low vision.\"},{\"gene\":\"COG4\",\"confidence\":0.15,\"rationale\":\"Associated with UDN, not matching all patient features.\"},{\"gene\":\"TCN1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CDC16\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DNAJC24\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"FAM153B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MFSD2B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"PAXIP1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GNB1L\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GTPBP3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DRC12\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"LIMS3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CCR2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"KIF18B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MAGEB5\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.056,
+ "tokens_in": 17201,
+ "tokens_out": 399
+}

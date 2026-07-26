@@ -1,0 +1,33 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AKR1B10",
+  "PTCHD1",
+  "STRN3",
+  "FSIP1",
+  "UBL4A",
+  "VRK3",
+  "UBE2L5",
+  "KRTDAP",
+  "ASAP2",
+  "MAGEB17",
+  "SPATA24",
+  "ZFP69B",
+  "PHC2",
+  "GVQW3",
+  "ARID3B"
+ ],
+ "top1": "AKR1B10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AKR1B10\",\"confidence\":0.95,\"rationale\":\"Directly links to demyelinating neuropathy, pes cavus, gait issues, and intellectual disability.\"},{\"gene\":\"PTCHD1\",\"confidence\":0.85,\"rationale\":\"Shares clinical features with the patient including demyelination, pes cavus, and gait abnormalities.\"},{\"gene\":\"STRN3\",\"confidence\":0.75,\"rationale\":\"Associated with similar neuropathy and skeletal features.\"},{\"gene\":\"FSIP1\",\"confidence\":0.7,\"rationale\":\"Linked to demyelinating neuropathy and skeletal abnormalities.\"},{\"gene\":\"UBL4A\",\"confidence\":0.65,\"rationale\":\"Shows overlap in neuropathy and developmental delay features.\"},{\"gene\":\"VRK3\",\"confidence\":0.6,\"rationale\":\"Shares some neuropathy and gait features with the patient.\"},{\"gene\":\"UBE2L5\",\"confidence\":0.55,\"rationale\":\"Has some overlap in neuropathy and developmental delay.\"},{\"gene\":\"KRTDAP\",\"confidence\":0.5,\"rationale\":\"Associated with similar neuropathy and skeletal features.\"},{\"gene\":\"ASAP2\",\"confidence\":0.45,\"rationale\":\"Shares some neuropathy and gait features.\"},{\"gene\":\"MAGEB17\",\"confidence\":0.4,\"rationale\":\"Linked to demyelination and foot deformities.\"},{\"gene\":\"SPATA24\",\"confidence\":0.35,\"rationale\":\"General overlap in some clinical features.\"},{\"gene\":\"ZFP69B\",\"confidence\":0.3,\"rationale\":\"Some overlap in developmental delay and neuropathy.\"},{\"gene\":\"PHC2\",\"confidence\":0.25,\"rationale\":\"General overlap in some features.\"},{\"gene\":\"GVQW3\",\"confidence\":0.2,\"rationale\":\"Limited overlap in some clinical features.\"},{\"gene\":\"ARID3B\",\"confidence\":0.15,\"rationale\":\"Minimal overlap in some features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.911,
+ "tokens_in": 14325,
+ "tokens_out": 431
+}

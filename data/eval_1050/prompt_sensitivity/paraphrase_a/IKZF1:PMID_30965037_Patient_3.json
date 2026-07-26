@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_30965037_Patient_3",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "WDR53",
+  "USB1",
+  "SEBOX",
+  "SOX17",
+  "PIERCE1",
+  "NPIPB7",
+  "DEFB127",
+  "GRAPL",
+  "OR1M1",
+  "PARP4",
+  "ANAPC4",
+  "USP17L2",
+  "MBIP",
+  "CCDC159"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Links to immune dysregulation, recurrent infections, and B cell defects.\"},{\"gene\":\"WDR53\",\"confidence\":0.15,\"rationale\":\"Associated with PJP and immunodeficiency in a case report.\"},{\"gene\":\"USB1\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"SEBOX\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"SOX17\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"PIERCE1\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"NPIPB7\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"DEFB127\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"GRAPL\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"OR1M1\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"PARP4\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ANAPC4\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"USP17L2\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"MBIP\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"CCDC159\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.823,
+ "tokens_in": 15662,
+ "tokens_out": 404
+}

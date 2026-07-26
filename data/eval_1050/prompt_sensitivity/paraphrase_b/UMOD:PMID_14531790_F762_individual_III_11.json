@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_14531790_F762_individual_III_11",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "PROS1",
+  "PPP2R5D",
+  "CFAP221",
+  "PCTP",
+  "ANO4",
+  "TDRD7",
+  "TMEM39B",
+  "S100B",
+  "CALHM1",
+  "DCST2",
+  "AURKC",
+  "RADIL",
+  "CARNS1",
+  "GPRASP3"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"Strong evidence links UMOD to ADTKD with renal cysts, hypertension, and hypoplasia.\"},{\"gene\":\"PROS1\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"PPP2R5D\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"CFAP221\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"PCTP\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"ANO4\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"TDRD7\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"TMEM39B\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"S100B\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"CALHM1\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"DCST2\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"AURKC\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"RADIL\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"CARNS1\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"},{\"gene\":\"GPRASP3\",\"confidence\":0.15,\"rationale\":\"No direct link to renal hypoplasia or hypertension.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.755,
+ "tokens_in": 17691,
+ "tokens_out": 459
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "NHS:PMID_30642278_proband_III_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "NHS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NHS",
+  "CD80",
+  "KRT14",
+  "PM20D1",
+  "CYP3A43",
+  "WDR6",
+  "MOSPD3",
+  "PEDS1",
+  "PPP1R21",
+  "HP1BP3",
+  "CCL22",
+  "RAB37",
+  "DALRD3",
+  "CFB",
+  "KCND2"
+ ],
+ "top1": "NHS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NHS\",\"confidence\":1.0,\"rationale\":\"Directly matches all phenotypes with documented NHS mutations and inheritance pattern.\"},{\"gene\":\"CD80\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"KRT14\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"PM20D1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"CYP3A43\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"WDR6\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"MOSPD3\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"PEDS1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"PPP1R21\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"HP1BP3\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"CCL22\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"RAB37\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"DALRD3\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"CFB\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"},{\"gene\":\"KCND2\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic links or mutations reported.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.872,
+ "tokens_in": 15782,
+ "tokens_out": 411
+}

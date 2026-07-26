@@ -1,0 +1,33 @@
+{
+ "case_id": "CYP21A2:PMID_30968594_individual_39",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "CYP21A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CYP21A2",
+  "ANGPTL8",
+  "ARAP3",
+  "OR4A8",
+  "OR2W3",
+  "TBC1D17",
+  "OR7G1",
+  "B3GNT5",
+  "IL12A",
+  "RPS15",
+  "TSTD3",
+  "FGA",
+  "SH3BGRL2",
+  "SELENOS",
+  "GLT1D1"
+ ],
+ "top1": "CYP21A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CYP21A2\",\"confidence\":0.95,\"rationale\":\"Strong evidence of adrenal insufficiency with hyperpigmentation and ACTH elevation.\"},{\"gene\":\"ANGPTL8\",\"confidence\":0.15,\"rationale\":\"No direct link to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"ARAP3\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"OR4A8\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"OR2W3\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"TBC1D17\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"OR7G1\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"B3GNT5\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"IL12A\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"RPS15\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"TSTD3\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"FGA\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"SH3BGRL2\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"SELENOS\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"},{\"gene\":\"GLT1D1\",\"confidence\":0.1,\"rationale\":\"No evidence linking to adrenal insufficiency or hyperpigmentation.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.091,
+ "tokens_in": 19650,
+ "tokens_out": 464
+}

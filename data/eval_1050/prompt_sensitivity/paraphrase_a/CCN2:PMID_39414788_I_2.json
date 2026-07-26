@@ -1,0 +1,33 @@
+{
+ "case_id": "CCN2:PMID_39414788_I_2",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "CCN2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CCN2",
+  "MOSPD3",
+  "CDX1",
+  "POU3F2",
+  "IGIP",
+  "STAC",
+  "MAGEA2",
+  "RPS6KA1",
+  "SPRR2D",
+  "SLCO3A1",
+  "SEC23A",
+  "LIG1",
+  "LRRC75B",
+  "VPS37B",
+  "C7orf25"
+ ],
+ "top1": "CCN2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CCN2\",\"confidence\":0.95,\"rationale\":\"Detailed radiological findings match CCN2-related skeletal abnormalities.\"},{\"gene\":\"MOSPD3\",\"confidence\":0.15,\"rationale\":\"Generalized joint issues but lacks specific skeletal features.\"},{\"gene\":\"CDX1\",\"confidence\":0.1,\"rationale\":\"Limited to axial skeletal issues, not joint swelling.\"},{\"gene\":\"POU3F2\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"IGIP\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"STAC\",\"confidence\":0.1,\"rationale\":\"Generalized joint issues but lacks specific skeletal features.\"},{\"gene\":\"MAGEA2\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"RPS6KA1\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"SPRR2D\",\"confidence\":0.1,\"rationale\":\"Generalized joint issues but lacks specific skeletal features.\"},{\"gene\":\"SLCO3A1\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"SEC23A\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"LIG1\",\"confidence\":0.1,\"rationale\":\"Generalized joint issues but lacks specific skeletal features.\"},{\"gene\":\"LRRC75B\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"VPS37B\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"},{\"gene\":\"C7orf25\",\"confidence\":0.1,\"rationale\":\"No specific skeletal or joint features mentioned.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.785,
+ "tokens_in": 16013,
+ "tokens_out": 397
+}

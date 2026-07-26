@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_30965037_Patient_3",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "WDR53",
+  "MBIP",
+  "SEBOX",
+  "USB1",
+  "SOX17",
+  "PIERCE1",
+  "CCDC159",
+  "NPIPB7",
+  "DEFB127",
+  "GRAPL",
+  "OR1M1",
+  "PARP4",
+  "ANAPC4",
+  "USP17L2"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Directly links to immune dysregulation, recurrent infections, and B cell defects matching the patient's phenotype.\"},{\"gene\":\"WDR53\",\"confidence\":0.15,\"rationale\":\"Associated with PJP but lacks direct link to B cell count or immunoglobulin deficiencies.\"},{\"gene\":\"MBIP\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"SEBOX\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"USB1\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"SOX17\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"PIERCE1\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"CCDC159\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"NPIPB7\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"DEFB127\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"GRAPL\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"OR1M1\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"PARP4\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"ANAPC4\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"},{\"gene\":\"USP17L2\",\"confidence\":0.05,\"rationale\":\"No evidence of immune-related defects or PJP connection.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.123,
+ "tokens_in": 15649,
+ "tokens_out": 455
+}

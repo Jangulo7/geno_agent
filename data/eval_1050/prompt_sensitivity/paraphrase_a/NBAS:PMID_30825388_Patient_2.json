@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_30825388_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NBAS",
+  "TNF",
+  "EFHD1",
+  "TPO",
+  "YLPM1",
+  "MS4A6A",
+  "TRADD",
+  "GLB1L3",
+  "KANK2",
+  "DGCR6",
+  "MBD3L4",
+  "DRAP1",
+  "MIB2",
+  "ANAPC4",
+  "MYORG"
+ ],
+ "top1": "NBAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"Links to recurrent ALF, elevated liver enzymes, immunodeficiency, and facial anomalies.\"},{\"gene\":\"TNF\",\"confidence\":0.15,\"rationale\":\"Associated with inflammation and immune markers but not the full phenotype.\"},{\"gene\":\"EFHD1\",\"confidence\":0.1,\"rationale\":\"Linked to liver function but not immunodeficiency or facial features.\"},{\"gene\":\"TPO\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"YLPM1\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"MS4A6A\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"TRADD\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"GLB1L3\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"KANK2\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"DGCR6\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"MBD3L4\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"DRAP1\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"MIB2\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"ANAPC4\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"},{\"gene\":\"MYORG\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.274,
+ "tokens_in": 12090,
+ "tokens_out": 402
+}

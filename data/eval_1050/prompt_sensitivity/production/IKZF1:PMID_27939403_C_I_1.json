@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_27939403_C_I_1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "TIGIT",
+  "RBFOX2",
+  "CCDC88B",
+  "NOMO3",
+  "SLC43A1",
+  "CYP4A11",
+  "FAM20A",
+  "GNAT3",
+  "KCNMB1",
+  "MACO1",
+  "MDH1B",
+  "XRN1",
+  "CGREF1",
+  "ASB16"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Mutations in IKZF1 cause B cell defects and CD4/CD8 ratio inversion matching patient phenotype.\"},{\"gene\":\"TIGIT\",\"confidence\":0.15,\"rationale\":\"TIGIT variants not directly linked to B cell counts or IgG levels.\"},{\"gene\":\"RBFOX2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking RBFOX2 to B cell or IgG defects.\"},{\"gene\":\"CCDC88B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CCDC88B to B cell or IgG defects.\"},{\"gene\":\"NOMO3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking NOMO3 to B cell or IgG defects.\"},{\"gene\":\"SLC43A1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SLC43A1 to B cell or IgG defects.\"},{\"gene\":\"CYP4A11\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CYP4A11 to B cell or IgG defects.\"},{\"gene\":\"FAM20A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking FAM20A to B cell or IgG defects.\"},{\"gene\":\"GNAT3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking GNAT3 to B cell or IgG defects.\"},{\"gene\":\"KCNMB1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking KCNMB1 to B cell or IgG defects.\"},{\"gene\":\"MACO1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking MACO1 to B cell or IgG defects.\"},{\"gene\":\"MDH1B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking MDH1B to B cell or IgG defects.\"},{\"gene\":\"XRN1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking XRN1 to B cell or IgG defects.\"},{\"gene\":\"CGREF1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CGREF1 to B cell or IgG defects.\"},{\"gene\":\"ASB16\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ASB16 to B cell or IgG defects.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.689,
+ "tokens_in": 19518,
+ "tokens_out": 522
+}

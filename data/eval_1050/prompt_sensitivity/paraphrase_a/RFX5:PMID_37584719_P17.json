@@ -1,0 +1,33 @@
+{
+ "case_id": "RFX5:PMID_37584719_P17",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "RFX5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD72",
+  "BOLA1",
+  "IGK",
+  "TLCD4",
+  "ZNF596",
+  "ZNF136",
+  "ARHGAP35",
+  "SGPP2",
+  "SYNDIG1",
+  "RPP40",
+  "C1QTNF9",
+  "FAM161B",
+  "ATP6V0E2",
+  "PHLDA1",
+  "IGHMBP2"
+ ],
+ "top1": "CD72",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD72\",\"confidence\":0.95,\"rationale\":\"CD72 mutations cause B-cell lymphocytosis, splenomegaly, and B-ALL, aligning with the patient's B-cell defects and lymphadenopathy.\"},{\"gene\":\"BOLA1\",\"confidence\":0.15,\"rationale\":\"BOLA1 is linked to immune deficiencies but lacks direct evidence for the patient's specific features.\"},{\"gene\":\"IGK\",\"confidence\":0.1,\"rationale\":\"IGK is involved in B-cell function but not directly linked to the patient's symptoms.\"},{\"gene\":\"TLCD4\",\"confidence\":0.1,\"rationale\":\"TLCD4 is not directly associated with the patient's clinical features.\"},{\"gene\":\"ZNF596\",\"confidence\":0.1,\"rationale\":\"ZNF596 is not directly linked to the patient's symptoms.\"},{\"gene\":\"ZNF136\",\"confidence\":0.1,\"rationale\":\"ZNF136 is not directly linked to the patient's symptoms.\"},{\"gene\":\"ARHGAP35\",\"confidence\":0.1,\"rationale\":\"ARHGAP35 is not directly linked to the patient's symptoms.\"},{\"gene\":\"SGPP2\",\"confidence\":0.1,\"rationale\":\"SGPP2 is not directly linked to the patient's symptoms.\"},{\"gene\":\"SYNDIG1\",\"confidence\":0.1,\"rationale\":\"SYNDIG1 is not directly linked to the patient's symptoms.\"},{\"gene\":\"RPP40\",\"confidence\":0.1,\"rationale\":\"RPP40 is not directly linked to the patient's symptoms.\"},{\"gene\":\"C1QTNF9\",\"confidence\":0.1,\"rationale\":\"C1QTNF9 is not directly linked to the patient's symptoms.\"},{\"gene\":\"FAM161B\",\"confidence\":0.1,\"rationale\":\"FAM161B is not directly linked to the patient's symptoms.\"},{\"gene\":\"ATP6V0E2\",\"confidence\":0.1,\"rationale\":\"ATP6V0E2 is not directly linked to the patient's symptoms.\"},{\"gene\":\"PHLDA1\",\"confidence\":0.1,\"rationale\":\"PHLDA1 is not directly linked to the patient's symptoms.\"},{\"gene\":\"IGHMBP2\",\"confidence\":0.1,\"rationale\":\"IGHMBP2 is not directly linked to the patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.711,
+ "tokens_in": 19439,
+ "tokens_out": 519
+}

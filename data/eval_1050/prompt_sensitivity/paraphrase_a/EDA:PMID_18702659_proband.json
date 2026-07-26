@@ -1,0 +1,33 @@
+{
+ "case_id": "EDA:PMID_18702659_proband",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "EDA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EDA",
+  "SOX7",
+  "CDK3",
+  "SMNDC1",
+  "CWF19L2",
+  "C8orf48",
+  "FBXW9",
+  "OR5M9",
+  "CMKLR1",
+  "PLA2G6",
+  "CNTNAP3B",
+  "QSOX2",
+  "YWHAB",
+  "ZNF510",
+  "NR1H2"
+ ],
+ "top1": "EDA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EDA\",\"confidence\":0.95,\"rationale\":\"Matches hypohidrotic ectodermal dysplasia with anodontia, sparse hair, and facial features.\"},{\"gene\":\"SOX7\",\"confidence\":0.05,\"rationale\":\"Linked to chromosomal deletion, not matching all phenotypes.\"},{\"gene\":\"CDK3\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"SMNDC1\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CWF19L2\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"C8orf48\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"FBXW9\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"OR5M9\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CMKLR1\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"PLA2G6\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CNTNAP3B\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"QSOX2\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"YWHAB\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ZNF510\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"NR1H2\",\"confidence\":0.0,\"rationale\":\"No direct phenotypic match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.593,
+ "tokens_in": 15244,
+ "tokens_out": 391
+}

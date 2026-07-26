@@ -1,0 +1,32 @@
+{
+ "case_id": "MAP3K14:PMID_25406581_P2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "MAP3K14",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MALT1",
+  "YAE1",
+  "TANK",
+  "SIGLEC1",
+  "DPF1",
+  "PHETA1",
+  "BMP2K",
+  "FYTTD1",
+  "TMC6",
+  "SPIDR",
+  "RHBDL1",
+  "HIBADH",
+  "MT-ATP8",
+  "AIFM2"
+ ],
+ "top1": "MALT1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MALT1\",\"confidence\":0.95,\"rationale\":\"Impaired class-switching and memory B cells, reduced IgM, and recurrent infections align with MALT1 dysfunction.\"},{\"gene\":\"IMPAA2\",\"confidence\":0.65,\"rationale\":\"Hypogammaglobulinemia and B-cell defects are linked to IMPA2, but less specific to patient's IgM and NK cell issues.\"},{\"gene\":\"YAE1\",\"confidence\":0.55,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"TANK\",\"confidence\":0.5,\"rationale\":\"B-cell and IgM issues are present, but not specific to patient's full phenotype.\"},{\"gene\":\"SIGLEC1\",\"confidence\":0.45,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"DPF1\",\"confidence\":0.4,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"PHETA1\",\"confidence\":0.35,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"BMP2K\",\"confidence\":0.3,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"FYTTD1\",\"confidence\":0.25,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"TMC6\",\"confidence\":0.2,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"SPIDR\",\"confidence\":0.15,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"RHBDL1\",\"confidence\":0.1,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"HIBADH\",\"confidence\":0.05,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"MT-ATP8\",\"confidence\":0.05,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"},{\"gene\":\"AIFM2\",\"confidence\":0.05,\"rationale\":\"B-cell defects and IgM reduction are noted, but not specific to patient's full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.521,
+ "tokens_in": 15699,
+ "tokens_out": 565
+}

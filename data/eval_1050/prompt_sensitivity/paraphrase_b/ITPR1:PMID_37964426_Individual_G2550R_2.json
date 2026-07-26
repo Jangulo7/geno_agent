@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_37964426_Individual_G2550R_2",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GDI1",
+  "ITPR1",
+  "LAX1",
+  "CYP27B1",
+  "SPOCK1",
+  "OR7D2",
+  "ALOX15B",
+  "LRBA",
+  "EEF1AKMT3",
+  "KRTAP11-1",
+  "ZNF235",
+  "SERF1A",
+  "WWTR1",
+  "ACADS",
+  "INSL4"
+ ],
+ "top1": "GDI1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GDI1\",\"confidence\":0.95,\"rationale\":\"GDI1 mutations are linked to hypotonia, intellectual disability, and cerebellar abnormalities matching the patient's phenotype.\"},{\"gene\":\"ITPR1\",\"confidence\":0.85,\"rationale\":\"ITPR1 variants are associated with hypotonia, delayed milestones, and ataxia consistent with the patient's features.\"},{\"gene\":\"LAX1\",\"confidence\":0.25,\"rationale\":\"LAX1 is linked to hypotonia and intellectual disability but lacks specific ataxia or nystagmus evidence.\"},{\"gene\":\"CYP27B1\",\"confidence\":0.2,\"rationale\":\"CYP27B1 is associated with hypotonia and intellectual disability but not the full range of neurological features.\"},{\"gene\":\"SPOCK1\",\"confidence\":0.2,\"rationale\":\"SPOCK1 has limited evidence for the patient's specific neurological symptoms.\"},{\"gene\":\"OR7D2\",\"confidence\":0.2,\"rationale\":\"OR7D2 lacks direct evidence for the patient's phenotype.\"},{\"gene\":\"ALOX15B\",\"confidence\":0.2,\"rationale\":\"ALOX15B is not strongly associated with the patient's neurological features.\"},{\"gene\":\"LRBA\",\"confidence\":0.2,\"rationale\":\"LRBA has minimal evidence for the patient's specific symptoms.\"},{\"gene\":\"EEF1AKMT3\",\"confidence\":0.2,\"rationale\":\"EEF1AKMT3 lacks direct evidence for the patient's phenotype.\"},{\"gene\":\"KRTAP11-1\",\"confidence\":0.2,\"rationale\":\"KRTAP11-1 is not strongly linked to the patient's neurological symptoms.\"},{\"gene\":\"ZNF235\",\"confidence\":0.2,\"rationale\":\"ZNF235 has limited evidence for the patient's specific features.\"},{\"gene\":\"SERF1A\",\"confidence\":0.2,\"rationale\":\"SERF1A lacks direct evidence for the patient's phenotype.\"},{\"gene\":\"WWTR1\",\"confidence\":0.2,\"rationale\":\"WWTR1 is associated with hypotonia and intellectual disability but not the full range of symptoms.\"},{\"gene\":\"ACADS\",\"confidence\":0.2,\"rationale\":\"ACADS is not strongly associated with the patient's neurological features.\"},{\"gene\":\"INSL4\",\"confidence\":0.2,\"rationale\":\"INSL4 lacks direct evidence for the patient's specific symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.136,
+ "tokens_in": 10377,
+ "tokens_out": 527
+}

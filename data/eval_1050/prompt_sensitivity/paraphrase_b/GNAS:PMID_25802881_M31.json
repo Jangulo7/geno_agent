@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_M31",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBXW4",
+  "GNAS",
+  "PRRC2C",
+  "EPRS1",
+  "PDLIM4",
+  "LIF",
+  "GHR",
+  "LRTM3",
+  "CDR2L",
+  "ID3",
+  "PLCD1",
+  "ANKRD18B",
+  "NIBAN3",
+  "CYRIA",
+  "DBT"
+ ],
+ "top1": "FBXW4",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBXW4\",\"confidence\":0.95,\"rationale\":\"Multiple deletions at 10q24.31-q24.32 containing FBXW4 correlate with intellectual disability, short metacarpals, and obesity.\"},{\"gene\":\"GNAS\",\"confidence\":0.25,\"rationale\":\"GNAS is linked to AHO features, but not all phenotypes match the patient's profile.\"},{\"gene\":\"PRRC2C\",\"confidence\":0.15,\"rationale\":\"PRRC2C is associated with intellectual disability but lacks direct link to short metacarpals or obesity.\"},{\"gene\":\"EPRS1\",\"confidence\":0.1,\"rationale\":\"EPRS1 is linked to developmental issues but not the specific phenotypes described.\"},{\"gene\":\"PDLIM4\",\"confidence\":0.1,\"rationale\":\"PDLIM4 is not directly associated with the patient's phenotypes.\"},{\"gene\":\"LIF\",\"confidence\":0.1,\"rationale\":\"LIF is not directly associated with the patient's phenotypes.\"},{\"gene\":\"GHR\",\"confidence\":0.1,\"rationale\":\"GHR is not directly associated with the patient's phenotypes.\"},{\"gene\":\"LRTM3\",\"confidence\":0.1,\"rationale\":\"LRTM3 is not directly associated with the patient's phenotypes.\"},{\"gene\":\"CDR2L\",\"confidence\":0.1,\"rationale\":\"CDR2L is not directly associated with the patient's phenotypes.\"},{\"gene\":\"ID3\",\"confidence\":0.1,\"rationale\":\"ID3 is not directly associated with the patient's phenotypes.\"},{\"gene\":\"PLCD1\",\"confidence\":0.1,\"rationale\":\"PLCD1 is not directly associated with the patient's phenotypes.\"},{\"gene\":\"ANKRD18B\",\"confidence\":0.1,\"rationale\":\"ANKRD18B is not directly associated with the patient's phenotypes.\"},{\"gene\":\"NIBAN3\",\"confidence\":0.1,\"rationale\":\"NIBAN3 is not directly associated with the patient's phenotypes.\"},{\"gene\":\"CYRIA\",\"confidence\":0.1,\"rationale\":\"CYRIA is not directly associated with the patient's phenotypes.\"},{\"gene\":\"DBT\",\"confidence\":0.1,\"rationale\":\"DBT is not directly associated with the patient's phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.722,
+ "tokens_in": 14227,
+ "tokens_out": 503
+}

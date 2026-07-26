@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR3:PMID_39270020_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "ITPR3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR3",
+  "SMG8",
+  "BAG3",
+  "COX11",
+  "SMIM24",
+  "B3GNT4",
+  "GPIHBP1",
+  "HSFX2",
+  "FOXB1",
+  "ABHD11",
+  "SPTAN1",
+  "EPB41L5",
+  "GPX2",
+  "CLEC14A",
+  "GPBAR1"
+ ],
+ "top1": "ITPR3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR3\",\"confidence\":0.95,\"rationale\":\"Impaired T-cell proliferation and calcium flux directly linked to ITPR3 mutation.\"},{\"gene\":\"SMG8\",\"confidence\":0.15,\"rationale\":\"General T-cell issues but no direct link to patient's specific features.\"},{\"gene\":\"BAG3\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"COX11\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"SMIM24\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"B3GNT4\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"GPIHBP1\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"HSFX2\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"FOXB1\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"ABHD11\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"EPB41L5\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"GPX2\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"CLEC14A\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"},{\"gene\":\"GPBAR1\",\"confidence\":0.1,\"rationale\":\"No direct evidence of T-cell proliferation issues.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.262,
+ "tokens_in": 17752,
+ "tokens_out": 410
+}

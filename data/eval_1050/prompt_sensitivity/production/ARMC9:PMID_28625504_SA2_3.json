@@ -1,0 +1,33 @@
+{
+ "case_id": "ARMC9:PMID_28625504_SA2_3",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ARMC9",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ARMC9",
+  "TGFB3",
+  "CDC45",
+  "BRAT1",
+  "NELL2",
+  "TRPV6",
+  "CABCOCO1",
+  "SCAF4",
+  "BRAP",
+  "OSMR",
+  "SEC61G",
+  "GNG3",
+  "TCP11",
+  "CDH6",
+  "RIMS3"
+ ],
+ "top1": "ARMC9",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ARMC9\",\"confidence\":0.95,\"rationale\":\"Directly linked to Joubert syndrome with molar tooth sign and polydactyly.\"},{\"gene\":\"TGFB3\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"CDC45\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"BRAT1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"NELL2\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"TRPV6\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"CABCOCO1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"SCAF4\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"BRAP\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"OSMR\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"SEC61G\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"GNG3\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"TCP11\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"CDH6\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"},{\"gene\":\"RIMS3\",\"confidence\":0.05,\"rationale\":\"No direct phenotype-genotype link in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.336,
+ "tokens_in": 18785,
+ "tokens_out": 409
+}

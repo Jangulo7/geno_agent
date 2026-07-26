@@ -1,0 +1,32 @@
+{
+ "case_id": "COG8:PMID_17220172_patient",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "COG8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "COG8",
+  "GSTM5",
+  "PRRX2",
+  "CREB3L4",
+  "AVPI1",
+  "ADAMTS4",
+  "TRA2B",
+  "PTTG1IP2",
+  "OR5AC2",
+  "SIAH2",
+  "PON3",
+  "BCL3",
+  "CSNK2A2",
+  "GJD3"
+ ],
+ "top1": "COG8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"COG8\",\"confidence\":0.95,\"rationale\":\"Multiple phenotypes match, including cerebellar atrophy, intellectual disability, and oculomotor apraxia.\"},{\"gene\":\"GSTM5\",\"confidence\":0.15,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"PRRX2\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"CREB3L4\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"AVPI1\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"ADAMTS4\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"TRA2B\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"PTTG1IP2\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"OR5AC2\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"SIAH2\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"PON3\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"BCL3\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"CSNK2A2\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"GJD3\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"},{\"gene\":\"GSTM5\",\"confidence\":0.1,\"rationale\":\"Cerebellar atrophy and intellectual disability noted, but less specific.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.161,
+ "tokens_in": 17673,
+ "tokens_out": 492
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "UGGT1:PMID_40267907_Family_3_2",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "UGGT1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TBXT",
+  "CHD2",
+  "KCNAB3",
+  "TXNDC5",
+  "KIF13B",
+  "UGGT1",
+  "SERPINB12",
+  "FAM43B",
+  "CPD",
+  "ESYT2",
+  "NUDT3",
+  "TPD52L1",
+  "SDHAF4",
+  "AKR1C2",
+  "GADL1"
+ ],
+ "top1": "TBXT",
+ "top1_correct": false,
+ "causal_rank": 6,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TBXT\",\"confidence\":0.95,\"rationale\":\"Linked to congenital heart defects and multiple malformations including those observed.\"},{\"gene\":\"CHD2\",\"confidence\":0.75,\"rationale\":\"Associated with congenital heart defects and developmental anomalies.\"},{\"gene\":\"KCNAB3\",\"confidence\":0.65,\"rationale\":\"Linked to cardiac anomalies and developmental issues.\"},{\"gene\":\"TXNDC5\",\"confidence\":0.6,\"rationale\":\"Associated with cardiac defects and structural anomalies.\"},{\"gene\":\"KIF13B\",\"confidence\":0.55,\"rationale\":\"Linked to cardiac and structural malformations.\"},{\"gene\":\"UGGT1\",\"confidence\":0.5,\"rationale\":\"Associated with cardiac and developmental anomalies.\"},{\"gene\":\"SERPINB12\",\"confidence\":0.45,\"rationale\":\"Linked to cardiac defects and structural anomalies.\"},{\"gene\":\"FAM43B\",\"confidence\":0.4,\"rationale\":\"Associated with cardiac and developmental issues.\"},{\"gene\":\"CPD\",\"confidence\":0.35,\"rationale\":\"Linked to cardiac anomalies and structural defects.\"},{\"gene\":\"ESYT2\",\"confidence\":0.3,\"rationale\":\"Associated with cardiac and structural malformations.\"},{\"gene\":\"NUDT3\",\"confidence\":0.25,\"rationale\":\"Linked to cardiac and developmental anomalies.\"},{\"gene\":\"TPD52L1\",\"confidence\":0.2,\"rationale\":\"Associated with cardiac defects and structural anomalies.\"},{\"gene\":\"SDHAF4\",\"confidence\":0.15,\"rationale\":\"Linked to cardiac anomalies but not all features.\"},{\"gene\":\"AKR1C2\",\"confidence\":0.1,\"rationale\":\"Associated with cardiac defects but not all features.\"},{\"gene\":\"GADL1\",\"confidence\":0.05,\"rationale\":\"Linked to cardiac anomalies but not all features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.311,
+ "tokens_in": 18979,
+ "tokens_out": 400
+}

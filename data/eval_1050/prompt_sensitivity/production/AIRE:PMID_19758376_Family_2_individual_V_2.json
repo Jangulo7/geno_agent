@@ -1,0 +1,33 @@
+{
+ "case_id": "AIRE:PMID_19758376_Family_2_individual_V_2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "AIRE",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AIRE",
+  "NFKB2",
+  "C16orf89",
+  "SMURF2",
+  "OLFML2B",
+  "COMMD1",
+  "GSTA1",
+  "TEKT2",
+  "FANCD2OS",
+  "TOX",
+  "KCNJ14",
+  "MRPL11",
+  "AQP1",
+  "ZDHHC8",
+  "MPIG6B"
+ ],
+ "top1": "AIRE",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"Directly linked to APS-1 with all patient phenotypes\"},{\"gene\":\"NFKB2\",\"confidence\":0.15,\"rationale\":\"Only weakly associated with immune deficiencies\"},{\"gene\":\"C16orf89\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"SMURF2\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"OLFML2B\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"COMMD1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"GSTA1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"TEKT2\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"FANCD2OS\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"TOX\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"KCNJ14\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"MRPL11\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"AQP1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"ZDHHC8\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"},{\"gene\":\"MPIG6B\",\"confidence\":0.05,\"rationale\":\"No relevant evidence\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.408,
+ "tokens_in": 18015,
+ "tokens_out": 332
+}

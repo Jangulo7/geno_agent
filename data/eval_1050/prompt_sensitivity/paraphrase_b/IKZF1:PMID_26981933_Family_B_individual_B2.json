@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "PRMT5",
+  "ATAD2",
+  "HNRNPAB",
+  "S100A10",
+  "CIMIP1",
+  "AGR2",
+  "TTLL6",
+  "CACNA1F",
+  "S100A13",
+  "ZBTB9",
+  "POGLUT1",
+  "MYOC",
+  "SMIM30",
+  "RNASE7"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Directly linked to immunodeficiency with hypogammaglobulinemia and recurrent infections.\"},{\"gene\":\"PRMT5\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to immunodeficiency features.\"},{\"gene\":\"ATAD2\",\"confidence\":0.1,\"rationale\":\"No relevant evidence connecting to patient's immunological phenotype.\"},{\"gene\":\"HNRNPAB\",\"confidence\":0.1,\"rationale\":\"No evidence of immunodeficiency association.\"},{\"gene\":\"S100A10\",\"confidence\":0.1,\"rationale\":\"No connection to immunological defects in provided evidence.\"},{\"gene\":\"CIMIP1\",\"confidence\":0.1,\"rationale\":\"No immunodeficiency-related findings in evidence.\"},{\"gene\":\"AGR2\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's immune phenotype.\"},{\"gene\":\"TTLL6\",\"confidence\":0.1,\"rationale\":\"No evidence of immunological dysfunction.\"},{\"gene\":\"CACNA1F\",\"confidence\":0.1,\"rationale\":\"No immunodeficiency-related data provided.\"},{\"gene\":\"S100A13\",\"confidence\":0.1,\"rationale\":\"No connection to immune system abnormalities.\"},{\"gene\":\"ZBTB9\",\"confidence\":0.1,\"rationale\":\"No evidence of immunological defects.\"},{\"gene\":\"POGLUT1\",\"confidence\":0.1,\"rationale\":\"No immunodeficiency-related findings.\"},{\"gene\":\"MYOC\",\"confidence\":0.1,\"rationale\":\"No link to immune system dysfunction.\"},{\"gene\":\"SMIM30\",\"confidence\":0.1,\"rationale\":\"No evidence of immunological abnormalities.\"},{\"gene\":\"RNASE7\",\"confidence\":0.1,\"rationale\":\"No direct evidence of immunodeficiency in provided data.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.76,
+ "tokens_in": 16722,
+ "tokens_out": 399
+}

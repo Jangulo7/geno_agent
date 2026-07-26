@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_26981933_Family_F_individual_F7",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "LBP",
+  "MIF",
+  "HCN3",
+  "RORC",
+  "KLRC1",
+  "CREBRF",
+  "CLBA1",
+  "OR52E4",
+  "MMRN2",
+  "NHLH1",
+  "PDX1",
+  "HS6ST1",
+  "NEMP1",
+  "GTF2I"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Directly links to B cell memory and Ig levels, with clear relevance to patient phenotype.\"},{\"gene\":\"LBP\",\"confidence\":0.15,\"rationale\":\"Correlates with inflammation but not directly with Ig levels or B cell counts.\"},{\"gene\":\"MIF\",\"confidence\":0.1,\"rationale\":\"No direct link to B cell or Ig abnormalities in patient phenotype.\"},{\"gene\":\"HCN3\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"RORC\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"KLRC1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"CREBRF\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"CLBA1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"OR52E4\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"MMRN2\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"NHLH1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"PDX1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"HS6ST1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"NEMP1\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"},{\"gene\":\"GTF2I\",\"confidence\":0.05,\"rationale\":\"No evidence of relevance to B cell or Ig abnormalities.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.462,
+ "tokens_in": 16480,
+ "tokens_out": 443
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_29663667_sibling_II_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "ADSL",
+  "CYFIP1",
+  "RNASE1",
+  "NANOGP8",
+  "TMEM200C",
+  "CHST5",
+  "LRRTM4",
+  "GBE1",
+  "ANKRD2",
+  "DDRGK1",
+  "CCDC181",
+  "OARD1",
+  "LTA",
+  "PALS1"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly linked to Gillespie syndrome with all key phenotypes: aniridia, cerebellar atrophy, intellectual disability, hypotonia.\"},{\"gene\":\"ADSL\",\"confidence\":0.15,\"rationale\":\"Associated with developmental delay and hypotonia but lacks aniridia and cerebellar atrophy.\"},{\"gene\":\"CYFIP1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"RNASE1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"NANOGP8\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"TMEM200C\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"CHST5\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"LRRTM4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"GBE1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"ANKRD2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"DDRGK1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"CCDC181\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"OARD1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"LTA\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"},{\"gene\":\"PALS1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.538,
+ "tokens_in": 17999,
+ "tokens_out": 437
+}

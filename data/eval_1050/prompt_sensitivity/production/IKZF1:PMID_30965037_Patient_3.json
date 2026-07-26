@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_30965037_Patient_3",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "WDR53",
+  "CCDC159",
+  "NPIPB7",
+  "DEFB127",
+  "GRAPL",
+  "PIERCE1",
+  "USB1",
+  "SOX17",
+  "MBIP",
+  "SEBOX",
+  "OR1M1",
+  "PARP4",
+  "ANAPC4",
+  "USP17L2"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to immune dysregulation, recurrent infections, and B cell defects.\"},{\"gene\":\"WDR53\",\"confidence\":0.15,\"rationale\":\"Case report links to PJP and immunodeficiency.\"},{\"gene\":\"CCDC159\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"NPIPB7\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DEFB127\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GRAPL\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"PIERCE1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"USB1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SOX17\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MBIP\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SEBOX\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"OR1M1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"PARP4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ANAPC4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"USP17L2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.625,
+ "tokens_in": 15667,
+ "tokens_out": 390
+}

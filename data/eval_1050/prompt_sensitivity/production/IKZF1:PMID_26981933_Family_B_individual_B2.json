@@ -1,0 +1,32 @@
+{
+ "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "PRMT5",
+  "ATAD2",
+  "HNRNPAB",
+  "S100A10",
+  "CIMIP1",
+  "AGR2",
+  "TTLL6",
+  "CACNA1F",
+  "S100A13",
+  "ZBTB9",
+  "POGLUT1",
+  "MYOC",
+  "SMIM30"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to hypogammaglobulinemia, B cell defects, and inverted CD4/CD8 ratio in patient with recurrent infections\"},{\"gene\":\"PRMT5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"AGRT\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"ATAD2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"HNRNPAB\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"S100A10\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"CIMIP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"AGR2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"TTLL6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"CACNA1F\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"S100A13\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"ZBTB9\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"POGLUT1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"MYOC\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"},{\"gene\":\"SMIM30\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient's immune defects\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.6,
+ "tokens_in": 16740,
+ "tokens_out": 456
+}

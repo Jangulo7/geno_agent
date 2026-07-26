@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD79A",
+  "IFNGR2",
+  "OR2A25",
+  "ZNF493",
+  "TRIM71",
+  "GOLGA6B",
+  "CYP4F8",
+  "EXOG",
+  "KCTD7",
+  "ZNRF2",
+  "NTF4",
+  "CACNA1D",
+  "KANK4",
+  "MMP24",
+  "AUTS2"
+ ],
+ "top1": "CD79A",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD79A\",\"confidence\":0.95,\"rationale\":\"Directly links to B-cell defects and immunodeficiency matching patient phenotype.\"},{\"gene\":\"IFNGR2\",\"confidence\":0.15,\"rationale\":\"General immunodeficiency mentions but lacks specific phenotype alignment.\"},{\"gene\":\"OR2A25\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"ZNF493\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"TRIM71\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"GOLGA6B\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"CYP4F8\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"EXOG\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"KCTD7\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"ZNRF2\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"NTF4\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"CACNA1D\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"KANK4\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"MMP24\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"},{\"gene\":\"AUTS2\",\"confidence\":0.1,\"rationale\":\"No direct phenotype relevance.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.402,
+ "tokens_in": 18462,
+ "tokens_out": 353
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_27108797_F3_II1",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "POLR3K",
+  "PMP22",
+  "PCYOX1L",
+  "HNRNPDL",
+  "CDX1",
+  "STRA8",
+  "NCOA6",
+  "ERC1",
+  "IKZF4",
+  "FAM149A",
+  "KCNH8",
+  "C15orf62",
+  "DCUN1D1",
+  "UBTD2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Strong evidence linking ITPR1 mutations to cerebellar atrophy, ataxia, and developmental delay matching the patient's phenotype.\"},{\"gene\":\"POLR3K\",\"confidence\":0.15,\"rationale\":\"Limited evidence of POLR3K involvement in cerebellar ataxia and developmental delay.\"},{\"gene\":\"PMP22\",\"confidence\":0.1,\"rationale\":\"PMP22 is associated with CMT, not the full range of phenotypes observed.\"},{\"gene\":\"PCYOX1L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking PCYOX1L to the patient's phenotype.\"},{\"gene\":\"HNRNPDL\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking HNRNPDL to the patient's phenotype.\"},{\"gene\":\"CDX1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CDX1 to the patient's phenotype.\"},{\"gene\":\"STRA8\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking STRA8 to the patient's phenotype.\"},{\"gene\":\"NCOA6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking NCOA6 to the patient's phenotype.\"},{\"gene\":\"ERC1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ERC1 to the patient's phenotype.\"},{\"gene\":\"IKZF4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking IKZF4 to the patient's phenotype.\"},{\"gene\":\"FAM149A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking FAM149A to the patient's phenotype.\"},{\"gene\":\"KCNH8\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking KCNH8 to the patient's phenotype.\"},{\"gene\":\"C15orf62\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking C15orf62 to the patient's phenotype.\"},{\"gene\":\"DCUN1D1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking DCUN1D1 to the patient's phenotype.\"},{\"gene\":\"UBTD2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking UBTD2 to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.645,
+ "tokens_in": 15245,
+ "tokens_out": 508
+}

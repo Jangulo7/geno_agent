@@ -1,0 +1,33 @@
+{
+ "case_id": "CTSA:PMID_35904593_Patient_2",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "CTSA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "HTT",
+  "ANKRD22",
+  "PSG4",
+  "ABCB5",
+  "KCNK5",
+  "NPR1",
+  "MESD",
+  "GCNT7",
+  "JPH4",
+  "UPK1A",
+  "PRPF6",
+  "SSBP2",
+  "HTR3C",
+  "SRRT",
+  "ARGLU1"
+ ],
+ "top1": "HTT",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"HTT\",\"confidence\":0.95,\"rationale\":\"CAG repeats and atypical HD features match patient's phenotype.\"},{\"gene\":\"ANKRD22\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"PSG4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"ABCB5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"KCNK5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"NPR1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"MESD\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"GCNT7\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"JPH4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"UPK1A\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"PRPF6\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"SSBP2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"HTR3C\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"SRRT\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"},{\"gene\":\"ARGLU1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.515,
+ "tokens_in": 17358,
+ "tokens_out": 347
+}

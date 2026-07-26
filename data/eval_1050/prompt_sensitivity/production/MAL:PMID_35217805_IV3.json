@@ -1,0 +1,33 @@
+{
+ "case_id": "MAL:PMID_35217805_IV3",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "MAL",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WDR73",
+  "KMT2C",
+  "MAL",
+  "MGME1",
+  "LRCH3",
+  "PFKP",
+  "ISG20L2",
+  "SH3BP2",
+  "KRT39",
+  "OR2V2",
+  "CRB2",
+  "BLM",
+  "RHBDD3",
+  "KCNU1",
+  "FIRRM"
+ ],
+ "top1": "WDR73",
+ "top1_correct": false,
+ "causal_rank": 3,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WDR73\",\"confidence\":0.95,\"rationale\":\"Direct evidence of WDR73 variants in NCS with matching phenotypes.\"},{\"gene\":\"KMT2C\",\"confidence\":0.75,\"rationale\":\"KMT2C variants linked to developmental delay and seizures.\"},{\"gene\":\"MAL\",\"confidence\":0.65,\"rationale\":\"MAL associated with seizures and developmental delay.\"},{\"gene\":\"MGME1\",\"confidence\":0.55,\"rationale\":\"MGME1 linked to mitochondrial dysfunction and seizures.\"},{\"gene\":\"LRCH3\",\"confidence\":0.35,\"rationale\":\"LRCH3 evidence weak and not directly linked.\"},{\"gene\":\"PFKP\",\"confidence\":0.3,\"rationale\":\"PFKP evidence not directly linked to patient's phenotype.\"},{\"gene\":\"ISG20L2\",\"confidence\":0.25,\"rationale\":\"ISG20L2 evidence not directly linked.\"},{\"gene\":\"SH3BP2\",\"confidence\":0.2,\"rationale\":\"SH3BP2 evidence not directly linked.\"},{\"gene\":\"KRT39\",\"confidence\":0.15,\"rationale\":\"KRT39 evidence not directly linked.\"},{\"gene\":\"OR2V2\",\"confidence\":0.1,\"rationale\":\"OR2V2 evidence not directly linked.\"},{\"gene\":\"CRB2\",\"confidence\":0.05,\"rationale\":\"CRB2 evidence not directly linked.\"},{\"gene\":\"BLM\",\"confidence\":0.05,\"rationale\":\"BLM evidence not directly linked.\"},{\"gene\":\"RHBDD3\",\"confidence\":0.05,\"rationale\":\"RHBDD3 evidence not directly linked.\"},{\"gene\":\"KCNU1\",\"confidence\":0.05,\"rationale\":\"KCNU1 evidence not directly linked.\"},{\"gene\":\"FIRRM\",\"confidence\":0.05,\"rationale\":\"FIRRM evidence not directly linked.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.176,
+ "tokens_in": 17265,
+ "tokens_out": 409
+}

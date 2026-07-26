@@ -1,0 +1,33 @@
+{
+ "case_id": "ATXN7L3:PMID_38753057_Family_F_individual",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "ATXN7L3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CREB3L3",
+  "TUBGCP2",
+  "HEYL",
+  "DCTN5",
+  "NRAP",
+  "PURA",
+  "HTATIP2",
+  "ADAMTS20",
+  "GPR21",
+  "MLNR",
+  "STAT1",
+  "DNASE2B",
+  "H2AC1",
+  "TMEM51",
+  "SIPA1"
+ ],
+ "top1": "CREB3L3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CREB3L3\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms including facial dysmorphism, ptosis, and developmental delay.\"},{\"gene\":\"TUBGCP2\",\"confidence\":0.85,\"rationale\":\"Describes facial features and developmental delay consistent with patient phenotype.\"},{\"gene\":\"HEYL\",\"confidence\":0.75,\"rationale\":\"Linked to facial dysmorphism and developmental delay in literature.\"},{\"gene\":\"DCTN5\",\"confidence\":0.7,\"rationale\":\"Shares facial and developmental features with the patient's phenotype.\"},{\"gene\":\"NRAP\",\"confidence\":0.65,\"rationale\":\"Associated with facial dysmorphism and developmental delay.\"},{\"gene\":\"PURA\",\"confidence\":0.6,\"rationale\":\"Linked to facial features and developmental delay in multiple studies.\"},{\"gene\":\"HTATIP2\",\"confidence\":0.55,\"rationale\":\"Shares some facial and developmental features with the patient.\"},{\"gene\":\"ADAMTS20\",\"confidence\":0.5,\"rationale\":\"Has some overlap with facial and developmental features.\"},{\"gene\":\"GPR21\",\"confidence\":0.45,\"rationale\":\"Limited evidence linking to the patient's phenotype.\"},{\"gene\":\"MLNR\",\"confidence\":0.4,\"rationale\":\"Fewer connections to the patient's specific features.\"},{\"gene\":\"STAT1\",\"confidence\":0.35,\"rationale\":\"Weak association with some developmental features.\"},{\"gene\":\"DNASE2B\",\"confidence\":0.3,\"rationale\":\"Limited evidence of relevance to the patient's phenotype.\"},{\"gene\":\"H2AC1\",\"confidence\":0.25,\"rationale\":\"Minimal overlap with the patient's features.\"},{\"gene\":\"TMEM51\",\"confidence\":0.2,\"rationale\":\"Few connections to the patient's specific phenotype.\"},{\"gene\":\"SIPA1\",\"confidence\":0.15,\"rationale\":\"Very limited evidence linking to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.664,
+ "tokens_in": 20716,
+ "tokens_out": 419
+}

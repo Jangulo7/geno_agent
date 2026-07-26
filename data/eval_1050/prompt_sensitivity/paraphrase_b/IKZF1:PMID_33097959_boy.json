@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_33097959_boy",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "MS4A1",
+  "ALPK1",
+  "IER3IP1",
+  "SCYGR4",
+  "ACOX3",
+  "KLHL5",
+  "TVP23A",
+  "OR4C5",
+  "DCP2",
+  "RAD51AP1",
+  "ADGRE5",
+  "SEC31B",
+  "ST7",
+  "COBLL1"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to B cell defects and thrombocytopenia with family history\"},{\"gene\":\"MS4A1\",\"confidence\":0.65,\"rationale\":\"CD20 deficiency linked to B cell subset abnormalities\"},{\"gene\":\"ALPK1\",\"confidence\":0.35,\"rationale\":\"B cell dysregulation and autoimmunity mentioned\"},{\"gene\":\"IER3IP1\",\"confidence\":0.25,\"rationale\":\"B cell development issues noted\"},{\"gene\":\"SCYGR4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"ACOX3\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"KLHL5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"TVP23A\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"OR4C5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"DCP2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"RAD51AP1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"ADGRE5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"SEC31B\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"ST7\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"COBLL1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype link\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.293,
+ "tokens_in": 15314,
+ "tokens_out": 357
+}

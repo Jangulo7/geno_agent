@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_Patient_UM46",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PHF14",
+  "CA9",
+  "FPR2",
+  "DHRSX",
+  "ARRDC3",
+  "PSMF1",
+  "TMEM238",
+  "RNASE3",
+  "DRP2",
+  "CNKSR3",
+  "SMYD2",
+  "H1-2",
+  "PMP22",
+  "CTAG2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to lipodystrophy and metabolic features in multiple studies.\"},{\"gene\":\"PHF14\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"CA9\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"FPR2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DHRSX\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ARRDC3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PSMF1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TMEM238\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RNASE3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DRP2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"CNKSR3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SMYD2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"H1-2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PMP22\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"CTAG2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.166,
+ "tokens_in": 17263,
+ "tokens_out": 408
+}

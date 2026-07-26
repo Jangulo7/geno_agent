@@ -1,0 +1,33 @@
+{
+ "case_id": "CD28:PMID_34214472_patient_P2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "CD28",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD28",
+  "ZNF474",
+  "IFT57",
+  "SHISA3",
+  "VDAC2",
+  "ADAP2",
+  "CREBL2",
+  "ZNF517",
+  "TRH",
+  "NOTCH2NLA",
+  "SORBS3",
+  "CEACAM18",
+  "CCDC89",
+  "CPSF7",
+  "AP3M2"
+ ],
+ "top1": "CD28",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD28\",\"confidence\":0.95,\"rationale\":\"CD28 deficiency directly links to HPV, EBV, and CMV viremia with warts, matching patient phenotype.\"},{\"gene\":\"RLTPR\",\"confidence\":0.15,\"rationale\":\"RLTPR deficiency is linked to similar viral infections but lacks direct mention of otitis media.\"},{\"gene\":\"GATA2\",\"confidence\":0.1,\"rationale\":\"GATA2 deficiency is associated with viral infections and warts but not explicitly with otitis media.\"},{\"gene\":\"DOCK2\",\"confidence\":0.05,\"rationale\":\"DOCK2 deficiency is linked to viral infections and warts but not explicitly with otitis media.\"},{\"gene\":\"ZNF474\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking ZNF474 to the patient's specific phenotype.\"},{\"gene\":\"IFT57\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking IFT57 to the patient's specific phenotype.\"},{\"gene\":\"SHISA3\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking SHISA3 to the patient's specific phenotype.\"},{\"gene\":\"VDAC2\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking VDAC2 to the patient's specific phenotype.\"},{\"gene\":\"ADAP2\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking ADAP2 to the patient's specific phenotype.\"},{\"gene\":\"CREBL2\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking CREBL2 to the patient's specific phenotype.\"},{\"gene\":\"ZNF517\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking ZNF517 to the patient's specific phenotype.\"},{\"gene\":\"TRH\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking TRH to the patient's specific phenotype.\"},{\"gene\":\"NOTCH2NLA\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking NOTCH2NLA to the patient's specific phenotype.\"},{\"gene\":\"SORBS3\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking SORBS3 to the patient's specific phenotype.\"},{\"gene\":\"CEACAM18\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking CEACAM18 to the patient's specific phenotype.\"},{\"gene\":\"CCDC89\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking CCDC89 to the patient's specific phenotype.\"},{\"gene\":\"CPSF7\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking CPSF7 to the patient's specific phenotype.\"},{\"gene\":\"AP3M2\",\"confidence\":0.0,\"rationale\":\"No direct evidence linking AP3M2 to the patient's specific phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.599,
+ "tokens_in": 19539,
+ "tokens_out": 600
+}

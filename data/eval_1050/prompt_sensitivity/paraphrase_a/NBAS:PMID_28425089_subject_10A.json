@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_28425089_subject_10A",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NBAS",
+  "GATA1",
+  "RETN",
+  "WBP11",
+  "TREM1",
+  "ABCB4",
+  "FERMT2",
+  "PROK1",
+  "TLX1",
+  "GNRH1",
+  "RPGR",
+  "MAGEB2",
+  "COX17",
+  "HDAC6",
+  "C16orf87"
+ ],
+ "top1": "NBAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"Links to acute liver failure, short stature, immune dysregulation, and cutis laxa.\"},{\"gene\":\"GATA1\",\"confidence\":0.15,\"rationale\":\"Associated with hematologic issues but not the full phenotype.\"},{\"gene\":\"RETN\",\"confidence\":0.1,\"rationale\":\"Immunodeficiency and short stature noted but not other features.\"},{\"gene\":\"WBP11\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"TREM1\",\"confidence\":0.05,\"rationale\":\"Immunodeficiency noted but not other key features.\"},{\"gene\":\"ABCB4\",\"confidence\":0.05,\"rationale\":\"Liver issues but not other key features.\"},{\"gene\":\"FERMT2\",\"confidence\":0.05,\"rationale\":\"Placental expression but not other key features.\"},{\"gene\":\"PROK1\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"TLX1\",\"confidence\":0.05,\"rationale\":\"Placental expression but not other key features.\"},{\"gene\":\"GNRH1\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"RPGR\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"MAGEB2\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"COX17\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"HDAC6\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"},{\"gene\":\"C16orf87\",\"confidence\":0.05,\"rationale\":\"No direct link to liver failure or other key features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.06,
+ "tokens_in": 16501,
+ "tokens_out": 435
+}

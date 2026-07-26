@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_P1",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GNAS",
+  "SKA3",
+  "AKR7A2",
+  "ADAM17",
+  "MICOS13",
+  "NR2E1",
+  "MAN2B1",
+  "PPM1K",
+  "ELP1",
+  "SEC23A",
+  "SLC7A6",
+  "GPC1",
+  "PFKL",
+  "OR9K2",
+  "CHD4"
+ ],
+ "top1": "GNAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GNAS\",\"confidence\":0.95,\"rationale\":\"Directly links to PTH resistance, hypocalcemia, hyperphosphatemia, and AHO features.\"},{\"gene\":\"SKA3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"AKR7A2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"ADAM17\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"MICOS13\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"NR2E1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"MAN2B1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"PPM1K\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"ELP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"SEC23A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"SLC7A6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"GPC1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"PFKL\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"OR9K2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"},{\"gene\":\"CHD4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to PTH resistance or AHO features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.941,
+ "tokens_in": 17814,
+ "tokens_out": 476
+}

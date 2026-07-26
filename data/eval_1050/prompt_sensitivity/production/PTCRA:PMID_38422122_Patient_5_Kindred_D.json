@@ -1,0 +1,32 @@
+{
+ "case_id": "PTCRA:PMID_38422122_Patient_5_Kindred_D",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "PTCRA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PYROXD1",
+  "SLC39A8",
+  "PAFAH1B1",
+  "ZNF883",
+  "PSPN",
+  "SORCS1",
+  "ZBTB47",
+  "VCY1B",
+  "NPIPB3",
+  "PRPF40B",
+  "LPA",
+  "BTNL3",
+  "CYP2A7",
+  "SRRM3"
+ ],
+ "top1": "PYROXD1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PYROXD1\",\"confidence\":0.95,\"rationale\":\"Directly linked to myofibrillar myopathy with polyneuropathy and hyporeflexia.\"},{\"gene\":\"SLC39A8\",\"confidence\":0.15,\"rationale\":\"Case reports show polyneuropathy and hyporeflexia but no direct gene link.\"},{\"gene\":\"PAFAH1B1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZNF883\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PSPN\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SORCS1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZBTB47\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"VCY1B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NPIPB3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PRPF40B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"LPA\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"BTNL3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"CYP2A7\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SRRM3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC39A8\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.41,
+ "tokens_in": 17402,
+ "tokens_out": 428
+}

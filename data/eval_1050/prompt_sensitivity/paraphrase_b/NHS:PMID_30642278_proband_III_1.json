@@ -1,0 +1,33 @@
+{
+ "case_id": "NHS:PMID_30642278_proband_III_1",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "NHS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NHS",
+  "KRT14",
+  "CD80",
+  "PPP1R21",
+  "CYP3A43",
+  "PM20D1",
+  "HP1BP3",
+  "CCL22",
+  "RAB37",
+  "DALRD3",
+  "CFB",
+  "PEDS1",
+  "WDR6",
+  "MOSPD3",
+  "KCND2"
+ ],
+ "top1": "NHS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NHS\",\"confidence\":1.0,\"rationale\":\"Directly matches all patient phenotypes and has a confirmed mutation in the family.\"},{\"gene\":\"KRT14\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"CD80\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"PPP1R21\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"CYP3A43\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"PM20D1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"HP1BP3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"CCL22\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"RAB37\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"DALRD3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"CFB\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"PEDS1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"WDR6\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"MOSPD3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"},{\"gene\":\"KCND2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links or mutations mentioned.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.613,
+ "tokens_in": 15769,
+ "tokens_out": 413
+}

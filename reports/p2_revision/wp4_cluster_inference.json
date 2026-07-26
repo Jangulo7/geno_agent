@@ -1,0 +1,1934 @@
+{
+  "work_package": "WP4",
+  "description": "Publication-clustered intervals and paired tests for every contrast the manuscript reports, with the case-level result retained alongside.",
+  "seed": 42,
+  "n_bootstrap": 10000,
+  "n_permutations": 10000,
+  "clustering_variable": "source PMID parsed from case_id",
+  "rationale": "P1 Usage Notes, 'Clustered cases': 1,047 cases from 415 publications; confidence intervals and significance tests should cluster on source PMID.",
+  "families": {
+    "primary": "Top-1 superiority of Cell S over Exomiser (K) and over LIRICAL (M) on the overlap-absent subset --- the two contrasts fixed in the version-controlled analysis plan (paper_extension_plan_v3.md section 3b, commit 8ebf6f4, 2026-05-17) before the overlap flag was computed (commit 308fb2e, 2026-05-23).",
+    "supportive": "Full-cohort and post-2020 S-vs-Exomiser, corrected separately.",
+    "supportive_hard": "Hard-cohort overlap-absent S-vs-K and S-vs-M. The hard variant was built on 2026-06-28 (commit 8b8f76a), after the primary family was fixed, so it is a supportive family corrected separately."
+  },
+  "contrasts": [
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "primary",
+      "system_a": "S",
+      "system_b": "K",
+      "label": "S vs K",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.8582,
+      "top1_b": 0.7801,
+      "n_correct_a": 242,
+      "n_correct_b": 220,
+      "delta": 0.078,
+      "ci95_cluster_bootstrap": [
+        -0.0404,
+        0.2355
+      ],
+      "ci95_case_bootstrap": [
+        0.0177,
+        0.1383
+      ],
+      "b": 49,
+      "c": 27,
+      "p_mcnemar_exact_case_level": 0.01544,
+      "p_cluster_permutation": 0.45185,
+      "n_discordant_a_wins": 49,
+      "n_discordant_b_wins": 27,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "primary",
+      "system_a": "S",
+      "system_b": "M",
+      "label": "S vs M",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.8582,
+      "top1_b": 0.7766,
+      "n_correct_a": 242,
+      "n_correct_b": 219,
+      "delta": 0.0816,
+      "ci95_cluster_bootstrap": [
+        -0.0507,
+        0.2321
+      ],
+      "ci95_case_bootstrap": [
+        0.0177,
+        0.1454
+      ],
+      "b": 52,
+      "c": 29,
+      "p_mcnemar_exact_case_level": 0.013999,
+      "p_cluster_permutation": 0.41016,
+      "n_discordant_a_wins": 52,
+      "n_discordant_b_wins": 29,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "mechanistic",
+      "system_a": "S",
+      "system_b": "L",
+      "label": "S vs L",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.8582,
+      "top1_b": 0.8227,
+      "n_correct_a": 242,
+      "n_correct_b": 232,
+      "delta": 0.0355,
+      "ci95_cluster_bootstrap": [
+        0.013,
+        0.0617
+      ],
+      "ci95_case_bootstrap": [
+        0.0142,
+        0.0603
+      ],
+      "b": 11,
+      "c": 1,
+      "p_mcnemar_exact_case_level": 0.006348,
+      "p_cluster_permutation": 0.013,
+      "n_discordant_a_wins": 11,
+      "n_discordant_b_wins": 1,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "mechanistic",
+      "system_a": "S",
+      "system_b": "O",
+      "label": "S vs O",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.8582,
+      "top1_b": 0.6667,
+      "n_correct_a": 242,
+      "n_correct_b": 188,
+      "delta": 0.1915,
+      "ci95_cluster_bootstrap": [
+        0.1053,
+        0.3103
+      ],
+      "ci95_case_bootstrap": [
+        0.1383,
+        0.2447
+      ],
+      "b": 63,
+      "c": 9,
+      "p_mcnemar_exact_case_level": 0.0,
+      "p_cluster_permutation": 0.0001,
+      "n_discordant_a_wins": 63,
+      "n_discordant_b_wins": 9,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "descriptive",
+      "system_a": "M",
+      "system_b": "K",
+      "label": "M vs K",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.7766,
+      "top1_b": 0.7801,
+      "n_correct_a": 219,
+      "n_correct_b": 220,
+      "delta": -0.0035,
+      "ci95_cluster_bootstrap": [
+        -0.0617,
+        0.06
+      ],
+      "ci95_case_bootstrap": [
+        -0.0532,
+        0.0426
+      ],
+      "b": 23,
+      "c": 24,
+      "p_mcnemar_exact_case_level": 1.0,
+      "p_cluster_permutation": 1.0,
+      "n_discordant_a_wins": 23,
+      "n_discordant_b_wins": 24,
+      "significant_case_level_0.05": false,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "overlap_absent",
+      "family": "descriptive",
+      "system_a": "S",
+      "system_b": "N",
+      "label": "S vs N",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.8582,
+      "top1_b": 0.8511,
+      "n_correct_a": 242,
+      "n_correct_b": 240,
+      "delta": 0.0071,
+      "ci95_cluster_bootstrap": [
+        -0.0492,
+        0.0804
+      ],
+      "ci95_case_bootstrap": [
+        -0.0355,
+        0.0496
+      ],
+      "b": 19,
+      "c": 17,
+      "p_mcnemar_exact_case_level": 0.867939,
+      "p_cluster_permutation": 0.9558,
+      "n_discordant_a_wins": 19,
+      "n_discordant_b_wins": 17,
+      "significant_case_level_0.05": false,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "full",
+      "family": "supportive",
+      "system_a": "S",
+      "system_b": "K",
+      "label": "S vs K",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1_a": 0.7259,
+      "top1_b": 0.6905,
+      "n_correct_a": 760,
+      "n_correct_b": 723,
+      "delta": 0.0353,
+      "ci95_cluster_bootstrap": [
+        -0.0127,
+        0.0896
+      ],
+      "ci95_case_bootstrap": [
+        0.0067,
+        0.064
+      ],
+      "b": 136,
+      "c": 99,
+      "p_mcnemar_exact_case_level": 0.018664,
+      "p_cluster_permutation": 0.20408,
+      "n_discordant_a_wins": 136,
+      "n_discordant_b_wins": 99,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "full",
+      "family": "mechanistic",
+      "system_a": "S",
+      "system_b": "O",
+      "label": "S vs O",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1_a": 0.7259,
+      "top1_b": 0.511,
+      "n_correct_a": 760,
+      "n_correct_b": 535,
+      "delta": 0.2149,
+      "ci95_cluster_bootstrap": [
+        0.1627,
+        0.273
+      ],
+      "ci95_case_bootstrap": [
+        0.1843,
+        0.2455
+      ],
+      "b": 269,
+      "c": 44,
+      "p_mcnemar_exact_case_level": 0.0,
+      "p_cluster_permutation": 0.0001,
+      "n_discordant_a_wins": 269,
+      "n_discordant_b_wins": 44,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "full",
+      "family": "mechanistic",
+      "system_a": "L",
+      "system_b": "D",
+      "label": "L vs D",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1_a": 0.6982,
+      "top1_b": 0.4604,
+      "n_correct_a": 731,
+      "n_correct_b": 482,
+      "delta": 0.2378,
+      "ci95_cluster_bootstrap": [
+        0.1896,
+        0.2859
+      ],
+      "ci95_case_bootstrap": [
+        0.2063,
+        0.2693
+      ],
+      "b": 293,
+      "c": 44,
+      "p_mcnemar_exact_case_level": 0.0,
+      "p_cluster_permutation": 0.0001,
+      "n_discordant_a_wins": 293,
+      "n_discordant_b_wins": 44,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "full",
+      "family": "mechanistic",
+      "system_a": "S",
+      "system_b": "L",
+      "label": "S vs L",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1_a": 0.7259,
+      "top1_b": 0.6982,
+      "n_correct_a": 760,
+      "n_correct_b": 731,
+      "delta": 0.0277,
+      "ci95_cluster_bootstrap": [
+        0.0166,
+        0.04
+      ],
+      "ci95_case_bootstrap": [
+        0.0172,
+        0.0392
+      ],
+      "b": 32,
+      "c": 3,
+      "p_mcnemar_exact_case_level": 0.0,
+      "p_cluster_permutation": 0.0001,
+      "n_discordant_a_wins": 32,
+      "n_discordant_b_wins": 3,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "post2020",
+      "family": "supportive",
+      "system_a": "S",
+      "system_b": "K",
+      "label": "S vs K",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1_a": 0.574,
+      "top1_b": 0.4798,
+      "n_correct_a": 256,
+      "n_correct_b": 214,
+      "delta": 0.0942,
+      "ci95_cluster_bootstrap": [
+        0.0413,
+        0.159
+      ],
+      "ci95_case_bootstrap": [
+        0.0493,
+        0.139
+      ],
+      "b": 75,
+      "c": 33,
+      "p_mcnemar_exact_case_level": 6.6e-05,
+      "p_cluster_permutation": 0.0008,
+      "n_discordant_a_wins": 75,
+      "n_discordant_b_wins": 33,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "standard",
+      "subset": "pre2020",
+      "family": "descriptive",
+      "system_a": "S",
+      "system_b": "K",
+      "label": "S vs K",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1_a": 0.8386,
+      "top1_b": 0.8469,
+      "n_correct_a": 504,
+      "n_correct_b": 509,
+      "delta": -0.0083,
+      "ci95_cluster_bootstrap": [
+        -0.0804,
+        0.0769
+      ],
+      "ci95_case_bootstrap": [
+        -0.0449,
+        0.0283
+      ],
+      "b": 61,
+      "c": 66,
+      "p_mcnemar_exact_case_level": 0.722787,
+      "p_cluster_permutation": 0.91931,
+      "n_discordant_a_wins": 61,
+      "n_discordant_b_wins": 66,
+      "significant_case_level_0.05": false,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "standard",
+      "subset": "post2020_overlap_absent",
+      "family": "qualitative_probe",
+      "system_a": "S",
+      "system_b": "M",
+      "label": "S vs M",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1_a": 0.8523,
+      "top1_b": 0.7727,
+      "n_correct_a": 75,
+      "n_correct_b": 68,
+      "delta": 0.0795,
+      "ci95_cluster_bootstrap": [
+        -0.0984,
+        0.1845
+      ],
+      "ci95_case_bootstrap": [
+        -0.0227,
+        0.1818
+      ],
+      "b": 13,
+      "c": 6,
+      "p_mcnemar_exact_case_level": 0.167068,
+      "p_cluster_permutation": 0.78242,
+      "n_discordant_a_wins": 13,
+      "n_discordant_b_wins": 6,
+      "significant_case_level_0.05": false,
+      "significant_cluster_0.05": false
+    },
+    {
+      "cohort": "hard",
+      "subset": "overlap_absent",
+      "family": "supportive_hard",
+      "system_a": "S",
+      "system_b": "K",
+      "label": "S vs K",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.3901,
+      "top1_b": 0.2376,
+      "n_correct_a": 110,
+      "n_correct_b": 67,
+      "delta": 0.1525,
+      "ci95_cluster_bootstrap": [
+        0.0604,
+        0.2605
+      ],
+      "ci95_case_bootstrap": [
+        0.0887,
+        0.2163
+      ],
+      "b": 66,
+      "c": 23,
+      "p_mcnemar_exact_case_level": 6e-06,
+      "p_cluster_permutation": 0.0011,
+      "n_discordant_a_wins": 66,
+      "n_discordant_b_wins": 23,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": true
+    },
+    {
+      "cohort": "hard",
+      "subset": "overlap_absent",
+      "family": "supportive_hard",
+      "system_a": "S",
+      "system_b": "M",
+      "label": "S vs M",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1_a": 0.3901,
+      "top1_b": 0.2837,
+      "n_correct_a": 110,
+      "n_correct_b": 80,
+      "delta": 0.1064,
+      "ci95_cluster_bootstrap": [
+        -0.0232,
+        0.2273
+      ],
+      "ci95_case_bootstrap": [
+        0.0426,
+        0.1738
+      ],
+      "b": 60,
+      "c": 30,
+      "p_mcnemar_exact_case_level": 0.00206,
+      "p_cluster_permutation": 0.15738,
+      "n_discordant_a_wins": 60,
+      "n_discordant_b_wins": 30,
+      "significant_case_level_0.05": true,
+      "significant_cluster_0.05": false
+    }
+  ],
+  "multiplicity": {
+    "primary": {
+      "tests": {
+        "standard/overlap_absent/S vs K": 0.45185,
+        "standard/overlap_absent/S vs M": 0.41016
+      },
+      "holm_adjusted": {
+        "standard/overlap_absent/S vs M": 0.82032,
+        "standard/overlap_absent/S vs K": 0.82032
+      },
+      "benjamini_hochberg_adjusted": {
+        "standard/overlap_absent/S vs K": 0.45185,
+        "standard/overlap_absent/S vs M": 0.45185
+      },
+      "basis": "cluster-permutation p-values"
+    },
+    "supportive": {
+      "tests": {
+        "standard/full/S vs K": 0.20408,
+        "standard/post2020/S vs K": 0.0008
+      },
+      "holm_adjusted": {
+        "standard/post2020/S vs K": 0.0016,
+        "standard/full/S vs K": 0.20408
+      },
+      "benjamini_hochberg_adjusted": {
+        "standard/full/S vs K": 0.20408,
+        "standard/post2020/S vs K": 0.0016
+      },
+      "basis": "cluster-permutation p-values"
+    },
+    "supportive_hard": {
+      "tests": {
+        "hard/overlap_absent/S vs K": 0.0011,
+        "hard/overlap_absent/S vs M": 0.15738
+      },
+      "holm_adjusted": {
+        "hard/overlap_absent/S vs K": 0.0022,
+        "hard/overlap_absent/S vs M": 0.15738
+      },
+      "benjamini_hochberg_adjusted": {
+        "hard/overlap_absent/S vs M": 0.15738,
+        "hard/overlap_absent/S vs K": 0.0022
+      },
+      "basis": "cluster-permutation p-values"
+    }
+  },
+  "point_estimates": [
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.6905,
+      "n_correct": 723,
+      "ci95_cluster_bootstrap": [
+        0.6268,
+        0.7474
+      ],
+      "ci95_case_bootstrap": [
+        0.6628,
+        0.7182
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.6575,
+      "n_correct": 503,
+      "ci95_cluster_bootstrap": [
+        0.5866,
+        0.7227
+      ],
+      "ci95_case_bootstrap": [
+        0.6235,
+        0.6915
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.7801,
+      "n_correct": 220,
+      "ci95_cluster_bootstrap": [
+        0.6373,
+        0.8792
+      ],
+      "ci95_case_bootstrap": [
+        0.7305,
+        0.8262
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.8469,
+      "n_correct": 509,
+      "ci95_cluster_bootstrap": [
+        0.7699,
+        0.9083
+      ],
+      "ci95_case_bootstrap": [
+        0.817,
+        0.8752
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.4798,
+      "n_correct": 214,
+      "ci95_cluster_bootstrap": [
+        0.3383,
+        0.5961
+      ],
+      "ci95_case_bootstrap": [
+        0.435,
+        0.5247
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.8182,
+      "n_correct": 72,
+      "ci95_cluster_bootstrap": [
+        0.6207,
+        0.914
+      ],
+      "ci95_case_bootstrap": [
+        0.7273,
+        0.8977
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.9236,
+      "n_correct": 967,
+      "ci95_cluster_bootstrap": [
+        0.8792,
+        0.959
+      ],
+      "ci95_case_bootstrap": [
+        0.9074,
+        0.9389
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.9778,
+      "n_correct": 748,
+      "ci95_cluster_bootstrap": [
+        0.9619,
+        0.9907
+      ],
+      "ci95_case_bootstrap": [
+        0.9673,
+        0.9869
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.7766,
+      "n_correct": 219,
+      "ci95_cluster_bootstrap": [
+        0.6417,
+        0.8889
+      ],
+      "ci95_case_bootstrap": [
+        0.727,
+        0.8227
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.9151,
+      "n_correct": 550,
+      "ci95_cluster_bootstrap": [
+        0.8452,
+        0.9632
+      ],
+      "ci95_case_bootstrap": [
+        0.8918,
+        0.9368
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.935,
+      "n_correct": 417,
+      "ci95_cluster_bootstrap": [
+        0.8846,
+        0.9763
+      ],
+      "ci95_case_bootstrap": [
+        0.9126,
+        0.9574
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.7727,
+      "n_correct": 68,
+      "ci95_cluster_bootstrap": [
+        0.6212,
+        0.9286
+      ],
+      "ci95_case_bootstrap": [
+        0.6818,
+        0.8636
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.4604,
+      "n_correct": 482,
+      "ci95_cluster_bootstrap": [
+        0.3992,
+        0.522
+      ],
+      "ci95_case_bootstrap": [
+        0.4307,
+        0.4909
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.4549,
+      "n_correct": 348,
+      "ci95_cluster_bootstrap": [
+        0.3771,
+        0.5333
+      ],
+      "ci95_case_bootstrap": [
+        0.4196,
+        0.4902
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.4752,
+      "n_correct": 134,
+      "ci95_cluster_bootstrap": [
+        0.3822,
+        0.5573
+      ],
+      "ci95_case_bootstrap": [
+        0.4184,
+        0.5319
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.5474,
+      "n_correct": 329,
+      "ci95_cluster_bootstrap": [
+        0.4838,
+        0.6114
+      ],
+      "ci95_case_bootstrap": [
+        0.5075,
+        0.5857
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.343,
+      "n_correct": 153,
+      "ci95_cluster_bootstrap": [
+        0.212,
+        0.4676
+      ],
+      "ci95_case_bootstrap": [
+        0.2982,
+        0.3879
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.4659,
+      "n_correct": 41,
+      "ci95_cluster_bootstrap": [
+        0.1765,
+        0.6
+      ],
+      "ci95_case_bootstrap": [
+        0.3636,
+        0.5682
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.6982,
+      "n_correct": 731,
+      "ci95_cluster_bootstrap": [
+        0.6434,
+        0.7457
+      ],
+      "ci95_case_bootstrap": [
+        0.6705,
+        0.7259
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.6523,
+      "n_correct": 499,
+      "ci95_cluster_bootstrap": [
+        0.5848,
+        0.7121
+      ],
+      "ci95_case_bootstrap": [
+        0.6183,
+        0.685
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.8227,
+      "n_correct": 232,
+      "ci95_cluster_bootstrap": [
+        0.7527,
+        0.873
+      ],
+      "ci95_case_bootstrap": [
+        0.7766,
+        0.8652
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.807,
+      "n_correct": 485,
+      "ci95_cluster_bootstrap": [
+        0.7589,
+        0.8488
+      ],
+      "ci95_case_bootstrap": [
+        0.7754,
+        0.8386
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.5516,
+      "n_correct": 246,
+      "ci95_cluster_bootstrap": [
+        0.4249,
+        0.6534
+      ],
+      "ci95_case_bootstrap": [
+        0.5045,
+        0.5987
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.8182,
+      "n_correct": 72,
+      "ci95_cluster_bootstrap": [
+        0.6129,
+        0.9023
+      ],
+      "ci95_case_bootstrap": [
+        0.7386,
+        0.8977
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.7259,
+      "n_correct": 760,
+      "ci95_cluster_bootstrap": [
+        0.6725,
+        0.7716
+      ],
+      "ci95_case_bootstrap": [
+        0.6991,
+        0.7526
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.6771,
+      "n_correct": 518,
+      "ci95_cluster_bootstrap": [
+        0.6124,
+        0.7346
+      ],
+      "ci95_case_bootstrap": [
+        0.6431,
+        0.7098
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.8582,
+      "n_correct": 242,
+      "ci95_cluster_bootstrap": [
+        0.7908,
+        0.907
+      ],
+      "ci95_case_bootstrap": [
+        0.8156,
+        0.8972
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.8386,
+      "n_correct": 504,
+      "ci95_cluster_bootstrap": [
+        0.7926,
+        0.8768
+      ],
+      "ci95_case_bootstrap": [
+        0.8087,
+        0.8669
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.574,
+      "n_correct": 256,
+      "ci95_cluster_bootstrap": [
+        0.448,
+        0.6738
+      ],
+      "ci95_case_bootstrap": [
+        0.5269,
+        0.6188
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.8523,
+      "n_correct": 75,
+      "ci95_cluster_bootstrap": [
+        0.6296,
+        0.9375
+      ],
+      "ci95_case_bootstrap": [
+        0.7727,
+        0.9205
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.7755,
+      "n_correct": 812,
+      "ci95_cluster_bootstrap": [
+        0.729,
+        0.8176
+      ],
+      "ci95_case_bootstrap": [
+        0.7498,
+        0.8004
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.7477,
+      "n_correct": 572,
+      "ci95_cluster_bootstrap": [
+        0.6902,
+        0.7982
+      ],
+      "ci95_case_bootstrap": [
+        0.7163,
+        0.7778
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.8511,
+      "n_correct": 240,
+      "ci95_cluster_bootstrap": [
+        0.7738,
+        0.9098
+      ],
+      "ci95_case_bootstrap": [
+        0.8085,
+        0.8901
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.8735,
+      "n_correct": 525,
+      "ci95_cluster_bootstrap": [
+        0.8327,
+        0.9091
+      ],
+      "ci95_case_bootstrap": [
+        0.8453,
+        0.9002
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.6435,
+      "n_correct": 287,
+      "ci95_cluster_bootstrap": [
+        0.5266,
+        0.7347
+      ],
+      "ci95_case_bootstrap": [
+        0.5987,
+        0.6883
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.875,
+      "n_correct": 77,
+      "ci95_cluster_bootstrap": [
+        0.6562,
+        0.9489
+      ],
+      "ci95_case_bootstrap": [
+        0.8068,
+        0.9432
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.511,
+      "n_correct": 535,
+      "ci95_cluster_bootstrap": [
+        0.4283,
+        0.5863
+      ],
+      "ci95_case_bootstrap": [
+        0.4804,
+        0.5415
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.4536,
+      "n_correct": 347,
+      "ci95_cluster_bootstrap": [
+        0.3619,
+        0.5387
+      ],
+      "ci95_case_bootstrap": [
+        0.4183,
+        0.4889
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.6667,
+      "n_correct": 188,
+      "ci95_cluster_bootstrap": [
+        0.5081,
+        0.7759
+      ],
+      "ci95_case_bootstrap": [
+        0.6099,
+        0.7199
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.6057,
+      "n_correct": 364,
+      "ci95_cluster_bootstrap": [
+        0.5197,
+        0.6801
+      ],
+      "ci95_case_bootstrap": [
+        0.5657,
+        0.6439
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.3834,
+      "n_correct": 171,
+      "ci95_cluster_bootstrap": [
+        0.2182,
+        0.5264
+      ],
+      "ci95_case_bootstrap": [
+        0.3386,
+        0.4283
+      ]
+    },
+    {
+      "cohort": "standard",
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.8295,
+      "n_correct": 73,
+      "ci95_cluster_bootstrap": [
+        0.5278,
+        0.9371
+      ],
+      "ci95_case_bootstrap": [
+        0.75,
+        0.9091
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.2579,
+      "n_correct": 270,
+      "ci95_cluster_bootstrap": [
+        0.1996,
+        0.318
+      ],
+      "ci95_case_bootstrap": [
+        0.2321,
+        0.2856
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.2654,
+      "n_correct": 203,
+      "ci95_cluster_bootstrap": [
+        0.2008,
+        0.329
+      ],
+      "ci95_case_bootstrap": [
+        0.234,
+        0.2967
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.2376,
+      "n_correct": 67,
+      "ci95_cluster_bootstrap": [
+        0.113,
+        0.3718
+      ],
+      "ci95_case_bootstrap": [
+        0.1879,
+        0.2872
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.3411,
+      "n_correct": 205,
+      "ci95_cluster_bootstrap": [
+        0.2696,
+        0.4119
+      ],
+      "ci95_case_bootstrap": [
+        0.3028,
+        0.3794
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.1457,
+      "n_correct": 65,
+      "ci95_cluster_bootstrap": [
+        0.0473,
+        0.25
+      ],
+      "ci95_case_bootstrap": [
+        0.1143,
+        0.1794
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.2614,
+      "n_correct": 23,
+      "ci95_cluster_bootstrap": [
+        0.0435,
+        0.5625
+      ],
+      "ci95_case_bootstrap": [
+        0.1705,
+        0.3523
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.6418,
+      "n_correct": 672,
+      "ci95_cluster_bootstrap": [
+        0.5642,
+        0.7176
+      ],
+      "ci95_case_bootstrap": [
+        0.6122,
+        0.6714
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.7739,
+      "n_correct": 592,
+      "ci95_cluster_bootstrap": [
+        0.7083,
+        0.8312
+      ],
+      "ci95_case_bootstrap": [
+        0.7438,
+        0.8039
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.2837,
+      "n_correct": 80,
+      "ci95_cluster_bootstrap": [
+        0.142,
+        0.4536
+      ],
+      "ci95_case_bootstrap": [
+        0.2305,
+        0.3369
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.6173,
+      "n_correct": 371,
+      "ci95_cluster_bootstrap": [
+        0.5291,
+        0.7045
+      ],
+      "ci95_case_bootstrap": [
+        0.579,
+        0.6556
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.6749,
+      "n_correct": 301,
+      "ci95_cluster_bootstrap": [
+        0.5381,
+        0.7973
+      ],
+      "ci95_case_bootstrap": [
+        0.63,
+        0.7175
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.2159,
+      "n_correct": 19,
+      "ci95_cluster_bootstrap": [
+        0.0196,
+        0.6282
+      ],
+      "ci95_case_bootstrap": [
+        0.1364,
+        0.3068
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.1385,
+      "n_correct": 145,
+      "ci95_cluster_bootstrap": [
+        0.1058,
+        0.1752
+      ],
+      "ci95_case_bootstrap": [
+        0.1184,
+        0.1595
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.149,
+      "n_correct": 114,
+      "ci95_cluster_bootstrap": [
+        0.1075,
+        0.1943
+      ],
+      "ci95_case_bootstrap": [
+        0.1242,
+        0.1752
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.1099,
+      "n_correct": 31,
+      "ci95_cluster_bootstrap": [
+        0.0707,
+        0.1598
+      ],
+      "ci95_case_bootstrap": [
+        0.0745,
+        0.1489
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.198,
+      "n_correct": 119,
+      "ci95_cluster_bootstrap": [
+        0.1475,
+        0.2548
+      ],
+      "ci95_case_bootstrap": [
+        0.1664,
+        0.2296
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.0583,
+      "n_correct": 26,
+      "ci95_cluster_bootstrap": [
+        0.0296,
+        0.0891
+      ],
+      "ci95_case_bootstrap": [
+        0.0381,
+        0.0807
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.0682,
+      "n_correct": 6,
+      "ci95_cluster_bootstrap": [
+        0.0,
+        0.102
+      ],
+      "ci95_case_bootstrap": [
+        0.0227,
+        0.125
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.2292,
+      "n_correct": 240,
+      "ci95_cluster_bootstrap": [
+        0.181,
+        0.2806
+      ],
+      "ci95_case_bootstrap": [
+        0.2034,
+        0.255
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.2065,
+      "n_correct": 158,
+      "ci95_cluster_bootstrap": [
+        0.1472,
+        0.2709
+      ],
+      "ci95_case_bootstrap": [
+        0.1778,
+        0.2353
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.2908,
+      "n_correct": 82,
+      "ci95_cluster_bootstrap": [
+        0.2215,
+        0.3743
+      ],
+      "ci95_case_bootstrap": [
+        0.2376,
+        0.344
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.3062,
+      "n_correct": 184,
+      "ci95_cluster_bootstrap": [
+        0.2412,
+        0.375
+      ],
+      "ci95_case_bootstrap": [
+        0.2696,
+        0.3428
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.1256,
+      "n_correct": 56,
+      "ci95_cluster_bootstrap": [
+        0.0668,
+        0.1915
+      ],
+      "ci95_case_bootstrap": [
+        0.0964,
+        0.157
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.2955,
+      "n_correct": 26,
+      "ci95_cluster_bootstrap": [
+        0.0968,
+        0.5
+      ],
+      "ci95_case_bootstrap": [
+        0.2045,
+        0.3977
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.3028,
+      "n_correct": 317,
+      "ci95_cluster_bootstrap": [
+        0.246,
+        0.3604
+      ],
+      "ci95_case_bootstrap": [
+        0.2751,
+        0.3314
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.2706,
+      "n_correct": 207,
+      "ci95_cluster_bootstrap": [
+        0.2055,
+        0.3395
+      ],
+      "ci95_case_bootstrap": [
+        0.2392,
+        0.302
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.3901,
+      "n_correct": 110,
+      "ci95_cluster_bootstrap": [
+        0.2883,
+        0.4912
+      ],
+      "ci95_case_bootstrap": [
+        0.3333,
+        0.4468
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.3943,
+      "n_correct": 237,
+      "ci95_cluster_bootstrap": [
+        0.3152,
+        0.4715
+      ],
+      "ci95_case_bootstrap": [
+        0.3561,
+        0.4326
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.1794,
+      "n_correct": 80,
+      "ci95_cluster_bootstrap": [
+        0.1043,
+        0.2551
+      ],
+      "ci95_case_bootstrap": [
+        0.1435,
+        0.2152
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.4318,
+      "n_correct": 38,
+      "ci95_cluster_bootstrap": [
+        0.125,
+        0.6761
+      ],
+      "ci95_case_bootstrap": [
+        0.3295,
+        0.5341
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "full",
+      "n_cases": 1047,
+      "n_publications": 415,
+      "top1": 0.425,
+      "n_correct": 445,
+      "ci95_cluster_bootstrap": [
+        0.3533,
+        0.4969
+      ],
+      "ci95_case_bootstrap": [
+        0.3964,
+        0.4546
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "n_publications": 322,
+      "top1": 0.4654,
+      "n_correct": 356,
+      "ci95_cluster_bootstrap": [
+        0.3883,
+        0.5392
+      ],
+      "ci95_case_bootstrap": [
+        0.4301,
+        0.5007
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "top1": 0.3156,
+      "n_correct": 89,
+      "ci95_cluster_bootstrap": [
+        0.175,
+        0.4774
+      ],
+      "ci95_case_bootstrap": [
+        0.2624,
+        0.3688
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "pre2020",
+      "n_cases": 601,
+      "n_publications": 251,
+      "top1": 0.5075,
+      "n_correct": 305,
+      "ci95_cluster_bootstrap": [
+        0.4198,
+        0.5902
+      ],
+      "ci95_case_bootstrap": [
+        0.4676,
+        0.5474
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "post2020",
+      "n_cases": 446,
+      "n_publications": 164,
+      "top1": 0.3139,
+      "n_correct": 140,
+      "ci95_cluster_bootstrap": [
+        0.2005,
+        0.4436
+      ],
+      "ci95_case_bootstrap": [
+        0.2713,
+        0.3565
+      ]
+    },
+    {
+      "cohort": "hard",
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "post2020_overlap_absent",
+      "n_cases": 88,
+      "n_publications": 18,
+      "top1": 0.25,
+      "n_correct": 22,
+      "ci95_cluster_bootstrap": [
+        0.0698,
+        0.6056
+      ],
+      "ci95_case_bootstrap": [
+        0.1591,
+        0.3409
+      ]
+    }
+  ]
+}

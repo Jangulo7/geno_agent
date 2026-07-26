@@ -1,0 +1,33 @@
+{
+ "case_id": "DHCR24:PMID_29175559_Patient_5_Zolotushko_2011_V7",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "DHCR24",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DHCR24",
+  "CPEB4",
+  "HLA-E",
+  "DEPDC4",
+  "GGACT",
+  "IRS1",
+  "HNRNPA3",
+  "IFNAR1",
+  "KRTAP21-1",
+  "LANCL1",
+  "C11orf42",
+  "WDR7",
+  "RANGAP1",
+  "PGM2",
+  "ARFGAP2"
+ ],
+ "top1": "DHCR24",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DHCR24\",\"confidence\":0.95,\"rationale\":\"Directly links to desmosterolosis with all key phenotypes.\"},{\"gene\":\"CPEB4\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"HLA-E\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"DEPDC4\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"GGACT\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"IRS1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"HNRNPA3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"IFNAR1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"KRTAP21-1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"LANCL1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"C11orf42\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"WDR7\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"RANGAP1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"PGM2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"ARFGAP2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.344,
+ "tokens_in": 16953,
+ "tokens_out": 430
+}

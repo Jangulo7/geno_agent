@@ -1,0 +1,33 @@
+{
+ "case_id": "AEBP1:PMID_30759870_LOVD_ID_AN_006205",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "AEBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FBLN5",
+  "TOPBP1",
+  "FHIP2B",
+  "P3H4",
+  "ZFP91",
+  "CCDC85A",
+  "TRIM60",
+  "KCTD19",
+  "C1orf115",
+  "KHSRP",
+  "MYO3B",
+  "SYT10",
+  "OPN1MW3",
+  "PMEL",
+  "GDNF"
+ ],
+ "top1": "FBLN5",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FBLN5\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms including hypotonia, scoliosis, and redundant skin.\"},{\"gene\":\"TOPBP1\",\"confidence\":0.85,\"rationale\":\"Linked to hypotonia, motor delay, and respiratory issues.\"},{\"gene\":\"FHIP2B\",\"confidence\":0.8,\"rationale\":\"Associated with hypotonia, motor delay, and scoliosis.\"},{\"gene\":\"P3H4\",\"confidence\":0.75,\"rationale\":\"Ties to hypotonia, scoliosis, and joint abnormalities.\"},{\"gene\":\"ZFP91\",\"confidence\":0.7,\"rationale\":\"Matches hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"CCDC85A\",\"confidence\":0.65,\"rationale\":\"Linked to hypotonia and developmental delay.\"},{\"gene\":\"TRIM60\",\"confidence\":0.6,\"rationale\":\"Ties to hypotonia and motor delay.\"},{\"gene\":\"KCTD19\",\"confidence\":0.55,\"rationale\":\"Associated with hypotonia and developmental delay.\"},{\"gene\":\"C1orf115\",\"confidence\":0.5,\"rationale\":\"Matches hypotonia and developmental delay.\"},{\"gene\":\"KHSRP\",\"confidence\":0.45,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"MYO3B\",\"confidence\":0.4,\"rationale\":\"Ties to hypotonia and motor delay.\"},{\"gene\":\"SYT10\",\"confidence\":0.35,\"rationale\":\"Associated with hypotonia and developmental delay.\"},{\"gene\":\"OPN1MW3\",\"confidence\":0.3,\"rationale\":\"Matches hypotonia and developmental delay.\"},{\"gene\":\"PMEL\",\"confidence\":0.25,\"rationale\":\"Linked to hypotonia and scoliosis.\"},{\"gene\":\"GDNF\",\"confidence\":0.2,\"rationale\":\"Ties to hypotonia and scoliosis.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.472,
+ "tokens_in": 16948,
+ "tokens_out": 437
+}

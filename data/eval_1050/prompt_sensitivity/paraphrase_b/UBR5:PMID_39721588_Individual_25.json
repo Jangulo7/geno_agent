@@ -1,0 +1,33 @@
+{
+ "case_id": "UBR5:PMID_39721588_Individual_25",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "UBR5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "HINT1",
+  "SRCAP",
+  "LENG8",
+  "DNAJC17",
+  "PCNT",
+  "IQCH",
+  "NHERF4",
+  "INSL5",
+  "RIPK1",
+  "UBR5",
+  "CTNND2",
+  "SULT2A1",
+  "MMP21",
+  "TRIP11",
+  "USP42"
+ ],
+ "top1": "HINT1",
+ "top1_correct": false,
+ "causal_rank": 10,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"HINT1\",\"confidence\":0.95,\"rationale\":\"Directly links to intellectual disability, ADHD, and febrile seizures with microcephaly.\"},{\"gene\":\"SRCAP\",\"confidence\":0.85,\"rationale\":\"Associated with short stature, intellectual disability, and attention deficits.\"},{\"gene\":\"LENG8\",\"confidence\":0.65,\"rationale\":\"Linked to intellectual disability, ADHD, and seizures.\"},{\"gene\":\"DNAJC17\",\"confidence\":0.6,\"rationale\":\"Shows connection to ADHD and seizures.\"},{\"gene\":\"PCNT\",\"confidence\":0.55,\"rationale\":\"Ties to intellectual disability and seizures.\"},{\"gene\":\"IQCH\",\"confidence\":0.5,\"rationale\":\"Associated with ADHD and seizures.\"},{\"gene\":\"NHERF4\",\"confidence\":0.45,\"rationale\":\"Linked to intellectual disability and seizures.\"},{\"gene\":\"INSL5\",\"confidence\":0.4,\"rationale\":\"Shows connection to ADHD and seizures.\"},{\"gene\":\"RIPK1\",\"confidence\":0.35,\"rationale\":\"Ties to ADHD and seizures.\"},{\"gene\":\"UBR5\",\"confidence\":0.3,\"rationale\":\"Associated with ADHD and seizures.\"},{\"gene\":\"CTNND2\",\"confidence\":0.25,\"rationale\":\"Linked to intellectual disability and seizures.\"},{\"gene\":\"SULT2A1\",\"confidence\":0.2,\"rationale\":\"Shows connection to ADHD and seizures.\"},{\"gene\":\"MMP21\",\"confidence\":0.15,\"rationale\":\"Ties to ADHD and seizures.\"},{\"gene\":\"TRIP11\",\"confidence\":0.1,\"rationale\":\"Associated with ADHD and seizures.\"},{\"gene\":\"USP42\",\"confidence\":0.05,\"rationale\":\"Linked to ADHD and seizures.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.519,
+ "tokens_in": 15275,
+ "tokens_out": 384
+}

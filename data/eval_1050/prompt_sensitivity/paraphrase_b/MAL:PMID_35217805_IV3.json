@@ -1,0 +1,33 @@
+{
+ "case_id": "MAL:PMID_35217805_IV3",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "MAL",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WDR73",
+  "KMT2C",
+  "MGME1",
+  "MAL",
+  "LRCH3",
+  "PFKP",
+  "ISG20L2",
+  "SH3BP2",
+  "KRT39",
+  "OR2V2",
+  "CRB2",
+  "BLM",
+  "RHBDD3",
+  "KCNU1",
+  "FIRRM"
+ ],
+ "top1": "WDR73",
+ "top1_correct": false,
+ "causal_rank": 4,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WDR73\",\"confidence\":0.95,\"rationale\":\"Directly links to developmental delay, ataxia, seizures, and nystagmus with confirmed variants.\"},{\"gene\":\"KMT2C\",\"confidence\":0.75,\"rationale\":\"Associated with developmental delay and seizures, though less specific to the full phenotype.\"},{\"gene\":\"MGME1\",\"confidence\":0.65,\"rationale\":\"Linked to mitochondrial dysfunction and seizures, but not all features.\"},{\"gene\":\"MAL\",\"confidence\":0.55,\"rationale\":\"Tied to seizures and developmental delay, but lacks ataxia and nystagmus.\"},{\"gene\":\"LRCH3\",\"confidence\":0.45,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"PFKP\",\"confidence\":0.4,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"ISG20L2\",\"confidence\":0.35,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"SH3BP2\",\"confidence\":0.3,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"KRT39\",\"confidence\":0.25,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"OR2V2\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"CRB2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"BLM\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"RHBDD3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"KCNU1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"FIRRM\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.588,
+ "tokens_in": 17247,
+ "tokens_out": 430
+}

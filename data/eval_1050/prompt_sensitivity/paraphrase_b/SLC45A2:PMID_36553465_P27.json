@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC45A2:PMID_36553465_P27",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "SLC45A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SLC45A2",
+  "C3orf52",
+  "ABCA8",
+  "ZNF593",
+  "DEPDC1",
+  "BRD7",
+  "VSIG10L2",
+  "CIP2A",
+  "PPT2",
+  "CTXN1",
+  "RPS3A",
+  "EIF2AK2",
+  "AP4B1",
+  "OR2T2",
+  "COMMD5"
+ ],
+ "top1": "SLC45A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SLC45A2\",\"confidence\":0.95,\"rationale\":\"Directly linked to oca4 with specific phenotypes and variants\"},{\"gene\":\"C3orf52\",\"confidence\":0.15,\"rationale\":\"Associated with woolly hair, not matching all phenotypes\"},{\"gene\":\"ABCA8\",\"confidence\":0.12,\"rationale\":\"Linked to OCA8 but lacks specific phenotypic match\"},{\"gene\":\"ZNF593\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"DEPDC1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"BRD7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"VSIG10L2\",\"confidence\":0.08,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"CIP2A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"PPT2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"CTXN1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"RPS3A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"EIF2AK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"AP4B1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"OR2T2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"},{\"gene\":\"COMMD5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.557,
+ "tokens_in": 15617,
+ "tokens_out": 384
+}

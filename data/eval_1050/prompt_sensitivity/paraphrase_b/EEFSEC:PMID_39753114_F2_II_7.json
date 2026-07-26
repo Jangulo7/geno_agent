@@ -1,0 +1,33 @@
+{
+ "case_id": "EEFSEC:PMID_39753114_F2_II_7",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "EEFSEC",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MSTO1",
+  "TOMM7",
+  "AP3D1",
+  "INTS13",
+  "AASS",
+  "NBPF12",
+  "PKIA",
+  "MDH2",
+  "SF3A2",
+  "IFITM3",
+  "GOLGA8B",
+  "MSRA",
+  "DYNLT5",
+  "ALDH5A1",
+  "EEFSEC"
+ ],
+ "top1": "MSTO1",
+ "top1_correct": false,
+ "causal_rank": 15,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MSTO1\",\"confidence\":0.95,\"rationale\":\"Directly matches multiple patient phenotypes including micrognathia, developmental delay, and strabismus.\"},{\"gene\":\"TOMM7\",\"confidence\":0.75,\"rationale\":\"Links to mitochondrial disorders with micrognathia and developmental delay.\"},{\"gene\":\"AP3D1\",\"confidence\":0.3,\"rationale\":\"Associated with ocular abnormalities but lacks direct connection to micrognathia or developmental delay.\"},{\"gene\":\"INTS13\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"AASS\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"NBPF12\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PKIA\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MDH2\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SF3A2\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"IFITM3\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"GOLGA8B\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MSRA\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"DYNLT5\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"ALDH5A1\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"EEFSEC\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.87,
+ "tokens_in": 20205,
+ "tokens_out": 431
+}

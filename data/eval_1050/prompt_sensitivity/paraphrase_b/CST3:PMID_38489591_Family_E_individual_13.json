@@ -1,0 +1,33 @@
+{
+ "case_id": "CST3:PMID_38489591_Family_E_individual_13",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "CST3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SRD5A3",
+  "SUFU",
+  "MACROH2A2",
+  "TECPR2",
+  "SLC35F6",
+  "SLC52A1",
+  "MAGIX",
+  "NAXD",
+  "SFT2D1",
+  "NUDT2",
+  "POTEA",
+  "SUCLG2",
+  "TBATA",
+  "ETV7",
+  "SLC16A14"
+ ],
+ "top1": "SRD5A3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SRD5A3\",\"confidence\":0.95,\"rationale\":\"Directly linked to cerebellar atrophy and gait disturbance with homozygous mutations.\"},{\"gene\":\"SUFU\",\"confidence\":0.25,\"rationale\":\"Associated with cerebellar vermis hypoplasia and ataxia.\"},{\"gene\":\"MACROH2A2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TECPR2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC35F6\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC52A1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"MAGIX\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NAXD\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SFT2D1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NUDT2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"POTEA\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SUCLG2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TBATA\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ETV7\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC16A14\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.284,
+ "tokens_in": 16239,
+ "tokens_out": 433
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "DHCR24:PMID_29175559_Patient_6_Zolotushko_2011_IV5",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "DHCR24",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DHCR24",
+  "CCN2",
+  "PRR11",
+  "OR52E5",
+  "CA14",
+  "TUT4",
+  "EXD2",
+  "MPC2",
+  "AGO3",
+  "MYO1D",
+  "TAB1",
+  "OPA1",
+  "PXMP4",
+  "DNLZ",
+  "TEX2"
+ ],
+ "top1": "DHCR24",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DHCR24\",\"confidence\":0.95,\"rationale\":\"Directly links to desmosterolosis with all patient phenotypes\"},{\"gene\":\"CCN2\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"PRR11\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"OR52E5\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"CA14\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"TUT4\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"EXD2\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"MPC2\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"AGO3\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"MYO1D\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"TAB1\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"OPA1\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"PXMP4\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"DNLZ\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"},{\"gene\":\"TEX2\",\"confidence\":0.15,\"rationale\":\"General developmental delay with brain abnormalities\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.269,
+ "tokens_in": 14788,
+ "tokens_out": 363
+}

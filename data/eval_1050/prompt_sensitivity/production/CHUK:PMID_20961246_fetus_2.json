@@ -1,0 +1,33 @@
+{
+ "case_id": "CHUK:PMID_20961246_fetus_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "CHUK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CHUK",
+  "MBD5",
+  "CYP7B1",
+  "GET3",
+  "EPHX4",
+  "PLEKHD1",
+  "CCDC124",
+  "TMEM139",
+  "NACA",
+  "PDE8B",
+  "YWHAG",
+  "SLC30A5",
+  "NAF1",
+  "LRRC24",
+  "OR10H2"
+ ],
+ "top1": "CHUK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CHUK\",\"confidence\":0.95,\"rationale\":\"Multiple reports link CHUK variants to severe fetal malformations matching the phenotype.\"},{\"gene\":\"MBD5\",\"confidence\":0.15,\"rationale\":\"Limited evidence of MBD5 involvement in similar phenotypes.\"},{\"gene\":\"CYP7B1\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"GET3\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"EPHX4\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"PLEKHD1\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"CCDC124\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"TMEM139\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"NACA\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"PDE8B\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"YWHAG\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"SLC30A5\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"NAF1\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"LRRC24\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"},{\"gene\":\"OR10H2\",\"confidence\":0.05,\"rationale\":\"No direct link to the described fetal malformations.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.325,
+ "tokens_in": 18506,
+ "tokens_out": 444
+}

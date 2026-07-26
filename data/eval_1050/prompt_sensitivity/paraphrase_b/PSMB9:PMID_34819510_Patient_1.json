@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB9:PMID_34819510_Patient_1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "PSMB9",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PSMB9",
+  "CCL17",
+  "WDR19",
+  "PKM",
+  "FOLR2",
+  "SP140",
+  "CPHXL",
+  "FCAR",
+  "TPP2",
+  "REL",
+  "ANKRD17",
+  "SAXO6",
+  "FAM151B",
+  "XYLB",
+  "NDST3"
+ ],
+ "top1": "PSMB9",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PSMB9\",\"confidence\":0.95,\"rationale\":\"Directly links to PRAAS with immunodeficiency, matching multiple patient phenotypes including portal hypertension, myositis, and pulmonary hypertension.\"},{\"gene\":\"CCL17\",\"confidence\":0.15,\"rationale\":\"Linked to skin rashes but lacks direct connection to other key phenotypes like cirrhosis or myositis.\"},{\"gene\":\"WDR19\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to patient's specific phenotypes.\"},{\"gene\":\"PKM\",\"confidence\":0.1,\"rationale\":\"No relevant evidence connecting to the patient's clinical features.\"},{\"gene\":\"FOLR2\",\"confidence\":0.1,\"rationale\":\"No evidence linking to the patient's specific symptoms.\"},{\"gene\":\"SP140\",\"confidence\":0.1,\"rationale\":\"No direct evidence connecting to the patient's clinical features.\"},{\"gene\":\"CPHXL\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's specific symptoms.\"},{\"gene\":\"FCAR\",\"confidence\":0.1,\"rationale\":\"No evidence linking to the patient's clinical features.\"},{\"gene\":\"TPP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence connecting to the patient's specific symptoms.\"},{\"gene\":\"REL\",\"confidence\":0.1,\"rationale\":\"No evidence linking to the patient's clinical features.\"},{\"gene\":\"ANKRD17\",\"confidence\":0.1,\"rationale\":\"No direct evidence connecting to the patient's specific symptoms.\"},{\"gene\":\"SAXO6\",\"confidence\":0.1,\"rationale\":\"No evidence linking to the patient's clinical features.\"},{\"gene\":\"FAM151B\",\"confidence\":0.1,\"rationale\":\"No direct evidence connecting to the patient's specific symptoms.\"},{\"gene\":\"XYLB\",\"confidence\":0.1,\"rationale\":\"No evidence linking to the patient's clinical features.\"},{\"gene\":\"NDST3\",\"confidence\":0.1,\"rationale\":\"No direct evidence connecting to the patient's specific symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.568,
+ "tokens_in": 17558,
+ "tokens_out": 443
+}

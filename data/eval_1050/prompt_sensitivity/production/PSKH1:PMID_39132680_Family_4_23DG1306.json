@@ -1,0 +1,33 @@
+{
+ "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "PSKH1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PNLIP",
+  "NBPF3",
+  "CASTOR2",
+  "EDEM3",
+  "ATF6",
+  "ZNF346",
+  "CUTC",
+  "ADCY2",
+  "AMER1",
+  "NUPR1",
+  "OR51B2",
+  "RNF150",
+  "ASH2L",
+  "OR5H2",
+  "HDAC1"
+ ],
+ "top1": "PNLIP",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PNLIP\",\"confidence\":0.95,\"rationale\":\"Elevated alkaline phosphatase and bile acids linked to lipase dysfunction\"},{\"gene\":\"NBPF3\",\"confidence\":0.85,\"rationale\":\"Alkaline phosphatase elevation and liver dysfunction\"},{\"gene\":\"CASTOR2\",\"confidence\":0.65,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"EDEM3\",\"confidence\":0.6,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"ATF6\",\"confidence\":0.55,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"ZNF346\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"CUTC\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"ADCY2\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"AMER1\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"NUPR1\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"OR51B2\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"RNF150\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"ASH2L\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"OR5H2\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"},{\"gene\":\"HDAC1\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and splenomegaly mentioned\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.073,
+ "tokens_in": 17079,
+ "tokens_out": 402
+}

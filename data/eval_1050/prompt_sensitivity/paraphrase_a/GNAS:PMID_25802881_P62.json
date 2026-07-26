@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_P62",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GNAS",
+  "AUTS2",
+  "CYP26B1",
+  "DNAJC3",
+  "ZBTB20",
+  "CRIPT",
+  "QTRT2",
+  "CUEDC2",
+  "EPPIN",
+  "NTAQ1",
+  "ARHGAP39",
+  "RNF125",
+  "ZNF777",
+  "OR4D2",
+  "SLC25A18"
+ ],
+ "top1": "GNAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GNAS\",\"confidence\":0.95,\"rationale\":\"Links to AHO with short metacarpal, obesity, and intellectual disability.\"},{\"gene\":\"AUTS2\",\"confidence\":0.25,\"rationale\":\"Associated with short stature and intellectual disability but not metacarpal shortening.\"},{\"gene\":\"CYP26B1\",\"confidence\":0.15,\"rationale\":\"Linked to skeletal malformations but not obesity or intellectual disability.\"},{\"gene\":\"DNAJC3\",\"confidence\":0.1,\"rationale\":\"Tied to diabetes and neurodegeneration, not metacarpal shortening.\"},{\"gene\":\"ZBTB20\",\"confidence\":0.1,\"rationale\":\"Linked to macrocephaly and myopathy, not metacarpal shortening.\"},{\"gene\":\"CRIPT\",\"confidence\":0.1,\"rationale\":\"Associated with short metacarpals and intellectual disability but not obesity.\"},{\"gene\":\"QTRT2\",\"confidence\":0.1,\"rationale\":\"Linked to neurodevelopmental issues but not metacarpal shortening.\"},{\"gene\":\"CUEDC2\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"EPPIN\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"NTAQ1\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ARHGAP39\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"RNF125\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ZNF777\",\"confidence\":0.1,\"rationale\":\"Linked to short stature but not metacarpal shortening.\"},{\"gene\":\"OR4D2\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"SLC25A18\",\"confidence\":0.1,\"rationale\":\"No direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.944,
+ "tokens_in": 12811,
+ "tokens_out": 451
+}

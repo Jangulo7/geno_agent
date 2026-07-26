@@ -1,0 +1,32 @@
+{
+ "case_id": "NSUN6:PMID_37226891_Individual_3",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "NSUN6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TCF4",
+  "VAMP7",
+  "SLC9A8",
+  "DPP7",
+  "PYCR3",
+  "SLC52A3",
+  "PRY2",
+  "SNAI2",
+  "KRTAP2-3",
+  "APLP2",
+  "NLRP4",
+  "RALGPS1",
+  "DLL3",
+  "ARHGEF3"
+ ],
+ "top1": "TCF4",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TCF4\",\"confidence\":0.95,\"rationale\":\"TCF4 deletions are linked to intellectual disability, autism, ADHD, and speech delays.\"},{\"gene\":\"VAMP7\",\"confidence\":0.75,\"rationale\":\"VAMP7 duplication in a patient with similar features.\"},{\"gene\":\"SLC9A8\",\"confidence\":0.6,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"FOXP1\",\"confidence\":0.55,\"rationale\":\"FOXP1 syndrome includes ADHD, speech delay, and intellectual disability.\"},{\"gene\":\"DPP7\",\"confidence\":0.5,\"rationale\":\"Associated with speech delay and intellectual disability.\"},{\"gene\":\"PYCR3\",\"confidence\":0.45,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"SLC52A3\",\"confidence\":0.4,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"PRY2\",\"confidence\":0.35,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"SNAI2\",\"confidence\":0.3,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"KRTAP2-3\",\"confidence\":0.25,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"APLP2\",\"confidence\":0.2,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"NLRP4\",\"confidence\":0.15,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"RALGPS1\",\"confidence\":0.1,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"DLL3\",\"confidence\":0.05,\"rationale\":\"Linked to developmental delays and speech issues.\"},{\"gene\":\"ARHGEF3\",\"confidence\":0.0,\"rationale\":\"No direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.336,
+ "tokens_in": 15322,
+ "tokens_out": 407
+}

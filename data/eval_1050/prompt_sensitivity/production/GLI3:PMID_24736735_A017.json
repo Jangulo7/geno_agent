@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_24736735_A017",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "NRM",
+  "IZUMO2",
+  "ZNF114",
+  "C6",
+  "ITIH1",
+  "CD101",
+  "TEX10",
+  "ACAA2",
+  "GANAB",
+  "MRPL41",
+  "PAGE4",
+  "FADS3",
+  "FAM236B",
+  "TMEM9B"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"Direct link to polydactyly and corpus callosum hypoplasia with molecular evidence\"},{\"gene\":\"NRM\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"IZUMO2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"ZNF114\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"C6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"ITIH1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"CD101\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"TEX10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"ACAA2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"GANAB\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"MRPL41\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"PAGE4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"FADS3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"FAM236B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"},{\"gene\":\"TMEM9B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.41,
+ "tokens_in": 19831,
+ "tokens_out": 400
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "TUBA4A:PMID_37418012_Family_1_IV_1",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "TUBA4A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UPP1",
+  "TUBA4A",
+  "INHBC",
+  "IRX3",
+  "CEBPZ",
+  "ZNF385B",
+  "NEXN",
+  "WDR4",
+  "ROPN1",
+  "SLC30A4",
+  "DOCK1",
+  "CWH43",
+  "MTFP1",
+  "PKIB",
+  "OR10J4"
+ ],
+ "top1": "UPP1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UPP1\",\"confidence\":0.95,\"rationale\":\"Matches multiple phenotypes with strong evidence of cerebellar atrophy, nystagmus, and pyramidal signs.\"},{\"gene\":\"TUBA4A\",\"confidence\":0.85,\"rationale\":\"Links to cerebellar atrophy, dysmetria, and pyramidal signs with relevant mutations.\"},{\"gene\":\"INHBC\",\"confidence\":0.75,\"rationale\":\"Associated with pyramidal signs and eye movement disturbances.\"},{\"gene\":\"IRX3\",\"confidence\":0.7,\"rationale\":\"Linked to cerebellar atrophy and pyramidal signs.\"},{\"gene\":\"CEBPZ\",\"confidence\":0.65,\"rationale\":\"Shows some overlap with pyramidal signs and coordination issues.\"},{\"gene\":\"ZNF385B\",\"confidence\":0.6,\"rationale\":\"Partial overlap with gait disturbance and coordination problems.\"},{\"gene\":\"NEXN\",\"confidence\":0.55,\"rationale\":\"Some evidence of cerebellar atrophy and coordination issues.\"},{\"gene\":\"WDR4\",\"confidence\":0.5,\"rationale\":\"Limited overlap with gait and coordination issues.\"},{\"gene\":\"ROPN1\",\"confidence\":0.45,\"rationale\":\"Minimal overlap with pyramidal signs and coordination.\"},{\"gene\":\"SLC30A4\",\"confidence\":0.4,\"rationale\":\"Limited evidence of gait disturbance and coordination.\"},{\"gene\":\"DOCK1\",\"confidence\":0.35,\"rationale\":\"Weak association with gait and coordination issues.\"},{\"gene\":\"CWH43\",\"confidence\":0.3,\"rationale\":\"Limited overlap with pyramidal signs and coordination.\"},{\"gene\":\"MTFP1\",\"confidence\":0.25,\"rationale\":\"Some evidence of eye movement and coordination issues.\"},{\"gene\":\"PKIB\",\"confidence\":0.2,\"rationale\":\"Minimal overlap with pyramidal signs and coordination.\"},{\"gene\":\"OR10J4\",\"confidence\":0.15,\"rationale\":\"Very limited evidence of gait and coordination issues.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.949,
+ "tokens_in": 13364,
+ "tokens_out": 446
+}

@@ -1,0 +1,66 @@
+{
+  "work_package": "WP8-D",
+  "description": "Prompt-sensitivity replay of the LEA stage over cached retrieval. Only the instruction wording changes; evidence, candidates and decoding are held identical.",
+  "seed": 42,
+  "model": "Qwen3-8B",
+  "decoding": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 42
+  },
+  "sampling_frame": "MONDO-stratified subsample, seed 42",
+  "n_cases": 152,
+  "variants": [
+    {
+      "variant": "production",
+      "n": 152,
+      "n_parse_failures": 0,
+      "top1_overall": 0.6645,
+      "n_fair": 42,
+      "top1_overlap_absent": 0.7619,
+      "mean_latency_s": 6.72
+    },
+    {
+      "variant": "paraphrase_a",
+      "n": 152,
+      "n_parse_failures": 0,
+      "top1_overall": 0.6842,
+      "n_fair": 42,
+      "top1_overlap_absent": 0.7857,
+      "mean_latency_s": 7.22
+    },
+    {
+      "variant": "paraphrase_b",
+      "n": 152,
+      "n_parse_failures": 0,
+      "top1_overall": 0.6513,
+      "n_fair": 42,
+      "top1_overlap_absent": 0.7381,
+      "mean_latency_s": 7.05
+    }
+  ],
+  "agreement": [
+    {
+      "variant": "production",
+      "agreement_with_published_cell_S": 1.0,
+      "published_top1_on_subsample": 0.6645
+    },
+    {
+      "variant": "paraphrase_a",
+      "agreement_with_published_cell_S": 0.9803,
+      "published_top1_on_subsample": 0.6645
+    },
+    {
+      "variant": "paraphrase_b",
+      "agreement_with_published_cell_S": 0.9868,
+      "published_top1_on_subsample": 0.6645
+    }
+  ],
+  "range_top1_overall_pp": 3.3,
+  "range_top1_overlap_absent_pp": 4.8,
+  "prompts": {
+    "production": "<verbatim production prompt from lea_log>",
+    "paraphrase_a": "/no_think\nYou are a medical geneticist deciding which candidate gene explains a patient's presentation. For each candidate you are given a few passages from the published literature. Weigh the candidates against one another and decide whose evidence most specifically accounts for this particular combination of phenotypic features.\n\nReply with one JSON ARRAY sorted from most to least likely. Every element must contain exactly these keys:\n  \"gene\" (string): the HGNC symbol, copied exactly as given.\n  \"confidence\" (float 0.0-1.0): how strongly you believe this gene is causal.\n  \"rationale\" (string, <=180 chars): a single sentence giving your reason.\n\nExactly one candidate is causal, so the leading entry's confidence should stand well clear of the others. Every gene supplied must appear once and only once. Return the JSON array alone -- no markdown, no commentary.",
+    "paraphrase_b": "/no_think\nTask: rank candidate genes by how well the supplied literature evidence supports each as the cause of the patient's phenotype.\n\nYou will receive the patient's HPO terms followed by a block of evidence passages for each candidate gene. Compare candidates directly rather than judging each in isolation; the question is which single gene best explains the phenotype profile as a whole.\n\nOutput format: a JSON ARRAY in descending order of confidence, each element having exactly the keys \"gene\" (HGNC symbol as provided), \"confidence\" (float between 0.0 and 1.0), and \"rationale\" (one sentence, at most 180 characters). Only one gene is causal, so the top confidence should be clearly separated from the remainder. Include each supplied gene exactly once. Emit the raw JSON array with no surrounding text."
+  }
+}

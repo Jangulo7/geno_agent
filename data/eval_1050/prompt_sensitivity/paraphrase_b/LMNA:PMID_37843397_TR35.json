@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR35",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PRDM13",
+  "ATAD2",
+  "KCNT2",
+  "ZNF784",
+  "OR10Q1",
+  "NADSYN1",
+  "FCRLA",
+  "NCBP2L",
+  "C1QTNF8",
+  "KLHDC1",
+  "GAGE12J",
+  "LRRC56",
+  "ERLIN1",
+  "HIPK2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly links to FPLD2 with matching phenotypes.\"},{\"gene\":\"PRDM13\",\"confidence\":0.15,\"rationale\":\"Mentions PPARG gene variant in FPLD3, not directly linked.\"},{\"gene\":\"ATAD2\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy discussion, no specific link.\"},{\"gene\":\"KCNT2\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"ZNF784\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"OR10Q1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"NADSYN1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"FCRLA\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"NCBP2L\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"C1QTNF8\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"KLHDC1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"GAGE12J\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"LRRC56\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"ERLIN1\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"},{\"gene\":\"HIPK2\",\"confidence\":0.1,\"rationale\":\"No specific phenotypic or genetic link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.285,
+ "tokens_in": 18262,
+ "tokens_out": 411
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_26981933_Family_B_individual_B2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "CIMIP1",
+  "SMIM30",
+  "PRMT5",
+  "S100A10",
+  "ATAD2",
+  "HNRNPAB",
+  "TTLL6",
+  "CACNA1F",
+  "S100A13",
+  "AGR2",
+  "POGLUT1",
+  "MYOC",
+  "ZBTB9",
+  "RNASE7"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to hypogammaglobulinemia, inverted CD4/CD8, and recurrent infections with variant identified.\"},{\"gene\":\"CIMIP1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SMIM30\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PRMT5\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"S100A10\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"ATAD2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"HNRNPAB\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TTLL6\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CACNA1F\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"S100A13\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"AGR2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"POGLUT1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MYOC\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"ZBTB9\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"RNASE7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.374,
+ "tokens_in": 16735,
+ "tokens_out": 426
+}

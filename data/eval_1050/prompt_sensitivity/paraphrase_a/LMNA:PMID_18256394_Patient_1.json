@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "CCDC157",
+  "HECW2",
+  "SPAG11A",
+  "CLHC1",
+  "MVB12A",
+  "MAP3K7CL",
+  "KCNIP1",
+  "TTC13",
+  "PIK3C2G",
+  "OR10V1",
+  "C12orf54",
+  "FAM90A1",
+  "DDX49",
+  "RCOR3"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations cause progeria with lipodystrophy, alopecia, delayed eruption, and proptosis matching the patient's features.\"},{\"gene\":\"CCDC157\",\"confidence\":0.15,\"rationale\":\"CCDC157 is linked to cleidocranial dysplasia, which includes dental issues but not lipodystrophy or proptosis.\"},{\"gene\":\"HECW2\",\"confidence\":0.1,\"rationale\":\"HECW2 has no direct link to the patient's features.\"},{\"gene\":\"SPAG11A\",\"confidence\":0.1,\"rationale\":\"SPAG11A is not associated with the patient's clinical features.\"},{\"gene\":\"CLHC1\",\"confidence\":0.1,\"rationale\":\"CLHC1 has no direct link to the patient's features.\"},{\"gene\":\"MVB12A\",\"confidence\":0.1,\"rationale\":\"MVB12A is not associated with the patient's clinical features.\"},{\"gene\":\"MAP3K7CL\",\"confidence\":0.1,\"rationale\":\"MAP3K7CL has no direct link to the patient's features.\"},{\"gene\":\"KCNIP1\",\"confidence\":0.1,\"rationale\":\"KCNIP1 is not associated with the patient's clinical features.\"},{\"gene\":\"TTC13\",\"confidence\":0.1,\"rationale\":\"TTC13 has no direct link to the patient's features.\"},{\"gene\":\"PIK3C2G\",\"confidence\":0.1,\"rationale\":\"PIK3C2G is not associated with the patient's clinical features.\"},{\"gene\":\"OR10V1\",\"confidence\":0.1,\"rationale\":\"OR10V1 has no direct link to the patient's features.\"},{\"gene\":\"C12orf54\",\"confidence\":0.1,\"rationale\":\"C12orf54 is not associated with the patient's clinical features.\"},{\"gene\":\"FAM90A1\",\"confidence\":0.1,\"rationale\":\"FAM90A1 has no direct link to the patient's features.\"},{\"gene\":\"DDX49\",\"confidence\":0.1,\"rationale\":\"DDX49 is not associated with the patient's clinical features.\"},{\"gene\":\"RCOR3\",\"confidence\":0.1,\"rationale\":\"RCOR3 has no direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.4,
+ "tokens_in": 16967,
+ "tokens_out": 520
+}

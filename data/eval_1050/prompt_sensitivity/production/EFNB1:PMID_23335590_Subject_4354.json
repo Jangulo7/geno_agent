@@ -1,0 +1,33 @@
+{
+ "case_id": "EFNB1:PMID_23335590_Subject_4354",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "EFNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EFNB1",
+  "MPHOSPH10",
+  "AMY1B",
+  "IFT27",
+  "PTGES3",
+  "TAF7",
+  "RECK",
+  "DYNLT2",
+  "STARD3",
+  "ESRP1",
+  "NUB1",
+  "SCAMP1",
+  "GPR87",
+  "MUTYH",
+  "ZNF225"
+ ],
+ "top1": "EFNB1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"Directly linked to craniosynostosis, hypertelorism, and developmental delay in CFNS.\"},{\"gene\":\"MPHOSPH10\",\"confidence\":0.15,\"rationale\":\"Only mention of clinodactyly and craniosynostosis in a single case.\"},{\"gene\":\"AMY1B\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"IFT27\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"PTGES3\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"TAF7\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"RECK\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"DYNLT2\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"STARD3\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"ESRP1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"NUB1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"SCAMP1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"GPR87\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"MUTYH\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"},{\"gene\":\"ZNF225\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or developmental delay.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.318,
+ "tokens_in": 14755,
+ "tokens_out": 465
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "FCGR3A",
+  "SLC35H1",
+  "TREH",
+  "RLN1",
+  "SCX",
+  "NES",
+  "RLN3",
+  "NLGN3",
+  "CTBS",
+  "SPEGNB",
+  "FAM216B",
+  "LRATD1",
+  "UBXN11",
+  "PSMA6",
+  "STEAP4"
+ ],
+ "top1": "FCGR3A",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"FCGR3A\",\"confidence\":0.95,\"rationale\":\"Elevated ALT, AST, GGT, and bilirubin directly linked to FCGR3A evidence.\"},{\"gene\":\"SLC35H1\",\"confidence\":0.15,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"TREH\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"RLN1\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"SCX\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"NES\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"RLN3\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"NLGN3\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"CTBS\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"FAM216B\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"LRATD1\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"UBXN11\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"PSMA6\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"},{\"gene\":\"STEAP4\",\"confidence\":0.1,\"rationale\":\"General hepatocellular injury mentions, no specific links.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.593,
+ "tokens_in": 11984,
+ "tokens_out": 433
+}

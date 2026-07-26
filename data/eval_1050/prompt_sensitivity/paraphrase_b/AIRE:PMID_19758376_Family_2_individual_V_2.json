@@ -1,0 +1,33 @@
+{
+ "case_id": "AIRE:PMID_19758376_Family_2_individual_V_2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "AIRE",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AIRE",
+  "NFKB2",
+  "C16orf89",
+  "SMURF2",
+  "OLFML2B",
+  "COMMD1",
+  "GSTA1",
+  "TEKT2",
+  "FANCD2OS",
+  "TOX",
+  "KCNJ14",
+  "MRPL11",
+  "AQP1",
+  "ZDHHC8",
+  "MPIG6B"
+ ],
+ "top1": "AIRE",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"Directly links to APS-1 with all patient phenotypes.\"},{\"gene\":\"NFKB2\",\"confidence\":0.15,\"rationale\":\"Mentions immune deficiencies but not specific phenotypes.\"},{\"gene\":\"C16orf89\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"SMURF2\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"OLFML2B\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"COMMD1\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"GSTA1\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"TEKT2\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"FANCD2OS\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"TOX\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"KCNJ14\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"MRPL11\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"AQP1\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"ZDHHC8\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"MPIG6B\",\"confidence\":0.1,\"rationale\":\"No relevant mentions in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.471,
+ "tokens_in": 17997,
+ "tokens_out": 361
+}

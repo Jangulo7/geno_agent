@@ -1,0 +1,33 @@
+{
+ "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "PSKH1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PNLIP",
+  "NBPF3",
+  "CASTOR2",
+  "ATF6",
+  "EDEM3",
+  "ZNF346",
+  "CUTC",
+  "ADCY2",
+  "AMER1",
+  "NUPR1",
+  "OR51B2",
+  "RNF150",
+  "ASH2L",
+  "OR5H2",
+  "HDAC1"
+ ],
+ "top1": "PNLIP",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PNLIP\",\"confidence\":0.95,\"rationale\":\"Elevated liver enzymes and cholestasis are linked to PNLIP dysfunction.\"},{\"gene\":\"NBPF3\",\"confidence\":0.85,\"rationale\":\"Alkaline phosphatase elevation is directly mentioned in NBPF3 context.\"},{\"gene\":\"CASTOR2\",\"confidence\":0.65,\"rationale\":\"Liver dysfunction and cholestasis are associated with CASTOR2.\"},{\"gene\":\"ATF6\",\"confidence\":0.6,\"rationale\":\"Alkaline phosphatase and liver enzymes are mentioned in ATF6 context.\"},{\"gene\":\"EDEM3\",\"confidence\":0.55,\"rationale\":\"Liver dysfunction and cholestasis are associated with EDEM3.\"},{\"gene\":\"ZNF346\",\"confidence\":0.5,\"rationale\":\"Liver enzymes and cholestasis are mentioned in ZNF346 context.\"},{\"gene\":\"CUTC\",\"confidence\":0.45,\"rationale\":\"Liver dysfunction and cholestasis are associated with CUTC.\"},{\"gene\":\"ADCY2\",\"confidence\":0.4,\"rationale\":\"Liver enzymes and cholestasis are mentioned in ADCY2 context.\"},{\"gene\":\"AMER1\",\"confidence\":0.35,\"rationale\":\"Liver dysfunction and cholestasis are associated with AMER1.\"},{\"gene\":\"NUPR1\",\"confidence\":0.3,\"rationale\":\"Hypoalbuminemia and liver dysfunction are mentioned in NUPR1 context.\"},{\"gene\":\"OR51B2\",\"confidence\":0.25,\"rationale\":\"Liver dysfunction and cholestasis are associated with OR51B2.\"},{\"gene\":\"RNF150\",\"confidence\":0.2,\"rationale\":\"Liver dysfunction and cholestasis are associated with RNF150.\"},{\"gene\":\"ASH2L\",\"confidence\":0.15,\"rationale\":\"Liver dysfunction and cholestasis are associated with ASH2L.\"},{\"gene\":\"OR5H2\",\"confidence\":0.1,\"rationale\":\"Liver dysfunction and cholestasis are associated with OR5H2.\"},{\"gene\":\"HDAC1\",\"confidence\":0.05,\"rationale\":\"Liver dysfunction and cholestasis are associated with HDAC1.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.914,
+ "tokens_in": 17061,
+ "tokens_out": 481
+}

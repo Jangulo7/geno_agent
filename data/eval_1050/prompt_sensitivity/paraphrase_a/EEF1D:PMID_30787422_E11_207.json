@@ -1,0 +1,33 @@
+{
+ "case_id": "EEF1D:PMID_30787422_E11_207",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "EEF1D",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EEF1D",
+  "TRIO",
+  "ALG6",
+  "KCNJ12",
+  "COX7A1",
+  "SLC25A31",
+  "ZIC5",
+  "POLG2",
+  "CCL24",
+  "PAQR6",
+  "OR51D1",
+  "OR5H2",
+  "KRTAP4-12",
+  "ADPRH",
+  "RAC1"
+ ],
+ "top1": "EEF1D",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"EEF1D\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Matches all key features: microcephaly, seizures, hypotonia, hypertelorism, and thin corpus callosum.\"\n  },\n  {\n    \"gene\": \"TRIO\",\n    \"confidence\": 0.85,\n    \"rationale\": \"Shares microcephaly, seizures, hypotonia, and facial dysmorphisms with the patient.\"\n  },\n  {\n    \"gene\": \"ALG6\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Reports seizures, hypotonia, and developmental delay, but lacks specific facial features.\"\n  },\n  {\n    \"gene\": \"KCNJ12\",\n    \"confidence\": 0.7,\n    \"rationale\": \"Shares microcephaly and seizures but lacks other key features.\"\n  },\n  {\n    \"gene\": \"COX7A1\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial dysmorphisms.\"\n  },\n  {\n    \"gene\": \"SLC25A31\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"ZIC5\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Reports microcephaly and seizures but lacks other key features.\"\n  },\n  {\n    \"gene\": \"POLG2\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"CCL24\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"PAQR6\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"OR51D1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"OR5H2\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"KRTAP4-12\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"ADPRH\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  },\n  {\n    \"gene\": \"RAC1\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Reports seizures and microcephaly but lacks facial features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 11.684,
+ "tokens_in": 18361,
+ "tokens_out": 651
+}

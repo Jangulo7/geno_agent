@@ -1,0 +1,33 @@
+{
+ "case_id": "COG8:PMID_17220172_patient",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "COG8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "COG8",
+  "GJD3",
+  "CREB3L4",
+  "PRRX2",
+  "AVPI1",
+  "TRA2B",
+  "ADAMTS4",
+  "GSTM5",
+  "PTTG1IP2",
+  "OR5AC2",
+  "SIAH2",
+  "PON3",
+  "BCL3",
+  "CSNK2A2",
+  "UBA3"
+ ],
+ "top1": "COG8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"COG8\",\"confidence\":0.95,\"rationale\":\"Directly links to cerebellar atrophy, intellectual disability, and oculomotor apraxia with molecular mechanisms.\"},{\"gene\":\"GJD3\",\"confidence\":0.15,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability in some cases.\"},{\"gene\":\"CREB3L4\",\"confidence\":0.1,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability in reported cases.\"},{\"gene\":\"PRRX2\",\"confidence\":0.1,\"rationale\":\"Reported in cases with cerebellar atrophy and intellectual disability.\"},{\"gene\":\"AVPI1\",\"confidence\":0.1,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability in some cases.\"},{\"gene\":\"TRA2B\",\"confidence\":0.1,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability in reported cases.\"},{\"gene\":\"ADAMTS4\",\"confidence\":0.1,\"rationale\":\"Reported in cases with cerebellar atrophy and intellectual disability.\"},{\"gene\":\"GSTM5\",\"confidence\":0.1,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability in some cases.\"},{\"gene\":\"PTTG1IP2\",\"confidence\":0.1,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability in reported cases.\"},{\"gene\":\"OR5AC2\",\"confidence\":0.1,\"rationale\":\"Reported in cases with cerebellar atrophy and intellectual disability.\"},{\"gene\":\"SIAH2\",\"confidence\":0.1,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability in some cases.\"},{\"gene\":\"PON3\",\"confidence\":0.1,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability in reported cases.\"},{\"gene\":\"BCL3\",\"confidence\":0.1,\"rationale\":\"Reported in cases with cerebellar atrophy and intellectual disability.\"},{\"gene\":\"CSNK2A2\",\"confidence\":0.1,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability in some cases.\"},{\"gene\":\"UBA3\",\"confidence\":0.1,\"rationale\":\"Linked to cerebellar atrophy and intellectual disability in reported cases.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.025,
+ "tokens_in": 17660,
+ "tokens_out": 479
+}

@@ -35,6 +35,16 @@ LICENSE
 CITATION.cff
 CONTRIBUTING.md
 data/MANIFEST.tsv
+# --- Revision analyses: machine-readable outputs backing every reported number ---
+# Small (~600 KB), AGPL-3.0, licence-clean (derived statistics, no PMC verbatim
+# text). Shipped with the code so a reader can check any figure in the paper
+# without re-running the pipeline. The two Markdown write-ups in that directory
+# are gitignored (internal manuscript-process notes) and never reach the bundle.
+reports/p2_revision
+# --- Prompt-sensitivity per-case outputs (WP8-D) ---
+# Model-generated rankings and responses only; the prompts and retrieved PMC
+# passages are NOT stored, so unlike cell_S_responses/ this is licence-clean.
+data/eval_1050/prompt_sensitivity
 # --- Explanatory doc + reproduction guide ---
 # The README is the single explanatory document bundled with the code.
 # reports/methodology.md and reports/agent_architecture.md are intentionally NOT

@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR9",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPARC",
+  "LMNA",
+  "MED24",
+  "TMEM218",
+  "OXT",
+  "FOXB2",
+  "DGCR8",
+  "WDR53",
+  "HEPH",
+  "ITGB1BP2",
+  "GBP5",
+  "SLC2A8",
+  "MPI",
+  "SLC4A3",
+  "TAF2"
+ ],
+ "top1": "SPARC",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPARC\",\"confidence\":0.95,\"rationale\":\"Directly links to lipodystrophy and metabolic features matching patient phenotype.\"},{\"gene\":\"LMNA\",\"confidence\":0.85,\"rationale\":\"Known for familial partial lipodystrophy with metabolic features.\"},{\"gene\":\"MED24\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TMEM218\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"OXT\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"FOXB2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"DGCR8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"WDR53\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"HEPH\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ITGB1BP2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GBP5\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SLC2A8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MPI\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"SLC4A3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TAF2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.097,
+ "tokens_in": 18030,
+ "tokens_out": 395
+}

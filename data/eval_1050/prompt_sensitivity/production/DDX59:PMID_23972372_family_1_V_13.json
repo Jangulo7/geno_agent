@@ -1,0 +1,33 @@
+{
+ "case_id": "DDX59:PMID_23972372_family_1_V_13",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "DDX59",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DDX59",
+  "CDKL1",
+  "SFXN5",
+  "H4C11",
+  "GPR87",
+  "C8G",
+  "ABCB11",
+  "IFT43",
+  "LIME1",
+  "TRAF1",
+  "UNC5CL",
+  "FBXO22",
+  "MKNK1",
+  "NDUFV2",
+  "TBX6"
+ ],
+ "top1": "DDX59",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DDX59\",\"confidence\":0.95,\"rationale\":\"Directly linked to OFD with matching phenotypes and functional evidence.\"},{\"gene\":\"CDKL1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"SFXN5\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"H4C11\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"GPR87\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"C8G\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"ABCB11\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"IFT43\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"LIME1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"TRAF1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"UNC5CL\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"FBXO22\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"MKNK1\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"NDUFV2\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"},{\"gene\":\"TBX6\",\"confidence\":0.05,\"rationale\":\"No specific evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.704,
+ "tokens_in": 16057,
+ "tokens_out": 412
+}

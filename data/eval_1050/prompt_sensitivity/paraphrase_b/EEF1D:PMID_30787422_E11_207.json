@@ -1,0 +1,33 @@
+{
+ "case_id": "EEF1D:PMID_30787422_E11_207",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "EEF1D",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TRIO",
+  "EEF1D",
+  "ALG6",
+  "KCNJ12",
+  "COX7A1",
+  "SLC25A31",
+  "ZIC5",
+  "POLG2",
+  "OR51D1",
+  "CCL24",
+  "RAC1",
+  "PAQR6",
+  "OR5H2",
+  "ADPRH",
+  "KRTAP4-12"
+ ],
+ "top1": "TRIO",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TRIO\",\"confidence\":0.95,\"rationale\":\"Matches all HPO terms with detailed seizure and brain imaging findings.\"},{\"gene\":\"EEF1D\",\"confidence\":0.85,\"rationale\":\"Strong overlap in microcephaly, seizures, and corpus callosum abnormalities.\"},{\"gene\":\"ALG6\",\"confidence\":0.75,\"rationale\":\"Seizures and hypotonia match, but lacks specific HPO term coverage.\"},{\"gene\":\"KCNJ12\",\"confidence\":0.65,\"rationale\":\"Some HPO terms match but less comprehensive evidence.\"},{\"gene\":\"COX7A1\",\"confidence\":0.6,\"rationale\":\"Partial overlap in seizures and microcephaly but limited detail.\"},{\"gene\":\"SLC25A31\",\"confidence\":0.55,\"rationale\":\"Limited HPO term coverage and less detailed evidence.\"},{\"gene\":\"ZIC5\",\"confidence\":0.5,\"rationale\":\"General overlap but lacks specific seizure and brain imaging details.\"},{\"gene\":\"POLG2\",\"confidence\":0.45,\"rationale\":\"Some HPO terms match but less comprehensive evidence.\"},{\"gene\":\"OR51D1\",\"confidence\":0.4,\"rationale\":\"Limited HPO term coverage and less detailed evidence.\"},{\"gene\":\"CCL24\",\"confidence\":0.35,\"rationale\":\"General overlap but lacks specific seizure and brain imaging details.\"},{\"gene\":\"RAC1\",\"confidence\":0.3,\"rationale\":\"Limited HPO term coverage and less detailed evidence.\"},{\"gene\":\"PAQR6\",\"confidence\":0.25,\"rationale\":\"General overlap but lacks specific seizure and brain imaging details.\"},{\"gene\":\"OR5H2\",\"confidence\":0.2,\"rationale\":\"Limited HPO term coverage and less detailed evidence.\"},{\"gene\":\"ADPRH\",\"confidence\":0.15,\"rationale\":\"General overlap but lacks specific seizure and brain imaging details.\"},{\"gene\":\"KRTAP4-12\",\"confidence\":0.1,\"rationale\":\"Limited HPO term coverage and less detailed evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.727,
+ "tokens_in": 18348,
+ "tokens_out": 444
+}

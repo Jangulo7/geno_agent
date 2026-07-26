@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR36",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "AFMID",
+  "ARAP1",
+  "CAMKK2",
+  "DUSP26",
+  "RFXAP",
+  "ZIM3",
+  "COLGALT2",
+  "C5orf34",
+  "TIMM44",
+  "PRAMEF17",
+  "BMS1",
+  "PRSS35",
+  "SMARCA4",
+  "CAP1"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Direct link to familial partial lipodystrophy with matching phenotypes.\"},{\"gene\":\"AFMID\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"ARAP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"CAMKK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"DUSP26\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"RFXAP\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"ZIM3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"COLGALT2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"C5orf34\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"TIMM44\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"PRAMEF17\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"BMS1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"PRSS35\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"SMARCA4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"},{\"gene\":\"CAP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic or genetic evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.115,
+ "tokens_in": 18873,
+ "tokens_out": 410
+}

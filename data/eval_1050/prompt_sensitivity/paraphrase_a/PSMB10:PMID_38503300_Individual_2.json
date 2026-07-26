@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD79A",
+  "IFNGR2",
+  "ZNF493",
+  "TRIM71",
+  "GOLGA6B",
+  "CYP4F8",
+  "EXOG",
+  "KCTD7",
+  "ZNRF2",
+  "NTF4",
+  "CACNA1D",
+  "KANK4",
+  "MMP24",
+  "AUTS2",
+  "OR2A25"
+ ],
+ "top1": "CD79A",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD79A\",\"confidence\":0.95,\"rationale\":\"Direct link to B-cell defects, recurrent infections, and colitis with T and B cell counts as described.\"},{\"gene\":\"IFNGR2\",\"confidence\":0.15,\"rationale\":\"Linked to immune deficiencies but lacks specific B-cell and colitis features.\"},{\"gene\":\"ZNF493\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's immunodeficiency or colitis.\"},{\"gene\":\"TRIM71\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"GOLGA6B\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"},{\"gene\":\"CYP4F8\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"EXOG\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"},{\"gene\":\"KCTD7\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"ZNRF2\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"},{\"gene\":\"NTF4\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"CACNA1D\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"},{\"gene\":\"KANK4\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"MMP24\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"},{\"gene\":\"AUTS2\",\"confidence\":0.1,\"rationale\":\"No specific evidence for immunodeficiency or colitis.\"},{\"gene\":\"OR2A25\",\"confidence\":0.1,\"rationale\":\"No direct evidence for immunodeficiency or colitis.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.799,
+ "tokens_in": 18475,
+ "tokens_out": 445
+}

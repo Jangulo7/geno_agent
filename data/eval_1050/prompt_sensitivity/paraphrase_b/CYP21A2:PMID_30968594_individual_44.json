@@ -1,0 +1,33 @@
+{
+ "case_id": "CYP21A2:PMID_30968594_individual_44",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "CYP21A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CYP21A2",
+  "RFX6",
+  "SPRR2A",
+  "PLSCR5",
+  "CPED1",
+  "VCPKMT",
+  "DPY19L4",
+  "MAP7D3",
+  "MTF2",
+  "CIROP",
+  "DYNC1LI1",
+  "ARRB1",
+  "MICU3",
+  "JAGN1",
+  "DESI1"
+ ],
+ "top1": "CYP21A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CYP21A2\",\"confidence\":0.95,\"rationale\":\"Directly links to ACTH and testosterone elevation via 21-OHD mechanism.\"},{\"gene\":\"RFX6\",\"confidence\":0.15,\"rationale\":\"No direct link to ACTH/testosterone; mentions intestinal issues.\"},{\"gene\":\"SPRR2A\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions cancer.\"},{\"gene\":\"PLSCR5\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions anemia.\"},{\"gene\":\"CPED1\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions anemia.\"},{\"gene\":\"VCPKMT\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions testosterone levels.\"},{\"gene\":\"DPY19L4\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions testosterone levels.\"},{\"gene\":\"MAP7D3\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions testosterone levels.\"},{\"gene\":\"MTF2\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions testosterone levels.\"},{\"gene\":\"CIROP\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"},{\"gene\":\"DYNC1LI1\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"},{\"gene\":\"ARRB1\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"},{\"gene\":\"MICU3\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"},{\"gene\":\"JAGN1\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"},{\"gene\":\"DESI1\",\"confidence\":0.1,\"rationale\":\"No direct link to ACTH/testosterone; mentions CT effects.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.527,
+ "tokens_in": 16286,
+ "tokens_out": 458
+}

@@ -1,0 +1,32 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AKR1B10",
+  "PTCHD1",
+  "STRN3",
+  "FSIP1",
+  "VRK3",
+  "UBE2L5",
+  "KRTDAP",
+  "ASAP2",
+  "MAGEB17",
+  "SPATA24",
+  "ZFP69B",
+  "PHC2",
+  "GVQW3",
+  "ARID3B"
+ ],
+ "top1": "AKR1B10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AKR1B10\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including demyelinating neuropathy, pes cavus, gait issues, and intellectual disability.\"},{\"gene\":\"PTCHD1\",\"confidence\":0.75,\"rationale\":\"Shares multiple features like demyelination, pes cavus, and gait abnormalities.\"},{\"gene\":\"STRN3\",\"confidence\":0.65,\"rationale\":\"Reports demyelination, pes cavus, and gait disturbances.\"},{\"gene\":\"FSIP1\",\"confidence\":0.6,\"rationale\":\"Includes demyelination, pes cavus, and gait issues.\"},{\"gene\":\"UBER1\",\"confidence\":0.55,\"rationale\":\"Linked to demyelination and foot deformities.\"},{\"gene\":\"VRK3\",\"confidence\":0.5,\"rationale\":\"Reports demyelination and gait abnormalities.\"},{\"gene\":\"UBE2L5\",\"confidence\":0.45,\"rationale\":\"Shares demyelination and foot deformities.\"},{\"gene\":\"KRTDAP\",\"confidence\":0.4,\"rationale\":\"Reports demyelination and foot deformities.\"},{\"gene\":\"ASAP2\",\"confidence\":0.35,\"rationale\":\"Includes demyelination and gait issues.\"},{\"gene\":\"MAGEB17\",\"confidence\":0.3,\"rationale\":\"Reports demyelination and foot deformities.\"},{\"gene\":\"SPATA24\",\"confidence\":0.25,\"rationale\":\"Shares some foot deformities and gait issues.\"},{\"gene\":\"ZFP69B\",\"confidence\":0.2,\"rationale\":\"Reports some foot deformities and gait issues.\"},{\"gene\":\"PHC2\",\"confidence\":0.15,\"rationale\":\"Shares some gait and foot deformity features.\"},{\"gene\":\"GVQW3\",\"confidence\":0.1,\"rationale\":\"Reports some gait and foot deformity features.\"},{\"gene\":\"ARID3B\",\"confidence\":0.05,\"rationale\":\"Shares some gait and foot deformity features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.229,
+ "tokens_in": 14320,
+ "tokens_out": 453
+}

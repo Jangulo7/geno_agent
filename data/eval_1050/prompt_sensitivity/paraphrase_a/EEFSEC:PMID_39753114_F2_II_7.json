@@ -1,0 +1,33 @@
+{
+ "case_id": "EEFSEC:PMID_39753114_F2_II_7",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "EEFSEC",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MSTO1",
+  "TOMM7",
+  "AP3D1",
+  "MDH2",
+  "SF3A2",
+  "PKIA",
+  "NBPF12",
+  "INTS13",
+  "ALDH5A1",
+  "EEFSEC",
+  "GOLGA8B",
+  "MSRA",
+  "DYNLT5",
+  "IFITM3",
+  "AASS"
+ ],
+ "top1": "MSTO1",
+ "top1_correct": false,
+ "causal_rank": 10,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MSTO1\",\"confidence\":0.95,\"rationale\":\"Directly links to micrognathia, developmental delay, and motor issues.\"},{\"gene\":\"TOMM7\",\"confidence\":0.75,\"rationale\":\"Shares micrognathia, developmental delay, and facial dysmorphism.\"},{\"gene\":\"AP3D1\",\"confidence\":0.6,\"rationale\":\"Linked to developmental delay but lacks facial features.\"},{\"gene\":\"MDH2\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SF3A2\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"PKIA\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"NBPF12\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"INTS13\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ALDH5A1\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"EEFSEC\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"GOLGA8B\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"MSRA\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"DYNLT5\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"IFITM3\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"AASS\",\"confidence\":0.5,\"rationale\":\"No direct phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.254,
+ "tokens_in": 20218,
+ "tokens_out": 382
+}

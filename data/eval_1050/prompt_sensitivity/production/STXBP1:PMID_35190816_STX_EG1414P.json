@@ -1,0 +1,33 @@
+{
+ "case_id": "STXBP1:PMID_35190816_STX_EG1414P",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "STXBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "STXBP1",
+  "NOS1",
+  "CHDH",
+  "ZNF705A",
+  "EPN1",
+  "FBXO44",
+  "FOXN1",
+  "MGME1",
+  "NAPSA",
+  "RNF8",
+  "DUS2",
+  "PPP1R35",
+  "PINLYP",
+  "GDF15",
+  "ARSB"
+ ],
+ "top1": "STXBP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"STXBP1\",\"confidence\":0.95,\"rationale\":\"Directly links to infantile spasms, hypotonia, and developmental delay with EEG and MRI findings.\"},{\"gene\":\"NOS1\",\"confidence\":0.15,\"rationale\":\"Some developmental delay and seizures, but less specific to the full phenotype.\"},{\"gene\":\"CHDH\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"ZNF705A\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"EPN1\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"FBXO44\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"FOXN1\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"MGME1\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"NAPSA\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"RNF8\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"DUS2\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"PPP1R35\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"PINLYP\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"GDF15\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"},{\"gene\":\"ARSB\",\"confidence\":0.05,\"rationale\":\"No direct link to the full phenotype profile.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.894,
+ "tokens_in": 14707,
+ "tokens_out": 422
+}

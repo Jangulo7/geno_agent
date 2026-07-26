@@ -1,0 +1,33 @@
+{
+ "case_id": "APOA1:PMID_3142462_na",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "APOA1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "APOA1",
+  "DGKE",
+  "KIR3DL2",
+  "ENSA",
+  "SLC26A2",
+  "ATP5MC1",
+  "GJA10",
+  "C2CD4D",
+  "CHCHD1",
+  "CDPF1",
+  "H3-4",
+  "SCOC",
+  "GYPB",
+  "TMEM63B",
+  "ORC6"
+ ],
+ "top1": "APOA1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"APOA1\",\"confidence\":0.95,\"rationale\":\"Amyloidosis and thrombocytopenia linked to APOA1 mutations.\"},{\"gene\":\"DGKE\",\"confidence\":0.65,\"rationale\":\"TMA and hypertension linked to DGKE variants.\"},{\"gene\":\"KIR3DL2\",\"confidence\":0.25,\"rationale\":\"Thrombocytopenia and immune mechanisms.\"},{\"gene\":\"ENSA\",\"confidence\":0.2,\"rationale\":\"Platelet aggregation and thrombocytopenia.\"},{\"gene\":\"SLC26A2\",\"confidence\":0.15,\"rationale\":\"Thrombocytopenia and amyloidosis.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.1,\"rationale\":\"Thrombocytopenia and bleeding.\"},{\"gene\":\"GJA10\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"C2CD4D\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"CHCHD1\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"CDPF1\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"H3-4\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"SCOC\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"GYPB\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"},{\"gene\":\"TMEM63B\",\"confidence\":0.1,\"rationale\":\"Thrombocytopenia and bleeding.\"},{\"gene\":\"ORC6\",\"confidence\":0.1,\"rationale\":\"Amyloidosis and bleeding.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.051,
+ "tokens_in": 19665,
+ "tokens_out": 392
+}

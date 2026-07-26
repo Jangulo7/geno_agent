@@ -1,0 +1,33 @@
+{
+ "case_id": "COG8:PMID_17220172_patient",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "COG8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "COG8",
+  "GJD3",
+  "PRRX2",
+  "CREB3L4",
+  "AVPI1",
+  "TRA2B",
+  "PTTG1IP2",
+  "GSTM5",
+  "OR5AC2",
+  "SIAH2",
+  "PON3",
+  "BCL3",
+  "ADAMTS4",
+  "CSNK2A2",
+  "UBA3"
+ ],
+ "top1": "COG8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"COG8\",\"confidence\":0.95,\"rationale\":\"Directly links to cerebellar atrophy, intellectual disability, and oculomotor apraxia with genetic mutations.\"},{\"gene\":\"GJD3\",\"confidence\":0.15,\"rationale\":\"Associated with cerebellar atrophy but lacks direct phenotypic overlap.\"},{\"gene\":\"PRRX2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"CREB3L4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"AVPI1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"TRA2B\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"PTTG1IP2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"GSTM5\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"OR5AC2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"SIAH2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"PON3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"BCL3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"ADAMTS4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"CSNK2A2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"},{\"gene\":\"UBA3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence linking to patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.748,
+ "tokens_in": 17678,
+ "tokens_out": 454
+}

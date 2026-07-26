@@ -1,0 +1,33 @@
+{
+ "case_id": "CIROZ:PMID_39753129_Family_6_II_8",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "CIROZ",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ZNF595",
+  "AP2S1",
+  "FAM124B",
+  "AARS2",
+  "SLC37A2",
+  "MMP24",
+  "ESYT2",
+  "PLEKHS1",
+  "TRAPPC14",
+  "MT-ATP6",
+  "KRTAP5-11",
+  "ELAPOR2",
+  "XRN2",
+  "CIROZ",
+  "TAS2R8"
+ ],
+ "top1": "ZNF595",
+ "top1_correct": false,
+ "causal_rank": 14,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ZNF595\",\"confidence\":0.95,\"rationale\":\"Directly links to BAV and associated cardiac defects in patient's phenotype.\"},{\"gene\":\"AP2S1\",\"confidence\":0.85,\"rationale\":\"Associated with BAV and related cardiac anomalies.\"},{\"gene\":\"FAM124B\",\"confidence\":0.75,\"rationale\":\"Linked to BAV and cardiac defects.\"},{\"gene\":\"AARS2\",\"confidence\":0.7,\"rationale\":\"Reports BAV and related cardiac anomalies.\"},{\"gene\":\"SLC37A2\",\"confidence\":0.65,\"rationale\":\"Associated with BAV and cardiac defects.\"},{\"gene\":\"MMP24\",\"confidence\":0.6,\"rationale\":\"Linked to BAV and cardiac anomalies.\"},{\"gene\":\"ESYT2\",\"confidence\":0.55,\"rationale\":\"Reports BAV and cardiac defects.\"},{\"gene\":\"PLEKHS1\",\"confidence\":0.5,\"rationale\":\"Associated with BAV and cardiac anomalies.\"},{\"gene\":\"TRAPPC14\",\"confidence\":0.45,\"rationale\":\"Linked to BAV and cardiac defects.\"},{\"gene\":\"MT-ATP6\",\"confidence\":0.4,\"rationale\":\"Reports BAV and cardiac anomalies.\"},{\"gene\":\"KRTAP5-11\",\"confidence\":0.35,\"rationale\":\"No direct link to cardiac defects.\"},{\"gene\":\"ELAPOR2\",\"confidence\":0.3,\"rationale\":\"No direct link to cardiac defects.\"},{\"gene\":\"XRN2\",\"confidence\":0.25,\"rationale\":\"No direct link to cardiac defects.\"},{\"gene\":\"CIROZ\",\"confidence\":0.2,\"rationale\":\"No direct link to cardiac defects.\"},{\"gene\":\"TAS2R8\",\"confidence\":0.15,\"rationale\":\"No direct link to cardiac defects.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.097,
+ "tokens_in": 17532,
+ "tokens_out": 399
+}

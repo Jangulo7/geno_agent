@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_16670861_twin_1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "NHP2",
+  "GATD1",
+  "CPNE4",
+  "ARL6IP5",
+  "AEBP1",
+  "NUDT13",
+  "AMY2B",
+  "HGH1",
+  "PCID2",
+  "TRPC5OS",
+  "SIRT1",
+  "THRSP",
+  "KPNA7",
+  "COPS8"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"Directly linked to Netherton syndrome with all patient phenotypes.\"},{\"gene\":\"NHP2\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"GATD1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"CPNE4\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"ARL6IP5\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"AEBP1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"NUDT13\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"AMY2B\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"HGH1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"PCID2\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"TRPC5OS\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"SIRT1\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"THRSP\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"KPNA7\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"},{\"gene\":\"COPS8\",\"confidence\":0.05,\"rationale\":\"No relevant evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.056,
+ "tokens_in": 16638,
+ "tokens_out": 337
+}

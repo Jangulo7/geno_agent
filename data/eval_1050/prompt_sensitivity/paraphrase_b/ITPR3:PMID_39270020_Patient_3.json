@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR3:PMID_39270020_Patient_3",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "ITPR3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IFITM3",
+  "GALNT17",
+  "PEAK1",
+  "ZNF226",
+  "KHDRBS3",
+  "CGNL1",
+  "ATP6V0A2",
+  "YBX2",
+  "ZNF432",
+  "ZNF354A",
+  "SNRPB2",
+  "RPL21",
+  "TACO1",
+  "KRTAP5-5",
+  "NANOS3"
+ ],
+ "top1": "IFITM3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IFITM3\",\"confidence\":0.95,\"rationale\":\"Directly links to antibody response defects and T cell subset imbalances matching patient phenotype.\"},{\"gene\":\"GALNT17\",\"confidence\":0.75,\"rationale\":\"Shows B cell deficiency and antibody response issues aligning with patient's immunological findings.\"},{\"gene\":\"PEAK1\",\"confidence\":0.65,\"rationale\":\"Associated with B cell dysfunction and low antibody responses consistent with patient's phenotype.\"},{\"gene\":\"ZNF226\",\"confidence\":0.6,\"rationale\":\"Linked to B cell abnormalities and immunological defects matching patient's profile.\"},{\"gene\":\"KHDRBS3\",\"confidence\":0.55,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"CGNL1\",\"confidence\":0.5,\"rationale\":\"B cell abnormalities and immunological dysfunction match patient's findings.\"},{\"gene\":\"ATP6V0A2\",\"confidence\":0.45,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"YBX2\",\"confidence\":0.4,\"rationale\":\"B cell abnormalities and immunological dysfunction match patient's findings.\"},{\"gene\":\"ZNF432\",\"confidence\":0.35,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"ZNF354A\",\"confidence\":0.3,\"rationale\":\"B cell abnormalities and immunological dysfunction match patient's findings.\"},{\"gene\":\"SNRPB2\",\"confidence\":0.25,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"RPL21\",\"confidence\":0.2,\"rationale\":\"B cell abnormalities and immunological dysfunction match patient's findings.\"},{\"gene\":\"TACO1\",\"confidence\":0.15,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"KRTAP5-5\",\"confidence\":0.1,\"rationale\":\"Immunological defects and B cell issues align with patient's phenotype.\"},{\"gene\":\"NANOS3\",\"confidence\":0.05,\"rationale\":\"B cell abnormalities and immunological dysfunction match patient's findings.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.856,
+ "tokens_in": 16195,
+ "tokens_out": 485
+}

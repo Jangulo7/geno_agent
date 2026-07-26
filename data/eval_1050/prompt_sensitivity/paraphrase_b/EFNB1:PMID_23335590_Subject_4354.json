@@ -1,0 +1,33 @@
+{
+ "case_id": "EFNB1:PMID_23335590_Subject_4354",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "EFNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EFNB1",
+  "MPHOSPH10",
+  "AMY1B",
+  "IFT27",
+  "PTGES3",
+  "TAF7",
+  "RECK",
+  "DYNLT2",
+  "STARD3",
+  "ESRP1",
+  "NUB1",
+  "SCAMP1",
+  "GPR87",
+  "MUTYH",
+  "ZNF225"
+ ],
+ "top1": "EFNB1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"Directly linked to craniosynostosis and facial dysmorphisms described in patient.\"},{\"gene\":\"MPHOSPH10\",\"confidence\":0.15,\"rationale\":\"Only mention of craniosynostosis and some facial features, but no direct gene-phenotype link.\"},{\"gene\":\"AMY1B\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"IFT27\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"PTGES3\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"TAF7\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"RECK\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"DYNLT2\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"STARD3\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"ESRP1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"NUB1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"MPHOSPH10\",\"confidence\":0.15,\"rationale\":\"Only mention of craniosynostosis and some facial features, but no direct gene-phenotype link.\"},{\"gene\":\"SCAMP1\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"GPR87\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"MUTYH\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"},{\"gene\":\"ZNF225\",\"confidence\":0.1,\"rationale\":\"No direct link to craniosynostosis or other key features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.71,
+ "tokens_in": 14737,
+ "tokens_out": 520
+}

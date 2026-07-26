@@ -158,3 +158,12 @@ MASTER_PROJECT_v2.2.md
 # referenced by SHA-256 in data/MANIFEST.tsv rather than carried in git.
 release/cohort/retained_pmcids.txt
 release/index_fingerprint/chunk_counts_by_pmcid.tsv
+
+# P2 revision write-ups — internal manuscript-process notes (revision rationale,
+# outstanding author decisions, venue/funding strategy, personal contact detail).
+# Same rationale as the manuscript drafts above: a reviewer browsing the repo
+# should not see unpublished write-ups. The machine-readable outputs in
+# reports/p2_revision/*.{json,csv} ARE committed — they are what backs every
+# number in the paper and what a reviewer needs to check it.
+reports/p2_revision/CHANGELOG.md
+reports/p2_revision/OPEN_ITEMS.md

@@ -1,0 +1,33 @@
+{
+ "case_id": "STXBP1:PMID_35190816_STX_31344879_Patient1",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "STXBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "STXBP1",
+  "BEGAIN",
+  "ABHD6",
+  "ZNF787",
+  "BRINP1",
+  "BDKRB2",
+  "LHFPL1",
+  "CNPPD1",
+  "RIMBP3",
+  "A3GALT2",
+  "NALF1",
+  "OR4D11",
+  "MRPL51",
+  "XPNPEP3",
+  "METTL5"
+ ],
+ "top1": "STXBP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"STXBP1\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms with detailed evidence of seizures, ataxia, hypotonia, and movement disorders.\"},{\"gene\":\"BEGAIN\",\"confidence\":0.15,\"rationale\":\"Limited evidence of ataxia and seizures, but no direct link to other HPO terms.\"},{\"gene\":\"ABHD6\",\"confidence\":0.1,\"rationale\":\"Minimal overlap with HPO terms, mostly gait abnormalities and seizures.\"},{\"gene\":\"ZNF787\",\"confidence\":0.1,\"rationale\":\"Only mentions gait ataxia, no other HPO term overlap.\"},{\"gene\":\"BRINP1\",\"confidence\":0.1,\"rationale\":\"Reports gait abnormalities and seizures, but no other HPO terms.\"},{\"gene\":\"BDKRB2\",\"confidence\":0.1,\"rationale\":\"Limited to gait abnormalities and seizures, no other HPO terms.\"},{\"gene\":\"LHFPL1\",\"confidence\":0.1,\"rationale\":\"Reports gait ataxia, but no other HPO terms.\"},{\"gene\":\"CNPPD1\",\"confidence\":0.1,\"rationale\":\"Limited to gait abnormalities and seizures, no other HPO terms.\"},{\"gene\":\"RIMBP3\",\"confidence\":0.1,\"rationale\":\"Reports gait abnormalities and seizures, but no other HPO terms.\"},{\"gene\":\"A3GALT2\",\"confidence\":0.1,\"rationale\":\"Limited to gait abnormalities and seizures, no other HPO terms.\"},{\"gene\":\"NALF1\",\"confidence\":0.1,\"rationale\":\"Reports gait abnormalities and seizures, but no other HPO terms.\"},{\"gene\":\"OR4D11\",\"confidence\":0.1,\"rationale\":\"Limited to gait abnormalities and seizures, no other HPO terms.\"},{\"gene\":\"MRPL51\",\"confidence\":0.1,\"rationale\":\"Reports gait abnormalities and seizures, but no other HPO terms.\"},{\"gene\":\"XPNPEP3\",\"confidence\":0.1,\"rationale\":\"Limited to gait abnormalities and seizures, no other HPO terms.\"},{\"gene\":\"METTL5\",\"confidence\":0.1,\"rationale\":\"Reports gait abnormalities and seizures, but no other HPO terms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.272,
+ "tokens_in": 12264,
+ "tokens_out": 489
+}

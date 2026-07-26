@@ -1,0 +1,33 @@
+{
+ "case_id": "CTSA:PMID_35904593_Patient_2",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "CTSA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "HTT",
+  "ANKRD22",
+  "PSG4",
+  "ABCB5",
+  "KCNK5",
+  "NPR1",
+  "MESD",
+  "GCNT7",
+  "JPH4",
+  "UPK1A",
+  "PRPF6",
+  "SSBP2",
+  "HTR3C",
+  "SRRT",
+  "ARGLU1"
+ ],
+ "top1": "HTT",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"HTT\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms with strong evidence of cerebellar atrophy, hearing loss, and motor deficits.\"},{\"gene\":\"ANKRD22\",\"confidence\":0.15,\"rationale\":\"Limited overlap with HPO terms and weak evidence of motor and sensory deficits.\"},{\"gene\":\"PSG4\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"ABCB5\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"KCNK5\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"NPR1\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"MESD\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"GCNT7\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"JPH4\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"UPK1A\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"PRPF6\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"SSBP2\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"HTR3C\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"SRRT\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"},{\"gene\":\"ARGLU1\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches and weak evidence of motor and sensory deficits.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.168,
+ "tokens_in": 17340,
+ "tokens_out": 496
+}

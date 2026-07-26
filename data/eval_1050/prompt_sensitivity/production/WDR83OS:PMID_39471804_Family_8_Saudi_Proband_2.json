@@ -1,0 +1,33 @@
+{
+ "case_id": "WDR83OS:PMID_39471804_Family_8_Saudi_Proband_2",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "WDR83OS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RPS4X",
+  "EXOC4",
+  "MAP3K7CL",
+  "MYOM2",
+  "PORCN",
+  "MORN4",
+  "EIF4EBP1",
+  "CXorf66",
+  "CYLD",
+  "KCNK5",
+  "OR8S1",
+  "CD177",
+  "KLRG1",
+  "RBM42",
+  "TMUB2"
+ ],
+ "top1": "RPS4X",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RPS4X\",\"confidence\":0.95,\"rationale\":\"Direct link to Peters plus syndrome with microcephaly, deep set eyes, and renal anomalies.\"},{\"gene\":\"EXOC4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MAP3K7CL\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MYOM2\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PORCN\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MORN4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"EIF4EBP1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CXorf66\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CYLD\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"KCNK5\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"OR8S1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CD177\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"KLRG1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"RBM42\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TMUB2\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.159,
+ "tokens_in": 21766,
+ "tokens_out": 430
+}

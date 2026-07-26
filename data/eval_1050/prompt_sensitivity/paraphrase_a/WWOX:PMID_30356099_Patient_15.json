@@ -1,0 +1,33 @@
+{
+ "case_id": "WWOX:PMID_30356099_Patient_15",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "WWOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WWOX",
+  "C21orf58",
+  "SSR1",
+  "LSM12",
+  "RIMKLA",
+  "KCNE4",
+  "EVC",
+  "EIF4A1",
+  "ZNF70",
+  "PKMYT1",
+  "IL27",
+  "CATSPERG",
+  "NKPD1",
+  "OR8B4",
+  "NUTM2G"
+ ],
+ "top1": "WWOX",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WWOX\",\"confidence\":0.95,\"rationale\":\"Directly links to severe developmental and epileptic encephalopathy with thin corpus callosum and seizures.\"},{\"gene\":\"C21orf58\",\"confidence\":0.15,\"rationale\":\"Associated with seizures and structural brain abnormalities but less specific.\"},{\"gene\":\"SSR1\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"LSM12\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"RIMKLA\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"KCNE4\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"EVC\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"EIF4A1\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"ZNF70\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"PKMYT1\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"IL27\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"CATSPERG\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"NKPD1\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"OR8B4\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"},{\"gene\":\"NUTM2G\",\"confidence\":0.1,\"rationale\":\"No direct link to the described phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.896,
+ "tokens_in": 15904,
+ "tokens_out": 409
+}

@@ -1,0 +1,404 @@
+{
+  "work_package": "WP8",
+  "description": "Judge-run provenance with intervals, operating characteristics for the triage claim, and as-run vs error-excluded ablation estimates.",
+  "seed": 42,
+  "n_bootstrap": 10000,
+  "note_deepeval": "DeepEval is excluded from this revision. run_deepeval.py scores the HallucinationMetric, for which higher is worse, but the saved field aggregate_mean_hallucination_score (0.845) was reported in the manuscript as a groundedness of 0.845. The judge's own free-text reasons confirm the direction (a score of 0.98 is accompanied by 'a high level of contradiction'). Every DeepEval-derived claim is therefore withdrawn rather than re-signed.",
+  "judge_runs": [
+    {
+      "run": "ragas_top1only_n100_standard",
+      "file": "data/eval_1050/ragas_top1only_cell_S_n100.json",
+      "cohort": "standard",
+      "unit_scored": "rank-1 rationale only",
+      "judge_model": "gpt-4o-2024-08-06",
+      "judge_temperature": 0.0,
+      "sampling_frame": "MONDO-stratified subsample of the n=1,047 cohort, seed 42",
+      "n_requested": 100,
+      "n_evaluated": 100,
+      "n_skipped": 0,
+      "context_cap_chunks": 20,
+      "metrics": {
+        "faithfulness": {
+          "mean": 0.4795,
+          "ci95_case_bootstrap": [
+            0.424,
+            0.5336
+          ],
+          "ci95_cluster_bootstrap": [
+            0.4236,
+            0.5328
+          ],
+          "n": 100
+        }
+      }
+    },
+    {
+      "run": "ragas_full_n600_standard",
+      "file": "data/eval_1050/ragas_cell_S_n600.json",
+      "cohort": "standard",
+      "unit_scored": "full response (all ranked genes)",
+      "judge_model": "gpt-4o-2024-08-06",
+      "judge_temperature": 0.0,
+      "sampling_frame": "MONDO-stratified subsample of the n=1,047 cohort, seed 42",
+      "n_requested": 600,
+      "n_evaluated": 600,
+      "n_skipped": 0,
+      "context_cap_chunks": 20,
+      "metrics": {
+        "faithfulness": {
+          "mean": 0.2857,
+          "ci95_case_bootstrap": [
+            0.2682,
+            0.3036
+          ],
+          "ci95_cluster_bootstrap": [
+            0.2583,
+            0.3131
+          ],
+          "n": 600
+        },
+        "context_precision": {
+          "mean": 0.6504,
+          "ci95_case_bootstrap": [
+            0.6187,
+            0.6813
+          ],
+          "ci95_cluster_bootstrap": [
+            0.603,
+            0.6924
+          ],
+          "n": 578
+        },
+        "context_recall": {
+          "mean": 0.7958,
+          "ci95_case_bootstrap": [
+            0.7642,
+            0.8275
+          ],
+          "ci95_cluster_bootstrap": [
+            0.7441,
+            0.8423
+          ],
+          "n": 600
+        }
+      }
+    },
+    {
+      "run": "ragas_top1only_n100_hard",
+      "file": "data/eval_hard/ragas_top1only_cell_S_n100.json",
+      "cohort": "hard",
+      "unit_scored": "rank-1 rationale only",
+      "judge_model": "gpt-4o-2024-08-06",
+      "judge_temperature": 0.0,
+      "sampling_frame": "MONDO-stratified subsample of the n=1,047 cohort, seed 42",
+      "n_requested": 100,
+      "n_evaluated": 100,
+      "n_skipped": 0,
+      "context_cap_chunks": 20,
+      "metrics": {
+        "faithfulness": {
+          "mean": 0.5069,
+          "ci95_case_bootstrap": [
+            0.4539,
+            0.5578
+          ],
+          "ci95_cluster_bootstrap": [
+            0.4546,
+            0.5583
+          ],
+          "n": 100
+        }
+      }
+    },
+    {
+      "run": "ragas_full_n600_hard",
+      "file": "data/eval_hard/ragas_cell_S_n600.json",
+      "cohort": "hard",
+      "unit_scored": "full response (all ranked genes)",
+      "judge_model": "gpt-4o-2024-08-06",
+      "judge_temperature": 0.0,
+      "sampling_frame": "MONDO-stratified subsample of the n=1,047 cohort, seed 42",
+      "n_requested": 600,
+      "n_evaluated": 599,
+      "n_skipped": 1,
+      "context_cap_chunks": 20,
+      "metrics": {
+        "faithfulness": {
+          "mean": 0.2115,
+          "ci95_case_bootstrap": [
+            0.202,
+            0.2211
+          ],
+          "ci95_cluster_bootstrap": [
+            0.1996,
+            0.2239
+          ],
+          "n": 599
+        },
+        "context_precision": {
+          "mean": 0.308,
+          "ci95_case_bootstrap": [
+            0.28,
+            0.3364
+          ],
+          "ci95_cluster_bootstrap": [
+            0.2617,
+            0.3569
+          ],
+          "n": 581
+        },
+        "context_recall": {
+          "mean": 0.5776,
+          "ci95_case_bootstrap": [
+            0.5384,
+            0.6169
+          ],
+          "ci95_cluster_bootstrap": [
+            0.5104,
+            0.6395
+          ],
+          "n": 599
+        }
+      }
+    }
+  ],
+  "triage": {
+    "ragas_top1only_n100_standard": {
+      "n": 100,
+      "n_publications": 79,
+      "prevalence_top1": 0.75,
+      "auroc": 0.7429,
+      "auroc_ci95_cluster_bootstrap": [
+        0.6179,
+        0.8648
+      ],
+      "auprc": 0.8478,
+      "operating_points": {
+        "median_split": {
+          "threshold": 0.5,
+          "n_above": 66,
+          "n_below": 34,
+          "top1_accuracy_above": 0.8636,
+          "top1_accuracy_below": 0.5294,
+          "gap_pp": 33.4,
+          "precision_above": 0.8636,
+          "recall_above": 0.76
+        },
+        "youden_optimal": {
+          "threshold": 0.1667,
+          "n_above": 84,
+          "n_below": 16,
+          "top1_accuracy_above": 0.8571,
+          "top1_accuracy_below": 0.1875,
+          "gap_pp": 67.0,
+          "precision_above": 0.8571,
+          "recall_above": 0.96
+        }
+      },
+      "calibration_quartiles": [
+        {
+          "bin": 1,
+          "n": 25,
+          "mean_faithfulness": 0.0827,
+          "observed_top1": 0.48
+        },
+        {
+          "bin": 2,
+          "n": 25,
+          "mean_faithfulness": 0.4413,
+          "observed_top1": 0.84
+        },
+        {
+          "bin": 3,
+          "n": 25,
+          "mean_faithfulness": 0.5952,
+          "observed_top1": 0.76
+        },
+        {
+          "bin": 4,
+          "n": 25,
+          "mean_faithfulness": 0.7986,
+          "observed_top1": 0.92
+        }
+      ]
+    },
+    "ragas_full_n600_standard": {
+      "n": 600,
+      "n_publications": 288,
+      "prevalence_top1": 0.73,
+      "auroc": 0.731,
+      "auroc_ci95_cluster_bootstrap": [
+        0.6813,
+        0.7809
+      ],
+      "auprc": 0.8735,
+      "operating_points": {
+        "median_split": {
+          "threshold": 0.4333,
+          "n_above": 302,
+          "n_below": 298,
+          "top1_accuracy_above": 0.8808,
+          "top1_accuracy_below": 0.5772,
+          "gap_pp": 30.4,
+          "precision_above": 0.8808,
+          "recall_above": 0.6073
+        },
+        "youden_optimal": {
+          "threshold": 0.2333,
+          "n_above": 343,
+          "n_below": 257,
+          "top1_accuracy_above": 0.8688,
+          "top1_accuracy_below": 0.5447,
+          "gap_pp": 32.4,
+          "precision_above": 0.8688,
+          "recall_above": 0.6804
+        }
+      },
+      "calibration_quartiles": [
+        {
+          "bin": 1,
+          "n": 150,
+          "mean_faithfulness": 0.0051,
+          "observed_top1": 0.5133
+        },
+        {
+          "bin": 2,
+          "n": 150,
+          "mean_faithfulness": 0.1652,
+          "observed_top1": 0.64
+        },
+        {
+          "bin": 3,
+          "n": 150,
+          "mean_faithfulness": 0.4578,
+          "observed_top1": 0.86
+        },
+        {
+          "bin": 4,
+          "n": 150,
+          "mean_faithfulness": 0.5148,
+          "observed_top1": 0.9067
+        }
+      ]
+    }
+  },
+  "deployment_confidence_threshold": {
+    "n_cases_with_rank1_confidence": 1047,
+    "confidence_distribution": {
+      "mean": 0.9382,
+      "median": 0.95,
+      "min": 0.06,
+      "max": 0.98,
+      "share_at_or_above_0.8": 0.9838
+    },
+    "auroc_confidence_predicts_top1": 0.5577,
+    "thresholds": {
+      "0.5": {
+        "threshold": 0.5,
+        "n_above": 1030,
+        "n_below": 17,
+        "share_routed_to_review": 0.0162,
+        "top1_accuracy_above": 0.7369,
+        "top1_accuracy_below": 0.0588,
+        "gap_pp": 67.8
+      },
+      "0.6": {
+        "threshold": 0.6,
+        "n_above": 1030,
+        "n_below": 17,
+        "share_routed_to_review": 0.0162,
+        "top1_accuracy_above": 0.7369,
+        "top1_accuracy_below": 0.0588,
+        "gap_pp": 67.8
+      },
+      "0.7": {
+        "threshold": 0.7,
+        "n_above": 1030,
+        "n_below": 17,
+        "share_routed_to_review": 0.0162,
+        "top1_accuracy_above": 0.7369,
+        "top1_accuracy_below": 0.0588,
+        "gap_pp": 67.8
+      },
+      "0.8": {
+        "threshold": 0.8,
+        "n_above": 1030,
+        "n_below": 17,
+        "share_routed_to_review": 0.0162,
+        "top1_accuracy_above": 0.7369,
+        "top1_accuracy_below": 0.0588,
+        "gap_pp": 67.8
+      },
+      "0.9": {
+        "threshold": 0.9,
+        "n_above": 1030,
+        "n_below": 17,
+        "share_routed_to_review": 0.0162,
+        "top1_accuracy_above": 0.7369,
+        "top1_accuracy_below": 0.0588,
+        "gap_pp": 67.8
+      }
+    }
+  },
+  "ablation": [
+    {
+      "model": "Qwen3-32B-Instruct",
+      "slug": "qwen_qwen3-32b",
+      "n_cases": 300,
+      "n_errors": 66,
+      "error_rate": 0.22,
+      "error_kinds": {
+        "model_self_error": 63,
+        "; unknown_shape": 3
+      },
+      "overall_top1_as_run": 0.5633,
+      "overall_top1_error_excluded": 0.7222,
+      "n_scored_error_excluded": 234,
+      "fair_top1_as_run": 0.6786,
+      "fair_top1_error_excluded": 0.8382,
+      "n_fair": 84,
+      "n_fair_error_excluded": 68,
+      "mean_latency_s": 8.71,
+      "cost_usd": 0.42
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "slug": "anthropic_claude-sonnet-4.6",
+      "n_cases": 300,
+      "n_errors": 22,
+      "error_rate": 0.0733,
+      "error_kinds": {
+        "Expecting value": 22
+      },
+      "overall_top1_as_run": 0.7667,
+      "overall_top1_error_excluded": 0.8129,
+      "n_scored_error_excluded": 278,
+      "fair_top1_as_run": 0.8929,
+      "fair_top1_error_excluded": 0.9146,
+      "n_fair": 84,
+      "n_fair_error_excluded": 82,
+      "mean_latency_s": 13.87,
+      "cost_usd": 19.95
+    },
+    {
+      "model": "DeepSeek-V3-0324",
+      "slug": "deepseek_deepseek-chat-v3-0324",
+      "n_cases": 300,
+      "n_errors": 2,
+      "error_rate": 0.0067,
+      "error_kinds": {
+        "no_top1": 1,
+        "model_self_error": 1
+      },
+      "overall_top1_as_run": 0.7367,
+      "overall_top1_error_excluded": 0.7416,
+      "n_scored_error_excluded": 298,
+      "fair_top1_as_run": 0.881,
+      "fair_top1_error_excluded": 0.881,
+      "n_fair": 84,
+      "n_fair_error_excluded": 84,
+      "mean_latency_s": 25.09,
+      "cost_usd": 1.05
+    }
+  ]
+}

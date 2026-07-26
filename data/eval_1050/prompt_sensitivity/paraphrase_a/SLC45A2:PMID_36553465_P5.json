@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC45A2:PMID_36553465_P5",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "SLC45A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SLC45A2",
+  "PAX6",
+  "SIX3",
+  "DMRTC1",
+  "CYP20A1",
+  "PAQR4",
+  "TMEM139",
+  "TRPV4",
+  "SACK1B",
+  "WWP2",
+  "ZNF611",
+  "SCN9A",
+  "ATP13A4",
+  "RPL24",
+  "AFAP1L1"
+ ],
+ "top1": "SLC45A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SLC45A2\",\"confidence\":1.0,\"rationale\":\"Directly linked to oca4 with all phenotypes including hypopigmentation, blue irises, nystagmus, and foveal hypoplasia.\"},{\"gene\":\"PAX6\",\"confidence\":0.3,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"SIX3\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"DMRTC1\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"CYP20A1\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"PAQR4\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"TMEM139\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"TRPV4\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"SACK1B\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"WWP2\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"ZNF611\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"SCN9A\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"ATP13A4\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"RPL24\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"},{\"gene\":\"AFAP1L1\",\"confidence\":0.2,\"rationale\":\"Linked to Waardenburg syndrome, which includes some features but not all.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.372,
+ "tokens_in": 17716,
+ "tokens_out": 510
+}

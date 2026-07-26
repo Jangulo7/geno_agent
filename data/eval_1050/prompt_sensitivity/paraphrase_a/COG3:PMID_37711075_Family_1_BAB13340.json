@@ -1,0 +1,33 @@
+{
+ "case_id": "COG3:PMID_37711075_Family_1_BAB13340",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "COG3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "F10",
+  "DNAJC15",
+  "SLC10A4",
+  "DGKQ",
+  "HEMK1",
+  "SCN10A",
+  "TFPI",
+  "GPR160",
+  "FOXRED2",
+  "IQANK1",
+  "TNFSF12",
+  "SIAH2",
+  "UBL5",
+  "PRRG2",
+  "MCRIP1"
+ ],
+ "top1": "F10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"F10\",\"confidence\":0.95,\"rationale\":\"Matches all key facial and developmental features including microcephaly, hypotonia, and intellectual disability.\"},{\"gene\":\"DNAJC15\",\"confidence\":0.75,\"rationale\":\"Shares facial traits and microcephaly with patient, but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"SLC10A4\",\"confidence\":0.65,\"rationale\":\"Has facial and microcephaly features but lacks hypotonia and developmental delay details.\"},{\"gene\":\"DGKQ\",\"confidence\":0.6,\"rationale\":\"Shares some facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"HEMK1\",\"confidence\":0.55,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay details.\"},{\"gene\":\"SCN10A\",\"confidence\":0.5,\"rationale\":\"Shares some facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"TFPI\",\"confidence\":0.45,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay details.\"},{\"gene\":\"GPR160\",\"confidence\":0.4,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"FOXRED2\",\"confidence\":0.35,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay details.\"},{\"gene\":\"IQANK1\",\"confidence\":0.3,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"TNFSF12\",\"confidence\":0.25,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay details.\"},{\"gene\":\"SIAH2\",\"confidence\":0.2,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"UBL5\",\"confidence\":0.15,\"rationale\":\"Shares facial traits and microcephaly but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"PRRG2\",\"confidence\":0.1,\"rationale\":\"Shares some facial traits but lacks hypotonia and developmental delay specifics.\"},{\"gene\":\"MCRIP1\",\"confidence\":0.05,\"rationale\":\"Shares some facial traits but lacks hypotonia and developmental delay specifics.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.682,
+ "tokens_in": 14469,
+ "tokens_out": 523
+}

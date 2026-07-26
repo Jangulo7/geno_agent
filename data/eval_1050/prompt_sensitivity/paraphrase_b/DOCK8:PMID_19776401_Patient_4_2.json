@@ -1,0 +1,33 @@
+{
+ "case_id": "DOCK8:PMID_19776401_Patient_4_2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "DOCK8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DOCK8",
+  "NABP1",
+  "NEK8",
+  "NUP210",
+  "ZC3H18",
+  "EIF3CL",
+  "CASK",
+  "EML1",
+  "HCAR1",
+  "OR4X2",
+  "FAM9B",
+  "ATP8B1",
+  "CPLX1",
+  "SCAMP3",
+  "OR5M3"
+ ],
+ "top1": "DOCK8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DOCK8\",\"confidence\":0.95,\"rationale\":\"Directly links to AR-HIES with recurrent infections and viral/fungal susceptibility matching patient phenotype.\"},{\"gene\":\"NABP1\",\"confidence\":0.15,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"NEK8\",\"confidence\":0.1,\"rationale\":\"Limited to otitis media and respiratory symptoms.\"},{\"gene\":\"NUP210\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"ZC3H18\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"EIF3CL\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"CASK\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"EML1\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"HCAR1\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"OR4X2\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"FAM9B\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"ATP8B1\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"CPLX1\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"SCAMP3\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"},{\"gene\":\"OR5M3\",\"confidence\":0.1,\"rationale\":\"General infection mentions without specific phenotype alignment.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.835,
+ "tokens_in": 15217,
+ "tokens_out": 392
+}

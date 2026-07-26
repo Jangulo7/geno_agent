@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_14531790_F739_individual_I_1",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "ADAMTS18",
+  "CKM",
+  "NOX5",
+  "SKOR2",
+  "TNFRSF10B",
+  "TOPORS",
+  "MCC",
+  "HCK",
+  "SP140",
+  "ERMN",
+  "PPIAL4A",
+  "ARL5A",
+  "OR10G3",
+  "GYG2"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"Direct link to hyperuricemia, gout, and chronic kidney disease.\"},{\"gene\":\"ADAMTS18\",\"confidence\":0.15,\"rationale\":\"Linked to kidney development but not hyperuricemia.\"},{\"gene\":\"CKM\",\"confidence\":0.05,\"rationale\":\"Associated with metabolic syndrome, not direct renal phenotype.\"},{\"gene\":\"NOX5\",\"confidence\":0.05,\"rationale\":\"Oxidative stress link, not specific to patient's phenotype.\"},{\"gene\":\"SKOR2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"TNFRSF10B\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"TOPORS\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"MCC\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"HCK\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"SP140\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"ERMN\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"PPIAL4A\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"ARL5A\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"OR10G3\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"},{\"gene\":\"GYG2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.003,
+ "tokens_in": 16320,
+ "tokens_out": 406
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_27939403_A_1",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "C17orf78",
+  "C1QTNF5",
+  "DACH2",
+  "STS",
+  "TOMM22",
+  "MECOM",
+  "PIGM",
+  "H3C7",
+  "ANO3",
+  "ABCG2",
+  "OR10J4",
+  "CNPY2",
+  "B4GALT2",
+  "PRG2"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to B cell and T cell defects, CD4/CD8 ratio, and IgA/IgM reduction in patient with family history.\"},{\"gene\":\"C17orf78\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"C1QTNF5\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"DACH2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"STS\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"TOMM22\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"MECOM\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"PIGM\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"H3C7\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"ANO3\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"ABCG2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"OR10J4\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"CNPY2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"B4GALT2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"},{\"gene\":\"PRG2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic links to patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.014,
+ "tokens_in": 20287,
+ "tokens_out": 441
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_37964426_Individual_G2550R_2",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GDI1",
+  "ITPR1",
+  "CYP27B1",
+  "LRBA",
+  "ZNF235",
+  "SPOCK1",
+  "EEF1AKMT3",
+  "KRTAP11-1",
+  "ACADS",
+  "ALOX15B",
+  "OR7D2",
+  "SERF1A",
+  "LAX1",
+  "WWTR1",
+  "INSL4"
+ ],
+ "top1": "GDI1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GDI1\",\"confidence\":0.95,\"rationale\":\"Multiple reports link GDI1 duplications to hypotonia, intellectual disability, and ocular abnormalities matching the patient's phenotype.\"},{\"gene\":\"ITPR1\",\"confidence\":0.65,\"rationale\":\"ITPR1 mutations are associated with ataxia, intellectual disability, and nystagmus consistent with the patient's features.\"},{\"gene\":\"CYP27B1\",\"confidence\":0.25,\"rationale\":\"CYP27B1 is linked to hypotonia and developmental delay but lacks specific ocular or motor features.\"},{\"gene\":\"LRBA\",\"confidence\":0.2,\"rationale\":\"LRBA is associated with immunodeficiency, not the neurological features presented.\"},{\"gene\":\"ZNF235\",\"confidence\":0.2,\"rationale\":\"ZNF235 has no clear link to the patient's neurological phenotype.\"},{\"gene\":\"SPOCK1\",\"confidence\":0.2,\"rationale\":\"SPOCK1 is not associated with the patient's clinical features.\"},{\"gene\":\"EEF1AKMT3\",\"confidence\":0.2,\"rationale\":\"EEF1AKMT3 is not linked to the patient's neurological symptoms.\"},{\"gene\":\"KRTAP11-1\",\"confidence\":0.2,\"rationale\":\"KRTAP11-1 is associated with keratin disorders, not the patient's phenotype.\"},{\"gene\":\"ACADS\",\"confidence\":0.2,\"rationale\":\"ACADS is linked to metabolic disorders, not the neurological features.\"},{\"gene\":\"ALOX15B\",\"confidence\":0.2,\"rationale\":\"ALOX15B is associated with inflammation, not the patient's clinical presentation.\"},{\"gene\":\"OR7D2\",\"confidence\":0.2,\"rationale\":\"OR7D2 is related to olfaction, not the neurological features.\"},{\"gene\":\"SERF1A\",\"confidence\":0.2,\"rationale\":\"SERF1A is not associated with the patient's clinical features.\"},{\"gene\":\"LAX1\",\"confidence\":0.2,\"rationale\":\"LAX1 is linked to ciliopathies, not the patient's phenotype.\"},{\"gene\":\"WWTR1\",\"confidence\":0.2,\"rationale\":\"WWTR1 is associated with ciliopathies, not the patient's neurological features.\"},{\"gene\":\"INSL4\",\"confidence\":0.2,\"rationale\":\"INSL4 is not linked to the patient's clinical presentation.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.151,
+ "tokens_in": 10390,
+ "tokens_out": 529
+}

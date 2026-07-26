@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_31068150_index_patient",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "HR",
+  "CRP",
+  "ANKIB1",
+  "HSPD1",
+  "PCYT2",
+  "ZNF653",
+  "BMI1",
+  "GNGT2",
+  "ARHGEF5",
+  "ZNF579",
+  "AIM2",
+  "STK11",
+  "AMDHD1",
+  "TAS2R39"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"UMOD mutation linked to ADTKD with tubular atrophy, fibrosis, and glomerular sclerosis in family.\"},{\"gene\":\"HR\",\"confidence\":0.25,\"rationale\":\"HR mutations associated with glomerular sclerosis and tubular atrophy in multiple family members.\"},{\"gene\":\"CRP\",\"confidence\":0.15,\"rationale\":\"CRP correlated with tubular atrophy and interstitial fibrosis in renal biopsy findings.\"},{\"gene\":\"ANKIB1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"HSPD1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"PCYT2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"ZNF653\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"BMI1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"GNGT2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"ARHGEF5\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"ZNF579\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"AIM2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"STK11\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"AMDHD1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"},{\"gene\":\"TAS2R39\",\"confidence\":0.1,\"rationale\":\"No direct link to patient phenotype in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.781,
+ "tokens_in": 13840,
+ "tokens_out": 425
+}

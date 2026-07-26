@@ -1,0 +1,33 @@
+{
+ "case_id": "ZNF808:PMID_37973953_Individual_13a",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "ZNF808",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ZNF808",
+  "GIMAP8",
+  "MSMB",
+  "PRSS8",
+  "SND1",
+  "KIAA0930",
+  "IGF2BP3",
+  "NOS1AP",
+  "ATP5MC1",
+  "SHANK1",
+  "TSGA10IP",
+  "CDHR5",
+  "ADAM2",
+  "TNF",
+  "TENT5A"
+ ],
+ "top1": "ZNF808",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ZNF808\",\"confidence\":0.95,\"rationale\":\"Directly links to pancreatic agenesis, neonatal diabetes, and exocrine insufficiency.\"},{\"gene\":\"GIMAP8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"MSMB\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"PRSS8\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"SND1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"KIAA0930\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"IGF2BP3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"NOS1AP\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"SHANK1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"TSGA10IP\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"CDHR5\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"ADAM2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"TNF\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"},{\"gene\":\"TENT5A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.567,
+ "tokens_in": 11882,
+ "tokens_out": 436
+}

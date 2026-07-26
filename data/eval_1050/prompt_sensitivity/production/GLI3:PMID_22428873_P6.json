@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_22428873_P6",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "SOHLH2",
+  "MEGF11",
+  "AGMO",
+  "FSCN3",
+  "RAI2",
+  "LIPI",
+  "CFAP144",
+  "PIP5KL1",
+  "CXXC1",
+  "FKBP14",
+  "FAM209B",
+  "MMGT1",
+  "SPATS2L",
+  "STAG1"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"Directly links to GCPS with all patient phenotypes.\"},{\"gene\":\"SOHLH2\",\"confidence\":0.05,\"rationale\":\"Only mentions syndactyly and polydactyly.\"},{\"gene\":\"MEGF11\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"AGMO\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"FSCN3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"RAI2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"LIPI\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"CFAP144\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"CXXC1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"FKBP14\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"FAM209B\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"MMGT1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"SPATS2L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"},{\"gene\":\"STAG1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.283,
+ "tokens_in": 15257,
+ "tokens_out": 388
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "CAPRIN1:PMID_35979925_Case_12",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "CAPRIN1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CAPRIN1",
+  "GFRA2",
+  "PTBP1",
+  "PEX12",
+  "ZACN",
+  "LRRC28",
+  "TMEM101",
+  "SERPINI2",
+  "DAPL1",
+  "ZNF799",
+  "NUDCD1",
+  "LY6G5C",
+  "FOXD4L6",
+  "GPR37",
+  "MTF1"
+ ],
+ "top1": "CAPRIN1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CAPRIN1\",\"confidence\":0.95,\"rationale\":\"Directly links to seizures, speech delay, ADHD, ASD, and dysmorphic features.\"},{\"gene\":\"GFRA2\",\"confidence\":0.15,\"rationale\":\"Linked to speech delay and ADHD but lacks seizure and hypertelorism.\"},{\"gene\":\"PTBP1\",\"confidence\":0.1,\"rationale\":\"Associated with ADHD and speech delay but not seizures or hypertelorism.\"},{\"gene\":\"PEX12\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ZACN\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"LRRC28\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"TMEM101\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"SERPINI2\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"DAPL1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"ZNF799\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"NUDCD1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"LY6G5C\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"FOXD4L6\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"GPR37\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"},{\"gene\":\"MTF1\",\"confidence\":0.05,\"rationale\":\"No direct link to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.313,
+ "tokens_in": 16506,
+ "tokens_out": 431
+}

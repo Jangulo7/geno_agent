@@ -1,0 +1,33 @@
+{
+ "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "PTCRA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PTCRA",
+  "ZBED4",
+  "DNAI1",
+  "KCNQ5",
+  "GRIK1",
+  "TAOK1",
+  "ZNG1B",
+  "BAG1",
+  "FXN",
+  "EXOSC7",
+  "GIT1",
+  "MUC12",
+  "CHIA",
+  "GPR21",
+  "POLR1G"
+ ],
+ "top1": "PTCRA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PTCRA\",\"confidence\":0.95,\"rationale\":\"Low T-cell counts, TREC levels, and CD4/CD8 ratios match PTCRA mutations.\"},{\"gene\":\"ZBED4\",\"confidence\":0.15,\"rationale\":\"Linked to immune defects but lacks specific T-cell phenotype match.\"},{\"gene\":\"DNAI1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"KCNQ5\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"GRIK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"TAOK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"ZNG1B\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"BAG1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"FXN\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"EXOSC7\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"GIT1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"MUC12\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"CHIA\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"GPR21\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"},{\"gene\":\"POLR1G\",\"confidence\":0.1,\"rationale\":\"No direct T-cell phenotype correlation.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.272,
+ "tokens_in": 13652,
+ "tokens_out": 377
+}

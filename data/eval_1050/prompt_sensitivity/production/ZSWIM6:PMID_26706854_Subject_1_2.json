@@ -1,0 +1,33 @@
+{
+ "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ZSWIM6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PROP1",
+  "DSN1",
+  "C12orf75",
+  "CWF19L1",
+  "TMEM11",
+  "SPINK5",
+  "HNRNPLL",
+  "VWA2",
+  "SNTG2",
+  "TFAM",
+  "APOO",
+  "EVX1",
+  "NTAN1",
+  "TARS1",
+  "UHRF1"
+ ],
+ "top1": "PROP1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PROP1\",\"confidence\":0.95,\"rationale\":\"Multiple HPO features match known PROP1 syndrome phenotype.\"},{\"gene\":\"DSN1\",\"confidence\":0.85,\"rationale\":\"Parietal foramina and CNS anomalies align with DSN1 mutations.\"},{\"gene\":\"C12orf75\",\"confidence\":0.75,\"rationale\":\"CNS and facial features overlap with C12orf75 variants.\"},{\"gene\":\"CWF19L1\",\"confidence\":0.7,\"rationale\":\"CNS and facial anomalies match CWF19L1 syndrome.\"},{\"gene\":\"TMEM11\",\"confidence\":0.65,\"rationale\":\"CNS and facial features align with TMEM11 mutations.\"},{\"gene\":\"SPINK5\",\"confidence\":0.6,\"rationale\":\"Hypertelorism and lip features match SPINK5 syndrome.\"},{\"gene\":\"HNRNPLL\",\"confidence\":0.55,\"rationale\":\"Hypertelorism and facial features align with HNRNPLL mutations.\"},{\"gene\":\"VWA2\",\"confidence\":0.5,\"rationale\":\"Hypertelorism and facial features match VWA2 syndrome.\"},{\"gene\":\"SNTG2\",\"confidence\":0.45,\"rationale\":\"Hypertelorism and facial features align with SNTG2 mutations.\"},{\"gene\":\"TFAM\",\"confidence\":0.4,\"rationale\":\"Hypertelorism and facial features match TFAM syndrome.\"},{\"gene\":\"APOO\",\"confidence\":0.35,\"rationale\":\"Hypertelorism and facial features align with APOO mutations.\"},{\"gene\":\"EVX1\",\"confidence\":0.3,\"rationale\":\"Hypertelorism and facial features match EVX1 syndrome.\"},{\"gene\":\"NTAN1\",\"confidence\":0.25,\"rationale\":\"Hypertelorism and facial features align with NTAN1 mutations.\"},{\"gene\":\"TARS1\",\"confidence\":0.2,\"rationale\":\"CNS and facial features overlap with TARS1 variants.\"},{\"gene\":\"UHRF1\",\"confidence\":0.15,\"rationale\":\"CNS and facial features align with UHRF1 mutations.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.786,
+ "tokens_in": 16497,
+ "tokens_out": 473
+}

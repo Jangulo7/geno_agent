@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_38734037_sister",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "BCL2L12",
+  "NASP",
+  "OR2T5",
+  "CHCHD10",
+  "SPINK14",
+  "ACOT13",
+  "DOLPP1",
+  "KRTAP10-10",
+  "CSMD2",
+  "OLFML2A",
+  "ZCCHC18",
+  "BDKRB2",
+  "TTC27",
+  "SLC11A1"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Case report links IKZF1 to decreased class-switched memory B cells and Ig levels.\"},{\"gene\":\"BCL2L12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"NASP\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"OR2T5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"CHCHD10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"SPINK14\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"ACOT13\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"DOLPP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"KRTAP10-10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"CSMD2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"OLFML2A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"ZCCHC18\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"BDKRB2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"TTC27\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"SLC11A1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.99,
+ "tokens_in": 17757,
+ "tokens_out": 428
+}

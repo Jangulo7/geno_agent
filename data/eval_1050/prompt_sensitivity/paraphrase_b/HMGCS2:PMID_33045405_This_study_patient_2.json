@@ -1,0 +1,33 @@
+{
+ "case_id": "HMGCS2:PMID_33045405_This_study_patient_2",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "HMGCS2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "HMGCS2",
+  "GSPT1",
+  "ASAH2",
+  "IFNA8",
+  "TIGD2",
+  "CDC20",
+  "STBD1",
+  "TECTA",
+  "URB1",
+  "SEC61B",
+  "SPANXB1",
+  "UBA6",
+  "GSTO1",
+  "BEND7",
+  "ZNF775"
+ ],
+ "top1": "HMGCS2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"HMGCS2\",\"confidence\":0.95,\"rationale\":\"Directly links to metabolic acidosis, encephalopathy, hypophosphatemia, and ketoneuria with genetic evidence.\"},{\"gene\":\"GSPT1\",\"confidence\":0.15,\"rationale\":\"General encephalopathy markers without specific gene-phenotype connections.\"},{\"gene\":\"ASAH2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic links to patient's metabolic profile.\"},{\"gene\":\"IFNA8\",\"confidence\":0.1,\"rationale\":\"No specific evidence linking to the patient's metabolic features.\"},{\"gene\":\"TIGD2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"},{\"gene\":\"CDC20\",\"confidence\":0.1,\"rationale\":\"No specific evidence connecting to the patient's metabolic profile.\"},{\"gene\":\"STBD1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"},{\"gene\":\"TECTA\",\"confidence\":0.1,\"rationale\":\"No specific evidence linking to the patient's metabolic features.\"},{\"gene\":\"URB1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"},{\"gene\":\"SEC61B\",\"confidence\":0.1,\"rationale\":\"No specific evidence connecting to the patient's metabolic profile.\"},{\"gene\":\"SPANXB1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"},{\"gene\":\"UBA6\",\"confidence\":0.1,\"rationale\":\"No specific evidence linking to the patient's metabolic features.\"},{\"gene\":\"GSTO1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"},{\"gene\":\"BEND7\",\"confidence\":0.1,\"rationale\":\"No specific evidence connecting to the patient's metabolic profile.\"},{\"gene\":\"ZNF775\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic or genetic evidence for the patient's condition.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.029,
+ "tokens_in": 12573,
+ "tokens_out": 456
+}

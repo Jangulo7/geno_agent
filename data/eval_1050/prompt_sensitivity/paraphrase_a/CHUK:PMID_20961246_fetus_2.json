@@ -1,0 +1,33 @@
+{
+ "case_id": "CHUK:PMID_20961246_fetus_2",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "CHUK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CHUK",
+  "MBD5",
+  "CYP7B1",
+  "GET3",
+  "EPHX4",
+  "PLEKHD1",
+  "CCDC124",
+  "TMEM139",
+  "NACA",
+  "PDE8B",
+  "YWHAG",
+  "SLC30A5",
+  "NAF1",
+  "LRRC24",
+  "OR10H2"
+ ],
+ "top1": "CHUK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CHUK\",\"confidence\":0.95,\"rationale\":\"Multiple reports link CHUK to omphalocele, limb undergrowth, and craniofacial abnormalities matching the patient's phenotype.\"},{\"gene\":\"MBD5\",\"confidence\":0.15,\"rationale\":\"MBD5 is associated with developmental delays but lacks specific features like omphalocele and limb undergrowth.\"},{\"gene\":\"CYP7B1\",\"confidence\":0.05,\"rationale\":\"CYP7B1 is linked to spastic paraplegia, not the described fetal malformations.\"},{\"gene\":\"GET3\",\"confidence\":0.05,\"rationale\":\"No direct evidence of omphalocele or limb undergrowth in GET3-related conditions.\"},{\"gene\":\"EPHX4\",\"confidence\":0.05,\"rationale\":\"EPHX4 is not associated with the described fetal malformations.\"},{\"gene\":\"PLEKHD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence of omphalocele or limb undergrowth in PLEKHD1-related conditions.\"},{\"gene\":\"CCDC124\",\"confidence\":0.05,\"rationale\":\"CCDC124 is not associated with the described fetal malformations.\"},{\"gene\":\"TMEM139\",\"confidence\":0.05,\"rationale\":\"TMEM139 is not associated with the described fetal malformations.\"},{\"gene\":\"NACA\",\"confidence\":0.05,\"rationale\":\"NACA is not associated with the described fetal malformations.\"},{\"gene\":\"PDE8B\",\"confidence\":0.05,\"rationale\":\"PDE8B is not associated with the described fetal malformations.\"},{\"gene\":\"YWHAG\",\"confidence\":0.05,\"rationale\":\"YWHAG is not associated with the described fetal malformations.\"},{\"gene\":\"SLC30A5\",\"confidence\":0.05,\"rationale\":\"SLC30A5 is not associated with the described fetal malformations.\"},{\"gene\":\"NAF1\",\"confidence\":0.05,\"rationale\":\"NAF1 is not associated with the described fetal malformations.\"},{\"gene\":\"LRRC24\",\"confidence\":0.05,\"rationale\":\"LRRC24 is not associated with the described fetal malformations.\"},{\"gene\":\"OR10H2\",\"confidence\":0.05,\"rationale\":\"OR10H2 is not associated with the described fetal malformations.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.461,
+ "tokens_in": 18501,
+ "tokens_out": 534
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "CLDN16:PMID_15856319_index_case",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "CLDN16",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CLDN16",
+  "TRPV5",
+  "SERPINA9",
+  "CCNI",
+  "TBC1D20",
+  "KCNJ18",
+  "EZH2",
+  "ZNF766",
+  "FBXO31",
+  "HPDL",
+  "RBM5",
+  "BMP1",
+  "CLINT1",
+  "NOL4L",
+  "NCK2"
+ ],
+ "top1": "CLDN16",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CLDN16\",\"confidence\":0.95,\"rationale\":\"Directly linked to FHHNC with all patient phenotypes.\"},{\"gene\":\"TRPV5\",\"confidence\":0.15,\"rationale\":\"Associated with calcium reabsorption but not directly with all phenotypes.\"},{\"gene\":\"SERPINA9\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"CCNI\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"TBC1D20\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"KCNJ18\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"EZH2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"ZNF766\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"FBXO31\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"HPDL\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"RBM5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"BMP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"CLINT1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"NOL4L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"},{\"gene\":\"NCK2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.934,
+ "tokens_in": 21299,
+ "tokens_out": 416
+}

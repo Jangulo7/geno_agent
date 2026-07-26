@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_27939403_A_1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "C17orf78",
+  "C1QTNF5",
+  "DACH2",
+  "STS",
+  "TOMM22",
+  "MECOM",
+  "PIGM",
+  "PRG2",
+  "H3C7",
+  "ANO3",
+  "ABCG2",
+  "OR10J4",
+  "CNPY2",
+  "B4GALT2"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to B cell defects, CD4/CD8 ratio, and Ig deficiencies in patient\"},{\"gene\":\"C17orf78\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"C1QTNF5\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"DACH2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"STS\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"TOMM22\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"MECOM\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"PIGM\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"PRG2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"H3C7\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"ANO3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"ABCG2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"OR10J4\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"CNPY2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"},{\"gene\":\"B4GALT2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient phenotype\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.376,
+ "tokens_in": 20292,
+ "tokens_out": 389
+}

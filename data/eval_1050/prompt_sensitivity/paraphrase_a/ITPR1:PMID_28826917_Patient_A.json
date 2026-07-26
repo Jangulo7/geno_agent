@@ -1,0 +1,32 @@
+{
+ "case_id": "ITPR1:PMID_28826917_Patient_A",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "SUCLA2",
+  "NABP2",
+  "CASQ2",
+  "GTF3C4",
+  "TRIT1",
+  "ZNF407",
+  "EML5",
+  "CYLC2",
+  "PPME1",
+  "B3GNT8",
+  "KLF1",
+  "NDUFB1",
+  "STOX2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"ITPR1\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to SCA15 with cerebellar atrophy, ataxia, dysarthria, and slow saccades.\"\n  },\n  {\n    \"gene\": \"SUCLA2\",\n    \"confidence\": 0.65,\n    \"rationale\": \"Associated with SCA2, showing ataxia, dysarthria, and slow saccades.\"\n  },\n  {\n    \"gene\": \"NABP2\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Linked to ataxia with dysarthria and eye movement abnormalities.\"\n  },\n  {\n    \"gene\": \"CASQ2\",\n    \"confidence\": 0.5,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  },\n  {\n    \"gene\": \"GTF3C4\",\n    \"confidence\": 0.45,\n    \"rationale\": \"Ataxia with dysarthria and slow saccades.\"\n  },\n  {\n    \"gene\": \"TRIT1\",\n    \"confidence\": 0.4,\n    \"rationale\": \"Ataxia with dysarthria and slow saccades.\"\n  },\n  {\n    \"gene\": \"ZNF407\",\n    \"confidence\": 0.35,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  },\n  {\n    \"gene\": \"EML5\",\n    \"confidence\": 0.3,\n    \"rationale\": \"Ataxia with dysarthria and saccadic eye movement issues.\"\n  },\n  {\n    \"gene\": \"CYLC2\",\n    \"confidence\": 0.25,\n    \"rationale\": \"Ataxia with dysarthria and eye movement abnormalities.\"\n  },\n  {\n    \"gene\": \"PPME1\",\n    \"confidence\": 0.2,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  },\n  {\n    \"gene\": \"B3GNT8\",\n    \"confidence\": 0.15,\n    \"rationale\": \"Ataxia with dysarthria and eye movement abnormalities.\"\n  },\n  {\n    \"gene\": \"KLF1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  },\n  {\n    \"gene\": \"NDUFB1\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Ataxia with dysarthria and eye movement abnormalities.\"\n  },\n  {\n    \"gene\": \"STOX2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  },\n  {\n    \"gene\": \"SUCLA2\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Ataxia with dysarthria and eye movement issues.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 11.757,
+ "tokens_in": 18194,
+ "tokens_out": 658
+}

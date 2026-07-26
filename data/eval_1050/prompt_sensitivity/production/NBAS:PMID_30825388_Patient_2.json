@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_30825388_Patient_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NBAS",
+  "TNF",
+  "EFHD1",
+  "TPO",
+  "YLPM1",
+  "MS4A6A",
+  "TRADD",
+  "GLB1L3",
+  "KANK2",
+  "DGCR6",
+  "MBD3L4",
+  "DRAP1",
+  "MIB2",
+  "ANAPC4",
+  "MYORG"
+ ],
+ "top1": "NBAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"Direct link to recurrent ALF with elevated liver enzymes and immunodeficiency\"},{\"gene\":\"TNF\",\"confidence\":0.15,\"rationale\":\"Correlated with liver enzymes and immunoglobulins in studies\"},{\"gene\":\"EFHD1\",\"confidence\":0.1,\"rationale\":\"Reduced liver enzymes in knockout models\"},{\"gene\":\"TPO\",\"confidence\":0.05,\"rationale\":\"Mentions liver enzymes and autoantibodies\"},{\"gene\":\"YLPM1\",\"confidence\":0.05,\"rationale\":\"Elevated liver enzymes noted\"},{\"gene\":\"MS4A6A\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"TRADD\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"GLB1L3\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"KANK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"DGCR6\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"MBD3L4\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"DRAP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"MIB2\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"ANAPC4\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"},{\"gene\":\"MYORG\",\"confidence\":0.05,\"rationale\":\"No direct phenotype link\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.87,
+ "tokens_in": 12095,
+ "tokens_out": 352
+}

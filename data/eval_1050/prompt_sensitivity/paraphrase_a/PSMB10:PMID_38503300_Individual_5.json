@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_5",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NFE2L2",
+  "GUK1",
+  "C10orf143",
+  "PSMB10",
+  "CYP27A1",
+  "SMIM39",
+  "MEGF6",
+  "SPANXA1",
+  "TTI1",
+  "REPS1",
+  "ZNF76",
+  "NDRG3",
+  "EVPLL",
+  "SDHD",
+  "MSL3"
+ ],
+ "top1": "NFE2L2",
+ "top1_correct": false,
+ "causal_rank": 4,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NFE2L2\",\"confidence\":0.95,\"rationale\":\"Mutations cause recurrent infections, lymphopenia, and T cell defects matching patient's phenotype.\"},{\"gene\":\"GUK1\",\"confidence\":0.65,\"rationale\":\"Zap70 deficiency matches T cell defects and recurrent infections.\"},{\"gene\":\"C10orf143\",\"confidence\":0.45,\"rationale\":\"Immunological features overlap with patient's T cell and B cell abnormalities.\"},{\"gene\":\"PSMB10\",\"confidence\":0.35,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"CYP27A1\",\"confidence\":0.3,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"SMIM39\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"MEGF6\",\"confidence\":0.2,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"SPANXA1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"TTI1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"REPS1\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"ZNF76\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"NDRG3\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"EVPLL\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"SDHD\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"},{\"gene\":\"MSL3\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's T cell and B cell defects.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.84,
+ "tokens_in": 18777,
+ "tokens_out": 473
+}

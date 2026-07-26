@@ -1,0 +1,33 @@
+{
+ "case_id": "WWOX:PMID_30356099_Patient_15",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "WWOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "WWOX",
+  "LSM12",
+  "RIMKLA",
+  "C21orf58",
+  "KCNE4",
+  "EVC",
+  "EIF4A1",
+  "ZNF70",
+  "SSR1",
+  "PKMYT1",
+  "IL27",
+  "CATSPERG",
+  "NKPD1",
+  "OR8B4",
+  "NUTM2G"
+ ],
+ "top1": "WWOX",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"WWOX\",\"confidence\":0.95,\"rationale\":\"Directly linked to severe developmental and epileptic encephalopathy with thin corpus callosum and seizures.\"},{\"gene\":\"IRF2BPL\",\"confidence\":0.15,\"rationale\":\"De novo variant associated with similar structural and seizure features.\"},{\"gene\":\"LSM12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RIMKLA\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"C21orf58\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"KCNE4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"EVC\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"EIF4A1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZNF70\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SSR1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PKMYT1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"IL27\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"CATSPERG\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NKPD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"OR8B4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NUTM2G\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.347,
+ "tokens_in": 15909,
+ "tokens_out": 450
+}

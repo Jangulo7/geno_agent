@@ -1,0 +1,33 @@
+{
+ "case_id": "COPZ1:PMID_39642330_Patient_3",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "COPZ1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "POU6F2",
+  "SLC61A1",
+  "PRR18",
+  "ITPR3",
+  "LRR1",
+  "GIMAP7",
+  "HBS1L",
+  "SUSD6",
+  "AMER2",
+  "SP2",
+  "NCK1",
+  "TBL1XR1",
+  "MALT1",
+  "MYL10",
+  "RTTN"
+ ],
+ "top1": "POU6F2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"POU6F2\",\"confidence\":0.95,\"rationale\":\"Matches all HPO phenotypes including macrocytic anemia, neutropenia, and bone marrow hypocellularity.\"},{\"gene\":\"SLC61A1\",\"confidence\":0.15,\"rationale\":\"General bone marrow findings but no specific phenotypic match.\"},{\"gene\":\"PRR18\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"ITPR3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"LRR1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"GIMAP7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"HBS1L\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"SUSD6\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"AMER2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"SP2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"NCK1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"TBL1XR1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"MALT1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"MYL10\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"},{\"gene\":\"RTTN\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match to patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.249,
+ "tokens_in": 17844,
+ "tokens_out": 437
+}

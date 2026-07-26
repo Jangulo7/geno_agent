@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_31069201_Mother",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "CENPC",
+  "DNASE1L3",
+  "NOCT",
+  "SLC25A19",
+  "USP17L23",
+  "STARD10",
+  "DTYMK",
+  "STYX",
+  "GPR158",
+  "SEMA4B",
+  "SPINK9",
+  "INA",
+  "TMEM41B",
+  "OR9A4"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct link to B cell and T cell defects, Ig isotype deficiencies, and family history\"},{\"gene\":\"CENPC\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"DNASE1L3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"NOCT\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"SLC25A19\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"USP17L23\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"STARD10\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"DTYMK\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"STYX\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"GPR158\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"SEMA4B\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"SPINK9\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"INA\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"TMEM41B\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"OR9A4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"},{\"gene\":\"DYMK\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.159,
+ "tokens_in": 18203,
+ "tokens_out": 401
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "POLR1A:PMID_37075751_Individual_14",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "POLR1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ZNF287",
+  "ATP11B",
+  "ATP6V1G2",
+  "NLRP12",
+  "NFKBIE",
+  "PCARE",
+  "ZNF385C",
+  "WDFY2",
+  "SPTAN1",
+  "HTR6",
+  "ZMYND12",
+  "NLRC4",
+  "SIRPB2",
+  "MFSD12",
+  "TP53I11"
+ ],
+ "top1": "ZNF287",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IRF2BL\",\"confidence\":0.95,\"rationale\":\"Multiple case reports link IRF2BL variants to the patient's facial dysmorphism and developmental delay.\"},{\"gene\":\"ZNF287\",\"confidence\":0.15,\"rationale\":\"Limited evidence of facial features and developmental delay.\"},{\"gene\":\"ATP11B\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ATP6V1G2\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"NLRP12\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"NFKBIE\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"PCARE\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ZNF385C\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"WDFY2\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"SPTAN1\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"HTR6\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"ZMYND12\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"NLRC4\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"SIRPB2\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"MFSD12\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"},{\"gene\":\"TP53I11\",\"confidence\":0.15,\"rationale\":\"No direct link to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.202,
+ "tokens_in": 14439,
+ "tokens_out": 458
+}

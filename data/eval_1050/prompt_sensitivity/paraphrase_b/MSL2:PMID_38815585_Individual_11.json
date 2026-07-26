@@ -1,0 +1,33 @@
+{
+ "case_id": "MSL2:PMID_38815585_Individual_11",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "MSL2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "BCL7C",
+  "MSL2",
+  "BTNL2",
+  "EGF",
+  "SORCS1",
+  "PER1",
+  "LPO",
+  "ZNF628",
+  "PHLDA1",
+  "EEIG1",
+  "STK32B",
+  "GOLGA6L24",
+  "ASB2",
+  "BBOF1",
+  "MT-CO1"
+ ],
+ "top1": "BCL7C",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"BCL7C\",\"confidence\":0.95,\"rationale\":\"BCL7C is linked to atopic dermatitis and thyroid function, matching multiple patient phenotypes.\"},{\"gene\":\"MSL2\",\"confidence\":0.85,\"rationale\":\"MSL2 is associated with connective tissue disorders and facial dysmorphia, aligning with several HPO terms.\"},{\"gene\":\"BTNL2\",\"confidence\":0.75,\"rationale\":\"BTNL2 is implicated in atopic dermatitis and immune responses, matching relevant phenotypes.\"},{\"gene\":\"EGF\",\"confidence\":0.65,\"rationale\":\"EGF is related to skin barrier function and thyroid regulation, partially aligning with patient features.\"},{\"gene\":\"SORCS1\",\"confidence\":0.6,\"rationale\":\"SORCS1 is linked to immune responses and skin conditions, matching some HPO terms.\"},{\"gene\":\"PER1\",\"confidence\":0.55,\"rationale\":\"PER1 is associated with wound healing and skin conditions, partially matching phenotypes.\"},{\"gene\":\"LPO\",\"confidence\":0.5,\"rationale\":\"LPO is related to skin barrier function, aligning with some patient features.\"},{\"gene\":\"ZNF628\",\"confidence\":0.45,\"rationale\":\"ZNF628 is linked to skin conditions, partially matching HPO terms.\"},{\"gene\":\"PHLDA1\",\"confidence\":0.4,\"rationale\":\"PHLDA1 is associated with immune responses and skin conditions, matching some features.\"},{\"gene\":\"EEIG1\",\"confidence\":0.35,\"rationale\":\"EEIG1 is linked to immune responses, partially aligning with patient phenotypes.\"},{\"gene\":\"STK32B\",\"confidence\":0.3,\"rationale\":\"STK32B is related to skin conditions, matching some HPO terms.\"},{\"gene\":\"GOLGA6L24\",\"confidence\":0.25,\"rationale\":\"GOLGA6L24 is linked to skin conditions, partially matching patient features.\"},{\"gene\":\"ASB2\",\"confidence\":0.2,\"rationale\":\"ASB2 is associated with immune responses, aligning with some HPO terms.\"},{\"gene\":\"BBOF1\",\"confidence\":0.15,\"rationale\":\"BBOF1 is linked to immune responses, partially matching patient features.\"},{\"gene\":\"MT-CO1\",\"confidence\":0.1,\"rationale\":\"MT-CO1 is related to mitochondrial function, not directly matching most HPO terms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.38,
+ "tokens_in": 12377,
+ "tokens_out": 534
+}

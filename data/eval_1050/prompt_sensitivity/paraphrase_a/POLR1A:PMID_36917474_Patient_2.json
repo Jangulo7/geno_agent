@@ -1,0 +1,33 @@
+{
+ "case_id": "POLR1A:PMID_36917474_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "POLR1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "POLR1A",
+  "DNM1L",
+  "FOLR1",
+  "ALDOC",
+  "IFNA2",
+  "FRMD1",
+  "FASTKD5",
+  "HDHD5",
+  "CT47A8",
+  "MLST8",
+  "PPY",
+  "CCPG1",
+  "GSX2",
+  "EEF1B2",
+  "SLC44A2"
+ ],
+ "top1": "POLR1A",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"POLR1A\",\"confidence\":0.95,\"rationale\":\"Directly links to hypomyelinating leukodystrophy, CNS hypomyelination, thin corpus callosum, dystonia, spasticity, and developmental delay.\"},{\"gene\":\"DNM1L\",\"confidence\":0.15,\"rationale\":\"Associated with neurological phenotypes but lacks specific mention of all patient features.\"},{\"gene\":\"FOLR1\",\"confidence\":0.1,\"rationale\":\"Linked to cerebral folate deficiency, not all patient features.\"},{\"gene\":\"ALDOC\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"IFNA2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"FRMD1\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"FASTKD5\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"HDHD5\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"CT47A8\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"MLST8\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"PPY\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"CCPG1\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"GSX2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"EEF1B2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"},{\"gene\":\"SLC44A2\",\"confidence\":0.05,\"rationale\":\"No direct link to patient's full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.557,
+ "tokens_in": 17218,
+ "tokens_out": 439
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "RFX5:PMID_30170160_P7",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "RFX5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EXOSC9",
+  "HTATIP2",
+  "ZNF14",
+  "SLC25A45",
+  "TESMIN",
+  "ST8SIA2",
+  "CDH22",
+  "HIRA",
+  "YBEY",
+  "WWC1",
+  "TIGD2",
+  "RNF122",
+  "ADAM12",
+  "TBC1D32",
+  "WDR70"
+ ],
+ "top1": "EXOSC9",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EXOSC9\",\"confidence\":0.95,\"rationale\":\"Multiple reports link EXOSC9 mutations to immune defects matching the patient's phenotype.\"},{\"gene\":\"HTATIP2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking HTATIP2 to the patient's phenotype.\"},{\"gene\":\"ZNF14\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ZNF14 to the patient's phenotype.\"},{\"gene\":\"SLC25A45\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SLC25A45 to the patient's phenotype.\"},{\"gene\":\"TESMIN\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TESMIN to the patient's phenotype.\"},{\"gene\":\"ST8SIA2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ST8SIA2 to the patient's phenotype.\"},{\"gene\":\"CDH22\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CDH22 to the patient's phenotype.\"},{\"gene\":\"HIRA\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking HIRA to the patient's phenotype.\"},{\"gene\":\"YBEY\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking YBEY to the patient's phenotype.\"},{\"gene\":\"WWC1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking WWC1 to the patient's phenotype.\"},{\"gene\":\"TIGD2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TIGD2 to the patient's phenotype.\"},{\"gene\":\"RNF122\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking RNF122 to the patient's phenotype.\"},{\"gene\":\"ADAM12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking ADAM12 to the patient's phenotype.\"},{\"gene\":\"TBC1D32\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TBC1D32 to the patient's phenotype.\"},{\"gene\":\"WDR70\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking WDR70 to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.415,
+ "tokens_in": 15894,
+ "tokens_out": 491
+}

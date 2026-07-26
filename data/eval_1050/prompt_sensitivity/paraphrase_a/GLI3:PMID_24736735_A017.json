@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_24736735_A017",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "NRM",
+  "IZUMO2",
+  "ZNF114",
+  "C6",
+  "TEX10",
+  "ACAA2",
+  "GANAB",
+  "MRPL41",
+  "PAGE4",
+  "FADS3",
+  "FAM236B",
+  "TMEM9B",
+  "CD101",
+  "ITIH1"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"GLI3 mutations cause postaxial polydactyly and corpus callosum hypoplasia with macrocephaly.\"},{\"gene\":\"NRM\",\"confidence\":0.05,\"rationale\":\"NRM is not linked to polydactyly or corpus callosum anomalies.\"},{\"gene\":\"IZUMO2\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"ZNF114\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"C6\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"TEX10\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"ACAA2\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"GANAB\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"MRPL41\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"PAGE4\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"FADS3\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"FAM236B\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"TMEM9B\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"CD101\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"},{\"gene\":\"ITIH1\",\"confidence\":0.0,\"rationale\":\"No evidence of polydactyly or corpus callosum hypoplasia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.584,
+ "tokens_in": 19826,
+ "tokens_out": 533
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "SNF8:PMID_38423010_individual_D1",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "SNF8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SNF8",
+  "ATP11A",
+  "PLET1",
+  "KLF11",
+  "ZDHHC12",
+  "CREB3L3",
+  "CAPN11",
+  "OR8S1",
+  "CTCF",
+  "AKAP6",
+  "PARP15",
+  "METRN",
+  "FAM187B",
+  "ZNF41",
+  "PPIL6"
+ ],
+ "top1": "SNF8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SNF8\",\"confidence\":0.95,\"rationale\":\"Directly links to neurodevelopmental/neurodegenerative phenotypes including cerebellar atrophy, optic atrophy, and intellectual disability.\"},{\"gene\":\"ATP11A\",\"confidence\":0.75,\"rationale\":\"Associated with cerebellar ataxia, intellectual disability, and optic atrophy, matching the patient's phenotype.\"},{\"gene\":\"PLET1\",\"confidence\":0.65,\"rationale\":\"Linked to cerebellar atrophy, intellectual disability, and optic atrophy, with some overlap with the patient's features.\"},{\"gene\":\"KLF11\",\"confidence\":0.55,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in intellectual disability and ataxia.\"},{\"gene\":\"ZDHHC12\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"CREB3L3\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"CAPN11\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"OR8S1\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"CTCF\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"AKAP6\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"PARP15\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"METRN\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"FAM187B\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"ZNF41\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"},{\"gene\":\"PPIL6\",\"confidence\":0.5,\"rationale\":\"No direct evidence linking to the patient's specific phenotype, but some overlap in ataxia and intellectual disability.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 11.168,
+ "tokens_in": 18323,
+ "tokens_out": 604
+}

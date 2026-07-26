@@ -1,0 +1,33 @@
+{
+ "case_id": "CTSA:PMID_35904593_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "CTSA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "HTT",
+  "ANKRD22",
+  "PSG4",
+  "ABCB5",
+  "KCNK5",
+  "NPR1",
+  "MESD",
+  "GCNT7",
+  "JPH4",
+  "UPK1A",
+  "PRPF6",
+  "SSBP2",
+  "HTR3C",
+  "SRRT",
+  "ARGLU1"
+ ],
+ "top1": "HTT",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"HTT\",\"confidence\":0.95,\"rationale\":\"Matches dysphagia, hypometric saccades, sensorineural hearing loss, ataxia, and absent reflexes.\"},{\"gene\":\"ANKRD22\",\"confidence\":0.15,\"rationale\":\"Reports hypomyelination and sensorineural hearing loss but lacks key features.\"},{\"gene\":\"PSG4\",\"confidence\":0.1,\"rationale\":\"Reports hypomyelination and sensorineural hearing loss but lacks key features.\"},{\"gene\":\"ABCB5\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"KCNK5\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"NPR1\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"MESD\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"GCNT7\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"JPH4\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"UPK1A\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"PRPF6\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"SSBP2\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"HTR3C\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"SRRT\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"},{\"gene\":\"ARGLU1\",\"confidence\":0.05,\"rationale\":\"Reports sensorineural hearing loss and dysphagia but lacks key features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.317,
+ "tokens_in": 17353,
+ "tokens_out": 514
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_16670861_twin_1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "THRSP",
+  "NHP2",
+  "GATD1",
+  "CPNE4",
+  "ARL6IP5",
+  "AEBP1",
+  "NUDT13",
+  "AMY2B",
+  "HGH1",
+  "PCID2",
+  "TRPC5OS",
+  "SIRT1",
+  "KPNA7",
+  "COPS8"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"Directly links to Netherton syndrome with all patient phenotypes.\"},{\"gene\":\"THRSP\",\"confidence\":0.15,\"rationale\":\"Mentions atopic dermatitis and milk allergy but lacks direct phenotypic match.\"},{\"gene\":\"NHP2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"GATD1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"CPNE4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"ARL6IP5\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"AEBP1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"NUDT13\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"AMY2B\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"HGH1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"PCID2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"TRPC5OS\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"SIRT1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"KPNA7\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"},{\"gene\":\"COPS8\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic evidence or relevance to patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.53,
+ "tokens_in": 16620,
+ "tokens_out": 454
+}

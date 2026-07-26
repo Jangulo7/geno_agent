@@ -1,0 +1,51 @@
+{
+  "K": {
+    "tie_break_rule": "sorted by (-hiPhive phenotype score, gene symbol): ties broken ALPHABETICALLY by HGNC symbol",
+    "candidate_restriction": "the tool ranks genome-wide, then the ranking is restricted post hoc to the case's 50 candidates preserving relative order; unscored candidates take score 0.0 and fall to the end",
+    "n_cases": 1047,
+    "mean_tied_at_rank1": 1.01,
+    "share_fully_flat": 0.0,
+    "share_5_or_more_tied": 0.001,
+    "causal_inside_rank1_tie_group": 728,
+    "causal_lost_the_tie_break": 5,
+    "share_causal_lost_tie_break": 0.0048,
+    "tie_size_histogram_capped_at_10": {
+      "1": 1040,
+      "2": 4,
+      "3": 2,
+      "6": 1
+    }
+  },
+  "M": {
+    "tie_break_rule": "sorted by (-best posttest probability over diseases mapping to the gene, candidate-list input index): ties broken by the per-case seeded candidate order",
+    "candidate_restriction": "the tool ranks genome-wide, then the ranking is restricted post hoc to the case's 50 candidates preserving relative order; unscored candidates take score 0.0 and fall to the end",
+    "n_cases": 1047,
+    "mean_tied_at_rank1": 1.0,
+    "share_fully_flat": 0.0,
+    "share_5_or_more_tied": 0.0,
+    "causal_inside_rank1_tie_group": 967,
+    "causal_lost_the_tie_break": 0,
+    "share_causal_lost_tie_break": 0.0,
+    "tie_size_histogram_capped_at_10": {
+      "1": 1047
+    }
+  },
+  "S": {
+    "tie_break_rule": "LEA confidence, then cross-encoder order for genes the LEA did not rank; deterministic fallback to cross-encoder order on parse failure",
+    "candidate_restriction": "the tool scores only the case's candidates",
+    "n_cases": 1047,
+    "mean_tied_at_rank1": 1.13,
+    "share_fully_flat": 0.0,
+    "share_5_or_more_tied": 0.0086,
+    "causal_inside_rank1_tie_group": 762,
+    "causal_lost_the_tie_break": 2,
+    "share_causal_lost_tie_break": 0.0019,
+    "tie_size_histogram_capped_at_10": {
+      "1": 1036,
+      "2": 2,
+      "9": 1,
+      "10": 8
+    }
+  },
+  "_note": "The two curated baselines do not share a tie-break rule: Exomiser's is alphabetical by gene symbol, which is deterministic but systematic, while LIRICAL's follows the per-case seeded candidate order, which is deterministic and arbitrary with respect to the causal gene. Neither rule was tuned. The asymmetry matters only where ties occur at rank 1."
+}

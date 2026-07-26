@@ -1,0 +1,33 @@
+{
+ "case_id": "SPTAN1:PMID_35150594_G_II_1",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "SPTAN1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AP5B1",
+  "HTN3",
+  "ZNF532",
+  "ZNF860",
+  "OMP",
+  "TSPO",
+  "TMEM92",
+  "FAM90A9",
+  "IL17D",
+  "LRAT",
+  "FGF5",
+  "CERKL",
+  "NOPCHAP1",
+  "SCAF11",
+  "PARP8"
+ ],
+ "top1": "AP5B1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AP5B1\",\"confidence\":0.95,\"rationale\":\"Linked to spastic paraplegia with pes cavus and pyramidal signs.\"},{\"gene\":\"HTN3\",\"confidence\":0.85,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"ZNF532\",\"confidence\":0.75,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"ZNF860\",\"confidence\":0.7,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"OMP\",\"confidence\":0.65,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"TSPO\",\"confidence\":0.6,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"TMEM92\",\"confidence\":0.55,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"FAM90A9\",\"confidence\":0.5,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"IL17D\",\"confidence\":0.45,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"LRAT\",\"confidence\":0.4,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"FGF5\",\"confidence\":0.35,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"CERKL\",\"confidence\":0.3,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"NOPCHAP1\",\"confidence\":0.25,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"},{\"gene\":\"SCAF11\",\"confidence\":0.2,\"rationale\":\"Associated with spastic paraplegia and pyramidal signs.\"},{\"gene\":\"PARP8\",\"confidence\":0.15,\"rationale\":\"Linked to spastic paraplegia with pyramidal signs.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.022,
+ "tokens_in": 17900,
+ "tokens_out": 478
+}

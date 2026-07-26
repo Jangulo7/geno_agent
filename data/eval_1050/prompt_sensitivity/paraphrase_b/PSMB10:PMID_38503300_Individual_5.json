@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_5",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NFE2L2",
+  "GUK1",
+  "ZNF76",
+  "NDRG3",
+  "C10orf143",
+  "EVPLL",
+  "MSL3",
+  "REPS1",
+  "TTI1",
+  "SDHD",
+  "SMIM39",
+  "MEGF6",
+  "SPANXA1",
+  "PSMB10",
+  "CYP27A1"
+ ],
+ "top1": "NFE2L2",
+ "top1_correct": false,
+ "causal_rank": 14,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NFE2L2\",\"confidence\":0.95,\"rationale\":\"Directly links to recurrent infections, immunodeficiency, and lymphopenia with loss-of-function mutations.\"},{\"gene\":\"GUK1\",\"confidence\":0.65,\"rationale\":\"Associated with immunodeficiency and failure to thrive, though less specific.\"},{\"gene\":\"ZNF76\",\"confidence\":0.35,\"rationale\":\"No direct phenotypic overlap with patient's symptoms.\"},{\"gene\":\"NDRG3\",\"confidence\":0.3,\"rationale\":\"T cell subset changes match but lack direct immunodeficiency links.\"},{\"gene\":\"C10orf143\",\"confidence\":0.25,\"rationale\":\"Immunological data partially aligns but not specific to patient's phenotype.\"},{\"gene\":\"EVPLL\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's immunodeficiency features.\"},{\"gene\":\"MSL3\",\"confidence\":0.2,\"rationale\":\"No clear connection to patient's clinical or immunological profile.\"},{\"gene\":\"REPS1\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's immunodeficiency features.\"},{\"gene\":\"TTI1\",\"confidence\":0.2,\"rationale\":\"No clear connection to patient's clinical or immunological profile.\"},{\"gene\":\"SDHD\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's immunodeficiency features.\"},{\"gene\":\"SMIM39\",\"confidence\":0.2,\"rationale\":\"No clear connection to patient's clinical or immunological profile.\"},{\"gene\":\"MEGF6\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's immunodeficiency features.\"},{\"gene\":\"SPANXA1\",\"confidence\":0.2,\"rationale\":\"No clear connection to patient's clinical or immunological profile.\"},{\"gene\":\"PSMB10\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's immunodeficiency features.\"},{\"gene\":\"CYP27A1\",\"confidence\":0.2,\"rationale\":\"No clear connection to patient's clinical or immunological profile.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.878,
+ "tokens_in": 18764,
+ "tokens_out": 456
+}

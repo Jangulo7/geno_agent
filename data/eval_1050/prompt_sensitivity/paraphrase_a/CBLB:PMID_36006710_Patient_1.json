@@ -1,0 +1,33 @@
+{
+ "case_id": "CBLB:PMID_36006710_Patient_1",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "CBLB",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ERP44",
+  "MOB1A",
+  "ASS1",
+  "GHSR",
+  "SPANXA2",
+  "CABP2",
+  "PABPC1",
+  "TEKT2",
+  "PRKAB1",
+  "TMEM140",
+  "NMRAL1",
+  "CAVIN1",
+  "COX17",
+  "RAD21",
+  "FIGN"
+ ],
+ "top1": "ERP44",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ERP44\",\"confidence\":0.95,\"rationale\":\"Low IgG, IgA, IgM with poor vaccine response and B-cell defects.\"},{\"gene\":\"MOB1A\",\"confidence\":0.15,\"rationale\":\"Similar B-cell defects but no specific IgG/IgA/IgM data.\"},{\"gene\":\"ASS1\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"GHSR\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"SPANXA2\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"CABP2\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"PABPC1\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"TEKT2\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"PRKAB1\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"TMEM140\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"NMRAL1\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"CAVIN1\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"COX17\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"RAD21\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"},{\"gene\":\"FIGN\",\"confidence\":0.1,\"rationale\":\"No IgG/IgA/IgM data or vaccine response details.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.045,
+ "tokens_in": 16989,
+ "tokens_out": 485
+}

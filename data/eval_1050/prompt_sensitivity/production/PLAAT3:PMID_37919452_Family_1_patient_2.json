@@ -1,0 +1,33 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_1_patient_2",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SET",
+  "PQBP1",
+  "TMEM18",
+  "PLAAT3",
+  "FBXO44",
+  "SIDT1",
+  "HORMAD2",
+  "SRD5A3",
+  "NTM",
+  "ARF1",
+  "LMO3",
+  "SLC15A2",
+  "C8orf76",
+  "ZCCHC10",
+  "CD247"
+ ],
+ "top1": "SET",
+ "top1_correct": false,
+ "causal_rank": 4,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SET\",\"confidence\":0.95,\"rationale\":\"Direct link to lipodystrophy with insulin resistance and metabolic features.\"},{\"gene\":\"PQBP1\",\"confidence\":0.75,\"rationale\":\"Intellectual disability and short stature overlap with patient phenotype.\"},{\"gene\":\"TMEM18\",\"confidence\":0.65,\"rationale\":\"Obesity and metabolic features partially align.\"},{\"gene\":\"PLAAT3\",\"confidence\":0.55,\"rationale\":\"Lipoatrophy and metabolic features match.\"},{\"gene\":\"FBXO44\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SIDT1\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"HORMAD2\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SRD5A3\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"NTM\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ARF1\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"LMO3\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SLC15A2\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"C8orf76\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZCCHC10\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"CD247\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.586,
+ "tokens_in": 16939,
+ "tokens_out": 384
+}

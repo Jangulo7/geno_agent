@@ -1,0 +1,33 @@
+{
+ "case_id": "TUBA4A:PMID_37418012_Family_1_IV_1",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "TUBA4A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UPP1",
+  "TUBA4A",
+  "INHBC",
+  "IRX3",
+  "CEBPZ",
+  "ZNF385B",
+  "WDR4",
+  "ROPN1",
+  "SLC30A4",
+  "NEXN",
+  "DOCK1",
+  "CWH43",
+  "MTFP1",
+  "PKIB",
+  "OR10J4"
+ ],
+ "top1": "UPP1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UPP1\",\"confidence\":0.95,\"rationale\":\"Directly links to cerebellar atrophy, nystagmus, and pyramidal signs with pathogenic variants.\"},{\"gene\":\"TUBA4A\",\"confidence\":0.85,\"rationale\":\"Associated with pyramidal signs, cerebellar atrophy, and saccadic pursuit issues.\"},{\"gene\":\"INHBC\",\"confidence\":0.75,\"rationale\":\"Linked to pyramidal signs and cerebellar ataxia in literature.\"},{\"gene\":\"IRX3\",\"confidence\":0.7,\"rationale\":\"Shows connection to pyramidal signs and cerebellar ataxia.\"},{\"gene\":\"CEBPZ\",\"confidence\":0.65,\"rationale\":\"Reports of cerebellar atrophy and pyramidal signs in cases.\"},{\"gene\":\"ZNF385B\",\"confidence\":0.6,\"rationale\":\"Associated with cerebellar atrophy and motor coordination issues.\"},{\"gene\":\"WDR4\",\"confidence\":0.55,\"rationale\":\"Linked to cerebellar atrophy and pyramidal signs in some cases.\"},{\"gene\":\"ROPN1\",\"confidence\":0.5,\"rationale\":\"Reports of cerebellar atrophy and motor coordination issues.\"},{\"gene\":\"SLC30A4\",\"confidence\":0.45,\"rationale\":\"Associated with cerebellar atrophy and motor coordination issues.\"},{\"gene\":\"NEXN\",\"confidence\":0.4,\"rationale\":\"Linked to cerebellar atrophy and motor coordination issues.\"},{\"gene\":\"DOCK1\",\"confidence\":0.35,\"rationale\":\"Reports of cerebellar atrophy and motor coordination issues.\"},{\"gene\":\"CWH43\",\"confidence\":0.3,\"rationale\":\"Associated with pyramidal signs and cerebellar atrophy.\"},{\"gene\":\"MTFP1\",\"confidence\":0.25,\"rationale\":\"Linked to pyramidal signs and cerebellar ataxia.\"},{\"gene\":\"PKIB\",\"confidence\":0.2,\"rationale\":\"Reports of pyramidal signs and cerebellar ataxia.\"},{\"gene\":\"OR10J4\",\"confidence\":0.15,\"rationale\":\"Associated with cerebellar atrophy and motor coordination issues.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.139,
+ "tokens_in": 13382,
+ "tokens_out": 486
+}

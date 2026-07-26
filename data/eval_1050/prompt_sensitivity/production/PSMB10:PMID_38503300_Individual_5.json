@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_5",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NFE2L2",
+  "GUK1",
+  "ZNF76",
+  "EVPLL",
+  "C10orf143",
+  "MSL3",
+  "REPS1",
+  "TTI1",
+  "SDHD",
+  "SMIM39",
+  "MEGF6",
+  "SPANXA1",
+  "PSMB10",
+  "CYP27A1",
+  "NDRG3"
+ ],
+ "top1": "NFE2L2",
+ "top1_correct": false,
+ "causal_rank": 13,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NFE2L2\",\"confidence\":0.95,\"rationale\":\"Direct link to recurrent infections, immunodeficiency, and lymphopenia with loss-of-function mutations.\"},{\"gene\":\"GUK1\",\"confidence\":0.15,\"rationale\":\"Linked to immunodeficiency and failure to thrive, but less specific evidence.\"},{\"gene\":\"ZNF76\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"EVPLL\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"C10orf143\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MSL3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"REPS1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TTI1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SDHD\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SMIM39\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"MEGF6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SPANXA1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PSMB10\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CYP27A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"NDRG3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.718,
+ "tokens_in": 18782,
+ "tokens_out": 438
+}

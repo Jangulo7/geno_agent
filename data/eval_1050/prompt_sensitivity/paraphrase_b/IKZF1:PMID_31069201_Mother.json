@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_31069201_Mother",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "CENPC",
+  "DNASE1L3",
+  "NOCT",
+  "SLC25A19",
+  "USP17L23",
+  "STARD10",
+  "DTYMK",
+  "STYX",
+  "GPR158",
+  "SEMA4B",
+  "SPINK9",
+  "INA",
+  "OR9A4",
+  "TMEM41B"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Direct evidence of variant in patient with matching phenotype and functional role in B/T cell development\"},{\"gene\":\"CENPC\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"DNASE1L3\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"NOCT\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"SLC25A19\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"USP17L23\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"STARD10\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"DTYMK\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"STYX\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"GPR158\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"SEMA4B\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"SPINK9\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"INA\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"OR9A4\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"},{\"gene\":\"TMEM41B\",\"confidence\":0.05,\"rationale\":\"No relevant evidence linking to patient phenotype\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.124,
+ "tokens_in": 18185,
+ "tokens_out": 392
+}

@@ -272,6 +272,53 @@ The full reproducibility specification is kept in the project's local methodolog
 document (private until publication); the pinned versions and SHA-256 hashes below,
 together with `data/MANIFEST.tsv`, are the reproducibility-critical subset.
 
+### Verifying the reported numbers
+
+Every number in the evaluation write-up is produced by a committed script under
+`scripts/eval/revision/` and written to a machine-readable file under
+`reports/p2_revision/`, so a reader can check any figure without re-running the
+pipeline. All are deterministic at seed 42 and read only saved per-case
+artefacts — none re-runs model inference, except the prompt-sensitivity replay.
+
+| Script | Produces | What it establishes |
+|---|---|---|
+| `provenance_checks.py` | `wp1a_coverage_check.json`, `wp1d_baseline_versions.json`, `wp9b_tie_handling.json` | The retrieval index never gated cohort membership; LIRICAL read the same pinned `phenotype.hpoa` the overlap flag is computed against; how each baseline breaks rank ties |
+| `interaction_test.py` | `wp3_did.json` | Per-system overlap shift, the system × overlap interaction, and directly standardised estimates |
+| `cluster_inference.py` | `wp4_cluster_inference.json`, `wp4_unique_pmids.json` | Publication-clustered intervals and paired tests for every reported contrast, with the case-level result alongside |
+| `design_weighted.py` | `wp5_design_weighted.json` | Horvitz–Thompson estimates for the eligible population using the released inclusion probabilities |
+| `annotation_density.py` | `wp6_annotation_density.json`, `wp6_case_density.csv` | Whether curation depth, rather than annotation exposure, explains the overlap effect |
+| `metric_audit.py` | `wp7_full_stratum_table.csv`, `wp7_metric_audit.{csv,json}` | All cells × metrics × subsets for both candidate-list variants, and a diff of every previously reported value |
+| `judge_provenance.py` | `wp8_judge_provenance.json` | Judge-run provenance with intervals, triage operating characteristics, and as-run vs error-excluded ablation estimates |
+| `prompt_sensitivity.py` | `wp8d_prompt_sensitivity.json`, `data/eval_1050/prompt_sensitivity/` | Sensitivity of the result to prompt wording, replaying cached retrieval so only the LEA stage re-runs |
+| `cutoff_asymmetry.py` | `wp9c_cutoff_asymmetry.json`, `wp9c_pmcid_dates.json` | How much retrieved evidence postdates the curated tools' annotation release |
+| `render_supp_tables.py` | Supplementary Tables S2, S3 | Multiplicity correction and design-weighted estimates, as standalone documents |
+| `consistency_check.py` | — | Cross-checks cohort counts, pinned versions and DOIs against the companion resource paper; verifies no orphan or stale claims and that references are complete and sequential |
+| `latex_lint.py` | — | Structural checks on a `.tex` without compiling it |
+
+Two properties of the evaluation are worth knowing before reusing this cohort:
+
+- **Cases are clustered within source publications.** The 1,047 cases derive from
+  415 publications (mean 2.5, max 42), and the overlap-absent subset carries 282
+  cases from only 93. Intervals and tests must cluster on source PMID — a
+  publication-level bootstrap rather than resampling cases — or they will be too
+  narrow. `cluster_inference.py` reports both so the difference is visible.
+- **The cohort is a disproportionate stratified sample.** Unweighted pooled
+  metrics describe the sampled cohort, not the eligible population, which is
+  ~67 % neurological. Use the released inclusion probabilities for a
+  population-level estimate; `design_weighted.py` does this.
+
+```bash
+PY=/path/to/python
+$PY scripts/eval/revision/provenance_checks.py
+$PY scripts/eval/revision/interaction_test.py
+$PY scripts/eval/revision/cluster_inference.py     # ~70 s (10k cluster resamples)
+$PY scripts/eval/revision/design_weighted.py
+$PY scripts/eval/revision/annotation_density.py
+$PY scripts/eval/revision/metric_audit.py
+$PY scripts/eval/revision/judge_provenance.py
+$PY scripts/eval/revision/cutoff_asymmetry.py      # needs network (NCBI E-utilities)
+```
+
 ## Data and software availability
 
 The release artifacts are archived on Figshare (project "GenoAgent") with persistent DOIs:

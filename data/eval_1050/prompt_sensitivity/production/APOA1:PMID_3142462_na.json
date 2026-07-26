@@ -1,0 +1,33 @@
+{
+ "case_id": "APOA1:PMID_3142462_na",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "APOA1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DGKE",
+  "APOA1",
+  "KIR3DL2",
+  "ENSA",
+  "ATP5MC1",
+  "SLC26A2",
+  "ORC6",
+  "GJA10",
+  "C2CD4D",
+  "CHCHD1",
+  "CDPF1",
+  "H3-4",
+  "SCOC",
+  "GYPB",
+  "TMEM63B"
+ ],
+ "top1": "DGKE",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DGKE\",\"confidence\":0.95,\"rationale\":\"DGKE mutations linked to aHUS with thrombocytopenia, hypertension, and renal issues matching patient phenotype.\"},{\"gene\":\"APOA1\",\"confidence\":0.75,\"rationale\":\"APOA1 mutations cause amyloidosis with hepatic involvement and thrombocytopenia.\"},{\"gene\":\"KIR3DL2\",\"confidence\":0.3,\"rationale\":\"KIR3DL2 associated with ITP, but not directly with hepatic amyloidosis or hypertension.\"},{\"gene\":\"ENSA\",\"confidence\":0.25,\"rationale\":\"ENSA linked to thrombocytopenia, but not hepatic amyloidosis or hypertension.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"SLC26A2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"ORC6\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"GJA10\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"C2CD4D\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"CHCHD1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"CDPF1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"H3-4\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"SCOC\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"GYPB\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"},{\"gene\":\"TMEM63B\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.907,
+ "tokens_in": 19670,
+ "tokens_out": 449
+}

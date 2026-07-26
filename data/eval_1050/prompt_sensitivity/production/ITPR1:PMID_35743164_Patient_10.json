@@ -1,0 +1,32 @@
+{
+ "case_id": "ITPR1:PMID_35743164_Patient_10",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "ATP6V0B",
+  "GABRR3",
+  "ZNF711",
+  "TEP1",
+  "ZNF146",
+  "STRC",
+  "IDH2",
+  "GUCY1A1",
+  "OAS1",
+  "ZNF724",
+  "OR52K2",
+  "C19orf18",
+  "TSPY2"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly links to SCA29 with all patient phenotypes.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.15,\"rationale\":\"Mentions hypotonia and intellectual disability.\"},{\"gene\":\"GABRR3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ZNF711\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"TEP1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ZNF146\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"STRC\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"IDH2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"GUCY1A1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"OAS1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ZNF724\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"OR52K2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"C19orf18\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"TSPY2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.15,\"rationale\":\"Mentions hypotonia and intellectual disability.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.592,
+ "tokens_in": 15739,
+ "tokens_out": 387
+}

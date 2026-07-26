@@ -1,0 +1,33 @@
+{
+ "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "DNA2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DNA2",
+  "KRT24",
+  "SMCO4",
+  "CRIP2",
+  "PGM1",
+  "SLC12A2",
+  "SSH2",
+  "FOXP3",
+  "H2BC4",
+  "SAXO1",
+  "GAST",
+  "ALB",
+  "CXCL1",
+  "EOLA1",
+  "STK24"
+ ],
+ "top1": "DNA2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DNA2\",\"confidence\":0.95,\"rationale\":\"Describes neurologic, ectodermal, and skeletal features matching patient's presentation.\"},{\"gene\":\"KRT24\",\"confidence\":0.15,\"rationale\":\"Linked to nail dystrophy and skin issues but lacks other key features.\"},{\"gene\":\"SMCO4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"CRIP2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"PGM1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"SLC12A2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"SSH2\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"FOXP3\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"H2BC4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"SAXO1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"GAST\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"ALB\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"CXCL1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"EOLA1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"},{\"gene\":\"STK24\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.461,
+ "tokens_in": 18335,
+ "tokens_out": 426
+}

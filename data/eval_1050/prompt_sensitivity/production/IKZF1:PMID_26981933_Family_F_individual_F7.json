@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_26981933_Family_F_individual_F7",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "NHLH1",
+  "HS6ST1",
+  "PDX1",
+  "CLBA1",
+  "MMRN2",
+  "GTF2I",
+  "NEMP1",
+  "OR52E4",
+  "CREBRF",
+  "RORC",
+  "KLRC1",
+  "LBP",
+  "MIF",
+  "HCN3"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"linked to memory B cell reduction and Ig levels\"},{\"gene\":\"NHLH1\",\"confidence\":0.15,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"HS6ST1\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"PDX1\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"CLBA1\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"MMRN2\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"GTF2I\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"NEMP1\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"OR52E4\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"CREBRF\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"RORC\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"KLRC1\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"LBP\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"MIF\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"},{\"gene\":\"HCN3\",\"confidence\":0.1,\"rationale\":\"normal Ig levels with B cell defects\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.217,
+ "tokens_in": 16498,
+ "tokens_out": 360
+}

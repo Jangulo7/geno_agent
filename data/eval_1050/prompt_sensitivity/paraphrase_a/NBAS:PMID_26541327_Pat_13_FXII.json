@@ -1,0 +1,32 @@
+{
+ "case_id": "NBAS:PMID_26541327_Pat_13_FXII",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CTBS",
+  "SLC35H1",
+  "FCGR3A",
+  "NES",
+  "RLN1",
+  "TREH",
+  "RLN3",
+  "SCX",
+  "PSMA6",
+  "NLGN3",
+  "SPEGNB",
+  "LRATD1",
+  "FAM216B",
+  "UBXN11"
+ ],
+ "top1": "CTBS",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CTBS\",\"confidence\":0.95,\"rationale\":\"Elevated ALT, AST, GGT, and bilirubin with hepatic failure align with CTBS mutations.\"},{\"gene\":\"SLC35H1\",\"confidence\":0.75,\"rationale\":\"Cholestasis and elevated bilirubin suggest SLC35H1 involvement.\"},{\"gene\":\"FCGR3A\",\"confidence\":0.65,\"rationale\":\"ALT, AST, and GGT elevation linked to FCGR3A in literature.\"},{\"gene\":\"NES\",\"confidence\":0.6,\"rationale\":\"Hepatic injury with elevated ALT, AST, and bilirubin matches NES.\"},{\"gene\":\"RLN1\",\"confidence\":0.55,\"rationale\":\"ALT, AST, and GGT elevation noted in RLN1 studies.\"},{\"gene\":\"TREH\",\"confidence\":0.5,\"rationale\":\"Hepatic injury with elevated ALT, AST, and bilirubin.\"},{\"gene\":\"RLN3\",\"confidence\":0.45,\"rationale\":\"ALT, AST, and GGT elevation in RLN3 literature.\"},{\"gene\":\"SCX\",\"confidence\":0.4,\"rationale\":\"ALT, AST, and GGT elevation in SCX studies.\"},{\"gene\":\"PSMA6\",\"confidence\":0.35,\"rationale\":\"ALT, AST, and GGT elevation in PSMA6 literature.\"},{\"gene\":\"NLGN3\",\"confidence\":0.3,\"rationale\":\"ALT, AST, and GGT elevation in NLGN3 studies.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.25,\"rationale\":\"Hepatic injury with elevated ALT, AST, and bilirubin.\"},{\"gene\":\"LRATD1\",\"confidence\":0.2,\"rationale\":\"ALT, AST, and GGT elevation in LRATD1 literature.\"},{\"gene\":\"FAM216B\",\"confidence\":0.15,\"rationale\":\"ALT, AST, and GGT elevation in FAM216B studies.\"},{\"gene\":\"UBXN11\",\"confidence\":0.1,\"rationale\":\"ALT, AST, and GGT elevation in UBXN11 literature.\"},{\"gene\":\"SPEGNB\",\"confidence\":0.05,\"rationale\":\"Hepatic injury with elevated ALT, AST, and bilirubin.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.384,
+ "tokens_in": 11979,
+ "tokens_out": 506
+}

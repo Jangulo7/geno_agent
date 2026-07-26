@@ -1,0 +1,33 @@
+{
+ "case_id": "DDX59:PMID_29127725_Patient_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "DDX59",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CDKL5",
+  "PDHA1",
+  "RPS26",
+  "TSPAN32",
+  "DDX59",
+  "FPGS",
+  "NABP1",
+  "ZG16",
+  "RGS3",
+  "ARAP1",
+  "C1orf198",
+  "HERC3",
+  "FOXP4",
+  "OR1L6",
+  "TTC23L"
+ ],
+ "top1": "CDKL5",
+ "top1_correct": false,
+ "causal_rank": 5,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CDKL5\",\"confidence\":0.95,\"rationale\":\"Directly links to seizures, microcephaly, and developmental delay with specific clinical features.\"},{\"gene\":\"PDHA1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RPS26\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TSPAN32\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DDX59\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"FPGS\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NABP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZG16\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RGS3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ARAP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"C1orf198\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"HERC3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"FOXP4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"OR1L6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TTC23L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.346,
+ "tokens_in": 11369,
+ "tokens_out": 417
+}

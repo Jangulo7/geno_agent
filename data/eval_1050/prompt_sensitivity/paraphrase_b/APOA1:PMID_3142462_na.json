@@ -1,0 +1,33 @@
+{
+ "case_id": "APOA1:PMID_3142462_na",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "APOA1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DGKE",
+  "APOA1",
+  "KIR3DL2",
+  "ENSA",
+  "ATP5MC1",
+  "SLC26A2",
+  "ORC6",
+  "GJA10",
+  "C2CD4D",
+  "CHCHD1",
+  "CDPF1",
+  "H3-4",
+  "SCOC",
+  "GYPB",
+  "TMEM63B"
+ ],
+ "top1": "DGKE",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DGKE\",\"confidence\":0.95,\"rationale\":\"DGKE mutations linked to aHUS with thrombocytopenia, hypertension, and renal issues matching patient phenotype.\"},{\"gene\":\"APOA1\",\"confidence\":0.65,\"rationale\":\"APOA1 mutations cause amyloidosis with hepatic and renal involvement matching patient phenotype.\"},{\"gene\":\"KIR3DL2\",\"confidence\":0.25,\"rationale\":\"KIR3DL2 associated with ITP, not directly with hepatic amyloidosis or hypertension.\"},{\"gene\":\"ENSA\",\"confidence\":0.2,\"rationale\":\"ENSA linked to thrombocytopenia, not hepatic amyloidosis or hypertension.\"},{\"gene\":\"ATP5MC1\",\"confidence\":0.15,\"rationale\":\"ATP5MC1 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"SLC26A2\",\"confidence\":0.1,\"rationale\":\"SLC26A2 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"ORC6\",\"confidence\":0.1,\"rationale\":\"ORC6 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"GJA10\",\"confidence\":0.1,\"rationale\":\"GJA10 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"C2CD4D\",\"confidence\":0.1,\"rationale\":\"C2CD4D not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"CHCHD1\",\"confidence\":0.1,\"rationale\":\"CHCHD1 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"CDPF1\",\"confidence\":0.1,\"rationale\":\"CDPF1 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"H3-4\",\"confidence\":0.1,\"rationale\":\"H3-4 not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"SCOC\",\"confidence\":0.1,\"rationale\":\"SCOC not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"GYPB\",\"confidence\":0.1,\"rationale\":\"GYPB not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"},{\"gene\":\"TMEM63B\",\"confidence\":0.1,\"rationale\":\"TMEM63B not directly linked to patient's hepatic amyloidosis or thrombocytopenia.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.635,
+ "tokens_in": 19652,
+ "tokens_out": 599
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "WWOX:PMID_39507621_patient",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "WWOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GABRA1",
+  "WWOX",
+  "ADCY5",
+  "NME1",
+  "ZDHHC18",
+  "GPR161",
+  "TAF12",
+  "PANK2",
+  "MUSK",
+  "VMA12",
+  "ETNPPL",
+  "RPL6",
+  "IL9R",
+  "SLX9",
+  "NR1I3"
+ ],
+ "top1": "GABRA1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GABRA1\",\"confidence\":0.95,\"rationale\":\"Multiple seizures and developmental delay directly linked to GABRA1 variants in literature.\"},{\"gene\":\"WWOX\",\"confidence\":0.75,\"rationale\":\"WWOX-DEE associated with similar seizure types and developmental delay.\"},{\"gene\":\"ADCY5\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"NME1\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"ZDHHC18\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"GPR161\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"TAF12\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"PANK2\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"MUSK\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"VMA12\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"ETNPPL\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"RPL6\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"IL9R\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"SLX9\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"},{\"gene\":\"NR1I3\",\"confidence\":0.15,\"rationale\":\"No specific seizure type or delay link in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.493,
+ "tokens_in": 12935,
+ "tokens_out": 429
+}

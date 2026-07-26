@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_11",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "DHX30",
+  "CHD7",
+  "PRIM1",
+  "FAM237B",
+  "GSTM1",
+  "RBPJ",
+  "ZBTB33",
+  "CACNG6",
+  "RAB11FIP3",
+  "IQGAP1",
+  "CIMIP7",
+  "CFAP90",
+  "ACBD3",
+  "KDELR2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Matches all key HPO terms including progeria, lipodystrophy, and failure to thrive.\"},{\"gene\":\"DHX30\",\"confidence\":0.25,\"rationale\":\"Linked to developmental delay and failure to thrive but lacks specific HPO term matches.\"},{\"gene\":\"CHD7\",\"confidence\":0.15,\"rationale\":\"Associated with facial features but not all HPO terms.\"},{\"gene\":\"PRIM1\",\"confidence\":0.1,\"rationale\":\"Linked to growth restriction but not all HPO terms.\"},{\"gene\":\"FAM237B\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"GSTM1\",\"confidence\":0.05,\"rationale\":\"Linked to failure to thrive but not all HPO terms.\"},{\"gene\":\"RBPJ\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"ZBTB33\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"CACNG6\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"RAB11FIP3\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"IQGAP1\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"CIMIP7\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"CFAP90\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"ACBD3\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"},{\"gene\":\"KDELR2\",\"confidence\":0.05,\"rationale\":\"No direct HPO term matches.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.944,
+ "tokens_in": 15528,
+ "tokens_out": 415
+}

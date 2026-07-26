@@ -1,0 +1,32 @@
+{
+ "case_id": "TUBA4A:PMID_37418012_Family_1_IV_1",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "TUBA4A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UPP1",
+  "TUBA4A",
+  "INHBC",
+  "IRX3",
+  "MTFP1",
+  "PKIB",
+  "SLC30A4",
+  "CWH43",
+  "DOCK1",
+  "ZNF385B",
+  "NEXN",
+  "WDR4",
+  "ROPN1",
+  "CEBPZ"
+ ],
+ "top1": "UPP1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UPP1\",\"confidence\":0.95,\"rationale\":\"Matches nystagmus, saccadic pursuit, Babinski, clonus, hyperreflexia, cerebellar atrophy.\"},{\"gene\":\"TUBA4A\",\"confidence\":0.65,\"rationale\":\"Links to pyramidal signs and cerebellar atrophy.\"},{\"gene\":\"INHBC\",\"confidence\":0.55,\"rationale\":\"Associated with pyramidal signs and eye movement issues.\"},{\"gene\":\"IRX3\",\"confidence\":0.5,\"rationale\":\"Linked to pyramidal signs and eye movement disturbances.\"},{\"gene\":\"MTFP1\",\"confidence\":0.45,\"rationale\":\"Tied to pyramidal signs and eye movement issues.\"},{\"gene\":\"PKIB\",\"confidence\":0.4,\"rationale\":\"Connected to pyramidal signs and eye movement problems.\"},{\"gene\":\"SLC30A4\",\"confidence\":0.35,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CWH43\",\"confidence\":0.3,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"DOCK1\",\"confidence\":0.25,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ZNF385B\",\"confidence\":0.2,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"NEXN\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"WDR4\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"ROPN1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"CEBPZ\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match.\"},{\"gene\":\"SLC30A4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.679,
+ "tokens_in": 13377,
+ "tokens_out": 417
+}

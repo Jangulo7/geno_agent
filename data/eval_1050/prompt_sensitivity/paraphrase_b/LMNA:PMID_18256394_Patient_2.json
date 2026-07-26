@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_2",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "SLC17A9",
+  "FOXI1",
+  "GNAQ",
+  "SCOC",
+  "SPANXC",
+  "ZNF274",
+  "H1-4",
+  "ITK",
+  "ZCCHC18",
+  "DUSP22",
+  "TRA2A",
+  "AGPAT3",
+  "IDNK",
+  "COL6A6"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms with detailed progeroid syndrome evidence.\"},{\"gene\":\"SLC17A9\",\"confidence\":0.15,\"rationale\":\"General developmental terms with no specific HPO match.\"},{\"gene\":\"FOXI1\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"GNAQ\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"SCOC\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"SPANXC\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"ZNF274\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"H1-4\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"ITK\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"ZCCHC18\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"DUSP22\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"TRA2A\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"AGPAT3\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"IDNK\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"},{\"gene\":\"COL6A6\",\"confidence\":0.15,\"rationale\":\"No specific HPO terms matched.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.693,
+ "tokens_in": 16168,
+ "tokens_out": 383
+}

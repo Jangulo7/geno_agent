@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR3:PMID_39270020_Patient_3",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "ITPR3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IFITM3",
+  "GALNT17",
+  "KHDRBS3",
+  "CGNL1",
+  "KRTAP5-5",
+  "NANOS3",
+  "ZNF354A",
+  "ZNF226",
+  "PEAK1",
+  "ZNF432",
+  "YBX2",
+  "SNRPB2",
+  "RPL21",
+  "TACO1",
+  "ATP6V0A2"
+ ],
+ "top1": "IFITM3",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IFITM3\",\"confidence\":0.95,\"rationale\":\"Direct link to antibody response deficiency and tetanus vaccine response\"},{\"gene\":\"GALNT17\",\"confidence\":0.75,\"rationale\":\"B cell deficiency and tetanus antibody absence\"},{\"gene\":\"KHDRBS3\",\"confidence\":0.65,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"CGNL1\",\"confidence\":0.6,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"KRTAP5-5\",\"confidence\":0.55,\"rationale\":\"Immunoglobulin and T cell abnormalities\"},{\"gene\":\"NANOS3\",\"confidence\":0.5,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"ZNF354A\",\"confidence\":0.45,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"ZNF226\",\"confidence\":0.4,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"PEAK1\",\"confidence\":0.35,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"ZNF432\",\"confidence\":0.3,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"YBX2\",\"confidence\":0.25,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"SNRPB2\",\"confidence\":0.2,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"RPL21\",\"confidence\":0.15,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"TACO1\",\"confidence\":0.1,\"rationale\":\"B cell reduction and immunodeficiency\"},{\"gene\":\"ATP6V0A2\",\"confidence\":0.05,\"rationale\":\"B cell reduction and immunodeficiency\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.478,
+ "tokens_in": 16213,
+ "tokens_out": 390
+}

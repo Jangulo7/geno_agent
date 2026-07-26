@@ -1,0 +1,54 @@
+{
+  "full": {
+    "n_cases": 1047,
+    "n_publications": 415,
+    "mean_cases_per_publication": 2.523,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 42,
+    "largest_publication_share": 0.04
+  },
+  "overlap_present": {
+    "n_cases": 765,
+    "n_publications": 322,
+    "mean_cases_per_publication": 2.376,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 42,
+    "largest_publication_share": 0.055
+  },
+  "overlap_absent": {
+    "n_cases": 282,
+    "n_publications": 93,
+    "mean_cases_per_publication": 3.032,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 35,
+    "largest_publication_share": 0.124
+  },
+  "pre2020": {
+    "n_cases": 601,
+    "n_publications": 251,
+    "mean_cases_per_publication": 2.394,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 28,
+    "largest_publication_share": 0.047
+  },
+  "post2020": {
+    "n_cases": 446,
+    "n_publications": 164,
+    "mean_cases_per_publication": 2.72,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 42,
+    "largest_publication_share": 0.094
+  },
+  "post2020_overlap_absent": {
+    "n_cases": 88,
+    "n_publications": 18,
+    "mean_cases_per_publication": 4.889,
+    "median_cases_per_publication": 1,
+    "max_cases_from_one_publication": 35,
+    "largest_publication_share": 0.398
+  },
+  "_meta": {
+    "cohort_n": 1047,
+    "note": "The crossed post-2020 x overlap-absent cell is the smallest and most strongly clustered unit in the resource and should be read as a qualitative probe, not a powered comparison (P1 Usage Notes)."
+  }
+}

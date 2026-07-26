@@ -1,0 +1,33 @@
+{
+ "case_id": "NF1:PMID_26178382_UAB_R7705",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "NF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NF1",
+  "PKIB",
+  "KRT38",
+  "TMEM119",
+  "MX2",
+  "REG3A",
+  "NFX1",
+  "PPIA",
+  "DDAH1",
+  "COPS5",
+  "ERLN",
+  "TRAFD1",
+  "DACT3",
+  "MLH3",
+  "ACKR2"
+ ],
+ "top1": "NF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NF1\",\"confidence\":0.95,\"rationale\":\"Directly linked to all three phenotypes in diagnostic criteria\"},{\"gene\":\"PKIB\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"KRT38\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"TMEM119\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"MX2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"REG3A\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"NFX1\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"PPIA\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"DDAH1\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"COPS5\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"ERLN\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"TRAFD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"DACT3\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"MLH3\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"},{\"gene\":\"ACKR2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for phenotypes\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.143,
+ "tokens_in": 13867,
+ "tokens_out": 358
+}

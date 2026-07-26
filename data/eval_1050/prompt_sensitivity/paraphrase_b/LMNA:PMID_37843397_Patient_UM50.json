@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_Patient_UM50",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PHLDB2",
+  "PEX12",
+  "TSPEAR",
+  "TMEM72",
+  "ZSCAN5C",
+  "SLC5A7",
+  "CLNS1A",
+  "TFE3",
+  "AMMECR1",
+  "ARID5B",
+  "GP9",
+  "ESPNL",
+  "PRKCE",
+  "CABYR"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly links to lipodystrophy, diabetes, and hepatic steatosis in multiple contexts.\"},{\"gene\":\"PHLDB2\",\"confidence\":0.15,\"rationale\":\"Mentions lipodystrophy but lacks specific phenotype alignment.\"},{\"gene\":\"PEX12\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"TSPEAR\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"TMEM72\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"ZSCAN5C\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"SLC5A7\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"CLNS1A\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"TFE3\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"AMMECR1\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mention without specific phenotype details.\"},{\"gene\":\"ARID5B\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"GP9\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"ESPNL\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"PRKCE\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"CABYR\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"},{\"gene\":\"TSPEAR\",\"confidence\":0.15,\"rationale\":\"No direct phenotype alignment with patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.52,
+ "tokens_in": 18117,
+ "tokens_out": 457
+}

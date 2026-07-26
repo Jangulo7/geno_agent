@@ -1,0 +1,33 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_3_patient_5",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AKR1B10",
+  "PTCHD1",
+  "STRN3",
+  "FSIP1",
+  "UBL4A",
+  "VRK3",
+  "UBE2L5",
+  "KRTDAP",
+  "ASAP2",
+  "MAGEB17",
+  "SPATA24",
+  "ZFP69B",
+  "PHC2",
+  "GVQW3",
+  "ARID3B"
+ ],
+ "top1": "AKR1B10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AKR1B10\",\"confidence\":0.95,\"rationale\":\"Matches all HPO terms with detailed neuropathy and developmental delay evidence.\"},{\"gene\":\"PTCHD1\",\"confidence\":0.85,\"rationale\":\"Shares multiple HPO features with evidence of neuropathy and skeletal issues.\"},{\"gene\":\"STRN3\",\"confidence\":0.75,\"rationale\":\"Links to demyelination and gait abnormalities in multiple patients.\"},{\"gene\":\"FSIP1\",\"confidence\":0.7,\"rationale\":\"Associated with demyelination and motor delays in family studies.\"},{\"gene\":\"UBL4A\",\"confidence\":0.65,\"rationale\":\"Shows demyelination and gait issues in multiple cases.\"},{\"gene\":\"VRK3\",\"confidence\":0.6,\"rationale\":\"Linked to demyelination and motor symptoms in family reports.\"},{\"gene\":\"UBE2L5\",\"confidence\":0.55,\"rationale\":\"Shares some neuropathy and developmental delay features.\"},{\"gene\":\"KRTDAP\",\"confidence\":0.5,\"rationale\":\"Has demyelination and gait abnormalities in patient reports.\"},{\"gene\":\"ASAP2\",\"confidence\":0.45,\"rationale\":\"Shows some neuropathy and skeletal features in family studies.\"},{\"gene\":\"MAGEB17\",\"confidence\":0.4,\"rationale\":\"Linked to demyelination and motor symptoms in multiple patients.\"},{\"gene\":\"SPATA24\",\"confidence\":0.35,\"rationale\":\"Partial overlap with some HPO terms in patient reports.\"},{\"gene\":\"ZFP69B\",\"confidence\":0.3,\"rationale\":\"Limited evidence for most HPO terms in patient data.\"},{\"gene\":\"PHC2\",\"confidence\":0.25,\"rationale\":\"Few HPO terms matched with weak evidence.\"},{\"gene\":\"GVQW3\",\"confidence\":0.2,\"rationale\":\"Minimal overlap with HPO terms in available data.\"},{\"gene\":\"ARID3B\",\"confidence\":0.15,\"rationale\":\"Very limited evidence for most HPO features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.066,
+ "tokens_in": 14307,
+ "tokens_out": 447
+}

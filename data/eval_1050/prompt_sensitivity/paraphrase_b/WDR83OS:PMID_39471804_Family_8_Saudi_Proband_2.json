@@ -1,0 +1,33 @@
+{
+ "case_id": "WDR83OS:PMID_39471804_Family_8_Saudi_Proband_2",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "WDR83OS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RPS4X",
+  "EXOC4",
+  "MAP3K7CL",
+  "MYOM2",
+  "PORCN",
+  "MORN4",
+  "EIF4EBP1",
+  "CXorf66",
+  "CYLD",
+  "KCNK5",
+  "OR8S1",
+  "CD177",
+  "KLRG1",
+  "RBM42",
+  "TMUB2"
+ ],
+ "top1": "RPS4X",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RPS4X\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms with pathogenic variant evidence.\"},{\"gene\":\"EXOC4\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"MAP3K7CL\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"MYOM2\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"PORCN\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"MORN4\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"EIF4EBP1\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"CXorf66\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"CYLD\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"KCNK5\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"OR8S1\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"CD177\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"KLRG1\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"RBM42\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"},{\"gene\":\"TMUB2\",\"confidence\":0.15,\"rationale\":\"No direct HPO term matches or variant evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.023,
+ "tokens_in": 21748,
+ "tokens_out": 422
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_30825388_Patient_2",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NBAS",
+  "TNF",
+  "EFHD1",
+  "TPO",
+  "YLPM1",
+  "MS4A6A",
+  "TRADD",
+  "GLB1L3",
+  "KANK2",
+  "DGCR6",
+  "MBD3L4",
+  "DRAP1",
+  "MIB2",
+  "ANAPC4",
+  "MYORG"
+ ],
+ "top1": "NBAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NBAS\",\"confidence\":0.95,\"rationale\":\"Directly links to liver enzyme elevations and immunoglobulin deficiencies matching the patient's phenotype.\"},{\"gene\":\"TNF\",\"confidence\":0.25,\"rationale\":\"Mentions liver enzymes and immunoglobulins but lacks direct phenotypic correlation.\"},{\"gene\":\"EFHD1\",\"confidence\":0.15,\"rationale\":\"Links to liver enzymes but not immunoglobulin deficiencies or facial anomalies.\"},{\"gene\":\"TPO\",\"confidence\":0.1,\"rationale\":\"Mentions immunoglobulins and liver enzymes but no facial features or other phenotypes.\"},{\"gene\":\"YLPM1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"MS4A6A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"TRADD\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"GLB1L3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"KANK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"DGCR6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"MBD3L4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"DRAP1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"MIB2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"ANAPC4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"},{\"gene\":\"MYORG\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic correlation with the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.921,
+ "tokens_in": 12077,
+ "tokens_out": 463
+}

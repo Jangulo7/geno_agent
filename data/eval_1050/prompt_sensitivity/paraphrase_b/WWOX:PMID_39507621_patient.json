@@ -1,0 +1,33 @@
+{
+ "case_id": "WWOX:PMID_39507621_patient",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "WWOX",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GABRA1",
+  "WWOX",
+  "ADCY5",
+  "NME1",
+  "ZDHHC18",
+  "GPR161",
+  "TAF12",
+  "PANK2",
+  "MUSK",
+  "VMA12",
+  "ETNPPL",
+  "RPL6",
+  "IL9R",
+  "SLX9",
+  "NR1I3"
+ ],
+ "top1": "GABRA1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GABRA1\",\"confidence\":0.95,\"rationale\":\"Multiple seizures and developmental delay align with GABRA1-related epileptic encephalopathy.\"},{\"gene\":\"WWOX\",\"confidence\":0.75,\"rationale\":\"WWOX-DEE is associated with similar seizure types and developmental delay.\"},{\"gene\":\"ADCY5\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking ADCY5 to the patient's phenotype.\"},{\"gene\":\"NME1\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking NME1 to the patient's phenotype.\"},{\"gene\":\"ZDHHC18\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking ZDHHC18 to the patient's phenotype.\"},{\"gene\":\"GPR161\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking GPR161 to the patient's phenotype.\"},{\"gene\":\"TAF12\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking TAF12 to the patient's phenotype.\"},{\"gene\":\"PANK2\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking PANK2 to the patient's phenotype.\"},{\"gene\":\"MUSK\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking MUSK to the patient's phenotype.\"},{\"gene\":\"VMA12\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking VMA12 to the patient's phenotype.\"},{\"gene\":\"ETNPPL\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking ETNPPL to the patient's phenotype.\"},{\"gene\":\"RPL6\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking RPL6 to the patient's phenotype.\"},{\"gene\":\"IL9R\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking IL9R to the patient's phenotype.\"},{\"gene\":\"SLX9\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking SLX9 to the patient's phenotype.\"},{\"gene\":\"NR1I3\",\"confidence\":0.2,\"rationale\":\"No specific evidence linking NR1I3 to the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.118,
+ "tokens_in": 12917,
+ "tokens_out": 466
+}

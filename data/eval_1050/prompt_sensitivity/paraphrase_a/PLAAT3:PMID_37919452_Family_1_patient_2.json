@@ -1,0 +1,33 @@
+{
+ "case_id": "PLAAT3:PMID_37919452_Family_1_patient_2",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "PLAAT3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SET",
+  "TMEM18",
+  "PQBP1",
+  "PLAAT3",
+  "FBXO44",
+  "SIDT1",
+  "HORMAD2",
+  "SRD5A3",
+  "NTM",
+  "ARF1",
+  "LMO3",
+  "SLC15A2",
+  "C8orf76",
+  "ZCCHC10",
+  "CD247"
+ ],
+ "top1": "SET",
+ "top1_correct": false,
+ "causal_rank": 4,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SET\",\"confidence\":0.95,\"rationale\":\"Links to Donohue syndrome with lipoatrophy, insulin resistance, and metabolic features.\"},{\"gene\":\"TMEM18\",\"confidence\":0.65,\"rationale\":\"Associated with obesity, intellectual disability, and metabolic issues.\"},{\"gene\":\"PQBP1\",\"confidence\":0.45,\"rationale\":\"Linked to intellectual disability and short stature, but not metabolic features.\"},{\"gene\":\"PLAAT3\",\"confidence\":0.35,\"rationale\":\"Linked to lipodystrophy and metabolic issues.\"},{\"gene\":\"FBXO44\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"SIDT1\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"HORMAD2\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"SRD5A3\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"NTM\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ARF1\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"LMO3\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"SLC15A2\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"C8orf76\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ZCCHC10\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CD247\",\"confidence\":0.25,\"rationale\":\"No direct link to patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.384,
+ "tokens_in": 16934,
+ "tokens_out": 417
+}

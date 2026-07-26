@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P15",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "TRAPPC11",
+  "SETX",
+  "PML",
+  "ACOT9",
+  "ADAMTSL5",
+  "CLEC12A",
+  "CD82",
+  "C1orf122",
+  "DIO1",
+  "ITSN1",
+  "POTEC",
+  "TENM2",
+  "UBE2E3",
+  "ASRGL1"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"Direct link to MHCII deficiency with chronic diarrhea, pneumonia, hypotonia, and brain atrophy.\"},{\"gene\":\"TRAPPC11\",\"confidence\":0.25,\"rationale\":\"Brain atrophy and hypotonia noted in literature, but less specific to the full phenotype.\"},{\"gene\":\"SETX\",\"confidence\":0.15,\"rationale\":\"Hypotonia and recurrent infections noted, but no direct link to brain atrophy.\"},{\"gene\":\"PML\",\"confidence\":0.1,\"rationale\":\"PML linked to brain atrophy, but not the full set of symptoms.\"},{\"gene\":\"ACOT9\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"ADAMTSL5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"CLEC12A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"CD82\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"C1orf122\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"DIO1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"ITSN1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"POTEC\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"TENM2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"UBE2E3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"},{\"gene\":\"ASRGL1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to the full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.575,
+ "tokens_in": 17173,
+ "tokens_out": 445
+}

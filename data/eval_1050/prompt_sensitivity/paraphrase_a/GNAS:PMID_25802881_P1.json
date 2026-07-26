@@ -1,0 +1,32 @@
+{
+ "case_id": "GNAS:PMID_25802881_P1",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GNAS",
+  "AKR7A2",
+  "CHD4",
+  "ADAM17",
+  "MICOS13",
+  "NR2E1",
+  "MAN2B1",
+  "PPM1K",
+  "ELP1",
+  "SEC23A",
+  "SLC7A6",
+  "GPC1",
+  "SKA3",
+  "PFKL"
+ ],
+ "top1": "GNAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"GNAS\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to PTH resistance, hypocalcemia, hyperphosphatemia, and AHO features.\"\n  },\n  {\n    \"gene\": \"PHP1A\",\n    \"confidence\": 0.05,\n    \"rationale\": \"Not a gene but a phenotype; other genes like GNAS are more relevant.\"\n  },\n  {\n    \"gene\": \"AKR7A2\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"CHD4\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"ADAM17\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"MICOS13\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"NR2E1\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"MAN2B1\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"PPM1K\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"ELP1\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"SEC23A\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"SLC7A6\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"GPC1\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"SKA3\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  },\n  {\n    \"gene\": \"PFKL\",\n    \"confidence\": 0.0,\n    \"rationale\": \"No direct evidence linking to the patient's features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.388,
+ "tokens_in": 17809,
+ "tokens_out": 606
+}

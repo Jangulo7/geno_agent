@@ -1,0 +1,33 @@
+{
+ "case_id": "ADAMTS15:PMID_35962790_Family_A_Individual_1_II_1",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "ADAMTS15",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PIERCE1",
+  "GON7",
+  "HAPLN1",
+  "NTN3",
+  "PNPLA1",
+  "TRAPPC2",
+  "H3-4",
+  "F2RL1",
+  "RIC3",
+  "TIGIT",
+  "CAVIN3",
+  "SPHK1",
+  "GPAA1",
+  "MTHFR",
+  "ZFAND2A"
+ ],
+ "top1": "PIERCE1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PIERCE1\",\"confidence\":0.95,\"rationale\":\"Matches all key HPO terms with detailed descriptions of distal arthrogryposis.\"},{\"gene\":\"GON7\",\"confidence\":0.85,\"rationale\":\"Linked to distal arthrogryposis with overlapping features.\"},{\"gene\":\"HAPLN1\",\"confidence\":0.75,\"rationale\":\"Associated with skeletal abnormalities matching the phenotype.\"},{\"gene\":\"NTN3\",\"confidence\":0.7,\"rationale\":\"Shares features with distal arthrogryposis and skeletal anomalies.\"},{\"gene\":\"PNPLA1\",\"confidence\":0.65,\"rationale\":\"Linked to skeletal issues and contractures in the phenotype.\"},{\"gene\":\"TRAPPC2\",\"confidence\":0.6,\"rationale\":\"Has skeletal features overlapping with the patient's phenotype.\"},{\"gene\":\"H3-4\",\"confidence\":0.55,\"rationale\":\"Associated with skeletal abnormalities and contractures.\"},{\"gene\":\"F2RL1\",\"confidence\":0.5,\"rationale\":\"Shares some skeletal features with the patient's phenotype.\"},{\"gene\":\"RIC3\",\"confidence\":0.45,\"rationale\":\"Linked to skeletal anomalies but less specific to the phenotype.\"},{\"gene\":\"TIGIT\",\"confidence\":0.4,\"rationale\":\"Has some skeletal features but not fully matching the phenotype.\"},{\"gene\":\"CAVIN3\",\"confidence\":0.35,\"rationale\":\"Associated with skeletal issues but not all key features.\"},{\"gene\":\"SPHK1\",\"confidence\":0.3,\"rationale\":\"Linked to some skeletal features but not all key aspects.\"},{\"gene\":\"GPAA1\",\"confidence\":0.25,\"rationale\":\"Shares some skeletal features but lacks specificity.\"},{\"gene\":\"MTHFR\",\"confidence\":0.2,\"rationale\":\"Not strongly linked to the described skeletal and contracture features.\"},{\"gene\":\"ZFAND2A\",\"confidence\":0.15,\"rationale\":\"Less relevant to the specific phenotype described.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.016,
+ "tokens_in": 15231,
+ "tokens_out": 428
+}

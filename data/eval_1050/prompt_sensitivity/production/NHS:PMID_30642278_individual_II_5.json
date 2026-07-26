@@ -1,0 +1,33 @@
+{
+ "case_id": "NHS:PMID_30642278_individual_II_5",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NHS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NHS",
+  "COX19",
+  "GNG5",
+  "GPR39",
+  "CXXC4",
+  "GSAP",
+  "SIX4",
+  "LRRK2",
+  "ACTR3C",
+  "SPNS3",
+  "STON1",
+  "GFRA2",
+  "HABP4",
+  "ADGRG7",
+  "ZNF98"
+ ],
+ "top1": "NHS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NHS\",\"confidence\":0.98,\"rationale\":\"Directly matches all patient phenotypes including cataract, dental anomalies, and facial features.\"},{\"gene\":\"COX19\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"GNG5\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"GPR39\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"CXXC4\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"GSAP\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"SIX4\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"LRRK2\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"ACTR3C\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"SPNS3\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"STON1\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"GFRA2\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"HABP4\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"ADGRG7\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"},{\"gene\":\"ZNF98\",\"confidence\":0.01,\"rationale\":\"No relevance to patient phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.373,
+ "tokens_in": 15490,
+ "tokens_out": 385
+}

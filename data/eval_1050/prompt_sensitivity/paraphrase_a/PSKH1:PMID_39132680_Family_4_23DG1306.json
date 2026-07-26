@@ -1,0 +1,33 @@
+{
+ "case_id": "PSKH1:PMID_39132680_Family_4_23DG1306",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "PSKH1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PNLIP",
+  "NBPF3",
+  "EDEM3",
+  "CASTOR2",
+  "ATF6",
+  "ZNF346",
+  "CUTC",
+  "ADCY2",
+  "AMER1",
+  "NUPR1",
+  "OR5H2",
+  "OR51B2",
+  "RNF150",
+  "ASH2L",
+  "HDAC1"
+ ],
+ "top1": "PNLIP",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PNLIP\",\"confidence\":0.95,\"rationale\":\"Elevated liver enzymes and cholestasis suggest pancreatic lipase dysfunction.\"},{\"gene\":\"NBPF3\",\"confidence\":0.75,\"rationale\":\"Alkaline phosphatase elevation links to NBPF3's role in phosphatase activity.\"},{\"gene\":\"EDEM3\",\"confidence\":0.65,\"rationale\":\"EDEM3 is involved in protein folding and may affect liver function.\"},{\"gene\":\"CASTOR2\",\"confidence\":0.6,\"rationale\":\"CASTOR2 is linked to metabolic pathways affecting liver enzymes.\"},{\"gene\":\"ATF6\",\"confidence\":0.55,\"rationale\":\"ATF6 is involved in ER stress and may impact liver function.\"},{\"gene\":\"ZNF346\",\"confidence\":0.5,\"rationale\":\"ZNF346 is associated with liver-related conditions.\"},{\"gene\":\"CUTC\",\"confidence\":0.45,\"rationale\":\"CUTC is linked to metabolic processes affecting liver enzymes.\"},{\"gene\":\"ADCY2\",\"confidence\":0.4,\"rationale\":\"ADCY2 is involved in metabolic pathways affecting liver function.\"},{\"gene\":\"AMER1\",\"confidence\":0.35,\"rationale\":\"AMER1 is associated with liver-related conditions.\"},{\"gene\":\"NUPR1\",\"confidence\":0.3,\"rationale\":\"NUPR1 is linked to liver dysfunction and inflammation.\"},{\"gene\":\"OR5H2\",\"confidence\":0.25,\"rationale\":\"OR5H2 is associated with metabolic processes affecting liver enzymes.\"},{\"gene\":\"OR51B2\",\"confidence\":0.2,\"rationale\":\"OR51B2 is linked to metabolic pathways affecting liver function.\"},{\"gene\":\"RNF150\",\"confidence\":0.15,\"rationale\":\"RNF150 is involved in protein degradation and may impact liver enzymes.\"},{\"gene\":\"ASH2L\",\"confidence\":0.1,\"rationale\":\"ASH2L is associated with liver-related conditions.\"},{\"gene\":\"HDAC1\",\"confidence\":0.05,\"rationale\":\"HDAC1 is linked to liver dysfunction and inflammation.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.729,
+ "tokens_in": 17074,
+ "tokens_out": 459
+}

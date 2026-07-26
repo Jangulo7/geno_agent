@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_11952552_patient",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "COG2",
+  "ADH4",
+  "UXT",
+  "ZNG1E",
+  "CCDC83",
+  "GEN1",
+  "NFIC",
+  "INSM1",
+  "LDLRAP1",
+  "PNPLA2",
+  "ATOH7",
+  "IDH3B",
+  "MS4A2",
+  "GNE"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SPINK5\",\"confidence\":0.95,\"rationale\":\"Directly linked to Netherton syndrome with erythroderma, pili torti, and atopic features.\"},{\"gene\":\"COG2\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"ADH4\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"UXT\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"ZNG1E\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"CCDC83\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"GEN1\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"NFIC\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"INSM1\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"LDLRAP1\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"PNPLA2\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"ATOH7\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"IDH3B\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"MS4A2\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"},{\"gene\":\"GNE\",\"confidence\":0.05,\"rationale\":\"No specific mention of erythroderma or pili torti.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.63,
+ "tokens_in": 15183,
+ "tokens_out": 484
+}

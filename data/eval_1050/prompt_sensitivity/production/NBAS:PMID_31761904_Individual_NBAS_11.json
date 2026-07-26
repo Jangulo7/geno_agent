@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_31761904_Individual_NBAS_11",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TONSL",
+  "TTI2",
+  "NBAS",
+  "TFRC",
+  "SLC39A8",
+  "COL11A2",
+  "MID1",
+  "ERCC1",
+  "CINP",
+  "REEP6",
+  "VDAC1",
+  "KLK4",
+  "HLA-DRA",
+  "PSEN2",
+  "DSCAM"
+ ],
+ "top1": "TONSL",
+ "top1_correct": false,
+ "causal_rank": 3,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TONSL\",\"confidence\":0.95,\"rationale\":\"Direct link to neutropenia, hypogammaglobulinemia, and skeletal dysplasia.\"},{\"gene\":\"TTI2\",\"confidence\":0.85,\"rationale\":\"Linked to microcephaly, short stature, and developmental delay.\"},{\"gene\":\"NBAS\",\"confidence\":0.75,\"rationale\":\"Associated with short stature, optic atrophy, and neutropenia.\"},{\"gene\":\"TFRC\",\"confidence\":0.65,\"rationale\":\"Linked to hypogammaglobulinemia and short stature.\"},{\"gene\":\"SLC39A8\",\"confidence\":0.6,\"rationale\":\"Associated with short stature and immunological abnormalities.\"},{\"gene\":\"COL11A2\",\"confidence\":0.55,\"rationale\":\"Linked to short stature and skeletal abnormalities.\"},{\"gene\":\"MID1\",\"confidence\":0.5,\"rationale\":\"Linked to neutropenia and short stature.\"},{\"gene\":\"ERCC1\",\"confidence\":0.45,\"rationale\":\"Associated with bone marrow issues and short stature.\"},{\"gene\":\"CINP\",\"confidence\":0.4,\"rationale\":\"Linked to recurrent infections and short stature.\"},{\"gene\":\"REEP6\",\"confidence\":0.35,\"rationale\":\"Associated with recurrent infections and short stature.\"},{\"gene\":\"VDAC1\",\"confidence\":0.3,\"rationale\":\"Linked to recurrent infections and short stature.\"},{\"gene\":\"KLK4\",\"confidence\":0.25,\"rationale\":\"Associated with short stature and skeletal abnormalities.\"},{\"gene\":\"HLA-DRA\",\"confidence\":0.2,\"rationale\":\"Linked to short stature and immunological issues.\"},{\"gene\":\"PSEN2\",\"confidence\":0.15,\"rationale\":\"Associated with short stature and developmental delay.\"},{\"gene\":\"DSCAM\",\"confidence\":0.1,\"rationale\":\"Linked to short stature and skeletal abnormalities.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.22,
+ "tokens_in": 10129,
+ "tokens_out": 412
+}

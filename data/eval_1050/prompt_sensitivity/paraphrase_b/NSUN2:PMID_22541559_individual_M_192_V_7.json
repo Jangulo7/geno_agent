@@ -1,0 +1,33 @@
+{
+ "case_id": "NSUN2:PMID_22541559_individual_M_192_V_7",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "NSUN2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NSUN2",
+  "DYRK1A",
+  "PPP3CA",
+  "DDB1",
+  "POMT2",
+  "HOXA1",
+  "ADSL",
+  "EPS15",
+  "TIMM22",
+  "C2orf42",
+  "CRH",
+  "PHKG2",
+  "ZNF333",
+  "GLI4",
+  "OR4F5"
+ ],
+ "top1": "NSUN2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NSUN2\",\"confidence\":0.95,\"rationale\":\"NSUN2 mutations are directly linked to intellectual disability, hypertonia, and short stature in multiple studies.\"},{\"gene\":\"DYRK1A\",\"confidence\":0.75,\"rationale\":\"DYRK1A is associated with intellectual disability and hypertonia, though short stature is less consistently reported.\"},{\"gene\":\"PPP3CA\",\"confidence\":0.65,\"rationale\":\"PPP3CA variants are linked to intellectual disability and short stature, but hypertonia is less frequently mentioned.\"},{\"gene\":\"DDB1\",\"confidence\":0.55,\"rationale\":\"DDB1 is associated with short stature and intellectual disability, but hypertonia is not strongly emphasized.\"},{\"gene\":\"POMT2\",\"confidence\":0.45,\"rationale\":\"POMT2 is linked to intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"HOXA1\",\"confidence\":0.35,\"rationale\":\"HOXA1 is associated with intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"ADSL\",\"confidence\":0.25,\"rationale\":\"ADSL is linked to hypotonia, not hypertonia, and short stature is not a primary feature.\"},{\"gene\":\"EPS15\",\"confidence\":0.2,\"rationale\":\"EPS15 is associated with intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"TIMM22\",\"confidence\":0.15,\"rationale\":\"TIMM22 is linked to intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"C2orf42\",\"confidence\":0.1,\"rationale\":\"C2orf42 is associated with intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"CRH\",\"confidence\":0.05,\"rationale\":\"CRH is linked to intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"PHKG2\",\"confidence\":0.05,\"rationale\":\"PHKG2 is associated with intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"ZNF333\",\"confidence\":0.05,\"rationale\":\"ZNF333 is linked to intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"GLI4\",\"confidence\":0.05,\"rationale\":\"GLI4 is associated with intellectual disability and short stature, but hypertonia is not a primary feature.\"},{\"gene\":\"OR4F5\",\"confidence\":0.05,\"rationale\":\"OR4F5 is linked to intellectual disability and short stature, but hypertonia is not a primary feature.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.916,
+ "tokens_in": 21972,
+ "tokens_out": 587
+}

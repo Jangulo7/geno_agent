@@ -1,0 +1,33 @@
+{
+ "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "DNA2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RRBP1",
+  "UBAC2",
+  "SCGB2A1",
+  "PWWP2B",
+  "ATP11C",
+  "NT5DC1",
+  "LYPD8",
+  "ANPEP",
+  "UCK1",
+  "GRB7",
+  "FAIM2",
+  "DDR1",
+  "ANXA7",
+  "RAMP3",
+  "PDIA3"
+ ],
+ "top1": "RRBP1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RRBP1\",\"confidence\":0.95,\"rationale\":\"Multiple phenotypes including photosensitivity, nail dystrophy, cryptorchidism, and microphthalmia align with RRBP1 mutations.\"},{\"gene\":\"UBAC2\",\"confidence\":0.85,\"rationale\":\"Shares similar features like cryptorchidism, micropenis, and photosensitivity with the patient's presentation.\"},{\"gene\":\"SCGB2A1\",\"confidence\":0.75,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"PWWP2B\",\"confidence\":0.7,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"ATP11C\",\"confidence\":0.65,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"NT5DC1\",\"confidence\":0.6,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"LYPD8\",\"confidence\":0.55,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"ANPEP\",\"confidence\":0.5,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"UCK1\",\"confidence\":0.45,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"GRB7\",\"confidence\":0.4,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"FAIM2\",\"confidence\":0.35,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"DDR1\",\"confidence\":0.3,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"ANXA7\",\"confidence\":0.25,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"RAMP3\",\"confidence\":0.2,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"},{\"gene\":\"PDIA3\",\"confidence\":0.15,\"rationale\":\"Cryptorchidism and micropenis are present, but lacks specific eye or skin features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.565,
+ "tokens_in": 17665,
+ "tokens_out": 557
+}

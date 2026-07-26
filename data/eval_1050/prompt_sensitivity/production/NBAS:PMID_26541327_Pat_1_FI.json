@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_26541327_Pat_1_FI",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MMP10",
+  "GSTO1",
+  "ITGB1BP2",
+  "DCHS1",
+  "WDR6",
+  "TCF12",
+  "KIAA0825",
+  "FAM169A",
+  "FLT3LG",
+  "FAM170A",
+  "EIF3B",
+  "ARMH1",
+  "ZBTB43",
+  "KCNH8",
+  "SCAMP2"
+ ],
+ "top1": "MMP10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MMP10\",\"confidence\":0.1,\"rationale\":\"Multiple liver enzymes elevated in patient, matches gene's reported association.\"},{\"gene\":\"GSTO1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"ITGB1BP2\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"DCHS1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"WDR6\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"TCF12\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"KIAA0825\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"FAM169A\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"FLT3LG\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"FAM170A\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"EIF3B\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"ARMH1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"ZBTB43\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"KCNH8\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"},{\"gene\":\"SCAMP2\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations reported in patient, matches gene's association.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.813,
+ "tokens_in": 4074,
+ "tokens_out": 460
+}

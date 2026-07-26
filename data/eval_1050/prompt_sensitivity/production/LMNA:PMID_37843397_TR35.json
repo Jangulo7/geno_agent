@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR35",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "PRDM13",
+  "KCNT2",
+  "ATAD2",
+  "ZNF784",
+  "OR10Q1",
+  "NADSYN1",
+  "FCRLA",
+  "NCBP2L",
+  "C1QTNF8",
+  "KLHDC1",
+  "GAGE12J",
+  "LRRC56",
+  "ERLIN1",
+  "HIPK2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to FPLD2 with truncal and limb fat loss, diabetes, and hepatic steatosis.\"},{\"gene\":\"PRDM13\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"KCNT2\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"ATAD2\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"ZNF784\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"OR10Q1\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"NADSYN1\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"FCRLA\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"NCBP2L\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"C1QTNF8\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"KLHDC1\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"GAGE12J\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"LRRC56\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"ERLIN1\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"},{\"gene\":\"HIPK2\",\"confidence\":0.1,\"rationale\":\"No evidence of association with lipodystrophy or diabetes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.832,
+ "tokens_in": 18280,
+ "tokens_out": 453
+}

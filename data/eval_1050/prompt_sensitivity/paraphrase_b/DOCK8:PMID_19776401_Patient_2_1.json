@@ -1,0 +1,33 @@
+{
+ "case_id": "DOCK8:PMID_19776401_Patient_2_1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "DOCK8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DOCK8",
+  "SYN1",
+  "NBPF20",
+  "KRTAP6-2",
+  "CAMSAP3",
+  "FERMT3",
+  "C8orf33",
+  "BTN3A3",
+  "FBXL6",
+  "INPP5E",
+  "HEPACAM2",
+  "FCGR2C",
+  "FRG2",
+  "AQP10",
+  "ZSWIM3"
+ ],
+ "top1": "DOCK8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DOCK8\",\"confidence\":0.95,\"rationale\":\"Matches all key HPO terms with detailed immunodeficiency evidence.\"},{\"gene\":\"SYN1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"NBPF20\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"KRTAP6-2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"CAMSAP3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"FERMT3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"C8orf33\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"BTN3A3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"FBXL6\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"INPP5E\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"HEPACAM2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"FCGR2C\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"FRG2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"AQP10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"},{\"gene\":\"ZSWIM3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's immunodeficiency phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.756,
+ "tokens_in": 13809,
+ "tokens_out": 457
+}

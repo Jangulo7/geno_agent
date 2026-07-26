@@ -1,0 +1,33 @@
+{
+ "case_id": "CLDN16:PMID_15856319_index_case",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "CLDN16",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CLDN16",
+  "TRPV5",
+  "SERPINA9",
+  "CCNI",
+  "TBC1D20",
+  "KCNJ18",
+  "EZH2",
+  "ZNF766",
+  "FBXO31",
+  "HPDL",
+  "RBM5",
+  "BMP1",
+  "CLINT1",
+  "NOL4L",
+  "NCK2"
+ ],
+ "top1": "CLDN16",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CLDN16\",\"confidence\":1.0,\"rationale\":\"Directly linked to FHHNC with all patient phenotypes.\"},{\"gene\":\"TRPV5\",\"confidence\":0.2,\"rationale\":\"Associated with calcium reabsorption but not the full phenotype.\"},{\"gene\":\"SERPINA9\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"CCNI\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"TBC1D20\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"KCNJ18\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"EZH2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"ZNF766\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"FBXO31\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"HPDL\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"RBM5\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"BMP1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"CLINT1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"NOL4L\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"},{\"gene\":\"NCK2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.87,
+ "tokens_in": 21294,
+ "tokens_out": 412
+}

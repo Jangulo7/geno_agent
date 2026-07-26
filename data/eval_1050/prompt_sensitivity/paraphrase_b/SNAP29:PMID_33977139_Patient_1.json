@@ -1,0 +1,33 @@
+{
+ "case_id": "SNAP29:PMID_33977139_Patient_1",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "SNAP29",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NDUFV3",
+  "COG1",
+  "TBC1D3L",
+  "HOXA10",
+  "FKBP10",
+  "LARS1",
+  "PLA2G4A",
+  "ADGRG2",
+  "KCNQ3",
+  "SNAP29",
+  "ESPN",
+  "OR14A16",
+  "SYAP1",
+  "RPL34",
+  "TYW3"
+ ],
+ "top1": "NDUFV3",
+ "top1_correct": false,
+ "causal_rank": 10,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NDUFV3\",\"confidence\":0.95,\"rationale\":\"Matches multiple HPO terms including scoliosis, hypotonia, hypertonia, and ichthyosis.\"},{\"gene\":\"COG1\",\"confidence\":0.65,\"rationale\":\"Linked to hypotonia, scoliosis, and developmental delay.\"},{\"gene\":\"TBC1D3L\",\"confidence\":0.35,\"rationale\":\"Associated with hypotonia and hypertonia but lacks other HPO terms.\"},{\"gene\":\"HOXA10\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"FKBP10\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"LARS1\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"PLA2G4A\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"ADGRG2\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"KCNQ3\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"SNAP29\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"ESPN\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"OR14A16\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"SYAP1\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"RPL34\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"},{\"gene\":\"TYW3\",\"confidence\":0.25,\"rationale\":\"No direct HPO term matches in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.479,
+ "tokens_in": 17613,
+ "tokens_out": 435
+}

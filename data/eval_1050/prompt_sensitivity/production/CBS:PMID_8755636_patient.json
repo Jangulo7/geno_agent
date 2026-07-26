@@ -1,0 +1,33 @@
+{
+ "case_id": "CBS:PMID_8755636_patient",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "CBS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CBS",
+  "CHD8",
+  "MYORG",
+  "NASP",
+  "CSF3",
+  "MAMDC4",
+  "SIGLEC14",
+  "SPESP1",
+  "CKAP4",
+  "ZNF697",
+  "PNLIPRP2",
+  "NMNAT1",
+  "KIAA0930",
+  "GMNC",
+  "NCAPG2"
+ ],
+ "top1": "CBS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CBS\",\"confidence\":0.95,\"rationale\":\"CBS deficiency links to hyperhomocysteinemia, intellectual disability, and tall stature with arachnodactyly.\"},{\"gene\":\"CHD8\",\"confidence\":0.85,\"rationale\":\"CHD8 mutations are linked to tall stature, intellectual disability, and arachnodactyly.\"},{\"gene\":\"MTHFR\",\"confidence\":0.15,\"rationale\":\"MTHFR mutations cause hyperhomocysteinemia, but not directly linked to all phenotypes.\"},{\"gene\":\"MYORG\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking MYORG to the phenotype.\"},{\"gene\":\"NASP\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NASP to the phenotype.\"},{\"gene\":\"CSF3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CSF3 to the phenotype.\"},{\"gene\":\"MAMDC4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking MAMDC4 to the phenotype.\"},{\"gene\":\"SIGLEC14\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SIGLEC14 to the phenotype.\"},{\"gene\":\"SPESP1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SPESP1 to the phenotype.\"},{\"gene\":\"CKAP4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CKAP4 to the phenotype.\"},{\"gene\":\"ZNF697\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking ZNF697 to the phenotype.\"},{\"gene\":\"PNLIPRP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking PNLIPRP2 to the phenotype.\"},{\"gene\":\"NMNAT1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NMNAT1 to the phenotype.\"},{\"gene\":\"KIAA0930\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking KIAA0930 to the phenotype.\"},{\"gene\":\"GMNC\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking GMNC to the phenotype.\"},{\"gene\":\"NCAPG2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NCAPG2 to the phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.161,
+ "tokens_in": 17755,
+ "tokens_out": 492
+}

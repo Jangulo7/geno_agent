@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_Patient_UM36",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "ME1",
+  "CANX",
+  "PIEZO1",
+  "ELP4",
+  "PDIA6",
+  "AOAH",
+  "MAB21L1",
+  "GSG1",
+  "CYP2F1",
+  "PIP5KL1",
+  "GPATCH2L",
+  "ZNF484",
+  "LGALS2",
+  "DGAT2L6"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to lipodystrophy, diabetes, and hepatic steatosis in multiple evidence chunks.\"},{\"gene\":\"ME1\",\"confidence\":0.15,\"rationale\":\"General lipodystrophy mentions but no specific phenotype alignment.\"},{\"gene\":\"CANX\",\"confidence\":0.1,\"rationale\":\"General lipodystrophy context, no specific phenotype match.\"},{\"gene\":\"PIEZO1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"ELP4\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"PDIA6\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"AOAH\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"MAB21L1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"GSG1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"CYP2F1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"GPATCH2L\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"ZNF484\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"LGALS2\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"},{\"gene\":\"DGAT2L6\",\"confidence\":0.05,\"rationale\":\"No direct phenotype evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.654,
+ "tokens_in": 18124,
+ "tokens_out": 375
+}

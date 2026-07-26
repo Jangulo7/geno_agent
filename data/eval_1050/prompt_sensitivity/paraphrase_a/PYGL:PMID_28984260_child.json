@@ -1,0 +1,33 @@
+{
+ "case_id": "PYGL:PMID_28984260_child",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "PYGL",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TG",
+  "PYGL",
+  "IRX2",
+  "NEURL1B",
+  "ELMO1",
+  "PHB1",
+  "RCAN3",
+  "CNGA1",
+  "DNASE1",
+  "OR1S2",
+  "TFAP4",
+  "TRIM49",
+  "CCDC200",
+  "SLC25A52",
+  "RTL4"
+ ],
+ "top1": "TG",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TG\",\"confidence\":0.95,\"rationale\":\"Directly linked to hypertriglyceridemia and hypercholesterolemia with liver enzyme elevations.\"},{\"gene\":\"PYGL\",\"confidence\":0.25,\"rationale\":\"Associated with lipid metabolism and liver enzymes in mice.\"},{\"gene\":\"IRX2\",\"confidence\":0.15,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"NEURL1B\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"ELMO1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"PHB1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"RCAN3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CNGA1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"DNASE1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"OR1S2\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"TFAP4\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"TRIM49\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"CCDC200\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"SLC25A52\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"},{\"gene\":\"RTL4\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.235,
+ "tokens_in": 12070,
+ "tokens_out": 393
+}

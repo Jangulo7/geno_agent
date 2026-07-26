@@ -1,0 +1,33 @@
+{
+ "case_id": "COPZ1:PMID_39642330_Patient_3",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "COPZ1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "POU6F2",
+  "RTTN",
+  "PRR18",
+  "ITPR3",
+  "LRR1",
+  "GIMAP7",
+  "SLC61A1",
+  "HBS1L",
+  "SUSD6",
+  "AMER2",
+  "SP2",
+  "NCK1",
+  "TBL1XR1",
+  "MALT1",
+  "MYL10"
+ ],
+ "top1": "POU6F2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"POU6F2\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including macrocytic anemia, neutropenia, and bone marrow hypocellularity.\"},{\"gene\":\"RTTN\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"PRR18\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"ITPR3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"LRR1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"GIMAP7\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"SLC61A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"HBS1L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"SUSD6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"AMER2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"SP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"NCK1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"TBL1XR1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"MALT1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"},{\"gene\":\"MYL10\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic links in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.374,
+ "tokens_in": 17849,
+ "tokens_out": 420
+}

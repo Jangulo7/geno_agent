@@ -1,0 +1,33 @@
+{
+ "case_id": "ITPR1:PMID_35743164_Patient_10",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "ITPR1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ITPR1",
+  "TEP1",
+  "FOXD4L5",
+  "ZNF146",
+  "STRC",
+  "IDH2",
+  "GUCY1A1",
+  "OAS1",
+  "ZNF711",
+  "OR52K2",
+  "ZNF724",
+  "C19orf18",
+  "TSPY2",
+  "ATP6V0B",
+  "GABRR3"
+ ],
+ "top1": "ITPR1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ITPR1\",\"confidence\":0.95,\"rationale\":\"Directly matches SCA29 phenotype with cerebellar atrophy, hypotonia, and intellectual disability.\"},{\"gene\":\"TEP1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"FOXD4L5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"ZNF146\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"STRC\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"IDH2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"GUCY1A1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"OAS1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"ZNF711\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"OR52K2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"ZNF724\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"C19orf18\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"TSPY2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"ATP6V0B\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"},{\"gene\":\"GABRR3\",\"confidence\":0.15,\"rationale\":\"No direct phenotype match; mentions developmental delay but lacks specific cerebellar features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.195,
+ "tokens_in": 15721,
+ "tokens_out": 529
+}

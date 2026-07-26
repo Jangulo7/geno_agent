@@ -1,0 +1,33 @@
+{
+ "case_id": "NFU1:PMID_36256512_F6_II_3",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "NFU1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ACTG2",
+  "EIF3K",
+  "ZNF274",
+  "KRTCAP3",
+  "TUBA3D",
+  "ZNF155",
+  "CPNE9",
+  "PLEC",
+  "ZG16B",
+  "ATP10A",
+  "KRT12",
+  "BICRAL",
+  "P2RX6",
+  "PTPN6",
+  "DPYSL5"
+ ],
+ "top1": "ACTG2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ATP5F1A\",\"confidence\":0.95,\"rationale\":\"Multiple evidence chunks describe spasticity, reflexes, and developmental regression consistent with ATP5F1A mutations.\"},{\"gene\":\"ACTG2\",\"confidence\":0.15,\"rationale\":\"Limited evidence of spasticity and reflexes, no direct link to patient's phenotype.\"},{\"gene\":\"EIF3K\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"ZNF274\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"KRTCAP3\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"TUBA3D\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"ZNF155\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"CPNE9\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"PLEC\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"ZG16B\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"ATP10A\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"KRT12\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"BICRAL\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"P2RX6\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"PTPN6\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"},{\"gene\":\"DPYSL5\",\"confidence\":0.15,\"rationale\":\"No specific evidence linking to patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.899,
+ "tokens_in": 12037,
+ "tokens_out": 462
+}

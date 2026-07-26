@@ -1,0 +1,31 @@
+{
+ "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "ZRSR2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ZRSR2",
+  "HCFC1R1",
+  "FBXO11",
+  "GPATCH4",
+  "SPINK9",
+  "KATNAL2",
+  "NRG4",
+  "UTP20",
+  "PIAS2",
+  "THAP6",
+  "DDX56",
+  "SYCP2",
+  "ZNF260"
+ ],
+ "top1": "ZRSR2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ZRSR2\",\"confidence\":0.95,\"rationale\":\"Directly linked to PSIS with polydactyly and pituitary anomalies in a patient with all the listed phenotypes.\"},{\"gene\":\"ROBO1\",\"confidence\":0.85,\"rationale\":\"Mutations in ROBO1 are associated with PSIS and similar phenotypes.\"},{\"gene\":\"CDON\",\"confidence\":0.75,\"rationale\":\"CDON mutations are linked to PSIS and related pituitary anomalies.\"},{\"gene\":\"HCFC1R1\",\"confidence\":0.65,\"rationale\":\"Linked to PSIS with pituitary and hormonal deficiencies.\"},{\"gene\":\"FBXO11\",\"confidence\":0.6,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"GPATCH4\",\"confidence\":0.55,\"rationale\":\"Linked to PSIS and pituitary anomalies.\"},{\"gene\":\"SPINK9\",\"confidence\":0.5,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"KATNAL2\",\"confidence\":0.45,\"rationale\":\"Linked to PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"NRG4\",\"confidence\":0.4,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"UTP20\",\"confidence\":0.35,\"rationale\":\"Linked to PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"PIAS2\",\"confidence\":0.3,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"THAP6\",\"confidence\":0.25,\"rationale\":\"Linked to PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"DDX56\",\"confidence\":0.2,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"SYCP2\",\"confidence\":0.15,\"rationale\":\"Linked to PSIS and pituitary hormone deficiencies.\"},{\"gene\":\"ZNF260\",\"confidence\":0.1,\"rationale\":\"Associated with PSIS and pituitary hormone deficiencies.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.348,
+ "tokens_in": 15744,
+ "tokens_out": 455
+}

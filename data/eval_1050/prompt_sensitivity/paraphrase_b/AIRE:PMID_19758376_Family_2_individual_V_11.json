@@ -1,0 +1,33 @@
+{
+ "case_id": "AIRE:PMID_19758376_Family_2_individual_V_11",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "AIRE",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AIRE",
+  "SERPINA5",
+  "TDRKH",
+  "MAN2B1",
+  "NUMB",
+  "ARMC5",
+  "IMPACT",
+  "MYL5",
+  "WNT2",
+  "USH1G",
+  "TRPC5OS",
+  "VAMP2",
+  "NEUROD1",
+  "C1orf115",
+  "MYRFL"
+ ],
+ "top1": "AIRE",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"Directly links to APECED syndrome with all patient phenotypes.\"},{\"gene\":\"SERPINA5\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"TDRKH\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"MAN2B1\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"NUMB\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"ARMC5\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"IMPACT\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"MYL5\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"WNT2\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"USH1G\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"TRPC5OS\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"VAMP2\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"NEUROD1\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"C1orf115\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"},{\"gene\":\"MYRFL\",\"confidence\":0.05,\"rationale\":\"No relevant mentions in evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.748,
+ "tokens_in": 17676,
+ "tokens_out": 365
+}

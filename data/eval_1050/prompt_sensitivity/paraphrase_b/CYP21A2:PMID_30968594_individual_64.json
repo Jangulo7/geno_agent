@@ -1,0 +1,33 @@
+{
+ "case_id": "CYP21A2:PMID_30968594_individual_64",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "CYP21A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CYP21A2",
+  "SLC6A12",
+  "SLC19A1",
+  "NKTR",
+  "TCP10L",
+  "USP20",
+  "ZC3HAV1L",
+  "BTBD9",
+  "TERF1",
+  "MED18",
+  "RNASE3",
+  "ASCL5",
+  "KRT75",
+  "TCEAL2",
+  "ZCCHC4"
+ ],
+ "top1": "CYP21A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CYP21A2\",\"confidence\":0.95,\"rationale\":\"Directly links to CAH with hirsutism, clitoral hypertrophy, and elevated 17-OHP.\"},{\"gene\":\"SLC6A12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC19A1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NKTR\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TCP10L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"USP20\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZC3HAV1L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"BTBD9\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TERF1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"MED18\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RNASE3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ASCL5\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"KRT75\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TCEAL2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZCCHC4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.356,
+ "tokens_in": 16989,
+ "tokens_out": 431
+}

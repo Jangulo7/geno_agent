@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_2",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "SLC17A9",
+  "FOXI1",
+  "GNAQ",
+  "SCOC",
+  "SPANXC",
+  "ZNF274",
+  "H1-4",
+  "ITK",
+  "ZCCHC18",
+  "DUSP22",
+  "TRA2A",
+  "AGPAT3",
+  "IDNK",
+  "COL6A6"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations cause progeroid syndromes with lipodystrophy, short stature, and other features matching the patient's presentation.\"},{\"gene\":\"SLC17A9\",\"confidence\":0.15,\"rationale\":\"SLC17A9 is linked to intellectual disability and short stature but lacks specific lipodystrophy or progeroid features.\"},{\"gene\":\"FOXI1\",\"confidence\":0.1,\"rationale\":\"FOXI1 is not directly linked to the patient's features.\"},{\"gene\":\"GNAQ\",\"confidence\":0.1,\"rationale\":\"GNAQ is not directly linked to the patient's features.\"},{\"gene\":\"SCOC\",\"confidence\":0.1,\"rationale\":\"SCOC is not directly linked to the patient's features.\"},{\"gene\":\"SPANXC\",\"confidence\":0.1,\"rationale\":\"SPANXC is not directly linked to the patient's features.\"},{\"gene\":\"ZNF274\",\"confidence\":0.1,\"rationale\":\"ZNF274 is not directly linked to the patient's features.\"},{\"gene\":\"H1-4\",\"confidence\":0.1,\"rationale\":\"H1-4 is not directly linked to the patient's features.\"},{\"gene\":\"ITK\",\"confidence\":0.1,\"rationale\":\"ITK is not directly linked to the patient's features.\"},{\"gene\":\"ZCCHC18\",\"confidence\":0.1,\"rationale\":\"ZCCHC18 is not directly linked to the patient's features.\"},{\"gene\":\"DUSP22\",\"confidence\":0.1,\"rationale\":\"DUSP22 is not directly linked to the patient's features.\"},{\"gene\":\"TRA2A\",\"confidence\":0.1,\"rationale\":\"TRA2A is not directly linked to the patient's features.\"},{\"gene\":\"AGPAT3\",\"confidence\":0.1,\"rationale\":\"AGPAT3 is not directly linked to the patient's features.\"},{\"gene\":\"IDNK\",\"confidence\":0.1,\"rationale\":\"IDNK is not directly linked to the patient's features.\"},{\"gene\":\"COL6A6\",\"confidence\":0.1,\"rationale\":\"COL6A6 is not directly linked to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.826,
+ "tokens_in": 16181,
+ "tokens_out": 485
+}

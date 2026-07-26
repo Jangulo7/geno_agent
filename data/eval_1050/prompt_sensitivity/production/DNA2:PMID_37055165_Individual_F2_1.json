@@ -1,0 +1,33 @@
+{
+ "case_id": "DNA2:PMID_37055165_Individual_F2_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "DNA2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DNA2",
+  "KRT24",
+  "CRIP2",
+  "SMCO4",
+  "SLC12A2",
+  "PGM1",
+  "SSH2",
+  "FOXP3",
+  "SAXO1",
+  "GAST",
+  "H2BC4",
+  "CXCL1",
+  "EOLA1",
+  "ALB",
+  "STK24"
+ ],
+ "top1": "DNA2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DNA2\",\"confidence\":0.95,\"rationale\":\"Directly linked to neurologic, skeletal, and ophthalmologic features matching patient phenotype.\"},{\"gene\":\"KRT24\",\"confidence\":0.15,\"rationale\":\"Associated with nail dystrophy and skeletal features but lacks key ophthalmic and neurological links.\"},{\"gene\":\"CRIP2\",\"confidence\":0.12,\"rationale\":\"Linked to skeletal features but no direct connection to neurological or ophthalmic findings.\"},{\"gene\":\"SMCO4\",\"confidence\":0.11,\"rationale\":\"Skeletal features present but no direct link to neurological or ophthalmic manifestations.\"},{\"gene\":\"SLC12A2\",\"confidence\":0.10,\"rationale\":\"Skeletal features but no direct connection to neurological or ophthalmic findings.\"},{\"gene\":\"PGM1\",\"confidence\":0.10,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic manifestations.\"},{\"gene\":\"SSH2\",\"confidence\":0.09,\"rationale\":\"Skeletal features but no direct connection to neurological or ophthalmic findings.\"},{\"gene\":\"FOXP3\",\"confidence\":0.08,\"rationale\":\"Immunological role, no direct link to patient's skeletal or ophthalmic features.\"},{\"gene\":\"SAXO1\",\"confidence\":0.07,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic findings.\"},{\"gene\":\"GAST\",\"confidence\":0.06,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic findings.\"},{\"gene\":\"H2BC4\",\"confidence\":0.05,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic findings.\"},{\"gene\":\"CXCL1\",\"confidence\":0.04,\"rationale\":\"No direct link to patient's neurological or ophthalmic features.\"},{\"gene\":\"EOLA1\",\"confidence\":0.03,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic findings.\"},{\"gene\":\"ALB\",\"confidence\":0.02,\"rationale\":\"No direct link to patient's neurological or ophthalmic features.\"},{\"gene\":\"STK24\",\"confidence\":0.01,\"rationale\":\"Skeletal features but no direct link to neurological or ophthalmic findings.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.03,
+ "tokens_in": 18340,
+ "tokens_out": 497
+}

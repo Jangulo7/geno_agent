@@ -1,0 +1,33 @@
+{
+ "case_id": "DNA2:PMID_37055165_Individual_F5_1",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "DNA2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UBAC2",
+  "RRBP1",
+  "UCK1",
+  "GRB7",
+  "ANPEP",
+  "LYPD8",
+  "PWWP2B",
+  "NT5DC1",
+  "ATP11C",
+  "PDIA3",
+  "RAMP3",
+  "FAIM2",
+  "DDR1",
+  "ANXA7",
+  "SCGB2A1"
+ ],
+ "top1": "UBAC2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UBAC2\",\"confidence\":0.95,\"rationale\":\"Multiple phenotypes including cryptorchidism, micropenis, and nail dystrophy directly match the gene's known associations.\"},{\"gene\":\"RRBP1\",\"confidence\":0.85,\"rationale\":\"Shared phenotypes with UBAC2 suggest similar genetic etiology.\"},{\"gene\":\"UCK1\",\"confidence\":0.75,\"rationale\":\"Cryptorchidism and micropenis are present, but less specific evidence.\"},{\"gene\":\"GRB7\",\"confidence\":0.65,\"rationale\":\"Limited phenotypic overlap with the patient's features.\"},{\"gene\":\"ANPEP\",\"confidence\":0.6,\"rationale\":\"Anhidrosis and nail dystrophy are noted, but not uniquely linked.\"},{\"gene\":\"LYPD8\",\"confidence\":0.55,\"rationale\":\"Cryptorchidism and micropenis are present, but not strongly supported.\"},{\"gene\":\"PWWP2B\",\"confidence\":0.5,\"rationale\":\"Shared features with other genes, but not uniquely linked.\"},{\"gene\":\"NT5DC1\",\"confidence\":0.45,\"rationale\":\"Cryptorchidism and micropenis are present, but not strongly supported.\"},{\"gene\":\"ATP11C\",\"confidence\":0.4,\"rationale\":\"Limited phenotypic overlap with the patient's features.\"},{\"gene\":\"PDIA3\",\"confidence\":0.35,\"rationale\":\"Anhidrosis and nail dystrophy are noted, but not uniquely linked.\"},{\"gene\":\"RAMP3\",\"confidence\":0.3,\"rationale\":\"Cryptorchidism and micropenis are present, but not strongly supported.\"},{\"gene\":\"FAIM2\",\"confidence\":0.25,\"rationale\":\"Limited phenotypic overlap with the patient's features.\"},{\"gene\":\"DDR1\",\"confidence\":0.2,\"rationale\":\"Shared features with other genes, but not uniquely linked.\"},{\"gene\":\"ANXA7\",\"confidence\":0.15,\"rationale\":\"Anhidrosis and nail dystrophy are noted, but not uniquely linked.\"},{\"gene\":\"SCGB2A1\",\"confidence\":0.1,\"rationale\":\"No direct phenotypic overlap with the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.973,
+ "tokens_in": 17670,
+ "tokens_out": 475
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "CBLB:PMID_36006710_Patient_1",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "CBLB",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ERP44",
+  "MOB1A",
+  "ASS1",
+  "GHSR",
+  "SPANXA2",
+  "CABP2",
+  "PABPC1",
+  "TEKT2",
+  "PRKAB1",
+  "TMEM140",
+  "NMRAL1",
+  "CAVIN1",
+  "COX17",
+  "RAD21",
+  "FIGN"
+ ],
+ "top1": "ERP44",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ERP44\",\"confidence\":0.95,\"rationale\":\"Low IgG, IgA, and IgM with poor vaccine response aligns with ERP44 mutations.\"},{\"gene\":\"MOB1A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking MOB1A to immunoglobulin deficiencies.\"},{\"gene\":\"ASS1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking ASS1 to immunoglobulin deficiencies.\"},{\"gene\":\"GHSR\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking GHSR to immunoglobulin deficiencies.\"},{\"gene\":\"SPANXA2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SPANXA2 to immunoglobulin deficiencies.\"},{\"gene\":\"CABP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CABP2 to immunoglobulin deficiencies.\"},{\"gene\":\"PABPC1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking PABPC1 to immunoglobulin deficiencies.\"},{\"gene\":\"TEKT2\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking TEKT2 to immunoglobulin deficiencies.\"},{\"gene\":\"PRKAB1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking PRKAB1 to immunoglobulin deficiencies.\"},{\"gene\":\"TMEM140\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking TMEM140 to immunoglobulin deficiencies.\"},{\"gene\":\"NMRAL1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NMRAL1 to immunoglobulin deficiencies.\"},{\"gene\":\"CAVIN1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CAVIN1 to immunoglobulin deficiencies.\"},{\"gene\":\"COX17\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking COX17 to immunoglobulin deficiencies.\"},{\"gene\":\"RAD21\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking RAD21 to immunoglobulin deficiencies.\"},{\"gene\":\"FIGN\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking FIGN to immunoglobulin deficiencies.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.774,
+ "tokens_in": 16994,
+ "tokens_out": 466
+}

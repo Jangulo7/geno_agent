@@ -1,0 +1,33 @@
+{
+ "case_id": "STXBP1:PMID_35190816_STX_29390993_Patient_P1",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "STXBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ATP1A3",
+  "STXBP1",
+  "PIGK",
+  "AIMP1",
+  "AP2A1",
+  "KRTAP2-3",
+  "HARBI1",
+  "SOFU1",
+  "IPCEF1",
+  "GNAT1",
+  "ZFAND3",
+  "H4C8",
+  "ADCK2",
+  "ZSCAN1",
+  "UCN2"
+ ],
+ "top1": "ATP1A3",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ATP1A3\",\"confidence\":0.95,\"rationale\":\"Strong evidence linking ATP1A3 mutations to seizures, brain atrophy, and developmental delay.\"},{\"gene\":\"STXBP1\",\"confidence\":0.85,\"rationale\":\"Consistent with seizures, developmental delay, and brain atrophy in early-onset encephalopathy.\"},{\"gene\":\"PIGK\",\"confidence\":0.75,\"rationale\":\"PIGK mutations cause GPIBD22 with developmental delay, seizures, and brain atrophy.\"},{\"gene\":\"AIMP1\",\"confidence\":0.65,\"rationale\":\"AIMP1 mutations associated with developmental delay, seizures, and microcephaly.\"},{\"gene\":\"AP2A1\",\"confidence\":0.55,\"rationale\":\"AP2A1 variants linked to developmental delay and seizures, though less specific.\"},{\"gene\":\"KRTAP2-3\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking KRTAP2-3 to the phenotype.\"},{\"gene\":\"HARBI1\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking HARBI1 to the phenotype.\"},{\"gene\":\"SOFU1\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking SOFU1 to the phenotype.\"},{\"gene\":\"IPCEF1\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking IPCEF1 to the phenotype.\"},{\"gene\":\"GNAT1\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking GNAT1 to the phenotype.\"},{\"gene\":\"ZFAND3\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking ZFAND3 to the phenotype.\"},{\"gene\":\"H4C8\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking H4C8 to the phenotype.\"},{\"gene\":\"ADCK2\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking ADCK2 to the phenotype.\"},{\"gene\":\"ZSCAN1\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking ZSCAN1 to the phenotype.\"},{\"gene\":\"UCN2\",\"confidence\":0.45,\"rationale\":\"No strong evidence linking UCN2 to the phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.699,
+ "tokens_in": 16357,
+ "tokens_out": 479
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_14569098_F6_individual_1",
+ "variant": "paraphrase_a",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "CEP290",
+  "IGFBP6",
+  "PSORS1C1",
+  "TRAPPC3",
+  "GBE1",
+  "DNM1",
+  "TXNL4A",
+  "STARD4",
+  "UNC45A",
+  "COPS7A",
+  "TTPA",
+  "ZKSCAN2",
+  "NDUFS7",
+  "OR51I1"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"UMOD mutations cause ADTKD with hyperuricemia, gout, and renal cysts, matching the patient's phenotype.\"},{\"gene\":\"CEP290\",\"confidence\":0.15,\"rationale\":\"CEP290 is linked to cystic kidney disease but not gout or hyperuricemia.\"},{\"gene\":\"IGFBP6\",\"confidence\":0.1,\"rationale\":\"IGFBP6 is associated with CKD but not gout or renal cysts.\"},{\"gene\":\"PSORS1C1\",\"confidence\":0.05,\"rationale\":\"PSORS1C1 is linked to gout but not renal disease.\"},{\"gene\":\"TRAPPC3\",\"confidence\":0.05,\"rationale\":\"TRAPPC3 has no direct link to the patient's phenotype.\"},{\"gene\":\"GBE1\",\"confidence\":0.05,\"rationale\":\"GBE1 is not associated with the patient's phenotype.\"},{\"gene\":\"DNM1\",\"confidence\":0.05,\"rationale\":\"DNM1 is not associated with the patient's phenotype.\"},{\"gene\":\"TXNL4A\",\"confidence\":0.05,\"rationale\":\"TXNL4A is not associated with the patient's phenotype.\"},{\"gene\":\"STARD4\",\"confidence\":0.05,\"rationale\":\"STARD4 is not associated with the patient's phenotype.\"},{\"gene\":\"UNC45A\",\"confidence\":0.05,\"rationale\":\"UNC45A is not associated with the patient's phenotype.\"},{\"gene\":\"COPS7A\",\"confidence\":0.05,\"rationale\":\"COPS7A is not associated with the patient's phenotype.\"},{\"gene\":\"TTPA\",\"confidence\":0.05,\"rationale\":\"TTPA is not associated with the patient's phenotype.\"},{\"gene\":\"ZKSCAN2\",\"confidence\":0.05,\"rationale\":\"ZKSCAN2 is not associated with the patient's phenotype.\"},{\"gene\":\"NDUFS7\",\"confidence\":0.05,\"rationale\":\"NDUFS7 is not associated with the patient's phenotype.\"},{\"gene\":\"OR51I1\",\"confidence\":0.05,\"rationale\":\"OR51I1 is not associated with the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.048,
+ "tokens_in": 18650,
+ "tokens_out": 496
+}

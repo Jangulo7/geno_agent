@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_31761904_Individual_NBAS_11",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TONSL",
+  "TTI2",
+  "NBAS",
+  "TFRC",
+  "COL11A2",
+  "SLC39A8",
+  "ERCC1",
+  "MID1",
+  "HLA-DRA",
+  "PSEN2",
+  "DSCAM",
+  "CINP",
+  "REEP6",
+  "VDAC1",
+  "KLK4"
+ ],
+ "top1": "TONSL",
+ "top1_correct": false,
+ "causal_rank": 3,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TONSL\",\"confidence\":0.95,\"rationale\":\"Strong evidence links TONSL to neutropenia, skeletal dysplasia, and immunodeficiency matching the patient's phenotype.\"},{\"gene\":\"TTI2\",\"confidence\":0.85,\"rationale\":\"TTI2 variants are associated with microcephaly, intellectual disability, and short stature, aligning with the patient's features.\"},{\"gene\":\"NBAS\",\"confidence\":0.75,\"rationale\":\"NBAS mutations cause short stature, optic atrophy, and neutropenia, matching several patient symptoms.\"},{\"gene\":\"TFRC\",\"confidence\":0.65,\"rationale\":\"TFRC variants are linked to hypogammaglobulinemia and neutropenia, partially matching the patient's phenotype.\"},{\"gene\":\"COL11A2\",\"confidence\":0.6,\"rationale\":\"COL11A2 is associated with short stature and skeletal abnormalities, matching some patient features.\"},{\"gene\":\"SLC39A8\",\"confidence\":0.55,\"rationale\":\"SLC39A8 variants are linked to short stature and immunodeficiency, partially matching the patient's phenotype.\"},{\"gene\":\"ERCC1\",\"confidence\":0.5,\"rationale\":\"ERCC1 is associated with bone marrow issues and immunodeficiency, partially matching the patient's phenotype.\"},{\"gene\":\"MID1\",\"confidence\":0.45,\"rationale\":\"MID1 is linked to neutropenia and immunodeficiency, partially matching the patient's phenotype.\"},{\"gene\":\"HLA-DRA\",\"confidence\":0.4,\"rationale\":\"HLA-DRA is associated with immunodeficiency and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"PSEN2\",\"confidence\":0.35,\"rationale\":\"PSEN2 is linked to neurodevelopmental issues and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"DSCAM\",\"confidence\":0.3,\"rationale\":\"DSCAM is associated with immunodeficiency and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"CINP\",\"confidence\":0.25,\"rationale\":\"CINP is linked to immunodeficiency and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"REEP6\",\"confidence\":0.2,\"rationale\":\"REEP6 is associated with immunodeficiency and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"VDAC1\",\"confidence\":0.15,\"rationale\":\"VDAC1 is linked to immunodeficiency and short stature, partially matching the patient's phenotype.\"},{\"gene\":\"KLK4\",\"confidence\":0.1,\"rationale\":\"KLK4 is associated with short stature and skeletal abnormalities, partially matching the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.886,
+ "tokens_in": 10111,
+ "tokens_out": 583
+}

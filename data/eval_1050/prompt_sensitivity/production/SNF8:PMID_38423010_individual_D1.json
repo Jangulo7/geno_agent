@@ -1,0 +1,33 @@
+{
+ "case_id": "SNF8:PMID_38423010_individual_D1",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "SNF8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SNF8",
+  "ATP11A",
+  "PLET1",
+  "KLF11",
+  "ZDHHC12",
+  "CREB3L3",
+  "CAPN11",
+  "OR8S1",
+  "CTCF",
+  "AKAP6",
+  "PARP15",
+  "METRN",
+  "FAM187B",
+  "ZNF41",
+  "PPIL6"
+ ],
+ "top1": "SNF8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SNF8\",\"confidence\":0.95,\"rationale\":\"Direct link to neurodevelopmental phenotypes with cerebellar atrophy, optic atrophy, and intellectual disability.\"},{\"gene\":\"ATP11A\",\"confidence\":0.25,\"rationale\":\"Linked to cerebellar ataxia and intellectual disability but lacks direct mention of optic atrophy or global brain atrophy.\"},{\"gene\":\"PLET1\",\"confidence\":0.15,\"rationale\":\"Associated with cerebellar atrophy and intellectual disability but not all key features.\"},{\"gene\":\"KLF11\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"ZDHHC12\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"CREB3L3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"CAPN11\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"OR8S1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"CTCF\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"AKAP6\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"PARP15\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"METRN\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"FAM187B\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"ZNF41\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"},{\"gene\":\"PPIL6\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking to the full phenotype profile.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.733,
+ "tokens_in": 18341,
+ "tokens_out": 446
+}

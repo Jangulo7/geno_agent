@@ -1,0 +1,33 @@
+{
+ "case_id": "CD28:PMID_34214472_patient_P2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "CD28",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD28",
+  "ZNF474",
+  "IFT57",
+  "SHISA3",
+  "VDAC2",
+  "ADAP2",
+  "CREBL2",
+  "ZNF517",
+  "TRH",
+  "NOTCH2NLA",
+  "SORBS3",
+  "CEACAM18",
+  "CCDC89",
+  "CPSF7",
+  "AP3M2"
+ ],
+ "top1": "CD28",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD28\",\"confidence\":0.95,\"rationale\":\"Direct link to HPV, EBV, CMV infections and vaccine response\"},{\"gene\":\"GATA2\",\"confidence\":0.15,\"rationale\":\"Indirect association with viral infections\"},{\"gene\":\"RLTPR\",\"confidence\":0.1,\"rationale\":\"Linked to CD28 deficiency\"},{\"gene\":\"ZNF474\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"IFT57\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"SHISA3\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"VDAC2\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"ADAP2\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"CREBL2\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"ZNF517\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"TRH\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"NOTCH2NLA\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"SORBS3\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"CEACAM18\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"CCDC89\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"CPSF7\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"},{\"gene\":\"AP3M2\",\"confidence\":0.05,\"rationale\":\"No direct evidence\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.624,
+ "tokens_in": 19557,
+ "tokens_out": 374
+}

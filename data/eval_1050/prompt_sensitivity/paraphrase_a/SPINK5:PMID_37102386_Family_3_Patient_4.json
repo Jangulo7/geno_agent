@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_37102386_Family_3_Patient_4",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "DNAH3",
+  "ATP6V0A4",
+  "MMP16",
+  "TMEM72",
+  "KBTBD12",
+  "SENP5",
+  "GAGE2D",
+  "CALHM4",
+  "CFH",
+  "UQCR10",
+  "ZNF541",
+  "ELL",
+  "LRRC10",
+  "DUS1L"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to Netherton syndrome with all listed phenotypes.\"\n  },\n  {\n    \"gene\": \"DNAH3\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"ATP6V0A4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"MMP16\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"TMEM72\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"KBTBD12\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"SENP5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"GAGE2D\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"CALHM4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"CFH\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"UQCR10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"ZNF541\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"ELL\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"LRRC10\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  },\n  {\n    \"gene\": \"DUS1L\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic link to the patient's features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.585,
+ "tokens_in": 17344,
+ "tokens_out": 623
+}

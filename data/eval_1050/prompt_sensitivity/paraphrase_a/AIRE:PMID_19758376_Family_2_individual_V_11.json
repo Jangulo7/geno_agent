@@ -1,0 +1,33 @@
+{
+ "case_id": "AIRE:PMID_19758376_Family_2_individual_V_11",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "AIRE",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AIRE",
+  "NUMB",
+  "SERPINA5",
+  "TDRKH",
+  "MAN2B1",
+  "ARMC5",
+  "IMPACT",
+  "MYL5",
+  "WNT2",
+  "USH1G",
+  "TRPC5OS",
+  "VAMP2",
+  "NEUROD1",
+  "C1orf115",
+  "MYRFL"
+ ],
+ "top1": "AIRE",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AIRE\",\"confidence\":0.95,\"rationale\":\"Directly linked to APECED syndrome with all listed phenotypes.\"},{\"gene\":\"NUMB\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"SERPINA5\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"TDRKH\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"MAN2B1\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"ARMC5\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"IMPACT\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"MYL5\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"WNT2\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"USH1G\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"TRPC5OS\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"VAMP2\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"NEUROD1\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"C1orf115\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"},{\"gene\":\"MYRFL\",\"confidence\":0.05,\"rationale\":\"No specific evidence for the patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.22,
+ "tokens_in": 17689,
+ "tokens_out": 407
+}

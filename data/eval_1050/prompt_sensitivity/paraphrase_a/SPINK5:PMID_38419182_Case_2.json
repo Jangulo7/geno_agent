@@ -1,0 +1,33 @@
+{
+ "case_id": "SPINK5:PMID_38419182_Case_2",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "SPINK5",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SPINK5",
+  "KRT81",
+  "TMEM160",
+  "MTERF4",
+  "CREBBP",
+  "TOM1L2",
+  "GRIPAP1",
+  "MVD",
+  "VMA22",
+  "KLF3",
+  "TOR1A",
+  "KLK4",
+  "HPS5",
+  "KRTAP4-3",
+  "RUFY4"
+ ],
+ "top1": "SPINK5",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"SPINK5\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to Netherton syndrome with all listed phenotypes.\"\n  },\n  {\n    \"gene\": \"KRT81\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"TMEM160\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"MTERF4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"CREBBP\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"TOM1L2\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"GRIPAP1\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"MVD\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"VMA22\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"KLF3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"TOR1A\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"KLK4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"HPS5\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"KRTAP4-3\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  },\n  {\n    \"gene\": \"RUFY4\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct phenotypic match to patient features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 8.401,
+ "tokens_in": 18546,
+ "tokens_out": 594
+}

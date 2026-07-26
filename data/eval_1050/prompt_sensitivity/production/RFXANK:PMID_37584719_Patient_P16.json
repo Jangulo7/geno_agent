@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P16",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "SET",
+  "DAGLA",
+  "PIGT",
+  "CACNB3",
+  "TF",
+  "EDARADD",
+  "VARS1",
+  "IFITM3",
+  "RPP25L",
+  "CLRN3",
+  "STAG3",
+  "SEMA5B",
+  "SLC35A4",
+  "ADAM29"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"Directly links to MHC II deficiency with chronic diarrhea, pneumonia, and failure to thrive.\"},{\"gene\":\"SET\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"DAGLA\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"PIGT\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"CACNB3\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"TF\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"EDARADD\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"VARS1\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"IFITM3\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"RPP25L\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"CLRN3\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"STAG3\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"SEMA5B\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"SLC35A4\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"},{\"gene\":\"ADAM29\",\"confidence\":0.15,\"rationale\":\"General symptoms without specific gene link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.32,
+ "tokens_in": 13557,
+ "tokens_out": 382
+}

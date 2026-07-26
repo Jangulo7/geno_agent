@@ -1,0 +1,33 @@
+{
+ "case_id": "CAPRIN1:PMID_35979925_Case_12",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "CAPRIN1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CAPRIN1",
+  "PTBP1",
+  "GFRA2",
+  "LRRC28",
+  "ZNF799",
+  "TMEM101",
+  "PEX12",
+  "ZACN",
+  "DAPL1",
+  "SERPINI2",
+  "MTF1",
+  "FOXD4L6",
+  "GPR37",
+  "LY6G5C",
+  "NUDCD1"
+ ],
+ "top1": "CAPRIN1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CAPRIN1\",\"confidence\":0.95,\"rationale\":\"Directly links to seizures, speech delay, ADHD, and ASD with haploinsufficiency and de novo mutations.\"},{\"gene\":\"PTBP1\",\"confidence\":0.65,\"rationale\":\"Associated with ADHD, speech delay, and hypertelorism in multiple cases.\"},{\"gene\":\"GFRA2\",\"confidence\":0.55,\"rationale\":\"Linked to speech delay, ADHD, and autistic features in literature.\"},{\"gene\":\"LRRC28\",\"confidence\":0.5,\"rationale\":\"Tied to developmental delays and comorbid ADHD and ASD.\"},{\"gene\":\"ZNF799\",\"confidence\":0.45,\"rationale\":\"Associated with speech delay and ADHD in some cases.\"},{\"gene\":\"TMEM101\",\"confidence\":0.4,\"rationale\":\"Linked to developmental delays and comorbid ADHD and ASD.\"},{\"gene\":\"PEX12\",\"confidence\":0.35,\"rationale\":\"Tied to speech delay and ADHD in some cases.\"},{\"gene\":\"ZACN\",\"confidence\":0.3,\"rationale\":\"Associated with speech delay and ADHD in some cases.\"},{\"gene\":\"DAPL1\",\"confidence\":0.25,\"rationale\":\"Linked to speech delay and ADHD in some cases.\"},{\"gene\":\"SERPINI2\",\"confidence\":0.2,\"rationale\":\"Tied to speech delay and seizures in some cases.\"},{\"gene\":\"MTF1\",\"confidence\":0.15,\"rationale\":\"Associated with developmental delays and comorbid ADHD and ASD.\"},{\"gene\":\"FOXD4L6\",\"confidence\":0.1,\"rationale\":\"Linked to speech delay and ADHD in some cases.\"},{\"gene\":\"GPR37\",\"confidence\":0.05,\"rationale\":\"Tied to speech delay and ADHD in some cases.\"},{\"gene\":\"LY6G5C\",\"confidence\":0.05,\"rationale\":\"Associated with developmental delays and comorbid ADHD and ASD.\"},{\"gene\":\"NUDCD1\",\"confidence\":0.05,\"rationale\":\"Linked to developmental delays and comorbid ADHD and ASD.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.624,
+ "tokens_in": 16493,
+ "tokens_out": 458
+}

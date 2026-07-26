@@ -1,0 +1,33 @@
+{
+ "case_id": "PTCRA:PMID_38422122_Patient_9_Kindred_F",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "PTCRA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "PTCRA",
+  "POLR1G",
+  "DNAI1",
+  "KCNQ5",
+  "GRIK1",
+  "ZBED4",
+  "TAOK1",
+  "ZNG1B",
+  "BAG1",
+  "FXN",
+  "EXOSC7",
+  "GIT1",
+  "MUC12",
+  "CHIA",
+  "GPR21"
+ ],
+ "top1": "PTCRA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"PTCRA\",\"confidence\":0.95,\"rationale\":\"Directly links to T-cell subset abnormalities and TREC levels.\"},{\"gene\":\"POLR1G\",\"confidence\":0.15,\"rationale\":\"Mentions respiratory infections but lacks specific T-cell data.\"},{\"gene\":\"DNAI1\",\"confidence\":0.1,\"rationale\":\"General infection history without T-cell specifics.\"},{\"gene\":\"KCNQ5\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"GRIK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"ZBED4\",\"confidence\":0.1,\"rationale\":\"Mentions infections but lacks T-cell specifics.\"},{\"gene\":\"TAOK1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"ZNG1B\",\"confidence\":0.1,\"rationale\":\"General infection history without T-cell specifics.\"},{\"gene\":\"BAG1\",\"confidence\":0.1,\"rationale\":\"General infection history without T-cell specifics.\"},{\"gene\":\"FXN\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"EXOSC7\",\"confidence\":0.1,\"rationale\":\"General infection history without T-cell specifics.\"},{\"gene\":\"GIT1\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"MUC12\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"},{\"gene\":\"CHIA\",\"confidence\":0.1,\"rationale\":\"General infection history without T-cell specifics.\"},{\"gene\":\"GPR21\",\"confidence\":0.1,\"rationale\":\"No direct T-cell or infection evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.284,
+ "tokens_in": 13639,
+ "tokens_out": 381
+}

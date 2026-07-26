@@ -1,0 +1,33 @@
+{
+ "case_id": "MSL2:PMID_38815585_Individual_16",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "MSL2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MSL2",
+  "RNF31",
+  "SPOCK2",
+  "CCL4",
+  "TRIM2",
+  "UQCRC2",
+  "LILRB2",
+  "DEGS2",
+  "PARVA",
+  "RILPL2",
+  "FSCN1",
+  "G6PC3",
+  "THEM5",
+  "HPD",
+  "TPD52L1"
+ ],
+ "top1": "MSL2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MSL2\",\"confidence\":0.95,\"rationale\":\"Links to pectus excavatum and deep-set eyes with histone modifications.\"},{\"gene\":\"RNF31\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"SPOCK2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"CCL4\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"TRIM2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"UQCRC2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"LILRB2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"DEGS2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"PARVA\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"RILPL2\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"FSCN1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"G6PC3\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"THEM5\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"HPD\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"},{\"gene\":\"TPD52L1\",\"confidence\":0.15,\"rationale\":\"No specific phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.916,
+ "tokens_in": 10919,
+ "tokens_out": 384
+}

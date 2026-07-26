@@ -1,0 +1,33 @@
+{
+ "case_id": "COG3:PMID_37711075_Family_1_BAB13340",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "COG3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DNAJC15",
+  "UBL5",
+  "IQANK1",
+  "TNFSF12",
+  "GPR160",
+  "FOXRED2",
+  "TFPI",
+  "SCN10A",
+  "SLC10A4",
+  "DGKQ",
+  "F10",
+  "MCRIP1",
+  "PRRG2",
+  "HEMK1",
+  "SIAH2"
+ ],
+ "top1": "DNAJC15",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DNAJC15\",\"confidence\":0.95,\"rationale\":\"Multiple facial features match patient's HPO.\"},{\"gene\":\"UBL5\",\"confidence\":0.85,\"rationale\":\"Facial features and microcephaly align with patient's phenotype.\"},{\"gene\":\"IQANK1\",\"confidence\":0.75,\"rationale\":\"Facial features and microcephaly match.\"},{\"gene\":\"TNFSF12\",\"confidence\":0.7,\"rationale\":\"Facial features and microcephaly align.\"},{\"gene\":\"GPR160\",\"confidence\":0.65,\"rationale\":\"Facial features and microcephaly match.\"},{\"gene\":\"FOXRED2\",\"confidence\":0.6,\"rationale\":\"Facial features and microcephaly align.\"},{\"gene\":\"TFPI\",\"confidence\":0.55,\"rationale\":\"Facial features and microcephaly match.\"},{\"gene\":\"SCN10A\",\"confidence\":0.5,\"rationale\":\"Facial features and hypotonia align.\"},{\"gene\":\"SLC10A4\",\"confidence\":0.45,\"rationale\":\"Facial features and hypotonia match.\"},{\"gene\":\"DGKQ\",\"confidence\":0.4,\"rationale\":\"Facial features and hypotonia align.\"},{\"gene\":\"F10\",\"confidence\":0.35,\"rationale\":\"Facial features and hypotonia match.\"},{\"gene\":\"MCRIP1\",\"confidence\":0.3,\"rationale\":\"Facial features and hypotonia align.\"},{\"gene\":\"PRRG2\",\"confidence\":0.25,\"rationale\":\"Facial features and hypotonia match.\"},{\"gene\":\"HEMK1\",\"confidence\":0.2,\"rationale\":\"Facial features and microcephaly align.\"},{\"gene\":\"SIAH2\",\"confidence\":0.15,\"rationale\":\"Facial features and microcephaly match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.682,
+ "tokens_in": 14474,
+ "tokens_out": 405
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_18256394_Patient_2",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "SCOC",
+  "SLC17A9",
+  "FOXI1",
+  "GNAQ",
+  "SPANXC",
+  "ZNF274",
+  "H1-4",
+  "ITK",
+  "ZCCHC18",
+  "DUSP22",
+  "TRA2A",
+  "AGPAT3",
+  "IDNK",
+  "COL6A6"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to progeroid syndromes with overlapping phenotypes.\"},{\"gene\":\"SCOC\",\"confidence\":0.15,\"rationale\":\"Deletion associated with short stature and facial features.\"},{\"gene\":\"SLC17A9\",\"confidence\":0.1,\"rationale\":\"Linked to short stature and failure to thrive.\"},{\"gene\":\"FOXI1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"GNAQ\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"SPANXC\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZNF274\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"H1-4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ITK\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"ZCCHC18\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"DUSP22\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"TRA2A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"AGPAT3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"IDNK\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"},{\"gene\":\"COL6A6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.716,
+ "tokens_in": 16186,
+ "tokens_out": 386
+}

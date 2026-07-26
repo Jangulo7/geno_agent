@@ -1,0 +1,33 @@
+{
+ "case_id": "ZRSR2:PMID_38158857_Family_5_PATIENT_7",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "ZRSR2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ZRSR2",
+  "HCFC1R1",
+  "FBXO11",
+  "GPATCH4",
+  "SPINK9",
+  "KATNAL2",
+  "NRG4",
+  "UTP20",
+  "PIAS2",
+  "THAP6",
+  "DDX56",
+  "SYCP2",
+  "ZNF260",
+  "EIF2B3",
+  "ABHD18"
+ ],
+ "top1": "ZRSR2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ZRSR2\",\"confidence\":0.95,\"rationale\":\"Direct link to PSIS with hypopituitarism and polydactyly in literature\"},{\"gene\":\"ROBO1\",\"confidence\":0.85,\"rationale\":\"Mutations linked to PSIS in multiple cases\"},{\"gene\":\"HCFC1R1\",\"confidence\":0.15,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"FBXO11\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"GPATCH4\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"SPINK9\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"KATNAL2\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"NRG4\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"UTP20\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"PIAS2\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"THAP6\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"DDX56\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"SYCP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"ZNF260\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"EIF2B3\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"},{\"gene\":\"ABHD18\",\"confidence\":0.1,\"rationale\":\"No direct evidence of PSIS or hypopituitarism\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.586,
+ "tokens_in": 15749,
+ "tokens_out": 475
+}

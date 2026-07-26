@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF2:PMID_34826260_Patient_2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "IKZF2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF2",
+  "FAM13B",
+  "MTDH",
+  "SMTN",
+  "FIGLA",
+  "PTK6",
+  "DEPTOR",
+  "KCNS1",
+  "BMI1",
+  "DSCAML1",
+  "TFDP1",
+  "OR2G6",
+  "DPPA4",
+  "DHPS",
+  "FAM90A12"
+ ],
+ "top1": "IKZF2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF2\",\"confidence\":0.95,\"rationale\":\"Directly linked to CD4/CD8 T cell memory subsets and immune regulation.\"},{\"gene\":\"FAM13B\",\"confidence\":0.25,\"rationale\":\"Correlates with effector memory CD4 T cells but not all patient phenotypes.\"},{\"gene\":\"MTDH\",\"confidence\":0.15,\"rationale\":\"Associated with immune cell infiltration but not specific T cell subsets.\"},{\"gene\":\"SMTN\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"FIGLA\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"PTK6\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"DEPTOR\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"KCNS1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"BMI1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"DSCAML1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"TFDP1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"OR2G6\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"DPPA4\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"DHPS\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"},{\"gene\":\"FAM90A12\",\"confidence\":0.1,\"rationale\":\"No direct link to patient T cell phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.962,
+ "tokens_in": 20859,
+ "tokens_out": 422
+}

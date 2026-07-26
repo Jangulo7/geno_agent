@@ -1,0 +1,33 @@
+{
+ "case_id": "GLI3:PMID_22428873_P6",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "GLI3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GLI3",
+  "SOHLH2",
+  "MEGF11",
+  "AGMO",
+  "FSCN3",
+  "RAI2",
+  "LIPI",
+  "CFAP144",
+  "PIP5KL1",
+  "CXXC1",
+  "FKBP14",
+  "FAM209B",
+  "MMGT1",
+  "SPATS2L",
+  "STAG1"
+ ],
+ "top1": "GLI3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GLI3\",\"confidence\":0.95,\"rationale\":\"Directly links to GCPS with all patient phenotypes.\"},{\"gene\":\"SOHLH2\",\"confidence\":0.15,\"rationale\":\"Only mentions syndactyly and polydactyly, not all patient features.\"},{\"gene\":\"MEGF11\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"AGMO\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"FSCN3\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"RAI2\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"LIPI\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"CFAP144\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"PIP5KL1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"CXXC1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"FKBP14\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"FAM209B\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"MMGT1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"SPATS2L\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"},{\"gene\":\"STAG1\",\"confidence\":0.15,\"rationale\":\"No direct link to patient phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.807,
+ "tokens_in": 15239,
+ "tokens_out": 406
+}

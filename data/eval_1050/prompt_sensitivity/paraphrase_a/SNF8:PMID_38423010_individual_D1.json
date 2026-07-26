@@ -1,0 +1,32 @@
+{
+ "case_id": "SNF8:PMID_38423010_individual_D1",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "SNF8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SNF8",
+  "ATP11A",
+  "PLET1",
+  "METRN",
+  "ZDHHC12",
+  "CREB3L3",
+  "CAPN11",
+  "OR8S1",
+  "CTCF",
+  "AKAP6",
+  "PARP15",
+  "FAM187B",
+  "ZNF41",
+  "PPIL6"
+ ],
+ "top1": "SNF8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[\n  {\n    \"gene\": \"SNF8\",\n    \"confidence\": 0.95,\n    \"rationale\": \"Directly linked to neurodevelopmental/neurodegenerative features including global brain atrophy, cerebellar atrophy, optic atrophy, and intellectual disability.\"\n  },\n  {\n    \"gene\": \"ATP11A\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Associated with cerebellar ataxia, intellectual disability, and optic atrophy, matching some patient features.\"\n  },\n  {\n    \"gene\": \"PLET1\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Linked to cerebellar atrophy, intellectual disability, and optic atrophy, but less specific to global brain atrophy.\"\n  },\n  {\n    \"gene\": \"METRN\",\n    \"confidence\": 0.55,\n    \"rationale\": \"Associated with cerebellar atrophy, optic atrophy, and intellectual disability, but not all features.\"\n  },\n  {\n    \"gene\": \"ZDHHC12\",\n    \"confidence\": 0.5,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"CREB3L3\",\n    \"confidence\": 0.45,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"CAPN11\",\n    \"confidence\": 0.4,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"OR8S1\",\n    \"confidence\": 0.35,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"CTCF\",\n    \"confidence\": 0.3,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"AKAP6\",\n    \"confidence\": 0.25,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"PARP15\",\n    \"confidence\": 0.2,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"FAM187B\",\n    \"confidence\": 0.15,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"ZNF41\",\n    \"confidence\": 0.1,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  },\n  {\n    \"gene\": \"PPIL6\",\n    \"confidence\": 0.05,\n    \"rationale\": \"No direct evidence linking to the full set of patient features.\"\n  }\n]",
+ "finish_reason": "stop",
+ "latency_s": 11.633,
+ "tokens_in": 18336,
+ "tokens_out": 639
+}

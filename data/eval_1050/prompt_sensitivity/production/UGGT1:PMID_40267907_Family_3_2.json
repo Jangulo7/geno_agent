@@ -1,0 +1,33 @@
+{
+ "case_id": "UGGT1:PMID_40267907_Family_3_2",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "UGGT1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TBXT",
+  "CHD2",
+  "SDHAF4",
+  "KCNAB3",
+  "TXNDC5",
+  "KIF13B",
+  "UGGT1",
+  "SERPINB12",
+  "FAM43B",
+  "GADL1",
+  "CPD",
+  "ESYT2",
+  "NUDT3",
+  "TPD52L1",
+  "AKR1C2"
+ ],
+ "top1": "TBXT",
+ "top1_correct": false,
+ "causal_rank": 7,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TBXT\",\"confidence\":0.95,\"rationale\":\"Directly linked to congenital heart defects and multiple malformations in evidence.\"},{\"gene\":\"CHD2\",\"confidence\":0.85,\"rationale\":\"Associated with congenital heart defects and multiple malformations.\"},{\"gene\":\"SDHAF4\",\"confidence\":0.75,\"rationale\":\"Linked to cardiac malformations and nuchal translucency.\"},{\"gene\":\"KCNAB3\",\"confidence\":0.65,\"rationale\":\"Tied to cardiac anomalies and nuchal translucency.\"},{\"gene\":\"TXNDC5\",\"confidence\":0.6,\"rationale\":\"Connected to cardiac defects and laterality issues.\"},{\"gene\":\"KIF13B\",\"confidence\":0.55,\"rationale\":\"Linked to cardiac anomalies and laterality defects.\"},{\"gene\":\"UGGT1\",\"confidence\":0.5,\"rationale\":\"Tied to cardiac malformations and nuchal translucency.\"},{\"gene\":\"SERPINB12\",\"confidence\":0.45,\"rationale\":\"Associated with cardiac anomalies and nuchal translucency.\"},{\"gene\":\"FAM43B\",\"confidence\":0.4,\"rationale\":\"Linked to cardiac defects and nuchal translucency.\"},{\"gene\":\"GADL1\",\"confidence\":0.35,\"rationale\":\"Tied to cardiac anomalies and nuchal translucency.\"},{\"gene\":\"CPD\",\"confidence\":0.3,\"rationale\":\"Associated with cardiac defects and nuchal translucency.\"},{\"gene\":\"ESYT2\",\"confidence\":0.25,\"rationale\":\"Linked to cardiac anomalies and laterality issues.\"},{\"gene\":\"NUDT3\",\"confidence\":0.2,\"rationale\":\"Tied to cardiac defects and nuchal translucency.\"},{\"gene\":\"TPD52L1\",\"confidence\":0.15,\"rationale\":\"Associated with cardiac anomalies and nuchal translucency.\"},{\"gene\":\"AKR1C2\",\"confidence\":0.1,\"rationale\":\"Linked to cardiac anomalies and nuchal translucency.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.902,
+ "tokens_in": 18984,
+ "tokens_out": 452
+}

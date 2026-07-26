@@ -1,0 +1,33 @@
+{
+ "case_id": "GNAS:PMID_25802881_P75",
+ "variant": "paraphrase_b",
+ "category": "metabolic",
+ "causal_gene": "GNAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "GNAS",
+  "WNT16",
+  "PZP",
+  "TCEAL2",
+  "DPYD",
+  "OR8J3",
+  "ULBP3",
+  "POLG",
+  "UNC80",
+  "MED26",
+  "BTBD18",
+  "IFNG",
+  "ASIC3",
+  "ZBP1",
+  "KHDRBS2"
+ ],
+ "top1": "GNAS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"GNAS\",\"confidence\":0.95,\"rationale\":\"Directly links to AHO phenotype with short stature, obesity, and short metacarpals.\"},{\"gene\":\"WNT16\",\"confidence\":0.15,\"rationale\":\"Associated with obesity and short stature but lacks direct link to metacarpal shortening.\"},{\"gene\":\"PZP\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"TCEAL2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DPYD\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"OR8J3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ULBP3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"POLG\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"UNC80\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"MED26\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"BTBD18\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"IFNG\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ASIC3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ZBP1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"KHDRBS2\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.906,
+ "tokens_in": 14899,
+ "tokens_out": 418
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "ZSWIM6:PMID_26706854_Subject_1_2",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "ZSWIM6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DSN1",
+  "PROP1",
+  "C12orf75",
+  "CWF19L1",
+  "TMEM11",
+  "SPINK5",
+  "HNRNPLL",
+  "VWA2",
+  "SNTG2",
+  "TFAM",
+  "APOO",
+  "EVX1",
+  "NTAN1",
+  "TARS1",
+  "UHRF1"
+ ],
+ "top1": "DSN1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DSN1\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including craniofacial and CNS abnormalities.\"},{\"gene\":\"PROP1\",\"confidence\":0.75,\"rationale\":\"Shares craniofacial and developmental features with the patient.\"},{\"gene\":\"C12orf75\",\"confidence\":0.65,\"rationale\":\"Reports similar craniofacial and developmental features.\"},{\"gene\":\"CWF19L1\",\"confidence\":0.6,\"rationale\":\"Shares some craniofacial and developmental features.\"},{\"gene\":\"TMEM11\",\"confidence\":0.55,\"rationale\":\"Reports craniofacial and developmental features.\"},{\"gene\":\"SPINK5\",\"confidence\":0.5,\"rationale\":\"Shares some craniofacial features.\"},{\"gene\":\"HNRNPLL\",\"confidence\":0.45,\"rationale\":\"Reports some craniofacial features.\"},{\"gene\":\"VWA2\",\"confidence\":0.4,\"rationale\":\"Shares some craniofacial features.\"},{\"gene\":\"SNTG2\",\"confidence\":0.35,\"rationale\":\"Reports some craniofacial features.\"},{\"gene\":\"TFAM\",\"confidence\":0.3,\"rationale\":\"Shares some craniofacial features.\"},{\"gene\":\"APOO\",\"confidence\":0.25,\"rationale\":\"Reports some craniofacial features.\"},{\"gene\":\"EVX1\",\"confidence\":0.2,\"rationale\":\"Shares some craniofacial features.\"},{\"gene\":\"NTAN1\",\"confidence\":0.15,\"rationale\":\"Reports some craniofacial features.\"},{\"gene\":\"TARS1\",\"confidence\":0.1,\"rationale\":\"Shares some developmental features.\"},{\"gene\":\"UHRF1\",\"confidence\":0.05,\"rationale\":\"Reports some developmental features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.576,
+ "tokens_in": 16492,
+ "tokens_out": 392
+}

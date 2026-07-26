@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P1",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "PTPRC",
+  "CXCL6",
+  "AKR1C8",
+  "CCDC63",
+  "AEBP2",
+  "NPSR1",
+  "EDRF1",
+  "ATG4A",
+  "FAM162B",
+  "OR12D2",
+  "SHLD3",
+  "PAPOLB",
+  "ADAMTSL4",
+  "TUBB2A"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"Mutations in RFXANK are linked to MHC-II deficiency, explaining recurrent infections, autoimmune hemolytic anemia, and failure to thrive.\"},{\"gene\":\"PTPRC\",\"confidence\":0.65,\"rationale\":\"PTPRC mutations are associated with immunodeficiency and recurrent infections, matching some patient features.\"},{\"gene\":\"CXCL6\",\"confidence\":0.55,\"rationale\":\"CXCL6 is linked to immune dysregulation and chronic inflammation, aligning with some symptoms.\"},{\"gene\":\"AKR1C8\",\"confidence\":0.5,\"rationale\":\"AKR1C8 is associated with immune-related conditions, but evidence is less direct.\"},{\"gene\":\"CCDC63\",\"confidence\":0.45,\"rationale\":\"CCDC63 has limited direct evidence linking to the patient's phenotype.\"},{\"gene\":\"AEBP2\",\"confidence\":0.4,\"rationale\":\"AEBP2 is linked to immune disorders, but evidence is not strongly supportive.\"},{\"gene\":\"NPSR1\",\"confidence\":0.35,\"rationale\":\"NPSR1 is associated with immune-related conditions, but evidence is weak.\"},{\"gene\":\"EDRF1\",\"confidence\":0.3,\"rationale\":\"EDRF1 has limited evidence connecting to the patient's symptoms.\"},{\"gene\":\"ATG4A\",\"confidence\":0.25,\"rationale\":\"ATG4A is linked to immune dysfunction, but evidence is not strongly supportive.\"},{\"gene\":\"FAM162B\",\"confidence\":0.2,\"rationale\":\"FAM162B has limited evidence connecting to the patient's phenotype.\"},{\"gene\":\"OR12D2\",\"confidence\":0.15,\"rationale\":\"OR12D2 is not strongly associated with the patient's symptoms.\"},{\"gene\":\"SHLD3\",\"confidence\":0.1,\"rationale\":\"SHLD3 has limited evidence linking to the patient's phenotype.\"},{\"gene\":\"PAPOLB\",\"confidence\":0.05,\"rationale\":\"PAPOLB is not strongly associated with the patient's symptoms.\"},{\"gene\":\"ADAMTSL4\",\"confidence\":0.05,\"rationale\":\"ADAMTSL4 has limited evidence connecting to the patient's phenotype.\"},{\"gene\":\"TUBB2A\",\"confidence\":0.05,\"rationale\":\"TUBB2A is not strongly associated with the patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.526,
+ "tokens_in": 17941,
+ "tokens_out": 526
+}

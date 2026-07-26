@@ -1,0 +1,33 @@
+{
+ "case_id": "COL11A1:PMID_28971234_child",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "COL11A1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EMILIN1",
+  "COL11A1",
+  "RMI1",
+  "GOLGA4",
+  "EPHX4",
+  "OR11H4",
+  "MDFI",
+  "SLC15A1",
+  "ANKRD12",
+  "BLK",
+  "MMP7",
+  "LGI4",
+  "NCOA4",
+  "GPR33",
+  "ADPGK"
+ ],
+ "top1": "EMILIN1",
+ "top1_correct": false,
+ "causal_rank": 2,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EMILIN1\",\"confidence\":0.95,\"rationale\":\"Links to joint hypermobility, hypotonia, and fractures with multiple phenotypes.\"},{\"gene\":\"COL11A1\",\"confidence\":0.65,\"rationale\":\"Associated with joint hypermobility and connective tissue disorders.\"},{\"gene\":\"RMI1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"GOLGA4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"EPHX4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"OR11H4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"MDFI\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"SLC15A1\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"ANKRD12\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"BLK\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"MMP7\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"LGI4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"NCOA4\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"GPR33\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"},{\"gene\":\"ADPGK\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic links to patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.418,
+ "tokens_in": 16916,
+ "tokens_out": 433
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "NBAS:PMID_26541327_Pat_1_FI",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "NBAS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MMP10",
+  "GSTO1",
+  "ITGB1BP2",
+  "DCHS1",
+  "WDR6",
+  "TCF12",
+  "KIAA0825",
+  "FAM169A",
+  "FLT3LG",
+  "FAM170A",
+  "EIF3B",
+  "ARMH1",
+  "ZBTB43",
+  "KCNH8",
+  "SCAMP2"
+ ],
+ "top1": "MMP10",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MMP10\",\"confidence\":0.1,\"rationale\":\"Multiple liver enzymes elevated, but no specific gene function link.\"},{\"gene\":\"GSTO1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"ITGB1BP2\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"DCHS1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"WDR6\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"TCF12\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"KIAA0825\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"FAM169A\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"FLT3LG\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"FAM170A\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"EIF3B\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"ARMH1\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"ZBTB43\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"KCNH8\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"},{\"gene\":\"SCAMP2\",\"confidence\":0.1,\"rationale\":\"Liver enzyme elevations noted, but no gene function link.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.635,
+ "tokens_in": 4056,
+ "tokens_out": 445
+}

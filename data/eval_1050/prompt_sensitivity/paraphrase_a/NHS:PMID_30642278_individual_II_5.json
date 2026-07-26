@@ -1,0 +1,33 @@
+{
+ "case_id": "NHS:PMID_30642278_individual_II_5",
+ "variant": "paraphrase_a",
+ "category": "developmental",
+ "causal_gene": "NHS",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NHS",
+  "COX19",
+  "GNG5",
+  "GPR39",
+  "CXXC4",
+  "GSAP",
+  "SIX4",
+  "LRRK2",
+  "ACTR3C",
+  "SPNS3",
+  "STON1",
+  "GFRA2",
+  "HABP4",
+  "ADGRG7",
+  "ZNF98"
+ ],
+ "top1": "NHS",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NHS\",\"confidence\":1.0,\"rationale\":\"Matches all patient phenotypes including cataract, dental anomalies, facial features, and nystagmus.\"},{\"gene\":\"COX19\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"GNG5\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"GPR39\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"CXXC4\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"GSAP\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"SIX4\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"LRRK2\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"ACTR3C\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"SPNS3\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"STON1\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"GFRA2\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"HABP4\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"ADGRG7\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"},{\"gene\":\"ZNF98\",\"confidence\":0.1,\"rationale\":\"No relevant evidence provided.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.122,
+ "tokens_in": 15485,
+ "tokens_out": 345
+}

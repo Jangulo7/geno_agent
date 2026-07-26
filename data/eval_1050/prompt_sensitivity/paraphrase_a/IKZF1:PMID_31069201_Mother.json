@@ -1,0 +1,33 @@
+{
+ "case_id": "IKZF1:PMID_31069201_Mother",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "IKZF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "IKZF1",
+  "CENPC",
+  "DNASE1L3",
+  "NOCT",
+  "SLC25A19",
+  "USP17L23",
+  "STARD10",
+  "DTYMK",
+  "OR9A4",
+  "STYX",
+  "GPR158",
+  "SEMA4B",
+  "SPINK9",
+  "INA",
+  "TMEM41B"
+ ],
+ "top1": "IKZF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"IKZF1\",\"confidence\":0.95,\"rationale\":\"Mutations in IKZF1 are linked to immune dysfunction including reduced B cells, CD4/CD8 ratio, and Ig levels.\"},{\"gene\":\"CENPC\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking CENPC to the described immune phenotypes.\"},{\"gene\":\"DNASE1L3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking DNASE1L3 to the described immune phenotypes.\"},{\"gene\":\"NOCT\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking NOCT to the described immune phenotypes.\"},{\"gene\":\"SLC25A19\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SLC25A19 to the described immune phenotypes.\"},{\"gene\":\"USP17L23\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking USP17L23 to the described immune phenotypes.\"},{\"gene\":\"STARD10\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking STARD10 to the described immune phenotypes.\"},{\"gene\":\"DTYMK\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking DTYMK to the described immune phenotypes.\"},{\"gene\":\"OR9A4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking OR9A4 to the described immune phenotypes.\"},{\"gene\":\"STYX\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking STYX to the described immune phenotypes.\"},{\"gene\":\"GPR158\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking GPR158 to the described immune phenotypes.\"},{\"gene\":\"SEMA4B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SEMA4B to the described immune phenotypes.\"},{\"gene\":\"SPINK9\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking SPINK9 to the described immune phenotypes.\"},{\"gene\":\"INA\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking INA to the described immune phenotypes.\"},{\"gene\":\"TMEM41B\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking TMEM41B to the described immune phenotypes.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.19,
+ "tokens_in": 18198,
+ "tokens_out": 513
+}

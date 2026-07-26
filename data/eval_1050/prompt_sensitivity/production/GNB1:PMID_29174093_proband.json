@@ -1,0 +1,33 @@
+{
+ "case_id": "GNB1:PMID_29174093_proband",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "GNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MMP2",
+  "MAPKAPK5",
+  "TMEM190",
+  "DUX3",
+  "EFHB",
+  "RTP2",
+  "VSIG10L2",
+  "TMEM254",
+  "DNMT3L",
+  "ZNF281",
+  "MTMR14",
+  "BAG5",
+  "GNB1",
+  "FXYD5",
+  "SPEM1"
+ ],
+ "top1": "MMP2",
+ "top1_correct": false,
+ "causal_rank": 13,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MMP2\",\"confidence\":0.95,\"rationale\":\"Direct mutation linked to patient's phenotype.\"},{\"gene\":\"MAPKAPK5\",\"confidence\":0.15,\"rationale\":\"Overlap with some features but not specific.\"},{\"gene\":\"TMEM190\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"DUX3\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"EFHB\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"RTP2\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"VSIG10L2\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"TMEM254\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"DNMT3L\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"ZNF281\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"MTMR14\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"BAG5\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"GNB1\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"FXYD5\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"},{\"gene\":\"SPEM1\",\"confidence\":0.1,\"rationale\":\"No direct evidence.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.878,
+ "tokens_in": 14746,
+ "tokens_out": 331
+}

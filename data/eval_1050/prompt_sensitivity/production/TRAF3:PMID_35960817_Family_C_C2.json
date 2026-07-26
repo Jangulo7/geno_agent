@@ -1,0 +1,33 @@
+{
+ "case_id": "TRAF3:PMID_35960817_Family_C_C2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "TRAF3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TRAF3",
+  "GADD45G",
+  "SNW1",
+  "ARL15",
+  "KLHL20",
+  "TLCD3A",
+  "GSG1L",
+  "CACNG4",
+  "RASSF4",
+  "COMTD1",
+  "RCCD1",
+  "COL4A1",
+  "MORF4L1",
+  "CPSF3",
+  "NBPF12"
+ ],
+ "top1": "TRAF3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TRAF3\",\"confidence\":0.95,\"rationale\":\"TRAF3 mutation linked to elevated IgG/IgA and recurrent infections with atopic dermatitis.\"},{\"gene\":\"GADD45G\",\"confidence\":0.15,\"rationale\":\"Associated with elevated IgE and recurrent infections but not IgA.\"},{\"gene\":\"IL6R\",\"confidence\":0.1,\"rationale\":\"Linked to atopic dermatitis and infections but not IgA elevation.\"},{\"gene\":\"SNW1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"ARL15\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"KLHL20\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"TLCD3A\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"GSG1L\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CACNG4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"RASSF4\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"COMTD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"RCCD1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"COL4A1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"MORF4L1\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"CPSF3\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"},{\"gene\":\"NBPF12\",\"confidence\":0.05,\"rationale\":\"No direct evidence linking to patient phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.958,
+ "tokens_in": 13274,
+ "tokens_out": 444
+}

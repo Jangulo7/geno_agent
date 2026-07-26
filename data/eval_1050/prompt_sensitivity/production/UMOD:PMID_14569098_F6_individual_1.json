@@ -1,0 +1,33 @@
+{
+ "case_id": "UMOD:PMID_14569098_F6_individual_1",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "UMOD",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "UMOD",
+  "COPS7A",
+  "CEP290",
+  "IGFBP6",
+  "PSORS1C1",
+  "TRAPPC3",
+  "GBE1",
+  "DNM1",
+  "TXNL4A",
+  "STARD4",
+  "UNC45A",
+  "ZKSCAN2",
+  "NDUFS7",
+  "OR51I1",
+  "TTPA"
+ ],
+ "top1": "UMOD",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"UMOD\",\"confidence\":0.95,\"rationale\":\"Directly links to ADTKD with hyperuricemia, gout, and renal cysts.\"},{\"gene\":\"COPS7A\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link to patient's features.\"},{\"gene\":\"CEP290\",\"confidence\":0.05,\"rationale\":\"Linked to cystic kidney disease but not gout or hyperuricemia.\"},{\"gene\":\"IGFBP6\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"},{\"gene\":\"PSORS1C1\",\"confidence\":0.05,\"rationale\":\"Associated with gout but not renal disease.\"},{\"gene\":\"TRAPPC3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic link to patient's features.\"},{\"gene\":\"GBE1\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"},{\"gene\":\"DNM1\",\"confidence\":0.05,\"rationale\":\"No direct link to renal disease or gout.\"},{\"gene\":\"TXNL4A\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"},{\"gene\":\"STARD4\",\"confidence\":0.05,\"rationale\":\"No direct link to renal disease or gout.\"},{\"gene\":\"UNC45A\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"},{\"gene\":\"ZKSCAN2\",\"confidence\":0.05,\"rationale\":\"No direct link to renal disease or gout.\"},{\"gene\":\"NDUFS7\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"},{\"gene\":\"OR51I1\",\"confidence\":0.05,\"rationale\":\"No direct link to renal disease or gout.\"},{\"gene\":\"TTPA\",\"confidence\":0.05,\"rationale\":\"No direct link to renal cysts or gout.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 9.55,
+ "tokens_in": 18655,
+ "tokens_out": 448
+}

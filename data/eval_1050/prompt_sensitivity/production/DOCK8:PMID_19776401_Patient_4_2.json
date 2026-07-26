@@ -1,0 +1,33 @@
+{
+ "case_id": "DOCK8:PMID_19776401_Patient_4_2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "DOCK8",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "DOCK8",
+  "NABP1",
+  "NEK8",
+  "NUP210",
+  "ZC3H18",
+  "EIF3CL",
+  "CASK",
+  "EML1",
+  "HCAR1",
+  "OR4X2",
+  "FAM9B",
+  "ATP8B1",
+  "CPLX1",
+  "SCAMP3",
+  "OR5M3"
+ ],
+ "top1": "DOCK8",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"DOCK8\",\"confidence\":0.95,\"rationale\":\"Directly links to AR-HIES with recurrent infections and viral/fungal susceptibility.\"},{\"gene\":\"NABP1\",\"confidence\":0.15,\"rationale\":\"General infection mentions without specific phenotype overlap.\"},{\"gene\":\"NEK8\",\"confidence\":0.05,\"rationale\":\"Single infection mention without phenotype match.\"},{\"gene\":\"NUP210\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"ZC3H18\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"EIF3CL\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"CASK\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"EML1\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"HCAR1\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"OR4X2\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"FAM9B\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"ATP8B1\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"CPLX1\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"SCAMP3\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"},{\"gene\":\"OR5M3\",\"confidence\":0.05,\"rationale\":\"General infection mentions without phenotype match.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.595,
+ "tokens_in": 15235,
+ "tokens_out": 388
+}

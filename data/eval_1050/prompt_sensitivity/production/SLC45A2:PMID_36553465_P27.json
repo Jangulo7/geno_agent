@@ -1,0 +1,33 @@
+{
+ "case_id": "SLC45A2:PMID_36553465_P27",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "SLC45A2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "SLC45A2",
+  "C3orf52",
+  "ABCA8",
+  "ZNF593",
+  "DEPDC1",
+  "BRD7",
+  "VSIG10L2",
+  "CIP2A",
+  "PPT2",
+  "CTXN1",
+  "RPS3A",
+  "EIF2AK2",
+  "AP4B1",
+  "OR2T2",
+  "COMMD5"
+ ],
+ "top1": "SLC45A2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"SLC45A2\",\"confidence\":0.95,\"rationale\":\"Directly linked to OCA4 with hypopigmentation, nystagmus, and iris translucency.\"},{\"gene\":\"C3orf52\",\"confidence\":0.15,\"rationale\":\"Associated with woolly hair, not the full phenotype.\"},{\"gene\":\"ABCA8\",\"confidence\":0.12,\"rationale\":\"OCA8 with hypopigmentation but not all features.\"},{\"gene\":\"ZNF593\",\"confidence\":0.1,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"DEPDC1\",\"confidence\":0.1,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"BRD7\",\"confidence\":0.1,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"VSIG10L2\",\"confidence\":0.08,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"CIP2A\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"PPT2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"CTXN1\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"RPS3A\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"EIF2AK2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"AP4B1\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"OR2T2\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"},{\"gene\":\"COMMD5\",\"confidence\":0.05,\"rationale\":\"No direct evidence for the full phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.974,
+ "tokens_in": 15635,
+ "tokens_out": 419
+}

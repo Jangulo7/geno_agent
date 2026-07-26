@@ -1,0 +1,32 @@
+{
+ "case_id": "SNUPN:PMID_38413582_Family_9_individual_II_1",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "SNUPN",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "ALS2",
+  "POMK",
+  "FOXJ1",
+  "MMP16",
+  "HECW2",
+  "ZNF610",
+  "ATP8A2",
+  "MSANTD3",
+  "OR13C9",
+  "FOXA2",
+  "LALBA",
+  "NKX2-6",
+  "MAGOH",
+  "PPP1CC"
+ ],
+ "top1": "ALS2",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"ALS2\",\"confidence\":0.95,\"rationale\":\"Matches all key phenotypes including proximal/distal weakness, Gowers sign, areflexia, and neurogenic EMG findings.\"},{\"gene\":\"POMK\",\"confidence\":0.65,\"rationale\":\"Shares similar clinical features with family history of progressive weakness and distal to proximal progression.\"},{\"gene\":\"FOXJ1\",\"confidence\":0.55,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"MMP16\",\"confidence\":0.5,\"rationale\":\"Shares some symptoms but lacks direct evidence linking to the patient's presentation.\"},{\"gene\":\"HECW2\",\"confidence\":0.45,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"ZNF610\",\"confidence\":0.4,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"ATP8A2\",\"confidence\":0.35,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"MSANTD3\",\"confidence\":0.3,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"OR13C9\",\"confidence\":0.25,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"FOXA2\",\"confidence\":0.2,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"LALBA\",\"confidence\":0.15,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"NKX2-6\",\"confidence\":0.1,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"MAGOH\",\"confidence\":0.05,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"PPP1CC\",\"confidence\":0.05,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"},{\"gene\":\"FOXJ1\",\"confidence\":0.05,\"rationale\":\"Reports similar symptoms but lacks specific genetic evidence linking to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.251,
+ "tokens_in": 11291,
+ "tokens_out": 505
+}

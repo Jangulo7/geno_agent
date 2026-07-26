@@ -1,0 +1,33 @@
+{
+ "case_id": "NF1:PMID_26178382_UAB_R7916",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "NF1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NF1",
+  "ZNF750",
+  "ANAPC7",
+  "C19orf53",
+  "ZNF559",
+  "CSF2RB",
+  "ZNF816",
+  "TXNRD2",
+  "PRDM5",
+  "VPS29",
+  "DDIT4",
+  "AMBRA1",
+  "FLOT2",
+  "DEFA5",
+  "FBLN7"
+ ],
+ "top1": "NF1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NF1\",\"confidence\":0.95,\"rationale\":\"Directly links to axillary freckling, cafe-au-lait spots, and pulmonic stenosis with genetic evidence.\"},{\"gene\":\"ZNF750\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"ANAPC7\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"C19orf53\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"ZNF559\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"CSF2RB\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"ZNF816\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"TXNRD2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"PRDM5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"VPS29\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"DDIT4\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"AMBRA1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"FLOT2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"DEFA5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"},{\"gene\":\"FBLN7\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic evidence; linked to NF1 diagnosis but not causal.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.796,
+ "tokens_in": 19028,
+ "tokens_out": 525
+}

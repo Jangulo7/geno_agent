@@ -1,0 +1,33 @@
+{
+ "case_id": "SPTAN1:PMID_35150594_G_II_1",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "SPTAN1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AP5B1",
+  "HTN3",
+  "ZNF532",
+  "ZNF860",
+  "OMP",
+  "TSPO",
+  "TMEM92",
+  "LRAT",
+  "FGF5",
+  "IL17D",
+  "FAM90A9",
+  "NOPCHAP1",
+  "CERKL",
+  "SCAF11",
+  "PARP8"
+ ],
+ "top1": "AP5B1",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AP5B1\",\"confidence\":0.95,\"rationale\":\"Matches all HPO terms with detailed patient case evidence.\"},{\"gene\":\"HTN3\",\"confidence\":0.85,\"rationale\":\"Linked to spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"ZNF532\",\"confidence\":0.75,\"rationale\":\"Associated with spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"ZNF860\",\"confidence\":0.7,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"OMP\",\"confidence\":0.65,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"TSPO\",\"confidence\":0.6,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"TMEM92\",\"confidence\":0.55,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"LRAT\",\"confidence\":0.5,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"FGF5\",\"confidence\":0.45,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"IL17D\",\"confidence\":0.4,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"FAM90A9\",\"confidence\":0.35,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"NOPCHAP1\",\"confidence\":0.3,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"CERKL\",\"confidence\":0.25,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"},{\"gene\":\"SCAF11\",\"confidence\":0.2,\"rationale\":\"Linked to spastic paraplegia and pes cavus in patient cases.\"},{\"gene\":\"PARP8\",\"confidence\":0.15,\"rationale\":\"Associated with spastic paraplegia and pes cavus in literature.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.461,
+ "tokens_in": 17887,
+ "tokens_out": 492
+}

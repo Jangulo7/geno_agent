@@ -1,0 +1,33 @@
+{
+ "case_id": "PSMB10:PMID_38503300_Individual_2",
+ "variant": "production",
+ "category": "immunological",
+ "causal_gene": "PSMB10",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "CD79A",
+  "IFNGR2",
+  "OR2A25",
+  "ZNF493",
+  "TRIM71",
+  "GOLGA6B",
+  "CYP4F8",
+  "EXOG",
+  "KCTD7",
+  "ZNRF2",
+  "NTF4",
+  "CACNA1D",
+  "KANK4",
+  "MMP24",
+  "AUTS2"
+ ],
+ "top1": "CD79A",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"CD79A\",\"confidence\":0.95,\"rationale\":\"Direct link to B-cell defects and immunodeficiency with colitis and recurrent infections\"},{\"gene\":\"IFNGR2\",\"confidence\":0.15,\"rationale\":\"Indirect link to immunodeficiency and infections\"},{\"gene\":\"OR2A25\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"ZNF493\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"TRIM71\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"GOLGA6B\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"CYP4F8\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"EXOG\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"KCTD7\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"ZNRF2\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"NTF4\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"CACNA1D\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"KANK4\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"MMP24\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"},{\"gene\":\"AUTS2\",\"confidence\":0.1,\"rationale\":\"No direct evidence\"}]",
+ "finish_reason": "stop",
+ "latency_s": 8.137,
+ "tokens_in": 18480,
+ "tokens_out": 327
+}

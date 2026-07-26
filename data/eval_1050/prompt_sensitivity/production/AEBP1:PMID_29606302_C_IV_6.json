@@ -1,0 +1,33 @@
+{
+ "case_id": "AEBP1:PMID_29606302_C_IV_6",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "AEBP1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "AEBP1",
+  "CD44",
+  "TNFSF14",
+  "COL15A1",
+  "PMVK",
+  "WHRN",
+  "FDXR",
+  "ZMYM6",
+  "CHST5",
+  "TRMT11",
+  "STON2",
+  "C1D",
+  "PPT1",
+  "CEP85L",
+  "CDH23"
+ ],
+ "top1": "AEBP1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"AEBP1\",\"confidence\":0.95,\"rationale\":\"Directly linked to classical-like EDS with all patient phenotypes.\"},{\"gene\":\"CD44\",\"confidence\":0.15,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TNFSF14\",\"confidence\":0.05,\"rationale\":\"Limited phenotypic overlap with patient features.\"},{\"gene\":\"COL15A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PMVK\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"WHRN\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"FDXR\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"ZMYM6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CHST5\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TRMT11\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"STON2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"C1D\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PPT1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CEP85L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CDH23\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.436,
+ "tokens_in": 18333,
+ "tokens_out": 422
+}

@@ -1,0 +1,718 @@
+{
+  "work_package": "WP5",
+  "description": "Horvitz-Thompson design-weighted top-1 for the eligible pool, using P1's released inclusion probabilities, with publication-clustered bootstrap CIs. The unweighted figure describes the sampled cohort; the weighted figure describes the eligible population.",
+  "seed": 42,
+  "n_bootstrap": 10000,
+  "bootstrap_unit": "source publication (PMID)",
+  "weights": {
+    "developmental": {
+      "eligible_pool": 464,
+      "analytic_cohort": 250,
+      "inclusion_probability": 0.5388,
+      "design_weight": 1.856
+    },
+    "immunological": {
+      "eligible_pool": 390,
+      "analytic_cohort": 300,
+      "inclusion_probability": 0.7692,
+      "design_weight": 1.3
+    },
+    "metabolic": {
+      "eligible_pool": 672,
+      "analytic_cohort": 250,
+      "inclusion_probability": 0.372,
+      "design_weight": 2.688
+    },
+    "neurological": {
+      "eligible_pool": 3144,
+      "analytic_cohort": 247,
+      "inclusion_probability": 0.0786,
+      "design_weight": 12.729
+    }
+  },
+  "eligible_pool_composition": {
+    "developmental": 0.0994,
+    "immunological": 0.0835,
+    "metabolic": 0.1439,
+    "neurological": 0.6732
+  },
+  "estimates": [
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.6905,
+      "unweighted_ci95_cluster": [
+        0.6268,
+        0.7474
+      ],
+      "equal_weight_top1": 0.6906,
+      "design_weighted_top1": 0.6031,
+      "design_weighted_ci95_cluster": [
+        0.525,
+        0.6749
+      ]
+    },
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.6575,
+      "unweighted_ci95_cluster": [
+        0.5866,
+        0.7227
+      ],
+      "equal_weight_top1": 0.6644,
+      "design_weighted_top1": 0.5428,
+      "design_weighted_ci95_cluster": [
+        0.4591,
+        0.6231
+      ]
+    },
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.7801,
+      "unweighted_ci95_cluster": [
+        0.6373,
+        0.8792
+      ],
+      "equal_weight_top1": 0.7728,
+      "design_weighted_top1": 0.7745,
+      "design_weighted_ci95_cluster": [
+        0.6374,
+        0.8551
+      ]
+    },
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.9236,
+      "unweighted_ci95_cluster": [
+        0.8792,
+        0.959
+      ],
+      "equal_weight_top1": 0.9229,
+      "design_weighted_top1": 0.9058,
+      "design_weighted_ci95_cluster": [
+        0.8533,
+        0.9555
+      ]
+    },
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.9778,
+      "unweighted_ci95_cluster": [
+        0.9619,
+        0.9907
+      ],
+      "equal_weight_top1": 0.9786,
+      "design_weighted_top1": 0.9535,
+      "design_weighted_ci95_cluster": [
+        0.9177,
+        0.9825
+      ]
+    },
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.7766,
+      "unweighted_ci95_cluster": [
+        0.6417,
+        0.8889
+      ],
+      "equal_weight_top1": 0.7555,
+      "design_weighted_top1": 0.7707,
+      "design_weighted_ci95_cluster": [
+        0.67,
+        0.909
+      ]
+    },
+    {
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.4604,
+      "unweighted_ci95_cluster": [
+        0.3992,
+        0.522
+      ],
+      "equal_weight_top1": 0.4656,
+      "design_weighted_top1": 0.451,
+      "design_weighted_ci95_cluster": [
+        0.3742,
+        0.5195
+      ]
+    },
+    {
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.4549,
+      "unweighted_ci95_cluster": [
+        0.3771,
+        0.5333
+      ],
+      "equal_weight_top1": 0.4714,
+      "design_weighted_top1": 0.4123,
+      "design_weighted_ci95_cluster": [
+        0.3321,
+        0.4927
+      ]
+    },
+    {
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.4752,
+      "unweighted_ci95_cluster": [
+        0.3822,
+        0.5573
+      ],
+      "equal_weight_top1": 0.4534,
+      "design_weighted_top1": 0.5609,
+      "design_weighted_ci95_cluster": [
+        0.4119,
+        0.6297
+      ]
+    },
+    {
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.6982,
+      "unweighted_ci95_cluster": [
+        0.6434,
+        0.7457
+      ],
+      "equal_weight_top1": 0.697,
+      "design_weighted_top1": 0.6146,
+      "design_weighted_ci95_cluster": [
+        0.53,
+        0.6921
+      ]
+    },
+    {
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.6523,
+      "unweighted_ci95_cluster": [
+        0.5848,
+        0.7121
+      ],
+      "equal_weight_top1": 0.6542,
+      "design_weighted_top1": 0.549,
+      "design_weighted_ci95_cluster": [
+        0.4698,
+        0.6258
+      ]
+    },
+    {
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.8227,
+      "unweighted_ci95_cluster": [
+        0.7527,
+        0.873
+      ],
+      "equal_weight_top1": 0.8232,
+      "design_weighted_top1": 0.8008,
+      "design_weighted_ci95_cluster": [
+        0.6559,
+        0.8678
+      ]
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.7259,
+      "unweighted_ci95_cluster": [
+        0.6725,
+        0.7716
+      ],
+      "equal_weight_top1": 0.7243,
+      "design_weighted_top1": 0.6355,
+      "design_weighted_ci95_cluster": [
+        0.553,
+        0.7102
+      ]
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.6771,
+      "unweighted_ci95_cluster": [
+        0.6124,
+        0.7346
+      ],
+      "equal_weight_top1": 0.6777,
+      "design_weighted_top1": 0.5708,
+      "design_weighted_ci95_cluster": [
+        0.4932,
+        0.6458
+      ]
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.8582,
+      "unweighted_ci95_cluster": [
+        0.7908,
+        0.907
+      ],
+      "equal_weight_top1": 0.8541,
+      "design_weighted_top1": 0.819,
+      "design_weighted_ci95_cluster": [
+        0.6715,
+        0.8813
+      ]
+    },
+    {
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.7755,
+      "unweighted_ci95_cluster": [
+        0.729,
+        0.8176
+      ],
+      "equal_weight_top1": 0.7752,
+      "design_weighted_top1": 0.7221,
+      "design_weighted_ci95_cluster": [
+        0.6453,
+        0.7881
+      ]
+    },
+    {
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.7477,
+      "unweighted_ci95_cluster": [
+        0.6902,
+        0.7982
+      ],
+      "equal_weight_top1": 0.7505,
+      "design_weighted_top1": 0.6707,
+      "design_weighted_ci95_cluster": [
+        0.5956,
+        0.7436
+      ]
+    },
+    {
+      "cell": "N",
+      "name": "RRF ensemble (M+S)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.8511,
+      "unweighted_ci95_cluster": [
+        0.7738,
+        0.9098
+      ],
+      "equal_weight_top1": 0.8508,
+      "design_weighted_top1": 0.8677,
+      "design_weighted_ci95_cluster": [
+        0.7402,
+        0.923
+      ]
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "full",
+      "n_cases": 1047,
+      "composition": {
+        "developmental": 250,
+        "immunological": 300,
+        "metabolic": 250,
+        "neurological": 247
+      },
+      "unweighted_top1": 0.511,
+      "unweighted_ci95_cluster": [
+        0.4283,
+        0.5863
+      ],
+      "equal_weight_top1": 0.5072,
+      "design_weighted_top1": 0.4279,
+      "design_weighted_ci95_cluster": [
+        0.3094,
+        0.5515
+      ]
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "composition": {
+        "developmental": 158,
+        "immunological": 259,
+        "metabolic": 160,
+        "neurological": 188
+      },
+      "unweighted_top1": 0.4536,
+      "unweighted_ci95_cluster": [
+        0.3619,
+        0.5387
+      ],
+      "equal_weight_top1": 0.4463,
+      "design_weighted_top1": 0.3354,
+      "design_weighted_ci95_cluster": [
+        0.2509,
+        0.4237
+      ]
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "composition": {
+        "developmental": 92,
+        "immunological": 41,
+        "metabolic": 90,
+        "neurological": 59
+      },
+      "unweighted_top1": 0.6667,
+      "unweighted_ci95_cluster": [
+        0.5081,
+        0.7759
+      ],
+      "equal_weight_top1": 0.6757,
+      "design_weighted_top1": 0.6904,
+      "design_weighted_ci95_cluster": [
+        0.4023,
+        0.853
+      ]
+    }
+  ],
+  "paired_deltas": [
+    {
+      "label": "S vs K",
+      "subset": "full",
+      "n_cases": 1047,
+      "unweighted_delta": 0.0353,
+      "unweighted_ci95_cluster": [
+        -0.0127,
+        0.0896
+      ],
+      "design_weighted_delta": 0.0324,
+      "design_weighted_ci95_cluster": [
+        -0.0204,
+        0.0837
+      ],
+      "design_weighted_ci_excludes_zero": false
+    },
+    {
+      "label": "S vs K",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "unweighted_delta": 0.0196,
+      "unweighted_ci95_cluster": [
+        -0.0245,
+        0.0655
+      ],
+      "design_weighted_delta": 0.0281,
+      "design_weighted_ci95_cluster": [
+        -0.0283,
+        0.0862
+      ],
+      "design_weighted_ci_excludes_zero": false
+    },
+    {
+      "label": "S vs K",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "unweighted_delta": 0.078,
+      "unweighted_ci95_cluster": [
+        -0.0404,
+        0.2355
+      ],
+      "design_weighted_delta": 0.0445,
+      "design_weighted_ci95_cluster": [
+        -0.1171,
+        0.1596
+      ],
+      "design_weighted_ci_excludes_zero": false
+    },
+    {
+      "label": "S vs M",
+      "subset": "full",
+      "n_cases": 1047,
+      "unweighted_delta": -0.1977,
+      "unweighted_ci95_cluster": [
+        -0.2667,
+        -0.1301
+      ],
+      "design_weighted_delta": -0.2703,
+      "design_weighted_ci95_cluster": [
+        -0.3797,
+        -0.1607
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "S vs M",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "unweighted_delta": -0.3007,
+      "unweighted_ci95_cluster": [
+        -0.3658,
+        -0.2434
+      ],
+      "design_weighted_delta": -0.3826,
+      "design_weighted_ci95_cluster": [
+        -0.4614,
+        -0.3072
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "S vs M",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "unweighted_delta": 0.0816,
+      "unweighted_ci95_cluster": [
+        -0.0507,
+        0.2321
+      ],
+      "design_weighted_delta": 0.0483,
+      "design_weighted_ci95_cluster": [
+        -0.1803,
+        0.1729
+      ],
+      "design_weighted_ci_excludes_zero": false
+    },
+    {
+      "label": "S vs O",
+      "subset": "full",
+      "n_cases": 1047,
+      "unweighted_delta": 0.2149,
+      "unweighted_ci95_cluster": [
+        0.1627,
+        0.273
+      ],
+      "design_weighted_delta": 0.2076,
+      "design_weighted_ci95_cluster": [
+        0.1349,
+        0.2843
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "S vs O",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "unweighted_delta": 0.2235,
+      "unweighted_ci95_cluster": [
+        0.1624,
+        0.2914
+      ],
+      "design_weighted_delta": 0.2355,
+      "design_weighted_ci95_cluster": [
+        0.1702,
+        0.3046
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "S vs O",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "unweighted_delta": 0.1915,
+      "unweighted_ci95_cluster": [
+        0.1053,
+        0.3103
+      ],
+      "design_weighted_delta": 0.1286,
+      "design_weighted_ci95_cluster": [
+        0.0079,
+        0.3394
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "M vs K",
+      "subset": "full",
+      "n_cases": 1047,
+      "unweighted_delta": 0.233,
+      "unweighted_ci95_cluster": [
+        0.1795,
+        0.2932
+      ],
+      "design_weighted_delta": 0.3027,
+      "design_weighted_ci95_cluster": [
+        0.2037,
+        0.4011
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "M vs K",
+      "subset": "overlap_present",
+      "n_cases": 765,
+      "unweighted_delta": 0.3203,
+      "unweighted_ci95_cluster": [
+        0.2575,
+        0.3899
+      ],
+      "design_weighted_delta": 0.4107,
+      "design_weighted_ci95_cluster": [
+        0.3344,
+        0.4891
+      ],
+      "design_weighted_ci_excludes_zero": true
+    },
+    {
+      "label": "M vs K",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "unweighted_delta": -0.0035,
+      "unweighted_ci95_cluster": [
+        -0.0617,
+        0.06
+      ],
+      "design_weighted_delta": -0.0038,
+      "design_weighted_ci95_cluster": [
+        -0.0938,
+        0.1508
+      ],
+      "design_weighted_ci_excludes_zero": false
+    }
+  ]
+}

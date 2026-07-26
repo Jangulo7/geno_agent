@@ -1,0 +1,32 @@
+{
+ "case_id": "LMNA:PMID_10939567_Patient_EMD4_II_2",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "FEZ1",
+  "RGPD1",
+  "FABP6",
+  "CEBPB",
+  "ZFP82",
+  "KDELR2",
+  "SDR9C7",
+  "ADAD1",
+  "IBA57",
+  "OR2AT4",
+  "SLC30A7",
+  "EMILIN3",
+  "FCF1"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations are directly linked to Emery-Dreifuss muscular dystrophy, which matches the patient's contractures, spinal rigidity, and cardiac arrhythmia.\"},{\"gene\":\"FEZ1\",\"confidence\":0.15,\"rationale\":\"FEZ1 evidence lacks direct phenotypic links to the patient's contractures or cardiac issues.\"},{\"gene\":\"RGPD1\",\"confidence\":0.15,\"rationale\":\"RGPD1 evidence is unrelated to the patient's muscle and cardiac symptoms.\"},{\"gene\":\"FABP6\",\"confidence\":0.15,\"rationale\":\"FABP6 evidence does not align with the patient's contractures or arrhythmia.\"},{\"gene\":\"CEBPB\",\"confidence\":0.15,\"rationale\":\"CEBPB evidence lacks direct phenotypic links to the patient's contractures or cardiac issues.\"},{\"gene\":\"ZFP82\",\"confidence\":0.15,\"rationale\":\"ZFP82 evidence is unrelated to the patient's muscle and cardiac symptoms.\"},{\"gene\":\"KDELR2\",\"confidence\":0.15,\"rationale\":\"KDELR2 evidence does not align with the patient's contractures or arrhythmia.\"},{\"gene\":\"SDR9C7\",\"confidence\":0.15,\"rationale\":\"SDR9C7 evidence lacks direct phenotypic links to the patient's contractures or cardiac issues.\"},{\"gene\":\"ADAD1\",\"confidence\":0.15,\"rationale\":\"ADAD1 evidence is unrelated to the patient's muscle and cardiac symptoms.\"},{\"gene\":\"IBA57\",\"confidence\":0.15,\"rationale\":\"IBA57 evidence does not align with the patient's contractures or arrhythmia.\"},{\"gene\":\"OR2AT4\",\"confidence\":0.15,\"rationale\":\"OR2AT4 evidence lacks direct phenotypic links to the patient's contractures or cardiac issues.\"},{\"gene\":\"SLC30A7\",\"confidence\":0.15,\"rationale\":\"SLC30A7 evidence is unrelated to the patient's muscle and cardiac symptoms.\"},{\"gene\":\"EMILIN3\",\"confidence\":0.15,\"rationale\":\"EMILIN3 evidence does not align with the patient's contractures or arrhythmia.\"},{\"gene\":\"FCF1\",\"confidence\":0.15,\"rationale\":\"FCF1 evidence lacks direct phenotypic links to the patient's contractures or cardiac issues.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.826,
+ "tokens_in": 18955,
+ "tokens_out": 533
+}

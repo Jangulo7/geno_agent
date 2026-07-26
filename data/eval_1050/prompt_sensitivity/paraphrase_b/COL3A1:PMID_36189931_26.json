@@ -1,0 +1,33 @@
+{
+ "case_id": "COL3A1:PMID_36189931_26",
+ "variant": "paraphrase_b",
+ "category": "developmental",
+ "causal_gene": "COL3A1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "COL3A1",
+  "ZNF396",
+  "COX8C",
+  "MSL3",
+  "MAB21L3",
+  "HFM1",
+  "C1QTNF3",
+  "MAPK8IP3",
+  "TPPP3",
+  "FER1L6",
+  "LYSET",
+  "PAGR1",
+  "AATF",
+  "CNTNAP3B",
+  "ARL2"
+ ],
+ "top1": "COL3A1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"COL3A1\",\"confidence\":0.95,\"rationale\":\"Directly linked to vascular EDS with all patient phenotypes\"},{\"gene\":\"ZNF396\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"COX8C\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"MSL3\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"MAB21L3\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"HFM1\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"C1QTNF3\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"MAPK8IP3\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"TPPP3\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"FER1L6\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"LYSET\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"PAGR1\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"AATF\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"CNTNAP3B\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"},{\"gene\":\"ARL2\",\"confidence\":0.05,\"rationale\":\"No direct relevance to patient phenotypes\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.196,
+ "tokens_in": 19239,
+ "tokens_out": 387
+}

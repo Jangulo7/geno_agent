@@ -1,0 +1,33 @@
+{
+ "case_id": "NSUN6:PMID_37226891_Individual_3",
+ "variant": "production",
+ "category": "neurological",
+ "causal_gene": "NSUN6",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TCF4",
+  "VAMP7",
+  "TCTN3",
+  "KRTAP2-3",
+  "APLP2",
+  "NLRP4",
+  "RALGPS1",
+  "DLL3",
+  "PYCR3",
+  "ARHGEF3",
+  "SLC9A8",
+  "SNAI2",
+  "SLC52A3",
+  "DPP7",
+  "PRY2"
+ ],
+ "top1": "TCF4",
+ "top1_correct": false,
+ "causal_rank": null,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TCF4\",\"confidence\":0.95,\"rationale\":\"18q deletion syndrome with TCF4 linked to ID, ADHD, autism, speech delay.\"},{\"gene\":\"VAMP7\",\"confidence\":0.75,\"rationale\":\"CNV in Xq28 with VAMP7 linked to ID and speech delay.\"},{\"gene\":\"TCTN3\",\"confidence\":0.3,\"rationale\":\"7q gains linked to ID, speech delay, and ADHD.\"},{\"gene\":\"KRTAP2-3\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"APLP2\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"NLRP4\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"RALGPS1\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DLL3\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PYCR3\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"ARHGEF3\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC9A8\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SNAI2\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"SLC52A3\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"DPP7\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"},{\"gene\":\"PRY2\",\"confidence\":0.2,\"rationale\":\"No direct evidence linking to patient's phenotype.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.077,
+ "tokens_in": 15327,
+ "tokens_out": 420
+}

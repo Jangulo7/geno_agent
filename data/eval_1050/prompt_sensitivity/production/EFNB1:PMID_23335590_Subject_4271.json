@@ -1,0 +1,33 @@
+{
+ "case_id": "EFNB1:PMID_23335590_Subject_4271",
+ "variant": "production",
+ "category": "developmental",
+ "causal_gene": "EFNB1",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "EFNB1",
+  "TRIO",
+  "CHD3",
+  "TP53BP2",
+  "NOS1",
+  "SBK2",
+  "FAM236C",
+  "KRTAP19-6",
+  "HTR3C",
+  "PTCH2",
+  "HS3ST3A1",
+  "RIMBP2",
+  "ARG1",
+  "PPP1R13L",
+  "GEMIN7"
+ ],
+ "top1": "EFNB1",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"EFNB1\",\"confidence\":0.95,\"rationale\":\"Directly linked to craniofrontonasal syndrome with all patient phenotypes.\"},{\"gene\":\"TRIO\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"CHD3\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"TP53BP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"NOS1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"SBK2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"FAM236C\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"KRTAP19-6\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"HTR3C\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PTCH2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"HS3ST3A1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"RIMBP2\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"ARG1\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"PPP1R13L\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"},{\"gene\":\"GEMIN7\",\"confidence\":0.05,\"rationale\":\"No direct phenotypic overlap with patient features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.623,
+ "tokens_in": 18754,
+ "tokens_out": 434
+}

@@ -1,0 +1,33 @@
+{
+ "case_id": "MSL2:PMID_38815585_Individual_16",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "MSL2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "MSL2",
+  "SPOCK2",
+  "CCL4",
+  "TRIM2",
+  "UQCRC2",
+  "RNF31",
+  "LILRB2",
+  "DEGS2",
+  "PARVA",
+  "RILPL2",
+  "FSCN1",
+  "G6PC3",
+  "THEM5",
+  "HPD",
+  "TPD52L1"
+ ],
+ "top1": "MSL2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"MSL2\",\"confidence\":0.95,\"rationale\":\"Links to developmental delay, pectus excavatum, and deep-set eyes.\"},{\"gene\":\"SPOCK2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"CCL4\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"TRIM2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"UQCRC2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"RNF31\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"LILRB2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"DEGS2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"PARVA\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"RILPL2\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"FSCN1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"G6PC3\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"THEM5\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"HPD\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"},{\"gene\":\"TPD52L1\",\"confidence\":0.15,\"rationale\":\"No direct phenotype links.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 4.911,
+ "tokens_in": 10906,
+ "tokens_out": 356
+}

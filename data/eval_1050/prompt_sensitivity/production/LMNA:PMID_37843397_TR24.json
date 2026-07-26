@@ -1,0 +1,33 @@
+{
+ "case_id": "LMNA:PMID_37843397_TR24",
+ "variant": "production",
+ "category": "metabolic",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "SGIP1",
+  "ADGRG6",
+  "FAM237A",
+  "RABGAP1",
+  "NGFR",
+  "SMPDL3A",
+  "CLGN",
+  "RANBP17",
+  "HMGXB3",
+  "RPLP0",
+  "SEL1L2",
+  "IGSF11",
+  "BMX",
+  "OR6K2"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"Directly linked to FPLD with metabolic features matching the patient's phenotype.\"},{\"gene\":\"SGIP1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"ADGRG6\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"FAM237A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"RABGAP1\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"NGFR\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"SMPDL3A\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"CLGN\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"RANBP17\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"HMGXB3\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"RPLP0\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"SEL1L2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"IGSF11\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"BMX\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"},{\"gene\":\"OR6K2\",\"confidence\":0.15,\"rationale\":\"No direct evidence linking to lipodystrophy or metabolic features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.189,
+ "tokens_in": 18929,
+ "tokens_out": 471
+}

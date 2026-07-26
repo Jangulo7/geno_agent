@@ -1,0 +1,32 @@
+{
+ "case_id": "LMNA:PMID_10939567_Patient_EMD4_II_2",
+ "variant": "paraphrase_a",
+ "category": "neurological",
+ "causal_gene": "LMNA",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "LMNA",
+  "FCF1",
+  "SLC30A7",
+  "EMILIN3",
+  "OR2AT4",
+  "IBA57",
+  "ADAD1",
+  "KDELR2",
+  "ZFP82",
+  "CEBPB",
+  "FABP6",
+  "RGPD1",
+  "FEZ1",
+  "LCE1B"
+ ],
+ "top1": "LMNA",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"LMNA\",\"confidence\":0.95,\"rationale\":\"LMNA mutations cause Emery-Dreifuss muscular dystrophy with contractures, spinal rigidity, and arrhythmia matching the patient's phenotype.\"},{\"gene\":\"FCF1\",\"confidence\":0.15,\"rationale\":\"No specific evidence links FCF1 to the patient's features.\"},{\"gene\":\"SLC30A7\",\"confidence\":0.15,\"rationale\":\"No specific evidence links SLC30A7 to the patient's features.\"},{\"gene\":\"EMILIN3\",\"confidence\":0.15,\"rationale\":\"No specific evidence links EMILIN3 to the patient's features.\"},{\"gene\":\"OR2AT4\",\"confidence\":0.15,\"rationale\":\"No specific evidence links OR2AT4 to the patient's features.\"},{\"gene\":\"IBA57\",\"confidence\":0.15,\"rationale\":\"No specific evidence links IBA57 to the patient's features.\"},{\"gene\":\"ADAD1\",\"confidence\":0.15,\"rationale\":\"No specific evidence links ADAD1 to the patient's features.\"},{\"gene\":\"SLC30A7\",\"confidence\":0.15,\"rationale\":\"No specific evidence links SLC30A7 to the patient's features.\"},{\"gene\":\"KDELR2\",\"confidence\":0.15,\"rationale\":\"No specific evidence links KDELR2 to the patient's features.\"},{\"gene\":\"ZFP82\",\"confidence\":0.15,\"rationale\":\"No specific evidence links ZFP82 to the patient's features.\"},{\"gene\":\"CEBPB\",\"confidence\":0.15,\"rationale\":\"No specific evidence links CEBPB to the patient's features.\"},{\"gene\":\"FABP6\",\"confidence\":0.15,\"rationale\":\"No specific evidence links FABP6 to the patient's features.\"},{\"gene\":\"RGPD1\",\"confidence\":0.15,\"rationale\":\"No specific evidence links RGPD1 to the patient's features.\"},{\"gene\":\"FEZ1\",\"confidence\":0.15,\"rationale\":\"No specific evidence links FEZ1 to the patient's features.\"},{\"gene\":\"LCE1B\",\"confidence\":0.15,\"rationale\":\"No specific evidence links LCE1B to the patient's features.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 7.43,
+ "tokens_in": 18968,
+ "tokens_out": 499
+}

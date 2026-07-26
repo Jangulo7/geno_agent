@@ -1,0 +1,33 @@
+{
+ "case_id": "RFXANK:PMID_37584719_Patient_P16",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "RFXANK",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "RFXANK",
+  "TF",
+  "SET",
+  "DAGLA",
+  "PIGT",
+  "CACNB3",
+  "EDARADD",
+  "VARS1",
+  "IFITM3",
+  "RPP25L",
+  "CLRN3",
+  "STAG3",
+  "SEMA5B",
+  "SLC35A4",
+  "ADAM29"
+ ],
+ "top1": "RFXANK",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"RFXANK\",\"confidence\":0.95,\"rationale\":\"MHC class II deficiency with recurrent infections, diarrhea, and failure to thrive.\"},{\"gene\":\"TF\",\"confidence\":0.15,\"rationale\":\"SCID symptoms but no direct link to TF.\"},{\"gene\":\"SET\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"DAGLA\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"PIGT\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"CACNB3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"EDARADD\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"VARS1\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"IFITM3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"RPP25L\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"CLRN3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"STAG3\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"SEMA5B\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"SLC35A4\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"},{\"gene\":\"ADAM29\",\"confidence\":0.1,\"rationale\":\"No direct link to patient's symptoms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.322,
+ "tokens_in": 13552,
+ "tokens_out": 382
+}

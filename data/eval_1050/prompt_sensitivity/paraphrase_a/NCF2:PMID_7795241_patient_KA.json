@@ -1,0 +1,33 @@
+{
+ "case_id": "NCF2:PMID_7795241_patient_KA",
+ "variant": "paraphrase_a",
+ "category": "immunological",
+ "causal_gene": "NCF2",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "NCF2",
+  "LCT",
+  "RBPJL",
+  "OR11G2",
+  "GJA5",
+  "CCNB1IP1",
+  "PRMT5",
+  "PSG4",
+  "MEOX2",
+  "CHST6",
+  "SLC24A5",
+  "DDIAS",
+  "AKR7L",
+  "TRMT10B",
+  "LHX3"
+ ],
+ "top1": "NCF2",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"NCF2\",\"confidence\":0.95,\"rationale\":\"Directly linked to CGD, explaining oxidative burst defect and recurrent infections.\"},{\"gene\":\"LCT\",\"confidence\":0.05,\"rationale\":\"No direct link to immune defects or infections.\"},{\"gene\":\"RBPJL\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"OR11G2\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"GJA5\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"CCNB1IP1\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"PRMT5\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"PSG4\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"MEOX2\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"CHST6\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"SLC24A5\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"DDIAS\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"AKR7L\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"TRMT10B\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"},{\"gene\":\"LHX3\",\"confidence\":0.0,\"rationale\":\"No evidence of immune or infection-related function.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 5.862,
+ "tokens_in": 16124,
+ "tokens_out": 400
+}

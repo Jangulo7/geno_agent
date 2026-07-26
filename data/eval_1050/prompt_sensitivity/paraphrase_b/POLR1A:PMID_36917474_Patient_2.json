@@ -1,0 +1,33 @@
+{
+ "case_id": "POLR1A:PMID_36917474_Patient_2",
+ "variant": "paraphrase_b",
+ "category": "neurological",
+ "causal_gene": "POLR1A",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "POLR1A",
+  "DNM1L",
+  "FOLR1",
+  "ALDOC",
+  "IFNA2",
+  "FRMD1",
+  "FASTKD5",
+  "HDHD5",
+  "CT47A8",
+  "MLST8",
+  "PPY",
+  "CCPG1",
+  "GSX2",
+  "EEF1B2",
+  "SLC44A2"
+ ],
+ "top1": "POLR1A",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"POLR1A\",\"confidence\":0.95,\"rationale\":\"Directly links to hypomyelinating leukodystrophy and multiple HPO terms.\"},{\"gene\":\"DNM1L\",\"confidence\":0.15,\"rationale\":\"Associated with neurological phenotypes but less specific to HPO terms.\"},{\"gene\":\"FOLR1\",\"confidence\":0.1,\"rationale\":\"Limited evidence for specific HPO terms.\"},{\"gene\":\"ALDOC\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"IFNA2\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"FRMD1\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"FASTKD5\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"HDHD5\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"CT47A8\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"MLST8\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"PPY\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"CCPG1\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"GSX2\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"EEF1B2\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"},{\"gene\":\"SLC44A2\",\"confidence\":0.05,\"rationale\":\"No direct link to HPO terms.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 6.09,
+ "tokens_in": 17205,
+ "tokens_out": 404
+}

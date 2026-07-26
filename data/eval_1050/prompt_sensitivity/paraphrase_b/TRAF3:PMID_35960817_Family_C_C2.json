@@ -1,0 +1,33 @@
+{
+ "case_id": "TRAF3:PMID_35960817_Family_C_C2",
+ "variant": "paraphrase_b",
+ "category": "immunological",
+ "causal_gene": "TRAF3",
+ "n_candidates_to_lea": 15,
+ "ranking": [
+  "TRAF3",
+  "GSG1L",
+  "CACNG4",
+  "RASSF4",
+  "GADD45G",
+  "COMTD1",
+  "RCCD1",
+  "COL4A1",
+  "MORF4L1",
+  "CPSF3",
+  "NBPF12",
+  "SNW1",
+  "ARL15",
+  "KLHL20",
+  "TLCD3A"
+ ],
+ "top1": "TRAF3",
+ "top1_correct": true,
+ "causal_rank": 1,
+ "parse_ok": true,
+ "raw_text": "\n\n[{\"gene\":\"TRAF3\",\"confidence\":0.95,\"rationale\":\"TRAF3 mutation directly linked to increased IgA/IgG and recurrent infections with atopic dermatitis.\"},{\"gene\":\"IL6R\",\"confidence\":0.15,\"rationale\":\"IL6R variants associated with atopic dermatitis and infections but not directly with IgA/IgG elevation.\"},{\"gene\":\"GSG1L\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking GSG1L to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"CACNG4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CACNG4 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"RASSF4\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking RASSF4 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"GADD45G\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking GADD45G to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"COMTD1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking COMTD1 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"RCCD1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking RCCD1 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"COL4A1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking COL4A1 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"MORF4L1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking MORF4L1 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"CPSF3\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking CPSF3 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"NBPF12\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking NBPF12 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"SNW1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SNW1 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"ARL15\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking ARL15 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"KLHL20\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking KLHL20 to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"TLCD3A\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking TLCD3A to the patient's IgA/IgG profile or infections.\"},{\"gene\":\"SNW1\",\"confidence\":0.1,\"rationale\":\"No direct evidence linking SNW1 to the patient's IgA/IgG profile or infections.\"}]",
+ "finish_reason": "stop",
+ "latency_s": 10.88,
+ "tokens_in": 13256,
+ "tokens_out": 652
+}
