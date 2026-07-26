@@ -59,7 +59,7 @@ IR (information retrieval). Not applicable: M, D, QA, SS, MT, DG, C, OF.
 | 16a | Patient / text flow through study | ✅ | Methods §Cohort + Figure 1 (CONSORT-style flow) |
 | 16b | Patient characteristics | ✅ | Methods §Cohort + Results §Cohort setup |
 | 16c | Distribution comparison (development vs evaluation) | ➖ | Not applicable — evaluation-only study, no development split |
-| 16d | n per analysis | ✅ | Results throughout (full 1,047; fair 282; recency 601/446; ablation 300; RAGAS 600; DeepEval 100) |
+| 16d | n per analysis | ✅ | Results throughout (full 1,047; overlap-absent 282; recency 601/446; ablation 300; RAGAS 100 rank-1 / 600 full-response; prompt sensitivity 152) |
 | 17 | Performance reporting | ✅ | Results §§Overall–Ablation + Tables 2–4, Figs 3–4 |
 | 18 | LLM updating | ➖ | Not applicable — no LLM updating performed |
 | **Discussion** ||||

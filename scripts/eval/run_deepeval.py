@@ -3,15 +3,29 @@
 Computes the hallucination rate of LEA's free-text responses by
 comparing each response to its retrieved contexts via GPT-4o judge.
 
-DeepEval ``HallucinationMetric`` definition (from
-https://docs.confident-ai.com/docs/metrics-hallucination):
+DeepEval ``HallucinationMetric`` polarity --- READ THIS FIRST
+============================================================
 
-    A score of 1 means the actual_output contains no hallucination —
-    every claim is supported by the contexts. A score of 0 means
-    every claim is hallucinated.
+The metric is **higher-is-worse**. It scores
 
-We report the *complement* (1 - score) as the hallucination *rate*
-plus the raw score for compatibility.
+    hallucination = (contexts contradicted) / (total contexts)
+
+so a score of 1 means every context is contradicted and a score of 0
+means none is. This is confirmed by the judge's own free-text reasons in
+the saved output: a score of 0.98 is accompanied by "a high level of
+contradiction", a score of 0.00 by "no contradictions".
+
+Earlier revisions of this module documented the opposite and logged the
+raw score as "groundedness", which inverts every downstream reading. The
+arithmetic was always right --- ``1 - score`` is the groundedness --- but
+the field carrying it was named ``hallucination_rate``, which is what the
+raw score already is. The key is therefore now named ``groundedness``.
+
+Compatibility: output written before this correction carries
+``hallucination_rate``/``aggregate_mean_hallucination_rate`` holding the
+value now called ``groundedness``. Files can be told apart by which key is
+present, and by ``polarity_schema`` below. Do not compare the two by key
+name alone.
 
 Project-rule deviation
 ======================
@@ -118,8 +132,9 @@ def _evaluate_one(sidecar: dict, judge_model: str):
     """Run HallucinationMetric on one case.
 
     Returns:
-        Dict with case_id, hallucination_score (0=all hallucinated,
-        1=fully grounded), hallucination_rate (= 1 - score), reason.
+        Dict with case_id, hallucination_score (the raw DeepEval metric:
+        0 = nothing contradicted, 1 = everything contradicted, so HIGHER
+        IS WORSE), groundedness (= 1 - score, higher is better), reason.
     """
     from deepeval.metrics import HallucinationMetric
     from deepeval.test_case import LLMTestCase
@@ -133,7 +148,7 @@ def _evaluate_one(sidecar: dict, judge_model: str):
         return {
             "case_id": case_id,
             "hallucination_score": None,
-            "hallucination_rate": None,
+            "groundedness": None,
             "reason": "missing_contexts_or_output",
         }
 
@@ -149,14 +164,15 @@ def _evaluate_one(sidecar: dict, judge_model: str):
         return {
             "case_id": case_id,
             "hallucination_score": float(metric.score) if metric.score is not None else None,
-            "hallucination_rate": (1.0 - float(metric.score)) if metric.score is not None else None,
+            # score is the hallucination rate; its complement is the groundedness
+            "groundedness": (1.0 - float(metric.score)) if metric.score is not None else None,
             "reason": getattr(metric, "reason", None),
         }
     except Exception as e:
         return {
             "case_id": case_id,
             "hallucination_score": None,
-            "hallucination_rate": None,
+            "groundedness": None,
             "reason": f"error:{type(e).__name__}:{str(e)[:200]}",
         }
 
@@ -286,9 +302,9 @@ def main() -> int:
     scored = [r for r in results if r["hallucination_score"] is not None]
     if scored:
         mean_score = sum(r["hallucination_score"] for r in scored) / len(scored)
-        mean_rate = 1.0 - mean_score
+        mean_groundedness = 1.0 - mean_score
     else:
-        mean_score, mean_rate = None, None
+        mean_score, mean_groundedness = None, None
 
     out_payload = {
         "judge_model": args.judge_model,
@@ -296,8 +312,9 @@ def main() -> int:
         "n_cases_scored": len(scored),
         "n_cases_skipped": len(results) - len(scored),
         "elapsed_seconds": dt,
+        "polarity_schema": "v2: hallucination_score is higher-is-worse; groundedness = 1 - score",
         "aggregate_mean_hallucination_score": mean_score,
-        "aggregate_mean_hallucination_rate": mean_rate,
+        "aggregate_mean_groundedness": mean_groundedness,
         "per_case": results,
     }
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -306,8 +323,8 @@ def main() -> int:
     logger.info("=== Aggregate ===")
     logger.info("  scored cases:         %d / %d", len(scored), len(sidecars))
     if mean_score is not None:
-        logger.info("  mean groundedness:    %.3f", mean_score)
-        logger.info("  mean halluc. rate:    %.3f", mean_rate)
+        logger.info("  mean hallucination:   %.3f  (higher is worse)", mean_score)
+        logger.info("  mean groundedness:    %.3f  (= 1 - hallucination)", mean_groundedness)
     logger.info("Output: %s", args.out)
     return 0
 

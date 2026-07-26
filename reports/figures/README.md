@@ -33,7 +33,7 @@ methodology/annex restructure.
 |---|---|---|---|
 | `fig2_architecture.png` | Figure 1 | GenoAgent agentic-workflow architecture | schematic |
 | `fig3_per_mondo_top1.png` | Figure 2 | per-MONDO top-1 accuracy (6 cells, incl. LLM-only control O) | `_results_stratified.json` (`cat_*` subsets) |
-| `fig5_faithfulness_vs_correctness.png` | Figure 3 | faithfulness vs correctness gaps | RAGAS/DeepEval sidecars |
+| `fig5_faithfulness_vs_correctness.png` | Figure 3 | faithfulness vs correctness: distribution, ROC, accuracy by quartile | RAGAS sidecars |
 | `fig1_consort_flow.png` | Annex Fig A1 | CONSORT cohort-selection flow (shared with P1; see above) | staged cohort funnel (P1 notebook) |
 | `fig6_landscape_quadrant.png` | Annex Fig A2 | method-landscape positioning | schematic |
 | `fig4_hard_difficulty.png` | Annex Fig A3 | hard cohort: full vs fair top-1 per system | `data/eval_hard/_results_stratified.json` |

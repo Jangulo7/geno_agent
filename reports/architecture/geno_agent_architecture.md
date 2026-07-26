@@ -78,7 +78,7 @@ stratified sample → validate PMC coverage → build **50-gene candidate lists*
   (rerank + LEA).
 - **Aggregation**: `aggregate_metrics`, `aggregate_stratified` (full vs **FAIR** = annotation-overlap-absent),
   `paired_diff` (McNemar), `multiplicity_correction` (Holm / BH).
-- **LLM judges**: RAGAS (faithfulness) + DeepEval, n=100 stratified, seed 42 (call GPT-4o).
+- **LLM judge**: RAGAS (faithfulness), n=100 / n=600 stratified, seed 42 (calls GPT-4o).
 
 ## 9. Persistence + outputs 💾
 `data/eval_{1050,hard}/cell_*/<case>.json` (ranked 50-gene lists, shared schema) ·
@@ -99,4 +99,4 @@ stratified sample → validate PMC coverage → build **50-gene candidate lists*
 Python 3.12 · **LangGraph** 1.2.1 · **Qdrant** 1.14.3 (Docker, :6533) · **sentence-transformers** 4.1 ·
 **fastembed** 0.8 (BM25) · **pronto** 2.7.3 (HPO) · **vLLM** (Qwen3-8B) · **openai** 2.36 (local + judges) ·
 **torch** 2.12 nightly cu128 (RTX 5090) · **Streamlit** 1.48 · **FastAPI** 0.136 (deferred) ·
-**Vercel** (web frontend) · RAGAS + DeepEval (eval judges).
+**Vercel** (web frontend) · RAGAS (eval judge).

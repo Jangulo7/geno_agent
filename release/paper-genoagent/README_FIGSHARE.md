@@ -59,11 +59,16 @@ correctly.
   `data/eval_1050/prompt_sensitivity/`): two paraphrased LEA prompts over cached
   retrieval. Top-1 moves 3.3 pp; the production prompt replayed through the same
   harness reproduces the published run on 152/152 cases.
-- **DeepEval results are withdrawn.** `scripts/eval/run_deepeval.py` scores the
-  `HallucinationMetric`, for which higher is worse, but the saved score was reported as
-  a groundedness value, inverting every claim derived from it. No DeepEval number is
-  carried forward; rationale grounding rests on RAGAS alone. **The script is retained
-  unmodified for provenance — do not reuse its output without fixing the polarity.**
+- **Rationale grounding is reported from RAGAS alone.** DeepEval's
+  `HallucinationMetric` was evaluated and is not carried forward: on this task shape
+  it does not discriminate. It scores the fraction of supplied contexts a response
+  contradicts, but an LEA response covers 15 candidate genes against a shared
+  ≤20-chunk context pool, so most chunks concern other genes and register as
+  contradicted regardless of quality. Empirically its per-case distribution is
+  degenerate on the standard cohort (median 0.067, IQR 0.062–0.067) and bimodal on
+  the hard cohort, and it predicts top-1 correctness at chance (AUROC 0.512).
+  `scripts/eval/run_deepeval.py` is retained and its metric polarity is now
+  documented explicitly in the module docstring.
 - **New: `reports/p2_revision/`** — the machine-readable output of every analysis
   above, so any figure in the paper can be checked without re-running the pipeline,
   plus `consistency_check.py` and `latex_lint.py` verification gates.
