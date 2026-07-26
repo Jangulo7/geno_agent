@@ -38,6 +38,9 @@ mkdir -p "$COHD"
 # full cohort + sidecars + staged provenance (gitignored on disk — copied explicitly)
 cp data/test_cases_1050/*.jsonl data/test_cases_1050/*.json "$COHD/"
 cp data/MANIFEST.tsv "$COHD/"
+# clustering statistics are a property of this cohort and are referenced by its
+# README, so they ship with the dataset (also included in the methods artefacts).
+cp release/cohort/clustering_stats.json "$COHD/"
 cp release/cohort/README_FIGSHARE.md "$COHD/"
 cp "$CCBY" "$COHD/LICENSE"   # machine-discoverable dataset license (CC BY 4.0)
 # per-file SHA-256 inside the bundle (good-practice integrity for a citable dataset)

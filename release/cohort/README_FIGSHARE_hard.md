@@ -1,8 +1,8 @@
-# GenoAgent Benchmark (Hard): Phenotype-Similar Distractor Variant (n=1,047)
+# Phenotype-Similar Distractor Variant of the Stratified Rare-Disease Cohort (n=1,047)
 
-**Title.** GenoAgent Benchmark (Hard): A Phenotype-Similar Distractor Variant of
+**Title.** A Phenotype-Similar Distractor Variant of
 the Stratified Rare-Disease Cohort for Literature-Based Causal Gene
-Prioritization (n=1,047)
+Prioritisation (n=1,047)
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
@@ -13,9 +13,9 @@ Prioritization (n=1,047)
 
 ## Summary
 
-A **hard** variant of the GenoAgent benchmark cohort. It contains the **same
+A **hard** variant of the stratified rare-disease benchmark cohort. It contains the **same
 1,047 rare-disease cases** as the standard cohort (DOI `10.6084/m9.figshare.32814449`) — identical
-`case_id`, `causal_gene`, `hpo_terms`, `diseases`, and the same deconfounding
+`case_id`, `causal_gene`, `hpo_terms`, `diseases`, and the same case-level metadata
 layers — but the 49 distractor genes per case are **phenotypically similar to the
 case** rather than random. This turns distractor difficulty into an explicit
 experimental axis, orthogonal to the annotation-overlap (leakage) axis shipped
@@ -102,7 +102,7 @@ literature-based vs curated tools.
 ## How to regenerate
 
 ```bash
-# GenoAgent methods/foundation release (stages 13-20 build the base cohort), then:
+# Methods/foundation release (stages 13-20 build the base cohort), then:
 python scripts/cases/18b_build_hard_candidates.py   # Resnik-BMA top-49, seed 42
 ```
 Verify `test_cases_hard.jsonl` against the SHA-256 in
@@ -117,11 +117,11 @@ with HPO/HGNC (open). Reuse freely with attribution.
 ## Recommended citation
 
 ```bibtex
-@dataset{angulo2026genoagent_cohort_hard,
+@dataset{angulo2026rd_cohort_hard,
   author    = {Angulo, Johanna},
-  title     = {GenoAgent Benchmark (Hard): A Phenotype-Similar Distractor Variant
+  title     = {A Phenotype-Similar Distractor Variant
                of the Stratified Rare-Disease Cohort for Literature-Based Causal
-               Gene Prioritization (n=1,047)},
+               Gene Prioritisation (n=1,047)},
   year      = {2026},
   publisher = {Figshare},
   version   = {v1.0},
@@ -131,10 +131,10 @@ with HPO/HGNC (open). Reuse freely with attribution.
 }
 ```
 
-## Relationship to the GenoAgent papers
+## Relationship to the associated papers
 
 - **Standard cohort** (random distractors): DOI `10.6084/m9.figshare.32814449`.
 - **This hard variant**: `10.6084/m9.figshare.32816468`.
 - **Methods / foundation** (build recipe incl. `18b_build_hard_candidates.py`):
   DOI `10.6084/m9.figshare.32814491`.
-- **GenoAgent system** (evaluated on both variants): DOI `10.6084/m9.figshare.32814497`.
+- **GenoAgent system** (an agentic-RAG system evaluated on both variants — a separate paper): DOI `10.6084/m9.figshare.32814497`.

@@ -1,7 +1,7 @@
-# GenoAgent Benchmark Cohort (n=1,047) — Data Descriptor
+# Stratified Rare-Disease Benchmark Cohort (n=1,047) — Data Descriptor
 
-**Title.** GenoAgent Benchmark: A Stratified Rare-Disease Benchmark Cohort for
-Literature-Based Causal Gene Prioritization (n=1,047)
+**Title.** A Stratified Rare-Disease Benchmark Cohort for Literature-Based
+Causal Gene Prioritisation (n=1,047)
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
@@ -19,8 +19,8 @@ stratified across four disease categories. Derived from the GA4GH Phenopacket
 Store v0.1.26 by a seeded, version-pinned pipeline so the cohort regenerates
 bit-for-bit.
 
-The cohort additionally ships two **deconfounding sidecars** used in the
-accompanying study: per-case annotation-overlap flags (whether a case's source
+The cohort additionally ships two **case-level metadata sidecars**: per-case
+annotation-overlap flags (whether a case's source
 publication is cited by `phenotype.hpoa` for the causal gene) and source
 publication dates (for recency stratification).
 
@@ -63,10 +63,13 @@ publication dates (for recency stratification).
   gene, and by construction an `annotation_overlap` flag. Cluster confidence
   intervals and significance tests on the source PMID (encoded in `case_id`); a
   publication-level bootstrap is recommended over resampling cases. Per-stratum
-  unique-publication counts are in `clustering_stats.json`.
-- **Coverage gate:** every causal gene has ≥5 PMC Open Access articles (validated
-  against the `geno_agent_pmc_oa_v1` index; fingerprint in `MANIFEST.tsv`).
-- **Pipeline:** stages 13–20 (`scripts/cases/`) of the GenoAgent methods/foundation
+  unique-publication counts are in `clustering_stats.json` (included in this deposit).
+- **Retrieval-index check (not an eligibility filter).** Each sampled case was
+  screened for ≥5 distinct PMC OA articles among the top-100 hybrid-retrieval hits
+  for its causal gene. **All 1,050 sampled cases passed and none was excluded or
+  replaced** (`05_validated_stats.json`), so cohort membership depends only on the
+  pinned inputs and the seed, not on the state of the retrieval index.
+- **Pipeline:** stages 13–20 (`scripts/cases/`) of the methods/foundation
   release — see *How to regenerate*.
 
 ## Files
@@ -75,16 +78,16 @@ publication dates (for recency stratification).
 |---|---:|---|
 | **`test_cases.jsonl`** | 1,047 | **Canonical cohort** — one JSON object per case (schema below). SHA-256 pinned in `test_cases_manifest.json`. |
 | `06_with_candidates.jsonl` | 1,047 | Pre-finalisation record with extra provenance fields (`subject_id`, `mondo_ids`, `interpretations`, `category_resolution`, `source_path`, `n_candidates`). |
-| `05_validated.jsonl` | 1,050 | Cases passing the PMC-coverage acceptance gate (pre-candidate-list). |
+| `05_validated.jsonl` | 1,050 | Sampled cases after the retrieval-index check (all 1,050 passed; nothing excluded). |
 | `04_sampled.jsonl` | 1,050 | Stratified sample before validation. |
 | `03_categorized.jsonl` | 4,670 | Eligible cases assigned to a MONDO category. |
 | `02_eligible.jsonl` | 6,382 | Cases passing inclusion/exclusion (≥3 HPO terms, single causal gene). |
 | `01_all_phenopackets.jsonl` | 9,588 | All loaded phenopackets (raw provenance root). |
-| `annotation_overlap.json` | — | Per-case annotation-overlap flags + `meta` (cohort overlap rate). Deconfounding input. |
+| `annotation_overlap.json` | — | Per-case annotation-overlap flags + `meta` (cohort overlap rate). |
 | `pmid_dates.json` | — | Source-publication dates per PMID + `meta` (recency stratification input). |
 | `test_cases_manifest.json` | — | Build manifest: pinned versions, seed, category distribution, SHA-256 + byte size of `test_cases.jsonl`. |
 | `05_validated_stats.json` | — | Validation statistics (pass/fail/replacements). |
-| `MANIFEST.tsv` | — | Provenance + SHA-256 of upstream sources (incl. the index fingerprint). |
+| `MANIFEST.tsv` | — | Provenance + SHA-256 of the pinned upstream sources. |
 | `CHECKSUMS.sha256` | — | SHA-256 of every file in this bundle (verify with `sha256sum -c`). |
 | `LICENSE` | — | CC BY 4.0 dataset license (machine-discoverable; SPDX `CC-BY-4.0`). |
 
@@ -102,7 +105,7 @@ need only `test_cases.jsonl`** plus the two sidecars.
 | `causal_gene` | string | HGNC symbol of the true causal gene (the prediction target). |
 | `candidate_genes` | list[string] | 50 HGNC symbols: the causal gene + 49 seeded distractors. This is the input list to rank. |
 | `causal_gene_index_in_candidates` | int | 0-based index of `causal_gene` within `candidate_genes` (ground-truth position). |
-| `pmc_article_count` | int | Number of PMC OA articles mentioning the causal gene (coverage; ≥5 by construction). |
+| `pmc_article_count` | int | Distinct PMC OA articles among the **top-100** hybrid-retrieval hits for the causal-gene symbol. Bounded above by 100. It is **not** a count of articles mentioning the gene — the symbol need not appear in the retrieved text — and **not** a measure of corpus coverage; read it as retrieval-result diversity. |
 | `source_phenopacket` | string | Relative path to the source phenopacket JSON within Phenopacket Store v0.1.26. |
 
 **Sidecars.** `annotation_overlap.json` and `pmid_dates.json` are objects with a
@@ -119,10 +122,10 @@ HPO/MONDO/HGNC (open / CC BY). Reuse freely **with attribution** (cite below).
 ## Recommended citation
 
 ```bibtex
-@dataset{angulo2026genoagent_cohort,
+@dataset{angulo2026rd_cohort,
   author    = {Angulo, Johanna},
-  title     = {GenoAgent Benchmark: A Stratified Rare-Disease Benchmark Cohort
-               for Literature-Based Causal Gene Prioritization (n=1,047)},
+  title     = {A Stratified Rare-Disease Benchmark Cohort for Literature-Based
+               Causal Gene Prioritisation (n=1,047)},
   year      = {2026},
   publisher = {Figshare},
   version   = {v1.0},
@@ -136,7 +139,7 @@ HPO/MONDO/HGNC (open / CC BY). Reuse freely **with attribution** (cite below).
 The cohort is fully reproducible from public inputs + the methods/foundation code:
 
 ```bash
-# GenoAgent methods/foundation release (its own DOI / repo), stages 13-20:
+# Methods/foundation release (its own DOI / repo), stages 13-20:
 python scripts/cases/13_load_phenopackets.py        # Phenopacket Store v0.1.26
 python scripts/cases/14_apply_inclusion_exclusion.py
 python scripts/cases/15_categorize_by_mondo.py
@@ -164,8 +167,10 @@ Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
   population sample.
 - Cohort **annotation-overlap rate ≈ 73%** (765/1,047): for many cases the source
   publication is cited by `phenotype.hpoa` for the causal gene. The
-  `annotation_overlap.json` flag lets you evaluate on the **fair (overlap-absent)**
-  subset — recommended for unbiased comparison against curated tools.
+  `annotation_overlap.json` flag lets you evaluate on the **overlap-absent**
+  subset — recommended for a *fairer* comparison against curated tools. Absence of
+  detected overlap lowers, but does not eliminate, leakage risk; it is not a claim
+  of unbiased or leakage-free evaluation.
 - One causal gene per case; distractors are protein-coding HGNC genes.
 
 ## Related materials (Figshare metadata)
@@ -180,11 +185,11 @@ type · identifier):
 | Is referenced by | DOI | `10.6084/m9.figshare.32814497` (system evaluated on this cohort) |
 | Is supplemented by | URL | `https://github.com/Jangulo7/geno_agent` (source-code repository) |
 
-## Relationship to the GenoAgent papers
+## Relationship to the associated papers
 
-- This **dataset** is the citable benchmark, used by the GenoAgent system evaluation.
+- This **dataset** is the citable benchmark; it is system-agnostic and reports no tool comparisons.
 - **Methods / foundation** (corpus + index build recipe, ontology provenance) is a
   separate release/item: `10.6084/m9.figshare.32814491`.
-- **GenoAgent system** (the agentic-RAG that is evaluated on this cohort): `10.6084/m9.figshare.32814497`.
+- **GenoAgent system** (an agentic-RAG system evaluated on this cohort — a separate paper): `10.6084/m9.figshare.32814497`.
 - A separate variant-interpretation safety benchmark (different repository) reuses
   the shared foundation by DOI.
