@@ -42,9 +42,24 @@ python scripts/indexing/10_create_qdrant_index.py --upload
 python scripts/indexing/11_validate_index.py
 ```
 
-**Verify:** collection `geno_agent_pmc_oa_v1` must report **52,777,395** points and
-match the fingerprint in `data/MANIFEST.tsv`
-(`c6e53665e0e32e39e2871b705c32f8e0d69dd3654a20da4749bcf672d07f3d6e`).
+**Verify:** collection `geno_agent_pmc_oa_v1` must report **52,777,395** points, and
+the rebuilt chunk set must match the chunk-set fingerprint:
+
+```bash
+CHUNKFILE=<your all_chunks.jsonl.gz> scripts/corpus/compute_chunk_fingerprint.sh
+# release/index_fingerprint/chunk_id_fingerprint.txt must equal
+#   707596567f15c5e5bafa1acf82d8137f9318e34435496702bfc9570dc4aa39ea
+```
+
+`LC_ALL=C` ordering and `sort -u` deduplication are both load-bearing: the digest is
+defined over the distinct chunk-id *set*, which is what the collection holds, not over
+the raw record stream. `chunk_counts_by_pmcid.tsv` localises any mismatch to specific
+PMC identifiers.
+
+Expect the chunker to emit **more records than the collection holds**. The reference
+build emitted 52,782,789 records containing 5,394 content-addressed duplicates, which
+idempotent upsert collapses onto 52,777,395 points — recorded at build time in
+`reports/qdrant_upload_stats_2026-05-13.json` and reproduced independently in 2026-07.
 
 ## 2. Phase 1B — Phenopackets → n=1,047 cohort
 

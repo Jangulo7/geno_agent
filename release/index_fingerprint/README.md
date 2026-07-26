@@ -59,9 +59,31 @@ contribute no chunk. The manifest identifiers are a **strict subset** of
 `retained_pmcids.txt` — verified: zero identifiers appear in the manifest that
 are absent from the retained list.
 
-## Not to be confused with
+## Independent corroboration
 
-`data/MANIFEST.tsv` also carries a row `qdrant:geno_agent_pmc_oa_v1:fingerprint`
-with digest `c6e53665…07f3d6e`. That is a separate, earlier value whose
-computation recipe is not recorded in this repository; the digests in this
-directory are the ones defined above and are the ones the paper cites.
+The 5,394-duplicate figure is not an artefact of this recomputation. The
+contemporaneous build record `reports/qdrant_upload_stats_2026-05-13.json` — written
+2026-05-13, the day the collection was uploaded — independently reports:
+
+```
+points_uploaded_by_script : 52,782,789
+points_count              : 52,777,395
+delta_uploaded_vs_points  : 5,394
+delta_explanation         : "UUID5 chunk_id collisions when two articles produce
+                             identical (pmcid, section_type, chunk_index,
+                             blake2b(text)). Idempotent upsert keeps one."
+```
+
+Those are the same three numbers and the same mechanism derived independently here
+in 2026-07 from the chunk file alone.
+
+## History
+
+An earlier `data/MANIFEST.tsv` row, `qdrant:geno_agent_pmc_oa_v1:fingerprint` =
+`c6e53665…07f3d6e` (added 2026-05-13, commit `13b093d`), was removed in 2026-07.
+It was hand-authored, no recipe for it existed anywhere in the repository, and 23
+candidate derivations failed to reproduce it — so a reuser could not have verified
+a rebuild against it. The digests in this directory replace it and are
+reproducible in one command. The removed row remains recoverable from git history
+(`git log -S c6e53665`), and the point count it carried is preserved in the build
+record cited above.

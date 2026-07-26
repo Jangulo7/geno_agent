@@ -58,8 +58,9 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 > - **Hard cohort (phenotype-similar distractors): `10.6084/m9.figshare.32816468`**
 
 **Not included (by design):** the 323 GB Qdrant index and PMC chunk text
-(recipe-only, mixed CC; rebuild from the recipe and verify against the
-fingerprint `c6e53665…07f3d6e`); ontologies / phenopackets / models (reference
+(recipe-only, mixed CC; rebuild from the recipe and verify against the chunk-set
+fingerprint `70759656…aa39ea` in `release/index_fingerprint/chunk_id_fingerprint.txt`);
+ontologies / phenopackets / models (reference
 upstream by pinned version); any personal correspondence.
 
 ## How to cite
