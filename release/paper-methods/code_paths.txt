@@ -9,6 +9,15 @@ scripts/indexing
 scripts/ontology
 # --- Cohort construction: Phenopackets -> n=1,047 test cases (Phase 1B) ---
 scripts/cases
+# --- Cohort metadata + resource-validation scripts (Phase 1B / Technical Validation) ---
+# Individually listed, NOT the whole scripts/eval/ directory: that directory also
+# holds the P2 system-evaluation harness (run_factorial, run_cell_*, aggregate_*,
+# LLM judges), which must stay out of the P1 bundle. These four are the only
+# eval-directory scripts the P1 manuscript cites.
+scripts/eval/__init__.py
+scripts/eval/compute_annotation_overlap.py
+scripts/eval/compute_clustering_stats.py
+scripts/eval/validate_retrieval_substrate.py
 # --- Shared utilities (determinism / seeding) ---
 scripts/utils
 scripts/__init__.py
@@ -43,6 +52,7 @@ data/MANIFEST.tsv
 release/build_figshare_bundles.sh
 release/assemble_data_bundles.sh
 release/cohort/README_FIGSHARE.md
+release/cohort/README_FIGSHARE_hard.md
 release/cohort/FIGSHARE_CHECKLIST.md
 release/paper-methods/REPRODUCE.md
 release/paper-methods/artifacts_manifest.tsv
