@@ -6,25 +6,56 @@
   "hpoa_version": "2026-02-16",
   "n_cases": 1047,
   "density_by_overlap_stratum": {
-    "overlap_present": {
-      "n": 765,
-      "mean": 34.99,
-      "median": 18.0,
-      "q25": 3.0,
-      "q75": 52.0,
-      "zero_density_cases": 173
+    "total": {
+      "overlap_present": {
+        "n": 765,
+        "mean": 65.84,
+        "median": 53.0,
+        "q25": 32.0,
+        "q75": 81.0,
+        "zero_cases": 0
+      },
+      "overlap_absent": {
+        "n": 282,
+        "mean": 31.32,
+        "median": 27.0,
+        "q25": 16.0,
+        "q75": 38.0,
+        "zero_cases": 0
+      },
+      "mann_whitney_u": {
+        "U": 164331.0,
+        "p": 9.716966050925342e-39
+      },
+      "direction": "higher in overlap-present"
     },
-    "overlap_absent": {
-      "n": 282,
-      "mean": 31.32,
-      "median": 27.0,
-      "q25": 16.0,
-      "q75": 38.0,
-      "zero_density_cases": 0
+    "own_source_excluded": {
+      "overlap_present": {
+        "n": 765,
+        "mean": 34.99,
+        "median": 18.0,
+        "q25": 3.0,
+        "q75": 52.0,
+        "zero_cases": 173
+      },
+      "overlap_absent": {
+        "n": 282,
+        "mean": 31.32,
+        "median": 27.0,
+        "q25": 16.0,
+        "q75": 38.0,
+        "zero_cases": 0
+      },
+      "mann_whitney_u": {
+        "U": 90915.0,
+        "p": 9.051422024761707e-05
+      },
+      "direction": "higher in overlap-absent"
     },
-    "mann_whitney_u": {
-      "U": 90915.0,
-      "p": 9.051422024761707e-05
+    "own_source_rows_removed": {
+      "overlap_present_mean": 30.85,
+      "overlap_absent_mean": 0.0,
+      "note": "Non-zero only for overlap-present cases by construction. This is the asymmetry that makes the adjusted coefficients a sensitivity analysis rather than an unbiased causal adjustment."
     }
   },
   "adjusted_models": [

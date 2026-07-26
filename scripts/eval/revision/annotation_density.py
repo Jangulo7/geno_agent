@@ -112,28 +112,55 @@ def build_density() -> tuple[pd.DataFrame, str]:
 
 
 def density_by_stratum(df: pd.DataFrame) -> dict:
-    out = {}
-    for label, mask in (
-        ("overlap_present", df["overlap"] == 1),
-        ("overlap_absent", df["overlap"] == 0),
-    ):
-        d = df.loc[mask, "annotation_density"]
-        out[label] = {
-            "n": len(d),
-            "mean": round(float(d.mean()), 2),
-            "median": float(d.median()),
-            "q25": float(d.quantile(0.25)),
-            "q75": float(d.quantile(0.75)),
-            "zero_density_cases": int((d == 0).sum()),
-        }
+    """Both density definitions, per stratum.
+
+    The own-source-excluded measure is what the adjustment uses, because excluding
+    the case's own publication is what makes the covariate independent of the
+    exposure under test. But that exclusion is vacuous for overlap-absent cases
+    (no such rows exist) and non-vacuous for overlap-present ones, so the covariate
+    is measured asymmetrically with respect to treatment. Reporting total density
+    alongside it shows how much of the stratum difference is mechanical.
+    """
     from scipy import stats
 
-    u = stats.mannwhitneyu(
-        df.loc[df["overlap"] == 1, "annotation_density"],
-        df.loc[df["overlap"] == 0, "annotation_density"],
-        alternative="two-sided",
-    )
-    out["mann_whitney_u"] = {"U": float(u.statistic), "p": float(u.pvalue)}
+    out = {}
+    for col, tag in (("rows_total", "total"), ("annotation_density", "own_source_excluded")):
+        block = {}
+        for label, mask in (
+            ("overlap_present", df["overlap"] == 1),
+            ("overlap_absent", df["overlap"] == 0),
+        ):
+            d = df.loc[mask, col]
+            block[label] = {
+                "n": len(d),
+                "mean": round(float(d.mean()), 2),
+                "median": float(d.median()),
+                "q25": float(d.quantile(0.25)),
+                "q75": float(d.quantile(0.75)),
+                "zero_cases": int((d == 0).sum()),
+            }
+        u = stats.mannwhitneyu(
+            df.loc[df["overlap"] == 1, col],
+            df.loc[df["overlap"] == 0, col],
+            alternative="two-sided",
+        )
+        block["mann_whitney_u"] = {"U": float(u.statistic), "p": float(u.pvalue)}
+        block["direction"] = (
+            "higher in overlap-present"
+            if block["overlap_present"]["median"] > block["overlap_absent"]["median"]
+            else "higher in overlap-absent"
+        )
+        out[tag] = block
+
+    out["own_source_rows_removed"] = {
+        "overlap_present_mean": round(float(df.loc[df["overlap"] == 1, "rows_own_pmid"].mean()), 2),
+        "overlap_absent_mean": round(float(df.loc[df["overlap"] == 0, "rows_own_pmid"].mean()), 2),
+        "note": (
+            "Non-zero only for overlap-present cases by construction. This is the "
+            "asymmetry that makes the adjusted coefficients a sensitivity analysis "
+            "rather than an unbiased causal adjustment."
+        ),
+    }
     return out
 
 
@@ -332,14 +359,16 @@ def main() -> None:
     df.to_csv(REPO / "reports" / "p2_revision" / "wp6_case_density.csv", index=False)
 
     ds = payload["density_by_overlap_stratum"]
-    print("\n--- annotation density by overlap stratum (own paper excluded) ---")
-    for k in ("overlap_present", "overlap_absent"):
-        v = ds[k]
-        print(
-            f"  {k:<17} n={v['n']:>4}  mean={v['mean']:>8.2f}  median={v['median']:>6}"
-            f"  IQR[{v['q25']},{v['q75']}]  zero-density={v['zero_density_cases']}"
-        )
-    print(f"  Mann-Whitney U p = {ds['mann_whitney_u']['p']:.3g}")
+    print("\n--- annotation density by overlap stratum, both definitions ---")
+    for tag in ("total", "own_source_excluded"):
+        b = ds[tag]
+        print(f"  [{tag}]  {b['direction']}  (Mann-Whitney p = {b['mann_whitney_u']['p']:.3g})")
+        for k in ("overlap_present", "overlap_absent"):
+            v = b[k]
+            print(
+                f"     {k:<17} n={v['n']:>4} mean={v['mean']:>8.2f} median={v['median']:>6}"
+                f" IQR[{v['q25']},{v['q75']}] zero={v['zero_cases']}"
+            )
 
     print("\n--- overlap effect before vs after adjusting for log density ---")
     for r in payload["adjusted_models"]:

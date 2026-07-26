@@ -1,0 +1,285 @@
+{
+  "work_package": "A1",
+  "description": "Zero-density stratum. Among overlap-present cases, those whose disease has no phenotype.hpoa annotation from any source other than the case's own publication isolate maximal exposure with minimal independent curation.",
+  "seed": 42,
+  "n_bootstrap": 10000,
+  "n_permutations": 10000,
+  "strata": {
+    "Z_zero_density": {
+      "n_cases": 173,
+      "n_publications": 79,
+      "description": "overlap-present, annotation_density == 0"
+    },
+    "P_positive_density": {
+      "n_cases": 592,
+      "n_publications": 244,
+      "description": "overlap-present, annotation_density > 0"
+    },
+    "overlap_absent": {
+      "n_cases": 282,
+      "n_publications": 93,
+      "description": "overlap-absent subset"
+    }
+  },
+  "systems": [
+    {
+      "cell": "M",
+      "name": "LIRICAL (HPO-only)",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.9827,
+          "n_correct": 170,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.9518,
+            1.0
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.9764,
+          "n_correct": 578,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.9576,
+            0.9916
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.7766,
+          "n_correct": 219,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.6417,
+            0.8889
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": 0.0063,
+        "ci95_cluster": [
+          -0.0285,
+          0.0345
+        ],
+        "ci_excludes_zero": false,
+        "p_cluster_permutation": 0.9645
+      },
+      "gradient_vs_LIRICAL": 0.0
+    },
+    {
+      "cell": "K",
+      "name": "Exomiser (HPO-only)",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.1965,
+          "n_correct": 34,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.1169,
+            0.288
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.7922,
+          "n_correct": 469,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.728,
+            0.8497
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.7801,
+          "n_correct": 220,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.6373,
+            0.8792
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": -0.5957,
+        "ci95_cluster": [
+          -0.6953,
+          -0.4841
+        ],
+        "ci_excludes_zero": true,
+        "p_cluster_permutation": 0.0001
+      },
+      "gradient_vs_LIRICAL": -0.602
+    },
+    {
+      "cell": "S",
+      "name": "GenoAgent",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.3526,
+          "n_correct": 61,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.2486,
+            0.462
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.772,
+          "n_correct": 457,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.7067,
+            0.8273
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.8582,
+          "n_correct": 242,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.7908,
+            0.907
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": -0.4194,
+        "ci95_cluster": [
+          -0.5362,
+          -0.2934
+        ],
+        "ci_excludes_zero": true,
+        "p_cluster_permutation": 0.0001
+      },
+      "gradient_vs_LIRICAL": -0.4257
+    },
+    {
+      "cell": "O",
+      "name": "LLM-only (no retrieval)",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.0636,
+          "n_correct": 11,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.0255,
+            0.1127
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.5676,
+          "n_correct": 336,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.4641,
+            0.6561
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.6667,
+          "n_correct": 188,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.5081,
+            0.7759
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": -0.504,
+        "ci95_cluster": [
+          -0.6001,
+          -0.3941
+        ],
+        "ci_excludes_zero": true,
+        "p_cluster_permutation": 0.0001
+      },
+      "gradient_vs_LIRICAL": -0.5103
+    },
+    {
+      "cell": "L",
+      "name": "+ CE-rerank (inside)",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.3353,
+          "n_correct": 58,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.2327,
+            0.443
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.7449,
+          "n_correct": 441,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.6776,
+            0.8045
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.8227,
+          "n_correct": 232,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.7527,
+            0.873
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": -0.4097,
+        "ci95_cluster": [
+          -0.5272,
+          -0.2825
+        ],
+        "ci_excludes_zero": true,
+        "p_cluster_permutation": 0.0001
+      },
+      "gradient_vs_LIRICAL": -0.416
+    },
+    {
+      "cell": "D",
+      "name": "Multi-agent baseline",
+      "strata": {
+        "Z_zero_density": {
+          "top1": 0.1965,
+          "n_correct": 34,
+          "n_cases": 173,
+          "ci95_cluster": [
+            0.1092,
+            0.2948
+          ]
+        },
+        "P_positive_density": {
+          "top1": 0.5304,
+          "n_correct": 314,
+          "n_cases": 592,
+          "ci95_cluster": [
+            0.4424,
+            0.6177
+          ]
+        },
+        "overlap_absent": {
+          "top1": 0.4752,
+          "n_correct": 134,
+          "n_cases": 282,
+          "ci95_cluster": [
+            0.3822,
+            0.5573
+          ]
+        }
+      },
+      "gradient_Z_minus_P": {
+        "estimate": -0.3339,
+        "ci95_cluster": [
+          -0.4592,
+          -0.2044
+        ],
+        "ci_excludes_zero": true,
+        "p_cluster_permutation": 0.0001
+      },
+      "gradient_vs_LIRICAL": -0.3402
+    }
+  ],
+  "interpretation_caveat": "Zero-density diseases are intrinsically obscure, so stratum Z is harder for any system relying on independent literature; Z and P are not exchangeable. The informative quantity is therefore not any single system's gradient but LIRICAL's flatness across a boundary that every overlap-independent system falls across."
+}
