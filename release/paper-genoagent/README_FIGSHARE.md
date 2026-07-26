@@ -136,66 +136,68 @@ and the unpublished drafts / internal reports (kept local until publication).
 
 ## Figshare description field — paste this verbatim
 
-The text below is the canonical description for the Figshare item. It is kept here
-so it is version-controlled alongside the release notes; update it here first, then
-paste. Do **not** paste the whole of this README — the description field is the
-condensed public-facing summary.
+The canonical description for the Figshare item, kept here so it is
+version-controlled rather than retyped. Update here first, then paste. Do **not**
+paste the whole of this README — the description field is the condensed
+public-facing summary.
+
+The item has never been published, so this describes the current state of the work
+and carries no version-history or corrections narrative. If a version is ever
+released publicly and later superseded, add a change note at that point.
 
 ```text
 The GenoAgent system: four role-specialized LangGraph agents (Query Planner →
 Retriever → Critic → Synthesizer) with a Qwen3-8B LLM-as-Evidence-Aggregator and
 MedCPT reranking, plus the full n=1,047 evaluation against Exomiser and LIRICAL
-HPO-only baselines. The evaluation is a difficulty × leakage 2×2: results are
-stratified by a per-case annotation-overlap flag and reported on two case-paired
-distractor cohorts — a standard cohort (49 uniformly-random distractors) and a
-hard cohort (49 phenotype-similar distractors by HPO Resnik best-match-average).
-It includes the annotation-overlap stratification, leave-one-paper-out,
-publication-recency, annotation-density, design-weighting, LLM-family and
-prompt-sensitivity analyses; an LLM-only no-retrieval control (Cell O) — the same
-Qwen3-8B backbone with neither retrieval nor the agentic workflow — that isolates
-the joint contribution of retrieval and orchestration (overlap-absent top-1 0.667
-vs GenoAgent's 0.858); the RAGAS rationale-grounding judge on both cohorts; and
-the figure and table generators.
+HPO-only baselines.
+
+The evaluation is a difficulty × leakage 2×2. Results are stratified by a per-case
+annotation-overlap flag — whether a case's source publication is cited by
+phenotype.hpoa for the causal gene's disease — and reported on two case-paired
+distractor cohorts: a standard cohort (49 uniformly-random distractors) and a hard
+cohort (49 phenotype-similar distractors by HPO Resnik best-match-average). Also
+included: leave-one-paper-out, publication-recency, annotation-density,
+design-weighted, LLM-family and prompt-sensitivity analyses; an LLM-only
+no-retrieval control (Cell O) — the same Qwen3-8B backbone with neither retrieval
+nor the agentic workflow — isolating the joint contribution of retrieval and
+orchestration; the RAGAS rationale-grounding judge on both cohorts; and the figure
+and table generators.
+
+Principal finding. Annotation overlap is pervasive (73.1%, 765/1,047) and
+materially distorts the apparent leaderboard. LIRICAL's apparent top-1 of 0.924
+falls to 0.777 on the overlap-absent subset, where it is statistically tied with
+Exomiser (Δ = −0.004, p = 1.000). The evidence is a difference-in-differences
+rather than an absolute comparison: every system with no exposure to
+phenotype.hpoa scores higher on the overlap-absent subset — the LLM-only control
+by +21.3 pp, GenoAgent by +18.1 pp, Exomiser by +12.3 pp — while LIRICAL alone
+scores lower (−20.1 pp), a system × overlap interaction of +0.382 against
+GenoAgent (p ≈ 1e-27). It survives publication clustering, direct standardisation
+for disease composition, and adjustment for annotation density — which explains
+the common rise for every system except the one whose knowledge base the flag
+indexes.
 
 Inference clusters on source publication. The 1,047 cases derive from only 415
-source publications (the overlap-absent subset: 282 cases from 93), so every
-estimate and paired test is reported with a publication-level bootstrap and a
-cluster-level permutation test, with the case-level result alongside. Anyone
-reusing this cohort should do the same: resampling cases yields intervals that are
-too narrow, and the error is largest in exactly the leakage-stratified cells that
-are most interesting to interpret.
+publications (the overlap-absent subset: 282 cases from 93), so every estimate and
+paired test carries a publication-level bootstrap interval and a cluster-level
+permutation test, with the case-level result reported alongside. Under that
+inference GenoAgent matches rather than exceeds the curated baselines at rank 1 on
+the standard cohort: margins of +0.078 over Exomiser and +0.082 over LIRICAL on
+the overlap-absent subset are not significant (p = 0.45 and 0.41), because 20 of
+the 22 net discordances against Exomiser come from a single publication. What does
+hold under clustering is the contribution of retrieval and the agentic workflow
+over the identical backbone LLM (+0.191, p < 0.001), the advantage over Exomiser
+on post-2020 source publications (+0.094, Holm p = 0.002), and the hard-cohort
+margin over Exomiser (+0.153, Holm p = 0.002). Anyone reusing this cohort should
+cluster likewise: resampling cases yields intervals that are too narrow, and the
+error is largest in exactly the leakage-stratified cells that are most interesting
+to interpret.
 
-New in v1.2. Re-analysis of the saved per-case artefacts — nothing was re-run.
-(1) Publication-clustered inference throughout. Consequently a claim made in v1.1
-is withdrawn: GenoAgent's rank-1 margins over Exomiser (+0.078) and LIRICAL
-(+0.082) on the overlap-absent subset are significant at case level but not under
-clustered inference (p = 0.45 and 0.41), because 20 of the 22 net discordances
-against Exomiser come from a single publication. GenoAgent is now reported as
-matching, not exceeding, the curated baselines at rank 1 on the standard cohort.
-What does survive clustering: the retrieval-and-scaffold contribution over the
-identical backbone (+0.191, p < 0.001), the post-2020 advantage over Exomiser
-(+0.094, Holm p = 0.002) and the hard-cohort margin over Exomiser (+0.153,
-Holm p = 0.002). (2) The annotation-overlap finding is unaffected and is
-strengthened: it is now reported as a difference-in-differences — every system
-with no exposure to phenotype.hpoa scores higher on the overlap-absent subset and
-LIRICAL alone scores lower (system × overlap interaction +0.382, p ≈ 1e-27) — and
-it survives clustering, standardisation for disease composition, and adjustment
-for annotation density. (3) New analyses: annotation density (separating curation
-depth from annotation exposure), Horvitz–Thompson design weighting for the
-eligible population, and a prompt-sensitivity replay over cached retrieval.
-(4) New: reports/p2_revision/ holds the machine-readable output of every analysis,
-so any reported number can be checked without re-running the pipeline.
-(5) Rationale grounding is reported from RAGAS alone; DeepEval's
-HallucinationMetric was evaluated and is not carried forward because it does not
-discriminate on this task shape (chance-level AUROC 0.512, degenerate per-case
+reports/p2_revision/ holds the machine-readable output of every analysis, so any
+reported number can be checked without re-running the pipeline. Rationale
+grounding is reported from RAGAS; DeepEval's HallucinationMetric was evaluated and
+is not reported, because it does not discriminate on this task shape (chance-level
+AUROC 0.512 for predicting top-1 correctness, and a degenerate per-case
 distribution).
-
-New in v1.1. Added the hard (phenotype-similar distractor) cohort — per-cell
-rankings, aggregates and paired significance — completing the difficulty × leakage
-2×2, and the LLM-only no-retrieval control (Cell O). Note that v1.1's statement
-that GenoAgent's margin over both curated baselines widens under hard distractors
-is superseded by v1.2: under clustered inference only the margin over Exomiser
-survives.
 
 The two-paper relationship
 P1 — methods + shared foundation (corpus/index recipe, ontologies, cohorts).
