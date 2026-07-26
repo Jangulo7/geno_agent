@@ -91,12 +91,17 @@ def check_braces(tex: str) -> None:
 
 
 def check_graphics(tex: str, root: Path) -> None:
+    """Resolve \\includegraphics against \\graphicspath, as LaTeX itself does."""
+    search = [root]
+    for gm in re.finditer(r"\\graphicspath\{(.+?)\}\s*$", tex, re.M):
+        search += [root / d for d in re.findall(r"\{([^}]*)\}", gm.group(1)) if d]
+
     for m in re.finditer(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}", tex):
         target = m.group(1)
         line = tex[: m.start()].count("\n") + 1
-        candidates = [root / target]
+        candidates = [d / target for d in search]
         if not Path(target).suffix:
-            candidates += [root / f"{target}{ext}" for ext in (".png", ".pdf", ".jpg")]
+            candidates += [d / f"{target}{ext}" for d in search for ext in (".png", ".pdf", ".jpg")]
         if not any(c.exists() for c in candidates):
             PROBLEMS.append(f"line {line}: missing figure file '{target}'")
     NOTES.append("graphics targets checked")
