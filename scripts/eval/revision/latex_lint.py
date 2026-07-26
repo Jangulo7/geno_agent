@@ -112,7 +112,15 @@ def check_inputs(tex: str, root: Path) -> None:
     NOTES.append("input targets checked")
 
 
-def check_labels(tex: str) -> None:
+def check_labels(tex: str, root: Path | None = None) -> None:
+    """Labels may be defined inside \\input files, so those are pulled in first."""
+    if root is not None:
+        for m in re.finditer(r"\\(?:input|include)\{([^}]+)\}", tex):
+            for cand in (root / m.group(1), root / f"{m.group(1)}.tex"):
+                if cand.exists():
+                    tex += "\n" + strip_comments(cand.read_text())
+                    break
+
     labels: dict[str, int] = {}
     for m in re.finditer(r"\\label\{([^}]+)\}", tex):
         line = tex[: m.start()].count("\n") + 1
@@ -165,7 +173,7 @@ def main() -> None:
     check_braces(tex)
     check_graphics(tex, root)
     check_inputs(tex, root)
-    check_labels(tex)
+    check_labels(tex, root)
     check_undefined_macros(raw)
 
     words = len(re.findall(r"\b[A-Za-z][A-Za-z'-]+\b", tex))

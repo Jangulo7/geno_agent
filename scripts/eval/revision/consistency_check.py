@@ -160,12 +160,18 @@ def stale_numbers(tex: str) -> None:
         # The corrected value must be present. The superseded value may legitimately
         # remain if it is also the correct figure for some *other* cell, so it is
         # only reported when the correction is missing.
-        if not re.search(rf"{re.escape(str(recomputed)[:5])}", tex):
+        has_new = re.search(rf"{re.escape(str(recomputed)[:5])}", tex) is not None
+        has_old = re.search(rf"\b{re.escape(str(claimed))}\b", tex) is not None
+        if has_old and not has_new:
             warn(
-                "stale value not corrected",
+                "stale value still asserted",
                 f"{r['cohort']}/{r['subset']}/{r['cell']}/{r['metric']}: "
-                f"recomputed {recomputed} does not appear in the tex "
-                f"(previously claimed {claimed})",
+                f"superseded {claimed} appears but corrected {recomputed} does not",
+            )
+        elif not has_new and not has_old:
+            PASSES.append(
+                f"cell not reported in this version "
+                f"({r['cohort']}/{r['subset']}/{r['cell']}/{r['metric']})"
             )
         else:
             PASSES.append(
@@ -197,8 +203,11 @@ def provenance(tex: str) -> None:
         "judge_provenance.py",
         "prompt_sensitivity.py",
     ]
+    # Filenames are typeset as \texttt{foo\_bar.py}, so \_ must be unescaped
+    # before matching or every underscored script reads as absent.
+    flat = tex.replace("\\_", "_")
     for script in required:
-        check(f"tex references {script}", script in tex, "not cited anywhere in the tex")
+        check(f"tex references {script}", script in flat, "not cited anywhere in the tex")
 
     expected_outputs = [
         "wp1a_coverage_check.json",
