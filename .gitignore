@@ -95,6 +95,9 @@ data/eval_1050_lopo_full/leak_S/
 # The release MANIFESTS under release/ ARE committed; the built archives are not
 # (regenerable from a tag via release/build_figshare_bundles.sh).
 figshare_uploads/
+# Hugging Face mirror scratch — same rationale as figshare_uploads/: upload
+# staging, not source. Figshare is canonical; the cards mirror the deposit READMEs.
+hf_uploads/
 
 # Raw LLM response dumps (1.9 GB; regenerable from the per-case ranking JSONs).
 # Per-case ranking JSONs in data/eval_1050/cell_{D,K,L,M,N,S}/ ARE committed.
