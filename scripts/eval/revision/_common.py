@@ -37,6 +37,9 @@ CELL_DIRS = {
     "N": "cell_N_rrf_m_s",
     "O": "cell_O_llm_only",
     "S": "cell_S_rerank_inside_plus_lea",
+    # Cell R: bare Resnik/BMA phenotype-similarity ranker, produced by
+    # scripts/eval/revision/resnik_ranker.py (C2).
+    "R": "cell_R_resnik",
 }
 
 CELL_NAMES = {
@@ -47,6 +50,7 @@ CELL_NAMES = {
     "N": "RRF ensemble (M+S)",
     "O": "LLM-only (no retrieval)",
     "S": "GenoAgent",
+    "R": "Resnik BMA (similarity floor)",
 }
 
 # P1 Table "Sampling design by disease category": eligible pool, analytic cohort,
