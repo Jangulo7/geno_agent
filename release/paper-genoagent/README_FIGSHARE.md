@@ -1,7 +1,13 @@
 # Figshare item — P2: geno_agent (GenoAgent)
 
 **Title.** GenoAgent: An Agentic-Workflow RAG System for Gene Prioritization in
-Rare Mendelian Disease (code, evaluation results, and manuscript artifacts)
+Rare Mendelian Disease (code and evaluation results)
+
+> Title is stable across versions and names the software artefact, not the paper's
+> finding, so existing citations keep resolving. Note it says *code and evaluation
+> results*: the deposit ships the figure/table **generators**
+> (`scripts/manuscript/`), not the manuscripts, which stay local until
+> publication.
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
@@ -128,9 +134,80 @@ text-stripped rationale derivative is included instead); the shared foundation
 (reference P1's DOI); models / baseline tools (reference upstream by pinned version);
 and the unpublished drafts / internal reports (kept local until publication).
 
+## Figshare description field — paste this verbatim
+
+The text below is the canonical description for the Figshare item. It is kept here
+so it is version-controlled alongside the release notes; update it here first, then
+paste. Do **not** paste the whole of this README — the description field is the
+condensed public-facing summary.
+
+```text
+The GenoAgent system: four role-specialized LangGraph agents (Query Planner →
+Retriever → Critic → Synthesizer) with a Qwen3-8B LLM-as-Evidence-Aggregator and
+MedCPT reranking, plus the full n=1,047 evaluation against Exomiser and LIRICAL
+HPO-only baselines. The evaluation is a difficulty × leakage 2×2: results are
+stratified by a per-case annotation-overlap flag and reported on two case-paired
+distractor cohorts — a standard cohort (49 uniformly-random distractors) and a
+hard cohort (49 phenotype-similar distractors by HPO Resnik best-match-average).
+It includes the annotation-overlap stratification, leave-one-paper-out,
+publication-recency, annotation-density, design-weighting, LLM-family and
+prompt-sensitivity analyses; an LLM-only no-retrieval control (Cell O) — the same
+Qwen3-8B backbone with neither retrieval nor the agentic workflow — that isolates
+the joint contribution of retrieval and orchestration (overlap-absent top-1 0.667
+vs GenoAgent's 0.858); the RAGAS rationale-grounding judge on both cohorts; and
+the figure and table generators.
+
+Inference clusters on source publication. The 1,047 cases derive from only 415
+source publications (the overlap-absent subset: 282 cases from 93), so every
+estimate and paired test is reported with a publication-level bootstrap and a
+cluster-level permutation test, with the case-level result alongside. Anyone
+reusing this cohort should do the same: resampling cases yields intervals that are
+too narrow, and the error is largest in exactly the leakage-stratified cells that
+are most interesting to interpret.
+
+New in v1.2. Re-analysis of the saved per-case artefacts — nothing was re-run.
+(1) Publication-clustered inference throughout. Consequently a claim made in v1.1
+is withdrawn: GenoAgent's rank-1 margins over Exomiser (+0.078) and LIRICAL
+(+0.082) on the overlap-absent subset are significant at case level but not under
+clustered inference (p = 0.45 and 0.41), because 20 of the 22 net discordances
+against Exomiser come from a single publication. GenoAgent is now reported as
+matching, not exceeding, the curated baselines at rank 1 on the standard cohort.
+What does survive clustering: the retrieval-and-scaffold contribution over the
+identical backbone (+0.191, p < 0.001), the post-2020 advantage over Exomiser
+(+0.094, Holm p = 0.002) and the hard-cohort margin over Exomiser (+0.153,
+Holm p = 0.002). (2) The annotation-overlap finding is unaffected and is
+strengthened: it is now reported as a difference-in-differences — every system
+with no exposure to phenotype.hpoa scores higher on the overlap-absent subset and
+LIRICAL alone scores lower (system × overlap interaction +0.382, p ≈ 1e-27) — and
+it survives clustering, standardisation for disease composition, and adjustment
+for annotation density. (3) New analyses: annotation density (separating curation
+depth from annotation exposure), Horvitz–Thompson design weighting for the
+eligible population, and a prompt-sensitivity replay over cached retrieval.
+(4) New: reports/p2_revision/ holds the machine-readable output of every analysis,
+so any reported number can be checked without re-running the pipeline.
+(5) Rationale grounding is reported from RAGAS alone; DeepEval's
+HallucinationMetric was evaluated and is not carried forward because it does not
+discriminate on this task shape (chance-level AUROC 0.512, degenerate per-case
+distribution).
+
+New in v1.1. Added the hard (phenotype-similar distractor) cohort — per-cell
+rankings, aggregates and paired significance — completing the difficulty × leakage
+2×2, and the LLM-only no-retrieval control (Cell O). Note that v1.1's statement
+that GenoAgent's margin over both curated baselines widens under hard distractors
+is superseded by v1.2: under clustered inference only the margin over Exomiser
+survives.
+
+The two-paper relationship
+P1 — methods + shared foundation (corpus/index recipe, ontologies, cohorts).
+P2 (this item) — the GenoAgent system and its evaluation. This item depends on P1
+and references it by DOI rather than copying it.
+
+License: AGPL-3.0.
+```
+
 ## How to cite
 
 > Angulo, J. (2026). *GenoAgent: An Agentic-Workflow RAG System for Gene
-> Prioritization in Rare Mendelian Disease (code, evaluation results, and
-> manuscript artifacts)* (v1.2) [Software & data set]. Figshare.
+> Prioritization in Rare Mendelian Disease (code and
+> evaluation results)* (v1.2) [Software & data set]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814497
