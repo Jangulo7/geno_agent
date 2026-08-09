@@ -53,6 +53,19 @@ _PMID_RE: Final[re.Pattern[str]] = re.compile(r"PMID_(\d+)")
 def pmid_of(case_id: str) -> str:
     """Extract the source PMID encoded in a ``case_id``.
 
+    Valid for **this** cohort, where every id carries an explicit ``PMID_<digits>``
+    stem before any other number; verified to agree with the curated
+    ``annotation_overlap.json`` ``source_pmid`` on all 1,047 cases (415 publications
+    either way). The 35 ``STXBP1:PMID_35190816_STX_<subject>_...`` ids resolve
+    correctly because the PMID stem precedes the internal subject identifier.
+
+    The convention is **cohort-specific**. A sibling cohort whose ids read
+    ``STX_<subject>`` with no PMID stem would yield one pseudo-cluster per case for
+    that publication -- the pseudo-replication these statistics exist to quantify.
+    Where a curated ``source_pmid`` field exists, prefer it; this parser deliberately
+    raises rather than falling back, so a cohort that does not follow the convention
+    fails loudly instead of being silently under-clustered.
+
     Args:
         case_id: Cohort case identifier, ``"{GENE}:{phenopacket_id}"`` where the
             phenopacket id carries a ``PMID_<digits>_...`` stem.
