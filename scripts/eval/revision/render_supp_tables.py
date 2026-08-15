@@ -209,8 +209,14 @@ discordances favouring GenoAgent over Exomiser on the overlap-absent subset, 20
 originate in a single publication (PMID 30968594, contributing 20 \emph{CYP21A2}
 cases that GenoAgent ranks first 20 times and Exomiser none). Three
 cluster-robust procedures beyond the permutation test agree: the publication-level
-bootstrap CI includes zero, a publication-level paired $t$-test gives $p = 0.51$,
-and a Wilcoxon signed-rank test on publication-level rates gives $p = 0.49$.
+bootstrap CI includes zero
+(\texttt{reports/p2\_revision/wp4\_cluster\_inference.json}), a publication-level
+paired $t$-test gives $p = 0.51$, and a Wilcoxon signed-rank test on
+publication-level rates gives $p = 0.49$ (both in
+\texttt{reports/p2\_revision/wp4b\_cluster\_robust\_checks.json}, produced by
+\texttt{scripts/eval/revision/cluster\_robust\_checks.py}). Taking the publication
+as the unit reverses the sign of the point estimate: mean top-1 rate per
+publication is 0.780 for GenoAgent against 0.812 for Exomiser.
 
 \medskip
 \noindent Both supportive families retain a Holm-significant contrast against
