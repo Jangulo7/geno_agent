@@ -32,7 +32,7 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 
 - **P1 (this item)** — methods + shared foundation. Owns the corpus/index recipe,
   ontology pins, and the cohort.
-- **P2** — *geno_agent* agentic-workflow RAG gene prioritization (separate Figshare
+- **P2** — *geno_agent* four-agent LangGraph RAG gene prioritisation (separate Figshare
   item; references this item's DOI for the foundation).
 - **P3** — variant-interpretation safety benchmark, in the separate
   `geno_agent_variant` repository. **Reuses this shared foundation by DOI and forks
