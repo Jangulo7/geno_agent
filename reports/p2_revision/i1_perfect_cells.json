@@ -1,0 +1,283 @@
+{
+  "item": "I1",
+  "question": "Are the 1.000 cells in main.tex Table 1 real, and what is the denominator?",
+  "subset": "standard cohort, overlap-absent (P1 annotation-overlap flag == 0)",
+  "n_cases": 282,
+  "source": "per-case artefacts under data/eval_1050/<cell>/<case_id>.json",
+  "audit": [
+    {
+      "cell": "M",
+      "metric": "top5",
+      "claimed_in_table1": 0.965,
+      "recomputed": 0.9645,
+      "as_fraction": "272/282",
+      "abs_diff": 0.0005,
+      "status": "OK"
+    },
+    {
+      "cell": "M",
+      "metric": "top10",
+      "claimed_in_table1": 1.0,
+      "recomputed": 1.0,
+      "as_fraction": "282/282",
+      "abs_diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "cell": "R",
+      "metric": "top5",
+      "claimed_in_table1": 1.0,
+      "recomputed": 1.0,
+      "as_fraction": "282/282",
+      "abs_diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "cell": "R",
+      "metric": "top10",
+      "claimed_in_table1": 1.0,
+      "recomputed": 1.0,
+      "as_fraction": "282/282",
+      "abs_diff": 0.0,
+      "status": "OK"
+    },
+    {
+      "cell": "R",
+      "metric": "top1",
+      "claimed_in_table1": 0.798,
+      "recomputed": 0.7979,
+      "as_fraction": "225/282",
+      "abs_diff": 0.0001,
+      "status": "OK"
+    },
+    {
+      "cell": "S",
+      "metric": "top5",
+      "claimed_in_table1": 0.933,
+      "recomputed": 0.9326,
+      "as_fraction": "263/282",
+      "abs_diff": 0.0004,
+      "status": "OK"
+    },
+    {
+      "cell": "S",
+      "metric": "top10",
+      "claimed_in_table1": 0.94,
+      "recomputed": 0.9397,
+      "as_fraction": "265/282",
+      "abs_diff": 0.0003,
+      "status": "OK"
+    },
+    {
+      "cell": "K",
+      "metric": "top10",
+      "claimed_in_table1": 0.926,
+      "recomputed": 0.9255,
+      "as_fraction": "261/282",
+      "abs_diff": 0.0005,
+      "status": "OK"
+    }
+  ],
+  "per_cell": {
+    "K": {
+      "n_cases_overlap_absent": 282,
+      "artefacts_present": 282,
+      "missing_artefacts": [],
+      "artefacts_without_causal_entry": [],
+      "candidate_list_sizes": {
+        "50": 282
+      },
+      "counts": {
+        "top1": 220,
+        "top5": 261,
+        "top10": 261
+      },
+      "rates": {
+        "top1": 0.7801,
+        "top5": 0.9255,
+        "top10": 0.9255
+      },
+      "as_fraction": {
+        "top1": "220/282",
+        "top5": "261/282",
+        "top10": "261/282"
+      },
+      "worst_rank_in_causal_tie_block": {
+        "counts": {
+          "top1": 220,
+          "top5": 261,
+          "top10": 261
+        },
+        "rates": {
+          "top1": 0.7801,
+          "top5": 0.9255,
+          "top10": 0.9255
+        },
+        "note": "counts if every score tie were broken against the causal gene"
+      },
+      "cases_with_tied_causal_score": 4,
+      "max_causal_rank": 42,
+      "rank_gt10_cases": [
+        "CYP21A2:PMID_30968594_individual_1",
+        "CYP21A2:PMID_30968594_individual_11",
+        "CYP21A2:PMID_30968594_individual_14",
+        "CYP21A2:PMID_30968594_individual_18",
+        "CYP21A2:PMID_30968594_individual_19",
+        "CYP21A2:PMID_30968594_individual_23",
+        "CYP21A2:PMID_30968594_individual_32",
+        "CYP21A2:PMID_30968594_individual_33",
+        "CYP21A2:PMID_30968594_individual_34",
+        "CYP21A2:PMID_30968594_individual_36",
+        "CYP21A2:PMID_30968594_individual_39",
+        "CYP21A2:PMID_30968594_individual_43",
+        "CYP21A2:PMID_30968594_individual_44",
+        "CYP21A2:PMID_30968594_individual_56",
+        "CYP21A2:PMID_30968594_individual_57",
+        "CYP21A2:PMID_30968594_individual_63",
+        "CYP21A2:PMID_30968594_individual_64",
+        "CYP21A2:PMID_30968594_individual_67",
+        "CYP21A2:PMID_30968594_individual_68",
+        "CYP21A2:PMID_30968594_individual_7",
+        "EIF4A2:PMID_40610405_Individual_14"
+      ]
+    },
+    "M": {
+      "n_cases_overlap_absent": 282,
+      "artefacts_present": 282,
+      "missing_artefacts": [],
+      "artefacts_without_causal_entry": [],
+      "candidate_list_sizes": {
+        "50": 282
+      },
+      "counts": {
+        "top1": 219,
+        "top5": 272,
+        "top10": 282
+      },
+      "rates": {
+        "top1": 0.7766,
+        "top5": 0.9645,
+        "top10": 1.0
+      },
+      "as_fraction": {
+        "top1": "219/282",
+        "top5": "272/282",
+        "top10": "282/282"
+      },
+      "worst_rank_in_causal_tie_block": {
+        "counts": {
+          "top1": 219,
+          "top5": 271,
+          "top10": 280
+        },
+        "rates": {
+          "top1": 0.7766,
+          "top5": 0.961,
+          "top10": 0.9929
+        },
+        "note": "counts if every score tie were broken against the causal gene"
+      },
+      "cases_with_tied_causal_score": 2,
+      "max_causal_rank": 10,
+      "rank_gt10_cases": []
+    },
+    "S": {
+      "n_cases_overlap_absent": 282,
+      "artefacts_present": 282,
+      "missing_artefacts": [],
+      "artefacts_without_causal_entry": [],
+      "candidate_list_sizes": {
+        "50": 282
+      },
+      "counts": {
+        "top1": 242,
+        "top5": 263,
+        "top10": 265
+      },
+      "rates": {
+        "top1": 0.8582,
+        "top5": 0.9326,
+        "top10": 0.9397
+      },
+      "as_fraction": {
+        "top1": "242/282",
+        "top5": "263/282",
+        "top10": "265/282"
+      },
+      "worst_rank_in_causal_tie_block": {
+        "counts": {
+          "top1": 242,
+          "top5": 260,
+          "top10": 260
+        },
+        "rates": {
+          "top1": 0.8582,
+          "top5": 0.922,
+          "top10": 0.922
+        },
+        "note": "counts if every score tie were broken against the causal gene"
+      },
+      "cases_with_tied_causal_score": 21,
+      "max_causal_rank": 50,
+      "rank_gt10_cases": [
+        "ADGRG1:PMID_29707406_A_II_3",
+        "CHST14:PMID_30249733_Case_presentation",
+        "CTSA:PMID_24769197_patient",
+        "FBN1:PMID_21594992_20_year_old_man",
+        "GNB1:PMID_29174093_proband",
+        "IKZF1:PMID_31057532_Family_I_individual_I_II_1",
+        "ITPR1:PMID_20082166_Family_E037_individual_II_2",
+        "ITPR1:PMID_33949769_participant",
+        "NBAS:PMID_26541327_Pat_13_FXII",
+        "NBAS:PMID_26541327_Pat_1_FI",
+        "NBAS:PMID_31015584_Individual_1",
+        "NBAS:PMID_31015584_Individual_3",
+        "PRF1:PMID_28468610_8_year_old_boy",
+        "SNAP29:PMID_33977139_Patient_2",
+        "SNAP29:PMID_33977139_Patient_5",
+        "STXBP1:PMID_35190816_STX_32521962_P2",
+        "TJP2:PMID_30658709_patient"
+      ]
+    },
+    "R": {
+      "n_cases_overlap_absent": 282,
+      "artefacts_present": 282,
+      "missing_artefacts": [],
+      "artefacts_without_causal_entry": [],
+      "candidate_list_sizes": {
+        "50": 282
+      },
+      "counts": {
+        "top1": 225,
+        "top5": 282,
+        "top10": 282
+      },
+      "rates": {
+        "top1": 0.7979,
+        "top5": 1.0,
+        "top10": 1.0
+      },
+      "as_fraction": {
+        "top1": "225/282",
+        "top5": "282/282",
+        "top10": "282/282"
+      },
+      "worst_rank_in_causal_tie_block": {
+        "counts": {
+          "top1": 225,
+          "top5": 282,
+          "top10": 282
+        },
+        "rates": {
+          "top1": 0.7979,
+          "top5": 1.0,
+          "top10": 1.0
+        },
+        "note": "counts if every score tie were broken against the causal gene"
+      },
+      "cases_with_tied_causal_score": 0,
+      "max_causal_rank": 4,
+      "rank_gt10_cases": []
+    }
+  }
+}
