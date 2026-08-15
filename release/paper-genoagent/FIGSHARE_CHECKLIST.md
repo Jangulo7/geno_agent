@@ -6,7 +6,7 @@ One Figshare item, tag `paper-genoagent-v1.3`. Author: **Johanna Angulo**. Licen
 
 | # | File (in `figshare_uploads/`) | What | License |
 |---|---|---|---|
-| 1 | `paper-genoagent-v1.3_code_<commit>.zip` | agents, tools, baselines, eval harness, demos, tests, docs, `REPRODUCE.md` | AGPL-3.0 |
+| 1 | `paper-genoagent-v1.3_code_<commit>.zip` | agents, tools, baselines, eval harness, tests, docs, `REPRODUCE.md` | AGPL-3.0 |
 | 2 | `paper-genoagent-v1.3_data.zip` | committed `eval_1050/` + `eval_hard/` results (incl. Cell R) + `lopo_full/` summaries + figures + tables + **text-stripped rationale derivative** | AGPL-3.0 |
 | 3 | `*.sha256` for items 1–2 + `CHECKSUMS_paper-genoagent.sha256` | integrity | — |
 | 4 | `release/paper-genoagent/README_FIGSHARE.md` | item description (paste as the Figshare description) | — |
