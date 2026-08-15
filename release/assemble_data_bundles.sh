@@ -66,10 +66,11 @@ else
 fi
 
 # ---------- P2: GenoAgent results (standard + hard cohorts) + figures/tables ----------
-P2="paper-genoagent-v1.1_data"
+P2="paper-genoagent-v1.3_data"
 P2D="$STAGE/$P2"
 mkdir -p "$P2D"
-# Tracked-only selection (git archive auto-excludes gitignored raw response dumps).
+# Tracked-only selection (git archive auto-excludes gitignored raw response dumps);
+# the one deliberate exception is Cell R, copied explicitly below.
 # Standard (eval_1050) + hard (eval_hard) per-cell rankings, aggregates, and judge
 # summaries; LOPO summaries; and the publication figures/tables. Manuscript drafts
 # and internal reports are privatised (local-only) and deliberately excluded — the
@@ -78,6 +79,19 @@ git archive --format=tar HEAD -- \
   data/eval_1050 data/eval_1050_lopo_full data/eval_hard \
   reports/figures reports/tables \
   | tar -x -C "$P2D"
+# Cell R (Resnik BMA similarity floor) per-case rankings are gitignored on disk —
+# regenerable in ~30 s, so they are kept out of git — but they back printed Table 1
+# rows in both cohorts and are what verify_perfect_cells.py reads, so the deposit
+# carries them explicitly. 8.3 MB per cohort; gene symbols and scores only, no PMC text.
+for COHORT in eval_1050 eval_hard; do
+  if compgen -G "data/$COHORT/cell_R_resnik/*.json" >/dev/null; then
+    mkdir -p "$P2D/data/$COHORT/cell_R_resnik"
+    cp data/"$COHORT"/cell_R_resnik/*.json "$P2D/data/$COHORT/cell_R_resnik/"
+  else
+    echo "SKIP data/$COHORT/cell_R_resnik: absent "\
+"(regenerate with scripts/eval/revision/resnik_ranker.py, then re-run this script)."
+  fi
+done
 # License-clean rationale derivatives (verbatim PMC text stripped) for the champion
 # cell, both cohorts.
 python scripts/eval/strip_responses_for_release.py \
