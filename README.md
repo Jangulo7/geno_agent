@@ -155,6 +155,8 @@ n=1,047 and adds a second curated baseline:
 | **K** | Exomiser CLI 14.0.2 HPO-only, hiPhive prioritiser | External curated baseline |
 | **M** | LIRICAL CLI 2.4.0 HPO-only (likelihood-ratio framework) | Second curated baseline (added v3) |
 | **O** | LLM-only, no retrieval (same Qwen3-8B backend, no agents/retrieval) | Control — isolates the joint value of retrieval + the agentic workflow |
+| **N** | Reciprocal-rank fusion of M + S | Ensemble reference: what a curated tool and a literature system are worth combined |
+| **R** | HPO Resnik best-match-average similarity (no training, no tuning, no retrieval) | Model-free floor — reproduces the overlap signature without a model; bounds hard-cohort construction bias |
 
 Test cases (n=1,047) are sampled from GA4GH Phenopacket Store **v0.1.26**
 using disproportionate stratified sampling (250 dev + **300 imm** + 250 met +
@@ -177,11 +179,13 @@ difficulty is varied orthogonally to leakage.
 | Cell | top-1 | top-5 | top-10 | MRR | Notes |
 |---|---:|---:|---:|---:|---|
 | K (Exomiser HPO-only) | 0.691 | 0.821 | 0.859 | 0.754 | curated baseline |
-| M (LIRICAL HPO-only) | 0.924 | 0.989 | 0.999 | 0.953 | likely annotation overlap; see v3 Thread D |
+| M (LIRICAL HPO-only) | 0.924 | 0.989 | 0.999 | 0.953 | inflated by annotation overlap — falls to 0.777 once it is removed |
 | D (multi+hybrid) | 0.460 | 0.581 | 0.628 | 0.529 | inside-system baseline |
 | L (D + CE-rerank) | 0.698 | 0.791 | 0.814 | 0.745 | +23.8 pp rerank contribution |
-| **S (L + LEA)** | **0.725** | 0.798 | 0.816 | **0.766** | **+3.4 pp over K (★ paired bootstrap)** |
+| **S (L + LEA)** | **0.726** | 0.798 | 0.817 | **0.766** | **+3.5 pp over K — case-level significant, not under clustering (p=0.204)** |
 | O (LLM-only, no retrieval) | 0.511 | 0.626 | 0.697 | 0.575 | control: −0.215 vs S (McNemar p<0.001) |
+| N (RRF ensemble M+S) | 0.776 | 0.856 | 0.903 | 0.819 | ensemble reference |
+| R (Resnik BMA floor) | 0.925 | 0.998 | 0.999 | 0.959 | model-free; tracks M, confirming the overlap signature needs no model |
 
 **Metrics:** top-1 / top-5 / top-10 (Recall@k), MRR, NDCG@10. Paired
 bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
@@ -275,13 +279,16 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 | **Eval (paper v3)** | **LEA logging + RAGAS + annotation-overlap + recency + LLM-family ablation** | ✅ Complete |
 | **Robustness** | **Leave-one-paper-out + Holm/BH multiplicity correction + stratum-weighted sensitivity** | ✅ Complete (2026-06-11) |
 | **Difficulty × leakage 2×2** | **Hard (phenotype-similar distractor) cohort + hard-cohort RAGAS** | ✅ Complete (2026-07-01) |
+| **Clustered inference** | **Publication-level bootstrap + permutation tests, design weighting, annotation-density adjustment, prompt-sensitivity replay** | ✅ Complete (2026-07-26) |
+| **Model-free floor + verification** | **Cell R (Resnik BMA), zero-density stratum, independent re-derivation of the perfect cells, pre-submission gates** | ✅ Complete (2026-08-15) |
 
 Reports: the consolidated methodology, execution plans, and result write-ups are
 maintained as **local working documents and kept private until publication** — the
 README is the single explanatory document in the repo. The published results and
 benchmark are available through the Figshare deposits (see
 [Data and software availability](#data-and-software-availability)); `reports/`
-retains the rendered **figures, tables, and method descriptors**.
+retains the rendered **figures and tables** plus `p2_revision/`, the
+machine-readable output behind every reported number.
 
 ## Reproducibility
 
@@ -366,6 +373,26 @@ $PY scripts/eval/revision/judge_provenance.py
 $PY scripts/eval/revision/cutoff_asymmetry.py      # needs network (NCBI E-utilities)
 ```
 
+## The two papers
+
+This repository holds the code and results behind two companion papers.
+
+**P1 — the resource.** *An Annotation-Overlap-Flagged 1,047-Case Rare-Disease
+Gene-Prioritisation Benchmark and PMC Open Access Index.* Builds the shared
+foundation: the PMC Open Access retrieval-index recipe, the pinned ontology layer,
+the stratified n=1,047 cohort with its two case-paired distractor variants, and the
+per-case annotation-overlap flag. It owns the two cohort Datasets and the
+methods/foundation Software item below.
+
+**P2 — the system and its evaluation.** *Benchmark Contamination in Rare-Disease
+Gene Prioritisation: Annotation-Overlap Stratification and Clustered Inference on
+1,047 Cases from 415 Publications.* Evaluates GenoAgent against Exomiser and
+LIRICAL HPO-only baselines on that cohort under a difficulty × leakage 2×2, with
+inference clustered on source publication. It owns the GenoAgent Software item.
+
+P2 **depends on P1 and cites it by DOI** rather than copying it; where the two
+disagree about the cohort or the index, P1 is authoritative.
+
 ## Data and software availability
 
 The release artifacts are archived on Figshare (project "GenoAgent") with persistent DOIs:
@@ -374,8 +401,8 @@ The release artifacts are archived on Figshare (project "GenoAgent") with persis
 |---|---|---|---|
 | **Benchmark cohort — standard (n=1,047)** — random distractors; `test_cases.jsonl` + provenance + manifest | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32814449`](https://doi.org/10.6084/m9.figshare.32814449) |
 | **Benchmark cohort — hard (n=1,047)** — phenotype-similar (Resnik BMA) distractors; case-paired with the standard set | Dataset | CC BY 4.0 | [`10.6084/m9.figshare.32816468`](https://doi.org/10.6084/m9.figshare.32816468) |
-| **Methods / shared foundation** — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
-| **GenoAgent system** — agents, evaluation harness, per-cell results, figures + tables | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
+| **Methods / shared foundation** (P1) — corpus/index build recipe, ontology pins, cohort construction | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814491`](https://doi.org/10.6084/m9.figshare.32814491) |
+| **GenoAgent system** (P2) — agents, evaluation harness, per-cell results, figures + tables | Software | AGPL-3.0 | [`10.6084/m9.figshare.32814497`](https://doi.org/10.6084/m9.figshare.32814497) |
 
 The 323 GB Qdrant index and the raw LLM response dumps are **recipe-only** (mixed-licence verbatim PMC OA text): they are not deposited but regenerate from public inputs via the methods item. What regenerates is the indexed **content** — which chunks exist, under which content-addressed identifiers — verifiable against the chunk-set fingerprint below. The Qdrant collection itself is *not* byte-identical across builds: HNSW graph construction depends on insertion order and concurrency, and dense vectors are computed in FP16 on GPU, so two builds from identical inputs are content-equivalent rather than binary-identical. Upstream resources — Phenopacket Store v0.1.26, ontologies, Exomiser/LIRICAL, and the Qwen3-8B / PubMedBERT / MedCPT models — are referenced by pinned version (see [Reproducibility](#reproducibility)), not redistributed.
 
@@ -426,53 +453,55 @@ geno_agent/
 ├── pyproject.toml                     # Pinned Python dependencies
 ├── docker-compose.yml                 # Qdrant v1.14.1 on :6533/:6534
 ├── .env.example                       # Template; copy to .env and fill in
+├── CITATION.cff                       # Software citation + the four Figshare DOIs
 ├── scripts/
-│   ├── corpus/                        # PMC OA fetch / parse / filter / chunk (Phase 1A §4)
-│   ├── ontology/                      # Ontology download + verify (§3, §5)
-│   ├── embedding/                     # PubMedBERT embedding (§4 step 4)
-│   ├── indexing/                      # Qdrant create + validate (§4 steps 5-6)
-│   ├── cases/                         # Phenopacket pipeline (Phase 1B §6)
-│   │                                  # Stage 16 patched with --per-category-target (v3)
-│   │                                  # Stage 17 patched to honour TEST_CASES_DIR (v3)
-│   └── eval/                          # Phase 2 + Phase 3 evaluation
-│       ├── run_factorial.py           # 16-cell factorial driver (earlier n=75 run)
-│       ├── run_cell_k.py              # Cell K (Exomiser HPO-only)
-│       ├── run_cell_m.py              # Cell M (LIRICAL HPO-only, v3, 8-worker pool)
-│       ├── run_cell_o.py              # Cell O (LLM-only, no-retrieval control)
-│       ├── rerank_inside_d.py         # Cell L / S driver (CE-rerank-inside-D + optional LEA)
-│       ├── run_paper_extension.sh     # Sequenced D → L → vLLM → S launcher
-│       ├── run_paper_extension_LS_responses.sh  # v3 re-run with --responses-dir
-│       ├── start_vllm.sh              # vLLM 0.20.1 with v3 VRAM caps
-│       ├── aggregate_metrics.py       # Per-case → overall + per-MONDO bootstrap CIs
-│       ├── run_ragas.py               # RAGAS faithfulness/precision/recall/relevance (GPT-4o)
-│       ├── run_deepeval.py            # DeepEval hallucination (GPT-4o)
-│       ├── run_lopo.py                # Leave-one-paper-out retrieval (source-paper exclusion)
-│       ├── aggregate_lopo.py          # LOPO stratified + fair-cohort cross-tabs
-│       ├── multiplicity_correction.py # Holm / Benjamini-Hochberg on primary comparisons
-│       └── weighted_overall.py        # Stratum-weighted overall sensitivity
+│   ├── corpus/                        # PMC OA fetch / parse / filter / chunk (P1)
+│   ├── ontology/                      # Ontology download + verify (P1)
+│   ├── embedding/                     # PubMedBERT embedding (P1)
+│   ├── indexing/                      # Qdrant create + validate (P1)
+│   ├── cases/                         # Phenopacket cohort pipeline (P1)
+│   │                                  # 18b_build_hard_candidates.py builds the hard variant
+│   ├── eval/                          # Evaluation harness (P2)
+│   │   ├── run_cell_k.py              # Cell K (Exomiser HPO-only)
+│   │   ├── run_cell_m.py              # Cell M (LIRICAL HPO-only)
+│   │   ├── run_cell_o.py              # Cell O (LLM-only, no-retrieval control)
+│   │   ├── rerank_inside_d.py         # Cell L / S driver (CE-rerank-inside-D + optional LEA)
+│   │   ├── run_paper_extension.sh     # Sequenced D → L → vLLM → S launcher
+│   │   ├── start_vllm.sh              # vLLM 0.20.1 with the pinned VRAM caps
+│   │   ├── aggregate_metrics.py       # Per-case → overall + per-MONDO bootstrap CIs
+│   │   ├── compute_annotation_overlap.py  # The leakage flag (P1's central contribution)
+│   │   ├── run_ragas.py / run_deepeval.py # Rationale-grounding judges (GPT-4o)
+│   │   ├── run_lopo.py / aggregate_lopo.py # Leave-one-paper-out
+│   │   └── revision/                  # Re-analysis + verification suite — every number in P2
+│   │                                  # traces to a script here; see the table above
+│   ├── manuscript/                    # Figure and table generators
+│   └── utils/                         # Shared helpers
 ├── src/
 │   ├── agents/                        # LangGraph state + 4 agent nodes + synthesizer_lea
-│   ├── baselines/                     # exomiser_runner.py + lirical_runner.py (v3)
-│   └── tools/                         # Qdrant search, HGNC, LLM wrapper
+│   ├── baselines/                     # exomiser_runner.py + lirical_runner.py
+│   └── tools/                         # Qdrant search, HPO, HGNC, LLM wrapper
 ├── tests/                             # Unit + integration
-├── config/                            # Prompt templates, agent configs
-├── reports/                           # Tracked: method descriptors, figures, tables
-│   ├── dataset-development-method.md  # cohort + distractor-variant construction
-│   ├── annotation-overlap-method.md   # leakage-flag computation
-│   ├── architecture/                  # geno_agent_architecture.md
-│   ├── figures/                       # publication figures (regenerated from committed data via `scripts/`)
-│   └── tables/                        # supplementary tables (e.g. multiplicity correction)
-└── data/                              # Manifests + ontologies (large files .gitignored)
-    ├── test_cases/                    # n=75 earlier cohort (v0.1.19)
-    ├── test_cases_500/                # n=459 paper v1 cohort (v0.1.19, seed 4242)
-    ├── test_cases_1050/               # n=1,047 paper v2/v3 cohort (v0.1.26, seed 42)
-    ├── eval/                          # n=75 earlier results (16 cells)
-    ├── eval_500/                      # n=459 v1 results (4 cells K/D/L/S)
-    ├── eval_1050/                     # n=1,047 v2/v3 results (5 cells K/D/L/S/M + sidecars)
-    └── eval_1050_lopo_full/           # leave-one-paper-out results (summaries; per-case sidecars gitignored)
+├── release/                           # Deposit recipes: bundle builders, per-record READMEs,
+│                                      # code_paths.txt, artifacts_manifest.tsv, index fingerprint
+├── reports/
+│   ├── p2_revision/                   # Machine-readable output behind every reported number
+│   ├── figures/                       # Publication figures
+│   └── tables/                        # Supplementary tables
+└── data/                              # Manifests + results (large inputs .gitignored)
+    ├── MANIFEST.tsv                   # SHA-256 per pinned input
+    ├── test_cases_1050/               # n=1,047 cohort (v0.1.26, seed 42) — deposited, record 1
+    ├── test_cases_hard/               # Phenotype-similar distractor variant — record 2
+    ├── eval_1050/                     # Per-case results, standard lists (cells D/K/L/M/N/O/R/S)
+    ├── eval_hard/                     # Per-case results, hard lists (cells D/K/L/M/N/R/S)
+    └── eval_1050_lopo_full/           # Leave-one-paper-out (summaries; per-case sidecars gitignored)
 ```
 
-Persistent heavy artifacts (Qdrant index, Qwen3-8B weights, raw corpus, logs) live outside the repository under `~/rare-disease-rag/` to keep the git history clean.
+Cell R's per-case rankings (`data/eval_*/cell_R_resnik/`) are gitignored because
+they regenerate in ~30 s from the pinned HPO release; they ship in the P2 data
+deposit so the verification scripts run out of the box. Heavy artefacts — the
+Qdrant index, model weights, the raw corpus, the raw LLM response dumps — live
+outside the repository and are recipe-only (see
+[Data and software availability](#data-and-software-availability)).
 
 ## Quick start
 
