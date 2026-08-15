@@ -1,19 +1,23 @@
 # Figshare item — P2: geno_agent (GenoAgent)
 
-**Title.** GenoAgent: An Agentic-Workflow RAG System for Gene Prioritization in
-Rare Mendelian Disease (code and evaluation results)
+**Title.** Benchmark Contamination in Rare-Disease Gene Prioritisation:
+Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from 415
+Publications — GenoAgent code
 
-> Title is stable across versions and names the software artefact, not the paper's
-> finding, so existing citations keep resolving. Note it says *code and evaluation
-> results*: the deposit ships the figure/table **generators**
-> (`scripts/manuscript/`), not the manuscripts, which stay local until
-> publication.
+> Retitled 2026-08-15 to mirror the P2 manuscript title, so a reader arriving from
+> the paper recognises the deposit immediately. Safe to do because the item has
+> never been published, so no existing citation resolves against the old wording;
+> the DOI is unchanged either way. **Keep it in step with the paper**: if the title
+> changes at review, change it here, on Figshare, and in `CITATION.cff`. The
+> trailing *— GenoAgent code* is what distinguishes this Software item from the
+> manuscript itself: the deposit ships the figure/table **generators**
+> (`scripts/manuscript/`), not the manuscripts, which stay local until publication.
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
 **License.** Code: AGPL-3.0-or-later. Result artifacts: AGPL-3.0.
 
-**Version.** v1.2  ·  **Git tag.** `paper-genoagent-v1.2` (resolve the exact commit with `git rev-parse paper-genoagent-v1.2`)
+**Version.** v1.3  ·  **Git tag.** `paper-genoagent-v1.3` (resolve the exact commit with `git rev-parse paper-genoagent-v1.3`)
 **Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
@@ -31,6 +35,46 @@ control (Cell O)** — the same Qwen3-8B backbone with neither retrieval nor the
 agentic workflow — that isolates the joint contribution of retrieval and
 orchestration (overlap-absent top-1 0.667 vs geno_agent's 0.858); the RAGAS
 rationale-grounding judge on both cohorts; and the publication figures and tables.
+
+## What's new in v1.3
+
+Additions and verification. No result reported in v1.2 changed; every earlier number
+re-derives unchanged from the same per-case artefacts.
+
+- **New: Cell R, a model-free similarity floor** (`scripts/eval/revision/resnik_ranker.py`
+  → `reports/p2_revision/wp_c2_resnik_ranker.json`). HPO Resnik best-match-average
+  ranking with no training, no tuning and no retrieval. It reproduces the
+  annotation-overlap signature, which shows the signature does not require a model,
+  and it bounds construction bias on the hard cohort, whose distractors are selected
+  by the same similarity measure. Its per-case rankings for both cohorts ship in the
+  data bundle (`data/eval_1050/cell_R_resnik/`, `data/eval_hard/cell_R_resnik/`).
+- **New: zero-density stratum analysis** (`zero_density_stratum.py` →
+  `wp_a1_zero_density.json`) — the Z/P partition, its gradients, and the
+  annotation-density report under both density definitions.
+- **New: independent re-derivation of the three perfect cells**
+  (`verify_perfect_cells.py` → `i1_perfect_cells.json`). Three secondary cells on the
+  overlap-absent subset are exactly 1.000 — LIRICAL top-10, and Resnik BMA top-5 and
+  top-10 — so they are re-derived straight from the per-case artefacts by a script
+  that deliberately does not reuse the shared metric helper, and that re-derives the
+  overlap-absent case list independently: **282/282** in all three. It also reports
+  candidate-list sizes (50 in every case, `final_rank` a full 1–50 permutation),
+  worst causal rank (4 for Cell R, 10 for Cell M), and a tie audit — Cell R has no
+  ties at all, Cell M has two and holds top-10 = 0.9929 even when every tie is broken
+  against the causal gene. The cells are a property of shortlist recall on a closed
+  50-gene list (chance-level top-10 = 0.200), not of the systems: the same scripts
+  over the same 282 cases fall to 0.486 and 0.496 on the phenotype-similar hard
+  cohort.
+- **Verification gates repaired and re-run** (`consistency_check.py`). Against the
+  current manuscript sources the gate had gone stale: it recognised only the
+  superseded reference-list form, so it silently skipped every reference check, and
+  it read the main text alone, so it reported six live scripts as orphaned after the
+  script-to-result map moved into the supplement. It now parses `thebibliography`
+  (entry count, duplicate keys, undefined and uncited keys, first-appearance
+  ordering) and takes `--supp`. Verbatim output of both gates is in
+  `reports/p2_revision/i2_gate_run.txt` — 57 pass / 0 warn / 0 fail, structural lint
+  clean.
+- Clustering-variable provenance corrected in the reports and flagged as
+  cohort-specific.
 
 ## What's new in v1.2
 
@@ -116,14 +160,17 @@ correctly.
 - `…_code_<commit>.zip` — agents, tools, baselines, the evaluation harness (factorial,
   RAGAS, LOPO, aggregation, multiplicity correction, and the `revision/`
   re-analysis + verification suite), the figure generators,
-  demos, tests, build/env config, `README.md` (the explanatory document), and
-  `REPRODUCE.md`.
+  demos, tests, build/env config, `README.md` (the explanatory document),
+  `REPRODUCE.md`, and **`reports/p2_revision/`** — the machine-readable output of
+  every revision analysis, so any reported number can be checked without re-running
+  the pipeline, including `tripod_llm_checklist.csv`, the machine-readable copy of
+  the supplement's completed TRIPOD-LLM checklist (Table S1).
 - `…_data.zip` — committed per-case results, aggregates, paired significance, and judge
-  summaries for **both cohorts** (`data/eval_1050/`, `data/eval_hard/`) plus
-  `data/eval_1050_lopo_full/` summaries; the publication figures and tables; and the
-  license-clean, text-stripped **rationale derivative** for the champion cell in both
-  cohorts (see `artifacts_manifest.tsv`); the prompt-sensitivity per-case outputs; and
-  `reports/p2_revision/` — the machine-readable numbers backing the paper.
+  summaries for **both cohorts** (`data/eval_1050/`, `data/eval_hard/`), including the
+  Cell R similarity-floor rankings, plus `data/eval_1050_lopo_full/` summaries; the
+  publication figures and tables; and the license-clean, text-stripped **rationale
+  derivative** for the champion cell in both cohorts (see `artifacts_manifest.tsv`);
+  and the prompt-sensitivity per-case outputs.
 - `CHECKSUMS.sha256` — SHA-256 of every file in this bundle; verify after download
   with `sha256sum -c CHECKSUMS.sha256`.
 - `LICENSE` — AGPL-3.0 (the result artifacts' license; see the **License** note above).
@@ -160,8 +207,11 @@ included: leave-one-paper-out, publication-recency, annotation-density,
 design-weighted, LLM-family and prompt-sensitivity analyses; an LLM-only
 no-retrieval control (Cell O) — the same Qwen3-8B backbone with neither retrieval
 nor the agentic workflow — isolating the joint contribution of retrieval and
-orchestration; the RAGAS rationale-grounding judge on both cohorts; and the figure
-and table generators.
+orchestration; a model-free similarity floor (Cell R, HPO Resnik
+best-match-average, no training and no retrieval) that reproduces the
+annotation-overlap signature without a model and bounds hard-cohort construction
+bias; the RAGAS rationale-grounding judge on both cohorts; and the figure and table
+generators.
 
 Principal finding. Annotation overlap is pervasive (73.1%, 765/1,047) and
 materially distorts the apparent leaderboard. LIRICAL's apparent top-1 of 0.924
@@ -193,11 +243,29 @@ error is largest in exactly the leakage-stratified cells that are most interesti
 to interpret.
 
 reports/p2_revision/ holds the machine-readable output of every analysis, so any
-reported number can be checked without re-running the pipeline. Rationale
-grounding is reported from RAGAS; DeepEval's HallucinationMetric was evaluated and
-is not reported, because it does not discriminate on this task shape (chance-level
-AUROC 0.512 for predicting top-1 correctness, and a degenerate per-case
-distribution).
+reported number can be checked without re-running the pipeline, alongside the
+machine-readable TRIPOD-LLM checklist. Rationale grounding is reported from RAGAS;
+DeepEval's HallucinationMetric was evaluated and is not reported, because it does
+not discriminate on this task shape (chance-level AUROC 0.512 for predicting top-1
+correctness, and a degenerate per-case distribution).
+
+What is in the two files. The code zip is the tracked source at git tag
+paper-genoagent-v1.3: the agents and tools, the baselines, the evaluation harness
+including the revision re-analysis and verification scripts, the figure and table
+generators, and reports/p2_revision/. The data zip is the per-case results for
+every cell on both cohorts, the aggregates, paired significance and judge
+summaries, the leave-one-paper-out summaries, the prompt-sensitivity per-case
+outputs, the figures and tables, and a licence-clean rationale derivative with
+verbatim source text stripped. Raw LLM response dumps are withheld because they
+embed verbatim PMC Open Access passages of mixed licence.
+
+How to check the headline numbers without re-running anything. Every value in the
+paper traces to a file in reports/p2_revision/ through the script-to-result map in
+Supplementary Table S12. Two gates re-verify the manuscript against those files
+(consistency_check.py, latex_lint.py); their output is archived as
+reports/p2_revision/i2_gate_run.txt. The three secondary cells that read exactly
+1.000 are re-derived from the per-case artefacts by verify_perfect_cells.py,
+independently of the shared metric helper, and are 282/282 in each.
 
 The two-paper relationship
 P1 — methods + shared foundation (corpus/index recipe, ontologies, cohorts).
@@ -209,7 +277,7 @@ License: AGPL-3.0.
 
 ## How to cite
 
-> Angulo, J. (2026). *GenoAgent: An Agentic-Workflow RAG System for Gene
-> Prioritization in Rare Mendelian Disease (code and
-> evaluation results)* (v1.2) [Software & data set]. Figshare.
+> Angulo, J. (2026). *Benchmark Contamination in Rare-Disease Gene Prioritisation:
+> Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from
+> 415 Publications — GenoAgent code* (v1.3) [Software & data set]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814497

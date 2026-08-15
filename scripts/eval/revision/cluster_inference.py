@@ -18,6 +18,17 @@ Two cluster-robust devices are used:
     exchangeable, but discordances within a publication are not independent, so
     signs are flipped a whole publication at a time.
 
+**Provenance of the clustering variable.** ``source_pmid`` comes from the curated
+``annotation_overlap.json`` layer (via ``_common.load_cases``), **not** from parsing
+the ``case_id``. For this cohort the two agree on all 1,047 cases (both yield 415
+publications), because every id carries an explicit ``PMID_<digits>`` stem first --
+including the 35 ``STXBP1:PMID_35190816_STX_<subject>_...`` cases, whose second
+number is an internal subject identifier rather than a PMID. Do not generalise the
+id-parsing shortcut to another cohort without checking its identifier convention: a
+sibling cohort whose ids read ``STX_<subject>`` with no PMID stem would split that
+single publication into hundreds of pseudo-independent clusters, which is precisely
+the error this module exists to prevent. Prefer the curated field.
+
 Outputs ``reports/p2_revision/wp4_cluster_inference.json`` and
 ``reports/p2_revision/wp4_unique_pmids.json``.
 
@@ -297,7 +308,10 @@ def main() -> None:
         "seed": SEED,
         "n_bootstrap": N_BOOT,
         "n_permutations": N_PERM,
-        "clustering_variable": "source PMID parsed from case_id",
+        "clustering_variable": (
+            "source PMID from the curated annotation_overlap.json 'source_pmid' field "
+            "(via _common.load_cases), NOT parsed from the case_id"
+        ),
         "rationale": (
             "P1 Usage Notes, 'Clustered cases': 1,047 cases from 415 publications; "
             "confidence intervals and significance tests should cluster on source PMID."

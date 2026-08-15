@@ -1,0 +1,51 @@
+# I2 gate run -- 2026-08-15T18:46:04Z (after: 237-word abstract, ethics wording, r42 restored to the Introduction, verify_perfect_cells.py added to Table S12, TRIPOD checklist path added, Tables S2/S3 regenerated from the revision JSON, S3 merged into one float without the superseded equal-weight column, S12 wording tightened)
+consistency gate for reports/_local/P2_latest_version/GenoAgent_P2_System/main.tex
+
+  PASS  57
+  WARN  0
+  FAIL  0
+
+All hard checks passed.
+
+latex structural lint: reports/_local/P2_latest_version/GenoAgent_P2_System/main.tex
+  . all environments balanced
+  . braces balanced
+  . graphics targets checked
+  . input targets checked
+  . labels defined but never referenced: sec:stats
+  . 16 labels, 15 distinct references
+  . macro \PROMPTRANGEALL used but not defined in this file (expected from an \input); verify it resolves
+  . macro \PROMPTRANGEFAIR used but not defined in this file (expected from an \input); verify it resolves
+  . ~8983 words including tables, captions and references
+
+  no structural problems found
+
+latex structural lint: reports/_local/P2_latest_version/GenoAgent_P2_System/p2_supplementary.tex
+  . all environments balanced
+  . braces balanced
+  . graphics targets checked
+  . input targets checked
+  . labels defined but never referenced: fig:faith, fig:hard, sec:cost, sec:deepeval, sec:designweighted, sec:hardfig, sec:judge, sec:llmfamily, sec:lopo, sec:multiplicity, sec:prompt, sec:sampling, sec:tripod, tab:cost, tab:designweighted, tab:judge, tab:multiplicity, tab:prompt, tab:repro, tab:sampling, tab:tripod
+  . 24 labels, 3 distinct references
+  . macro \PROMPTRANGEALL used but not defined in this file (expected from an \input); verify it resolves
+  . macro \PROMPTRANGEFAIR used but not defined in this file (expected from an \input); verify it resolves
+  . ~3587 words including tables, captions and references
+
+  no structural problems found
+
+overlap-absent cases: 282
+  M top5   claimed=0.965 recomputed=0.9645 (272/282) OK
+  M top10  claimed=1.000 recomputed=1.0000 (282/282) OK
+  R top5   claimed=1.000 recomputed=1.0000 (282/282) OK
+  R top10  claimed=1.000 recomputed=1.0000 (282/282) OK
+  R top1   claimed=0.798 recomputed=0.7979 (225/282) OK
+  S top5   claimed=0.933 recomputed=0.9326 (263/282) OK
+  S top10  claimed=0.940 recomputed=0.9397 (265/282) OK
+  K top10  claimed=0.926 recomputed=0.9255 (261/282) OK
+
+  K: artefacts 282/282, list sizes {50: 282}, max causal rank 42, tied-score cases 4, worst-tie top10 0.9255
+  M: artefacts 282/282, list sizes {50: 282}, max causal rank 10, tied-score cases 2, worst-tie top10 0.9929
+  S: artefacts 282/282, list sizes {50: 282}, max causal rank 50, tied-score cases 21, worst-tie top10 0.922
+  R: artefacts 282/282, list sizes {50: 282}, max causal rank 4, tied-score cases 0, worst-tie top10 1.0
+
+wrote reports/p2_revision/i1_perfect_cells.json

@@ -1,0 +1,37 @@
+{
+  "work_package": "WP4b",
+  "description": "Publication-level paired t-test and Wilcoxon signed-rank test for the primary-family contrasts on the overlap-absent subset. The unit is the source publication: each contributes its top-1 rate under each system. Corroborates the cluster permutation test in wp4_cluster_inference.json.",
+  "unit": "source publication (PMID)",
+  "results": [
+    {
+      "contrast": "S vs K",
+      "comparator": "Exomiser (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "publication_mean_rate_a": 0.78,
+      "publication_mean_rate_b": 0.8123,
+      "publication_mean_difference": -0.0323,
+      "n_publications_discordant": 33,
+      "paired_t_statistic": -0.6537,
+      "paired_t_p": 0.5149,
+      "wilcoxon_statistic": 243.0,
+      "wilcoxon_p": 0.4928
+    },
+    {
+      "contrast": "S vs M",
+      "comparator": "LIRICAL (HPO-only)",
+      "subset": "overlap_absent",
+      "n_cases": 282,
+      "n_publications": 93,
+      "publication_mean_rate_a": 0.78,
+      "publication_mean_rate_b": 0.8139,
+      "publication_mean_difference": -0.034,
+      "n_publications_discordant": 37,
+      "paired_t_statistic": -0.6414,
+      "paired_t_p": 0.5229,
+      "wilcoxon_statistic": 300.0,
+      "wilcoxon_p": 0.4267
+    }
+  ]
+}

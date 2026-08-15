@@ -50,10 +50,10 @@ SUBSET_LABEL = {
 }
 
 FAMILY_LABEL = {
-    "primary": (
-        "Primary family --- top-1 superiority of GenoAgent over each curated "
-        "baseline on the overlap-absent subset"
-    ),
+    # Kept short: a \multicolumn row spans the table without tabularx's width
+    # guarantee, so a long label is the one thing here that can overrun the type
+    # block. The full statement of each family is in the prose above the table.
+    "primary": "Primary family --- GenoAgent vs each curated baseline, overlap-absent",
     "supportive": "Supportive family --- full-cohort and post-2020 GenoAgent vs Exomiser",
     "supportive_hard": "Supportive family --- hard cohort, overlap-absent",
 }
@@ -91,7 +91,14 @@ def star(p: float) -> str:
 
 
 # ---------------------------------------------------------------------------
-def table_s2() -> str:
+def s2_body() -> str:
+    """Machine-derived row body of Table S2.
+
+    Split out of table_s2() so the supplement's own table is filled from the same
+    rows as the standalone document instead of being transcribed by hand: the
+    primary-family adjusted columns were hand-corrected once, and a value that is
+    typed rather than emitted silently stops tracking the JSON it came from.
+    """
     w4 = json.loads((OUT_DIR / "wp4_cluster_inference.json").read_text())
     contrasts = w4["contrasts"]
 
@@ -111,7 +118,7 @@ def table_s2() -> str:
         h_case, b_case = holm(p_case), bh(p_case)
         h_clu, b_clu = holm(p_clu), bh(p_clu)
 
-        rows.append(f"\\multicolumn{{8}}{{@{{}}l}}{{\\textbf{{{FAMILY_LABEL[fam]}}}}}\\\\[2pt]")
+        rows.append(f"\\multicolumn{{9}}{{@{{}}l}}{{\\textbf{{{FAMILY_LABEL[fam]}}}}}\\\\[2pt]")
         for k, c in zip(keys, cs, strict=True):
             # The subset is part of the identity of a contrast: the supportive
             # family contains the same pair of systems on two different subsets.
@@ -131,14 +138,19 @@ def table_s2() -> str:
                         fmt_p(b_case[k]),
                         fmt_p(p_clu[k]),
                         fmt_p(h_clu[k]) + star(h_clu[k]),
+                        fmt_p(b_clu[k]),
                     ]
                 )
                 + " \\\\"
             )
-            _ = b_clu  # BH on clustered p reported in the JSON, omitted here for width
         rows.append("\\addlinespace")
 
-    body = "\n".join(rows)
+    return "\n".join(rows)
+
+
+# ---------------------------------------------------------------------------
+def table_s2() -> str:
+    body = s2_body()
 
     return (
         PREAMBLE
@@ -167,18 +179,18 @@ carries 282 cases from only 93.\\[4pt]
 \textbf{Legend.} $n$ (pub) is cases (unique source publications).
 $\Delta$ is GenoAgent $-$ comparator in top-1 accuracy.
 \sig~marks survival of Holm correction at $\alpha = 0.05$ within the family.
-Benjamini--Hochberg values on the clustered $p$ are in
-\texttt{reports/p2\_revision/wp4\_cluster\_inference.json}.\\[6pt]
+Both corrections are shown on both inference models.\\[6pt]
 
 \footnotesize
-\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.6cm} r r r r r r r@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.6cm} r r r r r r r r@{}}
 \toprule
  & & & \multicolumn{3}{c}{\textbf{Case-level}} &
- \multicolumn{2}{c}{\textbf{Publication-clustered}} \\
-\cmidrule(lr){4-6}\cmidrule(lr){7-8}
+ \multicolumn{3}{c}{\textbf{Publication-clustered}} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
 \textbf{Contrast} & \textbf{$n$ (pub)} & \textbf{$\Delta$} &
 \textbf{raw $p$} & \textbf{Holm} & \textbf{BH} &
-\textbf{raw $p$} & \textbf{Holm} \\
+\textbf{raw $p$} & \textbf{Holm} & \textbf{BH} \\
 \midrule
 \endhead
 """
@@ -197,8 +209,14 @@ discordances favouring GenoAgent over Exomiser on the overlap-absent subset, 20
 originate in a single publication (PMID 30968594, contributing 20 \emph{CYP21A2}
 cases that GenoAgent ranks first 20 times and Exomiser none). Three
 cluster-robust procedures beyond the permutation test agree: the publication-level
-bootstrap CI includes zero, a publication-level paired $t$-test gives $p = 0.51$,
-and a Wilcoxon signed-rank test on publication-level rates gives $p = 0.49$.
+bootstrap CI includes zero
+(\texttt{reports/p2\_revision/wp4\_cluster\_inference.json}), a publication-level
+paired $t$-test gives $p = 0.51$, and a Wilcoxon signed-rank test on
+publication-level rates gives $p = 0.49$ (both in
+\texttt{reports/p2\_revision/wp4b\_cluster\_robust\_checks.json}, produced by
+\texttt{scripts/eval/revision/cluster\_robust\_checks.py}). Taking the publication
+as the unit reverses the sign of the point estimate: mean top-1 rate per
+publication is 0.780 for GenoAgent against 0.812 for Exomiser.
 
 \medskip
 \noindent Both supportive families retain a Holm-significant contrast against
@@ -216,7 +234,12 @@ inference model.
 
 
 # ---------------------------------------------------------------------------
-def table_s3() -> str:
+def s3_bodies() -> tuple[list[str], list[str], list[str]]:
+    """Machine-derived row bodies of Table S3: weights, estimates, paired deltas.
+
+    Same reason as s2_body(): the supplement prints these rows, so they are
+    emitted once from the JSON rather than kept in two places.
+    """
     w5 = json.loads((OUT_DIR / "wp5_design_weighted.json").read_text())
 
     wrows = []
@@ -232,7 +255,7 @@ def table_s3() -> str:
     erows = []
     for sub in ("full", "overlap_present", "overlap_absent"):
         erows.append(
-            f"\\multicolumn{{6}}{{@{{}}l}}{{\\textbf{{{SUBSET_LABEL[sub]}}} "
+            f"\\multicolumn{{5}}{{@{{}}l}}{{\\textbf{{{SUBSET_LABEL[sub]}}} "
             f"($n = {est[('S', sub)]['n_cases']}$)}}\\\\[2pt]"
         )
         for cell in order:
@@ -243,9 +266,12 @@ def table_s3() -> str:
             name = CELL_NAMES[cell]
             if cell == "S":
                 name = f"\\textbf{{{name}}}"
+            # The equal-weight column is dropped: it was the previous version's
+            # sensitivity analysis, superseded by the Horvitz-Thompson estimate,
+            # and it survives in wp5_design_weighted.json for anyone who wants it.
             erows.append(
                 f"{cell} --- {name} & {e['unweighted_top1']:.3f} & "
-                f"{e['equal_weight_top1']:.3f} & {e['design_weighted_top1']:.3f} & "
+                f"{e['design_weighted_top1']:.3f} & "
                 f"({lo:.3f}, {hi:.3f}) & "
                 f"${e['design_weighted_top1'] - e['unweighted_top1']:+.3f}$ \\\\"
             )
@@ -261,6 +287,13 @@ def table_s3() -> str:
             f"${d['unweighted_delta']:+.3f}$ & ({ulo:+.3f}, {uhi:+.3f}) & "
             f"${d['design_weighted_delta']:+.3f}$ & ({lo:+.3f}, {hi:+.3f}) & {excl} \\\\"
         )
+
+    return wrows, erows, drows
+
+
+# ---------------------------------------------------------------------------
+def table_s3() -> str:
+    wrows, erows, drows = s3_bodies()
 
     return (
         PREAMBLE
@@ -299,11 +332,11 @@ population), each with a publication-clustered bootstrap interval
 
 \normalsize
 \vspace{1em}
-\textbf{Panel B. Top-1 accuracy under three weighting schemes.}\\[4pt]
+\textbf{Panel B. Unweighted versus design-weighted top-1.}\\[4pt]
 \footnotesize
-\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{5.2cm} r r r r r@{}}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{5.2cm} r r r r@{}}
 \toprule
-\textbf{System} & \textbf{Unweighted} & \textbf{Equal-weight} &
+\textbf{System} & \textbf{Unweighted} &
 \textbf{Design-weighted} & \textbf{95\% CI (clustered)} & \textbf{Shift} \\
 \midrule
 \endhead
@@ -368,6 +401,12 @@ yield, and both are reported.
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="reports/_local/GenoAgent_P2_System/P2-correction")
+    ap.add_argument(
+        "--fragments",
+        action="store_true",
+        help="also emit row-body fragments for pasting into p2_supplementary.tex, "
+        "so the printed tables carry the same machine-derived rows",
+    )
     args = ap.parse_args()
     out = (REPO / args.out) if not Path(args.out).is_absolute() else Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -376,6 +415,17 @@ def main() -> None:
     print(f"wrote {out / 'supp_table2_multiplicity.tex'}")
     (out / "supp_table3_design_weighted.tex").write_text(table_s3())
     print(f"wrote {out / 'supp_table3_design_weighted.tex'}")
+
+    if args.fragments:
+        wrows, erows, drows = s3_bodies()
+        for name, text in (
+            ("supp_table2_body.tex", s2_body()),
+            ("supp_table3_weights_body.tex", "\n".join(wrows)),
+            ("supp_table3_estimates_body.tex", "\n".join(erows)),
+            ("supp_table3_deltas_body.tex", "\n".join(drows)),
+        ):
+            (out / name).write_text(text + "\n")
+            print(f"wrote {out / name}")
 
 
 if __name__ == "__main__":

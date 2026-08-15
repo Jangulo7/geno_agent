@@ -22,6 +22,18 @@ mkdir -p "$STAGE"
 # Use Python's zipfile so no external `zip` binary is required.
 zip_dir() { ( cd "$STAGE" && python3 -m zipfile -c "$OUT/$1.zip" "$1" ) && ( cd "$OUT" && sha256sum "$1.zip" > "$1.zip.sha256" ); }
 
+# Croissant descriptors are authored by hand and live next to the zips in
+# figshare_uploads/ (they are also uploaded standalone, beside the zip). They are
+# NOT regenerated here, so a rebuild must copy the existing descriptor in or the
+# bundle silently loses it — which is what happened before this guard existed.
+copy_croissant() { # $1 = bundle name, $2 = staging dir
+  if [ -f "$OUT/$1.croissant.json" ]; then
+    cp "$OUT/$1.croissant.json" "$2/croissant.json"
+  else
+    echo "WARN $1: no $1.croissant.json in figshare_uploads/ — bundle will ship WITHOUT its Croissant descriptor."
+  fi
+}
+
 # Write per-file SHA-256 for every file in a staged bundle (excluding the
 # manifest itself), so each bundle is self-verifiable after download with
 # `sha256sum -c CHECKSUMS.sha256`.
@@ -43,6 +55,7 @@ cp data/MANIFEST.tsv "$COHD/"
 cp release/cohort/clustering_stats.json "$COHD/"
 cp release/cohort/README_FIGSHARE.md "$COHD/"
 cp "$CCBY" "$COHD/LICENSE"   # machine-discoverable dataset license (CC BY 4.0)
+copy_croissant "$COH" "$COHD"
 # per-file SHA-256 inside the bundle (good-practice integrity for a citable dataset)
 gen_checksums "$COHD"
 zip_dir "$COH"
@@ -58,6 +71,12 @@ if compgen -G "data/test_cases_hard/test_cases_hard.jsonl" >/dev/null; then
   cp data/test_cases_hard/*.jsonl data/test_cases_hard/*.json "$COHHD/"
   cp release/cohort/README_FIGSHARE_hard.md "$COHHD/README_FIGSHARE.md"
   cp "$CCBY" "$COHHD/LICENSE"
+  copy_croissant "$COHH" "$COHHD"
+  # test_cases_hard_manifest.json is in the deposited bundle but no longer exists
+  # on disk; a rebuild cannot reproduce it until 18b_build_hard_candidates.py is
+  # re-run to emit it. Do not re-upload a rebuilt hard bundle without checking.
+  [ -f "$COHHD/test_cases_hard_manifest.json" ] || \
+    echo "WARN $COHH: test_cases_hard_manifest.json absent — the deposited bundle has it; rebuild is NOT equivalent."
   gen_checksums "$COHHD"
   zip_dir "$COHH"
 else
@@ -66,10 +85,11 @@ else
 fi
 
 # ---------- P2: GenoAgent results (standard + hard cohorts) + figures/tables ----------
-P2="paper-genoagent-v1.1_data"
+P2="paper-genoagent-v1.3_data"
 P2D="$STAGE/$P2"
 mkdir -p "$P2D"
-# Tracked-only selection (git archive auto-excludes gitignored raw response dumps).
+# Tracked-only selection (git archive auto-excludes gitignored raw response dumps);
+# the one deliberate exception is Cell R, copied explicitly below.
 # Standard (eval_1050) + hard (eval_hard) per-cell rankings, aggregates, and judge
 # summaries; LOPO summaries; and the publication figures/tables. Manuscript drafts
 # and internal reports are privatised (local-only) and deliberately excluded — the
@@ -78,6 +98,19 @@ git archive --format=tar HEAD -- \
   data/eval_1050 data/eval_1050_lopo_full data/eval_hard \
   reports/figures reports/tables \
   | tar -x -C "$P2D"
+# Cell R (Resnik BMA similarity floor) per-case rankings are gitignored on disk —
+# regenerable in ~30 s, so they are kept out of git — but they back printed Table 1
+# rows in both cohorts and are what verify_perfect_cells.py reads, so the deposit
+# carries them explicitly. 8.3 MB per cohort; gene symbols and scores only, no PMC text.
+for COHORT in eval_1050 eval_hard; do
+  if compgen -G "data/$COHORT/cell_R_resnik/*.json" >/dev/null; then
+    mkdir -p "$P2D/data/$COHORT/cell_R_resnik"
+    cp data/"$COHORT"/cell_R_resnik/*.json "$P2D/data/$COHORT/cell_R_resnik/"
+  else
+    echo "SKIP data/$COHORT/cell_R_resnik: absent "\
+"(regenerate with scripts/eval/revision/resnik_ranker.py, then re-run this script)."
+  fi
+done
 # License-clean rationale derivatives (verbatim PMC text stripped) for the champion
 # cell, both cohorts.
 python scripts/eval/strip_responses_for_release.py \
