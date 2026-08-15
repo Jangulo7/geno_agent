@@ -91,7 +91,14 @@ def star(p: float) -> str:
 
 
 # ---------------------------------------------------------------------------
-def table_s2() -> str:
+def s2_body() -> str:
+    """Machine-derived row body of Table S2.
+
+    Split out of table_s2() so the supplement's own table is filled from the same
+    rows as the standalone document instead of being transcribed by hand: the
+    primary-family adjusted columns were hand-corrected once, and a value that is
+    typed rather than emitted silently stops tracking the JSON it came from.
+    """
     w4 = json.loads((OUT_DIR / "wp4_cluster_inference.json").read_text())
     contrasts = w4["contrasts"]
 
@@ -138,7 +145,12 @@ def table_s2() -> str:
             _ = b_clu  # BH on clustered p reported in the JSON, omitted here for width
         rows.append("\\addlinespace")
 
-    body = "\n".join(rows)
+    return "\n".join(rows)
+
+
+# ---------------------------------------------------------------------------
+def table_s2() -> str:
+    body = s2_body()
 
     return (
         PREAMBLE
@@ -216,7 +228,12 @@ inference model.
 
 
 # ---------------------------------------------------------------------------
-def table_s3() -> str:
+def s3_bodies() -> tuple[list[str], list[str], list[str]]:
+    """Machine-derived row bodies of Table S3: weights, estimates, paired deltas.
+
+    Same reason as s2_body(): the supplement prints these rows, so they are
+    emitted once from the JSON rather than kept in two places.
+    """
     w5 = json.loads((OUT_DIR / "wp5_design_weighted.json").read_text())
 
     wrows = []
@@ -261,6 +278,13 @@ def table_s3() -> str:
             f"${d['unweighted_delta']:+.3f}$ & ({ulo:+.3f}, {uhi:+.3f}) & "
             f"${d['design_weighted_delta']:+.3f}$ & ({lo:+.3f}, {hi:+.3f}) & {excl} \\\\"
         )
+
+    return wrows, erows, drows
+
+
+# ---------------------------------------------------------------------------
+def table_s3() -> str:
+    wrows, erows, drows = s3_bodies()
 
     return (
         PREAMBLE
@@ -368,6 +392,12 @@ yield, and both are reported.
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="reports/_local/GenoAgent_P2_System/P2-correction")
+    ap.add_argument(
+        "--fragments",
+        action="store_true",
+        help="also emit row-body fragments for pasting into p2_supplementary.tex, "
+        "so the printed tables carry the same machine-derived rows",
+    )
     args = ap.parse_args()
     out = (REPO / args.out) if not Path(args.out).is_absolute() else Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -376,6 +406,17 @@ def main() -> None:
     print(f"wrote {out / 'supp_table2_multiplicity.tex'}")
     (out / "supp_table3_design_weighted.tex").write_text(table_s3())
     print(f"wrote {out / 'supp_table3_design_weighted.tex'}")
+
+    if args.fragments:
+        wrows, erows, drows = s3_bodies()
+        for name, text in (
+            ("supp_table2_body.tex", s2_body()),
+            ("supp_table3_weights_body.tex", "\n".join(wrows)),
+            ("supp_table3_estimates_body.tex", "\n".join(erows)),
+            ("supp_table3_deltas_body.tex", "\n".join(drows)),
+        ):
+            (out / name).write_text(text + "\n")
+            print(f"wrote {out / name}")
 
 
 if __name__ == "__main__":
