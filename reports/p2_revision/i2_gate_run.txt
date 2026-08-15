@@ -1,4 +1,4 @@
-# I2 gate run -- 2026-08-15T18:22:11Z (after: 237-word abstract, ethics wording, r42 restored to the Introduction, verify_perfect_cells.py added to Table S12, TRIPOD checklist path added, Tables S2/S3 regenerated from the revision JSON with clustered BH restored, S12 provenance wording corrected)
+# I2 gate run -- 2026-08-15T18:46:04Z (after: 237-word abstract, ethics wording, r42 restored to the Introduction, verify_perfect_cells.py added to Table S12, TRIPOD checklist path added, Tables S2/S3 regenerated from the revision JSON, S3 merged into one float without the superseded equal-weight column, S12 wording tightened)
 consistency gate for reports/_local/P2_latest_version/GenoAgent_P2_System/main.tex
 
   PASS  57
@@ -25,11 +25,11 @@ latex structural lint: reports/_local/P2_latest_version/GenoAgent_P2_System/p2_s
   . braces balanced
   . graphics targets checked
   . input targets checked
-  . labels defined but never referenced: fig:faith, fig:hard, sec:cost, sec:deepeval, sec:designweighted, sec:hardfig, sec:judge, sec:llmfamily, sec:lopo, sec:multiplicity, sec:prompt, sec:sampling, sec:tripod, tab:cost, tab:designweighted, tab:designweighteddeltas, tab:judge, tab:multiplicity, tab:prompt, tab:repro, tab:sampling, tab:tripod
-  . 25 labels, 3 distinct references
+  . labels defined but never referenced: fig:faith, fig:hard, sec:cost, sec:deepeval, sec:designweighted, sec:hardfig, sec:judge, sec:llmfamily, sec:lopo, sec:multiplicity, sec:prompt, sec:sampling, sec:tripod, tab:cost, tab:designweighted, tab:judge, tab:multiplicity, tab:prompt, tab:repro, tab:sampling, tab:tripod
+  . 24 labels, 3 distinct references
   . macro \PROMPTRANGEALL used but not defined in this file (expected from an \input); verify it resolves
   . macro \PROMPTRANGEFAIR used but not defined in this file (expected from an \input); verify it resolves
-  . ~3614 words including tables, captions and references
+  . ~3587 words including tables, captions and references
 
   no structural problems found
 

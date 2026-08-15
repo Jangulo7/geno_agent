@@ -255,7 +255,7 @@ def s3_bodies() -> tuple[list[str], list[str], list[str]]:
     erows = []
     for sub in ("full", "overlap_present", "overlap_absent"):
         erows.append(
-            f"\\multicolumn{{6}}{{@{{}}l}}{{\\textbf{{{SUBSET_LABEL[sub]}}} "
+            f"\\multicolumn{{5}}{{@{{}}l}}{{\\textbf{{{SUBSET_LABEL[sub]}}} "
             f"($n = {est[('S', sub)]['n_cases']}$)}}\\\\[2pt]"
         )
         for cell in order:
@@ -266,9 +266,12 @@ def s3_bodies() -> tuple[list[str], list[str], list[str]]:
             name = CELL_NAMES[cell]
             if cell == "S":
                 name = f"\\textbf{{{name}}}"
+            # The equal-weight column is dropped: it was the previous version's
+            # sensitivity analysis, superseded by the Horvitz-Thompson estimate,
+            # and it survives in wp5_design_weighted.json for anyone who wants it.
             erows.append(
                 f"{cell} --- {name} & {e['unweighted_top1']:.3f} & "
-                f"{e['equal_weight_top1']:.3f} & {e['design_weighted_top1']:.3f} & "
+                f"{e['design_weighted_top1']:.3f} & "
                 f"({lo:.3f}, {hi:.3f}) & "
                 f"${e['design_weighted_top1'] - e['unweighted_top1']:+.3f}$ \\\\"
             )
@@ -329,11 +332,11 @@ population), each with a publication-clustered bootstrap interval
 
 \normalsize
 \vspace{1em}
-\textbf{Panel B. Top-1 accuracy under three weighting schemes.}\\[4pt]
+\textbf{Panel B. Unweighted versus design-weighted top-1.}\\[4pt]
 \footnotesize
-\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{5.2cm} r r r r r@{}}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{5.2cm} r r r r@{}}
 \toprule
-\textbf{System} & \textbf{Unweighted} & \textbf{Equal-weight} &
+\textbf{System} & \textbf{Unweighted} &
 \textbf{Design-weighted} & \textbf{95\% CI (clustered)} & \textbf{Shift} \\
 \midrule
 \endhead
