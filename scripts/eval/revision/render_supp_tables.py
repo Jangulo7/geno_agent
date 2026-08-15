@@ -50,10 +50,10 @@ SUBSET_LABEL = {
 }
 
 FAMILY_LABEL = {
-    "primary": (
-        "Primary family --- top-1 superiority of GenoAgent over each curated "
-        "baseline on the overlap-absent subset"
-    ),
+    # Kept short: a \multicolumn row spans the table without tabularx's width
+    # guarantee, so a long label is the one thing here that can overrun the type
+    # block. The full statement of each family is in the prose above the table.
+    "primary": "Primary family --- GenoAgent vs each curated baseline, overlap-absent",
     "supportive": "Supportive family --- full-cohort and post-2020 GenoAgent vs Exomiser",
     "supportive_hard": "Supportive family --- hard cohort, overlap-absent",
 }
@@ -118,7 +118,7 @@ def s2_body() -> str:
         h_case, b_case = holm(p_case), bh(p_case)
         h_clu, b_clu = holm(p_clu), bh(p_clu)
 
-        rows.append(f"\\multicolumn{{8}}{{@{{}}l}}{{\\textbf{{{FAMILY_LABEL[fam]}}}}}\\\\[2pt]")
+        rows.append(f"\\multicolumn{{9}}{{@{{}}l}}{{\\textbf{{{FAMILY_LABEL[fam]}}}}}\\\\[2pt]")
         for k, c in zip(keys, cs, strict=True):
             # The subset is part of the identity of a contrast: the supportive
             # family contains the same pair of systems on two different subsets.
@@ -138,11 +138,11 @@ def s2_body() -> str:
                         fmt_p(b_case[k]),
                         fmt_p(p_clu[k]),
                         fmt_p(h_clu[k]) + star(h_clu[k]),
+                        fmt_p(b_clu[k]),
                     ]
                 )
                 + " \\\\"
             )
-            _ = b_clu  # BH on clustered p reported in the JSON, omitted here for width
         rows.append("\\addlinespace")
 
     return "\n".join(rows)
@@ -179,18 +179,18 @@ carries 282 cases from only 93.\\[4pt]
 \textbf{Legend.} $n$ (pub) is cases (unique source publications).
 $\Delta$ is GenoAgent $-$ comparator in top-1 accuracy.
 \sig~marks survival of Holm correction at $\alpha = 0.05$ within the family.
-Benjamini--Hochberg values on the clustered $p$ are in
-\texttt{reports/p2\_revision/wp4\_cluster\_inference.json}.\\[6pt]
+Both corrections are shown on both inference models.\\[6pt]
 
 \footnotesize
-\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.6cm} r r r r r r r@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.6cm} r r r r r r r r@{}}
 \toprule
  & & & \multicolumn{3}{c}{\textbf{Case-level}} &
- \multicolumn{2}{c}{\textbf{Publication-clustered}} \\
-\cmidrule(lr){4-6}\cmidrule(lr){7-8}
+ \multicolumn{3}{c}{\textbf{Publication-clustered}} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
 \textbf{Contrast} & \textbf{$n$ (pub)} & \textbf{$\Delta$} &
 \textbf{raw $p$} & \textbf{Holm} & \textbf{BH} &
-\textbf{raw $p$} & \textbf{Holm} \\
+\textbf{raw $p$} & \textbf{Holm} & \textbf{BH} \\
 \midrule
 \endhead
 """
