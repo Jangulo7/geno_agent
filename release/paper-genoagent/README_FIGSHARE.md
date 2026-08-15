@@ -1,13 +1,17 @@
 # Figshare item — P2: geno_agent (GenoAgent)
 
-**Title.** GenoAgent: An Agentic-Workflow RAG System for Gene Prioritization in
-Rare Mendelian Disease (code and evaluation results)
+**Title.** Benchmark Contamination in Rare-Disease Gene Prioritisation:
+Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from 415
+Publications — GenoAgent code
 
-> Title is stable across versions and names the software artefact, not the paper's
-> finding, so existing citations keep resolving. Note it says *code and evaluation
-> results*: the deposit ships the figure/table **generators**
-> (`scripts/manuscript/`), not the manuscripts, which stay local until
-> publication.
+> Retitled 2026-08-15 to mirror the P2 manuscript title, so a reader arriving from
+> the paper recognises the deposit immediately. Safe to do because the item has
+> never been published, so no existing citation resolves against the old wording;
+> the DOI is unchanged either way. **Keep it in step with the paper**: if the title
+> changes at review, change it here, on Figshare, and in `CITATION.cff`. The
+> trailing *— GenoAgent code* is what distinguishes this Software item from the
+> manuscript itself: the deposit ships the figure/table **generators**
+> (`scripts/manuscript/`), not the manuscripts, which stay local until publication.
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
@@ -159,7 +163,8 @@ correctly.
   demos, tests, build/env config, `README.md` (the explanatory document),
   `REPRODUCE.md`, and **`reports/p2_revision/`** — the machine-readable output of
   every revision analysis, so any reported number can be checked without re-running
-  the pipeline.
+  the pipeline, including `tripod_llm_checklist.csv`, the machine-readable copy of
+  the supplement's completed TRIPOD-LLM checklist (Table S1).
 - `…_data.zip` — committed per-case results, aggregates, paired significance, and judge
   summaries for **both cohorts** (`data/eval_1050/`, `data/eval_hard/`), including the
   Cell R similarity-floor rankings, plus `data/eval_1050_lopo_full/` summaries; the
@@ -238,11 +243,29 @@ error is largest in exactly the leakage-stratified cells that are most interesti
 to interpret.
 
 reports/p2_revision/ holds the machine-readable output of every analysis, so any
-reported number can be checked without re-running the pipeline. Rationale
-grounding is reported from RAGAS; DeepEval's HallucinationMetric was evaluated and
-is not reported, because it does not discriminate on this task shape (chance-level
-AUROC 0.512 for predicting top-1 correctness, and a degenerate per-case
-distribution).
+reported number can be checked without re-running the pipeline, alongside the
+machine-readable TRIPOD-LLM checklist. Rationale grounding is reported from RAGAS;
+DeepEval's HallucinationMetric was evaluated and is not reported, because it does
+not discriminate on this task shape (chance-level AUROC 0.512 for predicting top-1
+correctness, and a degenerate per-case distribution).
+
+What is in the two files. The code zip is the tracked source at git tag
+paper-genoagent-v1.3: the agents and tools, the baselines, the evaluation harness
+including the revision re-analysis and verification scripts, the figure and table
+generators, and reports/p2_revision/. The data zip is the per-case results for
+every cell on both cohorts, the aggregates, paired significance and judge
+summaries, the leave-one-paper-out summaries, the prompt-sensitivity per-case
+outputs, the figures and tables, and a licence-clean rationale derivative with
+verbatim source text stripped. Raw LLM response dumps are withheld because they
+embed verbatim PMC Open Access passages of mixed licence.
+
+How to check the headline numbers without re-running anything. Every value in the
+paper traces to a file in reports/p2_revision/ through the script-to-result map in
+Supplementary Table S12. Two gates re-verify the manuscript against those files
+(consistency_check.py, latex_lint.py); their output is archived as
+reports/p2_revision/i2_gate_run.txt. The three secondary cells that read exactly
+1.000 are re-derived from the per-case artefacts by verify_perfect_cells.py,
+independently of the shared metric helper, and are 282/282 in each.
 
 The two-paper relationship
 P1 — methods + shared foundation (corpus/index recipe, ontologies, cohorts).
@@ -254,7 +277,7 @@ License: AGPL-3.0.
 
 ## How to cite
 
-> Angulo, J. (2026). *GenoAgent: An Agentic-Workflow RAG System for Gene
-> Prioritization in Rare Mendelian Disease (code and
-> evaluation results)* (v1.3) [Software & data set]. Figshare.
+> Angulo, J. (2026). *Benchmark Contamination in Rare-Disease Gene Prioritisation:
+> Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from
+> 415 Publications — GenoAgent code* (v1.3) [Software & data set]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814497
