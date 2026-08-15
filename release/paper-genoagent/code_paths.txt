@@ -7,12 +7,10 @@
 src
 # --- Evaluation harness (factorial, baselines, RAGAS/DeepEval, LOPO, aggregation) ---
 scripts/eval
-# --- Demos + shared utilities + manuscript tooling ---
-scripts/demo
+# --- Shared utilities + manuscript tooling ---
 scripts/manuscript
 scripts/utils
 scripts/__init__.py
-demos
 # --- Tests covering agents + tools + eval ---
 tests/__init__.py
 tests/test_graph.py

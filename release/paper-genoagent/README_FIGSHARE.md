@@ -160,7 +160,7 @@ correctly.
 - `…_code_<commit>.zip` — agents, tools, baselines, the evaluation harness (factorial,
   RAGAS, LOPO, aggregation, multiplicity correction, and the `revision/`
   re-analysis + verification suite), the figure generators,
-  demos, tests, build/env config, `README.md` (the explanatory document),
+  tests, build/env config, `README.md` (the explanatory document),
   `REPRODUCE.md`, and **`reports/p2_revision/`** — the machine-readable output of
   every revision analysis, so any reported number can be checked without re-running
   the pipeline, including `tripod_llm_checklist.csv`, the machine-readable copy of

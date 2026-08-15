@@ -1,32 +1,0 @@
-2026-05-09 18:08:43,222 [INFO] HTTP Request: GET http://localhost:6533 "HTTP/1.1 200 OK"
-2026-05-09 18:08:43,224 [INFO] Connected to Qdrant at localhost:6533
-2026-05-09 18:08:43,225 [INFO] HTTP Request: GET http://localhost:6533/collections "HTTP/1.1 200 OK"
-2026-05-09 18:08:43,226 [INFO] Collection 'geno_agent_pmc_oa_v1' already exists; skipping create. Pass --recreate to drop and rebuild.
-2026-05-09 18:08:43,235 [INFO] Loading BM25 sparse model: Qdrant/bm25
-2026-05-09 18:08:43,292 [INFO] Reading demo.parquet
-upsert demo:   0%|          | 0/13 [00:00<?, ?it/s]2026-05-09 18:08:43,537 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:   8%|▊         | 1/13 [00:00<00:01,  9.69it/s]2026-05-09 18:08:43,635 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:43,729 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:  23%|██▎       | 3/13 [00:00<00:00, 10.21it/s]2026-05-09 18:08:43,826 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:43,926 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:  38%|███▊      | 5/13 [00:00<00:00, 10.18it/s]2026-05-09 18:08:44,029 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,119 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:  54%|█████▍    | 7/13 [00:00<00:00, 10.27it/s]2026-05-09 18:08:44,220 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,310 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:  69%|██████▉   | 9/13 [00:00<00:00, 10.34it/s]2026-05-09 18:08:44,395 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,484 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo:  85%|████████▍ | 11/13 [00:01<00:00, 10.70it/s]2026-05-09 18:08:44,579 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,641 [INFO] HTTP Request: PUT http://localhost:6533/collections/geno_agent_pmc_oa_v1/points?wait=true "HTTP/1.1 200 OK"
-upsert demo: 100%|██████████| 13/13 [00:01<00:00, 11.31it/s]upsert demo: 100%|██████████| 13/13 [00:01<00:00, 10.76it/s]
-2026-05-09 18:08:44,642 [INFO]   demo.parquet: 1,625 points uploaded
-2026-05-09 18:08:44,643 [INFO] === Upload complete: 1,625 points ===
-2026-05-09 18:08:44,644 [INFO] HTTP Request: GET http://localhost:6533/collections/geno_agent_pmc_oa_v1 "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,648 [INFO] HTTP Request: POST http://localhost:6533/collections/geno_agent_pmc_oa_v1/points/count "HTTP/1.1 200 OK"
-2026-05-09 18:08:44,649 [INFO] === Collection summary ===
-2026-05-09 18:08:44,649 [INFO]   name:         geno_agent_pmc_oa_v1
-2026-05-09 18:08:44,649 [INFO]   status:       green
-2026-05-09 18:08:44,649 [INFO]   dense:        size=768, distance=COSINE, on_disk=True
-2026-05-09 18:08:44,649 [INFO]   sparse(bm25): modifier=IDF
-2026-05-09 18:08:44,649 [INFO]   on_disk_payload: True
-2026-05-09 18:08:44,649 [INFO]   points:       1625
-[W509 18:08:44.283390615 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

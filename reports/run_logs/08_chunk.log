@@ -1,11 +1,0 @@
-2026-05-09 18:08:25,708 [INFO] Loading tokenizer: NeuML/pubmedbert-base-embeddings
-2026-05-09 18:08:26,071 [INFO] Tokenizer loaded; vocab=30522, max_tokens=512, overlap=50
-chunking:   0%|          | 0/89 [00:00<?, ?it/s]chunking:  10%|█         | 9/89 [00:00<00:00, 85.94it/s]chunking:  20%|██        | 18/89 [00:00<00:01, 68.01it/s]chunking:  29%|██▉       | 26/89 [00:00<00:01, 60.75it/s]chunking:  39%|███▉      | 35/89 [00:00<00:00, 69.91it/s]chunking:  48%|████▊     | 43/89 [00:00<00:00, 62.00it/s]chunking:  58%|█████▊    | 52/89 [00:00<00:00, 68.35it/s]chunking:  67%|██████▋   | 60/89 [00:00<00:00, 66.27it/s]chunking:  81%|████████  | 72/89 [00:01<00:00, 78.55it/s]chunking:  91%|█████████ | 81/89 [00:01<00:00, 76.86it/s]chunking: 100%|██████████| 89/89 [00:01<00:00, 76.02it/s]chunking: 100%|██████████| 89/89 [00:01<00:00, 71.64it/s]
-2026-05-09 18:08:27,373 [INFO] === Chunking summary ===
-2026-05-09 18:08:27,373 [INFO]   articles in:        89
-2026-05-09 18:08:27,373 [INFO]   chunks out:         1625
-2026-05-09 18:08:27,373 [INFO]   avg chunks/article: 18.3
-2026-05-09 18:08:27,373 [INFO]   short sections skipped: 21
-2026-05-09 18:08:27,373 [INFO]   by section_type:    {'case': 20, 'conclusion': 57, 'discussion': 255, 'introduction': 170, 'methods': 315, 'other': 346, 'results': 462}
-2026-05-09 18:08:27,373 [INFO]   output:             /mnt/c/pmc_workspace/chunks/demo.jsonl
-[W509 18:08:27.117865159 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

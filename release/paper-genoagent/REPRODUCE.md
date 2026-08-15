@@ -50,17 +50,18 @@ python scripts/eval/run_deepeval.py
 
 ## Headline result to reproduce
 
-> Fair-comparison cohort (overlap-absent, n=282): geno_agent **Cell S** is the
-> top-ranked system, **top-1 = 0.858**, beating Exomiser HPO-only (+0.078, p=0.015)
-> and LIRICAL HPO-only (+0.082, p=0.014); both survive Holm correction. LOPO leaves
-> the fair-cohort top-1 unchanged (0.858 → 0.858, McNemar p=1.0).
+> Overlap-absent subset (n=282, from 93 publications): geno_agent **Cell S** has the
+> highest top-1, **0.858**, against Exomiser HPO-only 0.780 and LIRICAL HPO-only
+> 0.777. Both margins (+0.078, +0.082) clear Holm correction at case level and
+> **not** under publication-clustered inference (p=0.45 and 0.41), so the system
+> **matches** rather than exceeds the curated baselines at rank 1 on the standard
+> candidate lists. What survives clustering: the retrieval-and-workflow contribution
+> over the identical backbone (+0.191, p<0.001), the post-2020 advantage over
+> Exomiser (+0.094, Holm p=0.002) and the hard-cohort margin over Exomiser (+0.153,
+> Holm p=0.002). LOPO leaves the overlap-absent top-1 unchanged (0.858 → 0.858,
+> McNemar p=1.0).
 
 Committed result artifacts: `data/eval_1050/_results_summary.{json,md}`,
 `_results_stratified.*`, `_results_recency.*`, and
 `data/eval_1050_lopo_full/_lopo_*` (see `artifacts_manifest.tsv`).
 
-## 4. Demo (no GPU / index needed)
-
-```bash
-streamlit run demos/streamlit_thesis_demo.py   # browse pre-computed rankings
-```
