@@ -14,7 +14,7 @@ Lives in the "GenoAgent" project alongside the methods and system items.
 ## Metadata to set (drives discoverability → citations)
 
 - **Type:** Dataset · **License:** CC BY 4.0 · **Version:** v1.0
-- **Keywords:** rare disease, gene prioritization, benchmark, Human Phenotype Ontology,
+- **Keywords:** rare disease, gene prioritisation, benchmark, Human Phenotype Ontology,
   Phenopacket, clinical genomics, retrieval-augmented generation
 - **Related identifiers:** link to the methods/foundation item DOI (IsDerivedFrom /
   IsSupplementedBy) and to GA4GH Phenopacket Store v0.1.26.

@@ -9,7 +9,7 @@ working repository — the bundles are assembled *from* a git tag plus on-disk d
 | Paper | Scope | Repository | Tag |
 |---|---|---|---|
 | **P1** | Methods / shared foundation (PMC-OA corpus + Qdrant index build, ontology pinning, n=1,047 cohort construction) | this repo (`geno_agent`) | `paper-methods-v1.0` |
-| **P2** | GenoAgent — agentic-workflow RAG gene prioritization + evaluation | this repo (`geno_agent`) | `paper-genoagent-v1.0` |
+| **P2** | GenoAgent — four-agent LangGraph RAG gene prioritisation + evaluation | this repo (`geno_agent`) | `paper-genoagent-v1.0` |
 | **P3** | Safety benchmark (variant interpretation) — **reuses P1's shared foundation by DOI, and forks P2's agent code under AGPL** | separate repo `geno_agent_variant` | (in that repo) |
 
 The **shared foundation** (Qdrant PMC-OA index recipe, pinned ontologies,

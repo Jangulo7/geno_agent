@@ -1,10 +1,16 @@
 # geno_agent
 
-**An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease**
+**GenoAgent — a four-agent LangGraph RAG system for literature-based causal gene
+prioritisation in rare Mendelian disease**
 
-> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047). An
-> end-to-end agentic-workflow RAG system for literature-based causal gene
-> prioritisation in rare Mendelian disease.
+Code and evaluation for *Benchmark Contamination in Rare-Disease Gene
+Prioritisation: Annotation-Overlap Stratification and Clustered Inference on 1,047
+Cases from 415 Publications*.
+
+> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047). Four
+> role-specialised agents — Query Planner, Retriever, Critic, Synthesizer — over a
+> PMC Open Access retrieval index, with MedCPT cross-encoder reranking and a
+> Qwen3-8B LLM-as-Evidence-Aggregator.
 >
 > **Headline (n=1,047, overlap-absent subset).** The cohort's cases derive from only
 > 415 source publications, so all inference clusters on source publication (a
@@ -65,13 +71,13 @@ Unlike monolithic RAG systems that perform a single retrieve-and-generate pass, 
 
 Rare diseases affect an estimated [300 million people worldwide](https://doi.org/10.1038/s41431-019-0508-0) — between 3.5% and 8% of the global population. Despite the maturation of next-generation sequencing, roughly **half of all exome and genome sequencing cases remain without a molecular diagnosis** ([Clark et al., 2018](https://doi.org/10.1038/s41525-018-0053-8)). A substantial fraction of these undiagnosed cases is not due to undetectable variants but to the limits of current bioinformatic tools when interpreting **variants of uncertain significance** (VUS), particularly in patients with atypical or previously undescribed phenotypes.
 
-Phenotype-driven prioritization tools such as [Exomiser](https://exomiser.readthedocs.io) (Smedley et al., 2015) work well when the causal gene is already well annotated in curated phenotype databases. They cannot surface novel or emerging gene–phenotype associations that exist *only* in unstructured literature — which is precisely where the most diagnostically valuable case reports, functional studies, and phenotype-expansion papers live. PubMed indexes over a million new articles per year, and the PMC Open Access subset alone contains more than four million full-text articles. No human curator can keep pace.
+Phenotype-driven prioritisation tools such as [Exomiser](https://exomiser.readthedocs.io) (Smedley et al., 2015) work well when the causal gene is already well annotated in curated phenotype databases. They cannot surface novel or emerging gene–phenotype associations that exist *only* in unstructured literature — which is precisely where the most diagnostically valuable case reports, functional studies, and phenotype-expansion papers live. PubMed indexes over a million new articles per year, and the PMC Open Access subset alone contains more than four million full-text articles. No human curator can keep pace.
 
 This project asks whether an agentic-workflow RAG architecture, deployed on local hardware and grounded in the published literature, can meaningfully assist this synthesis step for clinical genetics teams.
 
 ## What this project contributes
 
-To our knowledge, this is the first end-to-end validated agentic-workflow RAG system designed and evaluated specifically for **causal gene prioritization in rare Mendelian disease via literature evidence synthesis**. Specifically, the project contributes:
+To our knowledge, this is the first end-to-end validated agentic-workflow RAG system designed and evaluated specifically for **causal gene prioritisation in rare Mendelian disease via literature evidence synthesis**. Specifically, the project contributes:
 
 1. **An open, reproducible architecture** — four role-specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated as a LangGraph agentic workflow, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
@@ -515,8 +521,8 @@ please cite this repository:
 ```bibtex
 @misc{angulo2026geno_agent,
   author       = {Angulo, Johanna},
-  title        = {geno\_agent: An Agentic-Workflow RAG System for
-                  Gene Prioritization in Rare Mendelian Disease},
+  title        = {geno\_agent: A Four-Agent LangGraph RAG System for
+                  Gene Prioritisation in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
   note         = {Doctoral first paper (Universidad Europea de Madrid; n=1,047).}

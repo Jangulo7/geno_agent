@@ -12,7 +12,7 @@ Causal Gene Prioritisation (n=1,047)
 ## Summary
 
 A deterministic, reproducible benchmark of **1,047 rare-disease cases** for
-evaluating *literature-based* causal gene prioritization. Each case pairs a
+evaluating *literature-based* causal gene prioritisation. Each case pairs a
 patient phenotype profile (Human Phenotype Ontology terms) with a 50-gene
 candidate list (1 causal + 49 distractor genes) and the true causal gene,
 stratified across four disease categories. Derived from the GA4GH Phenopacket
