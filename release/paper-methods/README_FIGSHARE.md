@@ -1,14 +1,26 @@
 # Figshare item — P1: geno_agent methods & shared foundation
 
-**Title.** GenoAgent: Methods and Shared Foundation: A Reproducible PMC-OA
-Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort
+**Title.** An Annotation-Overlap-Flagged 1,047-Case Rare-Disease
+Gene-Prioritisation Benchmark and PMC Open Access Index — methods code and build
+artefacts
+
+> Retitled 2026-08-15 to mirror the P1 manuscript title, so a reader arriving from
+> the paper recognises the deposit, and de-branded for the same reason records 1
+> and 2 were: the manuscript names no downstream system. The trailing qualifier is
+> what distinguishes this Software item from the paper and from the two cohort
+> Datasets — this record is the build recipe and verification artefacts, not the
+> benchmark itself. Safe to rename because the item is still unpublished, so no
+> citation resolves against the old wording; the DOI is unchanged. **Keep it in
+> step with the paper**: if the title changes at review, change it here, on
+> Figshare, and in `CITATION.cff`.
 
 **Author.** Johanna Angulo (Universidad Europea de Madrid)
 
 **License.** Code: AGPL-3.0-or-later. Data artifacts retain upstream licenses
 (cohort: CC BY 4.0, derived from the GA4GH Phenopacket Store).
 
-**Git tag.** `paper-methods-v1.1`  ·  **Repository.** https://github.com/Jangulo7/geno_agent
+**Version.** v1.2  ·  **Git tag.** `paper-methods-v1.2` (resolve the exact commit with `git rev-parse paper-methods-v1.2`)
+**Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
 
@@ -65,6 +77,7 @@ upstream by pinned version); any personal correspondence.
 
 ## How to cite
 
-> Angulo, J. (2026). *GenoAgent: Methods and Shared Foundation: A Reproducible
-> PMC-OA Retrieval Index and n=1,047 Rare-Disease Gene-Prioritization Cohort*
-> [Data set & software]. Figshare. https://doi.org/10.6084/m9.figshare.32814491
+> Angulo, J. (2026). *An Annotation-Overlap-Flagged 1,047-Case Rare-Disease
+> Gene-Prioritisation Benchmark and PMC Open Access Index — methods code and build
+> artefacts* (v1.2) [Data set & software]. Figshare.
+> https://doi.org/10.6084/m9.figshare.32814491
