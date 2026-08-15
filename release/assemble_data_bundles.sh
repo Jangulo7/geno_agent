@@ -22,6 +22,18 @@ mkdir -p "$STAGE"
 # Use Python's zipfile so no external `zip` binary is required.
 zip_dir() { ( cd "$STAGE" && python3 -m zipfile -c "$OUT/$1.zip" "$1" ) && ( cd "$OUT" && sha256sum "$1.zip" > "$1.zip.sha256" ); }
 
+# Croissant descriptors are authored by hand and live next to the zips in
+# figshare_uploads/ (they are also uploaded standalone, beside the zip). They are
+# NOT regenerated here, so a rebuild must copy the existing descriptor in or the
+# bundle silently loses it — which is what happened before this guard existed.
+copy_croissant() { # $1 = bundle name, $2 = staging dir
+  if [ -f "$OUT/$1.croissant.json" ]; then
+    cp "$OUT/$1.croissant.json" "$2/croissant.json"
+  else
+    echo "WARN $1: no $1.croissant.json in figshare_uploads/ — bundle will ship WITHOUT its Croissant descriptor."
+  fi
+}
+
 # Write per-file SHA-256 for every file in a staged bundle (excluding the
 # manifest itself), so each bundle is self-verifiable after download with
 # `sha256sum -c CHECKSUMS.sha256`.
@@ -43,6 +55,7 @@ cp data/MANIFEST.tsv "$COHD/"
 cp release/cohort/clustering_stats.json "$COHD/"
 cp release/cohort/README_FIGSHARE.md "$COHD/"
 cp "$CCBY" "$COHD/LICENSE"   # machine-discoverable dataset license (CC BY 4.0)
+copy_croissant "$COH" "$COHD"
 # per-file SHA-256 inside the bundle (good-practice integrity for a citable dataset)
 gen_checksums "$COHD"
 zip_dir "$COH"
@@ -58,6 +71,12 @@ if compgen -G "data/test_cases_hard/test_cases_hard.jsonl" >/dev/null; then
   cp data/test_cases_hard/*.jsonl data/test_cases_hard/*.json "$COHHD/"
   cp release/cohort/README_FIGSHARE_hard.md "$COHHD/README_FIGSHARE.md"
   cp "$CCBY" "$COHHD/LICENSE"
+  copy_croissant "$COHH" "$COHHD"
+  # test_cases_hard_manifest.json is in the deposited bundle but no longer exists
+  # on disk; a rebuild cannot reproduce it until 18b_build_hard_candidates.py is
+  # re-run to emit it. Do not re-upload a rebuilt hard bundle without checking.
+  [ -f "$COHHD/test_cases_hard_manifest.json" ] || \
+    echo "WARN $COHH: test_cases_hard_manifest.json absent — the deposited bundle has it; rebuild is NOT equivalent."
   gen_checksums "$COHHD"
   zip_dir "$COHH"
 else
