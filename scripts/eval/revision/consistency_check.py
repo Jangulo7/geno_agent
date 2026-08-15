@@ -162,7 +162,21 @@ def stale_numbers(tex: str) -> None:
         # only reported when the correction is missing.
         has_new = re.search(rf"{re.escape(str(recomputed)[:5])}", tex) is not None
         has_old = re.search(rf"\b{re.escape(str(claimed))}\b", tex) is not None
-        if has_old and not has_new:
+        # A superseded literal is not evidence of staleness when the same three
+        # decimals are the *correct* value of another cell that reproduced: the
+        # search is over the whole document and cannot tell the two apart.
+        elsewhere = sorted(
+            f"{o['cohort']}/{o['subset']}/{o['cell']}/{o['metric']}"
+            for o in rows
+            if o["status"] == "OK" and f"{float(o['recomputed']):.3f}" == f"{float(claimed):.3f}"
+        )
+        if has_old and not has_new and elsewhere:
+            PASSES.append(
+                f"superseded literal {claimed} is a benign collision for "
+                f"{r['cohort']}/{r['subset']}/{r['cell']}/{r['metric']} "
+                f"(same 3dp as {', '.join(elsewhere)})"
+            )
+        elif has_old and not has_new:
             warn(
                 "stale value still asserted",
                 f"{r['cohort']}/{r['subset']}/{r['cell']}/{r['metric']}: "
@@ -203,6 +217,8 @@ def provenance(tex: str) -> None:
         "judge_provenance.py",
         "prompt_sensitivity.py",
     ]
+    # The script-to-result map lives in Supplementary Table S12, so the check
+    # spans main text and supplement: a script named in either is not orphaned.
     # Filenames are typeset as \texttt{foo\_bar.py}, so \_ must be unescaped
     # before matching or every underscored script reads as absent.
     flat = tex.replace("\\_", "_")
@@ -252,39 +268,97 @@ def todos(tex: str) -> None:
 # 6. References: cited, sequential, no gaps
 # ---------------------------------------------------------------------------
 def references(tex: str) -> None:
-    m = re.search(r"\\section\*\{References\}(.*?)\\end\{enumerate\}", tex, re.S)
-    if not m:
-        check("reference list found", False, "could not locate the References block")
-        return
-    n_refs = len(re.findall(r"^\\item ", m.group(1), flags=re.M))
-    check("reference list non-empty", n_refs > 0, "no \\item entries")
+    """Reference-list integrity for a manual ``thebibliography``.
 
-    body = tex[: m.start()]
-    cited: set[int] = set()
-    order: list[int] = []
-    for mm in re.finditer(r"\[(\d+(?:\s*,\s*\d+)*)\]", body):
-        for tok in mm.group(1).split(","):
-            k = int(tok.strip())
-            if k not in cited:
-                cited.add(k)
-                order.append(k)
+    The manuscript keeps an explicit ``thebibliography`` rather than a .bib, so
+    the printed number of an entry is simply its position in the \\bibitem
+    sequence. Three things can therefore go wrong silently: an entry defined but
+    never cited, a \\cite key with no entry, and -- the Vancouver requirement --
+    entries whose order does not follow first citation in the text. The optional
+    width argument is checked too, since it is written by hand and does not
+    track the entry count.
 
-    uncited = sorted(set(range(1, n_refs + 1)) - cited)
-    check("every reference is cited", not uncited, f"uncited: {uncited}")
+    The older ``\\section*{References}`` + ``enumerate`` form with hard-coded
+    bracketed numbers is still accepted, so the gate keeps working on the
+    superseded sources.
+    """
+    m = re.search(r"\\begin\{thebibliography\}\{([^}]*)\}(.*?)\\end\{thebibliography\}", tex, re.S)
+    if m:
+        width, block = m.group(1), m.group(2)
+        keys = re.findall(r"\\bibitem(?:\[[^\]]*\])?\{([^}]+)\}", block)
+        n_refs = len(keys)
+        check("reference list non-empty", n_refs > 0, "no \\bibitem entries")
 
-    over = sorted(k for k in cited if k > n_refs)
-    check("no citation exceeds the list length", not over, f"out of range: {over}")
+        dupes = sorted({k for k in keys if keys.count(k) > 1})
+        check("no duplicate \\bibitem keys", not dupes, f"duplicated: {dupes}")
+
+        # The width argument only sets the label box, but a value narrower than
+        # the entry count is the fingerprint of entries appended without
+        # re-checking the list.
+        check(
+            "thebibliography width argument covers the entry count",
+            width.isdigit() and int(width) >= n_refs,
+            f"\\begin{{thebibliography}}{{{width}}} with {n_refs} entries",
+        )
+
+        body = tex[: m.start()]
+        order: list[str] = []
+        for mm in re.finditer(r"\\cite[tp]?\*?(?:\[[^\]]*\])*\{([^}]+)\}", body):
+            for tok in mm.group(1).split(","):
+                k = tok.strip()
+                if k and k not in order:
+                    order.append(k)
+
+        undefined = [k for k in order if k not in keys]
+        check("every \\cite key has a \\bibitem", not undefined, f"undefined: {undefined}")
+
+        uncited = [k for k in keys if k not in order]
+        check("every reference is cited", not uncited, f"uncited: {uncited}")
+
+        position = {k: i + 1 for i, k in enumerate(keys)}
+        numbers = [position[k] for k in order if k in position]
+    else:
+        m = re.search(r"\\section\*\{References\}(.*?)\\end\{enumerate\}", tex, re.S)
+        if not m:
+            check(
+                "reference list found",
+                False,
+                "no \\begin{thebibliography} and no \\section*{References} block",
+            )
+            return
+        n_refs = len(re.findall(r"^\\item ", m.group(1), flags=re.M))
+        check("reference list non-empty", n_refs > 0, "no \\item entries")
+
+        body = tex[: m.start()]
+        seen: set[int] = set()
+        numbers = []
+        for mm in re.finditer(r"\[(\d+(?:\s*,\s*\d+)*)\]", body):
+            for tok in mm.group(1).split(","):
+                k = int(tok.strip())
+                if k not in seen:
+                    seen.add(k)
+                    numbers.append(k)
+
+        uncited_n = sorted(set(range(1, n_refs + 1)) - seen)
+        check("every reference is cited", not uncited_n, f"uncited: {uncited_n}")
+
+        over = sorted(k for k in seen if k > n_refs)
+        check("no citation exceeds the list length", not over, f"out of range: {over}")
 
     # sequential-by-first-appearance is the Vancouver requirement
-    if order != sorted(order):
-        firstbad = next((i for i in range(1, len(order)) if order[i] < order[i - 1]), None)
-        warn(
-            "references not sequential by first appearance",
-            f"first out-of-order citation: [{order[firstbad]}] appears after "
-            f"[{order[firstbad - 1]}]",
+    if numbers != sorted(numbers):
+        outoforder = [
+            f"[{numbers[i]}] after [{numbers[i - 1]}]"
+            for i in range(1, len(numbers))
+            if numbers[i] < numbers[i - 1]
+        ]
+        check(
+            "references sequential by first appearance",
+            False,
+            f"{len(outoforder)} inversion(s): {'; '.join(outoforder)}",
         )
     else:
-        PASSES.append("references sequential by first appearance")
+        PASSES.append(f"references sequential by first appearance ({n_refs} entries)")
 
 
 # ---------------------------------------------------------------------------
@@ -292,16 +366,29 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--tex",
-        default="reports/_local/GenoAgent_P2_System/P2-correction/main.tex",
+        default="reports/_local/P2_latest_version/GenoAgent_P2_System/main.tex",
+    )
+    ap.add_argument(
+        "--supp",
+        default="reports/_local/P2_latest_version/GenoAgent_P2_System/p2_supplementary.tex",
+        help="supplement; searched alongside the main text for the script-to-result map",
     )
     args = ap.parse_args()
-    path = (REPO / args.tex) if not Path(args.tex).is_absolute() else Path(args.tex)
+
+    def resolve(p: str) -> Path:
+        return (REPO / p) if not Path(p).is_absolute() else Path(p)
+
+    path = resolve(args.tex)
     tex = path.read_text()
+    supp_path = resolve(args.supp) if args.supp else None
+    supp = supp_path.read_text() if supp_path and supp_path.exists() else ""
+    if args.supp and not supp:
+        warn("supplement not found", f"{args.supp} -- provenance checked on main text alone")
 
     cross_checks(tex)
     terminology(tex)
     stale_numbers(tex)
-    provenance(tex)
+    provenance(tex + "\n" + supp)
     todos(tex)
     references(tex)
 
