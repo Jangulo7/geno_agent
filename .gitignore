@@ -165,6 +165,10 @@ release/index_fingerprint/chunk_counts_by_pmcid.tsv
 # should not see unpublished write-ups. The machine-readable outputs in
 # reports/p2_revision/*.{json,csv} ARE committed — they are what backs every
 # number in the paper and what a reviewer needs to check it.
+# Reviewer-preparation Q&A — a private study document, not a reproducibility
+# artefact: it restates the papers' arguments and rehearses answers to review
+# questions. The README is the repo's single explanatory document.
+reports/_research_qa/
 reports/p2_revision/CHANGELOG.md
 reports/p2_revision/OPEN_ITEMS.md
 reports/p2_revision/I1_I5_presubmission_checks.md
