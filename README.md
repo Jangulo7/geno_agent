@@ -1,6 +1,7 @@
-# geno_agent
+# GenoAgent: Benchmark Contamination in Rare-Disease Gene Prioritisation: Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from 415 Publications 
 
-**An Agentic-Workflow RAG System for Gene Prioritization in Rare Mendelian Disease**
+
+**An Agentic-Workflow RAG System for Gene Prioritization in Rare Disease**
 
 > **Doctoral first paper** (Universidad Europea de Madrid; n=1,047). An
 > end-to-end agentic-workflow RAG system for literature-based causal gene
