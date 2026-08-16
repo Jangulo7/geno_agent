@@ -146,7 +146,7 @@ def s2_body() -> str:
                     [
                         label,
                         f"{c['n_cases']} ({c['n_publications']})",
-                        f"${c['delta']:+.3f}$",
+                        f"${d3(c['delta'], signed=True)}$",
                         fmt_p(p_case[k]),
                         fmt_p(h_case[k]) + star(h_case[k]),
                         fmt_p(b_case[k]),
