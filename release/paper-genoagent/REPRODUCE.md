@@ -7,6 +7,28 @@ foundation** (Qdrant index + n=1,047 cohort) — see P1's `REPRODUCE.md` / DOI f
 > [`reports/methodology.md`](../../reports/methodology.md) and
 > [`reports/agent_architecture.md`](../../reports/agent_architecture.md).
 
+## Verifying without re-running anything
+
+Most readers want to check the reported numbers, not regenerate them. That path is
+minutes, not a day, and needs no GPU, no vLLM server and no API key: every value in
+the paper is re-derived from the saved per-case artefacts by a script under
+`scripts/eval/revision/`, deterministic at seed 42.
+
+```bash
+python scripts/eval/revision/metric_audit.py        # re-derives all 90 Table 1 cells and diffs them
+python scripts/eval/revision/cluster_inference.py   # publication-clustered intervals and paired tests
+python scripts/eval/revision/design_weighted.py     # Horvitz-Thompson population estimates
+python scripts/eval/revision/verify_perfect_cells.py  # the three 1.000 cells, without the shared helper
+```
+
+`metric_audit.py` prints `N claims checked: N exact` and writes
+`reports/p2_revision/wp7_metric_audit.{csv,json}`; any disagreement between a
+printed value and its recomputation appears there by name. The full script-by-script
+map is the **Verifying the reported numbers** section of `README.md`.
+
+Sections 1-3 below regenerate the results from scratch, which requires the model
+weights, the retrieval index and roughly a day of GPU time.
+
 ## 0. Preconditions
 
 - P1 foundation present: Qdrant collection `geno_agent_pmc_oa_v1` (52,777,395 pts,
@@ -28,10 +50,10 @@ python scripts/eval/run_cell_m.py          # LIRICAL  HPO-only  (curated baselin
 python scripts/eval/aggregate_metrics.py   # top-1/5/10, MRR, NDCG@10 + bootstrap 95% CIs
 ```
 
-## 2. Deconfounding & robustness
+## 2. Annotation-overlap stratification & robustness
 
 ```bash
-python scripts/eval/compute_annotation_overlap.py   # fair-cohort flag (overlap-absent)
+python scripts/eval/compute_annotation_overlap.py   # per-case annotation-overlap flag
 python scripts/eval/run_lopo.py                     # leave-one-paper-out retrieval
 python scripts/eval/aggregate_lopo.py
 python scripts/eval/multiplicity_correction.py      # Holm / Benjamini-Hochberg
@@ -57,7 +79,7 @@ python scripts/eval/run_deepeval.py
 > **matches** rather than exceeds the curated baselines at rank 1 on the standard
 > candidate lists. What survives clustering: the retrieval-and-workflow contribution
 > over the identical backbone (+0.191, p<0.001), the post-2020 advantage over
-> Exomiser (+0.094, Holm p=0.002) and the hard-cohort margin over Exomiser (+0.153,
+> Exomiser (+0.094, Holm p=0.002) and the hard-cohort margin over Exomiser (+0.152,
 > Holm p=0.002). LOPO leaves the overlap-absent top-1 unchanged (0.858 → 0.858,
 > McNemar p=1.0).
 

@@ -24,7 +24,7 @@ the paper above.
 > **What does survive clustered inference:** the contribution of retrieval and the
 > agentic workflow over the identical backbone LLM (**+0.191**, p<0.001); the
 > advantage over Exomiser on post-2020 source publications (**+0.094**,
-> Holm p=0.002); and the hard-cohort margin over Exomiser (**+0.153**,
+> Holm p=0.002); and the hard-cohort margin over Exomiser (**+0.152**,
 > Holm p=0.002). A **leave-one-paper-out** check confirms none of this depends on
 > retrieving each case's own source paper (overlap-absent top-1 unchanged,
 > 0.858 → 0.858, McNemar p=1.0).
@@ -185,7 +185,7 @@ difficulty is varied orthogonally to leakage.
 | **S (L + LEA)** | **0.726** | 0.798 | 0.817 | **0.766** | **+3.5 pp over K — case-level significant, not under clustering (p=0.204)** |
 | O (LLM-only, no retrieval) | 0.511 | 0.626 | 0.697 | 0.575 | control: −0.215 vs S (McNemar p<0.001) |
 | N (RRF ensemble M+S) | 0.776 | 0.856 | 0.903 | 0.819 | ensemble reference |
-| R (Resnik BMA floor) | 0.925 | 0.998 | 0.999 | 0.959 | model-free; tracks M, confirming the overlap signature needs no model |
+| R (Resnik BMA floor) | 0.926 | 0.998 | 0.999 | 0.959 | model-free; tracks M, confirming the overlap signature needs no model |
 
 **Metrics:** top-1 / top-5 / top-10 (Recall@k), MRR, NDCG@10. Paired
 bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
@@ -195,7 +195,7 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 
 - **Annotation-overlap flag.** A per-case flag marks whether the source
   publication is cited by `phenotype.hpoa` for the causal gene's OMIM disease
-  (cohort overlap rate 73.1 %). On the **fair cohort (overlap-absent, n=282)**,
+  (cohort overlap rate 73.1 %). On the **overlap-absent subset (n=282)**,
   geno_agent has the highest point estimate (top-1 **0.858**) vs Exomiser 0.780
   (+0.078) and LIRICAL 0.777 (+0.082); both margins clear Holm correction at case
   level (★) but **not** under publication-clustered inference (p=0.45 and 0.41),
@@ -205,7 +205,7 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
   by clustering.
 - **Model-free similarity floor (Cell R).** A deterministic HPO Resnik
   best-match-average ranker with no training, no tuning and no retrieval scores
-  top-1 **0.925 overall / 0.798 fair** on the standard lists, reproducing the same
+  top-1 **0.926 overall / 0.798 overlap-absent** on the standard lists, reproducing the same
   overlap signature as the curated tools — the signature does not require a model.
   It also bounds construction bias on the hard cohort, whose distractors are chosen
   by that very measure: Cell R drops to 0.245 fair there. At coarse cut-offs
@@ -217,20 +217,20 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
   top-1 **0.511 overall / 0.667 fair** — a non-trivial parametric baseline, but
   geno_agent adds **+0.215 overall / +0.191 fair** (McNemar p<0.001), isolating
   the joint contribution of retrieval and the agentic workflow. Unlike the curated
-  tools, the LLM-only score *rises* on the fair cohort (0.454 → 0.667): parametric
+  tools, the LLM-only score *rises* on the overlap-absent subset (0.454 → 0.667): parametric
   knowledge is orthogonal to `phenotype.hpoa` citation, independently corroborating
   that the fair split removes a curated-tool confound rather than a difficulty
   effect. (Grammar-constrained decoding was evaluated and rejected — at
   temperature 0 it distorted the backbone; Cell O uses free-form generation with a
   tolerant JSON/regex parser.)
 - **Leave-one-paper-out (LOPO).** Excluding each case's own source publication
-  from retrieval leaves the fair cohort **completely unchanged** (0.858 → 0.858,
+  from retrieval leaves the overlap-absent subset **completely unchanged** (0.858 → 0.858,
   McNemar p=1.0); the small full-cohort effect (−0.015) is confined to the
   overlap-present subset. geno_agent's signal is distributed across the
   literature, not concentrated in the source case report.
 - **Distractor-difficulty stress test (hard cohort).** Replacing the 49 random
   distractors with the 49 phenotype-similar genes (Resnik BMA) drops every system,
-  but on the fair cohort geno_agent **remains #1 (top-1 0.390)** and its margin
+  but on the overlap-absent subset geno_agent **remains #1 (top-1 0.390)** and its margin
   *widens*: **+0.152** vs Exomiser (McNemar p=1×10⁻⁵) and **+0.106** vs LIRICAL
   (p=0.0021), both surviving Holm correction at case level; under clustering the
   Exomiser margin survives (Holm p=0.002) and the LIRICAL margin does not
@@ -255,7 +255,7 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
   design-weighted margins shrink further. What survives clustering is the
   retrieval-and-scaffold contribution over the identical backbone (+0.191), the
   post-2020 advantage over Exomiser (+0.094) and the hard-cohort margin over
-  Exomiser (+0.153). See [Verifying the reported numbers](#verifying-the-reported-numbers).
+  Exomiser (+0.152). See [Verifying the reported numbers](#verifying-the-reported-numbers).
 - **RAG quality (GPT-4o judge).** RAGAS faithfulness on the committed rank-1
   rationale is **0.480** (95% CI 0.424–0.533); the multi-claim full-response
   measurement is **0.286**, reported as a conservative lower bound because it
@@ -348,6 +348,8 @@ artefacts — none re-runs model inference, except the prompt-sensitivity replay
 | `render_supp_tables.py` | Supplementary Tables S2, S3 | Multiplicity correction and design-weighted estimates, as standalone documents and (with `--fragments`) as the row bodies printed in the supplement |
 | `consistency_check.py` | — | Cross-checks cohort counts, pinned versions and DOIs against the companion resource paper; verifies no orphan or stale claims and that references are complete and sequential |
 | `latex_lint.py` | — | Structural checks on a `.tex` without compiling it |
+| `check_tripod_pointers.py` | — | Every section named in the TRIPOD-LLM checklist resolves to a real heading, subsection spans lie inside Results, and the typeset checklist agrees with its machine-readable copy |
+| `gen_claimed_from_table1.py` | the Table 1 block of `metric_audit.CLAIMED` | Regenerates the audit's claim list by parsing the printed table, so the check compares against the manuscript rather than against itself |
 
 Two properties of the evaluation are worth knowing before reusing this cohort:
 
@@ -358,7 +360,7 @@ Two properties of the evaluation are worth knowing before reusing this cohort:
   narrow. `cluster_inference.py` reports both so the difference is visible.
 - **The cohort is a disproportionate stratified sample.** Unweighted pooled
   metrics describe the sampled cohort, not the eligible population, which is
-  ~67 % neurological. Use the released inclusion probabilities for a
+  67.3 % neurological. Use the released inclusion probabilities for a
   population-level estimate; `design_weighted.py` does this.
 
 ```bash
@@ -559,7 +561,7 @@ please cite this repository:
 
 Headline finding to cite (n=1,047, overlap-absent subset):
 
-> Annotation overlap is pervasive (73.1 %, 765/1,047) and materially distorts the apparent leaderboard: LIRICAL's apparent top-1 of 0.924 falls to 0.777 on the overlap-absent subset, where it ties Exomiser (Δ = −0.004, p = 1.000). The evidence is a difference-in-differences — every system with no exposure to `phenotype.hpoa` scores *higher* on the overlap-absent subset while LIRICAL alone scores lower (system × overlap interaction +0.382, p ≈ 1e-27) — and it survives publication clustering, direct standardisation and adjustment for annotation density. Inference clusters on source publication (1,047 cases from 415 papers; the overlap-absent subset, 282 cases from 93), and under that inference geno_agent (top-1 0.858 vs Exomiser 0.780 and LIRICAL 0.777) **matches rather than exceeds** the curated baselines at rank 1: the +0.078 and +0.082 margins are not significant (p = 0.45 and 0.41), because 20 of the 22 net discordances against Exomiser come from a single publication. What holds under clustering is the contribution of retrieval and the agentic workflow over the identical backbone LLM (+0.191, p < 0.001), the advantage over Exomiser on post-2020 source publications (+0.094, Holm p = 0.002) and the hard-cohort margin over Exomiser (+0.153, Holm p = 0.002). A leave-one-paper-out check confirms none of this depends on retrieving each case's own source publication (overlap-absent top-1 unchanged, 0.858 → 0.858).
+> Annotation overlap is pervasive (73.1 %, 765/1,047) and materially distorts the apparent leaderboard: LIRICAL's apparent top-1 of 0.924 falls to 0.777 on the overlap-absent subset, where it ties Exomiser (Δ = −0.004, p = 1.000). The evidence is a difference-in-differences — every system with no exposure to `phenotype.hpoa` scores *higher* on the overlap-absent subset while LIRICAL alone scores lower (system × overlap interaction +0.382, p ≈ 1e-27) — and it survives publication clustering, direct standardisation and adjustment for annotation density. Inference clusters on source publication (1,047 cases from 415 papers; the overlap-absent subset, 282 cases from 93), and under that inference geno_agent (top-1 0.858 vs Exomiser 0.780 and LIRICAL 0.777) **matches rather than exceeds** the curated baselines at rank 1: the +0.078 and +0.082 margins are not significant (p = 0.45 and 0.41), because 20 of the 22 net discordances against Exomiser come from a single publication. What holds under clustering is the contribution of retrieval and the agentic workflow over the identical backbone LLM (+0.191, p < 0.001), the advantage over Exomiser on post-2020 source publications (+0.094, Holm p = 0.002) and the hard-cohort margin over Exomiser (+0.152, Holm p = 0.002). A leave-one-paper-out check confirms none of this depends on retrieving each case's own source publication (overlap-absent top-1 unchanged, 0.858 → 0.858).
 
 ## License
 
