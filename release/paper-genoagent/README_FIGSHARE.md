@@ -17,7 +17,10 @@ Publications — GenoAgent code
 
 **License.** Code: AGPL-3.0-or-later. Result artifacts: AGPL-3.0.
 
-**Version.** v1.3  ·  **Git tag.** `paper-genoagent-v1.3` (resolve the exact commit with `git rev-parse paper-genoagent-v1.3`)
+**Snapshot.** Git tag `paper-genoagent-v1.4` (resolve the exact commit with
+`git rev-parse paper-genoagent-v1.4`). This is the item's **first public release**;
+the tag number is internal build history, not a sequence of published versions, so
+Figshare's own version counter starts at 1.
 **Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
@@ -35,165 +38,6 @@ control (Cell O)** — the same Qwen3-8B backbone with neither retrieval nor the
 agentic workflow — that isolates the joint contribution of retrieval and
 orchestration (overlap-absent top-1 0.667 vs geno_agent's 0.858); the RAGAS
 rationale-grounding judge on both cohorts; and the publication figures and tables.
-
-## What's new in v1.4
-
-Corrections and verification. **Five printed values change**; no analysis was re-run
-and no point estimate moved — the underlying computations are bit-identical, and the
-seeded bootstrap reproduces every earlier interval.
-
-- **Fixed: a double-rounding defect in the display path.** Estimates were stored at
-  4 dp and then rounded again to 3 dp for display, so any value landing on a 4-dp
-  half-boundary was resolved by the float's binary representation rather than by its
-  value. Producers (`design_weighted.py`, `metric_audit.py`, `resnik_ranker.py`) now
-  store 6 dp, and the renderers round half-up by value. Corrected:
-
-  | Where | Was | Is | True value |
-  |---|---|---|---|
-  | Table 1, Exomiser overlap-present | 0.657 | **0.658** | 503/765 = 0.657516 |
-  | Table 1, Cell R full cohort | 0.925 | **0.926** | 969/1047 = 0.925501 |
-  | Table 1, LIRICAL hard top-5 | 0.425 | **0.426** | 120/282 = 0.425532 |
-  | Table S3, RRF full-cohort top-1 | 0.775 | **0.776** | 812/1047 = 0.775549 |
-  | Table S3, S vs O overlap-absent | +0.192 | **+0.191** | 54/282 = 0.191489 |
-
-  The last is the paper's principal surviving positive claim, which the main text
-  had always reported correctly as +0.191.
-
-- **Fixed: six of the seven overlap-absent MRR values in Table 1.** These did not
-  reproduce from the per-case artefacts under any metric definition (MRR, MRR@10 and
-  MRR@5 were each tested against every cohort subset). They are replaced with the
-  recomputation, which the original run artefacts independently corroborate. No claim
-  in the manuscript cites an MRR value; top-1, top-5 and top-10 were all correct.
-
-- **Stronger gate: the metric audit now covers the whole of Table 1.** Its tolerance
-  was exactly half a display unit, so it admitted both sides of every rounding
-  boundary and had been passing the defects above; it now compares against the
-  correctly-rounded string. `CLAIMED` grew from 74 to 128 checks and covers all 90
-  Table 1 cells, Cell R included — it was previously absent from the audit's cell
-  list, which is how its full-cohort value survived. `gen_claimed_from_table1.py`
-  regenerates that block by parsing the printed table, so the check remains a
-  comparison against the manuscript rather than against itself.
-
-- **New gate: `check_tripod_pointers.py`.** The TRIPOD-LLM checklist's location
-  column is prose, not `\ref`, so no existing check could see it; thirteen entries
-  named sections the manuscript does not contain. The gate verifies that every
-  `§ Name` resolves to a real heading, that subsection spans lie inside Results, and
-  that `tripod_llm_checklist.csv` agrees with the typeset Table S1. The checklist CSV
-  in this bundle is repointed accordingly, and its item 5c date range is corrected to
-  1988–2025 (the cohort's 415 source publications include 13 from 2025).
-
-- **Fixed: `render_revision_figures.py` wrote to a retired path.** Its `--out`
-  default, its static-copy source and its usage example all pointed at a directory
-  that no longer exists. Supplementary Figure S10 is also replotted as
-  overlap-present versus overlap-absent: it previously showed full-versus-absent,
-  so the 0.774 → 0.284 collapse its caption and the main text both quote appeared
-  nowhere on the chart.
-
-The data bundle is unchanged from v1.3 — no re-inference, and no per-case artefact
-moved.
-
-## What's new in v1.3
-
-Additions and verification. No result reported in v1.2 changed; every earlier number
-re-derives unchanged from the same per-case artefacts.
-
-- **New: Cell R, a model-free similarity floor** (`scripts/eval/revision/resnik_ranker.py`
-  → `reports/p2_revision/wp_c2_resnik_ranker.json`). HPO Resnik best-match-average
-  ranking with no training, no tuning and no retrieval. It reproduces the
-  annotation-overlap signature, which shows the signature does not require a model,
-  and it bounds construction bias on the hard cohort, whose distractors are selected
-  by the same similarity measure. Its per-case rankings for both cohorts ship in the
-  data bundle (`data/eval_1050/cell_R_resnik/`, `data/eval_hard/cell_R_resnik/`).
-- **New: zero-density stratum analysis** (`zero_density_stratum.py` →
-  `wp_a1_zero_density.json`) — the Z/P partition, its gradients, and the
-  annotation-density report under both density definitions.
-- **New: independent re-derivation of the three perfect cells**
-  (`verify_perfect_cells.py` → `i1_perfect_cells.json`). Three secondary cells on the
-  overlap-absent subset are exactly 1.000 — LIRICAL top-10, and Resnik BMA top-5 and
-  top-10 — so they are re-derived straight from the per-case artefacts by a script
-  that deliberately does not reuse the shared metric helper, and that re-derives the
-  overlap-absent case list independently: **282/282** in all three. It also reports
-  candidate-list sizes (50 in every case, `final_rank` a full 1–50 permutation),
-  worst causal rank (4 for Cell R, 10 for Cell M), and a tie audit — Cell R has no
-  ties at all, Cell M has two and holds top-10 = 0.9929 even when every tie is broken
-  against the causal gene. The cells are a property of shortlist recall on a closed
-  50-gene list (chance-level top-10 = 0.200), not of the systems: the same scripts
-  over the same 282 cases fall to 0.486 and 0.496 on the phenotype-similar hard
-  cohort.
-- **Verification gates repaired and re-run** (`consistency_check.py`). Against the
-  current manuscript sources the gate had gone stale: it recognised only the
-  superseded reference-list form, so it silently skipped every reference check, and
-  it read the main text alone, so it reported six live scripts as orphaned after the
-  script-to-result map moved into the supplement. It now parses `thebibliography`
-  (entry count, duplicate keys, undefined and uncited keys, first-appearance
-  ordering) and takes `--supp`. Verbatim output of both gates is in
-  `reports/p2_revision/i2_gate_run.txt` — 57 pass / 0 warn / 0 fail, structural lint
-  clean.
-- Clustering-variable provenance corrected in the reports and flagged as
-  cohort-specific.
-
-## What's new in v1.2
-
-This version supersedes the statistical claims of v1.1. Nothing was re-run: the
-per-case artefacts are unchanged and every difference comes from re-analysing them
-correctly.
-
-- **Inference now clusters on source publication.** The 1,047 cases derive from 415
-  publications (the overlap-absent subset: 282 cases from just 93), so case-level
-  intervals and McNemar tests understate variance. Every estimate and paired test is
-  re-reported with a publication-level bootstrap and a cluster-level permutation
-  test, with the case-level result alongside (`scripts/eval/revision/cluster_inference.py`).
-- **Consequence — a claim is withdrawn.** geno_agent's rank-1 margins over Exomiser
-  (+0.078) and LIRICAL (+0.082) on the overlap-absent subset are significant at case
-  level and **not** under clustered inference (p = 0.45 and 0.41): 20 of the 22 net
-  discordances against Exomiser come from a single publication. The system is now
-  reported as **matching**, not exceeding, the curated baselines on the standard
-  candidate lists. The same applies to the hard-cohort margin over LIRICAL; the
-  hard-cohort margin over Exomiser does survive.
-- **The overlap finding is unaffected and is strengthened.** It is now reported as a
-  difference-in-differences: every system with no exposure to `phenotype.hpoa` scores
-  *higher* on the overlap-absent subset, and LIRICAL alone scores lower
-  (system × overlap interaction +0.382 vs geno_agent, p ≈ 1e-27). It survives
-  clustering, direct standardisation for disease composition, and adjustment for
-  annotation density.
-- **New: annotation-density analysis** (`annotation_density.py`) separating curation
-  depth from annotation exposure. Density explains 78–104 % of the overlap shift for
-  every system except LIRICAL, whose effect does not attenuate at all.
-- **New: design-weighted estimates** (`design_weighted.py`) for the eligible
-  population, using P1's released inclusion probabilities.
-- **New: prompt-sensitivity replay** (`prompt_sensitivity.py`, plus per-case outputs in
-  `data/eval_1050/prompt_sensitivity/`): two paraphrased LEA prompts over cached
-  retrieval. Top-1 moves 3.3 pp; the production prompt replayed through the same
-  harness reproduces the published run on 152/152 cases.
-- **Rationale grounding is reported from RAGAS alone.** DeepEval's
-  `HallucinationMetric` was evaluated and is not carried forward: on this task shape
-  it does not discriminate. It scores the fraction of supplied contexts a response
-  contradicts, but an LEA response covers 15 candidate genes against a shared
-  ≤20-chunk context pool, so most chunks concern other genes and register as
-  contradicted regardless of quality. Empirically its per-case distribution is
-  degenerate on the standard cohort (median 0.067, IQR 0.062–0.067) and bimodal on
-  the hard cohort, and it predicts top-1 correctness at chance (AUROC 0.512).
-  `scripts/eval/run_deepeval.py` is retained and its metric polarity is now
-  documented explicitly in the module docstring.
-- **New: `reports/p2_revision/`** — the machine-readable output of every analysis
-  above, so any figure in the paper can be checked without re-running the pipeline,
-  plus `consistency_check.py` and `latex_lint.py` verification gates.
-
-## What's new in v1.1
-
-- Adds the **hard (phenotype-similar distractor) cohort** — per-cell rankings,
-  aggregates, paired significance, and RAGAS/DeepEval judges — completing the
-  difficulty × leakage 2×2.
-- On the overlap-absent subset, geno_agent has the highest point estimate in **both**
-  difficulty regimes. *(Superseded in v1.2: under publication-clustered inference the
-  margin over the curated baselines is not significant on the standard cohort, and only
-  the hard-cohort margin over Exomiser survives.)*
-- Adds the **LLM-only no-retrieval control (Cell O)** — the same Qwen3-8B backbone with
-  neither retrieval nor the agentic workflow (`data/eval_1050/cell_O_llm_only/`) —
-  isolating the joint contribution of retrieval and orchestration (full-cohort top-1
-  0.511, fair 0.667, vs geno_agent 0.726 / 0.858).
-- Release-clean `README.md` is the single explanatory document; unpublished drafts and
-  internal working reports are kept local and are not bundled.
 
 ## The three-paper relationship
 
@@ -306,7 +150,7 @@ not discriminate on this task shape (chance-level AUROC 0.512 for predicting top
 correctness, and a degenerate per-case distribution).
 
 What is in the two files. The code zip is the tracked source at git tag
-paper-genoagent-v1.3: the agents and tools, the baselines, the evaluation harness
+paper-genoagent-v1.4: the agents and tools, the baselines, the evaluation harness
 including the revision re-analysis and verification scripts, the figure and table
 generators, and reports/p2_revision/. The data zip is the per-case results for
 every cell on both cohorts, the aggregates, paired significance and judge
@@ -335,5 +179,5 @@ License: AGPL-3.0.
 
 > Angulo, J. (2026). *Benchmark Contamination in Rare-Disease Gene Prioritisation:
 > Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from
-> 415 Publications — GenoAgent code* (v1.3) [Software & data set]. Figshare.
+> 415 Publications — GenoAgent code* [Software & data set]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814497
