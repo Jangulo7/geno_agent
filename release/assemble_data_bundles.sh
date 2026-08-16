@@ -120,7 +120,7 @@ fi
 # v1.7, matching the code zip. The data bundle carries reports/figures/, which was
 # split into P1_figures/ and P2_figures/ and whose fig2_architecture.png and
 # fig4_hard_difficulty.png both changed, so it is no longer v1.3 content.
-P2="paper-genoagent-v1.7_data"
+P2="paper-genoagent-v1.8_data"
 P2D="$STAGE/$P2"
 mkdir -p "$P2D"
 # Tracked-only selection (git archive auto-excludes gitignored raw response dumps);
