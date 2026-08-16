@@ -17,8 +17,8 @@ Publications — GenoAgent code
 
 **License.** Code: AGPL-3.0-or-later. Result artifacts: AGPL-3.0.
 
-**Snapshot.** Git tag `paper-genoagent-v1.4` (resolve the exact commit with
-`git rev-parse paper-genoagent-v1.4`). This is the item's **first public release**;
+**Snapshot.** Git tag `paper-genoagent-v1.5` (resolve the exact commit with
+`git rev-parse paper-genoagent-v1.5`). This is the item's **first public release**;
 the tag number is internal build history, not a sequence of published versions, so
 Figshare's own version counter starts at 1.
 **Repository.** https://github.com/Jangulo7/geno_agent
