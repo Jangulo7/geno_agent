@@ -36,6 +36,62 @@ agentic workflow — that isolates the joint contribution of retrieval and
 orchestration (overlap-absent top-1 0.667 vs geno_agent's 0.858); the RAGAS
 rationale-grounding judge on both cohorts; and the publication figures and tables.
 
+## What's new in v1.4
+
+Corrections and verification. **Five printed values change**; no analysis was re-run
+and no point estimate moved — the underlying computations are bit-identical, and the
+seeded bootstrap reproduces every earlier interval.
+
+- **Fixed: a double-rounding defect in the display path.** Estimates were stored at
+  4 dp and then rounded again to 3 dp for display, so any value landing on a 4-dp
+  half-boundary was resolved by the float's binary representation rather than by its
+  value. Producers (`design_weighted.py`, `metric_audit.py`, `resnik_ranker.py`) now
+  store 6 dp, and the renderers round half-up by value. Corrected:
+
+  | Where | Was | Is | True value |
+  |---|---|---|---|
+  | Table 1, Exomiser overlap-present | 0.657 | **0.658** | 503/765 = 0.657516 |
+  | Table 1, Cell R full cohort | 0.925 | **0.926** | 969/1047 = 0.925501 |
+  | Table 1, LIRICAL hard top-5 | 0.425 | **0.426** | 120/282 = 0.425532 |
+  | Table S3, RRF full-cohort top-1 | 0.775 | **0.776** | 812/1047 = 0.775549 |
+  | Table S3, S vs O overlap-absent | +0.192 | **+0.191** | 54/282 = 0.191489 |
+
+  The last is the paper's principal surviving positive claim, which the main text
+  had always reported correctly as +0.191.
+
+- **Fixed: six of the seven overlap-absent MRR values in Table 1.** These did not
+  reproduce from the per-case artefacts under any metric definition (MRR, MRR@10 and
+  MRR@5 were each tested against every cohort subset). They are replaced with the
+  recomputation, which the original run artefacts independently corroborate. No claim
+  in the manuscript cites an MRR value; top-1, top-5 and top-10 were all correct.
+
+- **Stronger gate: the metric audit now covers the whole of Table 1.** Its tolerance
+  was exactly half a display unit, so it admitted both sides of every rounding
+  boundary and had been passing the defects above; it now compares against the
+  correctly-rounded string. `CLAIMED` grew from 74 to 128 checks and covers all 90
+  Table 1 cells, Cell R included — it was previously absent from the audit's cell
+  list, which is how its full-cohort value survived. `gen_claimed_from_table1.py`
+  regenerates that block by parsing the printed table, so the check remains a
+  comparison against the manuscript rather than against itself.
+
+- **New gate: `check_tripod_pointers.py`.** The TRIPOD-LLM checklist's location
+  column is prose, not `\ref`, so no existing check could see it; thirteen entries
+  named sections the manuscript does not contain. The gate verifies that every
+  `§ Name` resolves to a real heading, that subsection spans lie inside Results, and
+  that `tripod_llm_checklist.csv` agrees with the typeset Table S1. The checklist CSV
+  in this bundle is repointed accordingly, and its item 5c date range is corrected to
+  1988–2025 (the cohort's 415 source publications include 13 from 2025).
+
+- **Fixed: `render_revision_figures.py` wrote to a retired path.** Its `--out`
+  default, its static-copy source and its usage example all pointed at a directory
+  that no longer exists. Supplementary Figure S10 is also replotted as
+  overlap-present versus overlap-absent: it previously showed full-versus-absent,
+  so the 0.774 → 0.284 collapse its caption and the main text both quote appeared
+  nowhere on the chart.
+
+The data bundle is unchanged from v1.3 — no re-inference, and no per-case artefact
+moved.
+
 ## What's new in v1.3
 
 Additions and verification. No result reported in v1.2 changed; every earlier number
