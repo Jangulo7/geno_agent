@@ -85,7 +85,10 @@ else
 fi
 
 # ---------- P2: GenoAgent results (standard + hard cohorts) + figures/tables ----------
-P2="paper-genoagent-v1.3_data"
+# v1.6, matching the code zip: the data bundle carries reports/figures/, which was
+# split into P1_figures/ and P2_figures/ and whose fig2_architecture.png and
+# fig4_hard_difficulty.png both changed, so its content is no longer v1.3.
+P2="paper-genoagent-v1.6_data"
 P2D="$STAGE/$P2"
 mkdir -p "$P2D"
 # Tracked-only selection (git archive auto-excludes gitignored raw response dumps);

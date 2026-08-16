@@ -64,21 +64,44 @@ def normalise(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip().rstrip(".")
 
 
-def section_name(pointer: str) -> str:
-    return normalise(GLOSS.split(pointer, 1)[0])
+def section_name(pointer: str, known: set[str] | None = None) -> str:
+    """The section title a pointer names, with any trailing gloss removed.
+
+    Splitting blindly at the first gloss delimiter is wrong: a real title can
+    contain a comma ("What each tool is for, and what the results support",
+    "Stratification, judging and ablations"), and blind splitting truncated those
+    to a prefix, which then reported as an abbreviation of itself. So try the whole
+    string first and only strip a gloss if the whole string names no section.
+    """
+    whole = normalise(pointer)
+    if known is not None and whole in known:
+        return whole
+    stripped = normalise(GLOSS.split(pointer, 1)[0])
+    # Neither form is an exact title; prefer the longer one if it uniquely
+    # prefixes a heading, so the caller reports the more informative name.
+    if (
+        known is not None
+        and stripped not in known
+        and sum(1 for k in known if k.startswith(whole)) == 1
+    ):
+        return whole
+    return stripped
 
 
-def resolves(name: str, known: set[str]) -> bool:
-    """Exact match, or an unambiguous prefix of one heading.
+def resolves(name: str, known: set[str]) -> tuple[bool, bool]:
+    """Return (resolves, is_exact).
 
-    Shorthand is legitimate and widespread in the checklist -- "\\S Cohort" for
-    "Cohort and candidate lists", "\\S What each tool is for" for the full
-    Discussion title. A prefix rule accepts those while still rejecting a name
-    that matches nothing, which is the whole defect class this gate exists for.
+    Exact match is the property worth having: a cell that names its section in
+    full cannot drift when the section is renamed, and cannot be read as pointing
+    somewhere else. Shorthand is still accepted when it is an unambiguous prefix of
+    exactly one heading -- "\\S What each tool is for" for the full Discussion
+    title -- because rejecting it would fail cells that are not wrong. Those are
+    reported as NOTE rather than FAIL, so abbreviation stays visible instead of
+    silently accumulating.
     """
     if name in known:
-        return True
-    return sum(1 for k in known if k.startswith(name)) == 1
+        return True, True
+    return sum(1 for k in known if k.startswith(name)) == 1, False
 
 
 def headings(tex: str) -> set[str]:
@@ -103,7 +126,7 @@ def results_range(tex: str) -> tuple[int, int]:
     return 1, n
 
 
-def pointers_from_tex(supp: str) -> dict[str, list[str]]:
+def pointers_from_tex(supp: str, known: set[str]) -> dict[str, list[str]]:
     """item number -> section names it points at, from the Table S1 longtable."""
     block = supp.split(r"\label{tab:tripod}", 1)[1].split(r"\end{longtable}", 1)[0]
     out: dict[str, list[str]] = {}
@@ -111,16 +134,16 @@ def pointers_from_tex(supp: str) -> dict[str, list[str]]:
         m = re.match(r"\s*(\d+[a-z]?)\s*&", line)
         if not m:
             continue
-        out[m.group(1)] = [section_name(p) for p in POINTER.findall(line)]
+        out[m.group(1)] = [section_name(p, known) for p in POINTER.findall(line)]
     return out
 
 
-def pointers_from_csv(path: str) -> dict[str, list[str]]:
+def pointers_from_csv(path: str, known: set[str]) -> dict[str, list[str]]:
     out: dict[str, list[str]] = {}
     with open(path, newline="") as fh:
         for row in csv.DictReader(fh):
             loc = row["manuscript_location_or_rationale"]
-            out[row["item"]] = [section_name(p) for p in POINTER.findall(loc)]
+            out[row["item"]] = [section_name(p, known) for p in POINTER.findall(loc)]
     return out
 
 
@@ -137,17 +160,24 @@ def main() -> int:
     known = headings(main_tex) | {normalise(x) for x in FRONT_BACK_MATTER}
     _, n_results = results_range(main_tex)
 
-    tex_ptrs = pointers_from_tex(supp_tex)
-    csv_ptrs = pointers_from_csv(args.csv)
+    tex_ptrs = pointers_from_tex(supp_tex, known)
+    csv_ptrs = pointers_from_csv(args.csv, known)
 
     fails: list[str] = []
+    notes: list[str] = []
 
     # 1. pointers resolve
     for label, ptrs in (("Table S1", tex_ptrs), ("checklist CSV", csv_ptrs)):
         for item, names in sorted(ptrs.items()):
             for name in names:
-                if name and not resolves(name, known):
+                if not name:
+                    continue
+                found, exact = resolves(name, known)
+                if not found:
                     fails.append(f"{label} item {item}: no section titled '{name}'")
+                elif not exact:
+                    match = next(k for k in known if k.startswith(name))
+                    notes.append(f"{label} item {item}: '{name}' abbreviates '{match}'")
 
     # 2. subsection spans lie inside Results
     for label, text in (("Table S1", supp_tex), ("checklist CSV", csv_text)):
@@ -171,6 +201,8 @@ def main() -> int:
     print(
         f"  Results has {n_results} subsections; main.tex defines {len(headings(main_tex))} headings"
     )
+    for n in notes:
+        print(f"  NOTE  {n}")
     for f in fails:
         print(f"  FAIL  {f}")
     if fails:
