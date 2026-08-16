@@ -60,7 +60,19 @@ CELLS = ["K", "M", "D", "L", "S", "N", "O", "R"]
 # The Table 1 block below is the COMPLETE grid -- every cell of both candidate-list
 # blocks, primary and secondary. Partial coverage is what let two defects through:
 # Cell R's full-cohort top-1 (0.925 for 0.926) and six of the seven overlap-absent
-# MRR values, both in rows no entry pointed at. Regenerate with
+# MRR values, both in rows no entry pointed at.
+#
+# On those MRR values: the STANDARD block was wrong and the HARD block was clean,
+# which invites the question of how one code path produced both. It did not. Each
+# old standard value was searched against every (cohort, subset, MRR variant)
+# combination -- plain MRR, MRR@10, MRR@5 and MRR-over-found-only, across all six
+# subsets of both cohorts -- and five of the six matched nothing at all. They are
+# not a stale computation but hand-transcription into a column no gate covered.
+# The hard block was transcribed later, after the hard lists were built
+# (2026-06-28), from correct output; it was swept in the same 45-cell check that
+# caught the standard block and also caught hard/M/top5.
+#
+# Regenerate with
 # gen_claimed_from_table1.py if Table 1 changes; it parses the printed table, so
 # the check stays a comparison against the manuscript rather than against itself.
 CLAIMED = [

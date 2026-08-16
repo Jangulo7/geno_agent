@@ -2,7 +2,7 @@ section,item,requirement,status,manuscript_location_or_rationale
 Title and abstract,1,"Title identifies study as LLM evaluation, task, target population, outcome",Addressed,§ Title
 Title and abstract,2,Structured abstract,Addressed,§ Abstract (Background / Methods / Results / Conclusions)
 Introduction,3a,Background and clinical-use-case rationale,Addressed,§ Introduction (rare-disease burden; phenotype-driven prioritisation; publication-curation lag; leakage/circularity; RAG and agentic systems)
-Introduction,3b,Target population and intended use (incl.\ intended users),Addressed,§ Introduction + § Discussion § What each tool is for (decision support / triage)
+Introduction,3b,Target population and intended use (incl.\ intended users),Addressed,"§ Introduction + § Discussion § What each tool is for, and what the results support (decision support / triage)"
 Introduction,4,Study objectives (evaluation vs development),Addressed,§ Introduction (contributions 1-5) + Methods opening
 Methods - Data,5a,"Data sources (training / tuning / evaluation, separately)",Addressed,Methods § Cohort and candidate lists + § Index construction and prompt design
 Methods - Data,5b,Data-point distribution and dataset descriptors,Addressed,"Methods § Cohort and candidate lists (strata, candidate-list design); Results § Overall evaluation (Table 1)"
@@ -15,7 +15,7 @@ Methods - LLM (analytical and output),6c,"Prompt and inference settings (seed, t
 Methods - LLM (analytical and output),6d,Initial vs post-processed LLM output,Addressed,"Methods, Cell S (LEA JSON schema + tolerant parser + CE-rerank fallback)"
 Methods - LLM (analytical and output),6e,Classification thresholds,Not applicable,"Not applicable - ranking task, not threshold classification"
 Methods - LLM (analytical and output),7a,"Output quality metrics (consistency, accuracy, errors)",Addressed,"Methods § Metrics and statistical inference; Results § Explanation quality and the triage question (rationale faithfulness, LEA fallback rate) + Supplementary Table S7"
-Methods - LLM (analytical and output),7b,Outcome metrics' deployment relevance + correlation to human eval,Addressed,Results § Explanation quality (faithfulness AUROC 0.74/0.73 for top-1 correctness); § Limitations (item 4)
+Methods - LLM (analytical and output),7b,Outcome metrics' deployment relevance + correlation to human eval,Addressed,Results § Explanation quality and the triage question (faithfulness AUROC 0.74/0.73 for top-1 correctness); § Limitations (item 4)
 Methods - LLM (analytical and output),7c,"Outcome definition, prediction code, inference dates",Addressed,"Methods § Metrics and statistical inference + § Index construction and prompt design; § Data availability (code DOI, pinned inputs)"
 Methods - LLM (analytical and output),7d,Subjective assessor qualifications,Not applicable,"Not applicable - objective outcome (causal-gene rank), gold standard from Phenopacket Store"
 Methods - LLM (analytical and output),7e,Performance comparison to other systems,Addressed,Results §§ 4.1-4.5 + § Discussion; Tables 1-4; Supplementary Tables S2-S7
@@ -33,7 +33,7 @@ Methods - Open science,14d,Study registration,Addressed,§ Ethics (explicit no-r
 Methods - Open science,14e,Data availability,Addressed,"§ Availability - Phenopacket Store v0.1.26, PMC OA; benchmark cohorts DOI 10.6084/m9.figshare.32814449 (standard) and 10.6084/m9.figshare.32816468 (hard) with Croissant 1.0+RAI; per-case sidecars in system item DOI 10.6084/m9.figshare.32814497"
 Methods - Open science,14f,Code availability,Addressed,"§ Availability - github.com/Jangulo7/geno_agent (AGPL-3.0), archived on Figshare (system item DOI 10.6084/m9.figshare.32814497)"
 Methods - Patient and public involvement,15,Patient and public involvement,Addressed,§ Ethics (explicit no-PPI statement)
-Results,16a,Patient / text flow through study,Addressed,"Methods § Cohort (screening, eligibility and exclusion counts); the CONSORT-style flow diagram is Figure 1 of the companion data descriptor (P1)"
+Results,16a,Patient / text flow through study,Addressed,"Methods § Cohort and candidate lists (screening, eligibility and exclusion counts); the CONSORT-style flow diagram is Figure 1 of the companion data descriptor (P1)"
 Results,16b,Patient characteristics,Addressed,"Methods § Cohort and candidate lists (MONDO strata, causal-gene ascertainment); Supplementary Table S9"
 Results,16c,Distribution comparison (development vs evaluation),Not applicable,"Not applicable - evaluation-only study, no development split"
 Results,16d,n per analysis,Addressed,"Results throughout (full 1,047; overlap-absent 282; recency 601/446; ablation 300; RAGAS 600; DeepEval 100)"
@@ -42,7 +42,7 @@ Results,18,LLM updating,Not applicable,Not applicable - no LLM updating performe
 Discussion,19a,Interpretation of results,Addressed,"§ Discussion § Principal findings (incl. the methodological lesson) + § What each tool is for, and what the results support (incl. recency)"
 Discussion,19b,Limitations,Addressed,§ Discussion § Limitations (7 numbered items)
 Discussion,19c,"Known data challenges (fairness, representation)",Addressed,§ Discussion § Generalisability
-Discussion,19d,"Intended use, end-user, autonomy level",Addressed,"§ Discussion § What each tool is for (decision support, not autonomous)"
-Discussion,19e,Handling of poor-quality input,Addressed,Methods § Comparator systems (tolerant parser; seeded no-signal fallback) + Results § Explanation quality (LEA fallback 0.2%)
-Discussion,19f,User-interaction requirements / expertise,Addressed,§ Discussion § What each tool is for (workflow-dependent use; expert review of shortlists)
+Discussion,19d,"Intended use, end-user, autonomy level",Addressed,"§ Discussion § What each tool is for, and what the results support (decision support, not autonomous)"
+Discussion,19e,Handling of poor-quality input,Addressed,Methods § Comparator systems (tolerant parser; seeded no-signal fallback) + Results § Explanation quality and the triage question (LEA fallback 0.2%)
+Discussion,19f,User-interaction requirements / expertise,Addressed,"§ Discussion § What each tool is for, and what the results support (workflow-dependent use; expert review of shortlists)"
 Discussion,19g,Future research directions,Addressed,§ Discussion § Future work (5 extensions)

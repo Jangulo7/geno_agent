@@ -31,7 +31,9 @@ import numpy as np
 REPO = pathlib.Path("/home/hana77/ia_jo/uax_tfm/geno_agent")
 DATA_EVAL = REPO / "data/eval_1050"
 DATA_HARD = REPO / "data/eval_hard"
-FIG_DIR = REPO / "reports/figures"
+# reports/figures/ was split by paper on 2026-08-16: the two manuscripts number
+# figures independently, so fig2_* and fig4_* each named two different images.
+FIG_DIR = REPO / "reports/figures/P2_figures"
 TBL_DIR = REPO / "reports/tables"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 TBL_DIR.mkdir(parents=True, exist_ok=True)
@@ -498,7 +500,12 @@ def render_figure2() -> None:
         ("Planner\n(rewrite query,\nMONDO context)", 2.75, "#bee3f8", "#2b6cb0", "box"),
         ("Retriever\n(Qdrant hybrid:\ndense + BM25)", 4.55, "#bee3f8", "#2b6cb0", "box"),
         ("Critic\n(filter, dedup,\nrank chunks)", 6.35, "#bee3f8", "#2b6cb0", "box"),
-        ("CE-rerank\n(MedCPT-CE,\ntop-45)", 8.15, "#fed7e2", "#b83280", "box"),
+        # "top-10/gene", not "top-45": the cross-encoder rescores each candidate's
+        # 50 retrieved chunks and keeps its top 10. The 45 is what the LEA reads
+        # downstream -- 3 chunks for each of the top 15 candidates -- so labelling
+        # this box "top-45" describes the next stage, not this one, and contradicts
+        # Methods "Index construction and prompt design".
+        ("CE-rerank\n(MedCPT-CE,\ntop-10/gene)", 8.15, "#fed7e2", "#b83280", "box"),
         ("Synthesiser\n(LEA, Qwen3-8B,\nvLLM local)", 9.95, "#c6f6d5", "#2f855a", "box"),
         ("Ranked genes\n+ rationale\n+ PMC cites", 11.75, "#e2e8f0", "#2d3748", "term"),
     ]
