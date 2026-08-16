@@ -1,0 +1,29 @@
+{
+  "title": "Phenotype-similar distractor variant of the stratified rare-disease cohort (n=1,047)",
+  "n_cases": 1047,
+  "n_distractors_per_case": 49,
+  "distractor_selection": "HPO Resnik best-match-average, top-49, excluding the causal gene and any gene annotated to the case's causal disease(s)",
+  "base_cohort_doi": "10.6084/m9.figshare.32814449",
+  "shared_with_base": [
+    "case_id",
+    "category",
+    "hpo_terms",
+    "diseases",
+    "causal_gene",
+    "pmc_article_count",
+    "source_phenopacket"
+  ],
+  "differs_from_base": [
+    "candidate_genes",
+    "causal_gene_index_in_candidates"
+  ],
+  "pinned_inputs": {
+    "phenopacket_store": "v0.1.26 (2026-01-13)",
+    "hpo": "v2026-02-16 (hp.obo + genes_to_phenotype.txt)",
+    "hgnc_complete_set": "2026-04-07"
+  },
+  "random_seed": 42,
+  "per_case_seed": "BLAKE2b(global_seed | case_id)",
+  "sha256_test_cases_hard": "01f086ad343fd9a82f2e91c04b463b3ab219729c70d0dfa12357cc20d661ff0e",
+  "bytes_test_cases_hard": 1046972
+}
