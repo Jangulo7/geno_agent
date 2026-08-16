@@ -16,7 +16,7 @@ encoding that band requires.
 
 Usage:
     python scripts/eval/revision/render_revision_figures.py \
-        --out reports/_local/GenoAgent_P2_System/P2-correction/fig
+        --out reports/_local/P2_latest_version/GenoAgent_P2_System/fig
 """
 
 from __future__ import annotations
@@ -25,6 +25,7 @@ import argparse
 import json
 import shutil
 import sys
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 import matplotlib
@@ -44,6 +45,17 @@ from _common import (
     load_ranks,
     subset,
 )
+
+
+def d3(x: float) -> str:
+    """3 dp, rounded half-up by value, so bar labels agree with the tables.
+
+    ``f"{x:.3f}"`` rounds half-to-even and resolves the tie on the float's binary
+    representation; the tables now round by value, and a figure label that
+    disagreed with its table by one unit is the defect class this avoids.
+    """
+    return str(Decimal(str(float(x))).quantize(Decimal("0.001"), rounding=ROUND_HALF_UP))
+
 
 # --- validated categorical palette -----------------------------------------
 CELL_COLORS = {
@@ -148,28 +160,36 @@ def fig_per_mondo(out: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Figure 4 -- hard cohort, full vs overlap-absent
+# Figure 4 -- hard cohort, overlap-present vs overlap-absent
+#
+# This plotted full-vs-absent until the presubmission check: the caption and the
+# main text both quote LIRICAL "collapses from 0.774 to 0.284", but 0.774 is the
+# overlap-PRESENT value and the full-cohort bar reads 0.642, so the number a
+# reader was sent here to find was not on the chart. The claim being made -- that
+# the overlap signature is preserved and amplified -- is about the gap between the
+# two strata, which a full-vs-absent chart cannot show at all, because the full
+# cohort is a mixture of both.
 # ---------------------------------------------------------------------------
 def fig_hard(out: Path) -> None:
     cells = ["K", "M", "D", "L", "S"]
-    full = [c.case_id for c in load_cases()]
+    present = [c.case_id for c in subset("overlap_present")]
     absent = [c.case_id for c in subset("overlap_absent")]
 
     fig, ax = plt.subplots(figsize=(8.4, 4.2))
     x = np.arange(len(cells))
     w = 0.36
 
-    fu, ab = [], []
+    pr, ab = [], []
     for cell in cells:
         ranks = load_ranks(cell, "hard")
-        fu.append(float(np.mean([1 if (ranks[i] and ranks[i] <= 1) else 0 for i in full])))
+        pr.append(float(np.mean([1 if (ranks[i] and ranks[i] <= 1) else 0 for i in present])))
         ab.append(float(np.mean([1 if (ranks[i] and ranks[i] <= 1) else 0 for i in absent])))
 
-    ax.bar(x - w / 2, fu, w * 0.92, color=PRESENT, label="Full cohort (n = 1,047)", zorder=3)
+    ax.bar(x - w / 2, pr, w * 0.92, color=PRESENT, label="Overlap-present (n = 765)", zorder=3)
     ax.bar(x + w / 2, ab, w * 0.92, color=ABSENT, label="Overlap-absent (n = 282)", zorder=3)
-    for xi, (a, b) in enumerate(zip(fu, ab, strict=True)):
-        ax.text(xi - w / 2, a + 0.012, f"{a:.3f}", ha="center", va="bottom", fontsize=8)
-        ax.text(xi + w / 2, b + 0.012, f"{b:.3f}", ha="center", va="bottom", fontsize=8)
+    for xi, (a, b) in enumerate(zip(pr, ab, strict=True)):
+        ax.text(xi - w / 2, a + 0.012, d3(a), ha="center", va="bottom", fontsize=8)
+        ax.text(xi + w / 2, b + 0.012, d3(b), ha="center", va="bottom", fontsize=8)
         ax.annotate(
             "",
             xy=(xi + w / 2, b),
@@ -188,8 +208,12 @@ def fig_hard(out: Path) -> None:
         [CELL_LABELS[c].replace(" (HPO-only)", "") for c in cells], rotation=12, ha="right"
     )
     ax.set_ylabel("Top-1 accuracy")
-    ax.set_ylim(0, 0.78)
-    ax.set_title("Hard cohort (49 phenotype-similar distractors): full vs overlap-absent")
+    # 0.86, not 0.78: LIRICAL's overlap-present bar is 0.774 and its value label
+    # sits 0.012 above it, which the old limit clipped.
+    ax.set_ylim(0, 0.86)
+    ax.set_title(
+        "Hard cohort (49 phenotype-similar distractors): overlap-present vs overlap-absent"
+    )
     grid(ax)
     ax.legend(frameon=False, loc="upper right")
     fig.savefig(out / "fig4_hard_difficulty.png")
@@ -499,21 +523,29 @@ def table_prompt_sensitivity(out: Path) -> None:
 
 
 def copy_static(out: Path) -> None:
-    src = REPO / "reports" / "_local" / "GenoAgent_P2_System" / "fig"
+    src = REPO / "reports" / "_local" / "P2_latest_version" / "GenoAgent_P2_System" / "fig"
     for name in ("fig1_consort_flow.png", "fig2_architecture.png", "fig6_landscape_quadrant.png"):
         s = src / name
-        if s.exists():
+        if not s.exists():
+            print(f"  MISSING {name}")
+        elif s.resolve() == (out / name).resolve():
+            # Rendering into the manuscript's own fig/ is now the default, so the
+            # hand-made figures are already in place; copying would be a no-op
+            # that raises SameFileError.
+            print(f"  {name} (already in place)")
+        else:
             shutil.copy2(s, out / name)
             print(f"  {name} (copied unchanged)")
-        else:
-            print(f"  MISSING {name}")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--out",
-        default="reports/_local/GenoAgent_P2_System/P2-correction/fig",
+        # The P2-correction tree was retired to reports/_local/old/; figures
+        # written there would land beside superseded sources and never reach
+        # the manuscript.
+        default="reports/_local/P2_latest_version/GenoAgent_P2_System/fig",
     )
     args = ap.parse_args()
     out = (REPO / args.out) if not Path(args.out).is_absolute() else Path(args.out)

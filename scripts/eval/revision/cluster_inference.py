@@ -57,6 +57,11 @@ from _common import (
     write_json,
 )
 
+# 6 dp, not 4: renderers format these at 3 dp, and a 4-dp store puts the S-vs-O
+# overlap-absent delta (54/282 = 0.191489) on the half-boundary 0.1915, where the
+# display round resolves it to +0.192 instead of the +0.191 the paper reports.
+PRECISION = 6
+
 N_BOOT = 10_000
 N_PERM = 10_000
 
@@ -133,7 +138,7 @@ def cluster_permutation_paired(
     n_disc_a = int((d > 0).sum())
     n_disc_b = int((d < 0).sum())
     return {
-        "delta": round(obs, 4),
+        "delta": round(obs, PRECISION),
         "n_discordant_a_wins": n_disc_a,
         "n_discordant_b_wins": n_disc_b,
         "n_clusters": int(n_clusters),
@@ -175,13 +180,13 @@ def run_contrast(cohort: str, sub: str, a: str, b: str, family: str) -> dict:
         "label": f"{a} vs {b}",
         "n_cases": len(cases),
         "n_publications": len({c.source_pmid for c in cases}),
-        "top1_a": round(float(np.mean([ha[i] for i in ids])), 4),
-        "top1_b": round(float(np.mean([hb[i] for i in ids])), 4),
+        "top1_a": round(float(np.mean([ha[i] for i in ids])), PRECISION),
+        "top1_b": round(float(np.mean([hb[i] for i in ids])), PRECISION),
         "n_correct_a": int(sum(ha[i] for i in ids)),
         "n_correct_b": int(sum(hb[i] for i in ids)),
-        "delta": round(d_pt, 4),
-        "ci95_cluster_bootstrap": [round(d_lo, 4), round(d_hi, 4)],
-        "ci95_case_bootstrap": [round(dc_lo, 4), round(dc_hi, 4)],
+        "delta": round(d_pt, PRECISION),
+        "ci95_cluster_bootstrap": [round(d_lo, PRECISION), round(d_hi, PRECISION)],
+        "ci95_case_bootstrap": [round(dc_lo, PRECISION), round(dc_hi, PRECISION)],
         **mcn,
         "p_cluster_permutation": perm["p_cluster_permutation"],
         "n_discordant_a_wins": perm["n_discordant_a_wins"],
@@ -215,10 +220,10 @@ def point_estimates() -> list[dict]:
                         "subset": sub,
                         "n_cases": len(cases),
                         "n_publications": len({c.source_pmid for c in cases}),
-                        "top1": round(pt, 4),
+                        "top1": round(pt, PRECISION),
                         "n_correct": int(sum(hits[c.case_id] for c in cases)),
-                        "ci95_cluster_bootstrap": [round(lo, 4), round(hi, 4)],
-                        "ci95_case_bootstrap": [round(clo, 4), round(chi, 4)],
+                        "ci95_cluster_bootstrap": [round(lo, PRECISION), round(hi, PRECISION)],
+                        "ci95_case_bootstrap": [round(clo, PRECISION), round(chi, PRECISION)],
                     }
                 )
     return out

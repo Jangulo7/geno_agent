@@ -9,89 +9,89 @@
     "standard": {
       "full": {
         "n": 1047,
-        "top1": 0.9255,
+        "top1": 0.925501,
         "top1_ci95_cluster": [
-          0.8867,
-          0.9574
+          0.886673,
+          0.957384
         ],
-        "top5": 0.9981,
-        "top10": 0.999,
-        "mrr": 0.9591,
+        "top5": 0.99809,
+        "top10": 0.999045,
+        "mrr": 0.959095,
         "median_causal_rank": 1.0
       },
       "overlap_present": {
         "n": 765,
-        "top1": 0.9725,
+        "top1": 0.972549,
         "top1_ci95_cluster": [
-          0.9528,
-          0.9885
+          0.952842,
+          0.98852
         ],
-        "top5": 0.9974,
-        "top10": 0.9987,
-        "mrr": 0.9839,
+        "top5": 0.997386,
+        "top10": 0.998693,
+        "mrr": 0.983885,
         "median_causal_rank": 1.0
       },
       "overlap_absent": {
         "n": 282,
-        "top1": 0.7979,
+        "top1": 0.797872,
         "top1_ci95_cluster": [
-          0.682,
-          0.8932
+          0.681967,
+          0.893239
         ],
         "top5": 1.0,
         "top10": 1.0,
-        "mrr": 0.8918,
+        "mrr": 0.891844,
         "median_causal_rank": 1.0
       }
     },
     "hard": {
       "full": {
         "n": 1047,
-        "top1": 0.5721,
+        "top1": 0.572111,
         "top1_ci95_cluster": [
-          0.504,
+          0.503976,
           0.643
         ],
-        "top5": 0.7517,
-        "top10": 0.8013,
-        "mrr": 0.6566,
+        "top5": 0.751671,
+        "top10": 0.801337,
+        "mrr": 0.65659,
         "median_causal_rank": 1.0
       },
       "overlap_present": {
         "n": 765,
-        "top1": 0.6928,
+        "top1": 0.69281,
         "top1_ci95_cluster": [
-          0.6255,
-          0.7591
+          0.625487,
+          0.759125
         ],
-        "top5": 0.868,
-        "top10": 0.9176,
-        "mrr": 0.7724,
+        "top5": 0.867974,
+        "top10": 0.917647,
+        "mrr": 0.772398,
         "median_causal_rank": 1.0
       },
       "overlap_absent": {
         "n": 282,
-        "top1": 0.2447,
+        "top1": 0.244681,
         "top1_ci95_cluster": [
           0.1454,
-          0.3793
+          0.379314
         ],
-        "top5": 0.4362,
-        "top10": 0.4858,
-        "mrr": 0.3424,
+        "top5": 0.43617,
+        "top10": 0.485816,
+        "mrr": 0.342431,
         "median_causal_rank": 13.5
       }
     }
   },
   "overlap_shift_standard": {
-    "overlap_present": 0.9725,
-    "overlap_absent": 0.7979,
-    "shift": -0.1746,
+    "overlap_present": 0.972549,
+    "overlap_absent": 0.797872,
+    "shift": -0.174677,
     "interpretation": "Negative, like LIRICAL's and unlike every system that does not read the curated annotations. Cell R is an independent second instance of the exposure signature, obtained without any model or retrieval."
   },
   "construction_bias_bound": {
-    "standard_top1": 0.9255,
-    "hard_top1": 0.5721,
+    "standard_top1": 0.925501,
+    "hard_top1": 0.572111,
     "interpretation": "The hard cohort's distractors are the 49 genes most similar to each case under this measure, so a ranker using it is maximally disadvantaged. Its hard-cohort top-1 is therefore a lower bound on what phenotype-similarity scoring can achieve there, and the gap from its standard-cohort score is the size of the construction bias for that class of tool."
   }
 }
