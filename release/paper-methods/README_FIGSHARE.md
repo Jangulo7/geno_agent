@@ -19,7 +19,10 @@ artefacts
 **License.** Code: AGPL-3.0-or-later. Data artifacts retain upstream licenses
 (cohort: CC BY 4.0, derived from the GA4GH Phenopacket Store).
 
-**Version.** v1.2  ·  **Git tag.** `paper-methods-v1.2` (resolve the exact commit with `git rev-parse paper-methods-v1.2`)
+**Snapshot.** Git tag `paper-methods-v1.3` (resolve the exact commit with
+`git rev-parse paper-methods-v1.3`). This is the item's **first public release**;
+the tag number is internal build history, not a sequence of published versions, so
+Figshare's own version counter starts at 1.
 **Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
@@ -79,5 +82,5 @@ upstream by pinned version); any personal correspondence.
 
 > Angulo, J. (2026). *An Annotation-Overlap-Flagged 1,047-Case Rare-Disease
 > Gene-Prioritisation Benchmark and PMC Open Access Index — methods code and build
-> artefacts* (v1.2) [Data set & software]. Figshare.
+> artefacts* [Data set & software]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814491
