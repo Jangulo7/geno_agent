@@ -7,8 +7,35 @@
 # text-stripped derivative). Manuscript drafts and internal reports are privatised
 # (local-only) and never bundled.
 #
-# Usage: bash release/assemble_data_bundles.sh
+# Usage:
+#   bash release/assemble_data_bundles.sh              # P2 data bundle only (default)
+#   bash release/assemble_data_bundles.sh --with-cohorts   # also rebuild records 1 and 2
+#
+# The default is deliberately narrow. Records 1 and 2 (the two cohort datasets) are
+# PUBLISHED and frozen; records 3 and 4 are still drafts. This script used to rebuild
+# all four unconditionally, so anyone refreshing the P2 data bundle silently rewrote
+# two live deposits. That happened on 2026-08-16, and the rebuilds were not
+# equivalent: the standard cohort differed in README_FIGSHARE.md, MANIFEST.tsv and
+# their CHECKSUMS.sha256, and the hard cohort dropped test_cases_hard_manifest.json.
+# Both had to be re-downloaded from Figshare and restored.
+#
+# So the safe path is now the one you get by typing nothing. --with-cohorts still
+# works, but says what it is about to touch first.
 set -euo pipefail
+
+WITH_COHORTS=0
+for arg in "$@"; do
+  case "$arg" in
+    --with-cohorts) WITH_COHORTS=1 ;;
+    -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
+    *) echo "unknown argument: $arg (expected --with-cohorts)"; exit 2 ;;
+  esac
+done
+if [ "$WITH_COHORTS" -eq 1 ]; then
+  echo "NOTE --with-cohorts: records 1 and 2 are PUBLISHED. Rebuilt zips will not"
+  echo "     byte-match the live deposits. Do not upload them without checking"
+  echo "     figshare_uploads/UPLOAD_MAP.md first."
+fi
 
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
@@ -39,6 +66,7 @@ copy_croissant() { # $1 = bundle name, $2 = staging dir
 # `sha256sum -c CHECKSUMS.sha256`.
 gen_checksums() { ( cd "$1" && find . -type f ! -name CHECKSUMS.sha256 -printf '%P\n' | sort | xargs sha256sum > CHECKSUMS.sha256 ); }
 
+if [ "$WITH_COHORTS" -eq 1 ]; then
 # ---------- Standalone cohort dataset (own DOI; Figshare "Dataset" item) ----------
 # The n=1,047 benchmark cohort is published as its own citable dataset, separate
 # from the methods/foundation code (which references this dataset's DOI). The
@@ -84,11 +112,15 @@ else
 "(run scripts/cases/18b_build_hard_candidates.py to regenerate, then re-run this script)."
 fi
 
+else
+  echo "SKIP records 1 and 2 (published cohorts). Pass --with-cohorts to rebuild them."
+fi
+
 # ---------- P2: GenoAgent results (standard + hard cohorts) + figures/tables ----------
-# v1.6, matching the code zip: the data bundle carries reports/figures/, which was
+# v1.7, matching the code zip. The data bundle carries reports/figures/, which was
 # split into P1_figures/ and P2_figures/ and whose fig2_architecture.png and
-# fig4_hard_difficulty.png both changed, so its content is no longer v1.3.
-P2="paper-genoagent-v1.6_data"
+# fig4_hard_difficulty.png both changed, so it is no longer v1.3 content.
+P2="paper-genoagent-v1.7_data"
 P2D="$STAGE/$P2"
 mkdir -p "$P2D"
 # Tracked-only selection (git archive auto-excludes gitignored raw response dumps);
