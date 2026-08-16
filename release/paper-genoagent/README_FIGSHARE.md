@@ -17,8 +17,8 @@ Publications — GenoAgent code
 
 **License.** Code: AGPL-3.0-or-later. Result artifacts: AGPL-3.0.
 
-**Snapshot.** Git tag `paper-genoagent-v1.4` (resolve the exact commit with
-`git rev-parse paper-genoagent-v1.4`). This is the item's **first public release**;
+**Snapshot.** Git tag `paper-genoagent-v1.5` (resolve the exact commit with
+`git rev-parse paper-genoagent-v1.5`). This is the item's **first public release**;
 the tag number is internal build history, not a sequence of published versions, so
 Figshare's own version counter starts at 1.
 **Repository.** https://github.com/Jangulo7/geno_agent
@@ -137,7 +137,7 @@ the 22 net discordances against Exomiser come from a single publication. What do
 hold under clustering is the contribution of retrieval and the agentic workflow
 over the identical backbone LLM (+0.191, p < 0.001), the advantage over Exomiser
 on post-2020 source publications (+0.094, Holm p = 0.002), and the hard-cohort
-margin over Exomiser (+0.153, Holm p = 0.002). Anyone reusing this cohort should
+margin over Exomiser (+0.152, Holm p = 0.002). Anyone reusing this cohort should
 cluster likewise: resampling cases yields intervals that are too narrow, and the
 error is largest in exactly the leakage-stratified cells that are most interesting
 to interpret.
@@ -150,7 +150,7 @@ not discriminate on this task shape (chance-level AUROC 0.512 for predicting top
 correctness, and a degenerate per-case distribution).
 
 What is in the two files. The code zip is the tracked source at git tag
-paper-genoagent-v1.4: the agents and tools, the baselines, the evaluation harness
+paper-genoagent-v1.5: the agents and tools, the baselines, the evaluation harness
 including the revision re-analysis and verification scripts, the figure and table
 generators, and reports/p2_revision/. The data zip is the per-case results for
 every cell on both cohorts, the aggregates, paired significance and judge
