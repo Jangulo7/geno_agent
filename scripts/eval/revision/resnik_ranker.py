@@ -147,11 +147,14 @@ def main() -> None:
             _pt, lo, hi = cluster_bootstrap(cases, stat, n_boot=10_000, seed=SEED)
             block[sub] = {
                 "n": len(ids),
-                "top1": round(m["top1"], 4),
-                "top1_ci95_cluster": [round(lo, 4), round(hi, 4)],
-                "top5": round(m["top5"], 4),
-                "top10": round(m["top10"], 4),
-                "mrr": round(m["mrr"], 4),
+                # 6 dp, not 4: Table 1 prints 3 dp, and a 4-dp store puts Cell R's
+                # full-cohort 969/1047 = 0.925501 on the half-boundary 0.9255,
+                # where the display round resolves it to 0.925 instead of 0.926.
+                "top1": round(m["top1"], 6),
+                "top1_ci95_cluster": [round(lo, 6), round(hi, 6)],
+                "top5": round(m["top5"], 6),
+                "top10": round(m["top10"], 6),
+                "mrr": round(m["mrr"], 6),
                 "median_causal_rank": float(np.median([ranks[i] for i in ids if ranks[i]])),
             }
         results[label] = block
@@ -178,7 +181,7 @@ def main() -> None:
         payload["overlap_shift_standard"] = {
             "overlap_present": s["overlap_present"]["top1"],
             "overlap_absent": s["overlap_absent"]["top1"],
-            "shift": round(s["overlap_absent"]["top1"] - s["overlap_present"]["top1"], 4),
+            "shift": round(s["overlap_absent"]["top1"] - s["overlap_present"]["top1"], 6),
             "interpretation": (
                 "Negative, like LIRICAL's and unlike every system that does not read "
                 "the curated annotations. Cell R is an independent second instance of "

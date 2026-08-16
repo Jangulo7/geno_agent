@@ -4,24 +4,24 @@ Title and abstract,2,Structured abstract,Addressed,§ Abstract (Background / Met
 Introduction,3a,Background and clinical-use-case rationale,Addressed,§ Introduction (rare-disease burden; phenotype-driven prioritisation; publication-curation lag; leakage/circularity; RAG and agentic systems)
 Introduction,3b,Target population and intended use (incl.\ intended users),Addressed,§ Introduction + § Discussion § What each tool is for (decision support / triage)
 Introduction,4,Study objectives (evaluation vs development),Addressed,§ Introduction (contributions 1-5) + Methods opening
-Methods - Data,5a,"Data sources (training / tuning / evaluation, separately)",Addressed,Methods § Cohort + § Index construction
-Methods - Data,5b,Data-point distribution and dataset descriptors,Addressed,Methods § Cohort + Results § Cohort setup
-Methods - Data,5c,Date range of training and evaluation text,Addressed,Methods § Cohort (PMID 1988-2024) + § Index (PMC OA to 2026-05); pinned ontology versions
-Methods - Data,5d,Preprocessing and quality checking,Addressed,Methods § Cohort (4-criterion filter) + § Index (512-token chunking; PubMedBERT tokeniser)
-Methods - Data,5e,Missing / imbalanced data,Addressed,Methods § Cohort exclusions + Results § Ablation (JSON refusals) + § Explainability (LEA fallback 0.2%)
+Methods - Data,5a,"Data sources (training / tuning / evaluation, separately)",Addressed,Methods § Cohort and candidate lists + § Index construction and prompt design
+Methods - Data,5b,Data-point distribution and dataset descriptors,Addressed,"Methods § Cohort and candidate lists (strata, candidate-list design); Results § Overall evaluation (Table 1)"
+Methods - Data,5c,Date range of training and evaluation text,Addressed,Methods § Cohort and candidate lists (source PMIDs 1988-2025) + § Index construction and prompt design (PMC OA to 2026-05); pinned versions in § Data availability
+Methods - Data,5d,Preprocessing and quality checking,Addressed,"Methods § Cohort and candidate lists (4-criterion filter) + § Index construction and prompt design (512-token chunking, 50-token overlap; PubMedBERT tokeniser)"
+Methods - Data,5e,Missing / imbalanced data,Addressed,"Methods § Cohort and candidate lists (exclusion cascade) + § Stratification, judging and ablations (JSON refusals; Supplementary Table S5) + Results § Explanation quality and the triage question (LEA fallback 0.2%)"
 Methods - LLM (analytical and output),6a,"LLM name, version, last training date",Addressed,"Methods § Comparator systems, Cell S (Qwen3-8B; vLLM 0.20.1; ablation models + GPT-4o judge)"
 Methods - LLM (analytical and output),6b,"LLM development process (architecture, training, alignment)",Not applicable,"Not applicable - evaluation study, no fine-tuning"
-Methods - LLM (analytical and output),6c,"Prompt and inference settings (seed, temperature, etc.)",Addressed,Methods § Comparator systems + § Reproducibility
+Methods - LLM (analytical and output),6c,"Prompt and inference settings (seed, temperature, etc.)",Addressed,"Methods § Comparator systems + § Index construction and prompt design (single pass, temperature 0, seed 42, vLLM 0.20.1); § Data availability"
 Methods - LLM (analytical and output),6d,Initial vs post-processed LLM output,Addressed,"Methods, Cell S (LEA JSON schema + tolerant parser + CE-rerank fallback)"
 Methods - LLM (analytical and output),6e,Classification thresholds,Not applicable,"Not applicable - ranking task, not threshold classification"
-Methods - LLM (analytical and output),7a,"Output quality metrics (consistency, accuracy, errors)",Addressed,Methods § Metrics + § RAG-quality + § Explainability
-Methods - LLM (analytical and output),7b,Outcome metrics' deployment relevance + correlation to human eval,Addressed,Results § Explanation quality (faithfulness AUROC 0.74/0.73 for top-1 correctness); § Limitations item 4
-Methods - LLM (analytical and output),7c,"Outcome definition, prediction code, inference dates",Addressed,Methods § Metrics + § Reproducibility
+Methods - LLM (analytical and output),7a,"Output quality metrics (consistency, accuracy, errors)",Addressed,"Methods § Metrics and statistical inference; Results § Explanation quality and the triage question (rationale faithfulness, LEA fallback rate) + Supplementary Table S7"
+Methods - LLM (analytical and output),7b,Outcome metrics' deployment relevance + correlation to human eval,Addressed,Results § Explanation quality (faithfulness AUROC 0.74/0.73 for top-1 correctness); § Limitations (item 4)
+Methods - LLM (analytical and output),7c,"Outcome definition, prediction code, inference dates",Addressed,"Methods § Metrics and statistical inference + § Index construction and prompt design; § Data availability (code DOI, pinned inputs)"
 Methods - LLM (analytical and output),7d,Subjective assessor qualifications,Not applicable,"Not applicable - objective outcome (causal-gene rank), gold standard from Phenopacket Store"
 Methods - LLM (analytical and output),7e,Performance comparison to other systems,Addressed,Results §§ 4.1-4.5 + § Discussion; Tables 1-4; Supplementary Tables S2-S7
 Methods - Annotation,8,Annotation process,Not applicable,Not applicable - pre-curated Phenopacket Store cases; no annotation performed
-Methods - Prompting,9a,Prompt design / curation / selection process,Addressed,Methods § Prompt design (single pass; no A/B; no exemplars; no chain-of-thought)
-Methods - Prompting,9b,Data used to develop prompts,Addressed,Methods § Prompt design (no cohort or ablation case used to tune)
+Methods - Prompting,9a,Prompt design / curation / selection process,Addressed,Methods § Index construction and prompt design (single pass; no A/B; no exemplars; no chain-of-thought) + Supplementary Table S6
+Methods - Prompting,9b,Data used to develop prompts,Addressed,Methods § Index construction and prompt design (no cohort or ablation case used to tune)
 Methods - Other,10,Summarisation preprocessing,Not applicable,"Not applicable - ranking task, not summarisation"
 Methods - Other,11,Instruction tuning / alignment,Not applicable,Not applicable - no fine-tuning
 Methods - Other,12,Compute reporting,Addressed,Methods (compute paragraph) + Supplementary Table S11 (1x RTX 5090)
@@ -34,12 +34,12 @@ Methods - Open science,14e,Data availability,Addressed,"§ Availability - Phenop
 Methods - Open science,14f,Code availability,Addressed,"§ Availability - github.com/Jangulo7/geno_agent (AGPL-3.0), archived on Figshare (system item DOI 10.6084/m9.figshare.32814497)"
 Methods - Patient and public involvement,15,Patient and public involvement,Addressed,§ Ethics (explicit no-PPI statement)
 Results,16a,Patient / text flow through study,Addressed,"Methods § Cohort (screening, eligibility and exclusion counts); the CONSORT-style flow diagram is Figure 1 of the companion data descriptor (P1)"
-Results,16b,Patient characteristics,Addressed,Methods § Cohort + Results § Cohort setup
+Results,16b,Patient characteristics,Addressed,"Methods § Cohort and candidate lists (MONDO strata, causal-gene ascertainment); Supplementary Table S9"
 Results,16c,Distribution comparison (development vs evaluation),Not applicable,"Not applicable - evaluation-only study, no development split"
 Results,16d,n per analysis,Addressed,"Results throughout (full 1,047; overlap-absent 282; recency 601/446; ablation 300; RAGAS 600; DeepEval 100)"
-Results,17,Performance reporting,Addressed,Results §§ 4.1-4.6 + Tables 1-4; Supplementary Tables S2-S7
+Results,17,Performance reporting,Addressed,Results §§ 4.1-4.5 + Tables 1-4; Supplementary Tables S2-S7
 Results,18,LLM updating,Not applicable,Not applicable - no LLM updating performed
-Discussion,19a,Interpretation of results,Addressed,§ Discussion § Principal findings + § Methodological contribution + § Recency
+Discussion,19a,Interpretation of results,Addressed,"§ Discussion § Principal findings (incl. the methodological lesson) + § What each tool is for, and what the results support (incl. recency)"
 Discussion,19b,Limitations,Addressed,§ Discussion § Limitations (7 numbered items)
 Discussion,19c,"Known data challenges (fairness, representation)",Addressed,§ Discussion § Generalisability
 Discussion,19d,"Intended use, end-user, autonomy level",Addressed,"§ Discussion § What each tool is for (decision support, not autonomous)"

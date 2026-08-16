@@ -18,9 +18,23 @@ from __future__ import annotations
 
 import argparse
 import json
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 from _common import CELL_NAMES, OUT_DIR, REPO
+
+
+def d3(x: float, *, signed: bool = False) -> str:
+    """Format at 3 dp, rounding half-up by value rather than by float bit pattern.
+
+    ``f"{x:.3f}"`` rounds half-to-even and breaks the tie on the binary
+    representation, so 0.7755 renders 0.775 while 0.1915 renders 0.192. With the
+    upstream estimates now stored at 6 dp an exact half is vanishingly unlikely,
+    but the display should not be the place where that is decided.
+    """
+    q = Decimal(str(float(x))).quantize(Decimal("0.001"), rounding=ROUND_HALF_UP)
+    return f"{q:+}" if signed else str(q)
+
 
 PREAMBLE = r"""\documentclass[10pt,a4paper]{article}
 \usepackage[margin=2cm]{geometry}
@@ -270,10 +284,10 @@ def s3_bodies() -> tuple[list[str], list[str], list[str]]:
             # sensitivity analysis, superseded by the Horvitz-Thompson estimate,
             # and it survives in wp5_design_weighted.json for anyone who wants it.
             erows.append(
-                f"{cell} --- {name} & {e['unweighted_top1']:.3f} & "
-                f"{e['design_weighted_top1']:.3f} & "
-                f"({lo:.3f}, {hi:.3f}) & "
-                f"${e['design_weighted_top1'] - e['unweighted_top1']:+.3f}$ \\\\"
+                f"{cell} --- {name} & {d3(e['unweighted_top1'])} & "
+                f"{d3(e['design_weighted_top1'])} & "
+                f"({d3(lo)}, {d3(hi)}) & "
+                f"${d3(e['design_weighted_top1'] - e['unweighted_top1'], signed=True)}$ \\\\"
             )
         erows.append("\\addlinespace")
 
@@ -284,8 +298,10 @@ def s3_bodies() -> tuple[list[str], list[str], list[str]]:
         excl = "yes" if d["design_weighted_ci_excludes_zero"] else "no"
         drows.append(
             f"{d['label']} & {SUBSET_LABEL[d['subset']]} & "
-            f"${d['unweighted_delta']:+.3f}$ & ({ulo:+.3f}, {uhi:+.3f}) & "
-            f"${d['design_weighted_delta']:+.3f}$ & ({lo:+.3f}, {hi:+.3f}) & {excl} \\\\"
+            f"${d3(d['unweighted_delta'], signed=True)}$ & "
+            f"({d3(ulo, signed=True)}, {d3(uhi, signed=True)}) & "
+            f"${d3(d['design_weighted_delta'], signed=True)}$ & "
+            f"({d3(lo, signed=True)}, {d3(hi, signed=True)}) & {excl} \\\\"
         )
 
     return wrows, erows, drows

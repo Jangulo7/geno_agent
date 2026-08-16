@@ -41,6 +41,12 @@ from _common import (
 )
 
 N_BOOT = 10_000
+# Estimates are stored at 6 dp, not 3 or 4. render_supp_tables.py formats them
+# with ":.3f", so storing at 4 dp rounds twice: a true 0.775549 lands on the
+# 4-dp half-boundary 0.7755, and the second round resolves it by float
+# representation rather than by value (0.7755 -> 0.775, 0.1915 -> 0.192). Six
+# places keep the render the only rounding step.
+PRECISION = 6
 SYSTEMS = ["K", "M", "D", "L", "S", "N", "O"]
 SUBSETS = ["full", "overlap_present", "overlap_absent"]
 PRIMARY = [("S", "K"), ("S", "M"), ("S", "O"), ("M", "K")]
@@ -112,11 +118,11 @@ def main() -> None:
                     "subset": sub,
                     "n_cases": len(cases),
                     "composition": comp,
-                    "unweighted_top1": round(uw, 4),
-                    "unweighted_ci95_cluster": [round(ulo, 4), round(uhi, 4)],
-                    "equal_weight_top1": round(equal_weight_mean(cases, hits), 4),
-                    "design_weighted_top1": round(ht, 4),
-                    "design_weighted_ci95_cluster": [round(lo, 4), round(hi, 4)],
+                    "unweighted_top1": round(uw, PRECISION),
+                    "unweighted_ci95_cluster": [round(ulo, PRECISION), round(uhi, PRECISION)],
+                    "equal_weight_top1": round(equal_weight_mean(cases, hits), PRECISION),
+                    "design_weighted_top1": round(ht, PRECISION),
+                    "design_weighted_ci95_cluster": [round(lo, PRECISION), round(hi, PRECISION)],
                 }
             )
 
@@ -139,10 +145,10 @@ def main() -> None:
                     "label": f"{a} vs {b}",
                     "subset": sub,
                     "n_cases": len(cases),
-                    "unweighted_delta": round(upt, 4),
-                    "unweighted_ci95_cluster": [round(ulo, 4), round(uhi, 4)],
-                    "design_weighted_delta": round(pt, 4),
-                    "design_weighted_ci95_cluster": [round(lo, 4), round(hi, 4)],
+                    "unweighted_delta": round(upt, PRECISION),
+                    "unweighted_ci95_cluster": [round(ulo, PRECISION), round(uhi, PRECISION)],
+                    "design_weighted_delta": round(pt, PRECISION),
+                    "design_weighted_ci95_cluster": [round(lo, PRECISION), round(hi, PRECISION)],
                     "design_weighted_ci_excludes_zero": bool(lo > 0 or hi < 0),
                 }
             )
