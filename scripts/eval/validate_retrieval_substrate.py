@@ -24,8 +24,13 @@ on the substrate.
 
 The retrieval configuration is the one used to compute the released
 ``pmc_article_count`` descriptor (``scripts/cases/17_validate_pmc_coverage.py``):
-dense PubMedBERT prefetch and BM25 sparse prefetch, each at limit k, fused with
-Reciprocal Rank Fusion (k = 60), matching the parameters tabulated in the paper.
+dense PubMedBERT prefetch and BM25 sparse prefetch, each at limit k, fused by
+Qdrant's built-in Reciprocal Rank Fusion, matching the parameters tabulated in
+the paper. The fusion constant is the engine default: on the pinned Qdrant
+v1.14.1 ``models.FusionQuery(fusion=models.Fusion.RRF)`` takes no ``k`` argument
+and scores ``1/(2 + rank)`` over zero-based ranks. A settable ``k`` arrived in
+Qdrant server v1.16.0. Earlier revisions of this docstring claimed ``k = 60``,
+which neither the pinned server nor ``qdrant-client==1.14.3`` could express.
 
 Prerequisites: a running Qdrant v1.14.1 with the ``geno_agent_pmc_oa_v1``
 collection, and network access to the NCBI ID Converter API.
@@ -397,7 +402,8 @@ def main() -> int:
             "engine": "Qdrant v1.14.1",
             "retrieval": (
                 "hybrid: dense PubMedBERT prefetch (limit 100) + BM25 sparse "
-                "prefetch (limit 100), fused by Reciprocal Rank Fusion (k=60); "
+                "prefetch (limit 100), fused by Qdrant built-in Reciprocal "
+                "Rank Fusion (engine constant k=2, zero-based ranks); "
                 "identical to the configuration used for pmc_article_count"
             ),
             "dense_model": "NeuML/pubmedbert-base-embeddings@b79526d6ef3645e0df4530322e266f24c829f5ef",

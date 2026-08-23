@@ -2,7 +2,7 @@
   "meta": {
     "collection": "geno_agent_pmc_oa_v1",
     "engine": "Qdrant v1.14.1",
-    "retrieval": "hybrid: dense PubMedBERT prefetch (limit 100) + BM25 sparse prefetch (limit 100), fused by Reciprocal Rank Fusion (k=60); identical to the configuration used for pmc_article_count",
+    "retrieval": "hybrid: dense PubMedBERT prefetch (limit 100) + BM25 sparse prefetch (limit 100), fused by Qdrant built-in Reciprocal Rank Fusion (engine constant k=2, zero-based ranks; not configurable on Qdrant v1.14.1); identical to the configuration used for pmc_article_count",
     "dense_model": "NeuML/pubmedbert-base-embeddings@b79526d6ef3645e0df4530322e266f24c829f5ef",
     "sparse_model": "Qdrant/bm25",
     "top_k": 100,
