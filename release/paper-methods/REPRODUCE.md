@@ -15,8 +15,10 @@ evaluation cohort. P2 (GenoAgent) and the external P3 repo both depend on this.
   (CUDA 12.8 nightly, required by the RTX 5090) — matching `pyproject.toml`.
   Install needs the PyTorch cu128 nightly index; PyPI alone will not resolve the
   nightly wheels.
-- Determinism: `PYTHONHASHSEED=42`, `RANDOM_SEED=42`, UUID5 chunk IDs, pinned
-  ontology versions. Copy `.env.example` → `.env` and fill in paths/ports.
+- Determinism: explicit sorting plus BLAKE2b-derived identifiers (not Python's
+  salted `hash`), `RANDOM_SEED=42`, UUID5 chunk IDs, pinned ontology versions.
+  `PYTHONHASHSEED=42` is exported for child processes but nothing depends on it.
+  Copy `.env.example` → `.env` and fill in paths/ports.
 
 > Note: `requirements.lock.txt` is a historical 2026-05 snapshot and lists an
 > older torch (`2.9.0.dev…`); **`pyproject.toml` is authoritative** and matches the

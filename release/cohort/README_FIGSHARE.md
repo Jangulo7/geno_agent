@@ -15,9 +15,9 @@ A deterministic, reproducible benchmark of **1,047 rare-disease cases** for
 evaluating *literature-based* causal gene prioritisation. Each case pairs a
 patient phenotype profile (Human Phenotype Ontology terms) with a 50-gene
 candidate list (1 causal + 49 distractor genes) and the true causal gene,
-stratified across four disease categories. Derived from the GA4GH Phenopacket
-Store v0.1.26 by a seeded, version-pinned pipeline so the cohort regenerates
-bit-for-bit.
+sampled across four operational MONDO-derived disease strata. Derived from the
+GA4GH Phenopacket Store v0.1.26 by a seeded, version-pinned pipeline, so the
+cohort regenerates exactly from public inputs.
 
 The cohort additionally ships two **case-level metadata sidecars**: per-case
 annotation-overlap flags (whether a case's source
@@ -157,8 +157,26 @@ cases whose causal gene is non-protein-coding (two `RNU4-2`, one `RNU2-2`) and
 therefore outside the HGNC protein-coding distractor pool. This is expected — do
 not pass `neurological=247` to stage 16.
 
-Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
-(`c355b800e53e5347…`). Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
+Verify your `test_cases.jsonl` against `test_cases_manifest.json`, which carries
+two digests:
+
+- `sha256` (`c355b800e53e5347…`) covers the **full** canonical file, including the
+  index-derived `pmc_article_count`. It reproduces only against the same
+  retrieval index.
+- `sha256_core` (`203a2fa45c1e85d3…`) covers the same records with
+  `pmc_article_count` removed. **This is the digest to check** if you rebuilt
+  from the pinned files alone: a rebuild on different hardware may return
+  slightly different values for that one descriptor, because dense embeddings are
+  computed in half precision on GPU. The descriptor enters no metric and no
+  inclusion decision, so the core digest is what certifies the benchmark.
+
+Stage 17 above applies a coverage check (≥ 5 distinct PMC OA articles for the
+causal-gene symbol) with replacement from the same category. On this cohort it
+excluded nothing: `initial_fail = 0`, `replacements_made = 0`
+(`05_validated_stats.json`), and the lowest count in the released cohort is 24.
+The cohort is therefore the one obtainable from the pinned files alone.
+
+Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
 
 ## Known limitations
 
