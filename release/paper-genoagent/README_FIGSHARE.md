@@ -177,7 +177,7 @@ License: AGPL-3.0.
 
 ## How to cite
 
-> Angulo, J. (2026). *Benchmark Contamination in Rare-Disease Gene Prioritisation:
-> Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from
-> 415 Publications — GenoAgent code* [Software & data set]. Figshare.
-> https://doi.org/10.6084/m9.figshare.32814497
+> Angulo, J., Espinos-Morato, H., & Yeste, V. (2026). *Benchmark Contamination in
+> Rare-Disease Gene Prioritisation: Annotation-Overlap Stratification and Clustered
+> Inference on 1,047 Cases from 415 Publications — GenoAgent code* [Software].
+> Figshare. https://doi.org/10.6084/m9.figshare.32814497

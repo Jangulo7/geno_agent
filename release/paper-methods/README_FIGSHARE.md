@@ -102,7 +102,11 @@ not by this DOI; any personal correspondence.
 
 ## How to cite
 
-> Angulo, J. (2026). *An Annotation-Overlap-Flagged 1,047-Case Rare-Disease
-> Gene-Prioritisation Benchmark and PMC Open Access Index — methods code and build
-> artefacts* [Data set & software]. Figshare.
+> Angulo, J., Espinos-Morato, H., & Yeste, V. (2026). *An annotation-overlap-flagged
+> rare-disease gene-prioritisation benchmark and PMC index recipe — methods code and
+> build artefacts* [Software]. Figshare.
 > https://doi.org/10.6084/m9.figshare.32814491
+
+> Author list note: this item carries the manuscript's three authors because it is
+> the code the paper describes. The two cohort Datasets it builds are deposited
+> under sole authorship (J. Angulo), who constructed them.
