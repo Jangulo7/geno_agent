@@ -12,7 +12,29 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+# The provenance pins build_manifest() reads. It deliberately raises rather than
+# defaulting, because a silent fallback writes the WRONG upstream version into
+# the one file whose entire purpose is provenance. CI has no .env, so the tests
+# must supply them explicitly -- which is also the honest thing for a test that
+# asserts the manifest is a *complete* provenance record.
+_PINS = {
+    "PHENOPACKET_STORE_VERSION": "0.1.26",
+    "MONDO_VERSION": "v2026-03-03",
+    "HGNC_SNAPSHOT": "2026-04-07",
+    "HPO_VERSION": "v2026-02-16",
+}
+
+
+@pytest.fixture
+def provenance_pins(monkeypatch: pytest.MonkeyPatch) -> dict[str, str]:
+    """Set the four upstream version pins build_manifest() requires."""
+    for k, v in _PINS.items():
+        monkeypatch.setenv(k, v)
+    return dict(_PINS)
 
 
 def _load_finalize_module():
@@ -126,7 +148,7 @@ class TestWriteCanonicalJsonl:
 class TestBuildManifest:
     """``build_manifest`` produces a complete provenance record."""
 
-    def test_required_fields(self, tmp_path: Path) -> None:
+    def test_required_fields(self, tmp_path: Path, provenance_pins: dict) -> None:
         finalize = _load_finalize_module()
         recs = [finalize.project_to_canonical(_sample_b7_record(f"c{i}")) for i in range(5)]
         out = tmp_path / "out.jsonl"
@@ -143,7 +165,9 @@ class TestBuildManifest:
         ):
             assert required in manifest
 
-    def test_pmc_coverage_false_when_b6_skipped(self, tmp_path: Path) -> None:
+    def test_pmc_coverage_false_when_b6_skipped(
+        self, tmp_path: Path, provenance_pins: dict
+    ) -> None:
         """When records have pmc_article_count=None, coverage flag is False."""
         finalize = _load_finalize_module()
         recs = [finalize.project_to_canonical(_sample_b7_record(f"c{i}")) for i in range(3)]
@@ -154,7 +178,9 @@ class TestBuildManifest:
         assert manifest["pmc_coverage_validated"] is False
         assert manifest["n_cases_with_pmc_coverage"] == 0
 
-    def test_pmc_coverage_true_when_all_validated(self, tmp_path: Path) -> None:
+    def test_pmc_coverage_true_when_all_validated(
+        self, tmp_path: Path, provenance_pins: dict
+    ) -> None:
         finalize = _load_finalize_module()
         recs = []
         for i in range(3):
@@ -166,3 +192,38 @@ class TestBuildManifest:
         manifest = finalize.build_manifest(recs, out, sha)
         assert manifest["pmc_coverage_validated"] is True
         assert manifest["n_cases_with_pmc_coverage"] == 3
+
+
+class TestProvenancePinsAreRequired:
+    """The manifest builder must refuse to invent upstream versions."""
+
+    def test_missing_pin_raises_instead_of_defaulting(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """An unset pin must abort, not silently record a superseded version.
+
+        Regression guard: an earlier revision defaulted
+        ``PHENOPACKET_STORE_VERSION`` to "0.1.19" while the released cohort was
+        built on v0.1.26, so a run with the variable unset would have written the
+        wrong provenance into the deposited manifest without any warning.
+        """
+        finalize = _load_finalize_module()
+        for key in _PINS:
+            monkeypatch.delenv(key, raising=False)
+        recs = [finalize.project_to_canonical(_sample_b7_record("c0"))]
+        out = tmp_path / "out.jsonl"
+        sha = finalize.write_canonical_jsonl(recs, out)
+        with pytest.raises(SystemExit, match="PHENOPACKET_STORE_VERSION"):
+            finalize.build_manifest(recs, out, sha)
+
+    def test_core_digest_ignores_index_derived_field(self, tmp_path: Path) -> None:
+        """The core digest must not move when pmc_article_count does."""
+        finalize = _load_finalize_module()
+        base = finalize.project_to_canonical(_sample_b7_record("c0"))
+        shifted = dict(base)
+        shifted["pmc_article_count"] = (base.get("pmc_article_count") or 0) + 7
+        assert finalize.core_digest([base]) == finalize.core_digest([shifted])
+        # ...while the full-file digest does move.
+        a = finalize.write_canonical_jsonl([base], tmp_path / "a.jsonl")
+        b = finalize.write_canonical_jsonl([shifted], tmp_path / "b.jsonl")
+        assert a != b

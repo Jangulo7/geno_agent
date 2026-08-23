@@ -87,6 +87,29 @@ def project_to_canonical(rec: dict) -> dict:
     }
 
 
+# Fields excluded from the core digest because they are derived from the live
+# retrieval index rather than from the pinned inputs. FP16 embeddings differ in
+# their last bits across GPUs, so a rebuilt index can return a slightly
+# different top-100 and hence a different pmc_article_count -- which would break
+# a full-file digest comparison even though every field that defines the
+# benchmark reproduced exactly.
+INDEX_DERIVED_FIELDS: Final[frozenset[str]] = frozenset({"pmc_article_count"})
+
+
+def core_digest(records: list[dict]) -> str:
+    """Return the SHA-256 over the canonical records minus index-derived fields.
+
+    This is the digest a third party rebuilding from the pinned files alone
+    should verify against. It is computed over exactly the same serialization
+    as the canonical file, so the two differ only by the omitted fields.
+    """
+    h = hashlib.sha256()
+    for rec in sorted(records, key=lambda r: r["case_id"]):
+        projected = {k: v for k, v in rec.items() if k not in INDEX_DERIVED_FIELDS}
+        h.update((json.dumps(projected, ensure_ascii=False) + "\n").encode("utf-8"))
+    return h.hexdigest()
+
+
 def write_canonical_jsonl(records: list[dict], out_path: Path) -> str:
     """Write records to ``out_path`` and return the SHA-256 of the file.
 
@@ -109,15 +132,31 @@ def _output_path_repr(canonical_path: Path) -> str:
         return str(canonical_path)
 
 
+def _required_env(name: str) -> str:
+    """Return ``os.environ[name]``, failing with an actionable message if unset."""
+    try:
+        return os.environ[name]
+    except KeyError:
+        raise SystemExit(
+            f"{name} is not set. Provenance pins must come from .env, not from a "
+            f"hard-coded default -- see .env.example."
+        ) from None
+
+
 def build_manifest(records: list[dict], canonical_path: Path, sha: str) -> dict[str, Any]:
     """Build the provenance manifest dict for the canonical file."""
     cat_dist = Counter(r.get("category") for r in records)
     n_with_pmc = sum(1 for r in records if r.get("pmc_article_count") is not None)
     return {
         "created_at_utc": datetime.now(UTC).isoformat(),
-        "phenopacket_store_version": os.environ.get("PHENOPACKET_STORE_VERSION", "0.1.19"),
-        "mondo_version": os.environ.get("MONDO_VERSION"),
-        "hgnc_snapshot": os.environ.get("HGNC_SNAPSHOT"),
+        # Read, never default. A silent fallback here writes the WRONG upstream
+        # version into the one file whose entire purpose is provenance, and the
+        # error is invisible in the output. The previous default was "0.1.19",
+        # a superseded pin; the released cohort is built on v0.1.26.
+        "phenopacket_store_version": _required_env("PHENOPACKET_STORE_VERSION"),
+        "mondo_version": _required_env("MONDO_VERSION"),
+        "hgnc_snapshot": _required_env("HGNC_SNAPSHOT"),
+        "hpo_version": _required_env("HPO_VERSION"),
         "random_seed": int(os.environ.get("RANDOM_SEED", "42")),
         "n_cases": len(records),
         "category_distribution": dict(cat_dist),
@@ -128,6 +167,13 @@ def build_manifest(records: list[dict], canonical_path: Path, sha: str) -> dict[
         "pmc_coverage_validated": n_with_pmc == len(records),
         "output_path": _output_path_repr(canonical_path),
         "sha256": sha,
+        "sha256_core": core_digest(records),
+        "sha256_core_note": (
+            "SHA-256 over the same canonical records with the index-derived "
+            "pmc_article_count field removed. A rebuild from the pinned files "
+            "alone reproduces this digest; the full-file sha256 above "
+            "reproduces only against the same retrieval index."
+        ),
         "bytes": canonical_path.stat().st_size,
     }
 
@@ -167,6 +213,7 @@ def main() -> int:
     )
     logger.info(f"  output:                      {args.output}")
     logger.info(f"  output sha256:               {sha[:16]}…")
+    logger.info(f"  core sha256 (index-free):    {manifest['sha256_core'][:16]}…")
     logger.info(f"  output bytes:                {manifest['bytes']:,}")
     logger.info(f"  manifest:                    {args.manifest}")
 

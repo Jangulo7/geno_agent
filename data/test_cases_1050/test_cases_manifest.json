@@ -18,5 +18,7 @@
   "pmc_coverage_validated": true,
   "output_path": "data/test_cases_1050/test_cases.jsonl",
   "sha256": "c355b800e53e5347d921a32c0aa636f3f570e12064c86a2d1ae9d4eb28241919",
+  "sha256_core": "203a2fa45c1e85d39d6f6a4886ed61fbba6e133a41457179f4f08ba8d0ffa7bc",
+  "sha256_core_note": "SHA-256 over the same canonical records with the index-derived pmc_article_count field removed. A rebuild from the pinned files alone reproduces this digest; the full-file sha256 above reproduces only against the same retrieval index.",
   "bytes": 1032161
 }

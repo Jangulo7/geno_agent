@@ -25,5 +25,7 @@
   "random_seed": 42,
   "per_case_seed": "BLAKE2b(global_seed | case_id)",
   "sha256_test_cases_hard": "01f086ad343fd9a82f2e91c04b463b3ab219729c70d0dfa12357cc20d661ff0e",
+  "sha256_test_cases_hard_core": "c20eb7bb389a9df099abd6c8a8e1294a41cf8d87b6ed5a6c843265283f61e231",
+  "sha256_core_note": "SHA-256 over the same records with the index-derived pmc_article_count field removed. A rebuild from the pinned files alone reproduces this digest; the full-file digest above reproduces only against the same retrieval index.",
   "bytes_test_cases_hard": 1046972
 }
