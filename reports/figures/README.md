@@ -15,14 +15,17 @@ commands at the bottom and copy across if a figure changes.
 
 ## P1 — Data Descriptor (`P1_figures/`)
 
-Generator: **`scripts/manuscript/P1_figures.ipynb`** — data-driven from the staged
-cohort in `figshare_uploads/_staging/` and pinned HPO inputs; imports
-`scripts/cases/18b_build_hard_candidates.py` for the difficulty figure.
+Generator: **`scripts/manuscript/render_p1_figures.py`** — data-driven from the
+released cohort and pinned HPO inputs; imports
+`scripts/cases/18b_build_hard_candidates.py` for the difficulty figure. This is
+the script the P1 manuscript names in *Code availability*, and it is the one in
+the Software deposit. `P1_figures.ipynb` is the superseded scratch notebook and is
+deliberately excluded from the bundle.
 
 | File | In P1 | Figure |
 |---|---|---|
 | `fig1_consort_flow.png` | Figure 1 | CONSORT cohort-selection flow; intake funnel 9,588 → 6,382 → 4,670 → 1,050 → 1,047 |
-| `fig2_index_pipeline.png` | Figure 2 | PMC-OA hybrid-index build pipeline (raster copy; the `.tex` renders this as TikZ) |
+| `fig2_index_pipeline.png` | Figure 2 | PMC-OA hybrid-index build pipeline; the `.tex` includes this PNG directly. Its retrieval box reads "RRF, Qdrant default" — Qdrant v1.14.1 has no configurable fusion constant |
 | `fig3_cohort_characterisation.png` | Figure 3 | category / overlap / recency / HPO-depth, 2×2 panel |
 | `fig4_hard_vs_random_separability.png` | Figure 4 | candidate-list difficulty, standard vs hard (Resnik BMA) |
 
@@ -65,8 +68,9 @@ anything in the current supplement.
 ## Regenerate
 
 ```bash
-# P1 figures
-jupyter nbconvert --to notebook --execute scripts/manuscript/P1_figures.ipynb
+# P1 figures (all four; writes into the Overleaf source tree by default)
+python scripts/manuscript/render_p1_figures.py \
+    --out reports/_local/P1_latest_version/"GenoAgent_P1_Method (2)"/fig
 
 # P2 figures + generated tables (writes into the Overleaf source tree by default)
 python scripts/eval/revision/render_revision_figures.py \

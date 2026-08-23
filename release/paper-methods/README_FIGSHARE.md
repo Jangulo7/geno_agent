@@ -19,10 +19,17 @@ artefacts
 **License.** Code: AGPL-3.0-or-later. Data artifacts retain upstream licenses
 (cohort: CC BY 4.0, derived from the GA4GH Phenopacket Store).
 
-**Snapshot.** Git tag `paper-methods-v1.3` (resolve the exact commit with
-`git rev-parse paper-methods-v1.3`). This is the item's **first public release**;
+**Snapshot.** Git tag `paper-methods-v1.4` (resolve the exact commit with
+`git rev-parse paper-methods-v1.4`). This is the item's **first public release**;
 the tag number is internal build history, not a sequence of published versions, so
 Figshare's own version counter starts at 1.
+
+> Do not archive `paper-methods-v1.3` or earlier. Those tags predate the
+> fusion-constant correction and still label Qdrant's built-in RRF `k=60`, which
+> would contradict the manuscript's `k=2`. Run
+> `bash release/verify_p1_deposit.sh paper-methods-v1.4` before uploading; it
+> fails on the superseded tags for exactly that reason.
+
 **Repository.** https://github.com/Jangulo7/geno_agent
 
 ## What this item is
@@ -47,8 +54,9 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 
 - **P1 (this item)** — methods + shared foundation. Owns the corpus/index recipe,
   ontology pins, and the cohort.
-- **P2** — *geno_agent* four-agent LangGraph RAG gene prioritisation (separate Figshare
-  item; references this item's DOI for the foundation).
+- **P2** — the system-evaluation paper built on this foundation (separate
+  Figshare item; references this item's DOI). Its design is described there, not
+  here: P1 stands alone as the shared foundation.
 - **P3** — variant-interpretation safety benchmark, in the separate
   `geno_agent_variant` repository. **Reuses this shared foundation by DOI and forks
   the agent code under AGPL-3.0.**
@@ -60,10 +68,23 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 ## Contents
 
 - `…_code_<commit>.zip` — corpus/cohort pipeline code, tests, env/build config,
-  `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`.
+  `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`. It also carries the figure
+  renderer (`scripts/manuscript/render_p1_figures.py`) and the released
+  validation records the manuscript cites by name:
+  - `release/index_fingerprint/` — the chunk-set fingerprint, its per-PMCID
+    chunk-count manifest (`chunk_counts_by_pmcid.tsv`, 2,249,438 rows) and
+    `retrieval_substrate_validation.json`.
+  - `release/cohort/retained_pmcids.txt` — the exact indexed article set
+    (2,254,388 PMC identifiers), so the genetics-relevance filter can be audited
+    and a rebuild checked without rebuilding the index.
+  - `release/cohort/clustering_stats.json` and `difficulty_tie_split.json`.
 - `artifacts_manifest.tsv` — every resource with its action (upload / reference /
   recipe-only) and license.
 - `*.sha256` — checksums for every uploaded file.
+
+> Verify the bundle before uploading: `bash release/verify_p1_deposit.sh <tag>`
+> asserts that every file the manuscript names is present, that no manuscript
+> source has leaked in, and that the tag carries the corrected RRF label.
 
 > **The n=1,047 benchmark cohort is shipped as *separate* Figshare Dataset items**
 > (type: Dataset, CC BY 4.0) so each has its own citable DOI — they are **not**
@@ -75,8 +96,9 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 **Not included (by design):** the 323 GB Qdrant index and PMC chunk text
 (recipe-only, mixed CC; rebuild from the recipe and verify against the chunk-set
 fingerprint `70759656…aa39ea` in `release/index_fingerprint/chunk_id_fingerprint.txt`);
-ontologies / phenopackets / models (reference
-upstream by pinned version); any personal correspondence.
+ontologies / phenopackets / models (reference upstream by pinned version); the
+manuscript itself, which is distributed by the journal and the preprint server,
+not by this DOI; any personal correspondence.
 
 ## How to cite
 

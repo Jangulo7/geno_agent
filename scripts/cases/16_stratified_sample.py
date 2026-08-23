@@ -2,13 +2,25 @@
 
 Implements master plan §6 step 4 / §7 step [12]. Reads the categorized
 JSONL produced by ``15_categorize_by_mondo.py`` and emits a deterministic
-``SAMPLE_TARGET_SIZE``-record sample (default 75) stratified equally across
-the four disease categories.
+stratified sample across the four disease categories.
 
-Allocation strategy:
-  * Within each category, sort by ``case_id`` for deterministic ordering.
-  * ``ceil(SAMPLE_TARGET_SIZE / 4)`` per category, capped by availability.
-  * If total over-shoots the target, shuffle and truncate to target size.
+Allocation strategy. Two modes, and the released cohort used the second:
+
+  * Equal allocation (the ``SAMPLE_TARGET_SIZE`` default, 75). Within each
+    category, sort by ``case_id`` for deterministic ordering, take
+    ``ceil(SAMPLE_TARGET_SIZE / 4)`` per category capped by availability, and
+    if the total over-shoots, shuffle and truncate to the target size.
+  * Disproportionate allocation via ``--per-category-target``. The published
+    n = 1,047 cohort was drawn this way, with
+    ``immunological=300,developmental=250,metabolic=250,neurological=250``
+    (1,050 drawn; three non-protein-coding causal genes removed downstream at
+    stage 18). The immunological stratum is oversampled because it is the
+    rate-limiting pool; see the design weights in the Data Descriptor. Under
+    this mode the per-category counts are exact and no truncation occurs.
+
+Within a stratum the draw is ``rng.sample`` over a ``case_id``-sorted pool,
+i.e. a simple random sample without replacement, so each eligible case has
+inclusion probability ``drawn / eligible pool``.
 
 All randomness uses ``RANDOM_SEED`` (default 42) so the sample is
 byte-identical across runs and machines.

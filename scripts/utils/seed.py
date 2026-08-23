@@ -14,7 +14,12 @@ Typical use::
 
     from scripts.utils.seed import apply_seeds
 
-    apply_seeds()  # picks up RANDOM_SEED from env, defaults to 42
+    apply_seeds()  # fixed default seed of 42, matching .env's RANDOM_SEED
+
+Note that :func:`apply_seeds` does **not** read ``RANDOM_SEED`` from the
+environment; the default is the literal 42 in its signature. The two agree
+because ``.env`` pins ``RANDOM_SEED=42``. Pass ``apply_seeds(seed)`` explicitly
+to use anything else.
 """
 
 from __future__ import annotations

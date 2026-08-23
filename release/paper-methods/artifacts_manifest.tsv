@@ -8,4 +8,10 @@ HPO / MONDO / GO / HGNC ontologies	runtime ontology lookups (never embedded)	REF
 Phenopacket Store v0.1.26	source patient cohort	REFERENCE	18 MB	CC BY 4.0	YES	upstream monarch-initiative/phenopacket-store (version-pinned)
 PubMedBERT embedder (NeuML/pubmedbert-base-embeddings)	768-d dense embedder	REFERENCE	837 MB	MIT	YES	upstream Hugging Face (cite, do not re-host)
 ACMG-evidence SFT set (R3)	P1 published dataset	CROSS-REF	36 MB	AGPL-3.0 / CC-filtered subset	—	PACKAGED IN geno_agent_variant repo (P3/P4 session); cite its Zenodo/HF DOI from P1
-reports/manuscript_methods_draft.md + _apa.md	methods manuscript	UPLOAD (supplementary)	~120 KB	AGPL-3.0	NO	git-tracked
+
+# NOT DEPOSITED (2026-08-23): the manuscript itself. An earlier row here listed
+# reports/manuscript_methods_draft.md + _apa.md as 'UPLOAD (supplementary)'. The
+# _apa.md file no longer exists, and the deposits carry reproducibility artefacts
+# only -- the manuscript is distributed by the journal and the preprint server,
+# not by the Software DOI. Figure-rendering code IS deposited
+# (scripts/manuscript/render_p1_figures.py); manuscript sources are not.

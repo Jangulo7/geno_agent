@@ -16,8 +16,11 @@ Decision rule per master plan §4.2.1:
 
 Inputs::
 
-    data/test_cases/04_sampled.jsonl     (75 stratified cases)
-    data/test_cases/03_categorized.jsonl (2,971-row replacement pool)
+    data/test_cases/04_sampled.jsonl     (the stratified sample; 1,050 rows
+                                          for the released n = 1,047 cohort)
+    data/test_cases/03_categorized.jsonl (the categorised eligible pool that
+                                          replacements are drawn from; 4,670
+                                          rows for the released cohort)
 
 Output::
 
@@ -103,7 +106,9 @@ def gene_pmc_count(
     """Return (distinct_pmcid_count, distinct_pmcids) for a hybrid query.
 
     Hybrid retrieval: dense PubMedBERT prefetch (k) + BM25 sparse prefetch (k),
-    fused with RRF, top-k returned. Distinct PMCIDs counted from the payload.
+    fused by Qdrant's built-in RRF (engine constant k=2 over zero-based ranks;
+    not configurable on the pinned v1.14.1), top-k returned. Distinct PMCIDs
+    counted from the payload.
     BM25 query uses ``.query_embed()`` (TF only, IDF lives on server).
     """
     q_dense = dense_model.encode(gene_symbol, normalize_embeddings=True).tolist()

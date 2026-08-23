@@ -15,9 +15,9 @@ A deterministic, reproducible benchmark of **1,047 rare-disease cases** for
 evaluating *literature-based* causal gene prioritisation. Each case pairs a
 patient phenotype profile (Human Phenotype Ontology terms) with a 50-gene
 candidate list (1 causal + 49 distractor genes) and the true causal gene,
-stratified across four disease categories. Derived from the GA4GH Phenopacket
-Store v0.1.26 by a seeded, version-pinned pipeline so the cohort regenerates
-bit-for-bit.
+sampled across four operational MONDO-derived disease strata. Derived from the
+GA4GH Phenopacket Store v0.1.26 by a seeded, version-pinned pipeline, so the
+cohort regenerates exactly from public inputs.
 
 The cohort additionally ships two **case-level metadata sidecars**: per-case
 annotation-overlap flags (whether a case's source
@@ -48,15 +48,18 @@ publication dates (for recency stratification).
   | Developmental | 464 | 250 | 250 | 0.539 | 1.86 |
   | Immunological | 390 | 300 | 300 | 0.769 | 1.30 |
   | Metabolic | 672 | 250 | 250 | 0.372 | 2.69 |
-  | Neurological | 3,144 | 250 | 247 | 0.0786 | 12.73 |
+  | Neurological | 3,144 | 250 | 247 | 0.0795 | 12.58 |
   | **Total** | **4,670** | **1,050** | **1,047** | — | — |
 
-  The inclusion probability uses the *analytic* count, not the drawn count,
-  because three neurological cases were removed post-sampling. The neurological
-  eligible pool of 3,144 was not screened for non-protein-coding causal genes, so
-  the neurological inclusion probability is marginally conservative. These values
-  are **not** stored as a field in `test_cases.jsonl`; they are properties of the
-  stratum, joinable on `category`.
+  The inclusion probability is the number **drawn** divided by the eligible
+  pool, since the draw defines the design. Three neurological cases were removed
+  after sampling because their causal genes are not protein-coding; that removal
+  did not condition on the draw, so the design weight for a retained neurological
+  case is unchanged at 3,144/250 ≈ 12.58. The analytic cohort therefore
+  represents the protein-coding subset of each eligible pool, whose neurological
+  size we estimate at 247 × (3,144/250) ≈ 3,106. These values are **not** stored
+  as a field in `test_cases.jsonl`; they are properties of the stratum, joinable
+  on `category`.
 - **Clustered cases.** The 1,047 cases derive from **415 unique source
   publications** (median 1, mean 2.5, max 42 cases per publication). Cases sharing
   a publication are not independent — they share a source, frequently a causal
@@ -157,8 +160,26 @@ cases whose causal gene is non-protein-coding (two `RNU4-2`, one `RNU2-2`) and
 therefore outside the HGNC protein-coding distractor pool. This is expected — do
 not pass `neurological=247` to stage 16.
 
-Verify your `test_cases.jsonl` against the SHA-256 in `test_cases_manifest.json`
-(`c355b800e53e5347…`). Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
+Verify your `test_cases.jsonl` against `test_cases_manifest.json`, which carries
+two digests:
+
+- `sha256` (`c355b800e53e5347…`) covers the **full** canonical file, including the
+  index-derived `pmc_article_count`. It reproduces only against the same
+  retrieval index.
+- `sha256_core` (`203a2fa45c1e85d3…`) covers the same records with
+  `pmc_article_count` removed. **This is the digest to check** if you rebuilt
+  from the pinned files alone: a rebuild on different hardware may return
+  slightly different values for that one descriptor, because dense embeddings are
+  computed in half precision on GPU. The descriptor enters no metric and no
+  inclusion decision, so the core digest is what certifies the benchmark.
+
+Stage 17 above applies a coverage check (≥ 5 distinct PMC OA articles for the
+causal-gene symbol) with replacement from the same category. On this cohort it
+excluded nothing: `initial_fail = 0`, `replacements_made = 0`
+(`05_validated_stats.json`), and the lowest count in the released cohort is 24.
+The cohort is therefore the one obtainable from the pinned files alone.
+
+Methods/foundation code DOI: `10.6084/m9.figshare.32814491`.
 
 ## Known limitations
 

@@ -1,6 +1,11 @@
 # Figshare upload checklist — P1 (methods / shared foundation)
 
-One Figshare item, tag `paper-methods-v1.0`. Author: **Johanna Angulo**. License: AGPL-3.0 (code) / CC BY 4.0 (cohort).
+One Figshare item, tag `paper-methods-v1.4`. Author: **Johanna Angulo**. License: AGPL-3.0 (code) / CC BY 4.0 (cohort).
+
+> Run `bash release/verify_p1_deposit.sh paper-methods-v1.4` before uploading. It
+> asserts that every file the manuscript cites is in the bundle, that no
+> manuscript source has leaked in, and that the tag carries the corrected RRF
+> label. Tags v1.0–v1.3 fail that last check and must not be archived.
 
 > This methods item is **code only** (type: Software). The n=1,047 cohort is a
 > **separate Dataset item** — see `release/cohort/FIGSHARE_CHECKLIST.md` — and is
@@ -10,8 +15,8 @@ One Figshare item, tag `paper-methods-v1.0`. Author: **Johanna Angulo**. License
 
 | # | File (in `figshare_uploads/`) | What | License |
 |---|---|---|---|
-| 1 | `paper-methods-v1.0_code_<commit>.zip` | corpus/cohort pipeline code, tests, env/build config, methods docs, `REPRODUCE.md`, `MANIFEST.tsv` | AGPL-3.0 |
-| 2 | `paper-methods-v1.0_code_<commit>.zip.sha256` + `CHECKSUMS_paper-methods.sha256` | integrity | — |
+| 1 | `paper-methods-v1.4_code_<commit>.zip` | corpus/cohort pipeline code, tests, env/build config, methods docs, `REPRODUCE.md`, `MANIFEST.tsv`, the figure renderer, `release/index_fingerprint/`, `retained_pmcids.txt` | AGPL-3.0 |
+| 2 | `paper-methods-v1.4_code_<commit>.zip.sha256` + `CHECKSUMS_paper-methods.sha256` | integrity | — |
 | 3 | `release/paper-methods/README_FIGSHARE.md` | item description (paste as the Figshare description) | — |
 
 After the cohort item is published, paste its **DOI** into this item's

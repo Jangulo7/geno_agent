@@ -9,9 +9,12 @@ authoritative project rules referenced throughout the code and docs.
   and indexed in Qdrant. The ontologies (HPO, MONDO, GO, HGNC) are NEVER embedded
   or indexed — they are read at runtime via `pronto` (OBO files) and `pandas`
   (HGNC TSV).
-- **Determinism.** `PYTHONHASHSEED=42`, UUID5 content-derived chunk IDs, pinned
-  ontology versions, explicit `torch` / `numpy` / `random` seeds, and
-  `RANDOM_SEED=42` for cohort sampling.
+- **Determinism.** Explicit sorting wherever iteration order could matter, plus
+  BLAKE2b-derived identifiers instead of Python's salted `hash`; UUID5
+  content-derived chunk IDs; pinned ontology versions; explicit `torch` /
+  `numpy` / `random` seeds; and `RANDOM_SEED=42` for cohort sampling.
+  `PYTHONHASHSEED=42` is exported for child processes only — it cannot be set
+  from inside a running interpreter, so nothing released may depend on it.
 - **Sparse retrieval.** BM25 is `fastembed.SparseTextEmbedding("Qdrant/bm25")`
   only — no hash-based fallback under any circumstances.
 - **Local inference.** The production / inference LLM is local (Qwen3-8B via

@@ -18,6 +18,14 @@ scripts/eval/__init__.py
 scripts/eval/compute_annotation_overlap.py
 scripts/eval/compute_clustering_stats.py
 scripts/eval/validate_retrieval_substrate.py
+# --- Figure rendering (Technical Validation) ---
+# Code availability names this script as the source of all four figures and of
+# the strict-exceedance decomposition quoted in Technical Validation, so it must
+# be in this deposit. Listed individually, NOT the whole scripts/manuscript/
+# directory: that also holds P2_render_paper_artifacts.py (P2 content), the
+# P1_figures.ipynb scratch notebook and convert_apa_to_vancouver.py, none of
+# which the P1 manuscript cites.
+scripts/manuscript/render_p1_figures.py
 # --- Shared utilities (determinism / seeding) ---
 scripts/utils
 scripts/__init__.py
@@ -54,6 +62,19 @@ release/assemble_data_bundles.sh
 release/cohort/README_FIGSHARE.md
 release/cohort/README_FIGSHARE_hard.md
 release/cohort/FIGSHARE_CHECKLIST.md
+# --- Released validation records the manuscript cites by name ---
+# Table 3 describes this deposit as "Build recipe, index fingerprint and
+# manifests", and README_FIGSHARE.md points the reader at
+# release/index_fingerprint/chunk_id_fingerprint.txt. Without these the deposit
+# does not contain what the paper says it contains.
+release/index_fingerprint
+release/cohort/clustering_stats.json
+release/cohort/difficulty_tie_split.json
+# The exact indexed article set, cited in Methods 2.3 as released. Tracked from
+# 2026-08-23 precisely so this bundle can carry it (git archive emits tracked
+# files only). release/index_fingerprint/chunk_counts_by_pmcid.tsv arrives via
+# the directory pathspec above.
+release/cohort/retained_pmcids.txt
 release/paper-methods/REPRODUCE.md
 release/paper-methods/artifacts_manifest.tsv
 release/paper-methods/README_FIGSHARE.md

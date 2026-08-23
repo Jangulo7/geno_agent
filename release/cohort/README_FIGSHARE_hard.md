@@ -32,7 +32,11 @@ with the standard cohort, enabling a 2×2 (difficulty × leakage) evaluation.
 - **Pool & exclusions.** Candidates are HGNC protein-coding genes (the same pool
   as the standard cohort) that carry HPO annotations, **excluding** the causal
   gene and **excluding any gene annotated to the case's own causal disease(s)**,
-  so a distractor can never be a genuine alternative cause (clean hard negatives).
+  so no distractor is a *curated* alternative cause for that diagnosis.
+  Distractors are negatives relative to the single recorded causal gene; for a
+  case with digenic or oligogenic contributions that labelling may be
+  incomplete. The exclusion is a defined, recomputable filter, not a guarantee
+  of clean negatives.
 - **Selection.** The **top-49** by BMA; ties broken by gene symbol (deterministic).
 - **Shuffle.** The final 50-gene list is shuffled with the **same per-case seed**
   as the standard cohort (`BLAKE2b(global_seed=42 | case_id)`), so the variant is
@@ -50,7 +54,7 @@ for the full sampling-design table.
   treated as independent observations understate variance. Cluster confidence
   intervals on the source PMID encoded in `case_id`.
 - **Sampling weights.** The four strata were drawn at inclusion probabilities
-  ranging from 0.769 (immunological) to 0.0786 (neurological). Unweighted pooling
+  ranging from 0.769 (immunological) to 0.0795 (neurological). Unweighted pooling
   estimates a design-defined quantity, not a population one.
 - **Tool-class asymmetry.** Distractors are selected by HPO Resnik
   best-match-average similarity computed over `genes_to_phenotype` — the same
@@ -105,8 +109,13 @@ literature-based vs curated tools.
 # Methods/foundation release (stages 13-20 build the base cohort), then:
 python scripts/cases/18b_build_hard_candidates.py   # Resnik-BMA top-49, seed 42
 ```
-Verify `test_cases_hard.jsonl` against the SHA-256 in
-`test_cases_hard_manifest.json`. Methods/foundation code DOI:
+Verify `test_cases_hard.jsonl` against `test_cases_hard_manifest.json`, which
+carries two digests: `sha256_test_cases_hard` (`01f086ad343fd9a8…`) over the full
+canonical file, and `sha256_test_cases_hard_core` (`c20eb7bb389a9df0…`) over the
+same records with the index-derived `pmc_article_count` removed. **Check the core
+digest** if you rebuilt from the pinned files alone — a rebuild on different
+hardware may return slightly different values for that one descriptor, which
+enters no metric and no inclusion decision. Methods/foundation code DOI:
 `10.6084/m9.figshare.32814491`.
 
 ## License

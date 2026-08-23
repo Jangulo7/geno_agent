@@ -21,6 +21,16 @@ repos:
       - id: check-toml
       - id: check-added-large-files
         args: ["--maxkb=1024"]
+        # Two released artefacts are deliberately tracked despite their size: the
+        # P1 manuscript states both are released, and the Figshare software
+        # bundle is built with `git archive`, which can only emit tracked files.
+        # Plain text, ~13 MB packed for the pair. The 1 MB ceiling still applies
+        # to everything else, so an accidental data dump is still caught.
+        exclude: |
+          (?x)^(
+            release/cohort/retained_pmcids\.txt|
+            release/index_fingerprint/chunk_counts_by_pmcid\.tsv
+          )$
       - id: check-merge-conflict
       - id: mixed-line-ending
         args: ["--fix=lf"]

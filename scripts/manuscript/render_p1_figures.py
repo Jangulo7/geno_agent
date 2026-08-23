@@ -105,9 +105,9 @@ _ap.add_argument(
     "--consort-title",
     default="Figure 1 - CONSORT-style cohort selection flow",
     help=(
-        "title drawn inside fig1. P1 numbers this Figure 1; P2 carries the same "
-        "flow as Figure A.1 in its annex, so the number must be settable rather "
-        "than hard-coded, or the two papers disagree with their own captions."
+        "title drawn inside fig1. The figure number is settable because the same "
+        "flow is numbered differently in different manuscripts; hard-coding it "
+        "would make a caption disagree with the figure it labels."
     ),
 )
 _args = _ap.parse_args()
@@ -349,7 +349,7 @@ pb(4.2, 2.6, "Section-aware chunking\n512 tok / 50 overlap", PB)
 pb(7.0, 2.6, "PubMedBERT dense (768-d)\n+ BM25 sparse", PB)
 pb(9.9, 2.6, "Qdrant index\n52,777,395 chunks\nHNSW . cosine", PG)
 pb(7.0, 0.8, "UUID5 content IDs\n(deterministic)", PB)
-pb(9.9, 0.8, "Hybrid retrieval\n(RRF, k=60)", PG)
+pb(9.9, 0.8, "Hybrid retrieval\n(RRF, Qdrant default)", PG)
 ar(2.55, 2.6, 3.15, 2.6)
 ar(5.3, 2.6, 5.85, 2.6)
 ar(8.1, 2.6, 8.9, 2.6)

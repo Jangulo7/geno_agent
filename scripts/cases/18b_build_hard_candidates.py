@@ -17,8 +17,11 @@ Distractor selection (deterministic, version-pinned):
     is-a DAG; IC(t) = -ln(P(t)).
   * Candidate pool = HGNC protein-coding genes (same pool as stage 18) that have
     HPO annotations, **excluding** the causal gene and **excluding any gene
-    annotated to the case's own causal disease(s)** so a distractor can never be
-    a genuine alternative cause (clean hard negatives, no label ambiguity).
+    annotated to the case's own causal disease(s)**, so no distractor is a
+    *curated* alternative cause for that diagnosis. This is a defined,
+    recomputable filter, not a guarantee of clean negatives: distractors are
+    negatives relative to the single recorded causal gene, and for a case with
+    digenic or oligogenic contributions that labelling may be incomplete.
   * The top-49 by BMA are taken; ties broken by gene symbol (ascending) for
     determinism. If a case has < 49 scored candidates (not observed in practice),
     the remainder is filled with the per-case-seeded random draw of stage 18.
