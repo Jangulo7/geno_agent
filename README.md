@@ -81,7 +81,7 @@ To our knowledge, this is the first end-to-end validated agentic-workflow RAG sy
 1. **An open, reproducible architecture** — four role-specialized agents (Query Planner / Retriever / Critic / Synthesizer) coordinated as a LangGraph agentic workflow, with all components, prompts, and configuration released under an open license.
 2. **A rigorous 2×2+1 factorial evaluation design** that isolates the contribution of the multi-agent architecture from the contribution of hybrid retrieval. The 2×2 factor crosses *single-agent vs. multi-agent* with *dense-only vs. hybrid (dense + BM25)* retrieval; Exomiser is included as an external phenotype-driven baseline, providing a direct quantitative comparison against an established gold standard.
 3. **Local, consumer-GPU deployment** — the system runs end-to-end on a single workstation (NVIDIA RTX 5090, 32 GB VRAM) using [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) as the reasoning model and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext) for biomedical embeddings. No external API dependencies *at inference time*, no per-call cost, no data leaving the workstation — important for both reproducibility and any future extension to protected clinical data. (The optional RAGAS evaluation judge is the sole component that calls an external OpenAI-compatible LLM endpoint — GPT-4o in this study — used only to *measure* rationale quality, never for gene prioritisation.)
-4. **A standardized, difficulty-controlled benchmark** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26 for the paper; v0.1.19 for the earlier cohort), with deterministic stratified case selection (neurological, metabolic, immunological, developmental) and **two case-paired distractor variants** — *standard* (49 uniformly-random HGNC protein-coding genes) and *hard* (49 phenotypically most-similar genes by HPO Resnik best-match-average). Crossed with a per-case annotation-overlap (leakage) flag, these form a **difficulty × leakage 2×2**. The benchmark itself is fully seeded — every case, distractor list, and stratification label regenerates from public inputs and is verifiable against a released core SHA-256 digest (the full-file digest also covers the index-derived `pmc_article_count`, which may shift on a rebuilt index); the LLM-dependent evaluation results reproduce to within vLLM's near-deterministic decoding (~98% per-case rank stability, with the **top-1 metric bit-identical** across independent runs — see [Reproducibility](#reproducibility) for the exact determinism contract).
+4. **A standardized, difficulty-controlled benchmark** built on the [GA4GH Phenopacket Store](https://github.com/monarch-initiative/phenopacket-store) (v0.1.26), with deterministic stratified case selection (neurological, metabolic, immunological, developmental) and **two case-paired distractor variants** — *standard* (49 uniformly-random HGNC protein-coding genes) and *hard* (49 phenotypically most-similar genes by HPO Resnik best-match-average). Crossed with a per-case annotation-overlap (leakage) flag, these form a **difficulty × leakage 2×2**. The benchmark itself is fully seeded — every case, distractor list, and stratification label regenerates from public inputs and is verifiable against a released core SHA-256 digest (the full-file digest also covers the index-derived `pmc_article_count`, which may shift on a rebuilt index); the LLM-dependent evaluation results reproduce to within vLLM's near-deterministic decoding (~98% per-case rank stability, with the **top-1 metric bit-identical** across independent runs — see [Reproducibility](#reproducibility) for the exact determinism contract).
 
 Where this work *is not* claiming novelty: RAG itself ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)), multi-agent LLM systems generally, hybrid dense+sparse retrieval, and the use of PubMed/PMC as a corpus are all established techniques. The contribution is the application of these techniques, in this combination, to this clinical problem, with rigorous evaluation.
 
@@ -143,9 +143,8 @@ Ontologies (HPO, MONDO, GO, HGNC) are accessed at runtime as structured graph an
 ## Evaluation design
 
 An earlier 16-cell factorial (architecture × retrieval × Critic
-type × Synthesizer type) over an n=75 cohort (cells A–J + P, Q, R, K)
-established the design. This study scales the most informative cells to
-n=1,047 and adds a second curated baseline:
+type × Synthesizer type) established the design. This study scales the most
+informative cells to n=1,047 and adds a second curated baseline:
 
 | Cell | Configuration | Role |
 |---|---|---|
@@ -160,9 +159,9 @@ n=1,047 and adds a second curated baseline:
 
 Test cases (n=1,047) are sampled from GA4GH Phenopacket Store **v0.1.26**
 using disproportionate stratified sampling (250 dev + **300 imm** + 250 met +
-247 neuro; immunological oversampled for subgroup statistical power). The
-earlier n=75 and n=459 (paper-v1) cohorts remain in the repo for the audit
-trail.
+247 neuro; immunological oversampled for subgroup statistical power). This is
+the only cohort this repository releases; earlier development cohorts are not
+tracked here.
 
 **Distractor-difficulty variants.** Each case carries a fixed 50-gene candidate
 list (1 causal + 49 distractors), built in two **case-paired** variants that differ
@@ -270,11 +269,8 @@ bootstrap 95 % CIs (1,000 resamples, seed 42). Sensitivity probes
 |---|---|---|
 | 1A (scripts) | PMC OA pipeline scripts validated | ✅ Complete |
 | 1A (production) | 52.78 M chunks indexed in Qdrant `geno_agent_pmc_oa_v1` | ✅ Complete |
-| 1B (test set v1) | n=75 earlier cohort (v0.1.19, seed 42) | ✅ Complete |
-| 1B (test set v2) | n=459 paper v1 (v0.1.19, seed 4242) | ✅ Complete |
-| **1B (test set v3)** | **n=1,047 paper extension (v0.1.26, seed 42, disproportionate 250+300+250+250)** | ✅ Complete |
+| **1B (released cohort)** | **n=1,047 (v0.1.26, seed 42, disproportionate 250+300+250+250)** | ✅ Complete |
 | 2a | LangGraph 4-agent state graph + Qwen3-8B/vLLM | ✅ Complete |
-| Eval (earlier n=75) | 16-cell factorial at n=75 | ✅ Complete |
 | **Eval (paper v2)** | **5 cells × n=1,047, bootstrap CIs, per-MONDO breakdown, LIRICAL** | ✅ Complete |
 | **Eval (paper v3)** | **LEA logging + RAGAS + annotation-overlap + recency + LLM-family ablation** | ✅ Complete |
 | **Robustness** | **Leave-one-paper-out + Holm/BH multiplicity correction + stratum-weighted sensitivity** | ✅ Complete (2026-06-11) |
@@ -300,7 +296,7 @@ This project is built reproducibility-first. Every external dataset is pinned to
 | Mondo Disease Ontology (MONDO) | `v2026-03-03` |
 | Gene Ontology (GO)             | `2026-03-25` |
 | HGNC complete set              | `2026-04-07` quarterly |
-| **Phenopacket Store**           | **`v0.1.26`** (this study; earlier cohort used `v0.1.19`) |
+| **Phenopacket Store**           | **`v0.1.26`** |
 | MedCPT Cross-Encoder           | `ncbi/MedCPT-Cross-Encoder` (HuggingFace, cached) |
 | PubMedBERT dense embedder      | `NeuML/pubmedbert-base-embeddings` @ `b79526d6ef3645e0df4530322e266f24c829f5ef` |
 | Qdrant server / client         | `v1.14.1` / `1.14.3` |
@@ -315,7 +311,7 @@ In addition:
 - Qdrant runs in Docker at a pinned image version (`qdrant/qdrant:v1.14.1`)
 - Dependencies are pinned in `pyproject.toml` with exact versions
 - Distractor gene sampling uses a per-case derived seed (`blake2b(global_seed, case_id)`), so individual cases can be regenerated without disturbing others
-- All cohort sample sizes (n=75, n=459, n=1,047) regenerable from `RANDOM_SEED` + pinned ontology versions + Phenopacket Store version
+- The released n=1,047 cohort regenerates from `RANDOM_SEED` + the pinned ontology versions + the pinned Phenopacket Store version
 - vLLM at `temperature=0.0` is mostly deterministic (~98 % per-case rank stability between runs; **top-1 metric is bit-identical** across two independent v2 and v3 runs)
 
 The full reproducibility specification is kept in the project's local methodology
