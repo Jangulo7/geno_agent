@@ -70,6 +70,12 @@ release/cohort/FIGSHARE_CHECKLIST.md
 release/index_fingerprint
 release/cohort/clustering_stats.json
 release/cohort/difficulty_tie_split.json
+# The hand-authored Croissant descriptors for the two cohort Datasets. Without
+# them in this bundle, a reuser who rebuilds the cohorts from this recipe gets a
+# bundle with no machine-readable descriptor -- assemble_data_bundles.sh warns and
+# continues. They are small, and this deposit is the recipe for those datasets.
+release/cohort/genoagent-cohort-n1047-v1.0.croissant.json
+release/cohort/genoagent-cohort-hard-n1047-v1.0.croissant.json
 # The exact indexed article set, cited in Methods 2.3 as released. Tracked from
 # 2026-08-23 precisely so this bundle can carry it (git archive emits tracked
 # files only). release/index_fingerprint/chunk_counts_by_pmcid.tsv arrives via
