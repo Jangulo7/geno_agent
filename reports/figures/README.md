@@ -15,12 +15,22 @@ commands at the bottom and copy across if a figure changes.
 
 ## P1 — Data Descriptor (`P1_figures/`)
 
-Generator: **`scripts/manuscript/render_p1_figures.py`** — data-driven from the
-released cohort and pinned HPO inputs; imports
-`scripts/cases/18b_build_hard_candidates.py` for the difficulty figure. This is
-the script the P1 manuscript names in *Code availability*, and it is the one in
-the Software deposit. `P1_figures.ipynb` is the superseded scratch notebook and is
-deliberately excluded from the bundle.
+Generators: **`scripts/manuscript/export_figure_data.py`** then
+**`scripts/manuscript/render_p1_figures.R`** — the export step is data-driven from
+the released cohort and pinned HPO inputs and imports
+`scripts/cases/18b_build_hard_candidates.py` for the difficulty figure, so its
+Resnik BMA scoring cannot drift from the deposited cohort builder; the R step
+draws. **`scripts/manuscript/render_p1_figures.py`** is the earlier single-step
+renderer, kept because it — and not the two-step path — produces the
+strict-exceedance decomposition quoted in *Technical Validation*. All three are
+named in *Code availability* and all three are in the Software deposit.
+`P1_figures.ipynb` is the superseded scratch notebook and is deliberately
+excluded from the bundle.
+
+The R step needs `ggplot2`, `patchwork`, `jsonlite`, `scales`, `showtext`,
+`sysfonts` and `ragg` (the published PNGs were rendered under R 4.6.1). It falls
+back to the default sans face if Source Sans 3 cannot be fetched, so it renders
+offline.
 
 | File | In P1 | Figure |
 |---|---|---|
@@ -68,9 +78,14 @@ anything in the current supplement.
 ## Regenerate
 
 ```bash
-# P1 figures (all four; writes into the Overleaf source tree by default)
-python scripts/manuscript/render_p1_figures.py \
-    --out reports/_local/P1_latest_version/"GenoAgent_P1_Method (2)"/fig
+# P1 figures (all four) — export the tidy tables, then draw them
+python scripts/manuscript/export_figure_data.py          # -> reports/figures/P1_figures/data/
+Rscript scripts/manuscript/render_p1_figures.R \
+    --data reports/figures/P1_figures/data \
+    --out  reports/_local/P1_latest_version/"GenoAgent_P1_Method (2)"/fig
+
+# strict-exceedance decomposition quoted in P1 Technical Validation
+python scripts/manuscript/render_p1_figures.py --out /tmp/p1figs
 
 # P2 figures + generated tables (writes into the Overleaf source tree by default)
 python scripts/eval/revision/render_revision_figures.py \

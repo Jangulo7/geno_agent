@@ -14,4 +14,6 @@ ACMG-evidence SFT set (R3)	P1 published dataset	CROSS-REF	36 MB	AGPL-3.0 / CC-fi
 # _apa.md file no longer exists, and the deposits carry reproducibility artefacts
 # only -- the manuscript is distributed by the journal and the preprint server,
 # not by the Software DOI. Figure-rendering code IS deposited
-# (scripts/manuscript/render_p1_figures.py); manuscript sources are not.
+# (scripts/manuscript/export_figure_data.py, render_p1_figures.R and
+# render_p1_figures.py); manuscript sources are not. The rendered PNGs are not:
+# they regenerate from that code plus the released cohort and pinned HPO inputs.

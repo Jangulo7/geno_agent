@@ -30,6 +30,8 @@ REQUIRED=(
   scripts/eval/compute_annotation_overlap.py
   scripts/eval/compute_clustering_stats.py
   scripts/eval/validate_retrieval_substrate.py
+  scripts/manuscript/export_figure_data.py
+  scripts/manuscript/render_p1_figures.R
   scripts/manuscript/render_p1_figures.py
   scripts/utils/seed.py
   release/index_fingerprint/chunk_id_fingerprint.txt

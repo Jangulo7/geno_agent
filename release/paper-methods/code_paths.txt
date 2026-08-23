@@ -19,12 +19,18 @@ scripts/eval/compute_annotation_overlap.py
 scripts/eval/compute_clustering_stats.py
 scripts/eval/validate_retrieval_substrate.py
 # --- Figure rendering (Technical Validation) ---
-# Code availability names this script as the source of all four figures and of
-# the strict-exceedance decomposition quoted in Technical Validation, so it must
-# be in this deposit. Listed individually, NOT the whole scripts/manuscript/
-# directory: that also holds P2_render_paper_artifacts.py (P2 content), the
-# P1_figures.ipynb scratch notebook and convert_apa_to_vancouver.py, none of
-# which the P1 manuscript cites.
+# Code availability names all three of these. The published figures are drawn in
+# two steps: export_figure_data.py scores the Resnik BMA similarities (importing
+# scripts/cases/18b_build_hard_candidates.py, so the scoring cannot drift from the
+# deposited cohort builder) and writes tidy per-figure CSVs; render_p1_figures.R
+# draws them. render_p1_figures.py is the earlier single-step renderer, retained
+# because it -- and not the two-step path -- produces the strict-exceedance
+# decomposition quoted in Technical Validation. Listed individually, NOT the whole
+# scripts/manuscript/ directory: that also holds P2_render_paper_artifacts.py (P2
+# content), the P1_figures.ipynb scratch notebook and convert_apa_to_vancouver.py,
+# none of which the P1 manuscript cites.
+scripts/manuscript/export_figure_data.py
+scripts/manuscript/render_p1_figures.R
 scripts/manuscript/render_p1_figures.py
 # --- Shared utilities (determinism / seeding) ---
 scripts/utils

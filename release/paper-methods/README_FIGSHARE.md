@@ -69,8 +69,12 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 
 - `…_code_<commit>.zip` — corpus/cohort pipeline code, tests, env/build config,
   `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`. It also carries the figure
-  renderer (`scripts/manuscript/render_p1_figures.py`) and the released
-  validation records the manuscript cites by name:
+  code (`scripts/manuscript/export_figure_data.py`, which scores the phenotypic
+  similarities and writes tidy per-figure tables; `render_p1_figures.R`, which
+  draws the four published figures; and `render_p1_figures.py`, the earlier
+  single-step renderer that produces the strict-exceedance decomposition quoted
+  in Technical Validation) and the released validation records the manuscript
+  cites by name:
   - `release/index_fingerprint/` — the chunk-set fingerprint, its per-PMCID
     chunk-count manifest (`chunk_counts_by_pmcid.tsv`, 2,249,438 rows) and
     `retrieval_substrate_validation.json`.
