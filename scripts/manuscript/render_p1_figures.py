@@ -105,9 +105,9 @@ _ap.add_argument(
     "--consort-title",
     default="Figure 1 - CONSORT-style cohort selection flow",
     help=(
-        "title drawn inside fig1. P1 numbers this Figure 1; P2 carries the same "
-        "flow as Figure A.1 in its annex, so the number must be settable rather "
-        "than hard-coded, or the two papers disagree with their own captions."
+        "title drawn inside fig1. The figure number is settable because the same "
+        "flow is numbered differently in different manuscripts; hard-coding it "
+        "would make a caption disagree with the figure it labels."
     ),
 )
 _args = _ap.parse_args()

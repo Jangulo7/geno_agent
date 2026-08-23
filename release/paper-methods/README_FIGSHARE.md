@@ -54,8 +54,9 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 
 - **P1 (this item)** — methods + shared foundation. Owns the corpus/index recipe,
   ontology pins, and the cohort.
-- **P2** — *geno_agent* four-agent LangGraph RAG gene prioritisation (separate Figshare
-  item; references this item's DOI for the foundation).
+- **P2** — the system-evaluation paper built on this foundation (separate
+  Figshare item; references this item's DOI). Its design is described there, not
+  here: P1 stands alone as the shared foundation.
 - **P3** — variant-interpretation safety benchmark, in the separate
   `geno_agent_variant` repository. **Reuses this shared foundation by DOI and forks
   the agent code under AGPL-3.0.**

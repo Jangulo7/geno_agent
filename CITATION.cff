@@ -1,36 +1,49 @@
 cff-version: 1.2.0
 message: "If you use this software or its datasets, please cite as below."
-title: "geno_agent: A Four-Agent LangGraph RAG System for Gene Prioritisation in Rare Mendelian Disease"
+title: "geno_agent: reproducible corpus, benchmark cohort and RAG pipeline for gene prioritisation in rare Mendelian disease"
 abstract: >-
-  An end-to-end agentic-workflow retrieval-augmented generation (RAG) system for
-  literature-based causal gene prioritisation in rare Mendelian disease, evaluated
-  on a stratified n=1,047 cohort from the GA4GH Phenopacket Store. This repository
-  hosts the methods/foundation paper (P1) and the GenoAgent system paper (P2).
+  Reproducible infrastructure for literature-based causal gene prioritisation in
+  rare Mendelian disease: a deterministic, version-pinned build recipe for a
+  hybrid dense-plus-sparse retrieval index over the genetics-relevant PMC Open
+  Access corpus, and a stratified benchmark of 1,047 cases from the GA4GH
+  Phenopacket Store carrying per-case annotation-overlap and publication-recency
+  metadata. This repository hosts the methods/foundation paper (P1) and the
+  system paper (P2) that builds on it.
 type: software
 authors:
   - family-names: Angulo
     given-names: Johanna
     affiliation: "Universidad Europea de Madrid"
+    orcid: "https://orcid.org/0009-0005-6965-0604"
+  - family-names: Espinos-Morato
+    given-names: Hector
+    affiliation: "Universidad Europea de Valencia"
+    orcid: "https://orcid.org/0000-0002-4089-1368"
+  - family-names: Yeste
+    given-names: Víctor
+    affiliation: "Universidad Europea de Valencia"
+    orcid: "https://orcid.org/0000-0002-3660-8347"
 license: AGPL-3.0-or-later
 repository-code: "https://github.com/Jangulo7/geno_agent"
 identifiers:
   - type: doi
-    value: 10.6084/m9.figshare.32814497
-    description: "Benchmark Contamination in Rare-Disease Gene Prioritisation: Annotation-Overlap Stratification and Clustered Inference on 1,047 Cases from 415 Publications — GenoAgent code — P2 system"
-  - type: doi
     value: 10.6084/m9.figshare.32814491
-    description: "An Annotation-Overlap-Flagged 1,047-Case Rare-Disease Gene-Prioritisation Benchmark and PMC Open Access Index — methods code and build artefacts — P1 methods/foundation"
+    description: "An annotation-overlap-flagged rare-disease gene-prioritisation benchmark and PMC index recipe — methods code and build artefacts (P1, methods/foundation)"
   - type: doi
     value: 10.6084/m9.figshare.32814449
     description: "A Stratified Rare-Disease Benchmark Cohort for Literature-Based Causal Gene Prioritisation (n=1,047) — standard cohort dataset"
   - type: doi
     value: 10.6084/m9.figshare.32816468
     description: "A Phenotype-Similar Distractor Variant of the Stratified Rare-Disease Cohort for Literature-Based Causal Gene Prioritisation (n=1,047) — hard cohort dataset"
+  - type: doi
+    value: 10.6084/m9.figshare.32814497
+    description: "GenoAgent system code (P2, system evaluation) — depends on the P1 foundation above"
 year: 2026
 keywords:
   - rare disease
   - gene prioritisation
   - retrieval-augmented generation
-  - agentic workflow
+  - benchmark
+  - data leakage
   - Human Phenotype Ontology
   - clinical genomics

@@ -3,10 +3,9 @@
 Implements master plan §6 step 7 / §7 step [15]. Reads the candidate-list
 output from B7 (``06_with_candidates.jsonl``) and emits two artifacts:
 
-  * ``test_cases.jsonl`` — single canonical file consumed by every Phase 2
-    experimental condition (cells A-D + Exomiser baseline E). Sorted by
-    ``case_id`` for deterministic ordering. Schema is projected to ONLY
-    the fields the downstream evaluation harness needs.
+  * ``test_cases.jsonl`` — the single canonical file every downstream
+    evaluation reads. Sorted by ``case_id`` for deterministic ordering, and
+    projected to only the fields an evaluation harness needs.
   * ``test_cases_manifest.json`` — provenance record: version pins, RNG
     seed, N cases, category distribution, SHA-256 of the canonical file,
     and creation timestamp.
