@@ -8,8 +8,11 @@ Lives in the "GenoAgent" project alongside the methods and system items.
 | # | File (in `figshare_uploads/`) | What | License |
 |---|---|---|---|
 | 1 | `genoagent-cohort-n1047-v1.0.zip` | full n=1,047 cohort (`test_cases.jsonl` + sidecars + 01–06 provenance stages) + `MANIFEST.tsv` + data descriptor + per-file `CHECKSUMS.sha256` | CC BY 4.0 |
-| 2 | `genoagent-cohort-n1047-v1.0.zip.sha256` | integrity (zip-level) | — |
-| 3 | `release/cohort/README_FIGSHARE.md` | item description / data descriptor (paste as the Figshare description) | — |
+| 2 | `release/cohort/README_FIGSHARE.md` | item description (paste into the Figshare description field — see `figshare_uploads/FIGSHARE_WEB_TEXT.md`) | — |
+
+> Do **not** upload the `.sha256` sidecar. The live records carry the zip and the
+> Croissant descriptor only; integrity is covered by `CHECKSUMS.sha256` inside the
+> bundle and by the digests in `figshare_uploads/UPLOAD_MAP.md`.
 
 ## Metadata to set (drives discoverability → citations)
 

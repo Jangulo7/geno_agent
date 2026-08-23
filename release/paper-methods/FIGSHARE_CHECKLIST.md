@@ -16,7 +16,10 @@ One Figshare item, tag `paper-methods-v1.4`. Author: **Johanna Angulo**. License
 | # | File (in `figshare_uploads/`) | What | License |
 |---|---|---|---|
 | 1 | `paper-methods-v1.4_code_<commit>.zip` | corpus/cohort pipeline code, tests, env/build config, methods docs, `REPRODUCE.md`, `MANIFEST.tsv`, the figure renderer, `release/index_fingerprint/`, `retained_pmcids.txt` | AGPL-3.0 |
-| 2 | `paper-methods-v1.4_code_<commit>.zip.sha256` + `CHECKSUMS_paper-methods.sha256` | integrity | — |
+> Do **not** upload the `.sha256` sidecars. The published cohort records carry
+> their zip plus a Croissant descriptor only; keep this record consistent. Integrity
+> is covered inside the bundle and by the digests in
+> `figshare_uploads/UPLOAD_MAP.md`.
 | 3 | `release/paper-methods/README_FIGSHARE.md` | item description (paste as the Figshare description) | — |
 
 After the cohort item is published, paste its **DOI** into this item's

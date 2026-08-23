@@ -9,7 +9,7 @@ working repository — the bundles are assembled *from* a git tag plus on-disk d
 | Paper | Scope | Repository | Tag |
 |---|---|---|---|
 | **P1** | Methods / shared foundation (PMC-OA corpus + Qdrant index build, ontology pinning, n=1,047 cohort construction) | this repo (`geno_agent`) | `paper-methods-v1.4` |
-| **P2** | GenoAgent — four-agent LangGraph RAG gene prioritisation + evaluation | this repo (`geno_agent`) | `paper-genoagent-v1.0` |
+| **P2** | GenoAgent — four-agent LangGraph RAG gene prioritisation + evaluation | this repo (`geno_agent`) | `paper-genoagent-v1.8` |
 | **P3** | Safety benchmark (variant interpretation) — **reuses P1's shared foundation by DOI, and forks P2's agent code under AGPL** | separate repo `geno_agent_variant` | (in that repo) |
 
 The **shared foundation** (Qdrant PMC-OA index recipe, pinned ontologies,
@@ -45,7 +45,7 @@ release/
 |---|---|---|---|
 | **Benchmark cohort (n=1,047)** | Dataset (CC BY 4.0) | `genoagent-cohort-n1047-v1.0.zip` | methods item, P2, manuscripts |
 | **Methods / foundation** | Software (AGPL) | `paper-methods-v1.4_code_*.zip` | P2, external P3 repo |
-| **GenoAgent system** | Software (AGPL) | `paper-genoagent-v1.0_code_*.zip` + `_data.zip` | manuscript |
+| **GenoAgent system** | Software (AGPL) | `paper-genoagent-v1.8_code_*.zip` + `_data.zip` | manuscript |
 
 ## How to build (after the tags exist)
 
@@ -53,7 +53,7 @@ release/
 # 1. create the annotated tags (done once, after review/merge — see RELEASE checklist)
 # 2. build the code zips + sha256 from those tags:
 bash release/build_figshare_bundles.sh paper-methods-v1.4
-bash release/build_figshare_bundles.sh paper-genoagent-v1.0
+bash release/build_figshare_bundles.sh paper-genoagent-v1.8
 # 3. assemble the data bundles (cohort Dataset + P2 results/manuscript):
 bash release/assemble_data_bundles.sh
 # outputs land in ../figshare_uploads/ (gitignored)

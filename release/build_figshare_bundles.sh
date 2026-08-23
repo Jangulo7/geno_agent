@@ -4,8 +4,8 @@
 # .git, and AI-tooling config. Outputs to ../figshare_uploads/ (gitignored).
 #
 # Usage:
-#   bash release/build_figshare_bundles.sh paper-methods-v1.0
-#   bash release/build_figshare_bundles.sh paper-genoagent-v1.0
+#   bash release/build_figshare_bundles.sh paper-methods-v1.4
+#   bash release/build_figshare_bundles.sh paper-genoagent-v1.8
 #
 # The data/resource artifacts (cohort, eval results, figures) are NOT included
 # here — they are listed in each paper's artifacts_manifest.tsv and assembled

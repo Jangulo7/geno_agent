@@ -1,13 +1,16 @@
 # Figshare upload checklist — P2 (GenoAgent)
 
-One Figshare item, tag `paper-genoagent-v1.3`. Author: **Johanna Angulo**. License: AGPL-3.0. Depends on P1's foundation by DOI.
+One Figshare item, tag `paper-genoagent-v1.8`. Authors: **Johanna Angulo, Hector Espinos-Morato, Victor Yeste**. License: AGPL-3.0. Depends on P1's foundation by DOI.
+
+> Do **not** upload the `.sha256` sidecars, for the reason given in the P1
+> checklist: the published cohort records carry their zip plus a descriptor only.
 
 ## Upload these files
 
 | # | File (in `figshare_uploads/`) | What | License |
 |---|---|---|---|
-| 1 | `paper-genoagent-v1.3_code_<commit>.zip` | agents, tools, baselines, eval harness, tests, docs, `REPRODUCE.md` | AGPL-3.0 |
-| 2 | `paper-genoagent-v1.3_data.zip` | committed `eval_1050/` + `eval_hard/` results (incl. Cell R) + `lopo_full/` summaries + figures + tables + **text-stripped rationale derivative** | AGPL-3.0 |
+| 1 | `paper-genoagent-v1.8_code_<commit>.zip` | agents, tools, baselines, eval harness, tests, docs, `REPRODUCE.md` | AGPL-3.0 |
+| 2 | `paper-genoagent-v1.8_data.zip` | committed `eval_1050/` + `eval_hard/` results (incl. Cell R) + `lopo_full/` summaries + figures + tables + **text-stripped rationale derivative** | AGPL-3.0 |
 | 3 | `*.sha256` for items 1–2 + `CHECKSUMS_paper-genoagent.sha256` | integrity | — |
 | 4 | `release/paper-genoagent/README_FIGSHARE.md` | item description (paste as the Figshare description) | — |
 
