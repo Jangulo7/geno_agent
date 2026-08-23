@@ -54,7 +54,7 @@ for the full sampling-design table.
   treated as independent observations understate variance. Cluster confidence
   intervals on the source PMID encoded in `case_id`.
 - **Sampling weights.** The four strata were drawn at inclusion probabilities
-  ranging from 0.769 (immunological) to 0.0786 (neurological). Unweighted pooling
+  ranging from 0.769 (immunological) to 0.0795 (neurological). Unweighted pooling
   estimates a design-defined quantity, not a population one.
 - **Tool-class asymmetry.** Distractors are selected by HPO Resnik
   best-match-average similarity computed over `genes_to_phenotype` — the same

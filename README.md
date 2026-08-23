@@ -446,7 +446,7 @@ Cohort-level analysis caveats are quantified in `release/cohort/`: the 1,047 cas
 derive from only **415 unique publications** (`clustering_stats.json`), so
 per-case metrics are not independent observations and intervals should cluster on
 source PMID; and the four strata were sampled at inclusion probabilities from
-0.769 down to 0.0786, so unweighted pooling estimates a design-defined quantity.
+0.769 down to 0.0795, so unweighted pooling estimates a design-defined quantity.
 
 ## Repository layout
 

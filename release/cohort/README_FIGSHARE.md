@@ -48,15 +48,18 @@ publication dates (for recency stratification).
   | Developmental | 464 | 250 | 250 | 0.539 | 1.86 |
   | Immunological | 390 | 300 | 300 | 0.769 | 1.30 |
   | Metabolic | 672 | 250 | 250 | 0.372 | 2.69 |
-  | Neurological | 3,144 | 250 | 247 | 0.0786 | 12.73 |
+  | Neurological | 3,144 | 250 | 247 | 0.0795 | 12.58 |
   | **Total** | **4,670** | **1,050** | **1,047** | — | — |
 
-  The inclusion probability uses the *analytic* count, not the drawn count,
-  because three neurological cases were removed post-sampling. The neurological
-  eligible pool of 3,144 was not screened for non-protein-coding causal genes, so
-  the neurological inclusion probability is marginally conservative. These values
-  are **not** stored as a field in `test_cases.jsonl`; they are properties of the
-  stratum, joinable on `category`.
+  The inclusion probability is the number **drawn** divided by the eligible
+  pool, since the draw defines the design. Three neurological cases were removed
+  after sampling because their causal genes are not protein-coding; that removal
+  did not condition on the draw, so the design weight for a retained neurological
+  case is unchanged at 3,144/250 ≈ 12.58. The analytic cohort therefore
+  represents the protein-coding subset of each eligible pool, whose neurological
+  size we estimate at 247 × (3,144/250) ≈ 3,106. These values are **not** stored
+  as a field in `test_cases.jsonl`; they are properties of the stratum, joinable
+  on `category`.
 - **Clustered cases.** The 1,047 cases derive from **415 unique source
   publications** (median 1, mean 2.5, max 42 cases per publication). Cases sharing
   a publication are not independent — they share a source, frequently a causal
