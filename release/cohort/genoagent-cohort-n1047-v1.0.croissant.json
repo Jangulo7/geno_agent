@@ -1,0 +1,327 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "Stratified-Rare-Disease-Benchmark-Cohort-n1047",
+  "alternateName": "A Stratified Rare-Disease Benchmark Cohort for Literature-Based Causal Gene Prioritisation (n=1,047)",
+  "description": "A deterministic, reproducible benchmark of 1,047 rare-disease cases for evaluating literature-based causal gene prioritization. Each case pairs a patient phenotype profile (Human Phenotype Ontology terms) with a 50-gene candidate list (1 causal + 49 randomly sampled distractor genes) and the true causal gene, sampled across four operational MONDO-derived disease strata (developmental, immunological, metabolic, neurological). Derived from the GA4GH Phenopacket Store v0.1.26 by a seeded, version-pinned pipeline so the cohort regenerates exactly from public inputs (RANDOM_SEED=42; per-case distractor seed = BLAKE2b(global_seed | case_id)). Ships two deconfounding sidecars: per-case annotation-overlap flags (whether a case's source publication is cited by phenotype.hpoa for the causal gene) and source publication dates (recency stratification). The annotation-overlap flag identifies the fair (overlap-absent) subset (cohort overlap rate approximately 73%, 765/1,047) recommended for unbiased comparison against curated tools.",
+  "url": "https://doi.org/10.6084/m9.figshare.32814449",
+  "sameAs": "https://figshare.com/articles/dataset/32814449",
+  "identifier": "https://doi.org/10.6084/m9.figshare.32814449",
+  "version": "1.0",
+  "datePublished": "2026-05-16",
+  "isLiveDataset": false,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Johanna Angulo",
+    "affiliation": {
+      "@type": "sc:Organization",
+      "name": "Universidad Europea de Madrid"
+    }
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Figshare"
+  },
+  "keywords": [
+    "rare disease",
+    "causal gene prioritization",
+    "Human Phenotype Ontology",
+    "HPO",
+    "phenopacket",
+    "benchmark",
+    "gene ranking",
+    "biomedical NLP",
+    "retrieval-augmented generation",
+    "clinical genomics"
+  ],
+  "citeAs": "@dataset{angulo2026rd_cohort, author = {Angulo, Johanna}, title = {A Stratified Rare-Disease Benchmark Cohort for Literature-Based Causal Gene Prioritisation (n=1,047)}, year = {2026}, publisher = {Figshare}, version = {v1.0}, doi = {10.6084/m9.figshare.32814449}, note = {Derived from GA4GH Phenopacket Store v0.1.26; CC BY 4.0.}}",
+  "rai:dataCollection": "Not primary data collection. The 1,047 cases are selected from the GA4GH Phenopacket Store v0.1.26 (published rare-disease case reports encoded as GA4GH Phenopackets) by a deterministic, version-pinned pipeline (methods/foundation release, stages 13-20). Inclusion requires at least 3 HPO terms, a single causal gene, and at least 5 PMC Open Access articles mentioning that gene; cases are disproportionately stratified across four MONDO-derived categories (250 developmental / 300 immunological / 250 metabolic / 247 neurological).",
+  "rai:dataCollectionType": "Curated/derived benchmark: selection plus seeded synthetic distractor sampling over an existing open dataset. Not a population sample and not primary clinical data.",
+  "rai:dataAnnotationProtocol": "Labels are inherited, not re-annotated: causal_gene, hpo_terms, and diseases are taken byte-for-byte from the source phenopacket. The 49 distractor genes per case are drawn from the HGNC protein-coding pool by a per-case deterministic seed (BLAKE2b(global_seed=42 | case_id)); the causal gene's ground-truth position is recorded in causal_gene_index_in_candidates.",
+  "rai:dataUseCases": "Intended for benchmarking literature-based / retrieval-augmented causal gene prioritization and ranking systems. NOT intended for clinical decision-making, diagnosis, or as evidence about real patients.",
+  "rai:dataBiases": "Annotation-overlap (leakage) bias: for approximately 73% of cases (765/1,047) the source publication is cited by HPO phenotype.hpoa for the causal gene, which can advantage curated tools. The annotation_overlap.json sidecar flags this per case; evaluate on the fair (overlap-absent) subset for unbiased comparison. The cohort over-samples immunological cases for subgroup statistical power, so the category mix is not epidemiologically representative.",
+  "rai:dataLimitations": "One causal gene per case; distractors are protein-coding HGNC genes only (three neurological cases with non-protein-coding causal genes are excluded by construction, hence n=1,047 not 1,050). Because it is derived and seeded, it is a reproducible evaluation set rather than a sample of the disease population.",
+  "rai:personalSensitiveInformation": "No direct identifiers. Content is limited to phenotype (HPO), disease (OMIM/MONDO), and gene (HGNC) terms plus a source-publication reference, all derived from already-published, openly licensed case reports in the GA4GH Phenopacket Store. No raw clinical records, images, or genomic sequence are included.",
+  "rai:dataReleaseMaintenancePlan": "Versioned on Figshare under a persistent DOI (this item is v1.0). The cohort regenerates from pinned public inputs plus the methods/foundation code (DOI 10.6084/m9.figshare.32814491); every file's SHA-256 is pinned in CHECKSUMS.sha256 and the build manifest.",
+  "isBasedOn": {
+    "@type": "sc:Dataset",
+    "name": "GA4GH Phenopacket Store",
+    "version": "v0.1.26",
+    "url": "https://github.com/monarch-initiative/phenopacket-store",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "test_cases.jsonl",
+      "name": "test_cases.jsonl",
+      "description": "Canonical cohort: one JSON object per case (1,047 rows).",
+      "contentUrl": "test_cases.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "c355b800e53e5347d921a32c0aa636f3f570e12064c86a2d1ae9d4eb28241919"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "annotation_overlap.json",
+      "name": "annotation_overlap.json",
+      "description": "Per-case annotation-overlap flags plus meta (cohort overlap rate). Deconfounding sidecar for the fair-subset evaluation.",
+      "contentUrl": "annotation_overlap.json",
+      "encodingFormat": "application/json",
+      "sha256": "842113bbb7ff09fce40dbe2890d5fd0cde67980c09d5ebdbf039ad92a1e06083"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "pmid_dates.json",
+      "name": "pmid_dates.json",
+      "description": "Source-publication dates per PMID plus meta. Recency-stratification sidecar.",
+      "contentUrl": "pmid_dates.json",
+      "encodingFormat": "application/json",
+      "sha256": "6f58367e43c7a4798d97b35a8732d6f47f48dfe0cebb17b5e384ec9640be0cf2"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test_cases_manifest.json",
+      "name": "test_cases_manifest.json",
+      "description": "Build manifest: pinned versions, seed, category distribution, SHA-256 and byte size of test_cases.jsonl.",
+      "contentUrl": "test_cases_manifest.json",
+      "encodingFormat": "application/json",
+      "sha256": "2f982795a7598e44afa06df6345df84a21a960d7de5516dd17e36ec2cdd45355"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "cases",
+      "name": "cases",
+      "description": "One benchmark case per record. The prediction task is to rank candidate_genes so that causal_gene appears at the top; the ground-truth position is causal_gene_index_in_candidates.",
+      "key": {
+        "@id": "cases/case_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "cases/case_id",
+          "name": "case_id",
+          "description": "Stable case ID, '{CAUSAL_GENE}:{phenopacket_id}' (e.g. AAGAB:PMID_24573067_CASE_REPORT).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "case_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/category",
+          "name": "category",
+          "description": "Disease category: one of developmental | immunological | metabolic | neurological.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "category"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/hpo_terms",
+          "name": "hpo_terms",
+          "description": "Patient phenotype as Human Phenotype Ontology term IDs (HP:NNNNNNN); at least 3 per case.",
+          "dataType": "sc:Text",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "hpo_terms"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/diseases",
+          "name": "diseases",
+          "description": "Associated disease(s): a repeated record of {id, label}. id is typically an OMIM CURIE (OMIM:NNNNNN); label is the disease name.",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "diseases"
+            }
+          },
+          "subField": [
+            {
+              "@type": "cr:Field",
+              "@id": "cases/diseases/id",
+              "name": "id",
+              "dataType": "sc:Text",
+              "description": "Disease identifier (OMIM CURIE).",
+              "source": {
+                "fileObject": {
+                  "@id": "test_cases.jsonl"
+                },
+                "extract": {
+                  "column": "diseases"
+                },
+                "transform": {
+                  "jsonPath": "id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "cases/diseases/label",
+              "name": "label",
+              "dataType": "sc:Text",
+              "description": "Human-readable disease name.",
+              "source": {
+                "fileObject": {
+                  "@id": "test_cases.jsonl"
+                },
+                "extract": {
+                  "column": "diseases"
+                },
+                "transform": {
+                  "jsonPath": "label"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/causal_gene",
+          "name": "causal_gene",
+          "description": "HGNC symbol of the true causal gene (the prediction target).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "causal_gene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/candidate_genes",
+          "name": "candidate_genes",
+          "description": "50 HGNC symbols to rank: the causal gene plus 49 seeded random distractors.",
+          "dataType": "sc:Text",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "candidate_genes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/causal_gene_index_in_candidates",
+          "name": "causal_gene_index_in_candidates",
+          "description": "0-based index of causal_gene within candidate_genes (ground-truth label position).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "causal_gene_index_in_candidates"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/pmc_article_count",
+          "name": "pmc_article_count",
+          "description": "Number of PMC Open Access articles mentioning the causal gene (coverage; at least 5 by construction).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "pmc_article_count"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/source_phenopacket",
+          "name": "source_phenopacket",
+          "description": "Relative path to the source phenopacket JSON within GA4GH Phenopacket Store v0.1.26.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases.jsonl"
+            },
+            "extract": {
+              "column": "source_phenopacket"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

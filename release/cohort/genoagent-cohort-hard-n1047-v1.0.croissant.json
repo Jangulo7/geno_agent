@@ -1,0 +1,334 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "Phenotype-Similar-Distractor-Variant-Rare-Disease-Cohort-n1047",
+  "alternateName": "A Phenotype-Similar Distractor Variant of the Stratified Rare-Disease Cohort for Literature-Based Causal Gene Prioritisation (n=1,047)",
+  "description": "A HARD variant of the stratified rare-disease benchmark cohort. It contains the same 1,047 rare-disease cases as the standard cohort (DOI 10.6084/m9.figshare.32814449) - identical case_id, causal_gene, hpo_terms, diseases, and the same deconfounding layer - but the 49 distractor genes per case are PHENOTYPICALLY SIMILAR to the case rather than randomly sampled. Similarity is HPO Resnik term similarity aggregated by best-match-average (BMA) between the case HPO profile and each gene's known HPO annotations (the Phenomizer/Exomiser-standard measure); information content is computed from genes_to_phenotype.txt propagated over the hp.obo is-a DAG. Candidates are HGNC protein-coding genes carrying HPO annotations, excluding the causal gene and any gene annotated to the case's own causal disease(s) (so no distractor is a curated alternative cause for that diagnosis); the top-49 by BMA are selected (ties broken by symbol) and the 50-gene list is shuffled with the same per-case seed as the standard cohort (BLAKE2b(global_seed=42 | case_id)). This turns distractor difficulty into an explicit experimental axis, orthogonal to the annotation-overlap (leakage) axis, enabling a 2x2 difficulty x leakage evaluation.",
+  "url": "https://doi.org/10.6084/m9.figshare.32816468",
+  "sameAs": "https://figshare.com/articles/dataset/32816468",
+  "identifier": "https://doi.org/10.6084/m9.figshare.32816468",
+  "version": "1.0",
+  "datePublished": "2026-06-28",
+  "isLiveDataset": false,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Johanna Angulo",
+    "affiliation": {
+      "@type": "sc:Organization",
+      "name": "Universidad Europea de Madrid"
+    }
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Figshare"
+  },
+  "keywords": [
+    "rare disease",
+    "causal gene prioritization",
+    "Human Phenotype Ontology",
+    "HPO",
+    "phenopacket",
+    "benchmark",
+    "hard negatives",
+    "Resnik similarity",
+    "differential diagnosis",
+    "biomedical NLP",
+    "clinical genomics"
+  ],
+  "citeAs": "@dataset{angulo2026rd_cohort_hard, author = {Angulo, Johanna}, title = {A Phenotype-Similar Distractor Variant of the Stratified Rare-Disease Cohort for Literature-Based Causal Gene Prioritisation (n=1,047)}, year = {2026}, publisher = {Figshare}, version = {v1.0}, doi = {10.6084/m9.figshare.32816468}, note = {Case-paired with the standard variant DOI 10.6084/m9.figshare.32814449; CC BY 4.0.}}",
+  "rai:dataCollection": "Not primary data collection. The 1,047 cases are exactly those of the standard GenoAgent cohort (DOI 10.6084/m9.figshare.32814449), themselves selected from GA4GH Phenopacket Store v0.1.26. Only the 49 distractor genes per case differ: here they are chosen to be phenotypically SIMILAR to the case rather than random.",
+  "rai:dataCollectionType": "Curated/derived benchmark: a case-paired hard-negative variant of an existing derived cohort. Not a population sample and not primary clinical data.",
+  "rai:dataAnnotationProtocol": "Labels (causal_gene, hpo_terms, diseases) are inherited byte-for-byte from the standard cohort. Hard distractors are selected by HPO Resnik term similarity aggregated by best-match-average (BMA) between the case HPO profile and each gene's HPO annotations (information content from genes_to_phenotype.txt propagated over the hp.obo is-a DAG). The candidate pool is HGNC protein-coding genes carrying HPO annotations, EXCLUDING the causal gene and any gene annotated to the case's own causal disease(s) so no distractor is a curated alternative cause for that diagnosis; the top-49 by BMA are taken (ties broken by gene symbol) and the 50-gene list is shuffled with the same per-case seed as the standard cohort (BLAKE2b(global_seed=42 | case_id)).",
+  "rai:dataUseCases": "Intended to stress-test differential-diagnosis behaviour of literature-based / retrieval-augmented causal gene prioritization systems, and to pair with the standard cohort for a 2x2 difficulty x leakage evaluation. NOT intended for clinical decision-making or diagnosis.",
+  "rai:dataBiases": "Distractor difficulty is deliberately elevated (phenotype-similar hard negatives), so absolute accuracy is not comparable to the random-distractor standard cohort - compare the two only as paired conditions. The annotation-overlap (leakage) bias of the underlying cases is unchanged (approximately 73% overlap); use the annotation_overlap.json fair subset for unbiased comparison.",
+  "rai:dataLimitations": "One causal gene per case; distractors are protein-coding HGNC genes carrying HPO annotations only. Similarity depends on the completeness of gene-to-HPO annotations, so poorly annotated genes are under-represented among distractors. Derived and seeded: a reproducible evaluation set, not a disease-population sample.",
+  "rai:personalSensitiveInformation": "No direct identifiers. Content is limited to phenotype (HPO), disease (OMIM/MONDO), and gene (HGNC) terms plus a source-publication reference, all derived from already-published, openly licensed case reports. No raw clinical records, images, or genomic sequence are included.",
+  "rai:dataReleaseMaintenancePlan": "Versioned on Figshare under a persistent DOI (this item is v1.0), case-paired to the standard cohort DOI. Regenerates from pinned public inputs plus the methods/foundation code (DOI 10.6084/m9.figshare.32814491, stage 18b); every file's SHA-256 is pinned in CHECKSUMS.sha256.",
+  "isBasedOn": [
+    {
+      "@type": "sc:Dataset",
+      "name": "Stratified rare-disease benchmark cohort (standard, random distractors)",
+      "identifier": "https://doi.org/10.6084/m9.figshare.32814449",
+      "url": "https://doi.org/10.6084/m9.figshare.32814449",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "sc:Dataset",
+      "name": "GA4GH Phenopacket Store",
+      "version": "v0.1.26",
+      "url": "https://github.com/monarch-initiative/phenopacket-store",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "test_cases_hard.jsonl",
+      "name": "test_cases_hard.jsonl",
+      "description": "Canonical hard cohort: one JSON object per case (1,047 rows); same schema as the standard cohort plus candidate_difficulty.",
+      "contentUrl": "test_cases_hard.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "01f086ad343fd9a82f2e91c04b463b3ab219729c70d0dfa12357cc20d661ff0e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "annotation_overlap.json",
+      "name": "annotation_overlap.json",
+      "description": "Per-case annotation-overlap flags plus meta (cohort overlap rate). Deconfounding sidecar for the fair-subset (leakage) axis.",
+      "contentUrl": "annotation_overlap.json",
+      "encodingFormat": "application/json",
+      "sha256": "e39da2a3f71d8987568c5c566b63b4b3f3b1ba90abff8cd653e8636b630ab249"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "cases",
+      "name": "cases",
+      "description": "One benchmark case per record. The prediction task is to rank candidate_genes so that causal_gene appears at the top; the ground-truth position is causal_gene_index_in_candidates. Distractors here are phenotype-similar hard negatives.",
+      "key": {
+        "@id": "cases/case_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "cases/case_id",
+          "name": "case_id",
+          "description": "Stable case ID, '{CAUSAL_GENE}:{phenopacket_id}'. Identical to the matching case in the standard cohort.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "case_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/category",
+          "name": "category",
+          "description": "Disease category: one of developmental | immunological | metabolic | neurological.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "category"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/hpo_terms",
+          "name": "hpo_terms",
+          "description": "Patient phenotype as Human Phenotype Ontology term IDs (HP:NNNNNNN); at least 3 per case.",
+          "dataType": "sc:Text",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "hpo_terms"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/diseases",
+          "name": "diseases",
+          "description": "Associated disease(s): a repeated record of {id, label}. id is typically an OMIM CURIE (OMIM:NNNNNN); label is the disease name.",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "diseases"
+            }
+          },
+          "subField": [
+            {
+              "@type": "cr:Field",
+              "@id": "cases/diseases/id",
+              "name": "id",
+              "dataType": "sc:Text",
+              "description": "Disease identifier (OMIM CURIE).",
+              "source": {
+                "fileObject": {
+                  "@id": "test_cases_hard.jsonl"
+                },
+                "extract": {
+                  "column": "diseases"
+                },
+                "transform": {
+                  "jsonPath": "id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "cases/diseases/label",
+              "name": "label",
+              "dataType": "sc:Text",
+              "description": "Human-readable disease name.",
+              "source": {
+                "fileObject": {
+                  "@id": "test_cases_hard.jsonl"
+                },
+                "extract": {
+                  "column": "diseases"
+                },
+                "transform": {
+                  "jsonPath": "label"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/causal_gene",
+          "name": "causal_gene",
+          "description": "HGNC symbol of the true causal gene (the prediction target).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "causal_gene"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/candidate_genes",
+          "name": "candidate_genes",
+          "description": "50 HGNC symbols to rank: the causal gene plus 49 phenotype-similar (Resnik-BMA top-49) hard-negative distractors.",
+          "dataType": "sc:Text",
+          "repeated": true,
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "candidate_genes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/causal_gene_index_in_candidates",
+          "name": "causal_gene_index_in_candidates",
+          "description": "0-based index of causal_gene within candidate_genes (ground-truth label position).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "causal_gene_index_in_candidates"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/pmc_article_count",
+          "name": "pmc_article_count",
+          "description": "Number of PMC Open Access articles mentioning the causal gene (coverage; at least 5 by construction). Identical to the standard cohort.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "pmc_article_count"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/source_phenopacket",
+          "name": "source_phenopacket",
+          "description": "Relative path to the source phenopacket JSON within GA4GH Phenopacket Store v0.1.26.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "source_phenopacket"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cases/candidate_difficulty",
+          "name": "candidate_difficulty",
+          "description": "Marks the distractor regime for this variant; constant value 'hard' (phenotype-similar distractors).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test_cases_hard.jsonl"
+            },
+            "extract": {
+              "column": "candidate_difficulty"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -49,15 +49,28 @@ mkdir -p "$STAGE"
 # Use Python's zipfile so no external `zip` binary is required.
 zip_dir() { ( cd "$STAGE" && python3 -m zipfile -c "$OUT/$1.zip" "$1" ) && ( cd "$OUT" && sha256sum "$1.zip" > "$1.zip.sha256" ); }
 
-# Croissant descriptors are authored by hand and live next to the zips in
-# figshare_uploads/ (they are also uploaded standalone, beside the zip). They are
-# NOT regenerated here, so a rebuild must copy the existing descriptor in or the
-# bundle silently loses it — which is what happened before this guard existed.
+# Croissant descriptors are authored by hand and are NOT regenerated here, so a
+# rebuild must copy the existing descriptor in or the bundle silently loses it —
+# which is what happened before this guard existed.
+#
+# The source of truth is release/cohort/, tracked in git beside the READMEs they
+# accompany. They used to live only in figshare_uploads/, which is gitignored: a
+# hand-authored source file with no backup, sitting in a folder that build steps
+# delete. figshare_uploads/ still receives a copy, because each descriptor is also
+# uploaded standalone beside its zip.
+CROISSANT_SRC="$ROOT/release/cohort"
 copy_croissant() { # $1 = bundle name, $2 = staging dir
-  if [ -f "$OUT/$1.croissant.json" ]; then
-    cp "$OUT/$1.croissant.json" "$2/croissant.json"
+  local src="$CROISSANT_SRC/$1.croissant.json"
+  if [ ! -f "$src" ] && [ -f "$OUT/$1.croissant.json" ]; then
+    # Fallback to the legacy location so an older checkout still builds.
+    src="$OUT/$1.croissant.json"
+    echo "NOTE $1: using the legacy descriptor in figshare_uploads/; move it to release/cohort/."
+  fi
+  if [ -f "$src" ]; then
+    cp "$src" "$2/croissant.json"          # into the bundle
+    cp "$src" "$OUT/$1.croissant.json"     # standalone, for upload beside the zip
   else
-    echo "WARN $1: no $1.croissant.json in figshare_uploads/ — bundle will ship WITHOUT its Croissant descriptor."
+    echo "WARN $1: no $1.croissant.json in release/cohort/ — bundle will ship WITHOUT its Croissant descriptor."
   fi
 }
 

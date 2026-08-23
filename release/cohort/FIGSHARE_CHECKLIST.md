@@ -15,6 +15,11 @@ Lives in the "GenoAgent" project alongside the methods and system items.
 > text in `figshare_uploads/FIGSHARE_WEB_TEXT.md`, which fixes the phrases
 > Reviewer 2 flagged.
 
+> The Croissant descriptors are hand-authored. Their source of truth is
+> `release/cohort/*.croissant.json`, tracked in git; `assemble_data_bundles.sh`
+> copies each one into its bundle **and** to `figshare_uploads/` for standalone
+> upload. Edit the tracked copy, never the one in `figshare_uploads/`.
+
 > Do **not** upload the `.sha256` sidecar. The live records carry the zip and the
 > Croissant descriptor only; integrity is covered by `CHECKSUMS.sha256` inside the
 > bundle and by the digests in `figshare_uploads/UPLOAD_MAP.md`.
