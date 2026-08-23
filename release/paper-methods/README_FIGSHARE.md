@@ -60,10 +60,23 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 ## Contents
 
 - `…_code_<commit>.zip` — corpus/cohort pipeline code, tests, env/build config,
-  `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`.
+  `MANIFEST.tsv`, methods docs, and `REPRODUCE.md`. It also carries the figure
+  renderer (`scripts/manuscript/render_p1_figures.py`) and the released
+  validation records the manuscript cites by name:
+  - `release/index_fingerprint/` — the chunk-set fingerprint, its per-PMCID
+    chunk-count manifest (`chunk_counts_by_pmcid.tsv`, 2,249,438 rows) and
+    `retrieval_substrate_validation.json`.
+  - `release/cohort/retained_pmcids.txt` — the exact indexed article set
+    (2,254,388 PMC identifiers), so the genetics-relevance filter can be audited
+    and a rebuild checked without rebuilding the index.
+  - `release/cohort/clustering_stats.json` and `difficulty_tie_split.json`.
 - `artifacts_manifest.tsv` — every resource with its action (upload / reference /
   recipe-only) and license.
 - `*.sha256` — checksums for every uploaded file.
+
+> Verify the bundle before uploading: `bash release/verify_p1_deposit.sh <tag>`
+> asserts that every file the manuscript names is present, that no manuscript
+> source has leaked in, and that the tag carries the corrected RRF label.
 
 > **The n=1,047 benchmark cohort is shipped as *separate* Figshare Dataset items**
 > (type: Dataset, CC BY 4.0) so each has its own citable DOI — they are **not**
@@ -75,8 +88,9 @@ per-case BLAKE2b seed, so they are deterministic and case-paired.
 **Not included (by design):** the 323 GB Qdrant index and PMC chunk text
 (recipe-only, mixed CC; rebuild from the recipe and verify against the chunk-set
 fingerprint `70759656…aa39ea` in `release/index_fingerprint/chunk_id_fingerprint.txt`);
-ontologies / phenopackets / models (reference
-upstream by pinned version); any personal correspondence.
+ontologies / phenopackets / models (reference upstream by pinned version); the
+manuscript itself, which is distributed by the journal and the preprint server,
+not by this DOI; any personal correspondence.
 
 ## How to cite
 
