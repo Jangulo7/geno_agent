@@ -7,7 +7,13 @@ A four-agent LangGraph RAG system for literature-based causal gene prioritisatio
 in rare Mendelian disease — this repository holds the code and evaluation behind
 the paper above.
 
-> **Doctoral first paper** (Universidad Europea de Madrid; n=1,047). An
+> ↳ **Coming from AI evaluation rather than genomics?** Start with
+> [Why this matters for evaluation](#why-this-matters-for-evaluation). The central
+> result of this work is a measurement-validity finding — benchmark contamination
+> that can be flagged per item, and a winning margin that dissolves once inference
+> is clustered on the unit that actually generated the items.
+
+> **Doctoral second paper** (Universidad Europea de Madrid; n=1,047). An
 > end-to-end agentic-workflow RAG system for literature-based causal gene
 > prioritisation in rare Mendelian disease.
 >
@@ -56,6 +62,100 @@ the paper above.
 
 ---
 
+## Why this matters for evaluation
+
+The substrate is rare-disease genomics. The result is about measurement.
+
+This repository does not claim that a system won a leaderboard. It shows that the
+leaderboard was partly scoring its own contamination, and that the winning margin
+of the system built here does not survive the correct unit of analysis. Both
+findings were produced and reported by the author of the system under test. Both
+move the headline in the unflattering direction. The failure modes are
+domain-general; only the cases are biomedical.
+
+**1. Contamination that can be flagged per item**
+
+73.1% of the 1,047 benchmark cases (765) have their source publication cited by
+`phenotype.hpoa`, the curated annotation file consumed as input by one of the two
+reference tools. Stratifying on that per-case overlap flag erases LIRICAL's
+23-point apparent lead over Exomiser (top-1 0.924 → 0.777, a tie with Exomiser,
+*p* = 1.000).
+
+The design is a difference-in-differences, not a single split. Every system with
+no exposure to that file scores **higher** on the overlap-absent subset; the
+exposed system alone scores lower. The system × overlap interaction is **+0.382**
+(*p* ≈ 1e-27). The interaction survives publication-level clustering, direct
+standardisation for disease composition, and adjustment for annotation density.
+
+This is the same failure mode as train–test contamination on LLM benchmarks, in a
+setting where the leak is auditable per item. The leaked channel is a citation
+list, so overlap can be flagged, crossed with difficulty, and estimated — not
+merely suspected after the fact.
+
+**2. Items that are not independent observations**
+
+The 1,047 cases come from only 415 source publications (overlap-absent subset:
+282 cases from 93). Under publication-clustered resampling, this project's own
+system stops beating the curated baselines at rank 1 (*p* = 0.45 and 0.41). Of 22
+net discordances against Exomiser, 20 trace to a single paper.
+
+The repository therefore reports `geno_agent` as **matching, not beating**, the
+curated tools — against its own interest — and states separately what remains
+after clustering. Any eval suite whose items are drawn from a smaller set of
+documents, scenarios, or seed prompts has this structure. Item-level confidence
+intervals on such suites are too narrow.
+
+**What to take from the numbers**
+
+If an evaluation consumes an external knowledge file, report the per-item overlap
+with that file and the system × overlap interaction. If items share a source
+document, cluster on that document before claiming a ranking. A method that looks
+first on a contaminated, over-dispersed leaderboard can be indistinguishable from
+the baselines once those two corrections are applied.
+
+### Measurement problems this repository has had to solve
+
+A leaderboard cell is not a measurement. These are the design failures that had to
+be made explicit before a score in this domain could be read as evidence of method
+rather than of the instrument.
+
+| Failure mode in benchmark design | What was done here | Where to look |
+| --- | --- | --- |
+| Train/eval contamination | Per-item overlap flag; overlap-stratified reporting; difference-in-differences against systems that *cannot* be contaminated | `scripts/eval/compute_annotation_overlap.py`, `revision/interaction_test.py` |
+| Pseudo-replication (items sharing a source) | Publication-clustered bootstrap and cluster permutation tests, with the naïve item-level result printed alongside so the gap is visible | `revision/cluster_inference.py`, `cluster_robust_checks.py` |
+| No null baseline / trivially solvable items | Cell R: a model-free similarity ranker (no model, no training, no retrieval) reproduces the whole overlap signature at top-1 0.926, and saturates top-5/top-10 at 1.000 on the fair subset — which is *why* the primary endpoint was moved to rank 1 | `revision/resnik_ranker.py` |
+| Crediting the scaffold for the model's knowledge | Cell O: the identical backbone LLM with no retrieval and no agents, isolating +0.191 (fair subset) for retrieval + workflow | `scripts/eval/run_cell_o.py` |
+| The system retrieving the answer key | Leave-one-paper-out — excluding each case's own source paper from retrieval moves the fair-subset score by 0.000 (McNemar *p* = 1.0) | `scripts/eval/run_lopo.py` |
+| Difficulty confounded with leakage | A case-paired *hard* variant (49 phenotype-similar distractors) crossed with the leakage axis on the identical case set — a difficulty × leakage 2×2 | `scripts/cases/18b_build_hard_candidates.py` |
+| LLM-as-judge taken on faith | The GPT-4o judge is itself measured: faithfulness 0.480 (95% CI 0.424–0.533), AUROC 0.73 against correctness — reported as *insufficient* to specify a deployable operating point | `revision/judge_provenance.py` |
+| The instrument distorting the subject | Grammar-constrained decoding was evaluated and **rejected**: at temperature 0 it distorted the backbone being measured, so the control uses free-form generation with a tolerant parser | Cell O ablation notes below |
+| Prompt and model-family sensitivity | The aggregation prompts are replayed across three independent frontier model families (converging within 2.4 pp) and across prompt wordings | `revision/prompt_sensitivity.py` |
+| Multiplicity and sampling design | Holm / Benjamini–Hochberg across the reported family; Horvitz–Thompson weights for the disproportionate stratified sample | `revision/design_weighted.py`, `render_supp_tables.py` |
+| "Trust me, I computed it" | Every reported number is emitted by a committed script into machine-readable JSON/CSV under `reports/p2_revision/`; `metric_audit.py` diffs every previously reported value, and the perfect cells are re-derived independently of the shared metric helper | [Verifying the reported numbers](#verifying-the-reported-numbers) |
+
+### Why this generalises beyond genomics
+
+A benchmark score quoted as evidence of capability is interpretable only alongside
+two quantities this project had to make explicit: **what the system was allowed to
+see** (the contamination flag) and **how the items were sampled** (the clustering
+and the inclusion probabilities). Neither is visible in a leaderboard cell.
+
+The practical consequence here was that a widely used, well-regarded tool looked
+23 points better than its competitor for a reason that had nothing to do with its
+method. That result was visible only because the benchmark carried a per-item
+audit trail and a model-free floor to compare against. The same two omissions —
+unmeasured exposure to the evaluation resource, and item-level inference on
+clustered draws — apply to any suite whose cases are mined from documents,
+scenarios, or seed prompts.
+
+The repository is structured so that a third party can re-derive any single claim
+from saved per-case artefacts in minutes on a CPU, without re-running inference
+(see [Verifying the reported numbers](#verifying-the-reported-numbers)). That is a
+deliberate property: an evaluation result that a reviewer, an auditor, or a
+regulator cannot independently re-derive is an assertion, not a measurement.
+
+---
+
 ## Overview
 
 `geno_agent` is an agentic-workflow retrieval-augmented generation (RAG) system that automates literature-based evidence synthesis for the most labor-intensive step of the rare-disease diagnostic pipeline: deciding which candidate gene most plausibly causes a patient's phenotype.
@@ -66,7 +166,7 @@ Unlike monolithic RAG systems that perform a single retrieve-and-generate pass, 
 
 **Terminology.** Throughout, we use *agent* to denote a **role-specialized component** — a node in the LangGraph state graph that consumes and updates shared workflow state. The system as a whole is an **agentic workflow**: orchestration with predefined routing plus a critic-driven self-correction loop. It is *not* an autonomous multi-agent system in which each agent decides its own control flow and chooses tools at run time — fixing the topology and decoding (temperature 0, seeded) keeps inference reproducible and the evaluation valid, a prerequisite for clinical benchmarking. The "single-agent vs. multi-agent" factor below refers to the number of role-specialized agents (one vs. four), not to agent autonomy.
 
-## Why this matters
+## Why this matters clinically
 
 Rare diseases affect an estimated [300 million people worldwide](https://doi.org/10.1038/s41431-019-0508-0) — between 3.5% and 8% of the global population. Despite the maturation of next-generation sequencing, roughly **half of all exome and genome sequencing cases remain without a molecular diagnosis** ([Clark et al., 2018](https://doi.org/10.1038/s41525-018-0053-8)). A substantial fraction of these undiagnosed cases is not due to undetectable variants but to the limits of current bioinformatic tools when interpreting **variants of uncertain significance** (VUS), particularly in patients with atypical or previously undescribed phenotypes.
 
@@ -551,7 +651,7 @@ please cite this repository:
                   Gene Prioritisation in Rare Mendelian Disease},
   year         = {2026},
   howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Doctoral first paper (Universidad Europea de Madrid; n=1,047).}
+  note         = {Doctoral second paper (Universidad Europea de Madrid; n=1,047).}
 }
 ```
 
