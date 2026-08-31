@@ -1,5 +1,7 @@
 # GenoAgent
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22182323.svg)](https://doi.org/10.5281/zenodo.22182323)
+
 **Benchmark Contamination in Rare-Disease Gene Prioritisation: Annotation-Overlap
 Stratification and Clustered Inference on 1,047 Cases from 415 Publications**
 
@@ -645,13 +647,15 @@ This work is being prepared for peer-reviewed publication. In the interim,
 please cite this repository:
 
 ```bibtex
-@misc{angulo2026geno_agent,
-  author       = {Angulo, Johanna},
-  title        = {geno\_agent: A Four-Agent LangGraph RAG System for
-                  Gene Prioritisation in Rare Mendelian Disease},
-  year         = {2026},
-  howpublished = {\url{https://github.com/Jangulo7/geno_agent}},
-  note         = {Doctoral second paper (Universidad Europea de Madrid; n=1,047).}
+@software{angulo2026genoagent,
+  author    = {Angulo, Johanna},
+  title     = {geno\_agent: A Four-Agent LangGraph RAG System for
+               Gene Prioritisation in Rare Mendelian Disease},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {paper-genoagent-v1.8},
+  doi       = {10.5281/zenodo.22182323},
+  url       = {https://doi.org/10.5281/zenodo.22182323}
 }
 ```
 
